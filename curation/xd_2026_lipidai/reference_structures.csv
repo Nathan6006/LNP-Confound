@@ -1,0 +1,13 @@
+lipid_name,reference_SMILES,expected_mismatch,source_figure,read_on,read_by,note
+ALC-0315,OCCCN(CCCCCCOC(=O)C(CCCCCC)CCCCCCCC)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC,"Fig 5A draws the head as HO-(CH2)3-N; the real compound is ((4-hydroxybutyl)azanediyl)bis(hexane-6,1-diyl) bis(2-hexyldecanoate), 4 carbons. We deliberately emit the CORRECT corpus structure, so this anchor is expected to differ from what is emitted.",Fig 5A,2026-10-29,"main session, 600 dpi render of p.5065, vertex-traced by stage02_trace.py and re-derived independently by a Tier-2 reviewer at 300 dpi native","THE STRUCTURE AS DRAWN, which is what this column is defined to hold. Three chain vertices between the O of HO and the N, confirmed twice at high zoom; the decisive control is E1 in the same panel, drawn in the same style with FOUR. Both other benchmarks in the panel are drawn correctly, so this is a localised error by the authors, not a drawing convention."
+SM-102,OCCN(CCCCCC(=O)OCCCCCCCCCCC)CCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC,,Fig 5A,2026-10-29,"main session, geometric trace","C2-style positive control, written head-first in a DIFFERENT atom order from the emitted corpus string so the comparison tests connectivity and not a copy. Trace of Fig 5A gives 2-hydroxyethyl head, N-(CH2)5-C(=O)O-undecyl, N-(CH2)7-C(=O)O-CH(octyl)2."
+DLin-MC3-DMA,CN(C)CCCC(=O)OC(CCCCCCCC/C=C\C/C=C\CCCCC)CCCCCCCC/C=C\C/C=C\CCCCC,,Fig 5A,2026-10-29,"main session, geometric trace","Positive control, written amine-first in a DIFFERENT atom order from the emitted corpus string. Trace gives 4-(dimethylamino)butanoate and both 18-carbon arms with double bonds 9 and 12 bonds from the carbinol."
+E1,,,Fig 5A,2026-10-29,"main session, geometric trace","NO external anchor exists. E1-E9 were supplied by WestGene Biopharmaceutical and the paper gives no name, formula, HRMS, synthesis or SI - Fig 5A is the only source, and that panel contains a verified one-carbon error (see ALC-0315). confidence=medium for all nine; it must not be upgraded without an external structure."
+E2,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E3,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E4,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E5,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E6,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E7,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E8,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."
+E9,,,Fig 5A,2026-10-29,"main session, geometric trace","No external anchor - see E1."

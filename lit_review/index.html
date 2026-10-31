@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LNP Ionizable-Lipid Data Sources</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#fbfaf8; --panel:#ffffff; --ink:#15181d; --ink2:#5a6372; --ink3:#8a93a3;
+  --line:#e3e1dc; --line2:#f0eeea;
+  --accent:#1c5f8b; --accent-soft:#e8f1f7;
+  --p1:#9a3412; --p1bg:#fdf0e8; --p2:#1c5f8b; --p2bg:#e8f1f7;
+  --p3:#5a6372; --p3bg:#f1f1f0; --have:#3f6b45; --havebg:#eaf2eb;
+  --dup:#8a2f4f; --dupbg:#fbedf1;
+  --added:#1d5f7a; --addedbg:#e6f2f7;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+ :root:not([data-theme="light"]){
+  color-scheme: dark;
+  --bg:#13151a; --panel:#1a1d24; --ink:#e8eaee; --ink2:#a4adbc; --ink3:#78808f;
+  --line:#2b2f38; --line2:#23262e;
+  --accent:#6bb3dd; --accent-soft:#17303f;
+  --p1:#f0a070; --p1bg:#39220f; --p2:#6bb3dd; --p2bg:#152e3d;
+  --p3:#a4adbc; --p3bg:#24272e; --have:#86c08e; --havebg:#1a2a1d;
+  --dup:#e8879f; --dupbg:#331b24;
+  --added:#6fc3e3; --addedbg:#13262e;
+ }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#13151a; --panel:#1a1d24; --ink:#e8eaee; --ink2:#a4adbc; --ink3:#78808f;
+  --line:#2b2f38; --line2:#23262e;
+  --accent:#6bb3dd; --accent-soft:#17303f;
+  --p1:#f0a070; --p1bg:#39220f; --p2:#6bb3dd; --p2bg:#152e3d;
+  --p3:#a4adbc; --p3bg:#24272e; --have:#86c08e; --havebg:#1a2a1d;
+  --dup:#e8879f; --dupbg:#331b24;
+  --added:#6fc3e3; --addedbg:#13262e;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);margin:0;
+  font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:var(--panel)}
+header .wrap{padding-block:26px 22px}
+h1{margin:0 0 6px;font-size:1.5rem;letter-spacing:-.015em;font-weight:650}
+.sub{color:var(--ink2);font-size:.9rem;max-width:72ch;margin:0}
+.sub code{font-family:var(--mono);font-size:.84em;background:var(--line2);padding:1px 5px;border-radius:4px}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px;margin:20px 0 0}
+.tile{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .n{font-size:1.5rem;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tile .l{font-size:.73rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:18px 0 14px;
+  position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:1px solid var(--line2)}
+.controls .grp{display:flex;gap:6px;flex-wrap:wrap}
+button.f{font:inherit;font-size:.82rem;padding:5px 11px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink2);transition:.12s}
+button.f:hover{border-color:var(--accent);color:var(--accent)}
+button.f[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] button.f[aria-pressed="true"],
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button.f[aria-pressed="true"]{color:#0d1116}}
+input[type=search]{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:8px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink);min-width:200px;flex:1 1 200px}
+input[type=search]:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.count{font-size:.82rem;color:var(--ink3);margin-left:auto;white-space:nowrap}
+
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:14px}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:.88rem}
+th{text-align:left;font-weight:600;font-size:.73rem;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--ink3);padding:11px 12px;border-bottom:1px solid var(--line);
+  background:var(--panel);position:sticky;top:0;white-space:nowrap}
+th.s{cursor:pointer;user-select:none}
+th.s:hover{color:var(--accent)}
+th .ar{opacity:.4;font-size:.9em}
+td{padding:11px 12px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr.r:last-child td{border-bottom:0}
+tr.r{cursor:pointer}
+tr.r:hover td{background:var(--accent-soft)}
+tr.open td{background:var(--accent-soft)}
+.ttl{font-weight:550;line-height:1.4;max-width:42ch}
+.meta{color:var(--ink3);font-size:.78rem;margin-top:3px}
+.lab{color:var(--ink2);font-size:.83rem;max-width:22ch}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.86rem;white-space:nowrap}
+.dash{color:var(--ink3)}
+.pill{display:inline-block;font-size:.7rem;font-weight:650;padding:2px 8px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.pA{background:var(--p1bg);color:var(--p1)} .pB{background:var(--p2bg);color:var(--p2)}
+.pC{background:var(--p3bg);color:var(--p3)} .pH{background:var(--havebg);color:var(--have)}
+.pD{background:var(--dupbg);color:var(--dup)}
+.pX{background:var(--addedbg);color:var(--added);font-weight:600}
+.gA{background:var(--havebg);color:var(--have)} .gB{background:var(--p2bg);color:var(--p2)}
+.gC{background:var(--p3bg);color:var(--p3)} .gD{background:var(--dupbg);color:var(--dup)}
+.gX{color:var(--ink3)}
+.kind{font-size:.74rem;color:var(--ink2);font-family:var(--mono);white-space:nowrap}
+tr.det td{padding:0;background:var(--bg)}
+tr.det .in{padding:14px 16px 18px;border-left:3px solid var(--accent)}
+tr.det p{margin:0 0 9px;max-width:92ch;font-size:.88rem}
+tr.det .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink3);font-weight:650;margin-bottom:3px}
+tr.det .ab{color:var(--ink2);font-size:.83rem;max-width:96ch}
+tr.det a{color:var(--accent)}
+.links{display:flex;gap:14px;flex-wrap:wrap;font-size:.83rem;margin-top:10px}
+section.note{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0}
+section.note h2{margin:0 0 8px;font-size:.96rem;letter-spacing:-.01em}
+section.note p{margin:0 0 9px;font-size:.88rem;color:var(--ink2);max-width:92ch}
+section.note p:last-child{margin-bottom:0}
+section.note strong{color:var(--ink)}
+footer{color:var(--ink3);font-size:.8rem;padding:10px 0 40px;max-width:92ch}
+@media(max-width:640px){
+  .wrap{padding:0 16px} h1{font-size:1.25rem}
+  .controls{position:static} .count{margin-left:0;width:100%}
+}
+</style>
+</head>
+
+<header><div class="wrap">
+  <h1>LNP ionizable-lipid data sources</h1>
+  <p class="sub">Exhaustive PubMed sweep (20 queries, <strong>1,996 unique papers screened</strong>) for combinatorial / high-throughput ionizable-lipid libraries with per-lipid delivery readouts. Cross-matched by PMID against the 47 publications already in <code>LNPDB_vitro.csv</code>, <code>LNPDB_vivo.csv</code> and <code>LNPDB_vitro_del_processed.csv</code>. LNPDB's own curation cutoff is <strong>August 2025</strong>.</p>
+  <div class="tiles" id="tiles"></div>
+</div></header>
+
+<main class="wrap">
+  <div class="controls">
+    <div class="grp" id="fstatus"></div>
+    <div class="grp" id="fkind"></div>
+    <div class="grp" id="fgrade"></div>
+    <div class="grp" id="fvar"></div>
+    <div class="grp" id="fmeas"></div>
+    <input type="search" id="q" placeholder="Search title, lab, author, note…" aria-label="Search">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="tblwrap"><table>
+    <thead><tr>
+      <th class="s" data-k="prio">Priority <span class="ar"></span></th>
+      <th class="s" data-k="title">Paper <span class="ar"></span></th>
+      <th class="s" data-k="lab">Lab <span class="ar"></span></th>
+      <th class="s" data-k="lib" style="text-align:right">Library <span class="ar"></span></th>
+      <th class="s" data-k="year">Year <span class="ar"></span></th>
+      <th class="s" data-k="kind">Type <span class="ar"></span></th>
+      <th class="s" data-k="measures">Measures <span class="ar"></span></th>
+      <th class="s" data-k="grade">Data <span class="ar"></span></th>
+      <th class="s" data-k="status">Status <span class="ar"></span></th>
+    </tr></thead>
+    <tbody id="tb"></tbody>
+  </table></div>
+
+  <section class="note">
+    <h2>Inclusion criteria — what had to be true to stay on this list</h2>
+    <p>A row is a candidate <strong>data source</strong> if it clears two tests:
+      <strong>(1) per-LNP quantified delivery of a nucleic acid</strong> — mRNA, siRNA or pDNA, all three of which the corpus already contains (Cargo = mRNA 14,195 rows, siRNA 3,641, pDNA 1,192) — read out as expression, knockdown, editing or barcode abundance;
+      <strong>(2) not already in the corpus</strong>, re-verified by PMID, DOI and ≥85% title similarity (0 of 74 matched).</p>
+    <p>Only <strong>7 papers were struck</strong>, all for failing test 1: protein and Cas9-RNP cargoes, two PEG-lipid libraries that hold the ionizable lipid constant, a patent set with structures but no activity values, and one nasal-spray paper a keyword sweep caught by mistake.</p>
+    <p>Rather than exclude an experiment for being a different <em>kind</em> of experiment, every row carries two labels you can filter on. <strong>Varies</strong> is what the library sweeps — IL structure, formulation, or both. <strong>Measures</strong> is what the assay quantifies. Nothing is dropped on either axis, so the heterogeneity stays visible at analysis time instead of being buried in a curation decision.</p>
+    <p>Two earlier exclusions were reversed on review, and both were wrong in the same way — they applied a criterion this corpus does not follow.
+      <strong>Formulation sweeps belong.</strong> <code>AC_2025</code> ("comet_lance") is 1,978 rows on <em>seven</em> unique ILs — 283 rows per IL, the highest ratio in the corpus — and <code>YZ_2022</code> / <code>YZ_2024</code> are 1,080 rows on <em>one</em> IL each. A rule excluding new formulation sweeps would exclude the corpus's own largest ones.
+      <strong>Barcode screens belong too.</strong> Barcodes are nucleic acids, the corpus already pools five different <code>Experiment_method</code> quantities, and the paper's central claim is that quantities do not rank-correlate across environments — so a deliberately different readout is evidence, not contamination. The one caveat worth carrying forward: pooled barcode screens co-administer every LNP in a single animal, so each value is competitive and within-pool rather than independent. That is a reason to treat them as their own environment, which the <code>measures</code> label now lets you do.</p>
+  </section>
+
+  <section class="note">
+    <h2>How to read this</h2>
+    <p><strong>Priority 1</strong> = add first. <strong>Type</strong> distinguishes what the data actually is:
+      <code>in-vitro IL library</code> (per-lipid transfection, directly poolable into your corpus),
+      <code>in-vivo barcoded</code> (pooled DNA/mRNA-barcode delivery — a different readout, not rank-comparable to your in-vitro pool),
+      <code>formulation space</code> (few ionizable lipids, many ratio/helper variants — large row counts but almost no IL-structure signal),
+      <code>compiled dataset</code> (someone else's pooled multi-study corpus — matters for positioning, not as raw data),
+      and <code>platform/method</code> (little usable SAR).</p>
+    <p>Library sizes were auto-extracted from abstracts, then hand-verified for every Priority 1–2 row. Where the abstract does not state a size, the field is blank and the note says so — those need an SI check.</p>
+    <p><strong>Data access</strong> grades what can actually be obtained, not what the paper claims to have measured.
+      <strong>A</strong> = a machine-readable file is reachable right now.
+      <strong>B</strong> = the SI document is reachable; extraction is manual.
+      <strong>C</strong> = nothing reachable from this machine — no PMC deposit, or the publisher blocks automated fetching (nature.com, pnas.org and pubs.acs.org all do). <em>C is not a rejection</em>: CWRU library access will likely work.
+      A fourth grade, <strong>confirmed unobtainable</strong>, is <strong>not shown</strong> — those rows are deleted from the dataset rather than displayed, and the builder's <code>REJECTED</code> set re-drops them if a later sweep finds them again. One paper is currently in it (Ardekani, PMID 40267508: data curated but never published, authors declined on request). Where a data-availability statement could be read, "available upon reasonable request" was treated as a downgrade to C, because it carries real refusal risk.</p>
+  </section>
+
+  <section class="note">
+    <h2>Three findings that matter more than any single dataset</h2>
+    <p><strong>1 · A correction to my earlier recommendation.</strong> The Mitchell 500-lipid "plug-and-play" paper is <em>already in your corpus</em> as <code>XH_2025</code> — LNPDB curated it from the bioRxiv preprint (PMID 40060499), and PNAS 2026 (PMID 42190011) is the same data. It was my top pick last round; it is not addable. Both rows are kept below so the duplication is visible.</p>
+    <p><strong>2 · Your corpus is one academic lineage.</strong> <code>AA_2008</code> (Akinc), <code>KL_2010</code> (Love), <code>KW_2014</code> (Whitehead), <code>JM_2016</code> (Miller), <code>KZ_2016</code> (Zhou), <code>LM_2019</code> (Miao), <code>SL_2020/21</code>, <code>JW_2024</code> (Jiang), <code>BL_2023/2024</code> (Li) are all Anderson-lab papers; <code>YX_2024</code>, <code>YX_2026</code>, <code>YX_2026_SDL</code>, <code>MO_2026</code>, <code>FG_2026</code> are all Bowen Li, an Anderson alum. More than half your in-vitro sources descend from one lineage — and cross-lab concordance is still 0.083. That makes Result 3 markedly stronger at zero curation cost.</p>
+    <p><strong>3 · Independent published confirmation of your thesis.</strong> <a href="https://doi.org/10.1016/j.ijpharm.2026.127405" target="_blank" rel="noopener">Adzavon et&nbsp;al., <em>Int J Pharm</em> 2026</a> pooled 613 LNP formulations from 18 studies, ran nested formulation-<em>grouped</em> cross-validation to remove repeated-measures leakage, and found "no reliable predictive validity in any of the six adequately powered studies." Different endpoint (storage stability), identical methodology and identical conclusion. Meanwhile <a href="https://arxiv.org/abs/2609.17721" target="_blank" rel="noopener">arXiv 2609.17721</a> (Sep 2026) pools 476 formulations from 81 studies and reports ROC-AUC 0.84–0.87 with no cross-study validation at all. One paper confirms you; the other is the live failure mode.</p>
+  </section>
+
+  <footer>
+    Generated 2026-10-25 from PubMed E-utilities. Sizes and classifications are from abstracts plus manual reading;
+    verify each supplementary file before curating. Rows with blank library size need an SI check.
+    Regenerate with <code>python3 -I build_data.py</code>.
+  </footer>
+</main>
+
+<script>
+const KINDS={ivl:"in-vitro IL library",ivv:"in-vivo barcoded",form:"formulation space",comp:"compiled dataset",meth:"platform/method"};
+const PRIO={1:["pA","P1 · add first"],2:["pB","P2 · worth it"],3:["pC","P3 · marginal"],0:["pC","—"]};
+const GRADES={A:"machine-readable data file reachable now",B:"SI document reachable; manual extraction needed",
+C:"not reachable from here - try CWRU library access"};
+const MEAS={
+  "expression":"luciferase / GFP / protein abundance",
+  "knockdown":"siRNA target reduction",
+  "editing":"indel or base-edit efficiency",
+  "barcode accumulation":"deep-sequenced barcode abundance in tissue. Pooled and competitive — all LNPs share one animal, so values are within-pool relative, unlike one-LNP-per-well. Model as its own environment.",
+  "functional barcode":"barcoded readout requiring translation (Cre→tdTomato, aVHH protein), so expression-like",
+};
+let DATA=[], rows=[], sortK="prio", sortD=1, fS="new", fK="all", fG="all", fV="all", fM="all", q="";
+
+fetch("data.json").then(r=>r.json()).then(d=>{DATA=d.rows;init(d.meta);});
+
+function init(meta){
+  const nv=DATA.filter(r=>r.status==="new");
+  const tiles=[
+    [meta.swept.toLocaleString(),"papers screened"],
+    [nv.length,"candidate sources"],
+    [nv.filter(r=>r.prio===1).length,"priority 1"],
+    [nv.filter(r=>r.grade==="A"||r.grade==="B").length,"data reachable (A/B)"],
+    [DATA.filter(r=>r.status==="added").length,"added by us"],
+    [DATA.filter(r=>r.status==="cite").length,"cite only"],
+    [meta.struck||0,"struck on triage"],
+  ];
+  document.getElementById("tiles").innerHTML=tiles.map(([n,l])=>
+    `<div class="tile"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
+
+  mk("fstatus",[["new","New / addable"],["added","Added by us"],["cite","Cite only"],["have","Already in corpus"],["dup","Duplicate"],["all","All"]],v=>fS=v,fS);
+  mk("fkind",[["all","All types"],...Object.entries(KINDS)],v=>fK=v,fK);
+  mk("fgrade",[["all","Any access"],["A","A only"],["AB","A+B"],["C","C only"]],v=>fG=v,fG);
+  mk("fvar",[["all","Any axis"],["IL structure","IL structure"],["formulation","formulation"],["both","both"]],v=>fV=v,fV);
+  mk("fmeas",[["all","Any readout"],...Object.keys(MEAS).map(k=>[k,k])],v=>fM=v,fM);
+  document.getElementById("q").addEventListener("input",e=>{q=e.target.value.toLowerCase();draw();});
+  document.querySelectorAll("th.s").forEach(th=>th.addEventListener("click",()=>{
+    const k=th.dataset.k;
+    if(k===sortK) sortD=-sortD; else {sortK=k;sortD=(k==="lib"||k==="year")?-1:1;}
+    draw();
+  }));
+  draw();
+}
+
+function mk(id,opts,set,cur){
+  const el=document.getElementById(id);
+  el.innerHTML=opts.map(([v,l])=>`<button class="f" data-v="${v}" aria-pressed="${v===cur}">${l}</button>`).join("");
+  el.addEventListener("click",e=>{
+    const b=e.target.closest("button.f"); if(!b) return;
+    set(b.dataset.v);
+    el.querySelectorAll("button.f").forEach(x=>x.setAttribute("aria-pressed",x===b));
+    draw();
+  });
+}
+
+function draw(){
+  rows=DATA.filter(r=>(fS==="all"||r.status===fS)&&(fK==="all"||r.kind===fK)
+      &&(fG==="all"||(fG==="AB"?(r.grade==="A"||r.grade==="B"):r.grade===fG))
+      &&(fV==="all"||r.varies===fV)&&(fM==="all"||r.measures===fM));
+  if(q) rows=rows.filter(r=>[r.title,r.lab,r.last,r.first,r.note,r.journal,r.expid,r.ident]
+      .join(" ").toLowerCase().includes(q));
+  const v=r=>{
+    if(sortK==="lib") return r.lib||-1;
+    if(sortK==="year") return parseInt(r.year)||0;
+    if(sortK==="prio") return r.prio===0?99:r.prio;
+    if(sortK==="grade") return {A:1,B:2,C:3}[r.grade]||9;
+    return (r[sortK]||"").toString().toLowerCase();
+  };
+  rows.sort((a,b)=>{const x=v(a),y=v(b);
+    if(x<y) return -sortD; if(x>y) return sortD;
+    return (b.lib||0)-(a.lib||0);});
+
+  document.querySelectorAll("th.s").forEach(th=>{
+    th.querySelector(".ar").textContent = th.dataset.k===sortK ? (sortD>0?"▲":"▼") : "";
+  });
+  document.getElementById("count").textContent=`${rows.length} of ${DATA.length} shown`;
+
+  document.getElementById("tb").innerHTML=rows.map((r,i)=>{
+    const [cls,lbl]=PRIO[r.prio];
+    const stat = r.status==="added" ? `<span class="pill pX" title="${esc(r.added_what||"")} — ${esc(r.added_validation||"")}">added · ${esc(r.expid||"")}</span>`
+               : r.status==="have" ? `<span class="pill pH">in corpus${r.expid?" · "+esc(r.expid):""}</span>`
+               : r.status==="cite" ? `<span class="pill pD" title="Not addable data - belongs in the manuscript as a citation">cite only</span>`
+               : r.status==="dup"  ? `<span class="pill pD">duplicate</span>`
+               : `<span class="pill ${cls}">new</span>`;
+    const au=[r.first,r.last].filter(Boolean).join(" … ");
+    return `<tr class="r" data-i="${i}">
+      <td><span class="pill ${cls}">${lbl}</span></td>
+      <td><div class="ttl">${esc(r.title)||"<span class='dash'>(title not retrieved)</span>"}</div>
+          <div class="meta">${esc(r.journal)}${r.year?" "+r.year:""}${au?" · "+esc(au):""} · ${esc(r.ident)}</div></td>
+      <td><div class="lab">${esc(r.lab)||"<span class='dash'>—</span>"}</div></td>
+      <td class="num">${r.lib?`${r.lib.toLocaleString()}${r.lib_src&&r.lib_src!=="abstract"?`<span class="dash" title="verified from ${esc(r.lib_src)}">*</span>`:""}`:`<span class='dash' title="not stated in any text reachable from here - needs the SI">?</span>`}</td>
+      <td class="num">${esc(r.year)||"<span class='dash'>—</span>"}</td>
+      <td><span class="kind">${KINDS[r.kind]||r.kind}</span></td>
+      <td><span class="kind" title="${esc(MEAS[r.measures]||"")}">${esc(r.measures||"")}</span>${
+          r.varies&&r.varies!=="IL structure"?`<div class="meta">varies: ${esc(r.varies)}</div>`:""}</td>
+      <td>${r.grade&&r.grade!=="-"?`<span class="pill g${r.grade}" title="${esc(GRADES[r.grade]||"")}">${r.grade}</span>`:`<span class="gX">—</span>`}</td>
+      <td>${stat}</td></tr>`;
+  }).join("");
+
+  document.querySelectorAll("tr.r").forEach(tr=>tr.addEventListener("click",()=>toggle(tr)));
+}
+
+function toggle(tr){
+  const nx=tr.nextElementSibling;
+  if(nx&&nx.classList.contains("det")){nx.remove();tr.classList.remove("open");return;}
+  document.querySelectorAll("tr.det").forEach(d=>d.remove());
+  document.querySelectorAll("tr.r").forEach(x=>x.classList.remove("open"));
+  const r=rows[+tr.dataset.i];
+  const doi=r.doi?`<a href="https://doi.org/${encodeURIComponent(r.doi)}" target="_blank" rel="noopener">doi:${esc(r.doi)}</a>`:"";
+  const pm=r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${r.pmid?"PubMed":"source"}</a>`:"";
+  const d=document.createElement("tr"); d.className="det";
+  d.innerHTML=`<td colspan="9"><div class="in">
+    <div class="lbl">Assessment</div><p>${esc(r.note)}</p>
+    <div class="lbl">Experiment shape</div><p>Varies <strong>${esc(r.varies||"")}</strong>;
+      measures <strong>${esc(r.measures||"")}</strong>${MEAS[r.measures]?" &mdash; "+esc(MEAS[r.measures]):""}</p>
+    ${r.lib_counts?`<div class="lbl">Library size &mdash; ${r.lib?`<strong>${r.lib.toLocaleString()}</strong>`:"not stated"}${r.lib_src?", verified from "+esc(r.lib_src):""}</div><p>${esc(r.lib_counts)}</p>`:""}
+    ${r.grade&&r.grade!=="-"?`<div class="lbl">Data access &middot; grade ${r.grade} &mdash; ${esc(GRADES[r.grade]||"")}</div><p>${esc(r.grade_note||"")}</p>`:""}
+    ${r.readout?`<div class="lbl">Readout</div><p>${esc(r.readout)}</p>`:""}
+    ${r.abstract?`<div class="lbl">Abstract (truncated)</div><p class="ab">${esc(r.abstract)}…</p>`:""}
+    <div class="links">${pm}${doi}</div></div></td>`;
+  tr.after(d); tr.classList.add("open");
+}
+
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+</script>
+</html>

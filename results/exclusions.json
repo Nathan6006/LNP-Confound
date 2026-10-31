@@ -1,0 +1,96 @@
+{
+  "min_rows_per_environment": 20,
+  "rdkit_version": "2025.03.6",
+  "smiles_parse_log": [
+    {
+      "column": "LNPDB.IL_SMILES",
+      "n_input_present": 20745,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    },
+    {
+      "column": "molea.smiles",
+      "n_input_present": 1152,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    },
+    {
+      "column": "LNPDB.IL_protonated_SMILES",
+      "n_input_present": 18767,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    },
+    {
+      "column": "LNPDB.HL_SMILES",
+      "n_input_present": 20176,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    },
+    {
+      "column": "LNPDB.CHL_SMILES",
+      "n_input_present": 20745,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    },
+    {
+      "column": "LNPDB.PEG_SMILES",
+      "n_input_present": 18763,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    },
+    {
+      "column": "LNPDB.fifthcomponent_SMILES",
+      "n_input_present": 38,
+      "n_parse_failed": 0,
+      "pct_parse_failed": 0.0
+    }
+  ],
+  "exclusion_rules": [
+    {
+      "rule": "E1_il_smiles_parse_failure",
+      "dataset": "LNPDB",
+      "reason": "IL_SMILES did not parse as a valid molecule under RDKit",
+      "rows_affected": 0
+    },
+    {
+      "rule": "E1_il_smiles_parse_failure",
+      "dataset": "molea",
+      "reason": "smiles did not parse as a valid molecule under RDKit",
+      "rows_affected": 0
+    },
+    {
+      "rule": "E2_missing_delivery_readout",
+      "dataset": "LNPDB",
+      "reason": "Experiment_value (delivery readout) is missing",
+      "rows_affected": 328
+    },
+    {
+      "rule": "E2_missing_delivery_readout",
+      "dataset": "molea",
+      "reason": "Both mTP_(Log2)_Hepatocyte and mTP_(Log2)_Chondrocyte are missing",
+      "rows_affected": 0
+    },
+    {
+      "rule": "E3_exact_duplicate_row",
+      "dataset": "LNPDB",
+      "reason": "Row is a byte-for-byte content duplicate of an earlier row (all fields incl. readout value identical)",
+      "rows_affected": 0
+    },
+    {
+      "rule": "E3_exact_duplicate_row",
+      "dataset": "molea",
+      "reason": "Row is a byte-for-byte content duplicate of an earlier row",
+      "rows_affected": 0
+    }
+  ],
+  "raw_counts": {
+    "LNPDB_vitro": 19028,
+    "LNPDB_vivo": 1717,
+    "molea": 1152
+  },
+  "final_counts": {
+    "LNPDB_vitro": 18700,
+    "LNPDB_vivo": 1717,
+    "molea": 1152
+  }
+}

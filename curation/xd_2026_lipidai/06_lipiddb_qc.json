@@ -1,0 +1,148 @@
+{
+ "sheet1_rows": 485,
+ "sheet1_unique_canonical": 461,
+ "sheet1_duplicate_rows": 24,
+ "sheet1_unparseable": 0,
+ "rows_with_numeric_value": 414,
+ "rows_without_value": 71,
+ "paper_states_n_lipids": 475,
+ "xlsx_rows": 485,
+ "distinct_source_publications_stated_by_paper": 47,
+ "distinct_reference_strings_after_normalisation": 56,
+ "distinct_reference_strings_letters_only": 50,
+ "raw_reference_strings": 399,
+ "largest_single_source_rows": 124,
+ "top10_sources_rows": 318,
+ "mta_rows": 720,
+ "mta_unique": 612,
+ "mta_rows_identical_to_an_original_lipid": 121,
+ "duplicate_structures_with_conflicting_class": 7,
+ "duplicate_class_conflicts": [
+  {
+   "classes": [
+    "B",
+    "C"
+   ],
+   "values": [
+    2000000.0,
+    30000000.0
+   ],
+   "n_rows": 2
+  },
+  {
+   "classes": [
+    "A",
+    "C"
+   ],
+   "values": [
+    2000000.0,
+    110000000.0
+   ],
+   "n_rows": 2
+  },
+  {
+   "classes": [
+    "A",
+    "C"
+   ],
+   "values": [
+    360000.0,
+    55000000000.0
+   ],
+   "n_rows": 2
+  },
+  {
+   "classes": [
+    "A",
+    "B"
+   ],
+   "values": [
+    5900000.0,
+    62000000.0
+   ],
+   "n_rows": 2
+  },
+  {
+   "classes": [
+    "A",
+    "B"
+   ],
+   "values": [
+    32000000.0,
+    72000000.0
+   ],
+   "n_rows": 2
+  },
+  {
+   "classes": [
+    "B",
+    "C"
+   ],
+   "values": [
+    3000000.0,
+    50000000.0
+   ],
+   "n_rows": 2
+  },
+  {
+   "classes": [
+    "A",
+    "C"
+   ],
+   "values": [
+    1000000.0,
+    550000000.0
+   ],
+   "n_rows": 2
+  }
+ ],
+ "model_feature_file_has_inject_way_levels": {
+  "1": 961,
+  "2": 85,
+  "3": 50,
+  "4": 11
+ },
+ "overlap_with_corpus_vitro": 81,
+ "overlap_with_corpus_vivo": 69,
+ "overlap_with_corpus_union": 89,
+ "table1_rows": 26,
+ "table1_parsed": 26,
+ "table1_structure_in_xlsx": 22,
+ "table1_structure_in_xlsx_ignoring_stereo": 25,
+ "table1_value_exact": 19,
+ "table1_class_agreement": 20,
+ "table1_disagreements": [
+  {
+   "table_row": 4,
+   "table_value": 31600000,
+   "table_class": "B",
+   "table_ref": 27,
+   "xlsx_values": "[9000.0]",
+   "xlsx_classes": "['C']",
+   "class_also_disagrees": true
+  },
+  {
+   "table_row": 5,
+   "table_value": 58000000,
+   "table_class": "A",
+   "table_ref": 28,
+   "xlsx_values": "[6620000.0]",
+   "xlsx_classes": "['B']",
+   "class_also_disagrees": true
+  },
+  {
+   "table_row": 15,
+   "table_value": 200000000,
+   "table_class": "A",
+   "table_ref": 38,
+   "xlsx_values": "[20000000000.0]",
+   "xlsx_classes": "['A']",
+   "class_also_disagrees": false
+  }
+ ],
+ "table1_not_found": [
+  22
+ ],
+ "merged_into_corpus": false,
+ "reason": "literature compilation across the 47 studies the paper names; a single Experiment_ID would fabricate a source and corrupt the source key Results 1-4 rest on. Independently fatal to pooling: the model's own feature file encodes FOUR administration routes (inject_way) that the released value column does not distinguish, and 7 duplicate structures carry conflicting class labels across their source papers."
+}

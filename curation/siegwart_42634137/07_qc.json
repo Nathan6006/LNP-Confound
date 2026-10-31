@@ -1,0 +1,114 @@
+{
+ "paper": "Tian et al., Adv Mater 2026, PMID 42634137 (esterified cholesterol conjugates, BBB)",
+ "role": "NEW CURATION",
+ "library": {
+  "stated_lipids": 51,
+  "decoded": "(6 amine heads C1-C6 x 2 alkyl acrylates O1/O2 = 12 synthesized cores, plus 5 commercial cores SM-102/OF-2/TT3/MC3/Lipid 14) x 3 cholesterol tails B1/B2/B3 = 51",
+  "arithmetic_pass": true,
+  "note_486": "The abstract's '486 LNPs' is a FORMULATION screen (molar-ratio DoE around the lead), not 486 distinct lipids. Only the top 14 formulations are tabulated (Table S1, and it is an image)."
+ },
+ "structures": {
+  "enumerated": 36,
+  "unique": 36,
+  "not_enumerated": "15 commercial-core lipids (names recorded; SMILES available from the existing corpus rather than re-read)",
+  "stoichiometry_evidence": "NMR, not assumed: C6O2 shows delta 4.04 (t, 10H) = 5 ester OCH2 and delta 0.87 (t, 15H) = 5 terminal CH3, confirming FIVE acrylate arms, exactly the 5 N-H sites in the C6 head. C6O2B2 retains both integrals and adds cholesterol signatures (5.30 d 1H, 4.54 m 1H C3-H, 0.61 s 3H C18-Me).",
+  "confidence_flags": "O1 (branched isodecyl) is figure-only and flagged medium; the B1/B2/B3 ester connectivity is inferred from the C3-H shift and flagged medium. O2 is pinned by NMR integrals."
+ },
+ "values": {
+  "n": 51,
+  "source": "Fig 1d heatmap - values are PRINTED NUMERALS in each cell, so this is symbolic reading, not pixel digitization",
+  "verification": "read independently at 200 dpi and again at 450 dpi; the two readings agree on all 51 cells",
+  "internal_check": "the maximum extracted value is C6O2B2 at 3.0e6, and the paper independently names C6O2B2 as the lead compound",
+  "units": "brain total flux, photons/s, in vivo, n=3",
+  "range": [
+   1700.0,
+   3000000.0
+  ]
+ },
+ "NOT_extracted": {
+  "fig2h_per_point": "486 dots overlap heavily (194 components for 486 points) and carry no formulation labels; used as a distribution check only",
+  "figS12": "cytotoxicity, not transfection",
+  "figs3_5": "mechanism/BBB integrity/corona, not library data"
+ },
+ "fig2c_486_formulation_screen": {
+  "what_the_486_are": "ONE lipid (C6O2B2) formulated 486 ways: C6O2B2 35/50/65 x DODAP 10/30/50 x helper 10/30/50 x DMG-PEG 1/2/4 (=81) x 6 helper identities (DOPC,DMPC,DOPG,DOPE,EggSM,DSPC) = 486. Zero structural variance; this is a formulation axis, not a chemistry axis.",
+  "assay": "luciferase, IGROV-1 cells, 20 ng mLuc per well, 24 h, n=3",
+  "extraction": "Fig 2c, six 9x9 heatmaps. Legend is DISCRETE 4-bin (<1e4 / 1e4-1e5 / 1e5-1e6 / >1e6), so cells are nearest-neighbour matched to swatches sampled from the legend in the same raster. Grid geometry taken from detected cell gridlines, not an assumed bbox.",
+  "cells": 486,
+  "max_colour_distance_to_nearest_swatch": 4.72,
+  "ambiguous_cells": 0,
+  "bin_histogram": {
+   "<1e4": 17,
+   "1e4-1e5": 138,
+   "1e5-1e6": 238,
+   ">1e6": 93
+  },
+  "verification": {
+   "marginals_vs_printed_bar_charts": "ALL FOUR EXACT. Fig 2d by C6O2B2 41/21/31, Fig 2e by DMG-PEG 35/29/29, Fig 2f by DODAP 8/31/54, Fig 2g by helper 3/17/16/9/13/35 - 15 of 15 bins match the digitized counts with zero deviation.",
+   "orientation_confirmed_by": "the row-axis marginals are non-monotone (41/21/31) and monotone (8/31/54) respectively, so an outer/inner swap or a transposition would break them. Both match, so the axis assignment is verified structurally, not just read off the labels.",
+   "discrepancy_vs_prose": "The paper TEXT says 240 acceptable and 91 outstanding. Digitization gives 238 and 93. But the papers OWN bar charts sum to 93 outstanding on all four marginals independently, and the totals agree exactly (238+93 = 240+91 = 331 cells at or above 1e5). The prose is off by two at the 1e6 boundary; the figures and this digitization agree."
+  },
+  "files": [
+   "digitize_fig2c.py",
+   "04b_fig2c_486.csv",
+   "07b_fig2c_qc.json"
+  ],
+  "caveat": "bin_index is the defensible quantity. rlu_midpoint is a geometric half-decade placeholder for numeric convenience and must not be treated as a measured value."
+ },
+ "fig1d_51_in_vivo": {
+  "source": "Fig 1d printed numerals (3 tails x 17 cores)",
+  "n": 51,
+  "method": "glyph connected-components, 600 dpi, complete-linkage clustering; 51/51 cells segmented to exactly 7 glyphs, all furniture assertions passed",
+  "independent_check": "continuous colour bar, Spearman 0.986 all / 0.995 above 2e5",
+  "max": "C6O2B2-B2 at 3.0e6, matching the paper-named lead",
+  "files": [
+   "digitize_fig1d.py",
+   "04c_fig1d_51.csv",
+   "07c_fig1d_qc.json",
+   "review/fig1d_overlay.png"
+  ]
+ },
+ "fig2dg_bars": {
+  "source": "Figs 2d-g",
+  "n": 15,
+  "result": "15/15 marginal bins reproduce the Fig 2c digitization; max residual 0.08 LNPs on Fig 2g (the only panel with real dof); tick calibration 10.09/10.15/20.01/9.97 LNPs per tick",
+  "files": [
+   "digitize_bars.py",
+   "04d_fig2dg_bars.csv",
+   "07d_bars_qc.json",
+   "review/fig2dg_overlay.png"
+  ]
+ },
+ "top14": {
+  "source": "Fig 2j (main) + Table S1 (SI), double-sourced and agreeing",
+  "n": 14,
+  "checks": "percentage arithmetic exact (max error 0.00 over 56 numbers, confirming the DoE levels are molar RATIOS); all 14 present in the 486 and all 14 in the >1e6 bin",
+  "files": [
+   "top14.py",
+   "04e_top14.csv",
+   "07e_top14_qc.json"
+  ]
+ },
+ "figS11": {
+  "source": "Fig S11 (SI)",
+  "n": 15,
+  "what": "group means of the same 486; consistency check only, not merged into the dataset",
+  "files": [
+   "digitize_figS11.py",
+   "04f_figS11_means.csv",
+   "07f_figS11_qc.json",
+   "review/figS11_overlay.png"
+  ]
+ },
+ "PROVENANCE": "see PROVENANCE.md for a field-by-field source table and all seven checks",
+ "structure_corrections_2026_10_29": {
+  "found_by": "independent adversarial verifier subagent; all three confirmed by me against Fig 1b/2a and RDKit before fixing",
+  "E1_cholesterol_attachment": "quaternize() did CHOL.replace('(O)','',1) and concatenated the acyl in FRONT of the result. SMILES concatenation bonds to the FIRST atom, so the ester oxygen attached to a terminal methyl of the isooctyl side chain - the opposite end of the steroid from C3. Fig 1b and Fig 2a draw the ester on C3 (3-beta wedge), and the SI NMR C3-H at delta 4.5-4.7 confirms esterification (free cholesterol C3-H is 3.5). FIXED: the C3 oxygen is kept and esterified.",
+  "E2_radical_carbon": "deleting the hydroxyl left C3 two-coordinate with one H and ONE RADICAL ELECTRON in all 36 structures, and the 3-beta stereocentre was lost. Formula and MolWt were each 1 H / 1.008 Da low. FIXED.",
+  "E3_quaternization_site": "the docstring said 'most substituted tertiary N' but the code took max(atom index), an artifact of SMILES writing order. For C6 it picked the terminal N bearing two beta-amino-ester arms - the LEAST nucleophilic nitrogen - while Fig 2a plainly shows the N+ is a PIPERAZINE RING nitrogen. FIXED: prefer a ring N, then fewest beta-ester arms, then atom index. C5/C6 now match Fig 2a; C1-C4 have no ring N, the paper draws no structure, and those 24 rows are flagged quaternization_site_assumed=1 with confidence 'low'.",
+  "why_the_checks_missed_it": "HRMS/formula checks cannot see connectivity, and the oxygen count was unchanged by E1 - only the hydrogen count moved, by one. The structures parsed, canonicalised, and had self-consistent descriptors, so every existing audit check passed. provenance/audit.py check C1 now tests for radical electrons.",
+  "corpus_impact": "537 rows (486 vitro + 51 vivo) carried wrong structures; all regenerated.",
+  "lead_compound": "C6O2B2 now C117H218N5O12+ MW 1887.05 (was C117H217N5O12+ MW 1886.05)"
+ },
+ "column_naming_fix": "04b_fig2c_486.csv previously named the molar RATIO columns *_molpct while they held 35/10/10/1 (sums 56-169, never 100) - the exact misreading PROVENANCE.md warns about. Renamed to *_molratio and genuine *_molpct added alongside. Corpus molratio values were always correct (they were converted on merge); only the intermediate file was mislabelled."
+}

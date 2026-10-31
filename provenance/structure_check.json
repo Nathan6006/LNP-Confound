@@ -1,0 +1,260 @@
+{
+ "what": "enumerated structures vs the structure the paper draws",
+ "anchors_compared": 14,
+ "connectivity_failures": 0,
+ "stereo_only_differences": 0,
+ "expected_mismatches_paper_drawing_wrong": 1,
+ "papers_with_no_drawn_structure": 9,
+ "anchors_that_may_be_a_copy_of_the_enumeration": 7,
+ "results": [
+  {
+   "paper": "lin_aromatic_2026",
+   "lipid_name": "10A2-3B-EP10",
+   "source_figure": "Fig S17",
+   "read_on": "2026-10-29",
+   "note": "Final product of the PRECISE protection/deprotection synthesis, so the regiochemistry is pinned by the route, not assumed: one 3B aromatic arm on EACH primary nitrogen, four EP10 tails on the remaining N-H. Assembled from fragments independently of enumerate_library.py. No stereocentres are drawn (the epoxide-opened carbinols are racemic), so none are asserted.",
+   "reference_inchikey": "JUAPTPKSYXADRC-UHFFFAOYSA-N",
+   "enumerated_inchikey": "JUAPTPKSYXADRC-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ng_2025",
+   "lipid_name": "C-a16",
+   "source_figure": "Supplementary Fig 3a; Supplementary Fig 19a (MS inset)",
+   "read_on": "2026-10-29",
+   "note": "four 2-hydroxy-5-octylbenzyl arms on the two lysine side-chain NH2 of cyclo(Lys-Lys); the diketopiperazine N-H stay intact",
+   "reference_inchikey": "AIOBALMNQABGKF-UHFFFAOYSA-N",
+   "enumerated_inchikey": "AIOBALMNQABGKF-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ng_2025",
+   "lipid_name": "M-b1",
+   "source_figure": "Supplementary Fig 14a",
+   "read_on": "2026-10-29",
+   "note": "N-methyl, two (1-methylpyrrol-2-yl)methyl arms",
+   "reference_inchikey": "XETWGVUCRKHXPQ-UHFFFAOYSA-N",
+   "enumerated_inchikey": "XETWGVUCRKHXPQ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ng_2025",
+   "lipid_name": "P-b1",
+   "source_figure": "Supplementary Fig 16a",
+   "read_on": "2026-10-29",
+   "note": "N-methyl, two 3-oxo-3-phenylpropyl arms (the acetophenone methyl becomes the CH2 beta to nitrogen)",
+   "reference_inchikey": "FCEMMQWGASQRTL-UHFFFAOYSA-N",
+   "enumerated_inchikey": "FCEMMQWGASQRTL-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ng_2025",
+   "lipid_name": "I-a-b1",
+   "source_figure": "Supplementary Fig 8a",
+   "read_on": "2026-10-29",
+   "note": "diethyl 1-methyl-4-oxopiperidine-3,5-dicarboxylate: the 1:2:1 double Mannich closes a ring, it is not an acyclic bis-adduct",
+   "reference_inchikey": "FMZCQFLLEXZUJM-UHFFFAOYSA-N",
+   "enumerated_inchikey": "FMZCQFLLEXZUJM-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ng_2025",
+   "lipid_name": "I-b-b1",
+   "source_figure": "Supplementary Fig 11a",
+   "read_on": "2026-10-29",
+   "note": "diethyl 3,7-dimethyl-9-oxo-3,7-diazabicyclo[3.3.1]nonane-1,5-dicarboxylate (bispidinone): the 1:4:2 ratio closes a second ring",
+   "reference_inchikey": "CKUKECUYDJFXEN-UHFFFAOYSA-N",
+   "enumerated_inchikey": "CKUKECUYDJFXEN-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ng_2025",
+   "lipid_name": "B-a1",
+   "source_figure": "Fig. 1d",
+   "read_on": "2026-10-29",
+   "note": "DERIVED at run time from the page vector bond coordinates in 01_fig1d_graph.json (stage01_vector.py, glyph merge radius 3.0): glyph signatures give the atoms, geometry gives the chain lengths. No human typed this string, so it cannot have been copied from the enumeration",
+   "reference_inchikey": "YOZSZGYTICTJMX-UHFFFAOYSA-N",
+   "enumerated_inchikey": "YOZSZGYTICTJMX-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+  },
+  {
+   "paper": "ql_2026",
+   "lipid_name": "T3A-L5-C10",
+   "source_figure": "Fig 2a blocks + Methods",
+   "read_on": "2026-10-29",
+   "note": "Assembled by hand from the drawn blocks in Figure 2a (T3A tris(3-aminopropyl)amine; L5 = NHS ester of 6-maleimidohexanoate, five CH2; C10 = 1-decanethiol) and the stated one-pot chemistry: amide at each primary amine, thiosuccinimide at each maleimide. Written with a different ring traversal and atom order from enumerate_library.py's fragment assembly, so the comparison tests connectivity rather than echoing the builder.",
+   "reference_inchikey": "DKFSQTNBZODLDT-UHFFFAOYSA-N",
+   "enumerated_inchikey": "DKFSQTNBZODLDT-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "siegwart_42634137",
+   "lipid_name": "C6O2B2",
+   "source_figure": "Fig 2a (amine half) + Fig 1b (linker, sterol)",
+   "read_on": "2026-10-30",
+   "note": "Independently derived: amine half typed by hand from Fig 2a (p.5), 5-carbon linker from Fig 1b (p.3), sterol taken VERBATIM from provenance/reagent_registry.json (cholest-5-en-3beta-ol, InChIKey HVYWMOMLDIMFJA-DPAQBDIFSA-N), assembled by string substitution with no RWMol/AddBond/RemoveAtom anywhere -- see make_reference.py. Replaces an earlier anchor that was a byte-for-byte copy of 03_enumerated.csv and therefore could only pass (F-013); that copy stored epicholesterol while its note claimed 3-beta. LIMIT: the sterol's eight stereocentres come from the registry, not from a fresh read of the figure, so this anchor cannot catch an error in the registry entry itself. Agrees with 03_enumerated.csv; the two were derived by different routes (see this file's docstring), so the agreement is evidence rather than a tautology.",
+   "reference_inchikey": "JZSXLVWEZCBZIZ-MNARHFHWSA-N",
+   "enumerated_inchikey": "JZSXLVWEZCBZIZ-MNARHFHWSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "wht_2026_falcon",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "IUPAC name",
+   "read_on": "2026-10-29",
+   "note": "Written from the registry name (6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl 4-(dimethylamino)butanoate, in a deliberately different atom order from the corpus string, so the comparison tests the structure and not a copy. The paper draws no structures; MC3 is a catalogue reagent (MedKoo).",
+   "reference_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "enumerated_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "wht_2026_falcon",
+   "lipid_name": "SM-102",
+   "source_figure": "IUPAC name",
+   "read_on": "2026-10-29",
+   "note": "Written from the registry name heptadecan-9-yl 8-[(2-hydroxyethyl)(6-oxo-6-undecoxyhexyl)amino]octanoate, atom order chosen independently of the corpus string. Catalogue reagent (BroadPharm BP-25499).",
+   "reference_inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "ALC-0315",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "THE STRUCTURE AS DRAWN, which is what this column is defined to hold. Three chain vertices between the O of HO and the N, confirmed twice at high zoom; the decisive control is E1 in the same panel, drawn in the same style with FOUR. Both other benchmarks in the panel are drawn correctly, so this is a localised error by the authors, not a drawing convention.",
+   "reference_inchikey": "WESYLBGVEJKNRX-UHFFFAOYSA-N",
+   "enumerated_inchikey": "QGWBEETXHOVFQS-UHFFFAOYSA-N",
+   "skeleton_match": false,
+   "stereo_match": true,
+   "status": "expected_mismatch_paper_drawing_is_wrong",
+   "expected_mismatch": "Fig 5A draws the head as HO-(CH2)3-N; the real compound is ((4-hydroxybutyl)azanediyl)bis(hexane-6,1-diyl) bis(2-hexyldecanoate), 4 carbons. We deliberately emit the CORRECT corpus structure, so this anchor is expected to differ from what is emitted."
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "SM-102",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "C2-style positive control, written head-first in a DIFFERENT atom order from the emitted corpus string so the comparison tests connectivity and not a copy. Trace of Fig 5A gives 2-hydroxyethyl head, N-(CH2)5-C(=O)O-undecyl, N-(CH2)7-C(=O)O-CH(octyl)2.",
+   "reference_inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "Positive control, written amine-first in a DIFFERENT atom order from the emitted corpus string. Trace gives 4-(dimethylamino)butanoate and both 18-carbon arms with double bonds 9 and 12 bonds from the carbinol.",
+   "reference_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "enumerated_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E1",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "NO external anchor exists. E1-E9 were supplied by WestGene Biopharmaceutical and the paper gives no name, formula, HRMS, synthesis or SI - Fig 5A is the only source, and that panel contains a verified one-carbon error (see ALC-0315). confidence=medium for all nine; it must not be upgraded without an external structure.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E2",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E3",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E4",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E5",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E6",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E7",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E8",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xd_2026_lipidai",
+   "lipid_name": "E9",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-10-29",
+   "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  }
+ ]
+}

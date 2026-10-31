@@ -1,0 +1,56 @@
+{
+ "Fig.1e": {
+  "cells_drawn": 64,
+  "cells_in_workbook": 64,
+  "matched": 64,
+  "missing": 0,
+  "n_cols": 4,
+  "n_rows": 16,
+  "spearman_colour_vs_value": 0.9996
+ },
+ "Fig.1f": {
+  "cells_drawn": 64,
+  "cells_in_workbook": 64,
+  "matched": 64,
+  "missing": 0,
+  "n_cols": 4,
+  "n_rows": 16,
+  "spearman_colour_vs_value": 0.9995
+ },
+ "Fig.1g": {
+  "cells_drawn": 52,
+  "cells_in_workbook": 52,
+  "matched": 52,
+  "missing": 0,
+  "n_cols": 4,
+  "n_rows": 13,
+  "spearman_colour_vs_value": 0.9981
+ },
+ "Fig.1h": {
+  "cells_drawn": 52,
+  "cells_in_workbook": 52,
+  "matched": 52,
+  "missing": 0,
+  "n_cols": 4,
+  "n_rows": 13,
+  "spearman_colour_vs_value": 0.9997
+ },
+ "Fig.1i": {
+  "cells_drawn": 39,
+  "cells_in_workbook": 39,
+  "matched": 39,
+  "missing": 0,
+  "n_cols": 3,
+  "n_rows": 13,
+  "spearman_colour_vs_value": 0.9999
+ },
+ "Fig.1j": {
+  "cells_drawn": 39,
+  "cells_in_workbook": 39,
+  "matched": 39,
+  "missing": 0,
+  "n_cols": 3,
+  "n_rows": 13,
+  "spearman_colour_vs_value": 0.9999
+ }
+}

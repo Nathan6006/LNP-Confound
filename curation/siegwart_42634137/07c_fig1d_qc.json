@@ -1,0 +1,71 @@
+{
+ "paper": "Tian et al., Adv Mater 2026, Fig 1d",
+ "n_cells": 51,
+ "expected": 51,
+ "grid": "3 cholesterol tails (B1,B2,B3) x 17 cores (5 commercial + 12 synthesized C1-C6 x O1/O2)",
+ "method": "printed numerals; glyph connected components, binarized and aspect-preserved, complete-linkage clustered on Jaccard distance",
+ "cells_segmenting_to_7_glyphs": "51/51",
+ "shape_issues": [],
+ "furniture_assertions_failed": [],
+ "mantissa_cluster_sizes": [
+  15,
+  14,
+  11,
+  9,
+  8,
+  7,
+  7,
+  6,
+  5,
+  5,
+  4,
+  4,
+  4,
+  3
+ ],
+ "mantissa_cluster_tightness": [
+  0.26,
+  0.231,
+  0.194,
+  0.1,
+  0.256,
+  0.171,
+  0.189,
+  0.229,
+  0.211,
+  0.169,
+  0.166,
+  0.095,
+  0.18,
+  0.156
+ ],
+ "exponent_cluster_sizes": [
+  23,
+  17,
+  9,
+  2
+ ],
+ "exponent_cluster_tightness": [
+  0.327,
+  0.307,
+  0.27,
+  0.356
+ ],
+ "exponent_distribution": {
+  "4": 23,
+  "5": 17,
+  "3": 2,
+  "6": 9
+ },
+ "independent_colourbar_check": {
+  "what": "cell fill mapped through the continuous white-to-blue bar (0-3e6), independent of the glyphs. Saturates below ~1e5, so it checks the large values and rank order, not the small ones.",
+  "spearman_all": 0.986,
+  "spearman_above_2e5": 0.9946,
+  "n_above_2e5": 15
+ },
+ "max_value": {
+  "lipid": "C6O2B2",
+  "value": 3000000.0
+ },
+ "review_image": "review/fig1d_overlay.png"
+}

@@ -1,0 +1,452 @@
+[
+ {
+  "pmid": "40267508",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41689530",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42763081",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "38888972",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11368637",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42634137",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC13689884",
+  "supplHTTP": "0",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42806111",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41145968",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42130331",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "29489381",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC6054134",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42690843",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "35132167",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC9082280",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "40681859",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41851281",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42220328",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "38583366",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11099935",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "40856486",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "29558113",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "30275336",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC6196543",
+  "supplHTTP": "0",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "40028722",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11878168",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "39264000",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11855220",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "39105751",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11342374",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "40500862",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "38982196",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11446653",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "40571690",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC13180654",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41203968",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC13387048",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42150080",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42592089",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "N",
+  "pmcid": "PMC13464080",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "39554995",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC11565460",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42569578",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC13450591",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "30216729",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC6426696",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "23909648",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41269090",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC12874650",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "36701517",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC9912332",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41603124",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC12957869",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41183194",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC12625924",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "33758781",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC7974401",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "30394729",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC6556374",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "35671473",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41691524",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41453807",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "37028451",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC10227718",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42446186",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC13367110",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41775665",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42489054",
+  "oa": "N",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC13580304",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "40689592",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42585110",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41617015",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "41555650",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "36133441",
+  "oa": "Y",
+  "inEPMC": "Y",
+  "hasSuppl": "Y",
+  "pmcid": "PMC9417559",
+  "supplHTTP": "200",
+  "supplBytes": ""
+ },
+ {
+  "pmid": "42916086",
+  "oa": "N",
+  "inEPMC": "N",
+  "hasSuppl": "N",
+  "pmcid": "",
+  "supplHTTP": "",
+  "supplBytes": ""
+ }
+]

@@ -1,0 +1,26 @@
+{
+ "failures": [],
+ "passes": [
+  "PASS  row count 344 (expect 344 = 320 + 24)",
+  "PASS  column count 79 (expect 79)",
+  "PASS  Fig 2b cells 320",
+  "PASS  Fig 3c library-2 bars = 24",
+  "PASS  pooled z mean -1.9e-16 sd 1.000000000000",
+  "PASS  libraries are NOT standardised separately (that would force both block means to 0 and delete the between-library difference)",
+  "PASS  molar percents sum to 100",
+  "PASS  344 unique structures parse, canonical, single-fragment, radical-free ",
+  "PASS  all 344 structures distinct (344)",
+  "PASS  amide count matches one arm per primary amine (0 mismatches)",
+  "PASS  descriptors agree with their SMILES on 120 sampled rows (0)",
+  "PASS  Fig 2c set vs Fig 2b heatmap: 27/28 agree (the exception, T3A-L8-C14, is flagged)",
+  "PASS  Fig 2b vs Fig 2c agree on shared lipids, median ratio 0.997 over n=9",
+  "PASS  Fig 2d/2e/2f bars land on exact k/40 and k/64, max error 0.492%",
+  "PASS  printed 2d and 2e agree on the total (36)",
+  "PASS  Fig 3d printed hit counts reproduced exactly: {'2C10': 3, '2C11': 1, '2C12': 1}",
+  "PASS  Fig 3e printed per-linker rates reproduced (incl. L8 = 0): {'L1': 1, 'L2': 0, 'L3': 0, 'L4': 0, 'L5': 2, 'L6': 1, 'L7': 1, 'L8': 0}",
+  "PASS  Results sentence '17 lipids ... greater than 1e5' reproduced: 17",
+  "PASS  the 4 shared benchmarks give a consistent scalar offset 1.007x (sd 0.025), applied to library 2",
+  "PASS  six-tail library 2 still sits far above library 1 after z-scoring (mean z 2.11 vs -0.16) - the paper's central finding is preserved, not standardised away",
+  "PASS  T3A-L8-C14 carries the HEATMAP value as documented: z=0.311 matches lipids at ~8e3 RLU (mean z 0.340), not the saturated band (z>=1.564)"
+ ]
+}

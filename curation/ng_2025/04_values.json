@@ -1,0 +1,2357 @@
+{
+ "blocks": {
+  "Fig.1e": {
+   "rows": 16,
+   "cols": 4,
+   "n": 64
+  },
+  "Fig.1f": {
+   "rows": 16,
+   "cols": 4,
+   "n": 64
+  },
+  "Fig.1g": {
+   "rows": 13,
+   "cols": 4,
+   "n": 52
+  },
+  "Fig.1h": {
+   "rows": 13,
+   "cols": 4,
+   "n": 52
+  },
+  "Fig.1i": {
+   "rows": 13,
+   "cols": 3,
+   "n": 39
+  },
+  "Fig.1j": {
+   "rows": 13,
+   "cols": 3,
+   "n": 39
+  }
+ },
+ "n_vitro": 310,
+ "vitro": [
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a1",
+   "tail": "A",
+   "amine": "a1",
+   "log10_luminescence": 2.900367
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a1",
+   "tail": "B",
+   "amine": "a1",
+   "log10_luminescence": 4.464176
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a1",
+   "tail": "C",
+   "amine": "a1",
+   "log10_luminescence": 4.712683
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a1",
+   "tail": "D",
+   "amine": "a1",
+   "log10_luminescence": 4.828151
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a2",
+   "tail": "A",
+   "amine": "a2",
+   "log10_luminescence": 3.200029
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a2",
+   "tail": "B",
+   "amine": "a2",
+   "log10_luminescence": 4.308586
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a2",
+   "tail": "C",
+   "amine": "a2",
+   "log10_luminescence": 5.017488
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a2",
+   "tail": "D",
+   "amine": "a2",
+   "log10_luminescence": 4.252659
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a3",
+   "tail": "A",
+   "amine": "a3",
+   "log10_luminescence": 1.50515
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a3",
+   "tail": "B",
+   "amine": "a3",
+   "log10_luminescence": 4.674025
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a3",
+   "tail": "C",
+   "amine": "a3",
+   "log10_luminescence": 4.802726
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a3",
+   "tail": "D",
+   "amine": "a3",
+   "log10_luminescence": 4.882137
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a4",
+   "tail": "A",
+   "amine": "a4",
+   "log10_luminescence": 2.100371
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a4",
+   "tail": "B",
+   "amine": "a4",
+   "log10_luminescence": 5.180106
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a4",
+   "tail": "C",
+   "amine": "a4",
+   "log10_luminescence": 5.695669
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a4",
+   "tail": "D",
+   "amine": "a4",
+   "log10_luminescence": 5.285025
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a5",
+   "tail": "A",
+   "amine": "a5",
+   "log10_luminescence": 2.198657
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a5",
+   "tail": "B",
+   "amine": "a5",
+   "log10_luminescence": 5.937736
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a5",
+   "tail": "C",
+   "amine": "a5",
+   "log10_luminescence": 5.077696
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a5",
+   "tail": "D",
+   "amine": "a5",
+   "log10_luminescence": 4.750285
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a6",
+   "tail": "A",
+   "amine": "a6",
+   "log10_luminescence": 2.499687
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a6",
+   "tail": "B",
+   "amine": "a6",
+   "log10_luminescence": 5.835199
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a6",
+   "tail": "C",
+   "amine": "a6",
+   "log10_luminescence": 5.094558
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a6",
+   "tail": "D",
+   "amine": "a6",
+   "log10_luminescence": 5.040452
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a7",
+   "tail": "A",
+   "amine": "a7",
+   "log10_luminescence": 2.800029
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a7",
+   "tail": "B",
+   "amine": "a7",
+   "log10_luminescence": 4.095623
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a7",
+   "tail": "C",
+   "amine": "a7",
+   "log10_luminescence": 4.383025
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a7",
+   "tail": "D",
+   "amine": "a7",
+   "log10_luminescence": 4.722987
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a8",
+   "tail": "A",
+   "amine": "a8",
+   "log10_luminescence": 3.200029
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a8",
+   "tail": "B",
+   "amine": "a8",
+   "log10_luminescence": 3.915769
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a8",
+   "tail": "C",
+   "amine": "a8",
+   "log10_luminescence": 5.405208
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a8",
+   "tail": "D",
+   "amine": "a8",
+   "log10_luminescence": 5.50783
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a9",
+   "tail": "A",
+   "amine": "a9",
+   "log10_luminescence": 3.499962
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a9",
+   "tail": "B",
+   "amine": "a9",
+   "log10_luminescence": 5.113877
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a9",
+   "tail": "C",
+   "amine": "a9",
+   "log10_luminescence": 6.373008
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a9",
+   "tail": "D",
+   "amine": "a9",
+   "log10_luminescence": 6.263463
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a10",
+   "tail": "A",
+   "amine": "a10",
+   "log10_luminescence": 3.500236
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a10",
+   "tail": "B",
+   "amine": "a10",
+   "log10_luminescence": 5.217451
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a10",
+   "tail": "C",
+   "amine": "a10",
+   "log10_luminescence": 6.201223
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a10",
+   "tail": "D",
+   "amine": "a10",
+   "log10_luminescence": 5.034304
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a11",
+   "tail": "A",
+   "amine": "a11",
+   "log10_luminescence": 3.200303
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a11",
+   "tail": "B",
+   "amine": "a11",
+   "log10_luminescence": 6.113556
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a11",
+   "tail": "C",
+   "amine": "a11",
+   "log10_luminescence": 6.219848
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a11",
+   "tail": "D",
+   "amine": "a11",
+   "log10_luminescence": 6.293879
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a12",
+   "tail": "A",
+   "amine": "a12",
+   "log10_luminescence": 2.103804
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a12",
+   "tail": "B",
+   "amine": "a12",
+   "log10_luminescence": 4.804634
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a12",
+   "tail": "C",
+   "amine": "a12",
+   "log10_luminescence": 6.036851
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a12",
+   "tail": "D",
+   "amine": "a12",
+   "log10_luminescence": 5.203664
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a13",
+   "tail": "A",
+   "amine": "a13",
+   "log10_luminescence": 2.800029
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a13",
+   "tail": "B",
+   "amine": "a13",
+   "log10_luminescence": 4.963166
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a13",
+   "tail": "C",
+   "amine": "a13",
+   "log10_luminescence": 5.033483
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a13",
+   "tail": "D",
+   "amine": "a13",
+   "log10_luminescence": 5.277889
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a14",
+   "tail": "A",
+   "amine": "a14",
+   "log10_luminescence": 2.700704
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a14",
+   "tail": "B",
+   "amine": "a14",
+   "log10_luminescence": 5.59284
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a14",
+   "tail": "C",
+   "amine": "a14",
+   "log10_luminescence": 5.225449
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a14",
+   "tail": "D",
+   "amine": "a14",
+   "log10_luminescence": 5.475139
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a15",
+   "tail": "A",
+   "amine": "a15",
+   "log10_luminescence": 2.899821
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a15",
+   "tail": "B",
+   "amine": "a15",
+   "log10_luminescence": 5.271137
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a15",
+   "tail": "C",
+   "amine": "a15",
+   "log10_luminescence": 6.215219
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a15",
+   "tail": "D",
+   "amine": "a15",
+   "log10_luminescence": 5.031897
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "A-a16",
+   "tail": "A",
+   "amine": "a16",
+   "log10_luminescence": 3.200577
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "B-a16",
+   "tail": "B",
+   "amine": "a16",
+   "log10_luminescence": 6.213369
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "C-a16",
+   "tail": "C",
+   "amine": "a16",
+   "log10_luminescence": 6.716817
+  },
+  {
+   "block": "Fig.1e",
+   "lipid_name": "D-a16",
+   "tail": "D",
+   "amine": "a16",
+   "log10_luminescence": 6.173307
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a1",
+   "tail": "E",
+   "amine": "a1",
+   "log10_luminescence": 0.845098
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a1",
+   "tail": "F",
+   "amine": "a1",
+   "log10_luminescence": 3.083144
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a1",
+   "tail": "G",
+   "amine": "a1",
+   "log10_luminescence": 2.164353
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a1",
+   "tail": "H",
+   "amine": "a1",
+   "log10_luminescence": 2.09691
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a2",
+   "tail": "E",
+   "amine": "a2",
+   "log10_luminescence": 1.662758
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a2",
+   "tail": "F",
+   "amine": "a2",
+   "log10_luminescence": 3.535547
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a2",
+   "tail": "G",
+   "amine": "a2",
+   "log10_luminescence": 2.371068
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a2",
+   "tail": "H",
+   "amine": "a2",
+   "log10_luminescence": 2.372912
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a3",
+   "tail": "E",
+   "amine": "a3",
+   "log10_luminescence": 2.082785
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a3",
+   "tail": "F",
+   "amine": "a3",
+   "log10_luminescence": 2.089905
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a3",
+   "tail": "G",
+   "amine": "a3",
+   "log10_luminescence": 2.673021
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a3",
+   "tail": "H",
+   "amine": "a3",
+   "log10_luminescence": 2.352183
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a4",
+   "tail": "E",
+   "amine": "a4",
+   "log10_luminescence": 3.48841
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a4",
+   "tail": "F",
+   "amine": "a4",
+   "log10_luminescence": 4.001604
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a4",
+   "tail": "G",
+   "amine": "a4",
+   "log10_luminescence": 3.170262
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a4",
+   "tail": "H",
+   "amine": "a4",
+   "log10_luminescence": 3.505557
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a5",
+   "tail": "E",
+   "amine": "a5",
+   "log10_luminescence": 2.50515
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a5",
+   "tail": "F",
+   "amine": "a5",
+   "log10_luminescence": 2.460898
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a5",
+   "tail": "G",
+   "amine": "a5",
+   "log10_luminescence": 3.083144
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a5",
+   "tail": "H",
+   "amine": "a5",
+   "log10_luminescence": 2.056905
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a6",
+   "tail": "E",
+   "amine": "a6",
+   "log10_luminescence": 2.369216
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a6",
+   "tail": "F",
+   "amine": "a6",
+   "log10_luminescence": 2.506505
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a6",
+   "tail": "G",
+   "amine": "a6",
+   "log10_luminescence": 2.252853
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a6",
+   "tail": "H",
+   "amine": "a6",
+   "log10_luminescence": 2.738781
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a7",
+   "tail": "E",
+   "amine": "a7",
+   "log10_luminescence": 1.944483
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a7",
+   "tail": "F",
+   "amine": "a7",
+   "log10_luminescence": 2.870404
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a7",
+   "tail": "G",
+   "amine": "a7",
+   "log10_luminescence": 3.24403
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a7",
+   "tail": "H",
+   "amine": "a7",
+   "log10_luminescence": 2.623249
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a8",
+   "tail": "E",
+   "amine": "a8",
+   "log10_luminescence": 2.0086
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a8",
+   "tail": "F",
+   "amine": "a8",
+   "log10_luminescence": 2.537819
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a8",
+   "tail": "G",
+   "amine": "a8",
+   "log10_luminescence": 2.332438
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a8",
+   "tail": "H",
+   "amine": "a8",
+   "log10_luminescence": 2.322219
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a9",
+   "tail": "E",
+   "amine": "a9",
+   "log10_luminescence": 2.209515
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a9",
+   "tail": "F",
+   "amine": "a9",
+   "log10_luminescence": 2.363612
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a9",
+   "tail": "G",
+   "amine": "a9",
+   "log10_luminescence": 2.363612
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a9",
+   "tail": "H",
+   "amine": "a9",
+   "log10_luminescence": 2.378398
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a10",
+   "tail": "E",
+   "amine": "a10",
+   "log10_luminescence": 3.442793
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a10",
+   "tail": "F",
+   "amine": "a10",
+   "log10_luminescence": 3.556061
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a10",
+   "tail": "G",
+   "amine": "a10",
+   "log10_luminescence": 4.349491
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a10",
+   "tail": "H",
+   "amine": "a10",
+   "log10_luminescence": 4.052502
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a11",
+   "tail": "E",
+   "amine": "a11",
+   "log10_luminescence": 3.604118
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a11",
+   "tail": "F",
+   "amine": "a11",
+   "log10_luminescence": 4.046222
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a11",
+   "tail": "G",
+   "amine": "a11",
+   "log10_luminescence": 4.726303
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a11",
+   "tail": "H",
+   "amine": "a11",
+   "log10_luminescence": 3.042969
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a12",
+   "tail": "E",
+   "amine": "a12",
+   "log10_luminescence": 3.940616
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a12",
+   "tail": "F",
+   "amine": "a12",
+   "log10_luminescence": 5.418378
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a12",
+   "tail": "G",
+   "amine": "a12",
+   "log10_luminescence": 6.074034
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a12",
+   "tail": "H",
+   "amine": "a12",
+   "log10_luminescence": 5.176482
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a13",
+   "tail": "E",
+   "amine": "a13",
+   "log10_luminescence": 2.537819
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a13",
+   "tail": "F",
+   "amine": "a13",
+   "log10_luminescence": 2.585461
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a13",
+   "tail": "G",
+   "amine": "a13",
+   "log10_luminescence": 3.057666
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a13",
+   "tail": "H",
+   "amine": "a13",
+   "log10_luminescence": 3.588832
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a14",
+   "tail": "E",
+   "amine": "a14",
+   "log10_luminescence": 3.883888
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a14",
+   "tail": "F",
+   "amine": "a14",
+   "log10_luminescence": 5.148572
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a14",
+   "tail": "G",
+   "amine": "a14",
+   "log10_luminescence": 3.737193
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a14",
+   "tail": "H",
+   "amine": "a14",
+   "log10_luminescence": 3.368845
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a15",
+   "tail": "E",
+   "amine": "a15",
+   "log10_luminescence": 3.326541
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a15",
+   "tail": "F",
+   "amine": "a15",
+   "log10_luminescence": 4.414606
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a15",
+   "tail": "G",
+   "amine": "a15",
+   "log10_luminescence": 4.644783
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a15",
+   "tail": "H",
+   "amine": "a15",
+   "log10_luminescence": 3.180126
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "E-a16",
+   "tail": "E",
+   "amine": "a16",
+   "log10_luminescence": 2.32838
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "F-a16",
+   "tail": "F",
+   "amine": "a16",
+   "log10_luminescence": 2.820858
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "G-a16",
+   "tail": "G",
+   "amine": "a16",
+   "log10_luminescence": 2.854306
+  },
+  {
+   "block": "Fig.1f",
+   "lipid_name": "H-a16",
+   "tail": "H",
+   "amine": "a16",
+   "log10_luminescence": 2.09691
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b1",
+   "tail": "I",
+   "amine": "b1",
+   "log10_luminescence": 2.951823
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b1",
+   "tail": "J",
+   "amine": "b1",
+   "log10_luminescence": 2.999565
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b1",
+   "tail": "K",
+   "amine": "b1",
+   "log10_luminescence": 1.78533
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b1",
+   "tail": "L",
+   "amine": "b1",
+   "log10_luminescence": 2.991226
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b2",
+   "tail": "I",
+   "amine": "b2",
+   "log10_luminescence": 2.7348
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b2",
+   "tail": "J",
+   "amine": "b2",
+   "log10_luminescence": 1.20412
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b2",
+   "tail": "K",
+   "amine": "b2",
+   "log10_luminescence": 2.974512
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b2",
+   "tail": "L",
+   "amine": "b2",
+   "log10_luminescence": 2.143015
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b3",
+   "tail": "I",
+   "amine": "b3",
+   "log10_luminescence": 2.933993
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b3",
+   "tail": "J",
+   "amine": "b3",
+   "log10_luminescence": 2.574031
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b3",
+   "tail": "K",
+   "amine": "b3",
+   "log10_luminescence": 2.879096
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b3",
+   "tail": "L",
+   "amine": "b3",
+   "log10_luminescence": 2.795185
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b4",
+   "tail": "I",
+   "amine": "b4",
+   "log10_luminescence": 3.304275
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b4",
+   "tail": "J",
+   "amine": "b4",
+   "log10_luminescence": 2.954725
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b4",
+   "tail": "K",
+   "amine": "b4",
+   "log10_luminescence": 2.777427
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b4",
+   "tail": "L",
+   "amine": "b4",
+   "log10_luminescence": 2.64836
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b5",
+   "tail": "I",
+   "amine": "b5",
+   "log10_luminescence": 2.625312
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b5",
+   "tail": "J",
+   "amine": "b5",
+   "log10_luminescence": 2.553883
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b5",
+   "tail": "K",
+   "amine": "b5",
+   "log10_luminescence": 3.160469
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b5",
+   "tail": "L",
+   "amine": "b5",
+   "log10_luminescence": 2.120574
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b6",
+   "tail": "I",
+   "amine": "b6",
+   "log10_luminescence": 2.025306
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b6",
+   "tail": "J",
+   "amine": "b6",
+   "log10_luminescence": 3.288696
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b6",
+   "tail": "K",
+   "amine": "b6",
+   "log10_luminescence": 3.902818
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b6",
+   "tail": "L",
+   "amine": "b6",
+   "log10_luminescence": 3.471438
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b7",
+   "tail": "I",
+   "amine": "b7",
+   "log10_luminescence": 3.080626
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b7",
+   "tail": "J",
+   "amine": "b7",
+   "log10_luminescence": 3.165541
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b7",
+   "tail": "K",
+   "amine": "b7",
+   "log10_luminescence": 3.039414
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b7",
+   "tail": "L",
+   "amine": "b7",
+   "log10_luminescence": 2.32838
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b8",
+   "tail": "I",
+   "amine": "b8",
+   "log10_luminescence": 2.25042
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b8",
+   "tail": "J",
+   "amine": "b8",
+   "log10_luminescence": 2.752048
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b8",
+   "tail": "K",
+   "amine": "b8",
+   "log10_luminescence": 3.4682
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b8",
+   "tail": "L",
+   "amine": "b8",
+   "log10_luminescence": 2.722634
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b9",
+   "tail": "I",
+   "amine": "b9",
+   "log10_luminescence": 3.469233
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b9",
+   "tail": "J",
+   "amine": "b9",
+   "log10_luminescence": 3.852785
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b9",
+   "tail": "K",
+   "amine": "b9",
+   "log10_luminescence": 3.729732
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b9",
+   "tail": "L",
+   "amine": "b9",
+   "log10_luminescence": 3.309843
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b10",
+   "tail": "I",
+   "amine": "b10",
+   "log10_luminescence": 3.353532
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b10",
+   "tail": "J",
+   "amine": "b10",
+   "log10_luminescence": 3.895146
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b10",
+   "tail": "K",
+   "amine": "b10",
+   "log10_luminescence": 3.4929
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b10",
+   "tail": "L",
+   "amine": "b10",
+   "log10_luminescence": 3.366796
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b11",
+   "tail": "I",
+   "amine": "b11",
+   "log10_luminescence": 3.772542
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b11",
+   "tail": "J",
+   "amine": "b11",
+   "log10_luminescence": 3.205746
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b11",
+   "tail": "K",
+   "amine": "b11",
+   "log10_luminescence": 2.348305
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b11",
+   "tail": "L",
+   "amine": "b11",
+   "log10_luminescence": 3.283753
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b12",
+   "tail": "I",
+   "amine": "b12",
+   "log10_luminescence": 2.824126
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b12",
+   "tail": "J",
+   "amine": "b12",
+   "log10_luminescence": 2.755875
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b12",
+   "tail": "K",
+   "amine": "b12",
+   "log10_luminescence": 3.172019
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b12",
+   "tail": "L",
+   "amine": "b12",
+   "log10_luminescence": 2.580925
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "I-a-b13",
+   "tail": "I",
+   "amine": "b13",
+   "log10_luminescence": 3.752509
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "J-a-b13",
+   "tail": "J",
+   "amine": "b13",
+   "log10_luminescence": 3.034227
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "K-a-b13",
+   "tail": "K",
+   "amine": "b13",
+   "log10_luminescence": 3.134814
+  },
+  {
+   "block": "Fig.1g",
+   "lipid_name": "L-a-b13",
+   "tail": "L",
+   "amine": "b13",
+   "log10_luminescence": 2.942008
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b1",
+   "tail": "I",
+   "amine": "b1",
+   "log10_luminescence": 2.326336
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b1",
+   "tail": "J",
+   "amine": "b1",
+   "log10_luminescence": 2.071882
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b1",
+   "tail": "K",
+   "amine": "b1",
+   "log10_luminescence": 3.149527
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b1",
+   "tail": "L",
+   "amine": "b1",
+   "log10_luminescence": 3.113275
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b2",
+   "tail": "I",
+   "amine": "b2",
+   "log10_luminescence": 2.856124
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b2",
+   "tail": "J",
+   "amine": "b2",
+   "log10_luminescence": 2.910091
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b2",
+   "tail": "K",
+   "amine": "b2",
+   "log10_luminescence": 2.992554
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b2",
+   "tail": "L",
+   "amine": "b2",
+   "log10_luminescence": 3.771073
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b3",
+   "tail": "I",
+   "amine": "b3",
+   "log10_luminescence": 3.486714
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b3",
+   "tail": "J",
+   "amine": "b3",
+   "log10_luminescence": 3.431846
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b3",
+   "tail": "K",
+   "amine": "b3",
+   "log10_luminescence": 3.245513
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b3",
+   "tail": "L",
+   "amine": "b3",
+   "log10_luminescence": 1.90309
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b4",
+   "tail": "I",
+   "amine": "b4",
+   "log10_luminescence": 1.982271
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b4",
+   "tail": "J",
+   "amine": "b4",
+   "log10_luminescence": 3.615213
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b4",
+   "tail": "K",
+   "amine": "b4",
+   "log10_luminescence": 3.270679
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b4",
+   "tail": "L",
+   "amine": "b4",
+   "log10_luminescence": 3.024896
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b5",
+   "tail": "I",
+   "amine": "b5",
+   "log10_luminescence": 3.989138
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b5",
+   "tail": "J",
+   "amine": "b5",
+   "log10_luminescence": 3.360593
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b5",
+   "tail": "K",
+   "amine": "b5",
+   "log10_luminescence": 2.350248
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b5",
+   "tail": "L",
+   "amine": "b5",
+   "log10_luminescence": 3.423901
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b6",
+   "tail": "I",
+   "amine": "b6",
+   "log10_luminescence": 3.676145
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b6",
+   "tail": "J",
+   "amine": "b6",
+   "log10_luminescence": 2.50515
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b6",
+   "tail": "K",
+   "amine": "b6",
+   "log10_luminescence": 2.093422
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b6",
+   "tail": "L",
+   "amine": "b6",
+   "log10_luminescence": 3.062582
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b7",
+   "tail": "I",
+   "amine": "b7",
+   "log10_luminescence": 3.070407
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b7",
+   "tail": "J",
+   "amine": "b7",
+   "log10_luminescence": 2.287802
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b7",
+   "tail": "K",
+   "amine": "b7",
+   "log10_luminescence": 2.531479
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b7",
+   "tail": "L",
+   "amine": "b7",
+   "log10_luminescence": 3.039017
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b8",
+   "tail": "I",
+   "amine": "b8",
+   "log10_luminescence": 3.537819
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b8",
+   "tail": "J",
+   "amine": "b8",
+   "log10_luminescence": 4.235781
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b8",
+   "tail": "K",
+   "amine": "b8",
+   "log10_luminescence": 4.487421
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b8",
+   "tail": "L",
+   "amine": "b8",
+   "log10_luminescence": 3.475671
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b9",
+   "tail": "I",
+   "amine": "b9",
+   "log10_luminescence": 3.973128
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b9",
+   "tail": "J",
+   "amine": "b9",
+   "log10_luminescence": 4.166134
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b9",
+   "tail": "K",
+   "amine": "b9",
+   "log10_luminescence": 3.305351
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b9",
+   "tail": "L",
+   "amine": "b9",
+   "log10_luminescence": 4.167908
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b10",
+   "tail": "I",
+   "amine": "b10",
+   "log10_luminescence": 2.880814
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b10",
+   "tail": "J",
+   "amine": "b10",
+   "log10_luminescence": 4.020775
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b10",
+   "tail": "K",
+   "amine": "b10",
+   "log10_luminescence": 3.374748
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b10",
+   "tail": "L",
+   "amine": "b10",
+   "log10_luminescence": 3.350248
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b11",
+   "tail": "I",
+   "amine": "b11",
+   "log10_luminescence": 3.509203
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b11",
+   "tail": "J",
+   "amine": "b11",
+   "log10_luminescence": 4.568554
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b11",
+   "tail": "K",
+   "amine": "b11",
+   "log10_luminescence": 3.064458
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b11",
+   "tail": "L",
+   "amine": "b11",
+   "log10_luminescence": 3.31597
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b12",
+   "tail": "I",
+   "amine": "b12",
+   "log10_luminescence": 3.187521
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b12",
+   "tail": "J",
+   "amine": "b12",
+   "log10_luminescence": 2.869232
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b12",
+   "tail": "K",
+   "amine": "b12",
+   "log10_luminescence": 3.352183
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b12",
+   "tail": "L",
+   "amine": "b12",
+   "log10_luminescence": 3.245513
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "I-b-b13",
+   "tail": "I",
+   "amine": "b13",
+   "log10_luminescence": 3.547775
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "J-b-b13",
+   "tail": "J",
+   "amine": "b13",
+   "log10_luminescence": 4.2266
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "K-b-b13",
+   "tail": "K",
+   "amine": "b13",
+   "log10_luminescence": 3.482874
+  },
+  {
+   "block": "Fig.1h",
+   "lipid_name": "L-b-b13",
+   "tail": "L",
+   "amine": "b13",
+   "log10_luminescence": 3.271842
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b1",
+   "tail": "M",
+   "amine": "b1",
+   "log10_luminescence": 1.447158
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b1",
+   "tail": "N",
+   "amine": "b1",
+   "log10_luminescence": 1.643453
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b1",
+   "tail": "O",
+   "amine": "b1",
+   "log10_luminescence": 1.832509
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b2",
+   "tail": "M",
+   "amine": "b2",
+   "log10_luminescence": 3.01157
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b2",
+   "tail": "N",
+   "amine": "b2",
+   "log10_luminescence": 1.633468
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b2",
+   "tail": "O",
+   "amine": "b2",
+   "log10_luminescence": 1.908485
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b3",
+   "tail": "M",
+   "amine": "b3",
+   "log10_luminescence": 2.303196
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b3",
+   "tail": "N",
+   "amine": "b3",
+   "log10_luminescence": 1.518514
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b3",
+   "tail": "O",
+   "amine": "b3",
+   "log10_luminescence": 2.475671
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b4",
+   "tail": "M",
+   "amine": "b4",
+   "log10_luminescence": 3.235023
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b4",
+   "tail": "N",
+   "amine": "b4",
+   "log10_luminescence": 2.143015
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b4",
+   "tail": "O",
+   "amine": "b4",
+   "log10_luminescence": 2.866878
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b5",
+   "tail": "M",
+   "amine": "b5",
+   "log10_luminescence": 1.826075
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b5",
+   "tail": "N",
+   "amine": "b5",
+   "log10_luminescence": 2.488551
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b5",
+   "tail": "O",
+   "amine": "b5",
+   "log10_luminescence": 2.460898
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b6",
+   "tail": "M",
+   "amine": "b6",
+   "log10_luminescence": 1.681241
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b6",
+   "tail": "N",
+   "amine": "b6",
+   "log10_luminescence": 3.547529
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b6",
+   "tail": "O",
+   "amine": "b6",
+   "log10_luminescence": 2.883093
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b7",
+   "tail": "M",
+   "amine": "b7",
+   "log10_luminescence": 1.653213
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b7",
+   "tail": "N",
+   "amine": "b7",
+   "log10_luminescence": 2.670246
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b7",
+   "tail": "O",
+   "amine": "b7",
+   "log10_luminescence": 1.792392
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b8",
+   "tail": "M",
+   "amine": "b8",
+   "log10_luminescence": 2.11059
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b8",
+   "tail": "N",
+   "amine": "b8",
+   "log10_luminescence": 1.770852
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b8",
+   "tail": "O",
+   "amine": "b8",
+   "log10_luminescence": 3.946943
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b9",
+   "tail": "M",
+   "amine": "b9",
+   "log10_luminescence": 3.558948
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b9",
+   "tail": "N",
+   "amine": "b9",
+   "log10_luminescence": 3.009451
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b9",
+   "tail": "O",
+   "amine": "b9",
+   "log10_luminescence": 3.053463
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b10",
+   "tail": "M",
+   "amine": "b10",
+   "log10_luminescence": 2.966142
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b10",
+   "tail": "N",
+   "amine": "b10",
+   "log10_luminescence": 3.084576
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b10",
+   "tail": "O",
+   "amine": "b10",
+   "log10_luminescence": 4.609744
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b11",
+   "tail": "M",
+   "amine": "b11",
+   "log10_luminescence": 3.400538
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b11",
+   "tail": "N",
+   "amine": "b11",
+   "log10_luminescence": 3.800373
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b11",
+   "tail": "O",
+   "amine": "b11",
+   "log10_luminescence": 3.312812
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b12",
+   "tail": "M",
+   "amine": "b12",
+   "log10_luminescence": 4.31277
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b12",
+   "tail": "N",
+   "amine": "b12",
+   "log10_luminescence": 2.348305
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b12",
+   "tail": "O",
+   "amine": "b12",
+   "log10_luminescence": 3.51175
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "M-b13",
+   "tail": "M",
+   "amine": "b13",
+   "log10_luminescence": 2.691965
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "N-b13",
+   "tail": "N",
+   "amine": "b13",
+   "log10_luminescence": 3.282622
+  },
+  {
+   "block": "Fig.1i",
+   "lipid_name": "O-b13",
+   "tail": "O",
+   "amine": "b13",
+   "log10_luminescence": 3.424392
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b1",
+   "tail": "P",
+   "amine": "b1",
+   "log10_luminescence": 2.984977
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b1",
+   "tail": "Q",
+   "amine": "b1",
+   "log10_luminescence": 2.472756
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b1",
+   "tail": "R",
+   "amine": "b1",
+   "log10_luminescence": 3.140822
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b2",
+   "tail": "P",
+   "amine": "b2",
+   "log10_luminescence": 3.185825
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b2",
+   "tail": "Q",
+   "amine": "b2",
+   "log10_luminescence": 2.895975
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b2",
+   "tail": "R",
+   "amine": "b2",
+   "log10_luminescence": 3.456973
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b3",
+   "tail": "P",
+   "amine": "b3",
+   "log10_luminescence": 2.365488
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b3",
+   "tail": "Q",
+   "amine": "b3",
+   "log10_luminescence": 4.893151
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b3",
+   "tail": "R",
+   "amine": "b3",
+   "log10_luminescence": 3.878522
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b4",
+   "tail": "P",
+   "amine": "b4",
+   "log10_luminescence": 1.977724
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b4",
+   "tail": "Q",
+   "amine": "b4",
+   "log10_luminescence": 4.066326
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b4",
+   "tail": "R",
+   "amine": "b4",
+   "log10_luminescence": 4.386321
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b5",
+   "tail": "P",
+   "amine": "b5",
+   "log10_luminescence": 2.569374
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b5",
+   "tail": "Q",
+   "amine": "b5",
+   "log10_luminescence": 4.490801
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b5",
+   "tail": "R",
+   "amine": "b5",
+   "log10_luminescence": 4.435526
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b6",
+   "tail": "P",
+   "amine": "b6",
+   "log10_luminescence": 3.024486
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b6",
+   "tail": "Q",
+   "amine": "b6",
+   "log10_luminescence": 4.273233
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b6",
+   "tail": "R",
+   "amine": "b6",
+   "log10_luminescence": 4.245266
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b7",
+   "tail": "P",
+   "amine": "b7",
+   "log10_luminescence": 3.079181
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b7",
+   "tail": "Q",
+   "amine": "b7",
+   "log10_luminescence": 3.075547
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b7",
+   "tail": "R",
+   "amine": "b7",
+   "log10_luminescence": 4.106871
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b8",
+   "tail": "P",
+   "amine": "b8",
+   "log10_luminescence": 2.735599
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b8",
+   "tail": "Q",
+   "amine": "b8",
+   "log10_luminescence": 3.638489
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b8",
+   "tail": "R",
+   "amine": "b8",
+   "log10_luminescence": 4.350442
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b9",
+   "tail": "P",
+   "amine": "b9",
+   "log10_luminescence": 2.338456
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b9",
+   "tail": "Q",
+   "amine": "b9",
+   "log10_luminescence": 3.477121
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b9",
+   "tail": "R",
+   "amine": "b9",
+   "log10_luminescence": 4.899602
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b10",
+   "tail": "P",
+   "amine": "b10",
+   "log10_luminescence": 2.305351
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b10",
+   "tail": "Q",
+   "amine": "b10",
+   "log10_luminescence": 4.053078
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b10",
+   "tail": "R",
+   "amine": "b10",
+   "log10_luminescence": 3.836957
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b11",
+   "tail": "P",
+   "amine": "b11",
+   "log10_luminescence": 2.651278
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b11",
+   "tail": "Q",
+   "amine": "b11",
+   "log10_luminescence": 4.66436
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b11",
+   "tail": "R",
+   "amine": "b11",
+   "log10_luminescence": 4.294025
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b12",
+   "tail": "P",
+   "amine": "b12",
+   "log10_luminescence": 2.859138
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b12",
+   "tail": "Q",
+   "amine": "b12",
+   "log10_luminescence": 2.880814
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b12",
+   "tail": "R",
+   "amine": "b12",
+   "log10_luminescence": 4.220892
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "P-b13",
+   "tail": "P",
+   "amine": "b13",
+   "log10_luminescence": 2.946452
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "Q-b13",
+   "tail": "Q",
+   "amine": "b13",
+   "log10_luminescence": 3.338058
+  },
+  {
+   "block": "Fig.1j",
+   "lipid_name": "R-b13",
+   "tail": "R",
+   "amine": "b13",
+   "log10_luminescence": 3.373464
+  }
+ ],
+ "vivo": {
+  "Fig.1m": {
+   "names": [
+    "B-a11",
+    "B-a16",
+    "C-a9",
+    "C-a10",
+    "C-a11",
+    "C-a12",
+    "C-a15",
+    "C-a16",
+    "D-a9",
+    "D-a11",
+    "D-a16",
+    "Dlin-MC3-DMA"
+   ],
+   "replicates": [
+    [
+     167.6,
+     364.5,
+     23.9,
+     49.5,
+     1.3,
+     173.3,
+     184.9,
+     793.6,
+     42.7,
+     5.2,
+     112.2,
+     102.2
+    ],
+    [
+     133.1,
+     345.0,
+     24.5,
+     36.4,
+     1.6,
+     151.5,
+     175.3,
+     827.2,
+     29.8,
+     8.6,
+     196.3,
+     87.3
+    ],
+    [
+     132.7,
+     431.2,
+     27.8,
+     41.6,
+     1.41,
+     123.2,
+     203.5,
+     747.1,
+     36.9,
+     7.5,
+     178.2,
+     113.6
+    ]
+   ],
+   "mean": {
+    "B-a11": 144.46666666666667,
+    "B-a16": 380.23333333333335,
+    "C-a9": 25.400000000000002,
+    "C-a10": 42.5,
+    "C-a11": 1.4366666666666668,
+    "C-a12": 149.33333333333334,
+    "C-a15": 187.9,
+    "C-a16": 789.3000000000001,
+    "D-a9": 36.46666666666667,
+    "D-a11": 7.1000000000000005,
+    "D-a16": 162.23333333333332,
+    "Dlin-MC3-DMA": 101.03333333333335
+   }
+  },
+  "Fig.1p": {
+   "names": [
+    "B-a11",
+    "B-a16",
+    "C-a9",
+    "C-a10",
+    "C-a11",
+    "C-a12",
+    "C-a15",
+    "C-a16",
+    "D-a9",
+    "D-a11",
+    "D-a16",
+    "SM-102"
+   ],
+   "replicates": [
+    [
+     203.8,
+     776.3,
+     23.2,
+     47.8,
+     1.7,
+     178.4,
+     409.0,
+     1583.7,
+     98.5,
+     4.5,
+     245.8,
+     178.2
+    ],
+    [
+     227.2,
+     784.6,
+     24.8,
+     78.5,
+     1.6,
+     163.9,
+     443.8,
+     1387.3,
+     99.8,
+     3.9,
+     247.9,
+     186.6
+    ],
+    [
+     267.1,
+     828.1,
+     26.8,
+     92.2,
+     1.3,
+     166.8,
+     473.8,
+     1278.4,
+     102.1,
+     5.3,
+     237.8,
+     193.8
+    ]
+   ],
+   "mean": {
+    "B-a11": 232.70000000000002,
+    "B-a16": 796.3333333333334,
+    "C-a9": 24.933333333333334,
+    "C-a10": 72.83333333333333,
+    "C-a11": 1.5333333333333332,
+    "C-a12": 169.70000000000002,
+    "C-a15": 442.2,
+    "C-a16": 1416.4666666666665,
+    "D-a9": 100.13333333333333,
+    "D-a11": 4.566666666666666,
+    "D-a16": 243.83333333333334,
+    "SM-102": 186.20000000000002
+   }
+  }
+ }
+}

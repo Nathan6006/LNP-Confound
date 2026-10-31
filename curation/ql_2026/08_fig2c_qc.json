@@ -1,0 +1,32 @@
+{
+ "paper": "Liu et al., Adv Healthc Mater 2026, Fig 2c",
+ "bars": 32,
+ "lipids": 28,
+ "calibration": {
+  "y_1e4": 3156.75,
+  "px_per_decade": 407.0,
+  "anchors": "y-axis TICK centroids 2342.78/2749.54/3156.75 (F-017)"
+ },
+ "benchmark_values": {
+  "DLin-MC3-DMA": 50933.4,
+  "SM102": 49793.7,
+  "ALC-0315": 159704.4,
+  "Lipid 5": 73156.1
+ },
+ "lipid_range": [
+  22809.1,
+  377382.1
+ ],
+ "saturated_cells_in_fig2b": 21,
+ "rescued_by_fig2c": 18,
+ "still_censored": [
+  "114-L4-C14",
+  "114-L7-C14",
+  "400-L8-C12"
+ ],
+ "set_agreement_with_fig2b": {
+  "plotted": 28,
+  "also_above_2e4_in_heatmap": 27,
+  "exception": "T3A-L8-C14 is plotted in 2c but its 2b cell reads 7.9e3 and is visibly cream; the two figures disagree"
+ }
+}

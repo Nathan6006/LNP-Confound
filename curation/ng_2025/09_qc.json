@@ -1,0 +1,214 @@
+{
+ "C5_parse": {
+  "n": 310,
+  "unparseable": [],
+  "no_nitrogen": [],
+  "radicals": [],
+  "result": "pass"
+ },
+ "C3_library_size": {
+  "enumerated": 310,
+  "stated": 310,
+  "result": "pass"
+ },
+ "C4_duplicates_within_source": {
+  "n_duplicate_structures": 0,
+  "result": "pass"
+ },
+ "C4_noncanonical": {
+  "n": 0,
+  "result": "pass"
+ },
+ "C1_mass_C_a16": {
+  "formula": "C72H112N4O6",
+  "average_MW": 1129.71,
+  "printed_MW": 1129.71,
+  "delta_MW": -0.0,
+  "exact_mass": 1128.8582,
+  "M_plus_H_exact": 1129.8655,
+  "M_plus_H_average": 1130.72,
+  "observed_mz": 1130.4,
+  "doubly_charged_expected": 565.4,
+  "doubly_charged_observed": 565.8,
+  "total_H_in_structure": 112,
+  "nmr_integral_total": 106,
+  "exchangeable_H": 6,
+  "result": "pass",
+  "note": "nH - NMR total must equal 6: the 4 phenol OH and 2 amide NH are not integrated in the printed list, which is itself a structural statement (four phenols, and the diketopiperazine NH unsubstituted)"
+ },
+ "C6_molar_ratios": {
+  "distinct": [
+   [
+    "50",
+    "10",
+    "38.5",
+    "1.5"
+   ]
+  ],
+  "sums": [
+   100.0
+  ],
+  "result": "pass"
+ },
+ "C2_hit_rule_reconstruction": {
+  "rule": "the paper defines a hit as luminescence > 5x DLin-MC3-DMA",
+  "scope": "PHENOL LIBRARY ONLY (Fig. 1e). The paper states the rule inside its phenol-library paragraph and reports hits per phenol tail, so the reconstruction is scoped the same way. Applied to all 310 lipids the same threshold also catches G-a12 (thiol, log10 = 6.074), which clears it yet was not taken into mice - so no single threshold over the whole library reproduces exactly the 11.",
+  "thiol_lipid_also_above_threshold": {
+   "name": "G-a12",
+   "log10": 6.074034
+  },
+  "phenol_threshold_window": "(5.937736, 6.036851]",
+  "threshold_log10": 5.938,
+  "implied_MC3_luminescence": 173392.4,
+  "hits": [
+   "B-a11",
+   "B-a16",
+   "C-a10",
+   "C-a11",
+   "C-a12",
+   "C-a15",
+   "C-a16",
+   "C-a9",
+   "D-a11",
+   "D-a16",
+   "D-a9"
+  ],
+  "in_vivo_panel": [
+   "B-a11",
+   "B-a16",
+   "C-a9",
+   "C-a10",
+   "C-a11",
+   "C-a12",
+   "C-a15",
+   "C-a16",
+   "D-a9",
+   "D-a11",
+   "D-a16"
+  ],
+  "reproduced": true,
+  "hits_per_tail_from_data": {
+   "A": 0,
+   "B": 2,
+   "C": 6,
+   "D": 3
+  },
+  "hits_per_tail_as_printed": {
+   "A": 0,
+   "B": 3,
+   "C": 6,
+   "D": 2
+  },
+  "result": "pass",
+  "discrepancy": "the Results text prints 0, 3, 6 and 2 hits for phenols A-D; the Source Data give 0, 2, 6 and 3, and the paper's OWN in-vivo panel (Fig. 1k-p) carries 2 B-lipids and 3 D-lipids, so the printed B and D counts are transposed. Which 11 lipids are hits is not in doubt: one threshold reproduces all 11 exactly."
+ },
+ "C9_value_distribution": {
+  "rows": 333,
+  "blocks": {
+   "NG_2025|in_vitro": {
+    "n": 310,
+    "mean": -3.226e-09,
+    "sd": 0.999999984,
+    "min": -2.288,
+    "max": 2.944
+   },
+   "NG_2025_2|liver": {
+    "n": 12,
+    "mean": 8.3333e-08,
+    "sd": 1.000000181,
+    "min": -2.293,
+    "max": 1.474
+   },
+   "NG_2025_2|muscle": {
+    "n": 11,
+    "mean": -0.0,
+    "sd": 1.000000073,
+    "min": -2.059,
+    "max": 1.343
+   }
+  },
+  "result": "pass"
+ },
+ "C8_overlap_with_corpus": {
+  "novel_lipids": 310,
+  "already_in_corpus": [],
+  "benchmark_rows_matching_corpus": [
+   "DLin-MC3-DMA"
+  ],
+  "note": "zero overlap among the 310 novel lipids is the expected result for a new chemistry; the benchmark rows are expected to match"
+ },
+ "C7_heatmap_vs_source_data": {
+  "Fig.1e": {
+   "cells_drawn": 64,
+   "cells_in_workbook": 64,
+   "matched": 64,
+   "missing": 0,
+   "n_cols": 4,
+   "n_rows": 16,
+   "spearman_colour_vs_value": 0.9996
+  },
+  "Fig.1f": {
+   "cells_drawn": 64,
+   "cells_in_workbook": 64,
+   "matched": 64,
+   "missing": 0,
+   "n_cols": 4,
+   "n_rows": 16,
+   "spearman_colour_vs_value": 0.9995
+  },
+  "Fig.1g": {
+   "cells_drawn": 52,
+   "cells_in_workbook": 52,
+   "matched": 52,
+   "missing": 0,
+   "n_cols": 4,
+   "n_rows": 13,
+   "spearman_colour_vs_value": 0.9981
+  },
+  "Fig.1h": {
+   "cells_drawn": 52,
+   "cells_in_workbook": 52,
+   "matched": 52,
+   "missing": 0,
+   "n_cols": 4,
+   "n_rows": 13,
+   "spearman_colour_vs_value": 0.9997
+  },
+  "Fig.1i": {
+   "cells_drawn": 39,
+   "cells_in_workbook": 39,
+   "matched": 39,
+   "missing": 0,
+   "n_cols": 3,
+   "n_rows": 13,
+   "spearman_colour_vs_value": 0.9999
+  },
+  "Fig.1j": {
+   "cells_drawn": 39,
+   "cells_in_workbook": 39,
+   "matched": 39,
+   "missing": 0,
+   "n_cols": 3,
+   "n_rows": 13,
+   "spearman_colour_vs_value": 0.9999
+  }
+ },
+ "C10_drawn_structures": {
+  "anchors": [
+   "C-a16",
+   "M-b1",
+   "P-b1",
+   "I-a-b1",
+   "I-b-b1",
+   "B-a1"
+  ],
+  "note": "run provenance/structure_check.py; all six were exact matches on 2026-10-29"
+ },
+ "held_back": [
+  {
+   "panel": "Fig. 1p",
+   "label": "SM-102",
+   "reason": "benchmark identity contradicts itself: the Fig. 1p x-axis labels this bar DLin-MC3-DMA, the Source Data column for the same three numbers is headed SM-102. The two are different molecules, so emitting either would put measured values on a possibly wrong structure."
+  }
+ ]
+}

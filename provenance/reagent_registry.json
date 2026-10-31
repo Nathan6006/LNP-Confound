@@ -1,0 +1,345 @@
+{
+ "what": "named commercial reagents vs their fixed structures",
+ "registered": 13,
+ "rows_mismatched": 0,
+ "results": [
+  {
+   "reagent": "14PA",
+   "authority": "1,2-dimyristoyl-sn-glycero-3-phosphate, DMPA; same YZ_2022 sentence",
+   "registry_smiles": "CCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])O)OC(=O)CCCCCCCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])O)OC(=O)CCCCCCCCCCCCC",
+     "matches_registry": true,
+     "rows": 360,
+     "experiments": [
+      "YZ_2022",
+      "YZ_2024"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "18PG",
+   "authority": "1-stearoyl-2-oleoyl-sn-glycero-3-phospho-(1'-rac-glycerol), SOPG; named verbatim in YZ_2022 Materials (Nat Commun 2022, PMC9310361). NOT 18:0/18:0.",
+   "registry_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)O[C@H](COC(=O)CCCCCCCCCCCCCCCCC)COP(=O)([O-])OCC(O)CO",
+   "variants": [
+    {
+     "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)O[C@H](COC(=O)CCCCCCCCCCCCCCCCC)COP(=O)([O-])OCC(O)CO",
+     "matches_registry": true,
+     "rows": 1474,
+     "experiments": [
+      "WT_2026",
+      "YZ_2022",
+      "YZ_2024"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "ALC-0315",
+   "authority": "((4-hydroxybutyl)azanediyl)bis(hexane-6,1-diyl) bis(2-hexyldecanoate)",
+   "registry_smiles": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC",
+     "matches_registry": true,
+     "rows": 313,
+     "experiments": [
+      "AC_2025",
+      "LZ_2025",
+      "XD_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "Cholesterol",
+   "authority": "cholest-5-en-3beta-ol",
+   "registry_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+   "variants": [
+    {
+     "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+     "matches_registry": true,
+     "rows": 30064,
+     "experiments": [
+      "AA_2008",
+      "AC_2025",
+      "AP_2025",
+      "BL_2023",
+      "BL_2023_3CR",
+      "BL_2024",
+      "FG_2026",
+      "JC_2023",
+      "JL_2024",
+      "JM_2016",
+      "JW_2024",
+      "KL_2010",
+      "KS_2024",
+      "KW_2014",
+      "KZ_2016",
+      "LL_2012",
+      "LL_2025",
+      "LL_2026",
+      "LL_2026_2",
+      "LM_2019",
+      "LR_2023",
+      "LX_2024",
+      "LX_2024_2",
+      "LX_2024_3",
+      "LZ_2025",
+      "MO_2026",
+      "NC_2024",
+      "QL_2026",
+      "RG_2023",
+      "SB_2024",
+      "SL_2020",
+      "SL_2021",
+      "SP_2020",
+      "SS_2018",
+      "SW_2024",
+      "SX_2025",
+      "SY_2025",
+      "WT_2026",
+      "XD_2026",
+      "XH_2024",
+      "XH_2024_2",
+      "XH_2025",
+      "YR_2024",
+      "YX_2024",
+      "YX_2026",
+      "YX_2026_SDL",
+      "YY_2023",
+      "YZ_2022",
+      "YZ_2024",
+      "ZC_2023",
+      "ZH_2023"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DDAB",
+   "authority": "dimethyldioctadecylammonium",
+   "registry_smiles": "CCCCCCCCCCCCCCCCCC[N+](C)(C)CCCCCCCCCCCCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCCCCCCCCCCCC[N+](C)(C)CCCCCCCCCCCCCCCCCC",
+     "matches_registry": true,
+     "rows": 360,
+     "experiments": [
+      "YZ_2022",
+      "YZ_2024"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DLin-MC3-DMA",
+   "authority": "(6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl 4-(dimethylamino)butanoate; ACYCLIC ESTER, no ring",
+   "registry_smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+   "variants": [
+    {
+     "smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+     "matches_registry": true,
+     "rows": 3097,
+     "experiments": [
+      "AC_2025",
+      "BL_2023",
+      "SB_2024",
+      "SP_2020",
+      "WT_2026",
+      "XD_2026",
+      "YZ_2022",
+      "YZ_2024",
+      "ZC_2023",
+      "ZH_2023"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DOPC",
+   "authority": "1,2-dioleoyl-sn-glycero-3-phosphocholine; 18:1/18:1 cis-9",
+   "registry_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+     "matches_registry": true,
+     "rows": 81,
+     "experiments": [
+      "ZT_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DOPE",
+   "authority": "1,2-dioleoyl-sn-glycero-3-phosphoethanolamine; 18:1/18:1 cis-9",
+   "registry_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[NH3+])OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[NH3+])OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+     "matches_registry": true,
+     "rows": 17405,
+     "experiments": [
+      "AC_2025",
+      "AP_2025",
+      "BL_2023",
+      "BL_2023_3CR",
+      "BL_2024",
+      "FG_2026",
+      "JC_2023",
+      "JW_2024",
+      "KS_2024",
+      "LL_2012",
+      "LL_2025",
+      "LL_2026",
+      "LL_2026_2",
+      "LM_2019",
+      "LR_2023",
+      "LX_2024",
+      "LX_2024_2",
+      "LX_2024_3",
+      "MO_2026",
+      "NC_2024",
+      "QL_2026",
+      "RG_2023",
+      "SB_2024",
+      "SL_2020",
+      "SW_2024",
+      "SY_2025",
+      "XH_2024",
+      "XH_2024_2",
+      "XH_2025",
+      "YX_2024",
+      "YX_2026",
+      "YX_2026_SDL",
+      "YY_2023",
+      "YZ_2022",
+      "YZ_2024",
+      "ZC_2023",
+      "ZT_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DOPG",
+   "authority": "1,2-dioleoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+   "registry_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OC[C@@H](O)CO)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OC[C@@H](O)CO)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+     "matches_registry": true,
+     "rows": 81,
+     "experiments": [
+      "ZT_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DOTAP",
+   "authority": "1,2-dioleoyl-3-trimethylammonium-propane",
+   "registry_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCC(C[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCC(C[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+     "matches_registry": true,
+     "rows": 2564,
+     "experiments": [
+      "BL_2023",
+      "JW_2024",
+      "WT_2026",
+      "YX_2024",
+      "YZ_2022",
+      "YZ_2024"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DSPC",
+   "authority": "1,2-distearoyl-sn-glycero-3-phosphocholine; 18:0/18:0",
+   "registry_smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+     "matches_registry": true,
+     "rows": 7037,
+     "experiments": [
+      "AC_2025",
+      "JL_2024",
+      "JW_2024",
+      "KL_2010",
+      "KW_2014",
+      "KZ_2016",
+      "LR_2023",
+      "LZ_2025",
+      "SB_2024",
+      "SP_2020",
+      "SS_2018",
+      "SX_2025",
+      "SY_2025",
+      "WT_2026",
+      "XD_2026",
+      "YR_2024",
+      "YZ_2022",
+      "YZ_2024",
+      "ZH_2023",
+      "ZT_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "KC2",
+   "authority": "DLin-KC2-DMA, 2,2-dilinoleyl-4-(2-dimethylaminoethyl)-1,3-dioxolane; RING, no ester. Same formula and exact mass as MC3 -- the pair that motivated this check.",
+   "registry_smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC1(CCCCCCCC/C=C\\C/C=C\\CCCCC)OCC(CCN(C)C)O1",
+   "variants": [
+    {
+     "smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC1(CCCCCCCC/C=C\\C/C=C\\CCCCC)OCC(CCN(C)C)O1",
+     "matches_registry": true,
+     "rows": 203,
+     "experiments": [
+      "AC_2025"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "SM-102",
+   "authority": "heptadecan-9-yl 8-[(2-hydroxyethyl)(6-oxo-6-undecoxyhexyl)amino]octanoate",
+   "registry_smiles": "CCCCCCCCCCCOC(=O)CCCCCN(CCO)CCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCCCCCOC(=O)CCCCCN(CCO)CCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC",
+     "matches_registry": true,
+     "rows": 2312,
+     "experiments": [
+      "AC_2025",
+      "SB_2024",
+      "SS_2018",
+      "SY_2025",
+      "WT_2026",
+      "XD_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  }
+ ]
+}

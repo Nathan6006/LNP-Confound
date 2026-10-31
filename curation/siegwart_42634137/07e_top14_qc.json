@@ -1,0 +1,19 @@
+{
+ "paper": "Tian et al., Adv Mater 2026, Fig 2j + Table S1",
+ "n": 14,
+ "expected": 14,
+ "composition": "5 DMPC (B1-B5), 1 DOPG (C1), 1 DOPE (D1), 7 DSPC (F1-F7); no DOPC or EggSM formulation reached the top 14",
+ "check_double_sourced": "Fig 2j and Table S1 agree on all 14 rows x 4 ratio columns",
+ "check_percentage_arithmetic": {
+  "rule": "molar % = ratio / sum(ratios) * 100",
+  "rows_failing": [],
+  "max_abs_error_pct": 0.0,
+  "implication": "confirms the DoE levels are molar RATIOS, not percentages"
+ },
+ "check_against_486": {
+  "screen_loaded": true,
+  "rows_not_found_in_486": [],
+  "rows_not_in_top_bin": [],
+  "expectation": "all 14 are top performers so all must carry bin_index 4 (>1e6)"
+ }
+}

@@ -1,0 +1,386 @@
+{
+ "vitro": {
+  "rows": 28885,
+  "C1_smiles": {
+   "unparseable": 0,
+   "non_canonical": 0,
+   "disconnected_fragments": 0,
+   "fragment_examples": [],
+   "radical_electrons": 0,
+   "radical_by_experiment": {}
+  },
+  "C2_mass_monotonicity": {
+   "series_examined": 1932,
+   "series_checked": 634,
+   "series_skipped_token_not_a_length": {
+    "KS_2024": 14,
+    "KW_2014": 1,
+    "KZ_2016": 42,
+    "LX_2024": 12,
+    "LX_2024_2": 18,
+    "SW_2024": 7,
+    "XH_2024": 4,
+    "YX_2024": 240
+   },
+   "series_skipped_steps_not_whole_CH2": {
+    "BL_2023": 72,
+    "BL_2023_3CR": 60,
+    "BL_2024": 128,
+    "FG_2026": 60,
+    "JC_2023": 96,
+    "JL_2024": 30,
+    "JW_2024": 8,
+    "KZ_2016": 84,
+    "NC_2024": 20,
+    "XH_2025": 50
+   },
+   "violations": 0,
+   "examples": []
+  },
+  "C3_duplicate_smiles": {
+   "colliding_name_groups": 48,
+   "with_conflicting_values": 39,
+   "with_identical_values": 9,
+   "conflicting_examples": [
+    {
+     "experiment": "AA_2008",
+     "names": [
+      "21_N14",
+      "22_N14"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "BL_2023",
+     "names": [
+      "A55-T3",
+      "A57-T3"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "BL_2023",
+     "names": [
+      "A24-T2",
+      "A25-T2"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "BL_2023",
+     "names": [
+      "A55-T10",
+      "A57-T10"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "BL_2023",
+     "names": [
+      "A55-T9",
+      "A57-T9"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "BL_2023",
+     "names": [
+      "A55-T4",
+      "A57-T4"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    }
+   ],
+   "by_experiment": {
+    "AA_2008": 10,
+    "BL_2023": 11,
+    "JW_2024": 2,
+    "KW_2014": 25
+   }
+  },
+  "C4_contradictory_replicates": {
+   "columns_in_key": 75,
+   "replicate_groups": 1,
+   "groups_that_are_true_replicates": 0,
+   "exact_duplicate_rows": 1,
+   "by_experiment": {
+    "WT_2026": 1
+   }
+  },
+  "C5_formulation_ratios": {
+   "rows_with_negative_ratio": 0,
+   "rows_not_summing_to_100": 0,
+   "offending_experiments": {}
+  },
+  "C6_values": {
+   "non_finite": 0,
+   "abs_z_over_12": 0,
+   "examples": []
+  },
+  "C7_fields": {
+   "wrong_Model": 0,
+   "wrong_Route": 0,
+   "cargo_pairs": {
+    "mRNA|FLuc": 24380,
+    "siRNA|FLuc": 3313,
+    "pDNA|FLuc": 1080,
+    "pDNA|GFP": 112
+   },
+   "blank_required_fields": {
+    "Publication_PMID": 2544
+   }
+  },
+  "C8_descriptors": {
+   "rows_checked": 28885,
+   "unique_lipids": 18410,
+   "rows_disagreeing": 0,
+   "columns_checked": 14,
+   "by_column": {}
+  },
+  "C9_stereochemistry": {
+   "rows_with_unassigned_stereogenic_CC": 212,
+   "by_experiment": {
+    "FG_2026": 120,
+    "YX_2026_SDL": 79,
+    "NC_2024": 13
+   },
+   "rows_mixing_assigned_and_unassigned_CC": {
+    "NC_2024": 3,
+    "YX_2026_SDL": 23
+   },
+   "rows_with_unassigned_CN_imine": 240,
+   "CN_by_experiment": {
+    "BL_2023_3CR": 240
+   }
+  },
+  "C12_zscore_unit": {
+   "experiments_checked": 3,
+   "experiments_standardized_per_cell_type": 2,
+   "rows_affected": 2496,
+   "undeclared_violations": 0,
+   "undeclared_rows": 0,
+   "detail": {
+    "LZ_2025": {
+     "rows": 96,
+     "blocks": {
+      "A549": 48,
+      "HepG2": 48
+     },
+     "declared_unit": [
+      "experiment_x_model_type"
+     ]
+    },
+    "YX_2024": {
+     "rows": 2400,
+     "blocks": {
+      "HeLa": 1200,
+      "RAW264.7": 1200
+     },
+     "declared_unit": [
+      "experiment_x_model_type"
+     ]
+    }
+   }
+  },
+  "C13_quality_vocabulary": {
+   "bad_values": 0,
+   "examples": [],
+   "rows_carrying_a_flag": 1589,
+   "flagged_without_a_note": 0
+  },
+  "C14_embedded_sterol": {
+   "authority": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "rows_with_embedded_sterol": 486,
+   "by_experiment": {
+    "ZT_2026": 486
+   },
+   "rows_wrong_epimer": 0,
+   "wrong_by_experiment": {},
+   "rows_steroid_present_but_no_cleavable_ester": 0,
+   "nosite_by_experiment": {}
+  }
+ },
+ "vivo": {
+  "rows": 1780,
+  "C1_smiles": {
+   "unparseable": 0,
+   "non_canonical": 0,
+   "disconnected_fragments": 0,
+   "fragment_examples": [],
+   "radical_electrons": 0,
+   "radical_by_experiment": {}
+  },
+  "C2_mass_monotonicity": {
+   "series_examined": 235,
+   "series_checked": 22,
+   "series_skipped_token_not_a_length": {
+    "BL_2023": 2,
+    "RG_2023": 20,
+    "XH_2024": 4,
+    "ZT_2026": 5
+   },
+   "series_skipped_steps_not_whole_CH2": {
+    "AP_2025": 13,
+    "BL_2023": 1,
+    "BL_2024": 7,
+    "LR_2023": 24,
+    "RG_2023": 24,
+    "SY_2025": 1,
+    "ZH_2023": 12
+   },
+   "violations": 0,
+   "examples": []
+  },
+  "C3_duplicate_smiles": {
+   "colliding_name_groups": 12,
+   "with_conflicting_values": 12,
+   "with_identical_values": 0,
+   "conflicting_examples": [
+    {
+     "experiment": "KW_2014",
+     "names": [
+      "A164_C14",
+      "A31_C14"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "LR_2023",
+     "names": [
+      "A2_T133",
+      "A8_T2"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "SX_2025",
+     "names": [
+      "Lipid-126",
+      "Lipid-156",
+      "Lipid-165",
+      "Lipid-168"
+     ],
+     "n_rows": 4,
+     "distinct_values": 4
+    },
+    {
+     "experiment": "SX_2025",
+     "names": [
+      "Lipid-145",
+      "Lipid-146"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "SX_2025",
+     "names": [
+      "Lipid-147",
+      "Lipid-148"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    },
+    {
+     "experiment": "SX_2025",
+     "names": [
+      "Lipid-149",
+      "Lipid-150"
+     ],
+     "n_rows": 2,
+     "distinct_values": 2
+    }
+   ],
+   "by_experiment": {
+    "KW_2014": 1,
+    "LR_2023": 1,
+    "SX_2025": 9,
+    "ZH_2023": 1
+   }
+  },
+  "C4_contradictory_replicates": {
+   "columns_in_key": 75,
+   "replicate_groups": 0,
+   "groups_that_are_true_replicates": 0,
+   "exact_duplicate_rows": 0,
+   "by_experiment": {}
+  },
+  "C5_formulation_ratios": {
+   "rows_with_negative_ratio": 0,
+   "rows_not_summing_to_100": 3,
+   "offending_experiments": {
+    "SB_2024": 3
+   }
+  },
+  "C6_values": {
+   "non_finite": 0,
+   "abs_z_over_12": 0,
+   "examples": []
+  },
+  "C7_fields": {
+   "wrong_Model": 0,
+   "wrong_Route": 0,
+   "cargo_pairs": {
+    "mRNA|FLuc": 787,
+    "mRNA|peptide_barcode": 407,
+    "mRNA|hEPO": 268,
+    "mRNA|base_editor": 141,
+    "siRNA|FVII": 117,
+    "mRNA|RLuc": 60
+   },
+   "blank_required_fields": {}
+  },
+  "C8_descriptors": {
+   "rows_checked": 1780,
+   "unique_lipids": 1495,
+   "rows_disagreeing": 0,
+   "columns_checked": 14,
+   "by_column": {}
+  },
+  "C9_stereochemistry": {
+   "rows_with_unassigned_stereogenic_CC": 2,
+   "by_experiment": {
+    "SS_2018": 2
+   },
+   "rows_mixing_assigned_and_unassigned_CC": {},
+   "rows_with_unassigned_CN_imine": 0,
+   "CN_by_experiment": {}
+  },
+  "C12_zscore_unit": {
+   "experiments_checked": 0,
+   "experiments_standardized_per_cell_type": 0,
+   "rows_affected": 0,
+   "undeclared_violations": 0,
+   "undeclared_rows": 0,
+   "detail": {}
+  },
+  "C13_quality_vocabulary": {
+   "bad_values": 0,
+   "examples": [],
+   "rows_carrying_a_flag": 63,
+   "flagged_without_a_note": 0
+  },
+  "C14_embedded_sterol": {
+   "authority": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "rows_with_embedded_sterol": 53,
+   "by_experiment": {
+    "ZT_2026": 51,
+    "ZH_2023": 2
+   },
+   "rows_wrong_epimer": 0,
+   "wrong_by_experiment": {},
+   "rows_steroid_present_but_no_cleavable_ester": 2,
+   "nosite_by_experiment": {
+    "ZH_2023": 2
+   }
+  }
+ }
+}

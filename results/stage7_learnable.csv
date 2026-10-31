@@ -1,0 +1,103 @@
+source,n_lipids,spearman,n_test,computable,reason,dataset,metric,median_nn_tanimoto_distance
+AA_2008,487,0.13525328692463073,487.0,True,,LNPDB_vitro,within_experiment_learnability,
+AC_2025,7,,0.0,False,fewer than 30 lipids,LNPDB_vitro,within_experiment_learnability,
+BL_2023,709,0.27674085625639233,709.0,True,,LNPDB_vitro,within_experiment_learnability,
+BL_2024,560,0.10126738619543318,560.0,True,,LNPDB_vitro,within_experiment_learnability,
+JC_2023,288,0.4482243565695267,288.0,True,,LNPDB_vitro,within_experiment_learnability,
+JL_2024,623,0.3129054425273365,623.0,True,,LNPDB_vitro,within_experiment_learnability,
+JM_2016,72,0.013958483943450402,72.0,True,,LNPDB_vitro,within_experiment_learnability,
+JW_2024,202,0.12915829193224396,202.0,True,,LNPDB_vitro,within_experiment_learnability,
+KL_2010,50,0.1399072446114676,50.0,True,,LNPDB_vitro,within_experiment_learnability,
+KS_2024,140,0.7565604108071006,140.0,True,,LNPDB_vitro,within_experiment_learnability,
+KW_2014,1150,0.2777260457745955,1150.0,True,,LNPDB_vitro,within_experiment_learnability,
+KZ_2016,1470,0.33508542989571644,1470.0,True,,LNPDB_vitro,within_experiment_learnability,
+LL_2012,112,0.0843912812938318,112.0,True,,LNPDB_vitro,within_experiment_learnability,
+LM_2019,1080,0.4698886962835686,1080.0,True,,LNPDB_vitro,within_experiment_learnability,
+LX_2024,165,0.36085986375563933,165.0,True,,LNPDB_vitro,within_experiment_learnability,
+LX_2024_2,270,0.5348385703303739,270.0,True,,LNPDB_vitro,within_experiment_learnability,
+LX_2024_3,252,0.26019637632153403,252.0,True,,LNPDB_vitro,within_experiment_learnability,
+LZ_2025,1,,0.0,False,fewer than 30 lipids,LNPDB_vitro,within_experiment_learnability,
+NC_2024,260,0.5050206440026812,260.0,True,,LNPDB_vitro,within_experiment_learnability,
+SL_2020,63,0.6036596955607095,63.0,True,,LNPDB_vitro,within_experiment_learnability,
+SL_2021,572,0.19688003027352935,572.0,True,,LNPDB_vitro,within_experiment_learnability,
+SP_2020,1,,0.0,False,fewer than 30 lipids,LNPDB_vitro,within_experiment_learnability,
+SW_2024,180,0.3310973554570782,180.0,True,,LNPDB_vitro,within_experiment_learnability,
+XH_2024,30,0.3522624385148208,30.0,True,,LNPDB_vitro,within_experiment_learnability,
+XH_2024_2,90,0.6725751241186309,90.0,True,,LNPDB_vitro,within_experiment_learnability,
+XH_2025,500,0.7267249028508307,500.0,True,,LNPDB_vitro,within_experiment_learnability,
+YR_2024,286,-0.08121042571933257,286.0,True,,LNPDB_vitro,within_experiment_learnability,
+YX_2023,176,0.2579893682196216,176.0,True,,LNPDB_vitro,within_experiment_learnability,
+YX_2024,1200,0.3027553765803528,1200.0,True,,LNPDB_vitro,within_experiment_learnability,
+YY_2023,119,-0.030111870953386903,119.0,True,,LNPDB_vitro,within_experiment_learnability,
+YZ_2022,1,,0.0,False,fewer than 30 lipids,LNPDB_vitro,within_experiment_learnability,
+YZ_2024,1,,0.0,False,fewer than 30 lipids,LNPDB_vitro,within_experiment_learnability,
+ZC_2023,100,0.521450706864639,100.0,True,,LNPDB_vitro,within_experiment_learnability,
+ZL_2022,144,0.4441511961153933,144.0,True,,LNPDB_vitro,within_experiment_learnability,
+AA_2008,487,0.16135073470892716,,,,LNPDB_vitro,decay,0.1842105263157895
+AC_2025,7,-0.39285714285714296,,,,LNPDB_vitro,decay,0.0
+BL_2023,709,-0.06917073570518661,,,,LNPDB_vitro,decay,0.3125
+BL_2024,560,0.08584019669853206,,,,LNPDB_vitro,decay,0.4060235507246377
+JC_2023,288,0.20497315343103703,,,,LNPDB_vitro,decay,0.1964285714285714
+JL_2024,623,0.10126383946907923,,,,LNPDB_vitro,decay,0.5416666666666667
+JM_2016,72,-0.04083297467637872,,,,LNPDB_vitro,decay,0.48953140578265203
+JW_2024,202,-0.05999638923257352,,,,LNPDB_vitro,decay,0.3093112244897959
+KL_2010,50,-0.37892942063230844,,,,LNPDB_vitro,decay,0.27395833333333336
+KS_2024,140,-0.19432857528157985,,,,LNPDB_vitro,decay,0.2222222222222222
+KW_2014,1150,0.3058352923670355,,,,LNPDB_vitro,decay,0.25
+KZ_2016,1470,0.23586144786699653,,,,LNPDB_vitro,decay,0.24590163934426235
+LL_2012,112,0.42916136834100754,,,,LNPDB_vitro,decay,0.5
+LM_2019,1080,0.08956066682615436,,,,LNPDB_vitro,decay,0.6212121212121212
+LX_2024,165,-0.008835886924850213,,,,LNPDB_vitro,decay,0.5735294117647058
+LX_2024_2,270,-0.23532704078504893,,,,LNPDB_vitro,decay,0.34782608695652173
+LX_2024_3,252,0.17254948129434464,,,,LNPDB_vitro,decay,0.38095238095238093
+LZ_2025,1,,,,,LNPDB_vitro,decay,0.0
+NC_2024,260,0.3587236160224344,,,,LNPDB_vitro,decay,0.22499999999999998
+SL_2020,63,0.6132493815382106,,,,LNPDB_vitro,decay,0.2727272727272727
+SL_2021,572,-0.32264669949817515,,,,LNPDB_vitro,decay,0.6
+SP_2020,1,,,,,LNPDB_vitro,decay,0.0
+SW_2024,180,-0.054589081077997474,,,,LNPDB_vitro,decay,0.5593220338983051
+XH_2024,30,0.3076507562810082,,,,LNPDB_vitro,decay,0.31818181818181823
+XH_2024_2,90,0.05362060596108212,,,,LNPDB_vitro,decay,0.6725705329153605
+XH_2025,500,0.29350686911877955,,,,LNPDB_vitro,decay,0.489727463312369
+YR_2024,286,0.10335310190698807,,,,LNPDB_vitro,decay,0.19999999999999996
+YX_2023,176,0.038320722975250056,,,,LNPDB_vitro,decay,0.3913043478260869
+YX_2024,1200,-0.002185027293582194,,,,LNPDB_vitro,decay,0.06565656565656569
+YY_2023,119,0.4556279650345343,,,,LNPDB_vitro,decay,0.05128205128205132
+YZ_2022,1,,,,,LNPDB_vitro,decay,0.0
+YZ_2024,1,,,,,LNPDB_vitro,decay,0.0
+ZC_2023,100,0.39542716000338923,,,,LNPDB_vitro,decay,0.11766334440753046
+ZL_2022,144,0.6324142367266166,,,,LNPDB_vitro,decay,0.3589743589743589
+AP_2025,91,0.373380272015521,91.0,True,,LNPDB_vivo,within_experiment_learnability,
+BL_2023,26,,0.0,False,fewer than 30 lipids,LNPDB_vivo,within_experiment_learnability,
+BL_2024,51,-0.0033619727382880418,51.0,True,,LNPDB_vivo,within_experiment_learnability,
+JW_2024,69,0.18265717155095476,69.0,True,,LNPDB_vivo,within_experiment_learnability,
+KW_2014,90,-0.3837410451084775,90.0,True,,LNPDB_vivo,within_experiment_learnability,
+KZ_2016,24,,0.0,False,fewer than 30 lipids,LNPDB_vivo,within_experiment_learnability,
+LL_2025,1,,0.0,False,fewer than 30 lipids,LNPDB_vivo,within_experiment_learnability,
+LR_2023,383,-0.038312618475621084,383.0,True,,LNPDB_vivo,within_experiment_learnability,
+RG_2023,260,,0.0,False,only 1 Butina cluster(s) — too chemically homogeneous to scaffold-split,LNPDB_vivo,within_experiment_learnability,
+SB_2024,2,,0.0,False,fewer than 30 lipids,LNPDB_vivo,within_experiment_learnability,
+SS_2018,10,,0.0,False,fewer than 30 lipids,LNPDB_vivo,within_experiment_learnability,
+SX_2025,130,0.1864686185979097,130.0,True,,LNPDB_vivo,within_experiment_learnability,
+SY_2025,19,,0.0,False,fewer than 30 lipids,LNPDB_vivo,within_experiment_learnability,
+XH_2024,30,-0.4595973768326279,30.0,True,,LNPDB_vivo,within_experiment_learnability,
+XH_2024_2,61,0.1835442209016695,61.0,True,,LNPDB_vivo,within_experiment_learnability,
+ZC_2023,31,0.030856924893440267,31.0,True,,LNPDB_vivo,within_experiment_learnability,
+ZH_2023,161,0.656206282293764,161.0,True,,LNPDB_vivo,within_experiment_learnability,
+AP_2025,91,0.2290210068933051,,,,LNPDB_vivo,decay,0.5180722891566265
+BL_2023,26,0.29777777777777775,,,,LNPDB_vivo,decay,0.24993494665625815
+BL_2024,51,-0.016969134762602624,,,,LNPDB_vivo,decay,0.410958904109589
+JW_2024,69,0.28280171015259825,,,,LNPDB_vivo,decay,0.5348837209302326
+KW_2014,90,0.11151721706200204,,,,LNPDB_vivo,decay,0.368421052631579
+KZ_2016,24,-0.032965844247083674,,,,LNPDB_vivo,decay,0.10310374149659862
+LL_2025,1,,,,,LNPDB_vivo,decay,0.19148936170212771
+LR_2023,383,-0.15409962388407458,,,,LNPDB_vivo,decay,0.29333333333333333
+RG_2023,260,0.6493027751838365,,,,LNPDB_vivo,decay,0.5
+SB_2024,2,0.9999999999999999,,,,LNPDB_vivo,decay,0.0
+SS_2018,10,0.8909090909090909,,,,LNPDB_vivo,decay,0.1709968186638388
+SX_2025,130,0.3048985196568603,,,,LNPDB_vivo,decay,0.4573107243789975
+SY_2025,19,0.027667986857942646,,,,LNPDB_vivo,decay,0.48
+XH_2024,30,0.6341142798085602,,,,LNPDB_vivo,decay,0.35416666666666663
+XH_2024_2,61,-0.028344791115811736,,,,LNPDB_vivo,decay,0.6043956043956045
+ZC_2023,31,0.2849645721573688,,,,LNPDB_vivo,decay,0.11363636363636365
+ZH_2023,161,-0.03004915094777811,,,,LNPDB_vivo,decay,0.48

@@ -1,0 +1,11 @@
+dataset,control,source,value,n,pass
+LNPDB_vitro,split_half_separability,KZ_2016,0.4963134670700896,1470,True
+LNPDB_vitro,split_half_concordance,KZ_2016,-0.177938947758178,14,
+LNPDB_vitro,featurization_sensitivity,,0.9709970243981696,11350,
+LNPDB_vitro,seed_sensitivity_separability,,0.000825554442655527,5,
+LNPDB_vitro,seed_sensitivity_concordance_ci,,0.006281254624407255,5,
+LNPDB_vivo,split_half_separability,LR_2023,0.490267534741219,383,True
+LNPDB_vivo,split_half_concordance,LR_2023,0.7166666666666667,9,
+LNPDB_vivo,featurization_sensitivity,,0.9824496336996337,1407,
+LNPDB_vivo,seed_sensitivity_separability,,0.003176278322007321,5,
+LNPDB_vivo,seed_sensitivity_concordance_ci,,0.04033784598224671,5,

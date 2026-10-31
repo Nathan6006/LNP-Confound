@@ -1,0 +1,114 @@
+{
+ "1A": {
+  "apexes": 5,
+  "per_chain": [
+   5
+  ],
+  "n_chains": 1,
+  "carbons": -4
+ },
+ "2A": {
+  "apexes": 7,
+  "per_chain": [
+   7
+  ],
+  "n_chains": 1,
+  "carbons": -2
+ },
+ "3A": {
+  "apexes": 9,
+  "per_chain": [
+   9
+  ],
+  "n_chains": 1,
+  "carbons": 0
+ },
+ "4A": {
+  "apexes": 11,
+  "per_chain": [
+   11
+  ],
+  "n_chains": 1,
+  "carbons": 2
+ },
+ "5A": {
+  "apexes": 13,
+  "per_chain": [
+   13
+  ],
+  "n_chains": 1,
+  "carbons": 4
+ },
+ "6A": {
+  "apexes": 15,
+  "per_chain": [
+   15,
+   0
+  ],
+  "n_chains": 2,
+  "carbons": 6
+ },
+ "7A": {
+  "apexes": 9,
+  "per_chain": [
+   9,
+   2
+  ],
+  "n_chains": 2,
+  "carbons": 0
+ },
+ "8A": {
+  "apexes": 15,
+  "per_chain": [
+   15,
+   4
+  ],
+  "n_chains": 2,
+  "carbons": 6
+ },
+ "9A": {
+  "apexes": 16,
+  "per_chain": [
+   16,
+   7
+  ],
+  "n_chains": 2,
+  "carbons": 7
+ },
+ "10A": {
+  "apexes": 20,
+  "per_chain": [
+   20,
+   7
+  ],
+  "n_chains": 2,
+  "carbons": 11
+ },
+ "11A": {
+  "apexes": 20,
+  "per_chain": [
+   20,
+   8
+  ],
+  "n_chains": 2,
+  "carbons": 11
+ },
+ "12A": {
+  "apexes": 22,
+  "per_chain": [
+   22,
+   9
+  ],
+  "n_chains": 2,
+  "carbons": 13
+ },
+ "13A": {
+  "apexes": 21,
+  "per_chain": [
+   21,
+   8
+  ],
+  "n_chains": 2,
+  "carbons": 12
+ }
+}

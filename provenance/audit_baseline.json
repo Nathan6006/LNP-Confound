@@ -1,0 +1,327 @@
+{
+ "_what": "The accepted state of the corpus, per check, so audit.py can FAIL instead of merely printing. Review finding F-012.",
+ "_the_problem_this_solves": "audit.py discarded main()'s return value: C1-C9 printed their findings and the exit code came only from the C10 and C11 delegates. CORPUS-C seeded eight simultaneous violations into a copy of the corpus -- a disconnected counter-ion, a stale Molecular.Weight, ratios summing to 109, Experiment_value='nan', a wrong Model, a wrong Route, a blanked IL_name and an exact duplicate row -- and all eight printed while the command exited 0. Of 43 seeded mutations, 30 appeared in the printed report and only 5 made any command exit non-zero. CLAUDE.md presented this as the project's Tier-1 gate and every session, repeatedly, ran it, read a clean report and proceeded. The green light was hardcoded.",
+ "_why_a_baseline_and_not_just_exit_1": "Because the corpus has conditions that are known, deliberate and accepted: 48 duplicate SMILES groups, 212 rows with an unassigned stereogenic C=C, 2,544 blank PMIDs on a preprint, 3 SB_2024 rows whose ratios do not sum to 100. Making main() fail on anything printed would fail every clean run forever, and a check that always fails is exactly as useless as one that never does -- which is probably why it was left print-only. So each metric is recorded here WITH THE REASON IT IS ACCEPTED, and the check fails when the number departs from this file.",
+ "_departure_in_either_direction": "An INCREASE is a new violation. A DECREASE is also a failure, and deliberately so: it means a known condition vanished without anyone editing this file, which happens when a check quietly stops looking (the worst failure mode available, because it reads as a clean report). Either way the fix is the same -- find out why, then change the number here in the same commit, with the reason.",
+ "_how_to_re-baseline": "Change the value and the `why`, in the same commit as the change that moved it, and say in provenance/CHANGELOG.md which finding motivated it. Never edit a number here to make a red build go green without establishing what moved it; that is the habit this file exists to prevent.",
+ "_modes": {
+  "exact": "must equal `value` -- an accepted known condition; any movement is a finding",
+  "max": "must not exceed `value` -- a defect count that should stay at or below this",
+  "min": "must not fall below `value` -- check COVERAGE, so a check cannot quietly stop looking"
+ },
+ "reviewed": "2026-10-30",
+ "vitro": {
+  "C1_smiles.unparseable": {
+   "mode": "max",
+   "value": 0,
+   "why": "every IL_SMILES must parse; no exceptions exist or should"
+  },
+  "C1_smiles.non_canonical": {
+   "mode": "max",
+   "value": 0,
+   "why": "build_dataset.py canonicalises every SMILES column, so any non-canonical string means a row bypassed canon()"
+  },
+  "C1_smiles.disconnected_fragments": {
+   "mode": "max",
+   "value": 0,
+   "why": "a stray '.' or a counter-ion silently changes every descriptor; this is how a real bug shipped"
+  },
+  "C1_smiles.radical_electrons": {
+   "mode": "max",
+   "value": 0,
+   "why": "a radical means an atom lost a neighbour without its valence being fixed -- the signature of the deleted-hydroxyl bug"
+  },
+  "C2_mass_monotonicity.violations": {
+   "mode": "max",
+   "value": 0,
+   "why": "within one head group, mass must rise with tail length; this is how the 4A3-SC6 and KZ_2016 SC3 collisions were found"
+  },
+  "C2_mass_monotonicity.series_checked": {
+   "mode": "min",
+   "value": 634,
+   "why": "COVERAGE FLOOR, raised from 235 on 2026-10-30 (F-010). The old figure was 235 because the check trusted the name token only for ONE experiment, so 737 of 972 series were skipped -- including all 140 LL_2026 series, meaning the largest curation in the corpus contributed nothing while the line read '0 violations'. The token is now tested PER SERIES against the measured Num_carbon_in_tail, which is self-verifying and covers 11 experiments. 338 series are still skipped and that is correct: KS_2024 'C24' is two C4 tails, KZ_2016 'SC1/SC2/SC3' are tail identifiers, YX_2024 'C1/C2/C3' are component indices, and LL_2026's Ac8-1/Ac10-1 trailing 1 is an isomer marker."
+  },
+  "C3_duplicate_smiles.colliding_name_groups": {
+   "mode": "exact",
+   "value": 48,
+   "why": "ACCEPTED. Four papers name the same structure twice: AA_2008 (10 groups, 21_* vs 22_*), BL_2023 (11, A55/A57 and A24/A25), JW_2024 (2), KW_2014 (25, five amine aliases x five tail lengths). These are the papers' own naming, not our error -- the same molecule entered their tables under two labels. Recorded rather than merged because merging would silently drop one of two real measurements."
+  },
+  "C3_duplicate_smiles.with_conflicting_values": {
+   "mode": "exact",
+   "value": 39,
+   "why": "ACCEPTED, and the number that matters: 39 of the 48 groups disagree on the measured value, i.e. the same structure in the same experiment gave two different answers. That is the papers' own replicate spread, and it is part of what the manuscript's replicate ceiling (Spearman 0.400) is measuring. If this moves, a collision has been introduced or resolved and either needs an entry in CHANGELOG.md."
+  },
+  "C4_contradictory_replicates.groups_that_are_true_replicates": {
+   "mode": "exact",
+   "value": 0,
+   "why": "no experiment should contain identical structure AND formulation AND model with different values; none does"
+  },
+  "C4_contradictory_replicates.exact_duplicate_rows": {
+   "mode": "exact",
+   "value": 1,
+   "why": "ACCEPTED: one exact duplicate row in the FALCON (WT_2026) source, present in the authors' own published CSV. Kept rather than deduplicated because the authors published it and removing it would make our row count disagree with theirs."
+  },
+  "C5_formulation_ratios.rows_not_summing_to_100": {
+   "mode": "exact",
+   "value": 0,
+   "why": "vitro has no accepted exception"
+  },
+  "C5_formulation_ratios.rows_with_negative_ratio": {
+   "mode": "max",
+   "value": 0,
+   "why": "a negative mol% is meaningless"
+  },
+  "C6_values.non_finite": {
+   "mode": "max",
+   "value": 0,
+   "why": "'nan' or inf in Experiment_value would propagate into every statistic downstream"
+  },
+  "C6_values.abs_z_over_12": {
+   "mode": "max",
+   "value": 0,
+   "why": "|z| > 12 in a corpus of this size means a scale error, not an outlier"
+  },
+  "C7_fields.wrong_Model": {
+   "mode": "max",
+   "value": 0,
+   "why": "data_vitro.csv must contain only in_vitro rows"
+  },
+  "C7_fields.wrong_Route": {
+   "mode": "max",
+   "value": 0,
+   "why": "an in_vitro row cannot have a route of administration"
+  },
+  "C7_fields.blank_IL_name": {
+   "mode": "max",
+   "value": 0,
+   "why": "IL_name is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_IL_SMILES": {
+   "mode": "max",
+   "value": 0,
+   "why": "IL_SMILES is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Experiment_method": {
+   "mode": "max",
+   "value": 0,
+   "why": "Experiment_method is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Model_type": {
+   "mode": "max",
+   "value": 0,
+   "why": "Model_type is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Cargo": {
+   "mode": "max",
+   "value": 0,
+   "why": "Cargo is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Experiment_value": {
+   "mode": "max",
+   "value": 0,
+   "why": "Experiment_value is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Publication_PMID": {
+   "mode": "exact",
+   "value": 2544,
+   "why": "ACCEPTED: all 2,544 WT_2026 rows. The FALCON paper is a bioRxiv preprint (10.64898/2026.06.13.731774) and was not in PubMed as of 2026-10-30, so there is no PMID to record. A blank here is the honest value; writing anything else would invent an identifier. Re-baseline to 0 when it is indexed."
+  },
+  "C8_descriptors.rows_disagreeing": {
+   "mode": "max",
+   "value": 0,
+   "why": "every descriptor column must be reproducible from the stored SMILES; a disagreement means a structure was changed without recomputing, or vice versa"
+  },
+  "C9_stereochemistry.rows_with_unassigned_stereogenic_CC": {
+   "mode": "exact",
+   "value": 212,
+   "why": "ACCEPTED: double bonds that COULD carry E/Z and do not, because the source papers do not state the geometry. Reporting them is right; asserting a geometry the paper never gave would be worse. The count is pinned so a NEW unassigned alkene -- which would mean stereochemistry was lost in assembly, as in F-013 -- shows up immediately."
+  },
+  "C9_stereochemistry.rows_with_unassigned_CN_imine": {
+   "mode": "exact",
+   "value": 240,
+   "why": "ACCEPTED: imine geometry is rarely specified or meaningful, and these papers do not specify it."
+  },
+  "C12_zscore_unit.undeclared_violations": {
+   "mode": "max",
+   "value": 0,
+   "why": "error class 22. Per-(experiment x cell type) standardization is permitted ONLY where the row says so in value_normalization_unit and the reason is on the row; YX_2024 and LZ_2025 declare it because the offset is unrecoverable from the data we hold. An UNDECLARED instance is a new bug."
+  },
+  "C13_quality_vocabulary.bad_values": {
+   "mode": "max",
+   "value": 0,
+   "why": "every quality column must hold a value listed in schema_quality.json"
+  },
+  "C14_embedded_sterol.rows_wrong_epimer": {
+   "mode": "max",
+   "value": 0,
+   "why": "A sterol esterified INSIDE IL_SMILES must still be cholesterol. All 486 ZT_2026 vitro rows carried epicholesterol (3alpha) and nothing saw it: the epimers share formula, exact mass and all 17 descriptors, the reagent registry compares InChIKey SKELETON only and inspects CHL_* columns which are empty on these rows, and the C10 anchor was a byte copy of the enumeration. F-013."
+  },
+  "C14_embedded_sterol.rows_with_embedded_sterol": {
+   "mode": "min",
+   "value": 486,
+   "why": "COVERAGE FLOOR. If this falls, the check is examining fewer molecules than it was -- which is how a check stops looking without anyone noticing. 486 = ZT_2026's vitro block, every row of which is the same cholesterol-conjugated lipid."
+  },
+  "C14_embedded_sterol.rows_steroid_present_but_no_cleavable_ester": {
+   "mode": "exact",
+   "value": 0,
+   "why": "Zero is right for vitro. A steroid ring present with NO cleavable ester means the check silently examined nothing on that row, so it is gated rather than ignored."
+  }
+ },
+ "vivo": {
+  "C1_smiles.unparseable": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C1_smiles.non_canonical": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C1_smiles.disconnected_fragments": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C1_smiles.radical_electrons": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C2_mass_monotonicity.violations": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C2_mass_monotonicity.series_checked": {
+   "mode": "min",
+   "value": 22,
+   "why": "COVERAGE FLOOR, raised from 12 on 2026-10-30 (F-010); see the vitro entry."
+  },
+  "C3_duplicate_smiles.colliding_name_groups": {
+   "mode": "exact",
+   "value": 12,
+   "why": "ACCEPTED: the ZT_2026 library has 17 cores x 3 cholesterol tails and several cores are the same structure under different labels in Fig 1d. The papers' naming, not ours."
+  },
+  "C3_duplicate_smiles.with_conflicting_values": {
+   "mode": "exact",
+   "value": 12,
+   "why": "ACCEPTED: all 12 disagree on the value, which is the in-vivo replicate spread."
+  },
+  "C4_contradictory_replicates.groups_that_are_true_replicates": {
+   "mode": "exact",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C4_contradictory_replicates.exact_duplicate_rows": {
+   "mode": "exact",
+   "value": 0,
+   "why": "no accepted duplicate in vivo"
+  },
+  "C5_formulation_ratios.rows_not_summing_to_100": {
+   "mode": "exact",
+   "value": 3,
+   "why": "ACCEPTED: 3 SB_2024 rows. The paper reports a trehalose-glycolipid vaccine formulation whose stated components do not total 100 mol%, and the missing fraction is not stated anywhere in the paper. Normalising to 100 would invent a component ratio; the rows are kept as published and flagged. Re-baseline only if the paper's own numbers are reinterpreted, with the reasoning."
+  },
+  "C5_formulation_ratios.rows_with_negative_ratio": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C6_values.non_finite": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C6_values.abs_z_over_12": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C7_fields.wrong_Model": {
+   "mode": "max",
+   "value": 0,
+   "why": "data_vivo.csv must contain only in_vivo rows"
+  },
+  "C7_fields.wrong_Route": {
+   "mode": "max",
+   "value": 0,
+   "why": "an in_vivo row cannot have route 'in_vitro'"
+  },
+  "C7_fields.blank_IL_name": {
+   "mode": "max",
+   "value": 0,
+   "why": "IL_name is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_IL_SMILES": {
+   "mode": "max",
+   "value": 0,
+   "why": "IL_SMILES is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Experiment_method": {
+   "mode": "max",
+   "value": 0,
+   "why": "Experiment_method is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Model_type": {
+   "mode": "max",
+   "value": 0,
+   "why": "Model_type is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Cargo": {
+   "mode": "max",
+   "value": 0,
+   "why": "Cargo is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Experiment_value": {
+   "mode": "max",
+   "value": 0,
+   "why": "Experiment_value is required on every row; a blank one means a row was emitted without it and every downstream join on it silently drops that row. Gated per field because gating only blank_Publication_PMID let a blanked IL_name exit 0 in the seeded-mutation test."
+  },
+  "C7_fields.blank_Publication_PMID": {
+   "mode": "exact",
+   "value": 0,
+   "why": "every vivo paper is indexed"
+  },
+  "C8_descriptors.rows_disagreeing": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C9_stereochemistry.rows_with_unassigned_stereogenic_CC": {
+   "mode": "exact",
+   "value": 2,
+   "why": "ACCEPTED: 2 rows whose source paper does not state the alkene geometry."
+  },
+  "C9_stereochemistry.rows_with_unassigned_CN_imine": {
+   "mode": "exact",
+   "value": 0,
+   "why": "no imines in the vivo slice"
+  },
+  "C12_zscore_unit.undeclared_violations": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro; no vivo experiment has more than one Model_type"
+  },
+  "C13_quality_vocabulary.bad_values": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro"
+  },
+  "C14_embedded_sterol.rows_wrong_epimer": {
+   "mode": "max",
+   "value": 0,
+   "why": "as vitro; 51 ZT_2026 vivo rows were affected by F-013."
+  },
+  "C14_embedded_sterol.rows_with_embedded_sterol": {
+   "mode": "min",
+   "value": 53,
+   "why": "COVERAGE FLOOR: 51 ZT_2026 + 2 ZH_2023."
+  },
+  "C14_embedded_sterol.rows_steroid_present_but_no_cleavable_ester": {
+   "mode": "exact",
+   "value": 2,
+   "why": "ACCEPTED AND OPEN, review finding F-021. 2 ZH_2023 rows, lipid 'A4I18-1R2C70'. Its steroid cleaves to C26H44O, InChIKey skeleton DZKYBYMQFBHTTM -- NOT cholesterol (C27H46O, HVYWMOMLDIMFJA). It is missing the C19 angular methyl and carries no stereochemistry at all, so it is a 19-nor sterol, not a cholesteryl ester. Found by C14 the first time it ran, in an experiment no reviewer was assigned this round. Gated at 2 so it cannot spread, NOT accepted as correct: resolving it needs the ZH_2023 source paper and is open work."
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "paper": "Liu et al Nat Mater 2021 (iPhos)",
+ "role": "blind validation",
+ "C1_hrms_anchors": {
+  "tested": 4,
+  "passed": 4,
+  "max_abs_delta_Da": 0.018
+ },
+ "C3_enumeration_count": {
+  "stated": 572,
+  "produced": 572,
+  "pass": true
+ },
+ "C4_duplicate_smiles": {
+  "unique": 572,
+  "pass": true
+ },
+ "C5_rdkit_parse": {
+  "failed": 0
+ },
+ "C9_value_bins": {
+  "legend_bins": 4,
+  "distinct_values_extracted": 4,
+  "pass": true
+ },
+ "scoring_vs_LNPDB": {
+  "smiles_recall_pct": 97.7,
+  "spearman": 1.0,
+  "matched": 559,
+  "confusion": "perfect diagonal, 4x4"
+ },
+ "scoring_vs_LION": {
+  "note": "LION and LNPDB themselves agree at Spearman 0.897 on this paper"
+ },
+ "residual": {
+  "rows": 13,
+  "which": "28A3P4-28A3P16",
+  "cause": "positional ambiguity: which 3 of tetraethylenepentamine's 5 nitrogens carry an arm. Left unfitted on purpose."
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "paper": "Gong et al., Nat Mater 2026, PMID 41922838",
+ "role": "blind validation (partial - see blocker)",
+ "BLOCKER": "The 960 per-lipid transfection values are NOT in either uploaded PDF. The paper states 'Source data are provided with this paper' - a separate Nature Source Data file - and the SI contains no table of the 960. The 16 aldehyde (tail) structures and the two bis-isonitrile cores are likewise absent from both PDFs. Value-level validation is therefore impossible from these files; download the Source Data xlsx from the article page to complete it.",
+ "what_was_validated": {
+   "amino_acid_building_blocks": {
+     "read_from": "Fig 1c, 30 drawn structures with 3-letter labels",
+     "n_read": 30, "n_correct": 30, "n_missed": 0, "n_spurious": 0,
+     "verdict": "100% - every amino acid code read off the figure matches those used in the curated FG_2026 rows"
+   },
+   "library_arithmetic": {
+     "stated": 960,
+     "decoded": "30 amino acids x 16 tails x 2 bis-isonitrile cores (CH*/LH* name prefixes) = 960",
+     "pass": true
+   },
+   "reaction": "Ugi five-centre four-component (Ugi-5C-4CR): aliphatic aldehyde + alpha-amino acid + bis-isonitrile + methanol; 2 amide + 2 ester bonds, 2 ionization cores"
+ },
+ "value_distribution_in_corpus": {"n": 960, "min": -2.434, "max": 3.2, "distinct": 923,
+   "note": "continuous (luminescence_normalized), not binned - unlike iPhos"}
+}

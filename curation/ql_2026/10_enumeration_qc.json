@@ -1,0 +1,96 @@
+{
+ "paper": "Liu et al., Adv Healthc Mater 2026, 15, e02225",
+ "library1": 320,
+ "library2": 24,
+ "total": 344,
+ "expected": "320 + 24 = 344",
+ "unique_SMILES": 344,
+ "arms_per_core": {
+  "70": 1,
+  "75": 1,
+  "80": 1,
+  "400": 1,
+  "113": 2,
+  "114": 2,
+  "110": 3,
+  "T3A": 3
+ },
+ "mass_check_vs_tables_S1_S2": {
+  "reference_rows": 29,
+  "agree_as_printed": 23,
+  "max_abs_error_Da": 1.45,
+  "table_S2_all_agree": true,
+  "anomalous": [
+   {
+    "lipid": "113-L3-C6",
+    "table_MW": 613.8,
+    "computed_as_printed": 627.87,
+    "exact_fits": [],
+    "closest": "L3-C6",
+    "closest_error": 14.07
+   },
+   {
+    "lipid": "70-L4-C6",
+    "table_MW": 399.6,
+    "computed_as_printed": 371.55,
+    "exact_fits": [
+     "L3-C10",
+     "L4-C8",
+     "L5-C6"
+    ],
+    "closest": "L3-C10",
+    "closest_error": 0.0
+   },
+   {
+    "lipid": "113-L4-C6",
+    "table_MW": 740.1,
+    "computed_as_printed": 683.98,
+    "exact_fits": [
+     "L3-C10",
+     "L4-C8",
+     "L5-C6"
+    ],
+    "closest": "L3-C10",
+    "closest_error": 0.01
+   },
+   {
+    "lipid": "T3A-L4-C6",
+    "table_MW": 1122.6,
+    "computed_as_printed": 1038.5,
+    "exact_fits": [
+     "L3-C10",
+     "L4-C8",
+     "L5-C6"
+    ],
+    "closest": "L3-C10",
+    "closest_error": 0.06
+   },
+   {
+    "lipid": "70-L5-C10",
+    "table_MW": 427.7,
+    "computed_as_printed": 455.71,
+    "exact_fits": [
+     "L3-C12",
+     "L4-C10",
+     "L5-C8"
+    ],
+    "closest": "L3-C12",
+    "closest_error": 0.04
+   },
+   {
+    "lipid": "113-L5-C10",
+    "table_MW": 796.2,
+    "computed_as_printed": 852.31,
+    "exact_fits": [
+     "L3-C12",
+     "L4-C10",
+     "L5-C8"
+    ],
+    "closest": "L3-C12",
+    "closest_error": 0.0
+   }
+  ],
+  "note": "Table S2 holds the tail constant at 2C10 across all eight linkers and every row agrees as printed, which pins L1-L8 independently of any tail. The six anomalous S1 rows admit several mass-degenerate relabelings (a CH2 moved between linker and tail changes neither mass nor formula), so no single explanation is asserted. The enumerated STRUCTURES are the same under all of them."
+ },
+ "table_S1_anomaly": "Table S1 prints two rows as 400-L6-C6 (471.7 and 516.7) and two as 113-L6-C6 (both 744.0). The 516.7 row matches the L7 product, so the second pair is mislabelled in the paper; only the L6 masses are used here."
+}

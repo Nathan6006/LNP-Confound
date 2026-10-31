@@ -1,0 +1,83 @@
+# Stage 2 — Corpus Overview (Table 1)
+
+## Per-source summary
+
+| source_dataset   | Experiment_ID   |   n_measurements |   n_unique_lipids | readout_methods                     | cell_or_animal_models   | routes                      | cargo   |   n_environments |   n_comparable_environments |
+|:-----------------|:----------------|-----------------:|------------------:|:------------------------------------|:------------------------|:----------------------------|:--------|-----------------:|----------------------------:|
+| LNPDB_vitro      | YX_2024         |             2400 |              1200 | luminescence_normalized             | HeLa;RAW264.7           | in_vitro                    | mRNA    |                2 |                           2 |
+| LNPDB_vitro      | AC_2025         |             1978 |                 7 | luminescence_normalized             | DC2.4                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | JW_2024         |             1830 |               202 | luminescence_normalized             | A549;HBEC_ALI           | in_vitro                    | mRNA    |                2 |                           2 |
+| LNPDB_vitro      | KZ_2016         |             1512 |              1470 | luminescence_discretized_normalized | HeLa                    | in_vitro                    | siRNA   |                1 |                           1 |
+| LNPDB_vitro      | KW_2014         |             1182 |              1150 | luminescence_normalized             | HeLa                    | in_vitro                    | siRNA   |                1 |                           1 |
+| LNPDB_vitro      | LM_2019         |             1128 |              1080 | luminescence_normalized             | BMDC;BMDM;HeLa          | in_vitro                    | mRNA    |                3 |                           2 |
+| LNPDB_vitro      | YZ_2022         |             1080 |                 1 | luminescence_normalized             | HepG2                   | in_vitro                    | pDNA    |                1 |                           1 |
+| LNPDB_vitro      | YZ_2024         |             1080 |                 1 | luminescence_normalized             | DC2.4                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | BL_2023         |              720 |               709 | luminescence_normalized             | A549                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | JL_2024         |              623 |               623 | luminescence_normalized             | DC2.4                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | SL_2021         |              572 |               572 | luminescence_discretized_normalized | IGROV1                  | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | BL_2024         |              560 |               560 | luminescence_normalized             | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | XH_2025         |              500 |               500 | luminescence_normalized             | HepG2                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | AA_2008         |              497 |               487 | luminescence_discretized_normalized | HeLa                    | in_vitro                    | siRNA   |                1 |                           1 |
+| LNPDB_vitro      | JC_2023         |              288 |               288 | luminescence_normalized             | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | YR_2024         |              286 |               286 | luminescence_discretized_normalized | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | LX_2024_2       |              270 |               270 | luminescence_normalized             | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | NC_2024         |              260 |               260 | luminescence_normalized             | BeWo_b30                | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | LX_2024_3       |              252 |               252 | luminescence_normalized             | HepG2                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | YX_2023         |              248 |               176 | luminescence_normalized             | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | LX_2024         |              180 |               165 | luminescence_normalized             | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | SW_2024         |              180 |               180 | luminescence_normalized             | IGROV1                  | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | ZL_2022         |              144 |               144 | luminescence_normalized             | HEK293T                 | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | KS_2024         |              140 |               140 | luminescence_normalized             | IGROV1                  | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | YY_2023         |              119 |               119 | luminescence_normalized             | IGROV1                  | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | LL_2012         |              112 |               112 | LRP6_knockdown_normalized           | HEK293T                 | in_vitro                    | pDNA    |                1 |                           1 |
+| LNPDB_vitro      | ZC_2023         |              100 |               100 | luminescence_discretized_normalized | IGROV1                  | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | LZ_2025         |               96 |                 1 | luminescence_normalized             | A549;HepG2              | in_vitro                    | mRNA    |                2 |                           2 |
+| LNPDB_vitro      | SL_2020         |               91 |                63 | luminescence_discretized_normalized | IGROV1                  | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | XH_2024_2       |               90 |                90 | luminescence_normalized             | HepG2                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | JM_2016         |               72 |                72 | luminescence_normalized             | HeLa                    | in_vitro                    | siRNA   |                1 |                           1 |
+| LNPDB_vitro      | KL_2010         |               50 |                50 | luminescence_normalized             | HeLa                    | in_vitro                    | siRNA   |                1 |                           1 |
+| LNPDB_vitro      | SP_2020         |               30 |                 1 | luminescence_normalized             | HeLa                    | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vitro      | XH_2024         |               30 |                30 | luminescence_normalized             | HepG2                   | in_vitro                    | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | LR_2023         |              407 |               383 | protein_adundance_normalized        | Mouse_B6                | intravenous                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | ZH_2023         |              325 |               161 | luminescence_normalized             | Mouse_B6                | intravenous                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | RG_2023         |              260 |               260 | protein_adundance_normalized        | Mouse_BALBc             | intramuscular               | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | SX_2025         |              141 |               130 | editing_efficiency_normalized       | Mouse_Ai14              | intravenous                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | AP_2025         |               91 |                91 | luminescence_normalized             | Mouse_BALBc             | intramuscular               | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | KW_2014         |               91 |                90 | protein_adundance_normalized        | Mouse_B6                | intravenous                 | siRNA   |                1 |                           1 |
+| LNPDB_vivo       | JW_2024         |               72 |                69 | luminescence_normalized             | Mouse_B6                | intramuscular               | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | XH_2024_2       |               61 |                61 | luminescence_normalized             | Mouse_B6                | intravenous                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | BL_2023         |               53 |                26 | luminescence_normalized             | Mouse_B6                | intramuscular;intratracheal | mRNA    |                2 |                           2 |
+| LNPDB_vivo       | BL_2024         |               51 |                51 | luminescence_normalized             | Mouse_B6                | intramuscular               | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | SY_2025         |               36 |                19 | luminescence_relative_to_Spikevax   | Mouse_ICR               | intradermal                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | ZC_2023         |               31 |                31 | luminescence_normalized             | Mouse_B6                | intravenous                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | XH_2024         |               30 |                30 | luminescence_normalized             | Mouse_B6                | intravenous                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | KZ_2016         |               26 |                24 | luminescence_normalized             | Mouse_B6                | intravenous                 | siRNA   |                1 |                           1 |
+| LNPDB_vivo       | SB_2024         |               24 |                 2 | luminescence_relative_to_Spikevax   | Mouse_ICR               | intradermal                 | mRNA    |                1 |                           1 |
+| LNPDB_vivo       | SS_2018         |               10 |                10 | luminescence_normalized             | Mouse_CD1               | intravenous                 | mRNA    |                1 |                           0 |
+| LNPDB_vivo       | LL_2025         |                8 |                 1 | protein_adundance_normalized        | Mouse_BALBc             | intramuscular               | mRNA    |                1 |                           1 |
+
+
+## Aggregate counts
+
+**LNPDB_vitro**
+- Sources (raw): 34
+- Measurements: 18,700
+- Unique ionizable lipids: 11,128
+- Environments: 14 total, **13 comparable** (>= threshold in Stage 1)
+
+**LNPDB_vivo**
+- Sources (raw): 17
+- Measurements: 1,717
+- Unique ionizable lipids: 1,434
+- Environments: 9 total, **8 comparable** (>= threshold in Stage 1)
+
+**molea** (kept separate; single source, two endpoints)
+- Rows: 1,152
+- Unique canonical SMILES: 1,152
+- Hepatocyte values present: 1,152
+- Chondrocyte values present: 1,152
+
+## Totals
+
+- Total LNPDB measurements: 20,417 (18,700 in-vitro / 1,717 in-vivo)
+- Total LNPDB sources: 43

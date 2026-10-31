@@ -1,0 +1,35 @@
+{
+ "experiment_id": "XD_2026",
+ "model": "in_vivo",
+ "rows": 12,
+ "unique_canonical_SMILES": 12,
+ "molratio_sum": 100.0,
+ "zscore_mean": -3.1803263726241465e-16,
+ "zscore_sd": 1.0,
+ "value_range": [
+  488744.9211538579,
+  756578067.3130585
+ ],
+ "fig5c_vs_fig5d_class_agreement": "12/12",
+ "benchmark_C10_external": {
+  "checked": 3,
+  "exact": 2,
+  "mismatches": [
+   {
+    "lipid": "ALC-0315",
+    "drawn": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC",
+    "corpus": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC"
+   }
+  ]
+ },
+ "benchmarks_emitted_with": "corpus SMILES",
+ "E_lipids_confidence": "medium",
+ "assumptions": {
+  "Model_target": "'whole_body'. Methods 2.3.4 describes BOTH whole-animal imaging at 6 h AND ex-vivo heart/liver/spleen/lung/kidney on the same instrument; neither the Fig 5C caption nor the text says which ROI the histogram plots. whole_body is the defensible reading for one number per lipid, but it is a reading.",
+  "Route_of_administration": "'intravenous'. Methods 2.3.4 says only 'post-vaccination'; IV / tail-vein comes from the Fig 5 caption and the body text, which agree with each other.",
+  "Dialysis_buffer": "'citrate' - faithful to Methods 2.3.3 (0.01 M citric acid pH 6, 2 h) but a category the corpus has never carried; every other source dialyses into PBS or saline.",
+  "Dose_ug_nucleicacid": "absent from the paper; left blank, not imputed.",
+  "N_to_P_ratio": "absent from the paper; the corpus has no column for it."
+ },
+ "lipiddb_merged": false
+}
