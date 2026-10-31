@@ -1,0 +1,39 @@
+{
+ "failures": [],
+ "passes": [
+  "PASS  row count 2544 (expect 2544)",
+  "PASS  column count 79 (expect 79)",
+  "PASS  dataset 0 iteration-0 library = 81, Suppl Table 9 prints 81",
+  "PASS  dataset 1 iteration-0 library = 108, Suppl Table 9 prints 108",
+  "PASS  dataset 2 iteration-0 library = 36, Suppl Table 9 prints 36",
+  "PASS  dataset 3 iteration-0 library = 108, Suppl Table 9 prints 108",
+  "PASS  dataset 4 iteration-0 library = 108, Suppl Table 9 prints 108",
+  "PASS  7 experiment blocks, one per source file (expect 7; it was 14 before F-003)",
+  "PASS  max |block mean| = 2.32e-16",
+  "PASS  max |block sd - 1| = 0.00e+00",
+  "PASS  every block has >1 row",
+  "PASS  molar percents sum to 100, max deviation 0.1000 (source rounds to 0.1)",
+  "PASS  N/P range 3.33-37.12",
+  "PASS  7 distinct components parse, canonical, single fragment, no radicals ",
+  "PASS  no component name maps to two SMILES []",
+  "PASS  descriptors agree with their own SMILES on 300 sampled rows (0 mismatches)",
+  "PASS  all 7 blocks round-trip to the source CSV (0 differ)",
+  "PASS  stored z differences reproduce the authors' printed nLnLE_Selectivity up to one constant per file (4 files checked, 0 fail)"
+ ],
+ "repeated_compositions_within_an_experiment": {
+  "WT_2026_E0": 273,
+  "WT_2026_E1": 198,
+  "WT_2026_E2": 136,
+  "WT_2026_E4": 540,
+  "WT_2026_E5": 180
+ },
+ "known_duplicate_in_the_source_table": {
+  "rows": [
+   "F1109 (iter 1)",
+   "F1120 (iter 2)"
+  ],
+  "file": "1_Norm_RAMOS_HEPG2_..._SM102_18PG.csv",
+  "what": "same composition; nLnLE_RAMOS byte-identical (2.483377939) while nLnLE_HEPG2 differs (3.237 vs 4.414). Published that way by the authors - the Ramos value looks carried forward between iterations. Kept rather than dropped; it is their data, not a read error. Shows up as audit C4's one exact duplicate row."
+ },
+ "note": "repeats are real: FALCON retests reference/control formulations across iterations, so a composition can appear more than once with different measured values."
+}

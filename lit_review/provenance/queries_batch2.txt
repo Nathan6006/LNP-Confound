@@ -1,0 +1,6 @@
+("lipid array"[tiab] OR "nanoparticle library"[tiab] OR "nanoparticle libraries"[tiab] OR "formulation library"[tiab] OR "lipid library"[tiab] OR "lipid libraries"[tiab])
+("parallel synthesis"[tiab] OR "split-pool"[tiab] OR "DNA-encoded"[tiab] OR "diversity-oriented"[tiab]) AND (lipid[tiab] OR nanoparticle[tiab]) AND (RNA[tiab] OR mRNA[tiab] OR siRNA[tiab] OR transfection[tiab])
+("in vitro"[tiab] AND "in vivo"[tiab]) AND (lipid[tiab] OR LNP[tiab]) AND (correlat*[tiab] OR predict*[tiab] OR compar*[tiab]) AND (screen*[tiab] OR librar*[tiab] OR barcod*[tiab])
+(lipid[tiab] OR LNP[tiab] OR lipidoid[tiab]) AND (mRNA[tiab] OR siRNA[tiab]) AND ("96-well"[tiab] OR "384-well"[tiab] OR "well plate"[tiab] OR "liquid handling"[tiab] OR "acoustic"[tiab] OR robotic[tiab])
+(ionizable[tiab] OR lipidoid[tiab] OR "lipid nanoparticle"[tiab]) AND (transfection[tiab] OR luciferase[tiab] OR luminescence[tiab]) AND ("2025/08/01"[PDAT]:"2026/12/31"[PDAT])
+("mass spectrometry"[tiab] OR "self-assembly"[tiab] OR "flow cytometry"[tiab]) AND (lipid[tiab]) AND ("high-throughput"[tiab] AND (discovery[tiab] OR screen*[tiab])) AND (mRNA[tiab] OR RNA[tiab])

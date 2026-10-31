@@ -1,0 +1,153 @@
+{
+ "file": "new_curation.csv",
+ "scope": "curated after the LNPDB + Bowen Li additions; currently one paper",
+ "columns": 74,
+ "schema_source": "data/LNPDB_vitro.csv (67 columns, matched exactly)",
+ "rows_total": 537,
+ "blocks": {
+  "ZT_2026_in_vitro": {
+   "n": 486,
+   "what": "486-formulation DoE on ONE lipid, C6O2B2; zero structural variance",
+   "method": "luminescence_discretized_normalized (4 bins from Fig 2c)",
+   "z_mean": -0.0,
+   "z_sd": 1.0,
+   "distinct_values": 4
+  },
+  "ZT_2026_in_vivo": {
+   "n": 51,
+   "what": "17 lipid cores x 3 cholesterol tails, fixed formulation",
+   "method": "luminescence_normalized (z-score of log10 brain total flux)",
+   "z_mean": -0.0,
+   "z_sd": 1.0
+  }
+ },
+ "molratio_rows_not_summing_to_100": [],
+ "IL_SMILES_resolution": {
+  "resolved": 51,
+  "unresolved": [],
+  "how": "36 synthesized cores enumerated from the Fig 1b building blocks. The 15 commercial-core conjugates are built by quaternizing their parent, which Fig 1b DRAWS for all five (MC3, SM-102, TT3, Lipid 14, OF-2). MC3 and SM-102 parents are taken from the corpus; TT3, Lipid 14 and OF-2 were read off Fig 1b at 600 dpi.",
+  "confidence_basis": "CORRECTED 2026-10-30, finding F-011. The enumerated lipids now carry THEIR OWN confidence from 03_enumerated.csv instead of a hard-coded 'high'. low = the quaternization site is an assumption, because the core has no ring nitrogen and the paper draws no structure for it (24 lipids). medium = the core is C5/C6, whose piperazine N is drawn in Fig 2a, or the cholesterol CONJUGATION SITE is inferred for a commercial core (the paper draws no -C conjugate at all), or the parent has unsaturation the chain counter cannot validate (OF-2). high = parent structure machine-counted (apex detection, bond-gap CV < 0.02). The counter was validated against MC3 in the same figure and FAILED there (20-21 C vs a known 18), which is why only saturated chains were machine-counted.",
+  "by_confidence": {
+   "high": [
+    "C5O2B1",
+    "C5O2B2",
+    "C5O2B3",
+    "C6O2B1",
+    "C6O2B2",
+    "C6O2B3",
+    "Lipid 14-CB1",
+    "Lipid 14-CB2",
+    "Lipid 14-CB3",
+    "TT3-CB1",
+    "TT3-CB2",
+    "TT3-CB3"
+   ],
+   "medium": [
+    "C5O1B1",
+    "C5O1B2",
+    "C5O1B3",
+    "C6O1B1",
+    "C6O1B2",
+    "C6O1B3",
+    "MC3-CB1",
+    "MC3-CB2",
+    "MC3-CB3",
+    "OF-2-CB1",
+    "OF-2-CB2",
+    "OF-2-CB3",
+    "SM-102-CB1",
+    "SM-102-CB2",
+    "SM-102-CB3"
+   ],
+   "low": [
+    "C1O1B1",
+    "C1O1B2",
+    "C1O1B3",
+    "C1O2B1",
+    "C1O2B2",
+    "C1O2B3",
+    "C2O1B1",
+    "C2O1B2",
+    "C2O1B3",
+    "C2O2B1",
+    "C2O2B2",
+    "C2O2B3",
+    "C3O1B1",
+    "C3O1B2",
+    "C3O1B3",
+    "C3O2B1",
+    "C3O2B2",
+    "C3O2B3",
+    "C4O1B1",
+    "C4O1B2",
+    "C4O1B3",
+    "C4O2B1",
+    "C4O2B2",
+    "C4O2B3"
+   ]
+  },
+  "structure_assumed": [
+   "C1O1B1",
+   "C1O1B2",
+   "C1O1B3",
+   "C1O2B1",
+   "C1O2B2",
+   "C1O2B3",
+   "C2O1B1",
+   "C2O1B2",
+   "C2O1B3",
+   "C2O2B1",
+   "C2O2B2",
+   "C2O2B3",
+   "C3O1B1",
+   "C3O1B2",
+   "C3O1B3",
+   "C3O2B1",
+   "C3O2B2",
+   "C3O2B3",
+   "C4O1B1",
+   "C4O1B2",
+   "C4O1B3",
+   "C4O2B1",
+   "C4O2B2",
+   "C4O2B3",
+   "Lipid 14-CB1",
+   "Lipid 14-CB2",
+   "Lipid 14-CB3",
+   "MC3-CB1",
+   "MC3-CB2",
+   "MC3-CB3",
+   "OF-2-CB1",
+   "OF-2-CB2",
+   "OF-2-CB3",
+   "SM-102-CB1",
+   "SM-102-CB2",
+   "SM-102-CB3",
+   "TT3-CB1",
+   "TT3-CB2",
+   "TT3-CB3"
+  ]
+ },
+ "supplied_component_SMILES": {
+  "note": "not present in the corpus; standard reference structures",
+  "names": [
+   "DMPC",
+   "DODAP",
+   "DOPC",
+   "DOPG",
+   "EggSM"
+  ]
+ },
+ "schema_notes": {
+  "ExactMolWt": "was named van.der.Waals.Molecular.Volume in the corpus. Verified as ExactMolWt on 40472/40542 rows across all three corpus files (12846 unique lipids). The 70 exceptions are confined to JW_2024 and LX_2024 and are STALE ROWS: their Molecular.Weight column disagrees with the SMILES too, and the stored exact/average ratio is 0.99928 +/- 0.00002, the monoisotopic ratio. Renamed in the corpus files as well.",
+  "stale_descriptor_rows_found_in_corpus": "70 rows in JW_2024 and LX_2024 have ALL descriptor columns computed from a previous version of their SMILES. Not fixed here; flagged for you.",
+  "CHL_columns_empty": "deliberate - this platform uses NO free cholesterol, which is the paper's central claim",
+  "fifthcomponent": "DODAP, the ionizable co-lipid",
+  "IL_to_nucleicacid_massratio": "left empty; the paper states a TOTAL lipid:mRNA ratio of 40:1 wt/wt, which is not the IL-specific ratio this column wants"
+ },
+ "paper_internal_contradictions_recorded": {
+  "in_vitro_dose_and_n": "Fig 2c caption says 20 ng mRNA per well, n=3; Methods 4.8 says 15 ng per well, n=5. CHECKED whether these are different experiments: they are not. 4.8 is the ONLY in vitro subsection in the paper, and it states that luciferase AND viability were read from one combined ONE-Glo + Tox assay, i.e. Fig 2c and Fig S12 are the same wells. So the paper contradicts itself on both dose and n. The figure caption is used (0.02 ug) because it describes Fig 2c specifically; n is likewise contested (3 vs 5) and is NOT recorded in this schema. UNRESOLVED.",
+  "acceptable_outstanding_counts": "text says 240/91, figures and digitization both give 238/93; totals reconcile at 331"
+ },
+ "merge_instructions": "split on `Model`: in_vitro rows append to data/LNPDB_vitro.csv, in_vivo rows to data/LNPDB_vivo.csv. Both blocks are already z-scored within themselves, which is the corpus convention (per Experiment_ID, per file)."
+}

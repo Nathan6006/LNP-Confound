@@ -1,0 +1,754 @@
+{
+ "columns": 79,
+ "vitro_rows": 28885,
+ "vivo_rows": 1780,
+ "row_provenance": {
+  "processed": 15701,
+  "processed_only(BowenLi)": 6293,
+  "restored_from_V:XH_2024": 30,
+  "restored_from_V:YX_2024": 2400,
+  "restored_from_V:ZC_2023": 100
+ },
+ "experiments": 42,
+ "rows_per_experiment": {
+  "AA_2008": 497,
+  "AC_2025": 1978,
+  "BL_2023": 720,
+  "BL_2023_3CR": 480,
+  "BL_2024": 560,
+  "FG_2026": 960,
+  "JC_2023": 288,
+  "JL_2024": 623,
+  "JM_2016": 72,
+  "JW_2024": 1801,
+  "KL_2010": 50,
+  "KS_2024": 140,
+  "KW_2014": 1182,
+  "KZ_2016": 1512,
+  "LL_2012": 112,
+  "LL_2026": 840,
+  "LL_2026_2": 147,
+  "LM_2019": 1080,
+  "LX_2024": 180,
+  "LX_2024_2": 270,
+  "LX_2024_3": 252,
+  "LZ_2025": 96,
+  "MO_2026": 1152,
+  "NC_2024": 260,
+  "QL_2026": 344,
+  "SL_2020": 91,
+  "SL_2021": 572,
+  "SP_2020": 30,
+  "SW_2024": 180,
+  "WT_2026": 2544,
+  "XH_2024": 30,
+  "XH_2024_2": 90,
+  "XH_2025": 500,
+  "YR_2024": 286,
+  "YX_2024": 2400,
+  "YX_2026": 1920,
+  "YX_2026_SDL": 1781,
+  "YY_2023": 119,
+  "YZ_2022": 1080,
+  "YZ_2024": 1080,
+  "ZC_2023": 100,
+  "ZT_2026": 486
+ },
+ "restored": {
+  "ZC_2023": 100,
+  "XH_2024": 30,
+  "YX_2024_RAW264.7": 1200,
+  "expected": {
+   "ZC_2023": 100,
+   "XH_2024": 30,
+   "YX_2024_RAW264.7": 1200
+  }
+ },
+ "deletions_kept": {
+  "ZL_2022_and_YX_2023": {
+   "present": 0,
+   "expected": 0,
+   "why": "z-scored without log(RLU); not comparable"
+  },
+  "ood_cell_lines": {
+   "present": {
+    "HeLa": 9951,
+    "DC2.4": 3861,
+    "A549": 2569,
+    "BEAS-2B": 960,
+    "IGROV1": 2675,
+    "HEK293T": 112,
+    "HepG2": 2513,
+    "mouse_hepatocyte_primary": 1152,
+    "BeWo_b30": 260,
+    "Ramos": 959,
+    "THP-1": 409,
+    "INS-1E": 123,
+    "NIH-3T3": 180,
+    "C2C12": 180,
+    "RAW264.7": 1200,
+    "HBE": 1781
+   },
+   "expected_absent": [
+    "BMDC",
+    "BMDM",
+    "HBEC_ALI"
+   ],
+   "found": []
+  },
+  "KL_2010_blank_values": {
+   "note": "NOT a change-log deletion: 328 V rows have no Experiment_value",
+   "kept": 50,
+   "expected": 50
+  }
+ },
+ "zscore_per_experiment_mean_sd_n": {
+  "AA_2008": [
+   -0.0,
+   1.0,
+   497
+  ],
+  "AC_2025": [
+   0.0,
+   1.0,
+   1978
+  ],
+  "BL_2023": [
+   -0.0,
+   1.0,
+   720
+  ],
+  "BL_2023_3CR": [
+   0.0,
+   1.0,
+   480
+  ],
+  "BL_2024": [
+   0.0,
+   1.0,
+   560
+  ],
+  "FG_2026": [
+   0.0,
+   1.0,
+   960
+  ],
+  "JC_2023": [
+   0.0,
+   1.0,
+   288
+  ],
+  "JL_2024": [
+   -0.0,
+   1.0,
+   623
+  ],
+  "JM_2016": [
+   0.0,
+   1.0,
+   72
+  ],
+  "JW_2024": [
+   0.0,
+   1.0,
+   1801
+  ],
+  "KL_2010": [
+   0.0,
+   1.0,
+   50
+  ],
+  "KS_2024": [
+   -0.0,
+   1.0,
+   140
+  ],
+  "KW_2014": [
+   0.0,
+   1.0,
+   1182
+  ],
+  "KZ_2016": [
+   0.0,
+   1.0,
+   1512
+  ],
+  "LL_2012": [
+   -0.0,
+   1.0,
+   112
+  ],
+  "LL_2026": [
+   0.0,
+   1.0,
+   840
+  ],
+  "LL_2026_2": [
+   -0.0,
+   1.0,
+   147
+  ],
+  "LM_2019": [
+   0.0,
+   1.0,
+   1080
+  ],
+  "LX_2024": [
+   0.0,
+   1.0,
+   180
+  ],
+  "LX_2024_2": [
+   -0.0,
+   1.0,
+   270
+  ],
+  "LX_2024_3": [
+   0.0,
+   1.0,
+   252
+  ],
+  "LZ_2025": [
+   0.0,
+   1.0,
+   96
+  ],
+  "MO_2026": [
+   -0.0,
+   1.0,
+   1152
+  ],
+  "NC_2024": [
+   0.0,
+   1.0,
+   260
+  ],
+  "QL_2026": [
+   -0.0,
+   1.0,
+   344
+  ],
+  "SL_2020": [
+   -0.0,
+   1.0,
+   91
+  ],
+  "SL_2021": [
+   0.0,
+   1.0,
+   572
+  ],
+  "SP_2020": [
+   0.0,
+   1.0,
+   30
+  ],
+  "SW_2024": [
+   0.0,
+   1.0,
+   180
+  ],
+  "WT_2026": [
+   0.0,
+   1.0,
+   2544
+  ],
+  "XH_2024": [
+   0.0,
+   1.0,
+   30
+  ],
+  "XH_2024_2": [
+   -0.0,
+   1.0,
+   90
+  ],
+  "XH_2025": [
+   -0.0,
+   1.0,
+   500
+  ],
+  "YR_2024": [
+   0.0,
+   1.0,
+   286
+  ],
+  "YX_2024": [
+   -0.0,
+   1.0,
+   2400
+  ],
+  "YX_2026": [
+   0.0,
+   1.0,
+   1920
+  ],
+  "YX_2026_SDL": [
+   0.0,
+   1.0,
+   1781
+  ],
+  "YY_2023": [
+   -0.0,
+   1.0,
+   119
+  ],
+  "YZ_2022": [
+   0.0,
+   1.0,
+   1080
+  ],
+  "YZ_2024": [
+   0.0,
+   1.0,
+   1080
+  ],
+  "ZC_2023": [
+   -0.0,
+   1.0,
+   100
+  ],
+  "ZT_2026": [
+   -0.0,
+   1.0,
+   486
+  ]
+ },
+ "zscore_experiments_off_spec": {},
+ "rows_with_unparseable_value": 0,
+ "unparseable_IL_SMILES": 0,
+ "canonical": true,
+ "changelog_fixes_verified": {
+  "SL_2021_iPhos_neutral": {
+   "formal_charge_histogram": {
+    "0": 494,
+    "1": 78
+   },
+   "pass": true
+  },
+  "SL_2020_EZ_trans_present": {
+   "n_trans_motifs": 69,
+   "pass": true
+  },
+  "SL_2020_duplicate_SMILES": {
+   "remaining": {},
+   "n_remaining": 0,
+   "note": "28 T/C collisions in V are resolved; any listed here were already present in the processed file"
+  }
+ },
+ "SMILES_corrections_carried_from_processed": 700,
+ "descriptor_rows_corrected_vs_curation_file": 677,
+ "vivo_experiments": {
+  "AP_2025": 91,
+  "BL_2023": 53,
+  "BL_2024": 51,
+  "JW_2024": 72,
+  "KW_2014": 91,
+  "KZ_2016": 26,
+  "LL_2025": 8,
+  "LR_2023": 407,
+  "RG_2023": 260,
+  "SB_2024": 24,
+  "SS_2018": 10,
+  "SX_2025": 141,
+  "SY_2025": 36,
+  "XD_2026": 12,
+  "XH_2024": 30,
+  "XH_2024_2": 61,
+  "ZC_2023": 31,
+  "ZH_2023": 325,
+  "ZT_2026": 51
+ },
+ "vivo_experiments_not_on_the_zscore_scale": {
+  "found": {
+   "SB_2024": {
+    "n": 24,
+    "mean": 0.4517,
+    "sd": 0.3946,
+    "range": [
+     0.003,
+     1.248
+    ],
+    "method": [
+     "luminescence_relative_to_Spikevax"
+    ]
+   },
+   "SY_2025": {
+    "n": 36,
+    "mean": 0.4382,
+    "sd": 0.45,
+    "range": [
+     0.004,
+     1.542
+    ],
+    "method": [
+     "luminescence_relative_to_Spikevax"
+    ]
+   }
+  },
+  "verdict": "NOT FIXED and NOT DROPPED - flagged for the user. These are ratios to a benchmark (luminescence_relative_to_Spikevax), floored at 0, not z-scores. They are the vivo analogue of the ZL_2022 / YX_2023 problem that got those two dropped from the vitro corpus, and the same decision should probably apply."
+ },
+ "structure_patches": {
+  "lipids_patched": {
+   "KZ_2016": 42,
+   "SL_2020": 1
+  },
+  "n_rows_patched": 43,
+  "examples": [
+   {
+    "experiment": "KZ_2016",
+    "lipid": "6A3-SC3",
+    "before": "CC(C)CCSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCN(CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C",
+    "after": "CC(CSCC(C)(C)C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCN(CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C"
+   },
+   {
+    "experiment": "KZ_2016",
+    "lipid": "2H4-SC3",
+    "before": "CCCCCCCCCCCCCCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C",
+    "after": "CCCCCCCCCCCCCCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C"
+   }
+  ],
+  "duplicate_SMILES_remaining_by_experiment": {
+   "AA_2008": [
+    [
+     "21_O13",
+     "22_O13"
+    ],
+    [
+     "21_N14",
+     "22_N14"
+    ],
+    [
+     "21_O10",
+     "22_O10"
+    ],
+    [
+     "21_O12",
+     "22_O12"
+    ],
+    [
+     "21_O14",
+     "22_O14"
+    ],
+    [
+     "21_O18",
+     "22_O18"
+    ],
+    [
+     "21_N12",
+     "22_N12"
+    ],
+    [
+     "21_N15",
+     "22_N15"
+    ],
+    [
+     "21_N16",
+     "22_N16"
+    ],
+    [
+     "21_N18",
+     "22_N18"
+    ]
+   ],
+   "BL_2023": [
+    [
+     "A55-T3 ",
+     "A57-T3 "
+    ],
+    [
+     "A24-T2 ",
+     "A25-T2 "
+    ],
+    [
+     "A55-T10 ",
+     "A57-T10 "
+    ],
+    [
+     "A55-T9 ",
+     "A57-T9 "
+    ],
+    [
+     "A55-T4 ",
+     "A57-T4 "
+    ],
+    [
+     "A55-T2 ",
+     "A57-T2 "
+    ],
+    [
+     "A55-T5 ",
+     "A57-T5 "
+    ],
+    [
+     "A55-T1 ",
+     "A57-T1 "
+    ],
+    [
+     "A55-T6 ",
+     "A57-T6 "
+    ],
+    [
+     "A55-T7 ",
+     "A57-T7 "
+    ],
+    [
+     "A55-T8 ",
+     "A57-T8 "
+    ]
+   ],
+   "JW_2024": [
+    [
+     "RM_branched_ester_M3_R6",
+     "RM_branched_ester_M81_R6"
+    ],
+    [
+     "RM_branched_ester_M80_R14",
+     "RM_branched_ester_M95_R14"
+    ]
+   ],
+   "KW_2014": [
+    [
+     "A165_C14",
+     "A69_C14"
+    ],
+    [
+     "A191_C14",
+     "A192_C14"
+    ],
+    [
+     "A163_C14",
+     "A1_C14"
+    ],
+    [
+     "A103_C14",
+     "A167_C14"
+    ],
+    [
+     "A164_C14",
+     "A31_C14"
+    ],
+    [
+     "A165_C13",
+     "A69_C13"
+    ],
+    [
+     "A191_C13",
+     "A192_C13"
+    ],
+    [
+     "A163_C13",
+     "A1_C13"
+    ],
+    [
+     "A103_C13",
+     "A167_C13"
+    ],
+    [
+     "A164_C13",
+     "A31_C13"
+    ],
+    [
+     "A165_C12",
+     "A69_C12"
+    ],
+    [
+     "A191_C12",
+     "A192_C12"
+    ],
+    [
+     "A163_C12",
+     "A1_C12"
+    ],
+    [
+     "A103_C12",
+     "A167_C12"
+    ],
+    [
+     "A164_C12",
+     "A31_C12"
+    ],
+    [
+     "A165_C11",
+     "A69_C11"
+    ],
+    [
+     "A191_C11",
+     "A192_C11"
+    ],
+    [
+     "A163_C11",
+     "A1_C11"
+    ],
+    [
+     "A103_C11",
+     "A167_C11"
+    ],
+    [
+     "A164_C11",
+     "A31_C11"
+    ],
+    [
+     "A165_C10",
+     "A69_C10"
+    ],
+    [
+     "A191_C10",
+     "A192_C10"
+    ],
+    [
+     "A163_C10",
+     "A1_C10"
+    ],
+    [
+     "A103_C10",
+     "A167_C10"
+    ],
+    [
+     "A164_C10",
+     "A31_C10"
+    ]
+   ]
+  }
+ },
+ "name_patches": {
+  "n_rows_relabelled": 419,
+  "by_change": {
+   "AC_2025: DLin-MC3-DMA -> KC2": 203,
+   "AC_2025: KC2 -> DLin-MC3-DMA": 216
+  }
+ },
+ "component_patches": {
+  "n_rows_changed": 360,
+  "by_component": {
+   "YZ_2022/18PG": 180,
+   "YZ_2024/18PG": 180
+  },
+  "examples": {
+   "YZ_2022/18PG": {
+    "before": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC(O)CO)OC(=O)CCCCCCCCCCCCCCCCC",
+    "after": "CCCCCCCC/C=C\\CCCCCCCC(=O)O[C@H](COC(=O)CCCCCCCCCCCCCCCCC)COP(=O)([O-])OCC(O)CO"
+   },
+   "YZ_2024/18PG": {
+    "before": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC(O)CO)OC(=O)CCCCCCCCCCCCCCCCC",
+    "after": "CCCCCCCC/C=C\\CCCCCCCC(=O)O[C@H](COC(=O)CCCCCCCCCCCCCCCCC)COP(=O)([O-])OCC(O)CO"
+   }
+  }
+ },
+ "merged_curations": {
+  "new_curation.csv": {
+   "ZT_2026/in_vitro": 486,
+   "ZT_2026/in_vivo": 51
+  },
+  "10_LL_2026_rows.csv": {
+   "LL_2026/in_vitro": 840
+  },
+  "12_LL_2026_2_rows.csv": {
+   "LL_2026_2/in_vitro": 147
+  },
+  "05_WT_2026_merge.csv": {
+   "WT_2026/in_vitro": 2544
+  },
+  "07_XD_2026_rows.csv": {
+   "XD_2026/in_vivo": 12
+  },
+  "11_QL_2026_rows.csv": {
+   "QL_2026/in_vitro": 344
+  }
+ },
+ "metadata_fields_patched": 3549,
+ "renormalized_to_population_sd": {
+  "vitro": {
+   "KL_2010": {
+    "n": 50,
+    "scale": 1.010153,
+    "old_pop_sd": 0.989949,
+    "new_pop_sd": 1.0
+   },
+   "SP_2020": {
+    "n": 30,
+    "scale": 1.035098,
+    "old_pop_sd": 0.966092,
+    "new_pop_sd": 1.0
+   },
+   "YZ_2022": {
+    "n": 1080,
+    "scale": 1.000463,
+    "old_pop_sd": 0.999537,
+    "new_pop_sd": 1.0
+   },
+   "YZ_2024": {
+    "n": 1080,
+    "scale": 1.000463,
+    "old_pop_sd": 0.999537,
+    "new_pop_sd": 1.0
+   },
+   "LZ_2025": {
+    "n": 96,
+    "scale": 1.010582,
+    "old_pop_sd": 0.989529,
+    "new_pop_sd": 1.0
+   },
+   "BL_2023_3CR": {
+    "n": 480,
+    "scale": 1.001043,
+    "old_pop_sd": 0.998958,
+    "new_pop_sd": 1.0
+   },
+   "AC_2025": {
+    "n": 1978,
+    "scale": 1.000253,
+    "old_pop_sd": 0.999747,
+    "new_pop_sd": 1.0
+   },
+   "YX_2024": {
+    "n": 2400,
+    "scale": 1.000417,
+    "old_pop_sd": 0.999583,
+    "new_pop_sd": 1.0
+   }
+  },
+  "vivo": {
+   "SS_2018": {
+    "n": 10,
+    "scale": 1.054093,
+    "old_pop_sd": 0.948683,
+    "new_pop_sd": 1.0
+   },
+   "LL_2025": {
+    "n": 8,
+    "scale": 1.069045,
+    "old_pop_sd": 0.935414,
+    "new_pop_sd": 1.0
+   },
+   "SX_2025": {
+    "n": 141,
+    "scale": 1.003565,
+    "old_pop_sd": 0.996448,
+    "new_pop_sd": 1.0
+   }
+  }
+ },
+ "quality_columns": {
+  "vitro": {
+   "experiments_on_zscore_scale": 42,
+   "experiments_not_zscores": [],
+   "within_model_populated": 28885,
+   "declared_units": {
+    "LZ_2025": "experiment_x_model_type",
+    "YX_2024": "experiment_x_model_type"
+   },
+   "bad_values": []
+  },
+  "vivo": {
+   "experiments_on_zscore_scale": 17,
+   "experiments_not_zscores": [
+    "SB_2024",
+    "SY_2025"
+   ],
+   "within_model_populated": 1720,
+   "declared_units": {},
+   "bad_values": []
+  }
+ }
+}

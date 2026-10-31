@@ -1,0 +1,13 @@
+IL_name,source,confidence,fig5c_value_p_per_s_per_cm2_per_sr,fig5c_log10,fig5d_reality_class,class_from_value,Experiment_value
+ALC-0315,benchmark_corpus_SMILES,high,756578067,8.8789,A,A,1.255953675733528
+SM-102,benchmark_corpus_SMILES,high,657242626,8.8177,A,A,1.2044193626477886
+DLin-MC3-DMA,benchmark_corpus_SMILES,high,145207392,8.162,A,A,0.6515967313643948
+E1,Fig5A_geometric_trace,medium,471239080,8.6732,A,A,1.082610986263311
+E2,Fig5A_geometric_trace,medium,258260460,8.4121,A,A,0.8624189212606045
+E3,Fig5A_geometric_trace,medium,41437505,7.6174,B,B,0.19247285114598334
+E4,Fig5A_geometric_trace,medium,15079371,7.1784,B,B,-0.17763721556069512
+E5,Fig5A_geometric_trace,medium,26819608,7.4285,B,B,0.033184974335513776
+E6,Fig5A_geometric_trace,medium,774707,5.8891,C,C,-1.2645427279144854
+E7,Fig5A_geometric_trace,medium,488745,5.6891,C,C,-1.4332004798314528
+E8,Fig5A_geometric_trace,medium,1122777,6.0503,C,C,-1.1286795388702617
+E9,Fig5A_geometric_trace,medium,745532,5.8725,C,C,-1.2785975405742327

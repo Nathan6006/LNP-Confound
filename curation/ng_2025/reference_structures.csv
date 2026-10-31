@@ -1,0 +1,7 @@
+lipid_name,reference_SMILES,source_figure,read_on,read_by,expected_mismatch,note
+C-a16,CCCCCCCCc1ccc(O)c(CN(CCCCC2NC(=O)C(CCCCN(Cc3cc(CCCCCCCC)ccc3O)Cc3cc(CCCCCCCC)ccc3O)NC2=O)Cc2cc(CCCCCCCC)ccc2O)c1,Supplementary Fig 3a; Supplementary Fig 19a (MS inset),2026-10-29,claude-code,,four 2-hydroxy-5-octylbenzyl arms on the two lysine side-chain NH2 of cyclo(Lys-Lys); the diketopiperazine N-H stay intact
+M-b1,CN(Cc1cccn1C)Cc1cccn1C,Supplementary Fig 14a,2026-10-29,claude-code,,"N-methyl, two (1-methylpyrrol-2-yl)methyl arms"
+P-b1,CN(CCC(=O)c1ccccc1)CCC(=O)c1ccccc1,Supplementary Fig 16a,2026-10-29,claude-code,,"N-methyl, two 3-oxo-3-phenylpropyl arms (the acetophenone methyl becomes the CH2 beta to nitrogen)"
+I-a-b1,CCOC(=O)C1CN(C)CC(C(=O)OCC)C1=O,Supplementary Fig 8a,2026-10-29,claude-code,,"diethyl 1-methyl-4-oxopiperidine-3,5-dicarboxylate: the 1:2:1 double Mannich closes a ring, it is not an acyclic bis-adduct"
+I-b-b1,CCOC(=O)C12CN(C)CC(C(=O)OCC)(CN(C)C1)C2=O,Supplementary Fig 11a,2026-10-29,claude-code,,"diethyl 3,7-dimethyl-9-oxo-3,7-diazabicyclo[3.3.1]nonane-1,5-dicarboxylate (bispidinone): the 1:4:2 ratio closes a second ring"
+B-a1,CCCCCCc1ccc(O)c(CN(CCCN(C)C)Cc2cc(CCCCCC)ccc2O)c1,Fig. 1d,2026-10-29,claude-code,,"DERIVED at run time from the page vector bond coordinates in 01_fig1d_graph.json (stage01_vector.py, glyph merge radius 3.0): glyph signatures give the atoms, geometry gives the chain lengths. No human typed this string, so it cannot have been copied from the enumeration"

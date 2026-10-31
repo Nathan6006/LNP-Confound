@@ -1,0 +1,53 @@
+{
+ "experiment_id": "QL_2026",
+ "rows": 344,
+ "columns": 79,
+ "paper": "Liu et al., Adv Healthc Mater 2026, 15, e02225",
+ "doi": "10.1002/adhm.202502225",
+ "library1": 320,
+ "library2": 24,
+ "value_source": {
+  "Fig 2b": 293,
+  "Fig 2c": 27,
+  "Fig 3c": 24
+ },
+ "cross_figure_offset": {
+  "benchmark_ratios_fig3c_over_fig2c": {
+   "DLin-MC3-DMA": 1.011,
+   "SM102": 1.035,
+   "ALC-0315": 0.967,
+   "Lipid 5": 1.015
+  },
+  "applied": 1.0071,
+  "sd": 0.0247
+ },
+ "flags": {
+  "value_censored": 3,
+  "value_conflict": 1,
+  "value_floored": 113,
+  "censored_lipids": [
+   "400-L8-C12",
+   "114-L4-C14",
+   "114-L7-C14"
+  ],
+  "conflict_lipids": [
+   "T3A-L8-C14"
+  ]
+ },
+ "geometric_mean_RLU": {
+  "1": 3555.7,
+  "2": 144926.2
+ },
+ "z": {
+  "mean": -0.0,
+  "pop_sd": 1.0,
+  "pooled_once_over_all_344": true,
+  "per_library_mean": {
+   "1": -0.1583,
+   "2": 2.1106
+  }
+ },
+ "molratio_sum": 100.0,
+ "conditions": "HeLa, 1e4 cells/well, 96-well; mFluc mRNA 20 ng/well; 24 h; n=3; IL/DOPE/Chol/DMG-PEG2000 = 35/16/46.5/2.5 mol%; lipid:mRNA 20:1 w/w; citrate pH 4.0; pipette mixing",
+ "merged": "2026-10-30 into data/data_vitro.csv (28,541 -> 28,885 rows, 41 -> 42 experiments); see provenance/CHANGELOG.md section 11. Round-1 review findings open against this slice: provenance/review/round_2026-10-30/FINDINGS.md"
+}

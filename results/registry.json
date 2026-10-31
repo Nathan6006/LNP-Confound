@@ -1,0 +1,1454 @@
+{
+  "corpus.n_sources_LNPDB_vitro": {
+    "value": 34,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_measurements_LNPDB_vitro": {
+    "value": 18700,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_unique_lipids_LNPDB_vitro": {
+    "value": 11128,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_environments_LNPDB_vitro": {
+    "value": 14,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_comparable_environments_LNPDB_vitro": {
+    "value": 13,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_sources_LNPDB_vivo": {
+    "value": 17,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_measurements_LNPDB_vivo": {
+    "value": 1717,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_unique_lipids_LNPDB_vivo": {
+    "value": 1434,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_environments_LNPDB_vivo": {
+    "value": 9,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_comparable_environments_LNPDB_vivo": {
+    "value": 8,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.n_rows_molea": {
+    "value": 1152,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "corpus.total_measurements": {
+    "value": 20417,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage2",
+    "note": null
+  },
+  "separability.LNPDB_vitro.morgan_fp.logistic_regression.stratified_kfold.balanced_accuracy": {
+    "value": 0.9720566794957077,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.034482758620689655,
+    "std": 0.0025256263214716345,
+    "n_classes": 29
+  },
+  "separability.LNPDB_vitro.morgan_fp.logistic_regression.scaffold_disjoint_groupkfold.balanced_accuracy": {
+    "value": 0.8821744701998249,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.034482758620689655,
+    "std": 0.07660166558864591,
+    "n_classes": 29
+  },
+  "separability.LNPDB_vitro.morgan_fp.random_forest.stratified_kfold.balanced_accuracy": {
+    "value": 0.9671551162173874,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.034482758620689655,
+    "std": 0.0033356101099981813,
+    "n_classes": 29
+  },
+  "separability.LNPDB_vitro.morgan_fp.random_forest.scaffold_disjoint_groupkfold.balanced_accuracy": {
+    "value": 0.8797074331895519,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.034482758620689655,
+    "std": 0.08864032235392794,
+    "n_classes": 29
+  },
+  "separability.LNPDB_vitro.rdkit_descriptors.logistic_regression.stratified_kfold.balanced_accuracy": {
+    "value": 0.9709522800306678,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.034482758620689655,
+    "n_classes": 29
+  },
+  "separability.LNPDB_vitro.nn_same_source_rate": {
+    "value": 0.918237885462555,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "expected_random": 0.06750235519206785
+  },
+  "separability.LNPDB_vitro.permutation.observed_balanced_accuracy": {
+    "value": 0.9711072583523657,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "null_mean": 0.034287369626669124,
+    "null_std": 0.006545877314093407,
+    "p_value": 0.004975124378109453,
+    "n_permutations": 200
+  },
+  "separability.LNPDB_vivo.morgan_fp.logistic_regression.stratified_kfold.balanced_accuracy": {
+    "value": 0.9824496336996337,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.07692307692307693,
+    "std": 0.011308278023064862,
+    "n_classes": 13
+  },
+  "separability.LNPDB_vivo.morgan_fp.logistic_regression.scaffold_disjoint_groupkfold.balanced_accuracy": {
+    "value": 0.9282762691853602,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.07692307692307693,
+    "std": 0.05959442407889974,
+    "n_classes": 13
+  },
+  "separability.LNPDB_vivo.morgan_fp.random_forest.stratified_kfold.balanced_accuracy": {
+    "value": 0.9824496336996337,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.07692307692307693,
+    "std": 0.011308278023064862,
+    "n_classes": 13
+  },
+  "separability.LNPDB_vivo.morgan_fp.random_forest.scaffold_disjoint_groupkfold.balanced_accuracy": {
+    "value": 0.9267965367965368,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.07692307692307693,
+    "std": 0.06118357343572473,
+    "n_classes": 13
+  },
+  "separability.LNPDB_vivo.rdkit_descriptors.logistic_regression.stratified_kfold.balanced_accuracy": {
+    "value": 0.9773811978619671,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "chance": 0.07692307692307693,
+    "n_classes": 13
+  },
+  "separability.LNPDB_vivo.nn_same_source_rate": {
+    "value": 0.9957356076759062,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "expected_random": 0.14471434738520256
+  },
+  "separability.LNPDB_vivo.permutation.observed_balanced_accuracy": {
+    "value": 0.9807692307692307,
+    "n": null,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage3",
+    "note": null,
+    "null_mean": 0.0750301842643451,
+    "null_std": 0.02456756668379266,
+    "p_value": 0.004975124378109453,
+    "n_permutations": 200
+  },
+  "exclusivity.LNPDB_vitro.lipid.frac_single_source": {
+    "value": 0.9792415528396837,
+    "n": 11128,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "exclusivity.LNPDB_vitro.component_head.frac_single_source": {
+    "value": 0.7766233766233767,
+    "n": 385,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": "coverage=67.9%"
+  },
+  "exclusivity.LNPDB_vitro.component_linker.frac_single_source": {
+    "value": 0.8333333333333334,
+    "n": 24,
+    "ci": null,
+    "confidence": "LOW-CONFIDENCE",
+    "stage": "stage4",
+    "note": "coverage=14.9%"
+  },
+  "exclusivity.LNPDB_vitro.component_tail1.frac_single_source": {
+    "value": 0.7845303867403315,
+    "n": 181,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": "coverage=54.1%"
+  },
+  "exclusivity.LNPDB_vitro.component_tail2.frac_single_source": {
+    "value": 0.9090909090909091,
+    "n": 11,
+    "ci": null,
+    "confidence": "LOW-CONFIDENCE",
+    "stage": "stage4",
+    "note": "coverage=17.4%"
+  },
+  "formulation.LNPDB_vitro.helper_lipid.top1_frac": {
+    "value": 0.48458441343555236,
+    "n": 18131,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vitro.helper_lipid.herfindahl": {
+    "value": 0.33918855238337214,
+    "n": 18131,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vitro.peg_lipid.top1_frac": {
+    "value": 0.6456038021170879,
+    "n": 18516,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vitro.peg_lipid.herfindahl": {
+    "value": 0.4957545489958507,
+    "n": 18516,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vitro.cholesterol.top1_frac": {
+    "value": 0.9986631016042781,
+    "n": 18700,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vitro.cholesterol.herfindahl": {
+    "value": 0.9973282221396094,
+    "n": 18700,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vitro.cramers_v_source": {
+    "value": 0.754115837392105,
+    "n": 18700,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null,
+    "chi2_p": 0.0
+  },
+  "formulation.LNPDB_vitro.nmi_source": {
+    "value": 0.6385632378845466,
+    "n": 18700,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "exclusivity.LNPDB_vivo.lipid.frac_single_source": {
+    "value": 0.99860529986053,
+    "n": 1434,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "exclusivity.LNPDB_vivo.component_head.frac_single_source": {
+    "value": 0.6612903225806451,
+    "n": 62,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": "coverage=72.3%"
+  },
+  "exclusivity.LNPDB_vivo.component_linker.frac_single_source": {
+    "value": 1.0,
+    "n": 24,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": "coverage=30.4%"
+  },
+  "exclusivity.LNPDB_vivo.component_tail1.frac_single_source": {
+    "value": 0.9324324324324325,
+    "n": 74,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": "coverage=76.8%"
+  },
+  "exclusivity.LNPDB_vivo.component_tail2.frac_single_source": {
+    "value": 0.9736842105263158,
+    "n": 38,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": "coverage=39.1%"
+  },
+  "formulation.LNPDB_vivo.helper_lipid.top1_frac": {
+    "value": 0.6144437973209086,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vivo.helper_lipid.herfindahl": {
+    "value": 0.5101084126021976,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vivo.peg_lipid.top1_frac": {
+    "value": 0.4898078043098428,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vivo.peg_lipid.herfindahl": {
+    "value": 0.3829507860854947,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vivo.cholesterol.top1_frac": {
+    "value": 0.9772859638905067,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vivo.cholesterol.herfindahl": {
+    "value": 0.9555060922516246,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "formulation.LNPDB_vivo.cramers_v_source": {
+    "value": 0.7606922403512545,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null,
+    "chi2_p": 0.0
+  },
+  "formulation.LNPDB_vivo.nmi_source": {
+    "value": 0.7782348659153174,
+    "n": 1717,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage4",
+    "note": null
+  },
+  "concordance.LNPDB_vitro.pooled_spearman": {
+    "value": 0.08338794541635874,
+    "n": 236,
+    "ci": [
+      -0.04123163295841817,
+      0.214694108656689
+    ],
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null,
+    "kendall": 0.06476807271928094,
+    "n_weighted_pair_avg_spearman": 0.14020154428773215,
+    "n_source_pairs": 13,
+    "n_shared_lipids": 231
+  },
+  "concordance.LNPDB_vitro.shared_set_frac_reference_lipid": {
+    "value": 0.008658008658008658,
+    "n": 231,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null
+  },
+  "concordance.LNPDB_vitro.ceiling_spearman": {
+    "value": 0.3998743952499873,
+    "n": 1035,
+    "ci": [
+      0.3462062139471604,
+      0.4517680272241546
+    ],
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null,
+    "dominant_source": "YZ_2022",
+    "dominant_source_frac": 0.34299516908212563
+  },
+  "concordance.LNPDB_vitro.anchoring.baseline_spearman": {
+    "value": NaN,
+    "n": 0,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null
+  },
+  "concordance.LNPDB_vitro.anchoring.anchored_spearman": {
+    "value": NaN,
+    "n": 0,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null,
+    "anchor_smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+    "eligible_sources": [
+      "AC_2025",
+      "SP_2020",
+      "YZ_2022",
+      "YZ_2024"
+    ]
+  },
+  "concordance.LNPDB_vivo.pooled_spearman": {
+    "value": -0.12280701754385966,
+    "n": 9,
+    "ci": [
+      -0.7711684705919237,
+      0.6914864346477374
+    ],
+    "confidence": "LOW-CONFIDENCE",
+    "stage": "stage5",
+    "note": null,
+    "kendall": -0.06451612903225808,
+    "n_weighted_pair_avg_spearman": NaN,
+    "n_source_pairs": 9,
+    "n_shared_lipids": 2
+  },
+  "concordance.LNPDB_vivo.shared_set_frac_reference_lipid": {
+    "value": 1.0,
+    "n": 2,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null
+  },
+  "concordance.LNPDB_vivo.ceiling_spearman": {
+    "value": 0.3318795976559527,
+    "n": 194,
+    "ci": [
+      0.19632088723806357,
+      0.4569029000285667
+    ],
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null,
+    "dominant_source": "ZH_2023",
+    "dominant_source_frac": 0.8247422680412371
+  },
+  "concordance.LNPDB_vivo.anchoring.baseline_spearman": {
+    "value": NaN,
+    "n": 0,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null
+  },
+  "concordance.LNPDB_vivo.anchoring.anchored_spearman": {
+    "value": NaN,
+    "n": 0,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null,
+    "anchor_smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+    "eligible_sources": [
+      "BL_2023",
+      "SB_2024",
+      "ZC_2023",
+      "ZH_2023"
+    ]
+  },
+  "concordance.molea.hepatocyte_vs_chondrocyte_spearman": {
+    "value": 0.299383168915975,
+    "n": 1152,
+    "ci": [
+      0.24248663920243277,
+      0.3569167905711006
+    ],
+    "confidence": "OK",
+    "stage": "stage5",
+    "note": null,
+    "pearson_raw": 0.38123582372856996
+  },
+  "protocol.LNPDB_vitro.pooled_regression.random_kfold.pooled_spearman": {
+    "value": 0.5210916387856865,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.random_kfold.within_experiment_spearman": {
+    "value": 0.4993879485095182,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.butina_scaffold_disjoint_kfold.pooled_spearman": {
+    "value": 0.28930765330066693,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.butina_scaffold_disjoint_kfold.within_experiment_spearman": {
+    "value": 0.2892994875928504,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.leave_one_source_out.pooled_spearman": {
+    "value": 0.09283592278910971,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.leave_one_source_out.within_experiment_spearman": {
+    "value": 0.11220499752871545,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.leave_one_source_out.n_folds_at_chance": {
+    "value": 22,
+    "n": 34,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.random_kfold.pooled_spearman": {
+    "value": 0.28916404117537087,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.random_kfold.within_experiment_spearman": {
+    "value": 0.3202775229928468,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.butina_scaffold_disjoint_kfold.pooled_spearman": {
+    "value": 0.2267632834708261,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.butina_scaffold_disjoint_kfold.within_experiment_spearman": {
+    "value": 0.24710935258814065,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.leave_one_source_out.pooled_spearman": {
+    "value": 0.15764979612844646,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.leave_one_source_out.within_experiment_spearman": {
+    "value": 0.1898633776467791,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.leave_one_source_out.n_folds_at_chance": {
+    "value": 17,
+    "n": 34,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.random_kfold.pooled_spearman": {
+    "value": 0.6459966387525958,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.random_kfold.within_experiment_spearman": {
+    "value": 0.5872980794584652,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.butina_scaffold_disjoint_kfold.pooled_spearman": {
+    "value": 0.3855189391990574,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.butina_scaffold_disjoint_kfold.within_experiment_spearman": {
+    "value": 0.3765289615495684,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.leave_one_source_out.pooled_spearman": {
+    "value": 0.2326806012440042,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.leave_one_source_out.within_experiment_spearman": {
+    "value": 0.16478895239293784,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.pooled_regression.leave_one_source_out.n_folds_at_chance": {
+    "value": 12,
+    "n": 17,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.random_kfold.pooled_spearman": {
+    "value": 0.5059961698337068,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.random_kfold.within_experiment_spearman": {
+    "value": 0.5532558325265307,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.butina_scaffold_disjoint_kfold.pooled_spearman": {
+    "value": 0.3194183809603625,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.butina_scaffold_disjoint_kfold.within_experiment_spearman": {
+    "value": 0.35639842801116545,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.leave_one_source_out.pooled_spearman": {
+    "value": 0.08974853431594625,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.leave_one_source_out.within_experiment_spearman": {
+    "value": 0.06083182458005449,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.leave_one_source_out.n_folds_at_chance": {
+    "value": 11,
+    "n": 17,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "learnable.LNPDB_vitro.size_weighted_spearman": {
+    "value": 0.32204860246649414,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage7",
+    "note": null,
+    "n_sources_computable": 29
+  },
+  "decay.LNPDB_vitro.trend_slope": {
+    "value": -0.15411687046176786,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage7",
+    "note": null,
+    "r": -0.10289669077854788,
+    "p": 0.5884521963455955,
+    "intercept": 0.16157148061683538
+  },
+  "learnable.LNPDB_vivo.size_weighted_spearman": {
+    "value": 0.11436101618376814,
+    "n": 1097,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage7",
+    "note": null,
+    "n_sources_computable": 10
+  },
+  "decay.LNPDB_vivo.trend_slope": {
+    "value": -0.7933938923584946,
+    "n": 16,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage7",
+    "note": null,
+    "r": -0.4095366375048425,
+    "p": 0.11519130688326448,
+    "intercept": 0.5577915292845048
+  },
+  "controls.split_half.LNPDB_vitro.separability_balanced_accuracy": {
+    "value": 0.4963134670700896,
+    "n": 1470,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "pass": true,
+    "source": "KZ_2016"
+  },
+  "controls.split_half.LNPDB_vitro.concordance_spearman": {
+    "value": -0.177938947758178,
+    "n": 14,
+    "ci": null,
+    "confidence": "LOW-CONFIDENCE",
+    "stage": "stage8",
+    "note": null,
+    "pass": null,
+    "source": "KZ_2016"
+  },
+  "controls.featurization_sensitivity.LNPDB_vitro.alt_morgan_balanced_accuracy": {
+    "value": 0.9709970243981696,
+    "n": 11350,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "radius": 3,
+    "bits": 1024,
+    "headline": 0.9671551162173874
+  },
+  "controls.seed_sensitivity.LNPDB_vitro.separability_balanced_accuracy_std": {
+    "value": 0.000825554442655527,
+    "n": 5,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "mean": 0.9667038640800358,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "controls.seed_sensitivity.LNPDB_vitro.concordance_ci_width_std": {
+    "value": 0.006281254624407255,
+    "n": 5,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "mean_ci_width": 0.2596997436269759
+  },
+  "controls.split_half.LNPDB_vivo.separability_balanced_accuracy": {
+    "value": 0.490267534741219,
+    "n": 383,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "pass": true,
+    "source": "LR_2023"
+  },
+  "controls.split_half.LNPDB_vivo.concordance_spearman": {
+    "value": 0.7166666666666667,
+    "n": 9,
+    "ci": null,
+    "confidence": "LOW-CONFIDENCE",
+    "stage": "stage8",
+    "note": null,
+    "pass": null,
+    "source": "LR_2023"
+  },
+  "controls.featurization_sensitivity.LNPDB_vivo.alt_morgan_balanced_accuracy": {
+    "value": 0.9824496336996337,
+    "n": 1407,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "radius": 3,
+    "bits": 1024,
+    "headline": 0.9824496336996337
+  },
+  "controls.seed_sensitivity.LNPDB_vivo.separability_balanced_accuracy_std": {
+    "value": 0.003176278322007321,
+    "n": 5,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "mean": 0.9845888278388278,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "controls.seed_sensitivity.LNPDB_vivo.concordance_ci_width_std": {
+    "value": 0.04033784598224671,
+    "n": 5,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage8",
+    "note": null,
+    "mean_ci_width": 1.4403941723524913
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.random_kfold.pooled_spearman": {
+    "value": 0.31065595979153704,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.random_kfold.within_experiment_spearman": {
+    "value": 0.31599755934294316,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.butina_scaffold_disjoint_kfold.pooled_spearman": {
+    "value": 0.22583619657387494,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.butina_scaffold_disjoint_kfold.within_experiment_spearman": {
+    "value": 0.22814920360605306,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.leave_one_source_out.pooled_spearman": {
+    "value": 0.130446006258331,
+    "n": 11361,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.leave_one_source_out.within_experiment_spearman": {
+    "value": 0.14679684365071438,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.leave_one_source_out.n_folds_at_chance": {
+    "value": 21,
+    "n": 34,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.random_kfold.pooled_spearman": {
+    "value": 0.5842969824093948,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.random_kfold.within_experiment_spearman": {
+    "value": 0.5641035718129818,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.butina_scaffold_disjoint_kfold.pooled_spearman": {
+    "value": 0.19689847825753282,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.butina_scaffold_disjoint_kfold.within_experiment_spearman": {
+    "value": 0.259082058926543,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.leave_one_source_out.pooled_spearman": {
+    "value": 0.020950682979928043,
+    "n": 1439,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.leave_one_source_out.within_experiment_spearman": {
+    "value": -0.014914167747552685,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.leave_one_source_out.n_folds_at_chance": {
+    "value": 13,
+    "n": 17,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null
+  },
+  "protocol.LNPDB_vitro.pooled_regression.random_kfold.topk.ndcg_at_k_e": {
+    "value": 0.6354533816607446,
+    "n": 145,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.3391491344291105
+  },
+  "protocol.LNPDB_vitro.pooled_regression.random_kfold.topk.hit_rate_at_5": {
+    "value": 0.3733576642335767,
+    "n": 137,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.10917372262773722,
+    "ef_at_5": 3.4198491655969194,
+    "n_hit_admissible": 137,
+    "n_considered": 145
+  },
+  "protocol.LNPDB_vitro.pooled_regression.butina_scaffold_disjoint_kfold.topk.ndcg_at_k_e": {
+    "value": 0.5288658939838086,
+    "n": 101,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.3793061223898466
+  },
+  "protocol.LNPDB_vitro.pooled_regression.butina_scaffold_disjoint_kfold.topk.hit_rate_at_5": {
+    "value": 0.23837209302325577,
+    "n": 88,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.09743255813953491,
+    "ef_at_5": 2.4465342753484807,
+    "n_hit_admissible": 88,
+    "n_considered": 101
+  },
+  "protocol.LNPDB_vitro.pooled_regression.leave_one_source_out.topk.ndcg_at_k_e": {
+    "value": 0.3521781441839134,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.2838307368888221
+  },
+  "protocol.LNPDB_vitro.pooled_regression.leave_one_source_out.topk.hit_rate_at_5": {
+    "value": 0.21333333333333335,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.10058666666666666,
+    "ef_at_5": 2.120890774125133,
+    "n_hit_admissible": 30,
+    "n_considered": 30
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.random_kfold.topk.ndcg_at_k_e": {
+    "value": 0.6887480177666346,
+    "n": 145,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.3391491344291105
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.random_kfold.topk.hit_rate_at_5": {
+    "value": 0.4346715328467153,
+    "n": 137,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.10917372262773722,
+    "ef_at_5": 3.9814666238767646,
+    "n_hit_admissible": 137,
+    "n_considered": 145
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.butina_scaffold_disjoint_kfold.topk.ndcg_at_k_e": {
+    "value": 0.5415380718883445,
+    "n": 101,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.3793061223898466
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.butina_scaffold_disjoint_kfold.topk.hit_rate_at_5": {
+    "value": 0.2686046511627907,
+    "n": 88,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.09743255813953491,
+    "ef_at_5": 2.7568264273438983,
+    "n_hit_admissible": 88,
+    "n_considered": 101
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.leave_one_source_out.topk.ndcg_at_k_e": {
+    "value": 0.4042081812430755,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.2838307368888221
+  },
+  "protocol.LNPDB_vitro.within_source_pairwise.leave_one_source_out.topk.hit_rate_at_5": {
+    "value": 0.25333333333333335,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.10058666666666666,
+    "ef_at_5": 2.5185577942735953,
+    "n_hit_admissible": 30,
+    "n_considered": 30
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.random_kfold.topk.ndcg_at_k_e": {
+    "value": 0.667110591931976,
+    "n": 145,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.3391491344291105
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.random_kfold.topk.hit_rate_at_5": {
+    "value": 0.38649635036496355,
+    "n": 137,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.10917372262773722,
+    "ef_at_5": 3.5401957637997437,
+    "n_hit_admissible": 137,
+    "n_considered": 145
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.butina_scaffold_disjoint_kfold.topk.ndcg_at_k_e": {
+    "value": 0.5150291345591339,
+    "n": 101,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.3793061223898466
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.butina_scaffold_disjoint_kfold.topk.hit_rate_at_5": {
+    "value": 0.22209302325581393,
+    "n": 88,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.09743255813953491,
+    "ef_at_5": 2.279453885812487,
+    "n_hit_admissible": 88,
+    "n_considered": 101
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.leave_one_source_out.topk.ndcg_at_k_e": {
+    "value": 0.37886289934918904,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.2838307368888221
+  },
+  "protocol.LNPDB_vitro.within_source_lambdarank.leave_one_source_out.topk.hit_rate_at_5": {
+    "value": 0.22,
+    "n": 30,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.10058666666666666,
+    "ef_at_5": 2.1871686108165433,
+    "n_hit_admissible": 30,
+    "n_considered": 30
+  },
+  "protocol.LNPDB_vivo.pooled_regression.random_kfold.topk.ndcg_at_k_e": {
+    "value": 0.7789536714006849,
+    "n": 71,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.5131445920556925
+  },
+  "protocol.LNPDB_vivo.pooled_regression.random_kfold.topk.hit_rate_at_5": {
+    "value": 0.3537414965986394,
+    "n": 49,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.15190884353741496,
+    "ef_at_5": 2.3286432070790752,
+    "n_hit_admissible": 49,
+    "n_considered": 71
+  },
+  "protocol.LNPDB_vivo.pooled_regression.butina_scaffold_disjoint_kfold.topk.ndcg_at_k_e": {
+    "value": 0.6041857665564708,
+    "n": 33,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.5008362649187924
+  },
+  "protocol.LNPDB_vivo.pooled_regression.butina_scaffold_disjoint_kfold.topk.hit_rate_at_5": {
+    "value": 0.18730158730158733,
+    "n": 24,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.14322539682539684,
+    "ef_at_5": 1.3077400478765848,
+    "n_hit_admissible": 24,
+    "n_considered": 33
+  },
+  "protocol.LNPDB_vivo.pooled_regression.leave_one_source_out.topk.ndcg_at_k_e": {
+    "value": 0.3670978485744812,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.31108969742934656
+  },
+  "protocol.LNPDB_vivo.pooled_regression.leave_one_source_out.topk.hit_rate_at_5": {
+    "value": 0.09333333333333332,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.09756,
+    "ef_at_5": 0.9566762334290009,
+    "n_hit_admissible": 15,
+    "n_considered": 15
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.random_kfold.topk.ndcg_at_k_e": {
+    "value": 0.7701223657416617,
+    "n": 71,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.5131445920556925
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.random_kfold.topk.hit_rate_at_5": {
+    "value": 0.3333333333333333,
+    "n": 49,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.15190884353741496,
+    "ef_at_5": 2.1942984066706672,
+    "n_hit_admissible": 49,
+    "n_considered": 71
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.butina_scaffold_disjoint_kfold.topk.ndcg_at_k_e": {
+    "value": 0.5849661285551652,
+    "n": 33,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.5008362649187924
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.butina_scaffold_disjoint_kfold.topk.hit_rate_at_5": {
+    "value": 0.24444444444444446,
+    "n": 24,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.14322539682539684,
+    "ef_at_5": 1.7067115879067294,
+    "n_hit_admissible": 24,
+    "n_considered": 33
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.leave_one_source_out.topk.ndcg_at_k_e": {
+    "value": 0.4229995043525948,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.31108969742934656
+  },
+  "protocol.LNPDB_vivo.within_source_pairwise.leave_one_source_out.topk.hit_rate_at_5": {
+    "value": 0.10666666666666666,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.09756,
+    "ef_at_5": 1.0933442667760012,
+    "n_hit_admissible": 15,
+    "n_considered": 15
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.random_kfold.topk.ndcg_at_k_e": {
+    "value": 0.7609273085289662,
+    "n": 71,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.5131445920556925
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.random_kfold.topk.hit_rate_at_5": {
+    "value": 0.35374149659863935,
+    "n": 49,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.15190884353741496,
+    "ef_at_5": 2.328643207079075,
+    "n_hit_admissible": 49,
+    "n_considered": 71
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.butina_scaffold_disjoint_kfold.topk.ndcg_at_k_e": {
+    "value": 0.650363034493506,
+    "n": 33,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.5008362649187924
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.butina_scaffold_disjoint_kfold.topk.hit_rate_at_5": {
+    "value": 0.25396825396825395,
+    "n": 24,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.14322539682539684,
+    "ef_at_5": 1.7732068445784197,
+    "n_hit_admissible": 24,
+    "n_considered": 33
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.leave_one_source_out.topk.ndcg_at_k_e": {
+    "value": 0.3370435634384475,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.31108969742934656
+  },
+  "protocol.LNPDB_vivo.within_source_lambdarank.leave_one_source_out.topk.hit_rate_at_5": {
+    "value": 0.10666666666666666,
+    "n": 15,
+    "ci": null,
+    "confidence": "OK",
+    "stage": "stage6",
+    "note": null,
+    "random_baseline": 0.09756,
+    "ef_at_5": 1.0933442667760012,
+    "n_hit_admissible": 15,
+    "n_considered": 15
+  }
+}

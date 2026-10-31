@@ -1,0 +1,354 @@
+{
+ "18438401": {
+  "title": "A combinatorial library of lipid-like materials for delivery of RNAi therapeutics.",
+  "doi": "10.1038/nbt1402",
+  "first": "Akinc",
+  "last": "Anderson",
+  "journal": "Nat Biotechnol",
+  "year": "2008"
+ },
+ "40817189": {
+  "title": "Designing lipid nanoparticles using a transformer-based neural network.",
+  "doi": "10.1038/s41565-025-01975-4",
+  "first": "Chan",
+  "last": "Traverso",
+  "journal": "Nat Nanotechnol",
+  "year": "2025"
+ },
+ "40234552": {
+  "title": "Multicomponent thiolactone-based ionizable lipid screening platform for efficient and tunable mRNA delivery to the lungs.",
+  "doi": "10.1038/s42004-025-01516-z",
+  "first": "Pe\u00f1a",
+  "last": "Gim\u00e9nez-Warren",
+  "journal": "Commun Chem",
+  "year": "2025"
+ },
+ "36997680": {
+  "title": "Combinatorial design of nanoparticles for pulmonary mRNA delivery and genome editing.",
+  "doi": "10.1038/s41587-023-01679-x",
+  "first": "Li",
+  "last": "Anderson",
+  "journal": "Nat Biotechnol",
+  "year": "2023"
+ },
+ "37679571": {
+  "title": "Enhancing the immunogenicity of lipid-nanoparticle mRNA vaccines by adjuvanting the ionizable lipid and the mRNA.",
+  "doi": "10.1038/s41551-023-01082-6",
+  "first": "Li",
+  "last": "Anderson",
+  "journal": "Nat Biomed Eng",
+  "year": "2025"
+ },
+ "38740955": {
+  "title": "Accelerating ionizable lipid discovery for mRNA delivery using machine learning and combinatorial chemistry.",
+  "doi": "10.1038/s41563-024-01867-3",
+  "first": "Li",
+  "last": "Anderson",
+  "journal": "Nat Mater",
+  "year": "2024"
+ },
+ "38060560": {
+  "title": "Combinatorial design of ionizable lipid nanoparticles for muscle-selective mRNA delivery with minimized off-target effects.",
+  "doi": "10.1073/pnas.2309472120",
+  "first": "Chen",
+  "last": "Li",
+  "journal": "Proc Natl Acad Sci U S A",
+  "year": "2023"
+ },
+ "39497197": {
+  "title": "High-throughput synthesis and optimization of ionizable lipids through A3 coupling for efficient mRNA delivery.",
+  "doi": "10.1186/s12951-024-02919-1",
+  "first": "Li",
+  "last": "Lu",
+  "journal": "J Nanobiotechnology",
+  "year": "2024"
+ },
+ "27981708": {
+  "title": "Non-Viral CRISPR/Cas Gene Editing In Vitro and In Vivo Enabled by Synthetic Nanoparticle Co-Delivery of Cas9 mRNA and sgRNA.",
+  "doi": "10.1002/anie.201610209",
+  "first": "Miller",
+  "last": "Siegwart",
+  "journal": "Angew Chem Int Ed Engl",
+  "year": "2017"
+ },
+ "37985700": {
+  "title": "Combinatorial development of nebulized mRNA delivery formulations for the lungs.",
+  "doi": "10.1038/s41565-023-01548-3",
+  "first": "Jiang",
+  "last": "Anderson",
+  "journal": "Nat Nanotechnol",
+  "year": "2024"
+ },
+ "20080679": {
+  "title": "Lipid-like materials for low-dose, in vivo gene silencing.",
+  "doi": "10.1073/pnas.0910603106",
+  "first": "Love",
+  "last": "Anderson",
+  "journal": "Proc Natl Acad Sci U S A",
+  "year": "2010"
+ },
+ "38969646": {
+  "title": "Reformulating lipid nanoparticles for organ-targeted mRNA accumulation and translation.",
+  "doi": "10.1038/s41467-024-50093-7",
+  "first": "Su",
+  "last": "Liu",
+  "journal": "Nat Commun",
+  "year": "2024"
+ },
+ "24969323": {
+  "title": "Degradable lipid nanoparticles with predictable in vivo siRNA delivery activity.",
+  "doi": "10.1038/ncomms5277",
+  "first": "Whitehead",
+  "last": "Anderson",
+  "journal": "Nat Commun",
+  "year": "2014"
+ },
+ "26729861": {
+  "title": "Modular degradable dendrimers enable small RNAs to extend survival in an aggressive liver cancer model.",
+  "doi": "10.1073/pnas.1520756113",
+  "first": "Zhou",
+  "last": "Siegwart",
+  "journal": "Proc Natl Acad Sci U S A",
+  "year": "2016"
+ },
+ "22902058": {
+  "title": "A biomimetic lipid library for gene delivery through thiol-yne click chemistry.",
+  "doi": "10.1016/j.biomaterials.2012.07.044",
+  "first": "Li",
+  "last": "Levkin",
+  "journal": "Biomaterials",
+  "year": "2012"
+ },
+ "40131321": {
+  "title": "PEGylated lipid screening, composition optimization, and structure-activity relationship determination for lipid nanoparticle-mediated mRNA delivery.",
+  "doi": "10.1039/d5nr00433k",
+  "first": "Liu",
+  "last": "DeRosa",
+  "journal": "Nanoscale",
+  "year": "2025"
+ },
+ "31570898": {
+  "title": "Delivery of mRNA vaccines with heterocyclic lipids increases anti-tumor efficacy by STING-mediated immune cell activation.",
+  "doi": "10.1038/s41587-019-0247-3",
+  "first": "Miao",
+  "last": "Anderson",
+  "journal": "Nat Biotechnol",
+  "year": "2019"
+ },
+ "37127709": {
+  "title": "Peptide-encoding mRNA barcodes for the high-throughput in vivo screening of libraries of lipid nanoparticles for mRNA delivery.",
+  "doi": "10.1038/s41551-023-01030-4",
+  "first": "Rhym",
+  "last": "Anderson",
+  "journal": "Nat Biomed Eng",
+  "year": "2023"
+ },
+ "38424061": {
+  "title": "High-throughput barcoding of nanoparticles identifies cationic, degradable lipid-like materials for mRNA delivery to the lungs in female preclinical models.",
+  "doi": "10.1038/s41467-024-45422-9",
+  "first": "Xue",
+  "last": "Mitchell",
+  "journal": "Nat Commun",
+  "year": "2024"
+ },
+ "39742515": {
+  "title": "Multiarm-Assisted Design of Dendron-like Degradable Ionizable Lipids Facilitates Systemic mRNA Delivery to the Spleen.",
+  "doi": "10.1021/jacs.4c10265",
+  "first": "Xue",
+  "last": "Mitchell",
+  "journal": "J Am Chem Soc",
+  "year": "2025"
+ },
+ "39354147": {
+  "title": "Combinatorial design of siloxane-incorporated lipid nanoparticles augments intracellular processing for tissue-specific mRNA therapeutic delivery.",
+  "doi": "10.1038/s41565-024-01747-6",
+  "first": "Xue",
+  "last": "Mitchell",
+  "journal": "Nat Nanotechnol",
+  "year": "2025"
+ },
+ "39875076": {
+  "title": "Role of PEGylated lipid in lipid nanoparticle formulation for in vitro and in vivo delivery of mRNA vaccines.",
+  "doi": "10.1016/j.jconrel.2025.01.071",
+  "first": "Zhang",
+  "last": "Yang",
+  "journal": "J Control Release",
+  "year": "2025"
+ },
+ "38437545": {
+  "title": "Lipid nanoparticle structure and delivery route during pregnancy dictate mRNA potency, immunogenicity, and maternal and fetal outcomes.",
+  "doi": "10.1073/pnas.2307810121",
+  "first": "Chaudhary",
+  "last": "Whitehead",
+  "journal": "Proc Natl Acad Sci U S A",
+  "year": "2024"
+ },
+ "37480759": {
+  "title": "Understanding structure activity relationships of Good HEPES lipids for lipid nanoparticle mRNA vaccine applications.",
+  "doi": "10.1016/j.biomaterials.2023.122243",
+  "first": "Goldman",
+  "last": "DeRosa",
+  "journal": "Biomaterials",
+  "year": "2023"
+ },
+ "29786478": {
+  "title": "Multisociety Consensus Quality Improvement Revised Consensus Statement for Endovascular Therapy of Acute Ischemic Stroke.",
+  "doi": "10.1177/1747493018778713",
+  "first": "Sacks",
+  "last": "Vorwerk",
+  "journal": "Int J Stroke",
+  "year": "2018"
+ },
+ "33305471": {
+  "title": "A Systematic Study of Unsaturation in Lipid Nanoparticles Leads to Improved mRNA Transfection In Vivo.",
+  "doi": "10.1002/anie.202013927",
+  "first": "Lee",
+  "last": "Siegwart",
+  "journal": "Angew Chem Int Ed Engl",
+  "year": "2021"
+ },
+ "33542471": {
+  "title": "Membrane-destabilizing ionizable phospholipids for organ-selective mRNA delivery and CRISPR-Cas gene editing.",
+  "doi": "10.1038/s41563-020-00886-0",
+  "first": "Liu",
+  "last": "Siegwart",
+  "journal": "Nat Mater",
+  "year": "2021"
+ },
+ "32080183": {
+  "title": "Naturally-occurring cholesterol analogues in lipid nanoparticles induce polymorphic shape and enhance intracellular delivery of mRNA.",
+  "doi": "10.1038/s41467-020-14527-2",
+  "first": "Patel",
+  "last": "Sahay",
+  "journal": "Nat Commun",
+  "year": "2020"
+ },
+ "29653760": {
+  "title": "A Novel Amino Lipid Series for mRNA Delivery: Improved Endosomal Escape and Sustained Pharmacology and Safety in Non-human Primates.",
+  "doi": "10.1016/j.ymthe.2018.03.010",
+  "first": "Sabnis",
+  "last": "Benenato",
+  "journal": "Mol Ther",
+  "year": "2018"
+ },
+ "39424104": {
+  "title": "Paracyclophane-based ionizable lipids for efficient mRNA delivery in vivo.",
+  "doi": "10.1016/j.jconrel.2024.10.028",
+  "first": "Wu",
+  "last": "Liu",
+  "journal": "J Control Release",
+  "year": "2024"
+ },
+ "40796944": {
+  "title": "In vivo genome editing of human haematopoietic stem cells for treatment of blood disorders using mRNA delivery.",
+  "doi": "10.1038/s41551-025-01480-y",
+  "first": "Xu",
+  "last": "Wu",
+  "journal": "Nat Biomed Eng",
+  "year": "2026"
+ },
+ "39502027": {
+  "title": "Novel Less Toxic, Lymphoid Tissue-Targeted Lipid Nanoparticles Containing a Vitamin B5-Derived Ionizable Lipid for mRNA Vaccine Delivery.",
+  "doi": "10.1002/adhm.202403366",
+  "first": "Yoo",
+  "last": "Bang",
+  "journal": "Adv Healthc Mater",
+  "year": "2025"
+ },
+ "38409275": {
+  "title": "In situ combinatorial synthesis of degradable branched lipidoids for systemic delivery of mRNA therapeutics and gene editors.",
+  "doi": "10.1038/s41467-024-45537-z",
+  "first": "Han",
+  "last": "Mitchell",
+  "journal": "Nat Commun",
+  "year": "2024"
+ },
+ "39578640": {
+  "title": "Optimization of the activity and biodegradability of ionizable lipids for mRNA delivery via directed chemical evolution.",
+  "doi": "10.1038/s41551-024-01267-7",
+  "first": "Han",
+  "last": "Mitchell",
+  "journal": "Nat Biomed Eng",
+  "year": "2024"
+ },
+ "40060499": {
+  "title": "Plug-and-play assembly of biodegradable ionizable lipids for potent mRNA delivery and gene editing in vivo.",
+  "doi": "10.1101/2025.02.25.640222",
+  "first": "Han",
+  "last": "Mitchell",
+  "journal": "bioRxiv",
+  "year": "2025"
+ },
+ "39099464": {
+  "title": "Enhancing spleen-targeted mRNA delivery with branched biodegradable tails in lipid nanoparticles.",
+  "doi": "10.1039/d4tb00960f",
+  "first": "Ren",
+  "last": "Chen",
+  "journal": "J Mater Chem B",
+  "year": "2024"
+ },
+ "37990414": {
+  "title": "Delivery of mRNA Vaccine with 1, 2-Diesters-Derived Lipids Elicits Fast Liver Clearance for Safe and Effective Cancer Immunotherapy.",
+  "doi": "10.1002/adhm.202302691",
+  "first": "Xu",
+  "last": "Zha",
+  "journal": "Adv Healthc Mater",
+  "year": "2024"
+ },
+ "39060305": {
+  "title": "AGILE platform: a deep learning powered approach to accelerate LNP development for mRNA delivery.",
+  "doi": "10.1038/s41467-024-50619-z",
+  "first": "Xu",
+  "last": "Li",
+  "journal": "Nat Commun",
+  "year": "2024"
+ },
+ "37591187": {
+  "title": "Branched hydrophobic tails in lipid nanoparticles enhance mRNA delivery for cancer immunotherapy.",
+  "doi": "10.1016/j.biomaterials.2023.122279",
+  "first": "Yan",
+  "last": "Liu",
+  "journal": "Biomaterials",
+  "year": "2023"
+ },
+ "35879315": {
+  "title": "Multi-step screening of DNA/lipid nanoparticles and co-delivery with siRNA to enhance and prolong gene expression.",
+  "doi": "10.1038/s41467-022-31993-y",
+  "first": "Zhu",
+  "last": "Mao",
+  "journal": "Nat Commun",
+  "year": "2022"
+ },
+ "38082180": {
+  "title": "Screening for lipid nanoparticles that modulate the immune activity of helper T cells towards enhanced antitumour activity.",
+  "doi": "10.1038/s41551-023-01131-0",
+  "first": "Zhu",
+  "last": "Mao",
+  "journal": "Nat Biomed Eng",
+  "year": "2024"
+ },
+ "37853662": {
+  "title": "Modular Design of Biodegradable Ionizable Lipids for Improved mRNA Delivery and Precise Cancer Metastasis Delineation In Vivo.",
+  "doi": "10.1021/jacs.3c09143",
+  "first": "Chen",
+  "last": "Xiong",
+  "journal": "J Am Chem Soc",
+  "year": "2023"
+ },
+ "37661193": {
+  "title": "A Multidimensional Approach to Modulating Ionizable Lipids for High-Performing and Organ-Selective mRNA Delivery.",
+  "doi": "10.1002/anie.202310401",
+  "first": "He",
+  "last": "Chen",
+  "journal": "Angew Chem Int Ed Engl",
+  "year": "2023"
+ },
+ "36269150": {
+  "title": "Enzyme-Catalyzed One-Step Synthesis of Ionizable Cationic Lipids for Lipid Nanoparticle-Based mRNA COVID-19 Vaccines.",
+  "doi": "10.1021/acsnano.2c07822",
+  "first": "Li",
+  "last": "Xu",
+  "journal": "ACS Nano",
+  "year": "2022"
+ }
+}

@@ -1,0 +1,241 @@
+{
+ "37376020": {
+  "title": "Screening Libraries to Discover Molecular Design Principles for the Targeted Delivery of mRNA with One-Component Ionizable Amphiphilic Janus Dendrimers Derived from Plant Phenolic Acids.",
+  "journal": "Pharmaceutics",
+  "year": "2023",
+  "first": "Lu J",
+  "last": "Percec V",
+  "doi": "10.3390/pharmaceutics15061572",
+  "abstract": "Viral and synthetic vectors to deliver nucleic acids were key to the rapid development of extraordinarily efficient COVID-19 vaccines. The four-component lipid nanoparticles (LNPs), containing phospholipids, PEG-conjugated lipids, cholesterol, and ionizable lipids, co-assembled with mRNA via a microfluidic technology, are the leading nonviral delivery vector used by BioNTech/Pfizer and Moderna to access COVID-19 mRNA vaccines. LNPs exhibit a statistical distribution of their four components when delivering mRNA. Here, we report a methodology that involves screening libraries to discover the molecular design principles required to realize organ-targeted mRNA delivery and mediate activity with a one-component ionizable multifunctional amphiphilic Janus dendrimer (IAJD) derived from plant phenolic acids. IAJDs co-assemble with mRNA into monodisperse dendrimersome nanoparticles (DNPs) with predictable dimensions, via the simple injection of their ethanol solution in a buffer. The precise location of the functional groups in one-component IAJDs demonstrated that the targeted organs, including the liver, spleen, lymph nodes, and lung, are selected based on the hydrophilic region, while activity is associated with the hydrophobic domain of IAJDs. These principles, and a mechanistic hypothesis to explain activity, simplify the synthesis of IAJDs, the assembly of DNPs, handling, and storage of vaccines, and reduce price, despite employing renewable plant starting materials. Using simple molecular design principles will lead to increased accessibility to a large diversity of mRNA-based vaccines and nanotherapeutics.",
+  "maxlib": 0
+ },
+ "34324336": {
+  "title": "One-Component Multifunctional Sequence-Defined Ionizable Amphiphilic Janus Dendrimer Delivery Systems for mRNA.",
+  "journal": "J Am Chem Soc",
+  "year": "2021",
+  "first": "Zhang D",
+  "last": "Percec V",
+  "doi": "10.1021/jacs.1c05813",
+  "abstract": "Efficient viral or nonviral delivery of nucleic acids is the key step of genetic nanomedicine. Both viral and synthetic vectors have been successfully employed for genetic delivery with recent examples being DNA, adenoviral, and mRNA-based Covid-19 vaccines. Viral vectors can be target specific and very efficient but can also mediate severe immune response, cell toxicity, and mutations. Four-component lipid nanoparticles (LNPs) containing ionizable lipids, phospholipids, cholesterol for mechanical properties, and PEG-conjugated lipid for stability represent the current leading nonviral vectors for mRNA. However, the segregation of the neutral ionizable lipid as droplets in the core of the LNP, the \"PEG dilemma\", and the stability at only very low temperatures limit their efficiency. Here, we report the development of a one-component multifunctional ionizable amphiphilic Janus dendrimer (IAJD) delivery system for mRNA that exhibits high activity at a low concentration of ionizable amines organized in a sequence-defined arrangement. Six libraries containing 54 sequence-defined IAJDs were synthesized by an accelerated modular-orthogonal methodology and coassembled with mRNA into dendrimersome nanoparticles (DNPs) by a simple injection method rather than by the complex microfluidic technology often used for LNPs. Forty four (81%) showed activity in vitro and 31 (57%) in vivo. Some, exhibiting organ specificity, are stable at 5 \u00b0C and demonstrated higher transfection efficiency than positive control experiments in vitro and in vivo. Aside from practical applications, this proof of concept will help elucidate the mechanisms of packaging and release of mRNA from DNPs as a function of ionizable amine concentration, their sequence, and constitutional isomerism of IAJDs.",
+  "maxlib": 0
+ },
+ "38306714": {
+  "title": "The Constitutional Isomerism of One-Component Ionizable Amphiphilic Janus Dendrimers Orchestrates the Total and Targeted Activities of mRNA Delivery.",
+  "journal": "J Am Chem Soc",
+  "year": "2024",
+  "first": "Sahoo D",
+  "last": "Percec V",
+  "doi": "10.1021/jacs.3c13569",
+  "abstract": "Constitutional isomerism has been previously demonstrated by one of our laboratories to represent a powerful design strategy for the elaboration of complex functional self-organizations. Here we report the design, synthesis, and characterization of 14 positional, skeletal, and functional constitutional isomeric one-component, multifunctional, sequence-defined, amphiphilic ionizable Janus dendrimers (IAJDs). Their coassembly by simple injection with luciferase mRNA (Luc-mRNA) to form dendrimersome nanoparticles (DNPs) was studied. Subsequently, the resulting DNPs were employed to investigate, with screening experiments, the delivery of Luc-mRNA in vivo. Constitutional isomerism was shown to produce changes of up to two orders of magnitude of the total-body luciferase activity and targeted luciferase activity to the spleen and liver, of up to three orders of magnitude difference in targeted luciferase activity to the lungs and up to six orders of magnitude to lymph nodes. These results indicate that constitutional isomerism may represent not only a simple but also an important synthetic strategy that most probably may impact the activity of all components of synthetic vectors used in RNA-based nanomedicine, including in mRNA vaccines and therapeutics.",
+  "maxlib": 0
+ },
+ "32662132": {
+  "title": "Imidazole-Based Synthetic Lipidoids for In\u2005Vivo mRNA Delivery into Primary T Lymphocytes.",
+  "journal": "Angew Chem Int Ed Engl",
+  "year": "2020",
+  "first": "Zhao X",
+  "last": "Xu Q",
+  "doi": "10.1002/anie.202008082",
+  "abstract": "Engineering T lymphocytes is an emerging approach in a variety of biomedical applications. However, delivering large biologics to primary T lymphocytes directly in\u2005vivo is technically challenging due to the low transfection efficacy. Herein, we investigated a library of synthetic lipid-like molecules (lipidoids) for their capability of delivering mRNA into primary T lymphocytes both ex\u2005vivo and in\u2005vivo. We initially screened a library with a large structural variety of lipidoids ex\u2005vivo and identified imidazole-containing lipidoids that are particularly potent in T lymphocytes transfection. We further optimized lipidoid structures by constructing and screening a detailed lipidoid library containing imidazole or imidazole analogues to perform a structure-activity correlation analysis. Using the lead lipidoid as a delivery vehicle for Cre mRNA in\u2005vivo through intravenous injection, we achieved 8.2\u2009% gene recombination in mouse T lymphocytes.",
+  "maxlib": 0
+ },
+ "32438474": {
+  "title": "Protein and mRNA Delivery Enabled by Cholesteryl-Based Biodegradable Lipidoid Nanoparticles.",
+  "journal": "Angew Chem Int Ed Engl",
+  "year": "2020",
+  "first": "Li Y",
+  "last": "Xu Q",
+  "doi": "10.1002/anie.202004994",
+  "abstract": "Developing safe and efficient delivery systems for therapeutic biomacromolecules is a long-standing challenge. Herein, we report a newly developed combinatorial library of cholesteryl-based disulfide bond-containing biodegradable cationic lipidoid nanoparticles. We have identified a subset of this library which is effective for protein and mRNA delivery in vitro and in vivo. These lipidoids showed comparable transfection efficacies but much lower cytotoxicities compared to the Lpf2k in vitro. In vivo studies in adult mice demonstrated the successful delivery of genome engineering protein and mRNA molecules in the skeletal muscle (via intramuscular injection), lung and spleen (via intravenous injection), and brain (via lateral ventricle infusion).",
+  "maxlib": 0
+ },
+ "32520527": {
+  "title": "Combinatorial Library of Cyclic Benzylidene Acetal-Containing pH-Responsive Lipidoid Nanoparticles for Intracellular mRNA Delivery.",
+  "journal": "Bioconjug Chem",
+  "year": "2020",
+  "first": "Li Y",
+  "last": "Xu Q",
+  "doi": "10.1021/acs.bioconjchem.0c00295",
+  "abstract": "Lipidoid nanoparticles have been demonstrated to be effective for intracellular delivery of small molecule drugs, proteins, and nucleic acids. Stimuli-responsive lipidoid nanoparticles are able to further improve delivery efficacy and reduce carrier-induced toxicity. Our group previously developed reduction and photoresponsive combinatorial libraries of lipidoid nanoparticles for small molecule and biologics delivery. Herein, we describe the synthesis, characterization, and intracellular mRNA delivery application of a new library of pH-responsive lipidoid nanoparticles. The acid-degradable cyclic benzylidene acetal-containing cationic lipidoids (R-O16CBA) were synthesized through a multistep reaction and characterized by NMR and MS. The acid-triggered degradation of lipidoids was studied using NMR, MS, DLS, and TEM. The results revealed that the R-O16CBA lipidoid can be completely degraded at pH 5. The R-O16CBA lipidoid nanoparticles were then fabricated with different formulations of DOPE and cholesterol and tested in vitro for intracellular mRNA delivery.",
+  "maxlib": 0
+ },
+ "22148515": {
+  "title": "Combinatorial library of lipidoids for in vitro DNA delivery.",
+  "journal": "Bioconjug Chem",
+  "year": "2012",
+  "first": "Sun S",
+  "last": "Xu Q",
+  "doi": "10.1021/bc200572w",
+  "abstract": "A combinatorial library of lipidoids was constructed and studied for in vitro gene delivery. The library of lipidoids was synthesized by reacting commercially available amines with lipophilic acrylates, acrylamides, or epoxides. Lipidoids derived from amine 86 (N,N-bis(2-hydroxyethyl)ethylene diamine) and amine 87 (N-(3-aminopropyl)diethaneamine) showed high efficiency in DNA delivery, some with a higher transfection efficiency than Lipofectamine 2000, a commonly used commercial gold standard for in vitro gene delivery. The structure-activity relationship between the lipidoids was further studied with respect to small variations in chemical structures and the resulting efficiency in DNA delivery in vitro. Since these lipidoids are easy to synthesize and do not require a colipid for efficient DNA delivery, they could offer an inexpensive but effective alternative to other commonly used commercial gene delivery carriers.",
+  "maxlib": 0
+ },
+ "23651337": {
+  "title": "A combinatorial library of unsaturated lipidoids for efficient intracellular gene delivery.",
+  "journal": "ACS Synth Biol",
+  "year": "2012",
+  "first": "Wang M",
+  "last": "Xu Q",
+  "doi": "10.1021/sb300023h",
+  "abstract": "A combinatorial library of unsaturated lipidoids was synthesized through the Michael addition of amines to oleyl acrylamide. Their capability in facilitating in vitro gene delivery was evaluated by transfecting HeLa cells with EGFP-encoding plasmid DNA and mRNA. The preliminary screening results indicated that lipidoids with unsaturated oleyl tails are superior transfection agents compared to saturated lipidoids with n-octadecyl tails under the same conditions. The different transfection abilities of the unsaturated and saturated lipidioids were ascribed to the large, tightly packed lipoplexes of saturated lipidoids. The potential applications of the library of lipidoids were further expanded by looking at their ability to transfect fibroblasts as well as different cancerous cell lines.",
+  "maxlib": 0
+ },
+ "24574196": {
+  "title": "Enhanced intracellular siRNA delivery using bioreducible lipid-like nanoparticles.",
+  "journal": "Adv Healthc Mater",
+  "year": "2014",
+  "first": "Wang M",
+  "last": "Xu Q",
+  "doi": "10.1002/adhm.201400039",
+  "abstract": "A new library of lipid-like nanoparticles (lipidoids) comprising disulfide bond is developed for siRNA delivery. Bioreducible lipidoids deliver siRNA with greater efficiency than nonbioreducible lipidoids with similar chemical structures. A siRNA release investigation, as well as an intracellular siRNA trafficking study, reveals that the degradation of bioreducible lipidoid in a strongly reductive intracellular environment boosts siRNA release and enhances siRNA gene knockdown efficiency.",
+  "maxlib": 0
+ },
+ "31999380": {
+  "title": "A Combinatorial Library of Lipid Nanoparticles for RNA Delivery to Leukocytes.",
+  "journal": "Adv Mater",
+  "year": "2020",
+  "first": "Ramishetti S",
+  "last": "Peer D",
+  "doi": "10.1002/adma.201906128",
+  "abstract": "Lipid nanoparticles (LNPs) are the most advanced nonviral platforms for small interfering RNA (siRNA) delivery that are clinically approved. These LNPs, based on ionizable lipids, are found in the liver and are now gaining much attention in the field of RNA therapeutics. The previous generation of ionizable lipids varies in linker moieties, which greatly influences in vivo gene silencing efficiency. Here novel ionizable amino lipids based on the linker moieties such as hydrazine, hydroxylamine, and ethanolamine are designed and synthesized. These lipids are formulated into LNPs and screened for their efficiency to deliver siRNAs into leukocytes, which are among the hardest to transfect cell types. Two potent lipids based on their in vitro gene silencing efficiencies are also identified. These lipids are further evaluated for their biodistribution profile, efficient gene silencing, liver toxicity, and potential immune activation in mice. A robust gene silencing is also found in primary lymphocytes when one of these lipids is formulated into LNPs with a pan leukocyte selective targeting agent (\u03b27 integrin). Taken together, these lipids have the potential to open new avenues in delivering RNAs into leukocytes.",
+  "maxlib": 0
+ },
+ "37092557": {
+  "title": "A Combinatorial Library of Lipid Nanoparticles for Cell Type-Specific mRNA Delivery.",
+  "journal": "Adv Sci (Weinh)",
+  "year": "2023",
+  "first": "Naidu GS",
+  "last": "Peer D",
+  "doi": "10.1002/advs.202301929",
+  "abstract": "Ionizable lipid-based nanoparticles (LNPs) are the most advanced non-viral drug delivery systems for RNA therapeutics and vaccines. However, cell type-specific, extrahepatic mRNA delivery is still a major hurdle, hampering the development of novel therapeutic modalities. Herein, a novel ionizable lipid library is synthesized by modifying hydrophobic tail chains and linkers. Combined with other helper lipids and utilizing a microfluidic mixing approach, stable LNPs are formed. Using Luciferase-mRNA, mCherry mRNA, and Cre mRNA together with a TdTomato animal model, superior lipids forming LNPs for potent cell-type specific mRNA delivery are identified. In vitro assays concluded that combining branched ester tail chains with hydroxylamine linker negatively affects mRNA delivery efficiency. In vivo studies identify Lipid 23 as a liver-trophic, superior mRNA delivery lipid and Lipid 16 as a potent cell type-specific ionizable lipid for the CD11bhi macrophage population without an additional targeting moiety. Finally, in vivo mRNA delivery efficiency and toxicity of these LNPs are compared with SM-102-based LNP (Moderna's LNP formulation) and are shown to be cell-specific compared to SM-102-based LNPs. Overall, this study suggests that a structural combination of tail and linker can drive a novel functionality of LNPs in vivo.",
+  "maxlib": 0
+ },
+ "30637934": {
+  "title": "Branched-Tail Lipid Nanoparticles Potently Deliver mRNA In Vivo due to Enhanced Ionization at Endosomal pH.",
+  "journal": "Small",
+  "year": "2019",
+  "first": "Hajj KA",
+  "last": "Whitehead KA",
+  "doi": "10.1002/smll.201805097",
+  "abstract": "The potential of mRNA therapeutics will be realized only once safe and effective delivery systems are established. Unfortunately, delivery vehicle development is stymied by an inadequate understanding of how the molecular properties of a vehicle confer efficacy. Here, a small library of lipidoid materials is used to elucidate structure-function relationships and identify a previously unappreciated parameter-lipid nanoparticle surface ionization-that correlates with mRNA delivery efficacy. The two most potent materials of the library, 306O10 and 306Oi10 , induce substantial luciferase expression in mice following a single 0.75 mg kg-1 mRNA dose. These lipidoids, which have ten-carbon tails and identical molecular weights, vary only in that the 306O10 tail is straight and the 306Oi10 tail has a one-carbon branch. Remarkably, this small difference in structure conferred a tenfold improvement in 306Oi10 efficacy. The enhanced potency of this branched-tail lipidoid is attributed to its strong surface ionization at the late endosomal pH of 5.0. A secondary lipidoid library confirms that Oi10 materials ionize more strongly and deliver mRNA more potently than lipidoids containing linear tails. Together, these data highlight the exquisite control that lipid chemistry exerts on the mRNA delivery process and show that branched-tail lipids facilitate protein expression in animals.",
+  "maxlib": 0
+ },
+ "36652629": {
+  "title": "Iterative Design of Ionizable Lipids for Intramuscular mRNA Delivery.",
+  "journal": "J Am Chem Soc",
+  "year": "2023",
+  "first": "Tilstra G",
+  "last": "Khan OF",
+  "doi": "10.1021/jacs.2c10670",
+  "abstract": "Lipid nanoparticles (LNPs) are the most clinically advanced delivery vehicles for RNA and have enabled the development of RNA-based drugs such as the mRNA COVID-19 vaccines. Functional delivery of mRNA by an LNP greatly depends on the inclusion of an ionizable lipid, and small changes to these lipid structures can significantly improve delivery. However, the structure-function relationships between ionizable lipids and mRNA delivery are poorly understood, especially for LNPs administered intramuscularly. Here, we show that the iterative design of a novel series of ionizable lipids generates key structure-activity relationships and enables the optimization of chemically distinct lipids with efficacy that is on-par with the current state of the art. We find that the combination of ionizable lipids comprising an ethanolamine core and LNPs with an apparent pKa between 6.6 and 6.9 maximizes intramuscular mRNA delivery. Furthermore, we report a nonlinear relationship between the lipid-to-mRNA mass ratio and protein expression, suggesting that a critical mass ratio exists for LNPs and may depend on ionizable lipid structure. Our findings add to the mechanistic understanding of ionizable lipids and demonstrate that hydrogen bonding, ionization behavior, and lipid-to-mRNA mass ratio are key design parameters affecting intramuscular mRNA delivery. We validate these insights by applying them to the rational design of new ionizable lipids. Overall, our iterative design strategy efficiently generates potent ionizable lipids. This hypothesis-driven method reveals structure-activity relationships that lay the foundation for the optimization of ionizable lipids in future LNP-RNA drugs. We foresee that this design strategy can be extended to other optimization parameters beyond intramuscular expression.",
+  "maxlib": 0
+ },
+ "29307505": {
+  "title": "Practical considerations in medical cannabis administration and dosing.",
+  "journal": "Eur J Intern Med",
+  "year": "2018",
+  "first": "MacCallum CA",
+  "last": "Russo EB",
+  "doi": "10.1016/j.ejim.2018.01.004",
+  "abstract": "Cannabis has been employed medicinally throughout history, but its recent legal prohibition, biochemical complexity and variability, quality control issues, previous dearth of appropriately powered randomised controlled trials, and lack of pertinent education have conspired to leave clinicians in the dark as to how to advise patients pursuing such treatment. With the advent of pharmaceutical cannabis-based medicines (Sativex/nabiximols and Epidiolex), and liberalisation of access in certain nations, this ignorance of cannabis pharmacology and therapeutics has become untenable. In this article, the authors endeavour to present concise data on cannabis pharmacology related to tetrahydrocannabinol (THC), cannabidiol (CBD) et al., methods of administration (smoking, vaporisation, oral), and dosing recommendations. Adverse events of cannabis medicine pertain primarily to THC, whose total daily dose-equivalent should generally be limited to 30mg/day or less, preferably in conjunction with CBD, to avoid psychoactive sequelae and development of tolerance. CBD, in contrast to THC, is less potent, and may require much higher doses for its adjunctive benefits on pain, inflammation, and attenuation of THC-associated anxiety and tachycardia. Dose initiation should commence at modest levels, and titration of any cannabis preparation should be undertaken slowly over a period of as much as two weeks. Suggestions are offered on cannabis-drug interactions, patient monitoring, and standards of care, while special cases for cannabis therapeutics are addressed: epilepsy, cancer palliation and primary treatment, chronic pain, use in the elderly, Parkinson disease, paediatrics, with concomitant opioids, and in relation to driving and hazardous activities.",
+  "maxlib": 0
+ },
+ "26469188": {
+  "title": "Optimization of Lipid Nanoparticle Formulations for mRNA Delivery in Vivo with Fractional Factorial and Definitive Screening Designs.",
+  "journal": "Nano Lett",
+  "year": "2015",
+  "first": "Kauffman KJ",
+  "last": "Anderson DG",
+  "doi": "10.1021/acs.nanolett.5b02497",
+  "abstract": "Intracellular delivery of messenger RNA (mRNA) has the potential to induce protein production for many therapeutic applications. Although lipid nanoparticles have shown considerable promise for the delivery of small interfering RNAs (siRNA), their utility as agents for mRNA delivery has only recently been investigated. The most common siRNA formulations contain four components: an amine-containing lipid or lipid-like material, phospholipid, cholesterol, and lipid-anchored polyethylene glycol, the relative ratios of which can have profound effects on the formulation potency. Here, we develop a generalized strategy to optimize lipid nanoparticle formulations for mRNA delivery to the liver in vivo using Design of Experiment (DOE) methodologies including Definitive Screening and Fractional Factorial Designs. By simultaneously varying lipid ratios and structures, we developed an optimized formulation which increased the potency of erythropoietin-mRNA-loaded C12-200 lipid nanoparticles 7-fold relative to formulations previously used for siRNA delivery. Key features of this optimized formulation were the incorporation of 1,2-dioleoyl-sn-glycero-3-phosphoethanolamine (DOPE) and increased ionizable lipid:mRNA weight ratios. Interestingly, the optimized lipid nanoparticle formulation did not improve siRNA delivery, indicating differences in optimized formulation parameter design spaces for siRNA and mRNA. We believe the general method described here can accelerate in vivo screening and optimization of nanoparticle formulations with large multidimensional design spaces.",
+  "maxlib": 0
+ },
+ "9465047": {
+  "title": "A combinatorial approach to the discovery of efficient cationic peptoid reagents for gene delivery.",
+  "journal": "Proc Natl Acad Sci U S A",
+  "year": "1998",
+  "first": "Murphy JE",
+  "last": "Zuckermann RN",
+  "doi": "10.1073/pnas.95.4.1517",
+  "abstract": "A family of N-substituted glycine oligomers (peptoids) of defined length and sequence are shown to condense plasmid DNA into small particles, protect it from nuclease degradation, and efficiently mediate the transfection of several cell lines. The oligomers were discovered by screening a combinatorial library of cationic peptoids that varied in length, density of charge, side-chain shape, and hydrophobicity. Transfection activity and peptoid-DNA complex formation are shown to be highly dependent on the peptoid structure. The most active peptoid is a 36-mer that contains 12 cationic aminoethyl side chains. This molecule can be synthesized efficiently from readily available building blocks. The peptoid condenses plasmid DNA into uniform particles 50-100 nm in diameter and mediates the transfection of a number of cell lines with efficiencies greater than or comparable to DMRIE-C, Lipofectin, and Lipofectamine. Unlike many cationic lipids, peptoids are capable of working in the presence of serum.",
+  "maxlib": 0
+ },
+ "12210986": {
+  "title": "Combinatorial synthesis of new cationic lipids and high-throughput screening of their transfection properties.",
+  "journal": "Chembiochem",
+  "year": "2002",
+  "first": "Lenssen K",
+  "last": "Massing U",
+  "doi": "10.1002/1439-7633(20020902)3:9<852::AID-CBIC852>3.0.CO;2-A",
+  "abstract": "Here we describe the first synthesis-screening approach for the identification and optimization of new cationic lipids for gene transfer in various cell lines. Combinatorial solid-phase chemistry was used to synthesize a library of new cationic lipids based on 3-methylamino-1,2-dihydroxypropane as the polar, cationic lipid part. As the nonpolar lipid part, different hydrocarbon chains were bound to the amino group of the scaffold and the amino group was further methylated to afford constantly cationic lipids. Lipids were synthesized in both configurations and as racemates, and the counter ions were also varied. By using a fully automated transfection screening method and COS-7 cells, the cationic lipid N,N-ditetradecyl-N-methyl-amino-2,3-propanediol (KL-1-14) was identified as a candidate lipid for the development of an improved transfection reagent. Screening the transfection properties of KL-1-14 in numerous combinations with the helper lipids dioleoylphosphatidylethanolamine (DOPE) and cholesterol (Chol) revealed that Chol is the most suitable helper lipid and the best KL-1-14/Chol ratio is 0.5-0.7. Compared to the standard transfection lipid N-[1-(2,3-dioleoyloxy)propyl]-N,N,N-trimethylammonium methyl sulfate (DOTAP), transfection efficiency was improved by a factor of about 40. Furthermore, by using R- and S-configured KL-1-14, it could be shown that the configuration of the lipids had no significant influence on its transfection efficiency. The highest transfection efficiencies were achieved with chloride as the counter ion. The new lipofection reagent was further tested to transfect the cell lines MDA-MB-468, MCF-7, MDCK-C7, and primary dentritic cells (DC), which are important for the development of new anticancer gene therapy strategies. Even in these cells, KL-1-14/Chol (1:0.6) had improved transfection efficiencies, which were about two to four times higher than for DOTAP.",
+  "maxlib": 0
+ },
+ "42610355": {
+  "title": "A double-amine ionizable lipid library enables highly efficient mRNA delivery to T cells at reduced lipid mass.",
+  "journal": "Biomater Sci",
+  "year": "2026",
+  "first": "Sriram V",
+  "last": "Lee JY",
+  "doi": "10.1039/d6bm00568c",
+  "abstract": "mRNA-based nucleic acid therapeutics have gained significant attention and undergone extensive clinical investigation since the FDA's approval of Spikevax and Comirnaty for the treatment of SARS-CoV-2. Lipid nanoparticles (LNPs) are currently the most advanced delivery system for delivering mRNA in vivo. However, concerns persist regarding the tolerability of their repeated use due to lipid accumulation. Over time, lipids have been optimized through the introduction of enzymatically degradable ester linkers. Yet, this modification alone does not fully address lipid clearance from the body. To mitigate these concerns, we have designed a library of novel ionizable lipids that incorporates two nitrogen atoms within the lipid backbone. We hypothesize that the LNPs with these lipids can be potentially administered at lower dosages while maintaining the same payload delivery and translation efficiency. In this study, we identified five lead LNPs that exhibited remarkable transfection efficiency without cytotoxic effects in vitro. We further optimized the LNP formulations by incorporating various cholesterol analogs to fine-tune translation performance. Upon analyzing the endocytic and intracellular pathways of the lead LNPs, we found that multiple pathways were involved in delivering the payload to the cell. This set of novel lipids holds great promise for mRNA delivery and warrants further investigation.",
+  "maxlib": 0
+ },
+ "42886223": {
+  "title": "High-Throughput Screening of a Lipid Nanoparticle (LNP) Library Identifies Lead Formulations for CRISPR-Cas9 Ribonucleoprotein Delivery and Gene Editing.",
+  "journal": "ACS Appl Mater Interfaces",
+  "year": "2026",
+  "first": "Wang Y",
+  "last": "Zhao M",
+  "doi": "10.1021/acsami.6c11615",
+  "abstract": "Delivery of CRISPR-Cas9 ribonucleoprotein (RNP) using synthetic materials can bypass the host translational machinery and limit the duration of genomic exposure, minimizing the risk of off-target mutations. Despite their advantages, lipid nanoparticle (LNP) platforms for CRISPR-Cas9 RNP delivery that achieve highly efficient editing at low doses remain limited. In the present study, we developed a library of ionizable lipids (ILs) and corresponding LNPs to enhance the delivery and editing efficiencies of CRISPR-Cas9 RNP complexes. Following comprehensive in vitro screening and formulation optimization, an optimal LNP candidate containing the C12A9 IL (denoted as LNPC12A9) was identified that achieved \u223c90% EGFP disruption in HEK293T-EGFP cells at an RNP concentration of 30 nM and \u223c60% at 15 nM. The editing performance was consistently observed at an RNP concentration of 15 nM when editing the Gcgr and HPRT1 genes across multiple hepatic cell lines. Moreover, coencapsulation of RNP and a single-stranded oligodeoxynucleotide (ssODN) template for homology-directed repair (HDR) within LNPC12A9 induced an HDR rate of 37.8%. Systemic administration of LNPC12A9 into C57BL/6J mice led to liver tropism and a total hepatic Pcsk9 gene disruption rate of 1.39%. In conclusion, this study provides insights into the construction of an LNP platform to improve the delivery efficiency of CRISPR-Cas9 RNP, thereby facilitating the development of LNPs for safe, precise, and tissue-specific Cas9 RNP-based genome editing therapies.",
+  "maxlib": 0
+ },
+ "40433897": {
+  "title": "Iterative Screening of Vitamin E-Based Functional Lipid Nanoparticles for mRNA Delivery.",
+  "journal": "ACS Nano",
+  "year": "2025",
+  "first": "Cui K",
+  "last": "Zhang Z",
+  "doi": "10.1021/acsnano.5c01378",
+  "abstract": "Ionizable lipids are crucial for the effective delivery of mRNA by using lipid nanoparticles (LNPs). Endowing ionizable lipids with tailored biological properties could potentially augment the therapeutic efficacy of mRNA-based treatments. Herein, a functional vitamin E (VE)-based lipid library with distinct head groups was designed and synthesized. Due to the presence of VE, these lipids inherently exhibited immunomodulatory properties, including the promotion of cellular uptake, dendritic cells maturation, and antigen presentation. Through iterative optimization of the LNP components and the architecture of ionizable lipids, the correlation between the structure of ionizable lipids and their mRNA delivery efficiency has been established, leading to the finding of the most effective delivery formulation. Benefiting from the high mRNA delivery efficiency and the immunomodulatory function of LNPs themselves, VE-based LNPs have demonstrated complete remission in colon cancer by delivering mIL-12, which offered a beneficial combination with immune checkpoint blockade. The proposed functional LNPs were anticipated to furnish potential delivery systems for mRNA-based cancer treatments.",
+  "maxlib": 0
+ },
+ "36839799": {
+  "title": "Development of a Library of Disulfide Bond-Containing Cationic Lipids for mRNA Delivery.",
+  "journal": "Pharmaceutics",
+  "year": "2023",
+  "first": "Shen Z",
+  "last": "Wang PG",
+  "doi": "10.3390/pharmaceutics15020477",
+  "abstract": "Lipid nanoparticles (LNPs) are the commonly used delivery tools for messenger RNA (mRNA) therapy and play an indispensable role in the success of COVID-19 mRNA vaccines. Ionizable cationic lipids are the most important component in LNPs. Herein, we developed a series of new ionizable lipids featuring bioreducible disulfide bonds, and constructed a library of lipids derived from dimercaprol. LNPs prepared from these ionizable lipids could be stored at 4 \u00b0C for a long term and are non-toxic toward HepG2 and 293T cells. In vivo experiments demonstrated that the best C4S18A formulations, which embody linoleoyl tails, show strong firefly luciferase (Fluc) mRNA expression in the liver and spleen via intravenous (IV) injection, or at the local injection site via intramuscular injection (IM). The newly designed ionizable lipids can be potentially safe and high-efficiency nanomaterials for mRNA therapy.",
+  "maxlib": 0
+ },
+ "39375194": {
+  "title": "Machine Learning Elucidates Design Features of Plasmid Deoxyribonucleic Acid Lipid Nanoparticles for Cell Type-Preferential Transfection.",
+  "journal": "ACS Nano",
+  "year": "2024",
+  "first": "Cheng L",
+  "last": "Mao HQ",
+  "doi": "10.1021/acsnano.4c07615",
+  "abstract": "To broaden the accessibility of cell and gene therapies, it is essential to develop and optimize nonviral, cell type-preferential gene carriers such as lipid nanoparticles (LNPs). While high-throughput screening (HTS) approaches have proven effective in accelerating LNP discovery, they are often costly, labor-intensive, and do not consistently yield actionable design rules that direct screening efforts toward the most relevant chemical and formulation parameters. In this study, we employed a machine learning (ML) workflow, utilizing well-curated plasmid DNA LNP transfection data sets across six cell types, to extract compositional and chemical insights from HTS studies. Our approach achieved prediction errors averaging between 5 and 10%, depending on the cell type. By applying SHapley Additive exPlanations to our ML models, we uncovered key composition-function relationships that govern cell type-preferential LNP transfection efficiency. Notably, we identified consistent LNP composition parameters that enhance in vitro transfection efficiency across diverse cell types, including a helper lipid molar percentage of charged lipids between 9 and 50% and the inclusion of cationic/zwitterionic helper lipids. Additionally, several parameters were found to modulate cell type-preferentiality, such as the total molar percentage of ionizable and helper lipids, N/P ratio, PEGylated lipid molar percentage of uncharged lipids, and hydrophobicity of the helper lipid. This study leverages HTS of compositionally diverse LNP libraries combined with ML analysis to elucidate the interactions between lipid components in LNP formulations, providing insights that contribute to the design of LNP compositions tailored for cell type-preferential transfection.",
+  "maxlib": 0
+ },
+ "39664425": {
+  "title": "Pioneering integration of combinatorial chemistry and machine learning to accelerate the development of tailored LNPs for mRNA delivery.",
+  "journal": "Acta Pharm Sin B",
+  "year": "2024",
+  "first": "He X",
+  "last": "Song X",
+  "doi": "10.1016/j.apsb.2024.08.032",
+  "abstract": "",
+  "maxlib": 0
+ },
+ "29653760": {
+  "title": "A Novel Amino Lipid Series for mRNA Delivery: Improved Endosomal Escape and Sustained Pharmacology and Safety in Non-human Primates.",
+  "journal": "Mol Ther",
+  "year": "2018",
+  "first": "Sabnis S",
+  "last": "Benenato KE",
+  "doi": "10.1016/j.ymthe.2018.03.010",
+  "abstract": "The success of mRNA-based therapies depends on the availability of a safe and efficient delivery vehicle. Lipid nanoparticles have been identified as a viable option. However, there are concerns whether an acceptable tolerability profile for chronic dosing can be achieved. The efficiency and tolerability of lipid nanoparticles has been attributed to the amino lipid. Therefore, we developed a new series of amino lipids that address this concern. Clear structure-activity relationships were developed that resulted in a new amino lipid that affords efficient mRNA delivery in rodent and primate models with optimal pharmacokinetics. A 1-month toxicology evaluation in rat and non-human primate demonstrated no adverse events with the new lipid nanoparticle system. Mechanistic studies demonstrate that the improved efficiency can be attributed to increased endosomal escape. This effort has resulted in the first example of the ability to safely repeat dose mRNA-containing lipid nanoparticles in non-human primate at therapeutically relevant levels."
+ }
+}

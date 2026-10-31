@@ -1,0 +1,18 @@
+{
+ "experiment_id": "LL_2026",
+ "rows": 840,
+ "columns": 79,
+ "paper": "Lin et al., JACS 2026, 148, 6960-6969",
+ "molratio_sum": 100.0,
+ "z": {
+  "mean": 0.0,
+  "pop_sd": 1.0,
+  "distinct": 4
+ },
+ "conditions": "IGROV1 96-well 1.5e4/well 24 h n=3; Fluc mRNA 25 ng/well; IL:mRNA 10:1 w/w; citrate 10 mM pH 4.4; 1:3 rapid mixing",
+ "validation": {
+  "HRMS_anchors": "4/4 exact to +/-0.0001 Da (10A2-3B-EP10, 9A2-3B-EP10, 9A2-4B-EP10, 10A2-3B-EP12)",
+  "fig2fgh_hit_rates": "48/48 printed hit rates reproduced from a TICK-ANCHORED scale, max |delta| 1.0 pp, mean -0.52 pp. Corrected 2026-10-30 (F-006): until then the pixels-per-percent scale was least-squares fitted onto the Fig 2e rates this panel validates, so the agreement could not detect a scale error AND was absorbing a real one -- a systematic ~1% top-edge bias from the colour mask. Sub-pixel top edges plus a tick-only scale; the residual -0.52 pp one-sided bias is recorded, not tuned away",
+  "colour_match": "max distance 2.24, zero ambiguous cells"
+ }
+}

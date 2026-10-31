@@ -1,0 +1,183 @@
+{
+ "paper": "Tian et al., Adv Mater 2026, Figs 2d-g",
+ "what": "the four marginals of the 486-formulation screen, as bars",
+ "fig2c_marginals_source": "recomputed from 04b_fig2c_486.csv",
+ "panels": {
+  "2d": {
+   "field": "C6O2B2_molpct",
+   "categories": [
+    "35",
+    "50",
+    "65"
+   ],
+   "bar_heights_px": [
+    235,
+    119,
+    177
+   ],
+   "ratio_fit": {
+    "px_per_LNP": 5.8,
+    "intercept_px": -2.8,
+    "implied_counts": [
+     41.0,
+     21.0,
+     31.0
+    ],
+    "residuals_LNPs": [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    "max_abs_residual_LNPs": 0.0
+   },
+   "tick_calibration": {
+    "axis_x": 469,
+    "n_ticks": 5,
+    "px_per_tick": 58.5,
+    "implied_LNPs_per_tick": 10.09,
+    "rounds_to": 10
+   },
+   "fig2c_counts": {
+    "35": 41,
+    "50": 21,
+    "65": 31
+   }
+  },
+  "2e": {
+   "field": "DMGPEG_molpct",
+   "categories": [
+    "1",
+    "2",
+    "4"
+   ],
+   "bar_heights_px": [
+    226,
+    187,
+    187
+   ],
+   "ratio_fit": {
+    "px_per_LNP": 6.5,
+    "intercept_px": -1.5,
+    "implied_counts": [
+     35.0,
+     29.0,
+     29.0
+    ],
+    "residuals_LNPs": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "max_abs_residual_LNPs": 0.0
+   },
+   "tick_calibration": {
+    "axis_x": 906,
+    "n_ticks": 4,
+    "px_per_tick": 66.0,
+    "implied_LNPs_per_tick": 10.15,
+    "rounds_to": 10
+   },
+   "fig2c_counts": {
+    "1": 35,
+    "2": 29,
+    "4": 29
+   }
+  },
+  "2f": {
+   "field": "DODAP_molpct",
+   "categories": [
+    "10",
+    "30",
+    "50"
+   ],
+   "bar_heights_px": [
+    31,
+    131,
+    231
+   ],
+   "ratio_fit": {
+    "px_per_LNP": 4.348,
+    "intercept_px": -3.78,
+    "implied_counts": [
+     8.0,
+     31.0,
+     54.0
+    ],
+    "residuals_LNPs": [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    "max_abs_residual_LNPs": 0.0
+   },
+   "tick_calibration": {
+    "axis_x": 469,
+    "n_ticks": 3,
+    "px_per_tick": 87.0,
+    "implied_LNPs_per_tick": 20.01,
+    "rounds_to": 20
+   },
+   "fig2c_counts": {
+    "10": 8,
+    "30": 31,
+    "50": 54
+   }
+  },
+  "2g": {
+   "field": "helper_lipid",
+   "categories": [
+    "DOPC",
+    "DMPC",
+    "DOPG",
+    "DOPE",
+    "EggSM",
+    "DSPC"
+   ],
+   "bar_heights_px": [
+    17,
+    108,
+    102,
+    56,
+    82,
+    227
+   ],
+   "ratio_fit": {
+    "px_per_LNP": 6.567,
+    "intercept_px": -3.12,
+    "implied_counts": [
+     3.06,
+     16.92,
+     16.01,
+     9.0,
+     12.96,
+     35.04
+    ],
+    "residuals_LNPs": [
+     0.06,
+     -0.08,
+     0.01,
+     0.0,
+     -0.04,
+     0.04
+    ],
+    "max_abs_residual_LNPs": 0.08
+   },
+   "tick_calibration": {
+    "axis_x": 859,
+    "n_ticks": 4,
+    "px_per_tick": 65.5,
+    "implied_LNPs_per_tick": 9.97,
+    "rounds_to": 10
+   },
+   "fig2c_counts": {
+    "DOPC": 3,
+    "DMPC": 17,
+    "DOPG": 16,
+    "DOPE": 9,
+    "EggSM": 13,
+    "DSPC": 35
+   }
+  }
+ },
+ "review_image": "review/fig2dg_overlay.png"
+}

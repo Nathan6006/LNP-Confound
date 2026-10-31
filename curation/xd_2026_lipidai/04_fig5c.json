@@ -1,0 +1,170 @@
+{
+ "calibration": {
+  "slope": -0.005557093187851446,
+  "intercept": 9.451234345584336,
+  "tick_rows": [
+   81.0,
+   261.5,
+   441.0,
+   621.0
+  ],
+  "decades": [
+   9,
+   8,
+   7,
+   6
+  ],
+  "residual_decades": [
+   -0.00111,
+   0.00195,
+   -0.00056,
+   -0.00028
+  ]
+ },
+ "bars": [
+  {
+   "name": "ALC-0315",
+   "x0": 1076,
+   "x1": 1123,
+   "top_y": 4953,
+   "value": 756578067.3130585,
+   "log10": 8.878853747235636,
+   "top_y_old_60pct_rule": 4966,
+   "px_above_old_rule": 13,
+   "inner_fill_fraction_at_true_top": 0.429,
+   "decades_above_old_rule": 0.0722
+  },
+  {
+   "name": "SM-102",
+   "x0": 1149,
+   "x1": 1194,
+   "top_y": 4964,
+   "value": 657242625.9611437,
+   "log10": 8.817725722169271,
+   "top_y_old_60pct_rule": 4971,
+   "px_above_old_rule": 7,
+   "inner_fill_fraction_at_true_top": 0.212,
+   "decades_above_old_rule": 0.0389
+  },
+  {
+   "name": "MC3",
+   "x0": 1219,
+   "x1": 1265,
+   "top_y": 5082,
+   "value": 145207392.22208816,
+   "log10": 8.1619887260028,
+   "top_y_old_60pct_rule": 5089,
+   "px_above_old_rule": 7,
+   "inner_fill_fraction_at_true_top": 0.5,
+   "decades_above_old_rule": 0.0389
+  },
+  {
+   "name": "E1",
+   "x0": 1291,
+   "x1": 1338,
+   "top_y": 4990,
+   "value": 471239079.82565933,
+   "log10": 8.673241299285133,
+   "top_y_old_60pct_rule": 5008,
+   "px_above_old_rule": 18,
+   "inner_fill_fraction_at_true_top": 0.571,
+   "decades_above_old_rule": 0.1
+  },
+  {
+   "name": "E2",
+   "x0": 1363,
+   "x1": 1409,
+   "top_y": 5037,
+   "value": 258260459.537762,
+   "log10": 8.412057919456116,
+   "top_y_old_60pct_rule": 5039,
+   "px_above_old_rule": 2,
+   "inner_fill_fraction_at_true_top": 0.441,
+   "decades_above_old_rule": 0.0111
+  },
+  {
+   "name": "E3",
+   "x0": 1435,
+   "x1": 1482,
+   "top_y": 5180,
+   "value": 41437504.565006174,
+   "log10": 7.617393593593358,
+   "top_y_old_60pct_rule": 5189,
+   "px_above_old_rule": 9,
+   "inner_fill_fraction_at_true_top": 0.371,
+   "decades_above_old_rule": 0.05
+  },
+  {
+   "name": "E4",
+   "x0": 1506,
+   "x1": 1552,
+   "top_y": 5259,
+   "value": 15079371.187500924,
+   "log10": 7.178383231753094,
+   "top_y_old_60pct_rule": 5280,
+   "px_above_old_rule": 21,
+   "inner_fill_fraction_at_true_top": 0.441,
+   "decades_above_old_rule": 0.1167
+  },
+  {
+   "name": "E5",
+   "x0": 1577,
+   "x1": 1624,
+   "top_y": 5214,
+   "value": 26819607.960923582,
+   "log10": 7.428452425206409,
+   "top_y_old_60pct_rule": 5229,
+   "px_above_old_rule": 15,
+   "inner_fill_fraction_at_true_top": 0.257,
+   "decades_above_old_rule": 0.0834
+  },
+  {
+   "name": "E6",
+   "x0": 1649,
+   "x1": 1696,
+   "top_y": 5491,
+   "value": 774707.2355433716,
+   "log10": 5.889137612171559,
+   "top_y_old_60pct_rule": 5509,
+   "px_above_old_rule": 18,
+   "inner_fill_fraction_at_true_top": 0.486,
+   "decades_above_old_rule": 0.1
+  },
+  {
+   "name": "E7",
+   "x0": 1722,
+   "x1": 1769,
+   "top_y": 5527,
+   "value": 488744.9211538579,
+   "log10": 5.689082257408907,
+   "top_y_old_60pct_rule": 5527,
+   "px_above_old_rule": 0,
+   "inner_fill_fraction_at_true_top": 0.971,
+   "decades_above_old_rule": 0.0
+  },
+  {
+   "name": "E8",
+   "x0": 1793,
+   "x1": 1839,
+   "top_y": 5462,
+   "value": 1122776.5011803734,
+   "log10": 6.050293314619251,
+   "top_y_old_60pct_rule": 5462,
+   "px_above_old_rule": 0,
+   "inner_fill_fraction_at_true_top": 0.676,
+   "decades_above_old_rule": 0.0
+  },
+  {
+   "name": "E9",
+   "x0": 1863,
+   "x1": 1910,
+   "top_y": 5494,
+   "value": 745532.0746239945,
+   "log10": 5.872466332608004,
+   "top_y_old_60pct_rule": 5494,
+   "px_above_old_rule": 0,
+   "inner_fill_fraction_at_true_top": 0.714,
+   "decades_above_old_rule": 0.0
+  }
+ ]
+}

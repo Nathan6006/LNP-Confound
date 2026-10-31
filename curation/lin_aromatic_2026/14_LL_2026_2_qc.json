@@ -1,0 +1,25 @@
+{
+ "experiment_id": "LL_2026_2",
+ "rows": 147,
+ "columns": 79,
+ "source": "Lin et al., JACS 2026, Fig 2a (147-lipid initial screen)",
+ "molratio_sum": 100.0,
+ "z": {
+  "mean": -0.0,
+  "pop_sd": 1.0,
+  "distinct": 3
+ },
+ "unique_SMILES": 147,
+ "structures_also_in_the_840": 70,
+ "amine_head_groups_new_to_the_corpus": [
+  "1A",
+  "2A",
+  "3A",
+  "4A",
+  "5A",
+  "6A",
+  "7A"
+ ],
+ "why_separate_experiment_id": "initial formulation 15/20/25/2 at IL:mRNA 20:1, vs 15/15/25/2 at 10:1 for the 840",
+ "legend_bins": "3 (no lipid fell below 1e4); indexed 2-4 on the same RLU scale as Fig 2e so the two screens stay comparable"
+}

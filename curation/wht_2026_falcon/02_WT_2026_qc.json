@@ -1,0 +1,450 @@
+{
+ "paper": "Toh, Cheng et al., bioRxiv 2026 (FALCON)",
+ "doi": "10.64898/2026.06.13.731774",
+ "source": "authors' own CSVs; github.com/MaoResearchGroup/falcon-lnp-optimization",
+ "formulations": 1218,
+ "rows": 2544,
+ "columns": 79,
+ "experiments": 7,
+ "unique_IL": [
+  "DLin-MC3-DMA",
+  "SM-102"
+ ],
+ "unique_HL": [
+  "18PG",
+  "DOTAP",
+  "DSPC"
+ ],
+ "cell_types": [
+  "C2C12",
+  "DC2.4",
+  "HepG2",
+  "INS-1E",
+  "NIH-3T3",
+  "Ramos",
+  "THP-1"
+ ],
+ "molratio_sum": {
+  "min": 99.9,
+  "max": 100.1
+ },
+ "normalization_unit": "source_file (one z per file, pooled over that file's cell-type columns) -- see F-003",
+ "z_block_max_abs_mean": 0.0,
+ "z_block_sd_range": [
+  1.0,
+  1.0
+ ],
+ "within_file_cell_offsets": {
+  "WT_2026_URS": {
+   "Ramos": -0.0
+  },
+  "WT_2026_E0": {
+   "Ramos": -0.395404,
+   "THP-1": 0.395404
+  },
+  "WT_2026_E1": {
+   "Ramos": -0.434528,
+   "HepG2": 0.434528
+  },
+  "WT_2026_E2": {
+   "THP-1": -0.192859,
+   "HepG2": 0.192859
+  },
+  "WT_2026_E3": {
+   "INS-1E": -0.0
+  },
+  "WT_2026_E4": {
+   "Ramos": 0.250537,
+   "DC2.4": 0.441181,
+   "NIH-3T3": -0.358945,
+   "C2C12": -0.332773
+  },
+  "WT_2026_E5": {
+   "HepG2": 0.721116,
+   "Ramos": -0.721116
+  }
+ },
+ "selectivity_is_derived": [
+  {
+   "file": "0_Norm_RAMOS_THP1_Single_Dual_Objective_4ITER_MC3_DSPC.csv",
+   "form": "nLnLE_RAMOS - nLnLE_THP1",
+   "max_abs_residual": 0.0,
+   "derived": true,
+   "stored_z_recovers_printed_selectivity": {
+    "scale": 2.471968,
+    "max_abs_residual": 1.7763568394002505e-15
+   }
+  },
+  {
+   "file": "1_Norm_RAMOS_HEPG2_Single_Dual_Objective_4ITER_SM102_18PG.csv",
+   "form": "nLnLE_RAMOS - nLnLE_HEPG2",
+   "max_abs_residual": 4e-09,
+   "derived": true,
+   "stored_z_recovers_printed_selectivity": {
+    "scale": 2.531525,
+    "max_abs_residual": 3.999999886872274e-09
+   }
+  },
+  {
+   "file": "2_Norm_THP1_HEPG2_Dual_Objective_5ITER_SM102_DSPC.csv",
+   "form": "nLnLE_THP1 - nLnLE_HEPG2",
+   "max_abs_residual": 1e-09,
+   "derived": true,
+   "stored_z_recovers_printed_selectivity": {
+    "scale": 1.740008,
+    "max_abs_residual": 1.0000007488741858e-09
+   }
+  },
+  {
+   "file": "4_Norm_RAMOS_C2C12_DC24_3T3_Quad_Objective_3ITER_SM102_18PG.csv",
+   "form": "nLnLE_RAMOS - mean(rest)",
+   "max_abs_residual": 3.33e-10,
+   "derived": true,
+   "stored_z_recovers_printed_selectivity": {
+    "scale": 2.147816,
+    "max_abs_residual": 3.3333469318108655e-10
+   }
+  },
+  {
+   "file": "5_Norm_RAMOS_HEPG2_Dual_Objective_4ITER_SM102_DSPC.csv",
+   "form": "nLnLE_RAMOS - nLnLE_HEPG2",
+   "max_abs_residual": 0.0,
+   "derived": true,
+   "stored_z_recovers_printed_selectivity": {
+    "scale": 2.797199,
+    "max_abs_residual": 1.7763568394002505e-15
+   }
+  }
+ ],
+ "blocks": [
+  {
+   "experiment_id": "WT_2026_URS",
+   "source_file": "0_Norm_RAMOS_Single_Objective_UniformRandomSampling_Ctrl_MC3_DSPC.csv",
+   "n": 129,
+   "cells": [
+    {
+     "cell": "Ramos",
+     "column": "nLnLE_RAMOS",
+     "n": 129,
+     "dose_ug": 0.15,
+     "raw_LnnLE": {
+      "min": -0.1911,
+      "max": 8.3756,
+      "mean": 4.6707,
+      "pop_sd": 1.6085
+     },
+     "z_within_file": {
+      "mean": -0.0,
+      "pop_sd": 1.0
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 4.6707,
+    "pop_sd": 1.6085
+   },
+   "z": {
+    "mean": -0.0,
+    "pop_sd": 1.0
+   }
+  },
+  {
+   "experiment_id": "WT_2026_E0",
+   "source_file": "0_Norm_RAMOS_THP1_Single_Dual_Objective_4ITER_MC3_DSPC.csv",
+   "n": 546,
+   "cells": [
+    {
+     "cell": "Ramos",
+     "column": "nLnLE_RAMOS",
+     "n": 273,
+     "dose_ug": 0.15,
+     "raw_LnnLE": {
+      "min": -2.1429,
+      "max": 6.1354,
+      "mean": 2.1218,
+      "pop_sd": 2.1929
+     },
+     "z_within_file": {
+      "mean": -0.395404,
+      "pop_sd": 0.887126
+     }
+    },
+    {
+     "cell": "THP-1",
+     "column": "nLnLE_THP1",
+     "n": 273,
+     "dose_ug": 0.025,
+     "raw_LnnLE": {
+      "min": -1.4605,
+      "max": 8.3572,
+      "mean": 4.0766,
+      "pop_sd": 2.3455
+     },
+     "z_within_file": {
+      "mean": 0.395404,
+      "pop_sd": 0.948852
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 3.0992,
+    "pop_sd": 2.472
+   },
+   "z": {
+    "mean": 0.0,
+    "pop_sd": 1.0
+   }
+  },
+  {
+   "experiment_id": "WT_2026_E1",
+   "source_file": "1_Norm_RAMOS_HEPG2_Single_Dual_Objective_4ITER_SM102_18PG.csv",
+   "n": 394,
+   "cells": [
+    {
+     "cell": "Ramos",
+     "column": "nLnLE_RAMOS",
+     "n": 197,
+     "dose_ug": 0.15,
+     "raw_LnnLE": {
+      "min": -1.294,
+      "max": 6.8579,
+      "mean": 2.6239,
+      "pop_sd": 1.7981
+     },
+     "z_within_file": {
+      "mean": -0.434528,
+      "pop_sd": 0.710296
+     }
+    },
+    {
+     "cell": "HepG2",
+     "column": "nLnLE_HEPG2",
+     "n": 197,
+     "dose_ug": 0.005,
+     "raw_LnnLE": {
+      "min": -0.6733,
+      "max": 10.1945,
+      "mean": 4.824,
+      "pop_sd": 2.6765
+     },
+     "z_within_file": {
+      "mean": 0.434528,
+      "pop_sd": 1.057284
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 3.7239,
+    "pop_sd": 2.5315
+   },
+   "z": {
+    "mean": 0.0,
+    "pop_sd": 1.0
+   }
+  },
+  {
+   "experiment_id": "WT_2026_E2",
+   "source_file": "2_Norm_THP1_HEPG2_Dual_Objective_5ITER_SM102_DSPC.csv",
+   "n": 272,
+   "cells": [
+    {
+     "cell": "THP-1",
+     "column": "nLnLE_THP1",
+     "n": 136,
+     "dose_ug": 0.01,
+     "raw_LnnLE": {
+      "min": -0.5217,
+      "max": 7.0627,
+      "mean": 3.2922,
+      "pop_sd": 1.7089
+     },
+     "z_within_file": {
+      "mean": -0.192859,
+      "pop_sd": 0.982145
+     }
+    },
+    {
+     "cell": "HepG2",
+     "column": "nLnLE_HEPG2",
+     "n": 136,
+     "dose_ug": 0.0025,
+     "raw_LnnLE": {
+      "min": 0.1348,
+      "max": 8.0441,
+      "mean": 3.9633,
+      "pop_sd": 1.7057
+     },
+     "z_within_file": {
+      "mean": 0.192859,
+      "pop_sd": 0.980307
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 3.6278,
+    "pop_sd": 1.74
+   },
+   "z": {
+    "mean": 0.0,
+    "pop_sd": 1.0
+   }
+  },
+  {
+   "experiment_id": "WT_2026_E3",
+   "source_file": "3_Norm_INS_Single_Objective_3ITER_SM102_DOTAP.csv",
+   "n": 123,
+   "cells": [
+    {
+     "cell": "INS-1E",
+     "column": "nLnLE_INS",
+     "n": 123,
+     "dose_ug": 0.01,
+     "raw_LnnLE": {
+      "min": 0.2895,
+      "max": 8.7242,
+      "mean": 4.7633,
+      "pop_sd": 1.7949
+     },
+     "z_within_file": {
+      "mean": -0.0,
+      "pop_sd": 1.0
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 4.7633,
+    "pop_sd": 1.7949
+   },
+   "z": {
+    "mean": -0.0,
+    "pop_sd": 1.0
+   }
+  },
+  {
+   "experiment_id": "WT_2026_E4",
+   "source_file": "4_Norm_RAMOS_C2C12_DC24_3T3_Quad_Objective_3ITER_SM102_18PG.csv",
+   "n": 720,
+   "cells": [
+    {
+     "cell": "Ramos",
+     "column": "nLnLE_RAMOS",
+     "n": 180,
+     "dose_ug": 0.15,
+     "raw_LnnLE": {
+      "min": 2.775,
+      "max": 9.9177,
+      "mean": 6.6172,
+      "pop_sd": 2.0465
+     },
+     "z_within_file": {
+      "mean": 0.250537,
+      "pop_sd": 0.952818
+     }
+    },
+    {
+     "cell": "DC2.4",
+     "column": "nLnLE_DC",
+     "n": 180,
+     "dose_ug": 0.01,
+     "raw_LnnLE": {
+      "min": 2.3961,
+      "max": 10.4613,
+      "mean": 7.0267,
+      "pop_sd": 1.9881
+     },
+     "z_within_file": {
+      "mean": 0.441181,
+      "pop_sd": 0.925622
+     }
+    },
+    {
+     "cell": "NIH-3T3",
+     "column": "nLnLE_3T3",
+     "n": 180,
+     "dose_ug": 0.01,
+     "raw_LnnLE": {
+      "min": 1.9263,
+      "max": 10.1764,
+      "mean": 5.3082,
+      "pop_sd": 2.0431
+     },
+     "z_within_file": {
+      "mean": -0.358945,
+      "pop_sd": 0.951247
+     }
+    },
+    {
+     "cell": "C2C12",
+     "column": "nLnLE_C2C12",
+     "n": 180,
+     "dose_ug": 0.01,
+     "raw_LnnLE": {
+      "min": 0.6546,
+      "max": 10.4884,
+      "mean": 5.3644,
+      "pop_sd": 1.9609
+     },
+     "z_within_file": {
+      "mean": -0.332773,
+      "pop_sd": 0.912962
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 6.0791,
+    "pop_sd": 2.1478
+   },
+   "z": {
+    "mean": 0.0,
+    "pop_sd": 1.0
+   }
+  },
+  {
+   "experiment_id": "WT_2026_E5",
+   "source_file": "5_Norm_RAMOS_HEPG2_Dual_Objective_4ITER_SM102_DSPC.csv",
+   "n": 360,
+   "cells": [
+    {
+     "cell": "HepG2",
+     "column": "nLnLE_HEPG2",
+     "n": 180,
+     "dose_ug": 0.005,
+     "raw_LnnLE": {
+      "min": 0.4848,
+      "max": 10.5429,
+      "mean": 6.5648,
+      "pop_sd": 2.4343
+     },
+     "z_within_file": {
+      "mean": 0.721116,
+      "pop_sd": 0.870272
+     }
+    },
+    {
+     "cell": "Ramos",
+     "column": "nLnLE_RAMOS",
+     "n": 180,
+     "dose_ug": 0.15,
+     "raw_LnnLE": {
+      "min": 0.0081,
+      "max": 6.8126,
+      "mean": 2.5306,
+      "pop_sd": 1.2591
+     },
+     "z_within_file": {
+      "mean": -0.721116,
+      "pop_sd": 0.450123
+     }
+    }
+   ],
+   "pooled_raw_LnnLE": {
+    "mean": 4.5477,
+    "pop_sd": 2.7972
+   },
+   "z": {
+    "mean": -0.0,
+    "pop_sd": 1.0
+   }
+  }
+ ]
+}

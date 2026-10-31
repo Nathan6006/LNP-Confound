@@ -1,0 +1,41 @@
+# --- OS / editor noise -------------------------------------------------------
+.DS_Store
+*.swp
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Publisher PDFs (copyright) ----------------------------------------------
+# Every paper and SI this corpus is built from stays local. curation/SOURCES.md
+# records the DOI and the exact filename for each one, so anyone can fetch their
+# own copy and re-run the curation scripts against it.
+*.pdf
+*.docx
+*.xlsx
+
+# --- Derived page renders ----------------------------------------------------
+# 00_pages/ is produced from the local PDF by each curation's page-render step.
+# ~110 MB of PNG that regenerates in seconds; keeping it would make the clone
+# larger than the data it supports.
+curation/*/00_pages/
+
+# --- Vendored upstream clones ------------------------------------------------
+# Untrusted third-party repos cloned for comparison (FALCON, LipidAI). They
+# carry their own .git, which cannot be nested here, and they are not ours to
+# redistribute. The curation PROVENANCE.md in each folder records the URL and
+# the commit that was read.
+curation/*/repo/
+
+# --- Superseded dataset snapshots --------------------------------------------
+# provenance/superseded/ holds ~107 MB of pre-rebuild snapshots and timestamped
+# backups. The one file with real provenance value -- the pristine upstream
+# LNPDB download -- is force-added and tracked; the rest are reproducible by
+# checking out an earlier commit.
+provenance/superseded/*
+!provenance/superseded/LNPDB_official_download_20261028.csv
+
+# --- Regenerable caches ------------------------------------------------------
+cache/
+*.bak_*

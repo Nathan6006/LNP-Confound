@@ -1,0 +1,33 @@
+lipid_name,is_benchmark,RLU,x0,x1,y_top,rule_thickness_px,frac_used,source_figure,extraction_method
+110-L1-C10,0,27335.8,557,627,2979,12,0.72,Fig 2c,bar_chart_log_axis
+110-L2-C8,0,68354.4,659,731,2817,10,0.72,Fig 2c,bar_chart_log_axis
+110-L2-C10,0,106270.5,767,839,2739,12,0.72,Fig 2c,bar_chart_log_axis
+110-L3-C6,0,85713.0,871,943,2777,8,0.72,Fig 2c,bar_chart_log_axis
+110-L4-C8,0,27646.9,976,1046,2977,12,0.72,Fig 2c,bar_chart_log_axis
+110-L7-C10,0,28926.9,1080,1150,2969,10,0.72,Fig 2c,bar_chart_log_axis
+110-L8-C8,0,35062.3,1182,1254,2935,8,0.72,Fig 2c,bar_chart_log_axis
+110-L8-C10,0,54511.3,1286,1358,2857,8,0.72,Fig 2c,bar_chart_log_axis
+T3A-L1-C10,0,103892.6,1390,1462,2743,8,0.72,Fig 2c,bar_chart_log_axis
+T3A-L2-C8,0,41548.0,1498,1568,2905,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L2-C10,0,73156.1,1603,1673,2805,6,0.72,Fig 2c,bar_chart_log_axis
+T3A-L2-C12,0,61736.3,1707,1777,2835,8,0.72,Fig 2c,bar_chart_log_axis
+T3A-L3-C6,0,97073.5,1809,1881,2755,6,0.72,Fig 2c,bar_chart_log_axis
+T3A-L3-C10,0,32760.9,1913,1983,2947,6,0.72,Fig 2c,bar_chart_log_axis
+T3A-L4-C8,0,198008.1,2017,2087,2629,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L4-C10,0,99295.3,2123,2195,2751,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L4-C12,0,159704.4,2228,2300,2667,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L5-C8,0,23596.6,2332,2402,3005,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L5-C10,0,37952.3,2436,2506,2921,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L5-C14,0,22809.1,2540,2610,3011,12,0.72,Fig 2c,bar_chart_log_axis
+T3A-L6-C14,0,27646.9,2642,2714,2977,12,0.72,Fig 2c,bar_chart_log_axis
+T3A-L7-C10,0,47590.3,2750,2816,2881,10,0.72,Fig 2c,bar_chart_log_axis
+T3A-L7-C12,0,377382.1,2855,2925,2515,14,0.72,Fig 2c,bar_chart_log_axis
+T3A-L7-C14,0,78295.1,2959,3029,2793,12,0.72,Fig 2c,bar_chart_log_axis
+T3A-L8-C8,0,89681.5,3061,3133,2769,12,0.72,Fig 2c,bar_chart_log_axis
+T3A-L8-C10,0,156130.9,3165,3237,2671,6,0.72,Fig 2c,bar_chart_log_axis
+T3A-L8-C12,0,131758.6,3269,3339,2701,8,0.72,Fig 2c,bar_chart_log_axis
+T3A-L8-C14,0,57684.2,3377,3443,2847,10,0.72,Fig 2c,bar_chart_log_axis
+DLin-MC3-DMA,1,50933.4,3480,3552,2869,8,0.72,Fig 2c,bar_chart_log_axis
+SM102,1,49793.7,3584,3656,2873,8,0.72,Fig 2c,bar_chart_log_axis
+ALC-0315,1,159704.4,3688,3760,2667,10,0.72,Fig 2c,bar_chart_log_axis
+Lipid 5,1,73156.1,3792,3862,2805,10,0.72,Fig 2c,bar_chart_log_axis

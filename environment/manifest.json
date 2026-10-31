@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-07-25T05:45:52Z",
+  "global_seed": 42,
+  "git_commit": null,
+  "os": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "python_version": "3.13.1",
+  "package_versions": {
+    "pandas": "2.3.2",
+    "numpy": "2.3.3",
+    "rdkit": "2025.03.6",
+    "sklearn": "1.7.2",
+    "scipy": "1.16.2",
+    "xgboost": "3.1.2",
+    "umap": "0.5.12",
+    "matplotlib": "3.10.7",
+    "pyarrow": "25.0.0"
+  },
+  "per_stage_runtime_seconds": {
+    "stage00_inspect": 1.0,
+    "stage01_curation": 24.5,
+    "stage02_corpus": 0.2,
+    "stage03_separability": 1205.7,
+    "stage04_exclusivity": 1.6,
+    "stage05_concordance": 2.2,
+    "stage06_protocol": 731.2,
+    "stage07_learnable": 272.4,
+    "stage08_controls": 206.1,
+    "stage09_summary": 0.0
+  },
+  "total_runtime_seconds": 2445.0
+}

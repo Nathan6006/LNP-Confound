@@ -1,0 +1,52 @@
+lipid_name,core,chol_tail,core_type,brain_total_flux_photons_per_s,extraction_method,read_twice_independently,source_pdf,page,figure,model,model_target,cargo,cargo_type,n
+MC3-CB1,MC3-C,B1,commercial,70000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+SM-102-CB1,SM-102-C,B1,commercial,54000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+Lipid 14-CB1,Lipid 14-C,B1,commercial,43000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+OF-2-CB1,OF-2-C,B1,commercial,120000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+TT3-CB1,TT3-C,B1,commercial,62000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C1O1B1,C1O1,B1,synthesized,27000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C1O2B1,C1O2,B1,synthesized,31000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C2O1B1,C2O1,B1,synthesized,1700.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C2O2B1,C2O2,B1,synthesized,26000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C3O1B1,C3O1,B1,synthesized,47000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C3O2B1,C3O2,B1,synthesized,37000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C4O1B1,C4O1,B1,synthesized,290000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C4O2B1,C4O2,B1,synthesized,130000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C5O1B1,C5O1,B1,synthesized,1300000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C5O2B1,C5O2,B1,synthesized,560000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C6O1B1,C6O1,B1,synthesized,2000000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C6O2B1,C6O2,B1,synthesized,1100000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+MC3-CB2,MC3-C,B2,commercial,41000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+SM-102-CB2,SM-102-C,B2,commercial,7000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+Lipid 14-CB2,Lipid 14-C,B2,commercial,36000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+OF-2-CB2,OF-2-C,B2,commercial,21000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+TT3-CB2,TT3-C,B2,commercial,120000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C1O1B2,C1O1,B2,synthesized,110000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C1O2B2,C1O2,B2,synthesized,34000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C2O1B2,C2O1,B2,synthesized,130000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C2O2B2,C2O2,B2,synthesized,130000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C3O1B2,C3O1,B2,synthesized,12000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C3O2B2,C3O2,B2,synthesized,480000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C4O1B2,C4O1,B2,synthesized,63000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C4O2B2,C4O2,B2,synthesized,63000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C5O1B2,C5O1,B2,synthesized,2700000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C5O2B2,C5O2,B2,synthesized,260000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C6O1B2,C6O1,B2,synthesized,1600000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C6O2B2,C6O2,B2,synthesized,3000000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+MC3-CB3,MC3-C,B3,commercial,60000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+SM-102-CB3,SM-102-C,B3,commercial,140000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+Lipid 14-CB3,Lipid 14-C,B3,commercial,86000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+OF-2-CB3,OF-2-C,B3,commercial,130000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+TT3-CB3,TT3-C,B3,commercial,57000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C1O1B3,C1O1,B3,synthesized,110000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C1O2B3,C1O2,B3,synthesized,260000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C2O1B3,C2O1,B3,synthesized,140000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C2O2B3,C2O2,B3,synthesized,56000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C3O1B3,C3O1,B3,synthesized,46000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C3O2B3,C3O2,B3,synthesized,94000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C4O1B3,C4O1,B3,synthesized,120000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C4O2B3,C4O2,B3,synthesized,99000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C5O1B3,C5O1,B3,synthesized,1300000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C5O2B3,C5O2,B3,synthesized,260000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C6O1B3,C6O1,B3,synthesized,1800000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3
+C6O2B3,C6O2,B3,synthesized,2200000.0,printed_numerals_in_heatmap,True,Adv Mater 2026 Tian (main),3,Fig 1d,in_vivo,brain,mRNA,FLuc,3

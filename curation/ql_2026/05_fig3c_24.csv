@@ -1,0 +1,29 @@
+lipid_name,is_benchmark,RLU,x0,x1,y_top,rule_thickness_px,frac_used,source_figure,extraction_method
+T3A-L1-2C10,0,905635.9,258,304,2465,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L2-2C10,0,373979.4,326,372,2523,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L3-2C10,0,222680.5,394,442,2557,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L4-2C10,0,124746.0,462,510,2595,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L5-2C10,0,1305852.2,532,578,2441,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L6-2C10,0,136697.8,596,646,2589,4,0.72,Fig 3c,bar_chart_log_axis
+T3A-L7-2C10,0,826453.7,666,712,2471,4,0.72,Fig 3c,bar_chart_log_axis
+T3A-L8-2C10,0,284212.0,734,782,2541,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L1-2C11,0,222680.5,802,850,2557,10,0.72,Fig 3c,bar_chart_log_axis
+T3A-L2-2C11,0,32602.1,870,918,2683,2,0.72,Fig 3c,bar_chart_log_axis
+T3A-L3-2C11,0,89193.1,940,986,2617,4,0.72,Fig 3c,bar_chart_log_axis
+T3A-L4-2C11,0,5230.5,1008,1056,2803,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L5-2C11,0,731540.6,1072,1120,2479,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L6-2C11,0,422501.1,1142,1188,2515,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L7-2C11,0,174470.4,1210,1258,2573,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L8-2C11,0,573163.0,1280,1326,2495,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L1-2C12,0,813.9,1348,1395,2925,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L2-2C12,0,13058.5,1417,1465,2743,4,0.72,Fig 3c,bar_chart_log_axis
+T3A-L3-2C12,0,51513.4,1483,1533,2653,6,0.72,Fig 3c,bar_chart_log_axis
+T3A-L4-2C12,0,11558.8,1551,1599,2751,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L5-2C12,0,185443.6,1619,1667,2569,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L6-2C12,0,1155883.1,1689,1735,2449,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L7-2C12,0,236685.8,1757,1803,2553,8,0.72,Fig 3c,bar_chart_log_axis
+T3A-L8-2C12,0,555946.6,1825,1871,2497,4,0.72,Fig 3c,bar_chart_log_axis
+DLin-MC3-DMA,1,51513.4,1891,1941,2653,8,0.72,Fig 3c,bar_chart_log_axis
+SM102,1,51513.4,1959,2007,2653,8,0.72,Fig 3c,bar_chart_log_axis
+ALC-0315,1,154433.6,2027,2075,2581,4,0.72,Fig 3c,bar_chart_log_axis
+Lipid 5,1,74278.1,2097,2143,2629,8,0.72,Fig 3c,bar_chart_log_axis

@@ -1,0 +1,675 @@
+# CORPUS-C handback
+
+**NOTE ON DELIVERY:** I could not write `provenance/review/round_2026-10-30/report_CORPUS_C.md` — the harness blocks subagents from writing report files ("Subagents should return findings as text, not write report files"). The full report is reproduced verbatim below, after the short summary, ready to paste to that path.
+
+---
+
+## SHORT SUMMARY (~380 words)
+
+**Classes tested:** 15 error classes claiming an automated check (C1–C11 plus class 13), via **43 seeded mutations** into copies of the corpus.
+
+**Results:** 30 mutations fired, **13 did not**. But the headline is worse than the miss count: of the 30 that fired, **only 5 cause any command to exit non-zero** — all five in C10 and C11.
+
+**Most important finding (E1):** `audit.py` does not fail. At lines 386–390 `main()`'s return value is discarded; exit status derives from the C10/C11 delegates only. I seeded **eight** simultaneous violations into a copy — disconnected `.[Cl-]`, stale `Molecular.Weight`, ratios summing to 109, `Experiment_value='nan'`, wrong `Model`, wrong `Route`, blanked `IL_name`, exact duplicate row. All eight printed. **`EXIT CODE = 0`.** `build_dataset.py` is worse: it never imports `sys`, so the rebuild also always exits 0. Nine of eleven Tier-1 checks are a printed report, which the brief itself says is not a check.
+
+**Runner-up (E3/E4):** C2 is a single-experiment check. 972 vitro series pass its CH2-homology gate; `NAMING_IS_LENGTH = {"KW_2014"}` then discards 737. Non-monotonic masses seeded into AA_2008, LL_2026 and QL_2026 produced **0 violations**. Only 296 of the 737 skips match the code comment's stated reasons; **441 across 12 experiments are undocumented**. Worse, the 0.7 gate is self-defeating: one violation in a 4-member series, or two in a 5-member series, drops the series (`series_checked 235→234`) instead of reporting it. I prototyped the fix — convention derived per `(experiment, token)` — **676 series checked, 0 violations clean, fires on all 5 missed mutations**.
+
+**Also:** 2 of 14 C10 anchors are byte-identical to the enumerator output with no independent code path (notes and CLAUDE.md:369 assert otherwise); `SL_2021_iPhos_neutral` passes on 78 charge-+1 rows; C8 checks 7 of 22 descriptor columns; C1/C8/C9 ignore ~85k helper-lipid SMILES cells; `positional_ambiguity`/`confidence` absent from the shipped schema; 19 fixed-structure reagents outside the registry incl. the SP_2020 near-isomer sterol panel.
+
+**Blind validation:** liu_iphos **holds exactly** (97.73% recall, Spearman 1.000000, perfect 4×4 diagonal, 13 documented residuals). FG_2026's arithmetic and value distribution hold; its "30/30 vs Fig 1c" claim is **not re-derivable** — no stored artifact of the reading.
+
+**CHECKSUM CONFIRMATION:** `data/data_vitro.csv` = `e1324dcd44f35cf5aa04dad91022be86f7e3842d7c0be7b52d1373770f26636a` and `data/data_vivo.csv` = `41ab7dcbd0513c0ace97d86405d79827628ff5873fdbb7823c04c0ed01f486d1`, taken at session start and again at session end — `diff` empty. **The real corpus is byte-identical and untouched.**
+
+---
+---
+
+# FULL REPORT — paste to `provenance/review/round_2026-10-30/report_CORPUS_C.md`
+
+# CORPUS-C — do the automated checks still have teeth?
+
+Round 1, 2026-10-30. Wave 2. Read-only on the repository.
+
+**Method.** Seeded mutation testing. For every error class in `ERROR_CLASSES.md` that claims an automated check, I injected a deliberate instance of that exact bug into a copy of the corpus in my scratch directory, ran the check against the copy, and recorded whether it fired. Checks that hardcode a path into `data/` were copied to scratch and the copies repointed; no file in the repository was edited.
+
+**Corpus integrity.** SHA-256 taken before any work and again after everything below:
+
+```
+e1324dcd44f35cf5aa04dad91022be86f7e3842d7c0be7b52d1373770f26636a  data/data_vitro.csv
+41ab7dcbd0513c0ace97d86405d79827628ff5873fdbb7823c04c0ed01f486d1  data/data_vivo.csv
+```
+
+Both byte-identical at start and end. `diff` of the two checksum files is empty. **The real corpus is untouched.** All mutations were applied to copies under `/private/tmp/claude-501/-Users-nathanliu-Documents-LNP-confound/ebd1fdd9-2e2e-4284-8eb1-27c940f1a93a/scratchpad/`.
+
+**Scope note.** `curation/ng_2025/` was excluded on instruction (another session is working in it), so its 6 C10 anchors are not judged here. Baseline for all mutation deltas: vitro 28,885 rows, vivo 1,780 rows.
+
+---
+
+## 0. The mutation table
+
+Every class tested, the mutation injected, whether the check fired. "Fired" means the check's own reported number moved in the direction that indicates a violation. Whether anything then *fails* is a separate column, and the answer is mostly no.
+
+| Class | Check | Mutation injected | Fired? | Exits non-zero? |
+|---|---|---|---|---|
+| 1 SMILES does not parse | C1 | appended `((` to row 0 `IL_SMILES` | **yes** `unparseable 0→1` | crashes (see E2) |
+| 2 non-canonical SMILES | C1 | `MolToSmiles(canonical=False, rootedAtAtom=3)` on row 0 | **yes** `non_canonical 0→1` | no |
+| 3 disconnected fragment | C1 | appended `.[Cl-]` to row 0 | **yes** `disconnected 0→1` | no |
+| 4 radical electron | C1 | `[CH2]` head on row 0 | **yes** `radical_electrons 0→1` | no |
+| 6 mass non-monotonic, KW_2014 5-member series | C2 | `A125_C14` MW −200 | **yes** `violations 0→1` | no |
+| 6 same, AA_2008 `87_O18` (CH2-homologous, skipped) | C2 | MW −200 | **NO** | no |
+| 6 same, LL_2026 `8A1-1B-EP18` | C2 | MW −400 | **NO** | no |
+| 6 same, QL_2026 `70-L1-C14` | C2 | MW −100 | **NO** | no |
+| 6 same, KW_2014 **4-member** series `A376_C14` | C2 | MW −200 | **NO** (`series_checked 235→234`) | no |
+| 6 same, two violations in a 5-member series | C2 | `A125_C14` −200 and `A125_C12` +200 | **NO** (`series_checked 235→234`) | no |
+| 7 duplicate SMILES, two names, one experiment | C3 | copied row 0's `IL_SMILES` onto row 1 (AA_2008) | **yes** `colliding 48→49` | no |
+| 8 exact duplicate row | C4 | appended a verbatim copy of row 5 | **yes** `exact_dup 1→2` | no |
+| 9 ratios not summing to 100 | C5 | `IL_molratio` +7 on row 0 | **yes** `not-100 0→1` | no |
+| 9 negative ratio (sum held at 100) | C5 | `IL_molratio` → −42, `HL_molratio` +84 | **yes** `negative 0→1` | no |
+| 10 non-finite value | C6 | `Experiment_value = 'nan'` | **yes** `non_finite 0→1` | no |
+| 10 non-finite value | C6 | `Experiment_value = 'inf'` | **yes** `non_finite 0→1` | no |
+| 10 absurd value | C6 | `Experiment_value = 999.0` | **yes** `abs_z_over_12 0→1` | no |
+| 10 absurd value, sub-threshold | C6 | `Experiment_value = 11.5` | **NO** (bound is `|z|>12`) | no |
+| 11 wrong Model | C7 | `Model = 'in_vivo'` in the vitro file | **yes** `wrong_Model 0→1` | no |
+| 11 wrong Route | C7 | `Route_of_administration = 'intravenous'` | **yes** `wrong_Route 0→1` | no |
+| 11 blanked required field | C7 | `IL_name = ''` | **yes** `blank IL_name 1` | no |
+| 11 blanked non-listed field | C7 | `Dose_ug_nucleicacid = ''` | **NO** (7 of 72 cols listed) | no |
+| 11 Cargo/Cargo_type inconsistency | C7 | `Cargo_type = 'GFP'` on an siRNA row → novel pair `siRNA\|GFP` | **no assertion** (see E7) | no |
+| 5 stale descriptor | C8 | `Molecular.Weight` +3 vs its own SMILES | **yes** `disagreeing 0→1` | no |
+| 5 SMILES changed, descriptors left | C8 | row 0 `IL_SMILES` ← row 1's, descriptors untouched | **yes** `disagreeing 0→1` | no |
+| 5 stale `LogP` | C8 | `LogP` +5 | **NO** (not in the 7-column list) | no |
+| 5 stale `Topological.Polar.Surface.Area` | C8 | TPSA +50 | **NO** | no |
+| 5 stale `num_unsaturated_cc_bonds` | C8 | set to 99 | **NO** | no |
+| 12 lost E/Z | C9 | stripped `/` `\` from `AC_2025` KC2 | **yes** `unassigned_CC 212→213` | no |
+| 14 attachment at the wrong atom | **C10** | siegwart `C6O2B2`: cholesteryl ester O moved from C3 to the adjacent ring CH2. `C117H218N5O12+` both sides, skeleton key `JZSXLVWEZCBZIZ → YORBKQFSARAPKJ` | **yes** `CONNECTIVITY_MISMATCH` | **yes, 1** |
+| 15 substituent on the wrong nitrogen | **C10** | lin_aromatic `10A2-3B-EP10`: one aromatic arm and one EP10 tail exchanged between the two terminal N. `C68H126N4O8` both sides, `JUAPTPKSYXADRC → PIFNJKIGKQKJCH` | **yes** `CONNECTIVITY_MISMATCH` | **yes, 1** |
+| 14/15 (third paper) | **C10** | ql_2026 `T3A-L5-C10`: thioether S moved off the succinimide ring carbon onto the exocyclic CH2. `C69H123N7O9S3` both sides, `DKFSQTNBZODLDT → BCNVZMYHSQOFAM` | **yes** `CONNECTIVITY_MISMATCH` | **yes, 1** |
+| 18 two reagent names swapped | **C11** | every `DLin-MC3-DMA` ↔ `KC2` name swapped, 3,284 rows | **yes** `rows_mismatched 0→3284` | **yes, 1** |
+| 18 isomer of identical formula and exact mass | **C11** | all vitro `DSPC` SMILES → the 1,3-distearoyl isomer. `C44H88NO8P` both sides, **exact mass 789.6248 both sides** | **yes** `rows_mismatched 0→6394` | **yes, 1** |
+| 19 unregistered reagent corrupted the same way | C11 | `DSPE-PEG2000` SMILES replaced, 12 rows | **NO** — outside the registry (see E16) | no |
+| 13 z-score sd drift | rebuild | `ZT_2026` ×1.05 (mean held at 0) | **yes**, but *silently repaired* by `renormalize_ddof` | no |
+| 13 z-score mean drift | rebuild | `ZT_2026` +0.30 | **yes** `zscore_experiments_off_spec` | no |
+| 13 sub-threshold mean drift | rebuild | `ZT_2026` +0.0005 | **NO** (tolerance 1e-3) | no |
+| 13 small sd drift | rebuild | `ZT_2026` ×1.02 | silently repaired, inside the 0.05 flag tolerance | no |
+| 13 post-hoc row drop | rebuild | dropped 5 `ZT_2026` rows after z-scoring → mean 0.0195, sd 0.9845 | **yes** `off_spec` | no |
+
+**Tally.** 43 mutations across 15 error classes. 30 fired. **13 did not.** Of the 13 misses, 6 are C2 scope, 3 are C8 column scope, 2 are threshold choices I consider defensible (`|z|>12`, 1e-3 mean), 1 is C7's blank-field list and 1 is C11 coverage. And of the 30 that fired, **only 5 cause any command to exit non-zero** — all five in C10 and C11.
+
+---
+
+## 1. CONFIRMED CORRECT
+
+Everything here I re-derived myself, by the method named.
+
+**C1 has all four teeth it claims.** Unparseable, non-canonical, disconnected fragment and radical electron each moved their own counter on a single seeded row. The radical guard — the one added after the 537-row hydroxyl-deletion bug — works: `sum(a.GetNumRadicalElectrons() ...)` caught a `[CH2]` head immediately.
+
+**C10 genuinely tests topology, and it is the only check that does.** I built three mutants whose molecular formula is *bit-identical* to the original and whose connectivity differs, which is precisely the blind spot the ledger documents. All three were caught, by InChIKey skeleton, and `structure_check.py` returned exit code 1 in each case. The acyl-position mutant is the Siegwart cholesterol bug reconstructed; the nitrogen-exchange mutant is the Lin regiochemistry bug reconstructed. Formulae: `C117H218N5O12+`, `C68H126N4O8`, `C69H123N7O9S3` — unchanged on both sides of every mutation.
+
+**C11 catches the AC_2025 bug and the harder version of it.** The name swap was caught over 3,284 rows. More importantly, replacing DSPC with its 1,3-distearoyl regioisomer — same formula `C44H88NO8P`, same exact mass **789.6248 Da to four decimals**, which is exactly the MC3/KC2 trap — was caught over 6,394 rows, with exit code 1. C11 does the job it was built for.
+
+**C10's anchors agree with the shipped corpus.** For all 14 anchors I compared the corpus `IL_SMILES` skeleton against the curation-stage enumerated string: 14/14 match, 1 corpus variant each. So C10's indirection through the intermediate file is benign *today* (but see E12).
+
+**liu_iphos blind validation — both claimed numbers hold.** I re-derived from `curation/liu_iphos/06_merged.csv` (572 rows, 572 unique names, 572 unique canonical SMILES) against the 572 `SL_2021` rows in `data_vitro.csv`:
+
+- **SMILES recall 559/572 = 97.73%** by InChIKey skeleton. Claimed 97.7%. **Holds.**
+- **Spearman 1.000000** between the blind `rlu_midpoint` and the corpus `Experiment_value`. I computed it three ways — over the 481 exact-canonical matches, the 559 skeleton matches, and all 572 name matches — and got 1.000000 every time (`scipy.stats.spearmanr`). Claimed 1.000. **Holds.**
+- **4×4 confusion is a perfect diagonal.** Each of the four legend bins (`<1,000`, `1,000-10,000`, `10,000-100,000`, `>100,000`) maps to exactly one corpus z-value (−1.159795, 0.210872, 1.581538, 2.952205), with counts 164 / 247 / 57 / 13. Zero off-diagonal. **Holds.**
+- **The 13 residual rows are exactly the documented ones** (`28A3P4`–`28A3P16`), and I confirmed the cause is what the note says. Both strings are `C44H98N5O12P3`; the blind derivation puts the third phosphate arm on N4 of tetraethylenepentamine, the corpus on N3. That is error class 15 in its genuinely-unknowable form, correctly left unfitted.
+
+This is the project's strongest piece of evidence and it survived an independent re-derivation intact. (One thing it does *not* report, though: see E10.)
+
+**amino_lipid_fg_2026 — the arithmetic and the value distribution hold; the 30/30 claim is not re-derivable.** From the 960 `FG_2026` rows in `data_vitro.csv` I parsed every `IL_name` against `^(CH|LH)[-_]?([A-Za-z]{3})[-_]?(.+)$`: 960/960 parsed, **2 cores × 30 amino-acid codes × 16 tails = 960** exactly, every cell of the grid populated once. The stated value distribution (`n 960, min −2.434, max 3.2, distinct 923`) reproduces to the digit. The claimed library arithmetic **holds**. The claim "30 read from Fig 1c, 30 correct" is addressed in §3.
+
+**Class 13 is noticed in all three realistic forms.** An sd drift, a mean drift and a post-hoc row drop were each detected by `renormalize_ddof` / `zscore_experiments_off_spec`. The baseline `zscore_experiments_off_spec` is `{}`, so a mean-drift signal would stand out. (The sd-drift response is repair rather than report — see E14.)
+
+---
+
+## 2. ERRORS FOUND
+
+### E1 — `audit.py` does not fail. Eight seeded violations, exit code 0.
+
+**File.** `provenance/audit.py`, lines 386–390.
+
+```python
+if __name__ == "__main__":
+    main()                                        # C1-C9: return value discarded
+    rc = delegate("structure_check.py", ...)      # C10
+    rc |= delegate("reagent_registry.py", ...)    # C11
+    sys.exit(rc)
+```
+
+`main()` returns `None`. Its return value is not captured, not tested, not used. The process exit status is a function of C10 and C11 **only**. C1–C9 have no failure semantics whatsoever — they print.
+
+**Evidence.** I seeded eight distinct violations simultaneously into a copy — a disconnected `.[Cl-]`, a stale `Molecular.Weight`, a ratio summing to 109, a `nan` `Experiment_value`, a wrong `Model`, a wrong `Route_of_administration`, a blanked `IL_name`, and an exact duplicate row — and ran the copied `audit.py`:
+
+```
+C1 SMILES      unparseable 0  non-canonical 0  disconnected 1  RADICALS 0
+C5 ratios      not-100 1  negative 0  {'AA_2008': 1}
+C6 values      non-finite 1  |z|>12 0
+C7 fields      wrong Model 1  wrong Route 1  blank required {'IL_name': 1, ...}
+C8 descriptors 2 of 28886 disagree
+C4 replicates  340 true replicate groups, 2 exact duplicate rows
+...
+EXIT CODE = 0
+```
+
+CLAUDE.md §6 presents `python3 -I provenance/audit.py` as Tier 1, "automated, every build". It cannot gate anything. Nine of the eleven Tier-1 checks are a 60-line report that a human skims — which is what the brief says is not a check. `provenance/build_dataset.py` is worse: it does not even `import sys`, so the rebuild always exits 0 too.
+
+**Correct value.** `main()` should return a non-zero count of hard violations and that count should reach `sys.exit`. Which findings are "hard" needs a decision, because several are non-zero on the clean corpus (E15) — the honest version is a per-check expected-count baseline committed to the repo, with the check failing on any *increase*. That also fixes the signal-to-noise problem in E15 at the same time.
+
+**How to verify.** Re-run the eight-violation mutation after the change and confirm a non-zero exit; re-run on the clean corpus and confirm zero.
+
+**SEVERITY:** metadata only in itself — but it is the enabling condition for every other class in this report. **CONFIDENCE: certain.**
+
+### E2 — `audit.py` crashes on an unparseable SMILES, destroying the whole report
+
+**File.** `provenance/audit.py`, `c9_stereo()`, line 292.
+
+`c1_smiles()` guards `MolFromSmiles` returning `None`. `c9_stereo()` does not:
+
+```python
+def counts(s):
+    if s not in cache:
+        m = Chem.MolFromSmiles(s)
+        Chem.FindPotentialStereoBonds(m)     # m may be None
+```
+
+**Evidence.** With one unparseable `IL_SMILES` in the copy:
+
+```
+Boost.Python.ArgumentError: Python argument types in
+    rdkit.Chem.rdmolops.FindPotentialStereoBonds(NoneType)
+    did not match C++ signature
+EXIT CODE = 1
+```
+
+Nothing is printed and `audit_findings.json` is never written, because the traceback happens inside `main()`'s loop before any output. The single condition C1 most needs to report is the one that takes the report down with it. `c8_descriptors` handles `None` correctly (`if c is None: bad += 1`), so this is an omission in one function, not a design choice.
+
+**Correct value.** `if m is None: cache[s] = (0, 0); return cache[s]` — and count it, so the row is not silently treated as stereo-clean.
+
+**SEVERITY:** metadata. **CONFIDENCE: certain.**
+
+### E3 — C2 is a single-experiment check. 737 of 972 homologous series are skipped, and 441 of them for no stated reason.
+
+**File.** `provenance/audit.py`, `c2_monotonic()`, line 117: `NAMING_IS_LENGTH = {"KW_2014"}`.
+
+This is the "737 series skipped" line in the printed report, and the skip rule is not sound.
+
+**What the skip actually is.** The function first applies a CH2-step gate: consecutive mass steps must be positive whole multiples of 14.0157 in ≥70% of steps. **972 vitro series pass that gate.** Then line 133 discards every series whose `Experiment_ID` is not `KW_2014` — 737 of them. So 235 of 972 are checked, and the check is effectively `KW_2014`-only.
+
+**The gate already does the job the whitelist claims to need.** If a series' consecutive mass steps are integer CH2 multiples across the series, the numeric token behaves as a chain length *by construction* — that is what the gate measures. The whitelist is redundant and it suppresses 76% of the coverage.
+
+**Evidence from the skipped set.** These all passed the CH2 gate and are unambiguously homologous (steps shown as multiples of CH2 per index step):
+
+| experiment | series | members | steps/CH2 |
+|---|---|---|---|
+| AA_2008 | `87_O*` | O10,O12,O13,O14,O15,O18 | 2.0, 2.0, 2.0, 2.0, 2.0 |
+| JM_2016 | `ZA1-Ep*` | Ep8…Ep18 | 2.0 ×5 |
+| LL_2026 | `8A1-1B-EP*` | EP6…EP18 | 4.0 ×6 |
+| LX_2024_3 | `Xue_siloxane_Si_1_C*` | C6…C18 | 2.0 ×6 |
+| NC_2024 | `A113_O*` | O10…O14 | 5.0 ×4 |
+| QL_2026 | `70-L1-C*` | C6…C14 | 1.0 ×4 |
+| SW_2024 | `Paracyclophane_A2_Tail_Ep*` | Ep4…Ep18 | 3.0 ×7 |
+| XH_2024 | `ep_*` | 6,8,10,12,14 | 2.0 ×4 |
+| YY_2023 | `2A1_C*` | C8,C12,C18 | 2.0 ×2 |
+| ZC_2023 | `2A1-SCC-*` | 4,8,10,12,14 | 2.0 ×4 |
+
+The code comment names three exclusions — `KS_2024` `C24` (two C4 tails), `KZ_2016` `SC1/SC2/SC3` (tail identifiers), `YX_2024` `C1/C2/C3` (component indices). Those account for 14 + 42 + 240 = **296** of the 737. The remaining **441 series across 12 experiments** (AA_2008 94, JM_2016 12, LL_2026 140, LX_2024 12, LX_2024_2 18, LX_2024_3 36, NC_2024 20, QL_2026 64, SW_2024 10, XH_2024 6, YY_2023 17, ZC_2023 12) are skipped with no documented rationale at all. The printed line "token is not a chain length" asserts something false about 441 of the 737 series it covers.
+
+**Mutation evidence.** Making a mass non-monotonic in `AA_2008 87_O18` (−200 Da), `LL_2026 8A1-1B-EP18` (−400 Da) and `QL_2026 70-L1-C14` (−100 Da) produced `violations: 0` in all three cases. Two of those three are *papers merged in the last five curations*, which is the window this review round exists to cover.
+
+**Correct fix, prototyped and measured.** Derive the convention per `(Experiment_ID, token_prefix)` instead of whitelisting one experiment: accept a group if it has ≥3 series and ≥90% of them are *fully* CH2-homologous, then assert monotonicity on every series in the group. I implemented it and ran it:
+
+- **676 series checked**, up from 235 (2.9×), across **18** `(experiment, token)` groups instead of 1;
+- **0 violations on the clean corpus** — it ships green;
+- it **automatically rejects** every group the comment names: `KS_2024` `C`, `KZ_2016` `SC`/`SN`/`SO`, `YX_2024` `C`, `BL_2023` `T`, `BL_2023_3CR` `T`, `BL_2024`, `FG_2026`, `JC_2023` `C`, `JL_2024` `B`, `JW_2024` `R`, `NC_2024` `X`, `XH_2025` `D` — each at 0% fully-homologous, so the rejection is derived, not asserted;
+- it **fires on all five** mutations that current C2 misses or catches, including `A376_C14` and `87_O18`.
+
+**SEVERITY:** changes values — a mass or structure error inside a homologous series is invisible in 76% of the corpus's homologous series. **CONFIDENCE: certain.**
+
+### E4 — C2's 0.7 gate is self-defeating: the worse the corruption, the more likely it escapes
+
+**File.** `provenance/audit.py`, line 131: `if good < 0.7 * len(steps): continue`.
+
+`good` counts steps that are *positive* CH2 multiples. A violation is a non-positive step. So a violation reduces `good`, and enough violations push the series below the gate — at which point it is dropped from the checked set instead of being reported.
+
+**Evidence.** Measured on `KW_2014`, whose series-size distribution is `{2: 1, 4: 2, 5: 233}`:
+
+| mutation | steps | good | gate `0.7·n` | outcome |
+|---|---|---|---|---|
+| one violation in the 4-member `A376_C` series | 3 | 2 | 2.1 | **dropped**, `series_checked 235→234`, `violations 0` |
+| one violation in the 5-member `A125_C` series | 4 | 3 | 2.8 | reported, `violations 1` |
+| **two** violations in the same 5-member series | 4 | 2 | 2.8 | **dropped**, `series_checked 235→234`, `violations 0` |
+
+The only trace is `series_checked` falling by 1 — a number printed as "235 verified-length series checked" that nobody is watching, and which also moves whenever the corpus legitimately grows. A 3-member series (the minimum `len(u) >= 3` admits) can never report a violation at all: one bad step out of two gives `good = 1 < 1.4`. `KW_2014` happens to have no 3-member series today, so this is latent rather than active, but it will not stay that way as papers merge.
+
+**Correct value.** Separate the two questions. Decide whether the token is a chain length from the *magnitudes* of the steps (`|step| / CH2` near an integer), independently of sign; then assert positivity. The prototype in E3 does this and catches the 4-member case.
+
+**SEVERITY:** changes values. **CONFIDENCE: certain.**
+
+### E5 — C8 verifies 7 of the 22 descriptor columns
+
+**File.** `provenance/audit.py`, `c8_descriptors()`, lines 252–253.
+
+```python
+cols = ["Molecular.Weight", "ExactMolWt", "Nitrogen.Count", "Heavy.Atoms",
+        "Rings", "Rotatable.Bonds", "Hydrogen.Bond.Donors"]
+```
+
+The schema carries 22 computed columns (positions 51–72). Fifteen are never compared against the stored SMILES: `Aromatic.Rings`, `Topological.Polar.Surface.Area`, `Hydrogen.Bond.Acceptors`, `LogP`, `Molar.Refractivity`, `Fraction.sp3.Carbons`, `sp3.Carbons`, `has_ester`, `has_carbonate`, `has_disulfide`, `Num_carbon_in_tail`, `num_protonatable_nitrogens`, `num_permanent_cationic_N`, `formal_net_charge`, `num_unsaturated_cc_bonds`.
+
+**Evidence.** `LogP` +5, TPSA +50 and `num_unsaturated_cc_bonds = 99` each left `rows_disagreeing` at 0. The printed line "C8 descriptors 0 of 28885 disagree" reads as whole-row agreement and is 7-column agreement.
+
+This matters more than it looks, because error class 5 (the one C8 owns) was found as "70 rows in JW_2024/LX_2024 had **every** descriptor computed from a superseded SMILES" (`build_dataset.py` comment). A patch that updates a SMILES and recomputes only the seven C8 columns would pass C8 forever while `num_protonatable_nitrogens` and `formal_net_charge` — both load-bearing for the ionisable-lipid analysis — stayed stale.
+
+**Correct value.** Recompute and compare all 22. The cost is one `descriptors()` call per unique SMILES, which `build_dataset.py` already has; C8 currently runs in 3.6 s over 18,410 unique lipids, so the full set is still seconds.
+
+**How to verify.** Perturb each of the 22 columns in turn on a copy and confirm 22/22 fire.
+
+**SEVERITY:** changes values. **CONFIDENCE: certain.**
+
+### E6 — C1, C8 and C9 only ever look at `IL_SMILES`
+
+**File.** `provenance/audit.py` — `c1_smiles`, `c8_descriptors`, `c9_stereo` all read `r["IL_SMILES"]` and nothing else.
+
+The schema has five SMILES columns. Non-blank cells never parsed, never canonicality-checked, never radical-checked, never stereo-checked:
+
+| column | vitro | vivo |
+|---|---|---|
+| `HL_SMILES` | 28,316 | 1,780 |
+| `CHL_SMILES` | 28,399 | 1,729 |
+| `PEG_SMILES` | 27,189 | 1,494 |
+| `fifthcomponent_SMILES` | 486 | 89 |
+
+C11 does check helper-component **names** against structures, but only for the 13 registered names, and only by InChIKey skeleton — so it is blind to a radical electron, a stray counter-ion, or a lost E/Z in a helper lipid, and entirely blind to the 36 unregistered names (E16). `build_dataset.py` canonicalises `SMILES_COLS` at build time, which covers canonicality but not the other three.
+
+Note the interaction with E2: a helper SMILES that does not parse would not even crash the audit, because the audit never calls `MolFromSmiles` on it.
+
+**Correct value.** Run C1 and C9 over all five SMILES columns, reporting per column. C8 cannot extend (there are no helper descriptor columns), which is fine.
+
+**SEVERITY:** changes structures. **CONFIDENCE: certain.**
+
+### E7 — C7's Cargo/Cargo_type "consistency" check contains no assertion
+
+**File.** `provenance/audit.py`, `c7_fields()`, line 240, and the print block at line 364.
+
+The docstring says "C7 Field consistency: Model/Route agreement, **Cargo vs Cargo_type**". The implementation is:
+
+```python
+cargo = Counter((r["Cargo"], r["Cargo_type"]) for r in rows)
+```
+
+That is a frequency table. There is no expected set of pairs, no comparison, no count of disagreements. And `cargo_pairs` is **not printed** — the C7 line prints only `wrong_Model`, `wrong_Route` and `blank_required_fields`. The table lands in `audit_findings.json` and nothing reads it.
+
+**Evidence.** Setting `Cargo_type = 'GFP'` on an siRNA row introduced the novel pair `siRNA|GFP` into a corpus whose only four pairs are `mRNA|FLuc` (24,380), `siRNA|FLuc` (3,313), `pDNA|FLuc` (1,080), `pDNA|GFP` (112). The dict gained a key; no number moved; nothing was printed.
+
+**Correct value.** Commit the allowed pair set (it is four pairs in vitro, six in vivo) and count rows outside it. Given E1, that count then needs to reach the exit code.
+
+**SEVERITY:** metadata. **CONFIDENCE: certain.**
+
+### E8 — C7's blank-field check covers 7 columns of 72, and misses a real gap
+
+**File.** `provenance/audit.py`, lines 243–244.
+
+```python
+for c in ("IL_name", "IL_SMILES", "Experiment_method", "Model_type",
+          "Cargo", "Experiment_value", "Publication_PMID"):
+```
+
+Blanking `Dose_ug_nucleicacid` did not fire. Neither would a blank `Experiment_ID`, `Model`, `Route_of_administration`, `Publication_DOI`, `Aqueous_buffer`, `Mixing_method`, or any formulation ratio.
+
+**A live instance the current list misses.** 1,798 vitro rows carry `PEG_name = "Unknown"` with an empty `PEG_SMILES` (KZ_2016 1,538; RG_2023 260). That is a named-but-unknown fourth component in 6.2% of the vitro corpus, and nothing in Tier 1 says so. `Publication_PMID` is blank on 2,544 vitro rows, which *is* reported, every run, with exit 0 (E15).
+
+**Correct value.** Define the required-field set explicitly against the 72-column schema — it is a judgement about which columns the analysis depends on, and it belongs in one place rather than inside a tuple in a print helper.
+
+**SEVERITY:** metadata. **CONFIDENCE: certain.**
+
+### E9 — two of the 14 C10 anchors are byte-identical to the enumerator's own output, and their notes claim they are not
+
+This is the failure mode the ledger explicitly warns about: *"a C10 anchor copied from the enumeration (can only pass)"*.
+
+**Method.** The ledger's own objection is that string comparison cannot settle this, because a canonicalised honest derivation is byte-identical to a copy. True — so I used a different discriminator: **what the repository's own convention is.** For each anchor I compared the stored `reference_SMILES` to the enumerated `IL_SMILES` four ways (byte-equal; equal to `MolToSmiles(enumerated)`; skeleton-equal; and whether the enumerated string is itself canonical), and I looked for any code or intermediate artifact that builds a reference.
+
+| paper | anchor | ref == enum, byte | ref == canon(enum) | skeleton match | reference-building code present | verdict |
+|---|---|---|---|---|---|---|
+| lin_aromatic_2026 | `10A2-3B-EP10` | **TRUE** | **TRUE** | yes | **none** | **cannot be evidenced as independent** |
+| siegwart_42634137 | `C6O2B2` | **TRUE** | **TRUE** | yes | **none** | **cannot be evidenced as independent** |
+| ql_2026 | `T3A-L5-C10` | false | false | yes | none, but string is non-canonical and amine-rooted | independent — a copy could not produce it |
+| wht_2026_falcon | `DLin-MC3-DMA` | false | false | yes | none, non-canonical | independent |
+| wht_2026_falcon | `SM-102` | false | false | yes | none, non-canonical | independent |
+| xd_2026_lipidai | `SM-102` | false | false | yes | none, head-first ordering | independent |
+| xd_2026_lipidai | `DLin-MC3-DMA` | false | false | yes | none, amine-first ordering | independent |
+| xd_2026_lipidai | `ALC-0315` | false | false | **no** (`expected_mismatch`) | none | independent — a copy could not disagree |
+| xd_2026_lipidai | `E1`–`E9` (9) | — | — | — | — | `NO_DRAWN_STRUCTURE`, correctly empty |
+| ng_2025 | 6 anchors | not assessed | | | `stage08_reference.py` **exists** | excluded on instruction |
+
+Every enumerated string in the corpus is already canonical (`enum == canon(enum)` is TRUE for all eight). So the repository's convention is visible: six of the eight anchors store a **hand-typed, non-canonical** string, in a deliberately different atom order, and their notes say so ("written head-first", "a deliberately different atom order from the corpus string", "amine-first"). Two store exactly the canonical form. That is the anomaly.
+
+**What makes it a finding rather than a quibble.** Both of those two anchors carry a note asserting the opposite:
+
+- `lin_aromatic_2026`: *"Assembled from fragments independently of enumerate_library.py."*
+- `siegwart_42634137`: *"Connectivity read off the drawn structure and assembled from fragments, independently of enumerate.py."*
+
+and `CLAUDE.md` line 369 states it as established fact: *"Anchors created for both curated papers — Siegwart C6O2B2 (Fig 2a) and Lin 10A2-3B-EP10 (Fig S17 …) — both exact matches, **each assembled by a different code path than the enumerator**."* There is no artifact of that different code path anywhere in either folder: no script, no intermediate CSV, no fragment file. `grep -rl reference_structures` over the repository returns a reference-building script in exactly one folder — `curation/ng_2025/stage08_reference.py` — which is the correct pattern and the only instance of it.
+
+**The honest reading, both ways.** There *is* positive evidence that an independent assembly happened at creation time for Siegwart: `CHANGELOG.md` line 241 records that building the anchor corrected C6O2B2's formula (`C117H217N5O12+ → C117H218N5O12+`, MW 1886.05 → 1887.05), and CLAUDE.md records that it caught a SMILES ring-closure collision that had fused the piperazine to cholesterol. A copied reference could not have found either. So the claim is probably true *as history*.
+
+But that is not what the anchor does now. Once the enumerator was corrected to agree and the reference stored as the canonical string, the artifact stopped being an independent derivation and became a **regression lock**: it detects future drift in the enumerator (my C10a mutation proves it does, and well) but it can no longer testify that today's structure is right. For `lin_aromatic_2026` that distinction bites hardest, because the class the anchor is supposed to cover for that paper is **class 15, regiochemistry** — and a reference that is byte-identical to the enumeration has exactly zero discriminating power on which nitrogen carries which arm.
+
+**Correct value.** Two things, neither expensive:
+1. Re-derive those two references now, by fragment assembly, and store them in a non-canonical atom order like the other six. If they agree, the anchors become evidence again at the cost of one session.
+2. Add an advisory status to `structure_check.py` — `ANCHOR_BYTE_IDENTICAL_TO_ENUMERATION` — that fires whenever `reference_SMILES == enumerated IL_SMILES` verbatim. The ledger is right that this cannot *prove* copying, so it must not fail the build; but as a visible flag requiring a `read_by` note that names the code path, it converts an invisible risk into a reviewable one. Under the repository's actual convention it would currently flag exactly these two rows and no others.
+
+**How to verify.** After re-derivation, confirm `ref != enum` byte-wise and `skeleton_match == True`; and confirm the advisory status fires on a deliberately pasted reference.
+
+**SEVERITY:** changes structures — not the data, but the assurance the project believes it has on two of the three papers whose structural bugs created C10. **CONFIDENCE: probable.** Byte-identity is not proof, and I say so; what is certain is that no artifact in the repository can evidence the independence that two notes and CLAUDE.md assert, and that the convention followed by the other six anchors was not followed by these two.
+
+### E10 — `SL_2021_iPhos_neutral` passes on 78 non-neutral rows, because its predicate permits what its name forbids
+
+**File.** `provenance/build_dataset.py`, `validate()`, lines ~685–690.
+
+```python
+"SL_2021_iPhos_neutral": {"formal_charge_histogram": {...},
+                          "pass": set(charges) <= {0, 1}},
+```
+
+**Evidence.** `provenance/dataset_validation.json`:
+
+```json
+"SL_2021_iPhos_neutral": {"formal_charge_histogram": {"0": 494, "1": 78}, "pass": true}
+```
+
+The check is named "iPhos **neutral**", prints its own counter-evidence, and passes, because `{0, 1} <= {0, 1}`. A check whose pass condition admits the state its name rules out is not a check; it is a label.
+
+**The underlying data issue, which is independent of the predicate.** I scanned formal charge per experiment across the whole corpus: **`SL_2021` is the only one of 42 vitro and 19 vivo experiments with a mixed charge convention** — 494 rows at net 0 and 78 at net +1. And the project's own blind re-derivation disagrees with the corpus on exactly those 78 rows. From `curation/liu_iphos/06_merged.csv`:
+
+```
+14A1P10  blind : CCCCCCCCCCOP(=O)([O-])OCC[N+](CCCC)(CCCC)CCCC   C24H52NO4P   net 0
+         corpus: CCCCCCCCCCOP(=O)(O)OCC[N+](CCCC)(CCCC)CCCC      C24H53NO4P+  net +1
+```
+
+The 78 rows are the quaternary-ammonium phosphates — the full `14A1`, `15A1`, `16A1`, `17A1`, `18A1` and `26A4` series, P4 through P16, 6 × 13 = 78. The blind extraction writes them as zwitterions (phosphate deprotonated against the permanent cation, the chemically correct species); the corpus writes them as phosphoric-acid cations.
+
+Because every descriptor is recomputed from the stored SMILES, C8 passes cleanly — and so those 78 lipids' `Molecular.Weight`, `ExactMolWt`, `LogP`, `TPSA`, `Hydrogen.Bond.Donors`, `formal_net_charge` and `num_permanent_cationic_N` all sit on a *different protonation basis* from the other 494 rows of the same experiment. In a corpus assembled to study structure–activity across ionisable lipids, that is a live confound inside one experiment.
+
+This is also a gap in the blind-validation report itself. `liu_iphos/07_qc.json` reports `"confusion": "perfect diagonal, 4x4"` and `recall 97.7%` and says nothing about 78 of 572 structures disagreeing on charge — because the recall was computed at skeleton level, which is charge-blind. Exact-canonical recall is **481/572 = 84.1%**, and the 91-row gap decomposes as 78 charge disagreements + 13 documented positional-ambiguity rows. The 97.7% number is correct as stated; what it measures is narrower than "the method recovers the known-correct answer".
+
+**Correct value.** Unknown to me, and the brief's rule applies: do not repair the cheaper half. The corpus SMILES came from upstream LNPDB/COMET, which stores structures and labels; the blind derivation came from the paper's Scheme. Go to the upstream record for those 78 rows and find out which species the measurement was recorded against. **Then** fix the predicate to `set(charges) == {0}` (or whatever the resolved convention is) so it means what it says.
+
+**How to verify.** After the decision, assert that `SL_2021`'s charge histogram has exactly one key, and add a corpus-wide invariant that no single experiment mixes protonation conventions (today that invariant holds for 60 of 61 experiments, so it would ship with one known exception rather than silently).
+
+**SEVERITY:** changes values — 78 rows' descriptors are on a different basis from their own experiment. **CONFIDENCE: certain** on the histogram, the mixed convention and the blind-extraction disagreement; **probable** on which half is wrong.
+
+### E11 — the documented mitigation for four "not yet automatable" classes does not exist in the shipped corpus
+
+`CLAUDE.md` §6, "Residual risk, stated honestly": *"The posture for the manuscript is to state the verification procedure and **flag those rows in the data** (`positional_ambiguity`, `*_assumed`, `confidence`), so a reader can see which values are measured and which are convention."* `ERROR_CLASSES.md` names the same flags as the entire mitigation for four of its eight un-automatable classes ("commercial reagent that is an isomer mixture" → `confidence = medium`; "regiochemistry a paper never pins" → `positional_ambiguity` / `*_assumed`, confidence low; "a structure with no external anchor at all" → `confidence = medium`; and the C10-anchor row, via `read_by`/`note`).
+
+**Evidence.** The shipped schema is 72 columns, identical in both files. Columns matching `ambig`, `assum`, `confid`, `flag`, `note`, `unresolv`: **none, in either file.** The flags exist upstream and are dropped at merge:
+
+| folder / file | column | distribution | shipped rows affected |
+|---|---|---|---|
+| `lin_aromatic_2026/06_merged.csv` | `positional_ambiguity` | **840/840 = 1** | LL_2026, 840 rows |
+| `lin_aromatic_2026/06_merged.csv` | `confidence` | high 700, **medium 140** | LL_2026, 840 rows |
+| `lin_aromatic_2026/13_enumerated_147.csv` | `positional_ambiguity` | **147/147 = 1** | LL_2026_2, 147 rows |
+| `siegwart_42634137/03_enumerated.csv` | `quaternization_site_assumed` | **1 for 24 of 36 lipids** | ZT_2026, 486 rows |
+| `siegwart_42634137/03_enumerated.csv` | `confidence` | **low 24**, medium 6, high 6 | ZT_2026, 486 rows |
+| `xd_2026_lipidai/07_XD_2026_values.csv` | `confidence` | **medium 9**, high 3 | XD_2026, 12 vivo rows |
+| `liu_iphos/06_merged.csv` | `positional_ambiguity` | **1 for 208 of 572** | (blind validation, not merged) |
+| `ql_2026/*_blocks.csv`, `*_conditions.csv` | `read_confidence`, `ambiguity_note` | per-block | QL_2026 |
+
+So **every one of LL_2026's 987 rows is positionally ambiguous and 140 are medium-confidence; all 486 ZT_2026 rows descend from a lipid set where 24 of 36 have an assumed quaternisation site and confidence `low`** — and none of that reaches a reader of `data_vitro.csv`. A reviewer who checks whether the mitigation is in force finds that it is not, which is error class 21 ("provenance text asserts one thing, the code does another") applied to the project's own residual-risk statement.
+
+**Correct value.** Carry `positional_ambiguity`, `confidence` and the `*_assumed` flags through `merge_curations()` into the 72-column schema (making it 75), defaulting to `0` / `high` / `0` for rows whose curation did not record them, and then add the check that is currently impossible: every row whose curation recorded a flag must carry it, and no row may carry `confidence = high` if its curation said otherwise.
+
+**How to verify.** After the change, join the shipped rows back to each `06_merged.csv` on `lipid_name` and assert the flags agree row for row.
+
+**SEVERITY:** metadata — but it voids the stated posture for four error classes and for the manuscript. **CONFIDENCE: certain.**
+
+### E12 — C10 validates the intermediate enumeration file, not the shipped corpus
+
+**File.** `provenance/structure_check.py`, `enumerated_lookup()` — reads `03_enumerated.csv` / `06_merged.csv` / `13_enumerated_147.csv` / `09_enumerated_344.csv` from the curation folder. It never opens `data/`.
+
+Between those files and the corpus sit `apply_patches` (`STRUCTURE_PATCHES`), `apply_component_patches`, `apply_name_patches` and a re-canonicalisation pass in `build_dataset.py`. A structure patch applied after enumeration is outside C10's reach: C10 would compare the paper's drawing to the pre-patch string and pass, while the corpus shipped the patched one.
+
+**Evidence that this is benign today, and only today.** I checked all 14 anchors by InChIKey skeleton, corpus against enumeration: 14/14 match, one corpus variant each. So no anchor is currently affected. The gap is structural, not active.
+
+Note also the two file-naming brittlenesses in the same function: the four enumeration filenames are hardcoded (`13_enumerated_147.csv`, `09_enumerated_344.csv` encode row counts in their names), and `out.setdefault(...)` takes the **first** file that has a name, so if `03_enumerated.csv` and `06_merged.csv` disagree the merged file is silently ignored. A renamed or renumbered enumeration file would turn an anchor into `ENUMERATED_STRUCTURE_NOT_FOUND` — which does at least fail (`n_fail += 1`), so this one degrades loudly rather than quietly. Good.
+
+**Correct value.** Resolve each anchor against `data/data_vitro.csv` / `data_vivo.csv` by `IL_name` and compare there, keeping the enumeration comparison as a second assertion. Then C10 covers what ships.
+
+**SEVERITY:** cosmetic today. **CONFIDENCE: certain** on the scope, **speculative** on the risk.
+
+### E13 — no check covers tetrahedral stereochemistry; 64.7% of vitro rows carry an unassigned stereocentre
+
+**File.** `provenance/audit.py`, `c9_stereo()` — uses `Chem.FindPotentialStereoBonds` and inspects `b.GetStereo()` over bonds. It sees alkene (and imine) geometry only. Error class 12 is scoped to "lost E/Z on a stereogenic double bond", and C9 covers that class correctly — my E/Z mutation fired. But nothing in Tier 1 looks at a chiral carbon.
+
+**Evidence** (`Chem.FindMolChiralCenters(includeUnassigned=True, useLegacyImplementation=False)` over every row):
+
+| file | rows | ≥1 **unassigned** tetrahedral centre | experiments affected |
+|---|---|---|---|
+| `data_vitro.csv` | 28,885 | **18,697 (64.7%)** | 37 of 42 |
+| `data_vivo.csv` | 1,780 | **1,561 (87.7%)** | 17 of 19 |
+
+Vitro breakdown by `(has_assigned, has_unassigned)`: `(F,F) 9,626`, `(F,T) 17,976`, `(T,T) 721`, `(T,F) 562`. So 721 rows *mix* assigned and unassigned centres in one molecule — the tetrahedral analogue of the `rows_mixing_assigned_and_unassigned_CC` signal that C9 does report for alkenes.
+
+**The clearest case is the one the blind-validation folder covers.** All **960** `FG_2026` rows have between 2 and 8 unassigned tetrahedral centres and **zero assigned** — yet every one is named with a standard three-letter α-amino-acid code (`Ala`, `Leu`, `Trp` …), and those codes specify L configuration. Contrast `ZT_2026`, where all 400 sampled rows carry 8 assigned centres and 0 unassigned. There is no corpus-wide convention and no check that would surface the difference.
+
+Some of this is correct and should stay: `SL_2021`'s iPhos carbinols are racemic, and `lin_aromatic_2026`'s note says explicitly *"No stereocentres are drawn (the epoxide-opened carbinols are racemic), so none are asserted."* That is the right call. The point is that "deliberately racemic" and "we lost it" are currently indistinguishable in the data, across 18,697 rows.
+
+**Correct value.** Extend C9 to report, per experiment, the count of rows with ≥1 unassigned tetrahedral centre and the count mixing assigned with unassigned — exactly parallel to what it already does for C=C. Commit the per-experiment expected counts, so a *change* fails. Then make the FG_2026 call explicitly: either assign L at every α-carbon, or record in the curation folder that the paper does not pin it.
+
+**How to verify.** Strip a stereo descriptor from a `ZT_2026` SMILES on a copy and confirm the new counter moves (the current C9 does not move at all — I confirmed this: `ZT_2026` contributes 0 to `rows_with_unassigned_stereogenic_CC`).
+
+**SEVERITY:** changes structures. **CONFIDENCE: certain** on the counts; **probable** that FG_2026 specifically should carry assigned centres.
+
+### E14 — class 13's enforcement repairs rather than reports, and the rebuild cannot fail
+
+**File.** `provenance/build_dataset.py`, `renormalize_ddof()` (line 508) and `validate()`'s `zscore_experiments_off_spec` (line 666).
+
+Three separate issues.
+
+**(a) The rebuild has no failure path.** `sys` is never imported. `main()` ends with `report(qc)`. Whatever `validate()` finds, the build exits 0 and writes the CSVs. Class 13's row in the ledger says the check is "enforced at rebuild"; nothing is enforced.
+
+**(b) `renormalize_ddof` silently rescales rather than flagging.** Seeding a ×1.05 scale error into `ZT_2026` produced `{'n': 486, 'scale': 0.952381, 'old_pop_sd': 1.05, 'new_pop_sd': 1.0}` and the values were corrected in place. For a genuine *convention* difference (ddof=1 vs ddof=0) that is the documented and correct behaviour, and the docstring argues it well. But the mechanism cannot tell a convention difference from a calibration error that happens to be multiplicative — and error class 20, the `ql_2026` log-axis bug, *was* multiplicative (every value high by up to 1.76×). A uniform scale error introduced during digitisation is absorbed and erased here, not reported. A ×1.02 drift sits inside `validate()`'s 0.05 tolerance as well, so after renormalisation nothing anywhere records that it happened except the `renormalized_to_population_sd` list.
+
+**(c) That list is not a clean signal.** `dataset_validation.json` currently holds five entries (`KL_2010` scale 1.010153, `SP_2020` 1.035098, `YZ_2022` 1.000463, `YZ_2024` 1.000463, `LZ_2025` 1.010582). The printed line is `renormalized to pop sd 1 -- vitro: [...]`. A sixth entry appearing is one more ID in a list of five that is expected to be non-empty. By contrast `zscore_experiments_off_spec` **is** `{}` at baseline, so the mean-drift and row-drop signals are clean and do stand out — credit where it is due.
+
+**Evidence summary** (all on `ZT_2026`, n=486, clean mean −0.0 / sd 1.0):
+
+| mutation | before renorm | repaired? | still flagged? | net visibility |
+|---|---|---|---|---|
+| ×1.05 | mean 0.0, sd 1.05 | yes, ×0.952381 | no | one ID added to a 5-entry list |
+| +0.30 | mean 0.30, sd 1.0 | no | **yes** | clean — `off_spec` baseline is `{}` |
+| +0.0005 | mean 0.0005 | no | no | **invisible** (tolerance 1e-3) |
+| ×1.02 | sd 1.02 | yes, ×0.980392 | no | one ID added to a 5-entry list |
+| drop 5 rows post-hoc | mean 0.019473, sd 0.98453 | no | **yes** | clean |
+
+**Correct value.** (i) Make the rebuild exit non-zero when `zscore_experiments_off_spec` is non-empty. (ii) Commit the five expected renormalisation entries as a baseline and fail on any *sixth* — a new renormalisation means either a new curation or a new bug, and both deserve a human. (iii) Record the applied scale factor per experiment in the QC JSON (already done) **and** assert it against the committed baseline, so an experiment's scale factor silently changing between builds is caught.
+
+**SEVERITY:** changes values. **CONFIDENCE: certain.**
+
+### E15 — the noise floor: real violations printed every run, exit 0, indistinguishable from new ones
+
+A check whose clean-corpus output is non-zero cannot signal a new instance by moving. Four of the nine C1–C9 checks are in that state right now.
+
+**C4 — one exact duplicate row, in the shipped corpus.**
+
+```
+Experiment_ID=WT_2026  IL_name=SM-102  n=2  value=-0.07815798875171255
+LNP_IDs=['LNP_0024563', 'LNP_0024574']   Index=['24563', '24574']
+```
+
+Identical in all 68 descriptive columns and identical in value. `WT_2026` is one of the five curations this review round covers. Printed as "`exact duplicate rows`" = 1 on the clean corpus, and it exits 0.
+
+**C5 — three vivo rows whose ratios do not sum to 100, two of them badly.**
+
+```
+SB_2024  Dlin-MC3-DMA  LNP_0014758  sum=101.00  IL=50.0 HL=10.0 CHL=39.5 PEG=1.5 5th=
+SB_2024  Dlin-MC3-DMA  LNP_0014767  sum=125.00  IL=25.0 HL=10.0 CHL=38.5 PEG=1.5 5th=50.0
+SB_2024  Dlin-MC3-DMA  LNP_0014768  sum=125.00  IL=25.0 HL=10.0 CHL=38.5 PEG=1.5 5th=50.0
+```
+
+The two at 125 look like a fifth component of 50 mol% added on top of a 75 mol% base rather than substituted into it — a formulation that does not exist. `SB_2024` is also one of the two vivo experiments flagged as not on the z-score scale, so it has two independent problems and neither fails anything.
+
+**C3 — 39 vitro + 12 vivo colliding-name groups with *conflicting* values**, over 146 rows: vitro `KW_2014` 25, `BL_2023` 11, `JW_2024` 2, `AA_2008` 1; vivo `SX_2025` 9, `KW_2014` 1, `LR_2023` 1, `ZH_2023` 1. The audit's own docstring calls this "a contradiction": same structure, same formulation, same cell line, different value. 39 of them print as a number on one line, every run, exit 0.
+
+**C7 — 2,544 vitro rows with a blank `Publication_PMID`.**
+
+**C9 — 212 vitro rows with an unassigned stereogenic C=C** (`FG_2026` 120, `YX_2026_SDL` 79, `NC_2024` 13) and 23 + 3 rows *mixing* assigned with unassigned in one molecule.
+
+My C3 mutation moved `colliding_name_groups` from 48 to 49, and my C4 mutation moved `exact_duplicate_rows` from 1 to 2. Both "fired" in the strict sense. In practice, neither is detectable by a human reading the report.
+
+**Correct value.** Commit a baseline JSON of every C1–C9 counter's expected value on the current corpus and fail on any increase. That is the single change that makes E1's exit code useful, and it converts five pre-existing findings from background noise into either a fixed bug or an explicit, documented exception.
+
+**SEVERITY:** changes values (`SB_2024`'s ratios, the 146 contradictory rows) / metadata (the rest). **CONFIDENCE: certain.**
+
+### E16 — C11 coverage: 36 component names outside the registry; 19 of them are simply missing
+
+`reagent_registry.py` pins 13 names. I enumerated every `HL_name`, `CHL_name`, `PEG_name` and `fifthcomponent_name` in both corpus files and subtracted the registry. **36 names remain, over 31,854 component-slot occurrences.**
+
+**Deliberate and correct to exclude — PEG-lipids (the block length is a distribution): 15 names, 28,683 occurrences.** `DMG-PEG2000` (22,640), `DMPE-PEG2000` (5,484), `C14-PEG2000` (480), `DSG-PEG2000` (13), `ALC-0159` (12), `DMG-C-PEG2000` (12), `C8-Ceramide-PEG2000` (12), `C16-Ceramide-PEG2000` (12), `DSPE-PEG2000` (12), `DMG-PEG5000` (1), `DPG-PEG2000` (1), `DPG-PEG5000` (1), `DSG-PEG5000` (1), `DOG-PEG2000` (1), `DOG-PEG5000` (1). The module docstring states this rule and it is right. Worth noting `DMPE-PEG2000` carries **2 distinct SMILES** across 5,484 rows — defensible for a PEG lipid, but nothing records which is which.
+
+**Deliberate for a different reason — a genuine mixture: 1 name, 81 rows.** `EggSM` (egg sphingomyelin, `ZT_2026`) is a natural homolog distribution, not one molecule. It belongs with the PEG lipids as an explicit exclusion, which it currently is not — it is just absent.
+
+**Not a reagent at all — 1 name, 1,798 rows.** `PEG_name = "Unknown"` with an empty `PEG_SMILES` (`KZ_2016` 1,538, `RG_2023` 260). See E8.
+
+**Simply missing, with fixed and public structures — 19 names, 1,292 occurrences.** These are exactly what C11 was built for:
+
+| name | rows | slot | experiments | why it should be registered |
+|---|---|---|---|---|
+| `MDOA` | 572 | HL | SL_2021 | single defined helper lipid |
+| `DODAP` | 537 | 5th | ZT_2026 | 1,2-dioleoyl-3-dimethylammonium-propane — **same chemical class as the registered `DOTAP`**, differing only in the amine; a name/structure swap between them would be invisible |
+| `DMPC` | 81 | HL | ZT_2026 | 1,2-dimyristoyl-*sn*-glycero-3-phosphocholine — **same class as the registered `DSPC`/`DOPC`**, differing only in chain length |
+| `n-butyl lithocholate` | 35 | CHL | SY_2025, SB_2024 | bile-acid ester, defined |
+| `6,6'-trehalose dioleate` | 38 | 5th | SB_2024, SY_2025 | defined |
+| `Beta-Sitosterol` | 5 | CHL | SP_2020 | **differs from `Campesterol` by one CH2 and from `Stigmasterol` by one double bond** |
+| `Campesterol` | 4 | CHL | SP_2020 | as above |
+| `Fucosterol` | 4 | CHL | SP_2020 | isomeric with sitosterol |
+| `Stigmastanol` | 4 | CHL | SP_2020 | differs from sitosterol by one double bond |
+| `3-methylpentyl lithocholate` | 2 | CHL | SB_2024 | defined |
+| `iso-Pentyl lithocholate` | 2 | CHL | SB_2024 | defined (3-methylbutyl) |
+| `Vitamin D2`, `Vitamin D3`, `Calcipotriol`, `Stigmasterol`, `Betulin`, `Lupeol`, `Ursolic acid`, `Oleanolic acid` | 1 each | CHL | SP_2020 | single defined natural products |
+
+The `SP_2020` sterol panel is the highest-value group per row in the whole corpus for this check. Sitosterol / campesterol / stigmasterol / stigmastanol / fucosterol are a set of five near-isomers that differ by one CH2 or one double bond, used as the *independent variable* of that experiment. That is the exact geometry of the MC3/KC2 bug — a family where mass and formula cannot discriminate and a name swap changes which molecule every measurement belongs to. Thirteen registry entries would close it, and `DODAP` plus `DMPC` are two more that sit immediately beside already-registered members of their own class.
+
+**Correct value.** Add 19 entries, written from the chemical name with the authority recorded, exactly as the existing 13 are. Add `EggSM` to a new `DELIBERATELY_UNREGISTERED` dict with the reason ("natural homolog distribution"), alongside the PEG rule, so the exclusions are enumerated rather than implied by absence — and add a check that every component name in the corpus is in `REGISTRY` **or** in `DELIBERATELY_UNREGISTERED`, so a new unregistered reagent cannot arrive silently. That last check is the ratchet for this class, and it is the piece that is missing.
+
+**How to verify.** My mutation `C11c` — corrupting `DSPE-PEG2000`'s SMILES — produced `rows_mismatched 0`, exit 0. Repeat it against `DODAP` after registration and confirm it fires.
+
+**SEVERITY:** changes structures (potential). **CONFIDENCE: certain.**
+
+### E17 — C11 only checks name → structure, never structure → name
+
+`reagent_registry.py` iterates registered names and checks the structures found under them. The inverse — a *registered structure* appearing under an unregistered or different name — is never checked. The `AC_2025` bug would have been caught either way, but a mislabelled single reagent (MC3's structure stored as `Lipid-47`) only shows up in the inverse direction.
+
+**Evidence.** I implemented the inverse scan — skeleton-match every `{IL,HL,CHL,PEG,fifthcomponent}_SMILES` in both corpus files against the 13 registry skeletons, and report any whose name is not the registered one — and found **0 violations** over the whole corpus. So the check can be added green, today, at no cost.
+
+**Correct value.** Add the inverse pass to `reagent_registry.py` and report `registered_structure_under_wrong_name`.
+
+**SEVERITY:** cosmetic today. **CONFIDENCE: certain.**
+
+---
+
+## 3. UNVERIFIABLE
+
+**`amino_lipid_fg_2026`'s "30/30 building blocks" claim.** The folder contains two PDFs, a `00_pages/` render directory and `07_qc.json`, and **no artifact of the figure reading** — no CSV of the 30 codes with their structures, no overlay PNG, no intermediate JSON. I can and did confirm everything downstream of the reading: 960 corpus rows, 2 cores × 30 three-letter codes × 16 tails = 960 exactly, and a value distribution matching `07_qc.json` to the digit (`n 960, min −2.434, max 3.2, distinct 923`). I cannot confirm that the 30 codes match the 30 structures drawn in Fig 1c, because nothing stored says what was read. The claim `{"n_read": 30, "n_correct": 30, "n_missed": 0, "n_spurious": 0}` is a self-report in the same file that asserts it.
+
+This matters more than it would for a normal curation, because `FG_2026` has **no other structural check at all**: no `reference_structures.csv`, so C10 does not cover it; 15 of its 30 amino-acid codes are non-standard (`Aad`, `Cha`, `Cit`, `Cth`, `Eth`, `Gsh`, `Hcy`, `Hse`, `Nle`, `Nva`, `Orn`, `Pen`, `Sem`, `The`, `Tle`), which is precisely the "name token misread" class; and all 960 structures have unassigned stereocentres (E13). It is one of the two folders the project points to as end-to-end evidence, and it is the less verifiable half. **What would settle it:** store the 30 decoded building blocks as a CSV (`code, SMILES, source_figure, read_on`) and add a `reference_structures.csv` anchor for one lipid; and download the Nature Source Data xlsx that `07_qc.json`'s own BLOCKER names, to validate the 960 values.
+
+**Whether the two byte-identical C10 anchors were derived then canonicalised, or copied.** The ledger is right that no string comparison can answer this. I established what I could — the repository contains no reference-building artifact for either folder, the other six anchors follow the opposite convention, and `CHANGELOG.md` records that building the Siegwart anchor *did* once correct the enumeration (so an independent assembly happened at some point). What I cannot determine is whether the string now stored came from that assembly or from the enumerated column afterwards. **What would settle it:** re-deriving both by fragment assembly now, which also repairs the problem.
+
+**Which half of the `SL_2021` protonation disagreement is correct.** Per the brief's rule, finding that the corpus and the blind extraction disagree does not say which is wrong, and the two repairs are not equivalent. **What would settle it:** the upstream LNPDB/COMET record for those 78 lipids — specifically whether the stored structure or a downstream annotation carries the protonation state, the same question that settled MC3/KC2.
+
+**`curation/ng_2025/`'s 6 anchors.** Excluded on instruction. Worth flagging for whoever adjudicates: `ng_2025` is the **only** folder in the repository with an actual reference-building script (`stage08_reference.py`, plus `stage09_qc.py`), which is the pattern E9 says the other folders should adopt. Its anchors should be assessed by the session working there, and if its approach holds up it is the model to copy.
+
+**Whether the 39 + 12 C3 contradictions are errors.** They are real contradictions by the audit's own definition (identical structure, formulation and model; different value), but distinguishing "two names for one molecule, two measurements" from "a genuine duplicate-structure enumeration bug" needs each paper's own material. Out of scope for a corpus-level pass; the actionable part is that the count must stop being background noise (E15).
+
+---
+
+## 4. SEVERITY
+
+| # | Finding | Severity |
+|---|---|---|
+| E1 | `audit.py` exits 0 on eight seeded violations | **metadata** (enabling condition for all others) |
+| E2 | `audit.py` crashes on an unparseable SMILES, losing the report | **metadata** |
+| E3 | C2 checks 235 of 972 homologous series; 441 skipped undocumented | **changes values** |
+| E4 | C2's 0.7 gate drops the series instead of reporting the violation | **changes values** |
+| E5 | C8 verifies 7 of 22 descriptor columns | **changes values** |
+| E6 | C1/C8/C9 never look at `HL`/`CHL`/`PEG`/`fifth` SMILES (~85k cells) | **changes structures** |
+| E7 | C7's Cargo/Cargo_type check contains no assertion | **metadata** |
+| E8 | C7 blank-field list is 7 of 72 columns; 1,798 `PEG_name="Unknown"` rows | **metadata** |
+| E9 | 2 of 14 C10 anchors byte-identical to the enumeration; notes claim otherwise | **changes structures** (the assurance) |
+| E10 | `SL_2021_iPhos_neutral` passes on 78 charge-+1 rows; mixed convention | **changes values** |
+| E11 | `positional_ambiguity`/`confidence`/`*_assumed` absent from the shipped schema | **metadata** (voids 4 mitigations) |
+| E12 | C10 validates the intermediate file, not the corpus | **cosmetic** today |
+| E13 | No check covers tetrahedral stereo; 18,697 + 1,561 rows unassigned | **changes structures** |
+| E14 | Class 13 repairs rather than reports; rebuild cannot fail | **changes values** |
+| E15 | Non-zero noise floor on C3/C4/C5/C7/C9 hides new instances | **changes values** / metadata |
+| E16 | 19 fixed-structure reagents outside the registry, incl. the SP_2020 sterol panel | **changes structures** (potential) |
+| E17 | C11 is one-directional | **cosmetic** today |
+
+---
+
+## 5. CONFIDENCE
+
+| # | Finding | Confidence | Basis |
+|---|---|---|---|
+| E1 | audit exits 0 | **certain** | ran it; eight violations printed; `EXIT CODE = 0` |
+| E2 | crash on unparseable | **certain** | reproduced traceback |
+| E3 | C2 single-experiment | **certain** | 3 mutations in 3 experiments, 0 violations each; 972/235/737 counted |
+| E4 | gate self-defeat | **certain** | 3 mutations; `series_checked` 235→234 twice |
+| E5 | C8 column scope | **certain** | 3 mutations, 0 fired; column list read |
+| E6 | IL-only scope | **certain** | code read; cell counts computed |
+| E7 | no Cargo assertion | **certain** | code read; mutation changed only an unprinted dict |
+| E8 | blank-field scope | **certain** | mutation did not fire; 1,798 counted |
+| E9 | two copied-looking anchors | **probable** | byte-identity + no artifact + opposite convention in 6/8; byte-identity alone is not proof and CHANGELOG evidences an independent assembly at creation time |
+| E10 | SL_2021 charge | **certain** on facts, **probable** on which half is wrong | histogram from the repo's own JSON; 78 rows diffed against `06_merged.csv`; 1 of 61 experiments mixed |
+| E11 | flags dropped at merge | **certain** | 72-column header has none; 7 folders' intermediates do |
+| E12 | C10 scope | **certain** on scope, **speculative** on risk | code read; 14/14 agree today |
+| E13 | tetrahedral stereo | **certain** on counts, **probable** on FG_2026 | `FindMolChiralCenters` over every row |
+| E14 | class 13 enforcement | **certain** | 5 mutations through the real `renormalize_ddof`; no `import sys` |
+| E15 | noise floor | **certain** | offending rows identified by `LNP_ID` |
+| E16 | registry coverage | **certain** | enumerated and counted; `DSPE-PEG2000` mutation did not fire |
+| E17 | one-directional C11 | **certain** | inverse scan implemented; 0 violations, so free to add |
+
+---
+
+## 6. Classes with no check — is "not yet automatable" still true?
+
+The ledger's second table is where the stopping rule actually binds, so this is the part most worth acting on. Verdict per row, with the check described concretely enough to implement where one is now feasible.
+
+| Class | Still un-automatable? | Concrete check if feasible |
+|---|---|---|
+| **Name token misread** (`C24` = two C4 tails) | **No — automatable now** | This is E3's prototype. Derive the token→length convention per `(Experiment_ID, token_prefix)`: accept the group if ≥3 series and ≥90% are fully CH2-homologous (every consecutive step a positive whole multiple of 14.0157), then assert monotonicity on every series in the group. Measured: **676 series checked vs 235 today, 0 violations on the clean corpus**, and it auto-rejects `KS_2024 C`, `KZ_2016 SC/SN/SO`, `YX_2024 C`, `BL_2023 T` without a whitelist. Strengthen it with the `Num_carbon_in_tail` column: for each accepted group, assert `token` is monotone in `Num_carbon_in_tail` as well as in mass, which catches a misread token whose *mass* happens to be monotone. |
+| **Value misread from a figure** | **Yes** | Needs the figure. The overlay-PNG + ≥10-cell spot-check mitigation is right. One corpus-side addition is possible though: assert that each digitisation's extracted value set reproduces every summary statistic the paper printed, as a committed per-curation JSON rather than per-curation prose — that is error class 20's lesson, and it currently lives only in each folder's `validate.py` with no corpus-level record of which printed statistics were reproduced and which were not. |
+| **Metadata contradicting itself** between caption and Methods | **Yes for detection, No for persistence** | Cannot detect automatically. But "record BOTH and flag UNRESOLVED" is checkable: the shipped schema has no field to hold the flag (E11). Add `metadata_unresolved` to the schema and assert that every curation whose `PROVENANCE.md` records an UNRESOLVED contradiction has the corresponding rows flagged. That converts the mitigation from prose into an invariant. |
+| **Commercial reagent that is an isomer mixture** | **Partly automatable now** | Add `DELIBERATELY_UNREGISTERED = {name: reason}` to `reagent_registry.py` (PEG-lipids: block length is a distribution; `EggSM`: natural homolog distribution; and any future mixture) and assert **every** component name in the corpus is in `REGISTRY` or in that dict. Today that check would list the 19 names in E16 and nothing else. This is the piece that makes C11 a ratchet instead of a spot-check: right now a new unregistered reagent arrives silently. Pair it with `confidence = medium` in the schema (E11). |
+| **Regiochemistry a paper never pins** | **Yes for resolution, No for bookkeeping** | Genuinely unknowable — the `28A3` iPhos rows and Lin's C1–C4 cores are the correct examples and the correct deliverable is a flag. But the flag is not in the data (E11): 987 `LL_2026` rows are `positional_ambiguity = 1` upstream and unflagged downstream. Carry the column through `merge_curations()` and assert agreement by join against each `06_merged.csv`. |
+| **A C10 anchor copied from the enumeration** | **Partly automatable now** — and this round found two | The ledger's objection (a canonicalised honest reference is byte-identical to a copy) is correct and is why this must be **advisory, not failing**. Add status `ANCHOR_BYTE_IDENTICAL_TO_ENUMERATION` when `reference_SMILES == enumerated IL_SMILES` verbatim, requiring a `read_by`/`note` that names the independent code path. Under the repository's actual convention — 6 of 8 anchors store hand-typed non-canonical strings — this currently flags exactly the two anchors in E9 and no false positives. Second, stronger half: make the independent path a *script*, as `ng_2025/stage08_reference.py` already does, and assert that every folder with a non-empty `reference_SMILES` has one. Then independence is a property of the repository rather than of a note. |
+| **De-duplicating reference strings on an assumed identifier format** | **Partly automatable now** | Two checks. (a) Corpus-side: assert `Publication_DOI`, `Publication_PMID` and `Publication_link` are 1:1:1 within each `Experiment_ID` — a per-row counter appended to any of them breaks the mapping immediately. (b) Per-curation: store the paper's own stated publication/compound count in the curation JSON and assert the derived count equals it, which is what caught the 299-vs-47 case. `build_manifest.py` already resolves every PMID/DOI against NCBI (class 17), so the infrastructure exists; the 1:1:1 invariant is a few lines on top. Note 2,544 vitro rows have a blank PMID, so (a) needs to tolerate blanks or those rows need filling. |
+| **A structure with no external anchor at all** (LipidAI E1–E9) | **Partly automatable now** | `NO_DRAWN_STRUCTURE` already makes the absence visible in `structure_check.json` — 9 rows today — and that was the right design. What is missing is the downstream half: `confidence = medium` is supposed to ride with those rows into the corpus and does not (E11). Once the column exists, assert that every corpus row whose lipid appears as `NO_DRAWN_STRUCTURE` in `structure_check.json` carries `confidence != high`. That is a genuine cross-artifact invariant and it closes the class. |
+
+**New classes this pass found that are not in the ledger**, each with a check:
+
+1. **A check with no failure path** (E1, E2, E7, E14). Meta-class, and the one that matters most: a check that cannot fail is indistinguishable from an absent check in every report. *Check:* a committed baseline JSON of every counter in `audit_findings.json` and `dataset_validation.json`, asserted on every run, with the suite exiting non-zero on any increase. This single mechanism closes E1, E15 and part of E14, and it is the prerequisite for every other row in the ledger meaning anything.
+2. **A check whose scope silently shrinks below what it reports** (E3, E4, E5, E6, E8). *Check:* every check reports `rows_examined` / `series_examined` alongside its violation count, and the baseline asserts the *scope* number too. E4's `series_checked 235→234` is the canonical example: the corruption was detectable, in a number nobody was watching.
+3. **Mixed protonation convention within one experiment** (E10). *Check:* formal-charge histogram per `Experiment_ID` must have exactly one key. Holds for 60 of 61 experiments today, so it ships with one documented exception.
+4. **Unassigned tetrahedral stereocentres** (E13). *Check:* per-experiment counts of rows with ≥1 unassigned centre and rows mixing assigned with unassigned, baselined like C9's alkene counters.
+5. **A curation-stage flag dropped at merge** (E11). *Check:* join shipped rows back to each `06_merged.csv` on `lipid_name` and assert every recorded `positional_ambiguity` / `confidence` / `*_assumed` value survives.
+
+**On the stopping rule.** CLAUDE.md §6 and REVIEW_PROGRAM.md §6 both say: stop when every known error class has an automated check *and* one adversarial pass finds nothing outside those classes. This pass found five classes outside the ledger, and — more to the point — found that the ledger's 23 "covered" rows overstate coverage in nine places. The ratchet has not slipped in the sense of a check that stopped running; every check still runs and 30 of 43 seeded mutations were detected. It has slipped in a quieter way: **nine of the eleven Tier-1 checks cannot fail, C2 covers one experiment of sixteen, C8 covers seven columns of twenty-two, and C1/C8/C9 cover one SMILES column of five.** The ledger says "Check: C2, Where: audit.py" and that row is true as written and false as understood.
+
+Recommended order, by coverage gained per unit of work: **E1/E15 (the baseline + exit code) → E3/E4 (the derived-convention C2, already prototyped) → E16 (19 registry entries + the exhaustiveness check) → E5/E6 (widen C8 and C1/C9) → E11 (carry the flags) → E9 (re-derive the two anchors) → E10 (resolve the SL_2021 protonation upstream) → E13 (tetrahedral stereo) → E2/E7/E8/E12/E17 (small, mechanical).**
+
+---
+
+## Appendix — corpus integrity
+
+| | start of session | end of session |
+|---|---|---|
+| `data/data_vitro.csv` | `e1324dcd44f35cf5aa04dad91022be86f7e3842d7c0be7b52d1373770f26636a` | `e1324dcd44f35cf5aa04dad91022be86f7e3842d7c0be7b52d1373770f26636a` |
+| `data/data_vivo.csv` | `41ab7dcbd0513c0ace97d86405d79827628ff5873fdbb7823c04c0ed01f486d1` | `41ab7dcbd0513c0ace97d86405d79827628ff5873fdbb7823c04c0ed01f486d1` |
+
+`diff` of the two checksum files: empty. **Both corpus files are byte-identical to their state before this review began.**
+
+All 43 mutations were applied to copies under `/private/tmp/claude-501/-Users-nathanliu-Documents-LNP-confound/ebd1fdd9-2e2e-4284-8eb1-27c940f1a93a/scratchpad/`. `audit.py`, `structure_check.py` and `reagent_registry.py` were copied there and the copies run against the copied data and a copied `curation/` tree containing only `reference_structures.csv` and the enumeration files; the originals were never opened for writing. The only file I attempted to write in the repository is this report, and the harness blocked it. `curation/ng_2025/` was not modified; its `reference_structures.csv` was read once by a `curation/*/reference_structures.csv` glob before I scoped it out, and is excluded from every judgement above.
+
+Scripts, for anyone reproducing this: `harness.py`, `mut_c1.py`, `mut_c2.py`, `mut_c2b.py`, `mut_c2c.py`, `mut_c3_c9.py`, `mk_c10_mutants.py`, `mk_c10c.py`, `run_c10.py`, `run_c11.py`, `mut_c13.py`, `scope.py`, `baseline_viol.py`, `flags.py`, `flags2.py`, `c2new.py`, `c2new2.py` — all in that scratch directory, plus `corpus_checksums_START.txt` / `_END.txt` / `_FINAL.txt`.

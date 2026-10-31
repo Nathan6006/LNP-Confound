@@ -1,0 +1,73 @@
+{
+ "paper": "Lin et al., JACS 2026, Fig 2a",
+ "n_cells": 147,
+ "expected": 147,
+ "grid": "7 rows (aromatic, EP10 tail) x 21 cols",
+ "legend_bins": 3,
+ "bin_histogram": {
+  "1e4-1e5": 19,
+  "1e5-1e6": 41,
+  ">1e6": 87
+ },
+ "colour_match": {
+  "max_distance": 2.29,
+  "cells_within_10_of_second_swatch": 0
+ },
+ "overlap_with_fig2e": {
+  "n_shared_lipids": 70,
+  "same_bin": 52,
+  "note": "Fig 2a and Fig 2e are different experiments (different formulation and IL:mRNA ratio), so disagreement is a real biological/formulation difference, not an extraction error. Reported as information, NOT as a pass/fail check.",
+  "disagreements": [
+   [
+    "9A1-1B-EP10",
+    4,
+    3
+   ],
+   [
+    "9A1-2B-EP10",
+    4,
+    3
+   ],
+   [
+    "9A1-3B-EP10",
+    4,
+    3
+   ],
+   [
+    "11A1-3B-EP10",
+    4,
+    3
+   ],
+   [
+    "8A1-5B-EP10",
+    3,
+    2
+   ],
+   [
+    "8A2-5B-EP10",
+    4,
+    2
+   ],
+   [
+    "9A1-5B-EP10",
+    2,
+    1
+   ],
+   [
+    "9A2-5B-EP10",
+    2,
+    1
+   ],
+   [
+    "10A1-5B-EP10",
+    3,
+    2
+   ],
+   [
+    "10A2-5B-EP10",
+    4,
+    2
+   ]
+  ]
+ }
+}

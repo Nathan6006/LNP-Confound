@@ -1,0 +1,120 @@
+{
+ "paper": "Tian et al., Adv Mater 2026, Fig S11",
+ "what": "group means of the same 486 formulations as Fig 2c; a consistency check, not new per-formulation data",
+ "panels": {
+  "a": {
+   "field": "C6O2B2_molpct",
+   "categories": [
+    "35",
+    "50",
+    "65"
+   ],
+   "axis_x": 1187,
+   "n_ticks": 4,
+   "px_per_decade": 121.0,
+   "tick_spacing_cv": 0.0039,
+   "bottom_tick_exponent": 3,
+   "group_means_RLU": [
+    210000.0,
+    191000.0,
+    210000.0
+   ],
+   "rank_order": [
+    "65",
+    "35",
+    "50"
+   ]
+  },
+  "b": {
+   "field": "DMGPEG_molpct",
+   "categories": [
+    "1",
+    "2",
+    "4"
+   ],
+   "axis_x": 1832,
+   "n_ticks": 4,
+   "px_per_decade": 121.0,
+   "tick_spacing_cv": 0.0034,
+   "bottom_tick_exponent": 3,
+   "group_means_RLU": [
+    212100.0,
+    224500.0,
+    159400.0
+   ],
+   "rank_order": [
+    "2",
+    "1",
+    "4"
+   ]
+  },
+  "c": {
+   "field": "DODAP_molpct",
+   "categories": [
+    "10",
+    "30",
+    "50"
+   ],
+   "axis_x": 1157,
+   "n_ticks": 4,
+   "px_per_decade": 119.5,
+   "tick_spacing_cv": 0.0034,
+   "bottom_tick_exponent": 3,
+   "group_means_RLU": [
+    92580.0,
+    238000.0,
+    356700.0
+   ],
+   "rank_order": [
+    "50",
+    "30",
+    "10"
+   ]
+  },
+  "d": {
+   "field": "helper_lipid",
+   "categories": [
+    "DOPC",
+    "DMPC",
+    "DOPG",
+    "DOPE",
+    "EggSM",
+    "DSPC"
+   ],
+   "axis_x": 1753,
+   "n_ticks": 3,
+   "px_per_decade": 135.75,
+   "tick_spacing_cv": 0.0018,
+   "bottom_tick_exponent": 4,
+   "group_means_RLU": [
+    181800.0,
+    648900.0,
+    520500.0,
+    346400.0,
+    403500.0,
+    1195000.0
+   ],
+   "rank_order": [
+    "DSPC",
+    "DMPC",
+    "DOPG",
+    "EggSM",
+    "DOPE",
+    "DOPC"
+   ]
+  }
+ },
+ "crosscheck_vs_fig2c": {
+  "S11a_rank_order": "differs: fig2c ['35', '65', '50'] vs S11 ['65', '35', '50']",
+  "S11b_rank_order": "differs: fig2c ['1', '2', '4'] vs S11 ['2', '1', '4']",
+  "S11c_rank_order": "MATCH",
+  "S11d_rank_order": "differs: fig2c ['DSPC', 'EggSM', 'DOPG', 'DMPC', 'DOPE', 'DOPC'] vs S11 ['DSPC', 'DMPC', 'DOPG', 'EggSM', 'DOPE', 'DOPC']"
+ },
+ "review_image": "review/figS11_overlay.png",
+ "crosscheck_interpretation": {
+  "statistic_mismatch": "Fig 2c gives a mean BIN INDEX (1-4); Fig S11 gives a geometric GROUP MEAN in RLU. These are different statistics, so only the rank order is comparable, and only where groups are actually separated.",
+  "where_the_paper_reports_significance": "S11c (DODAP) is marked **** and S11d's DSPC comparisons are ****. Both match: DODAP 50 > 30 > 10 exactly, and DSPC is top in both.",
+  "where_orders_differ": "S11a (C6O2B2) and S11b (DMG-PEG) are marked 'ns' by the authors, and the differing pairs are near-ties (35 vs 65 at 2.1e5 both; 1 vs 2 at 2.1 vs 2.2e5). The DMPC/EggSM swap in S11d is likewise a 6.5e5 vs 4.0e5 adjacent pair against a coarse 4-level proxy.",
+  "verdict": "consistent; no disagreement anywhere the source data separates the groups."
+ }
+}

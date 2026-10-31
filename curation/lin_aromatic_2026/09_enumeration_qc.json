@@ -1,0 +1,16 @@
+{
+ "paper": "Lin et al., JACS 2026, 148, 6960-6969",
+ "enumerated": 840,
+ "expected": 840,
+ "failed": [],
+ "unique_SMILES": 840,
+ "merged_with_values": 840,
+ "missing_values": [],
+ "positional_ambiguity_rows": 840,
+ "medium_confidence_rows": 140,
+ "medium_confidence_reason": "Ac8-1 and Ac10-1 are named in the SI as iso-octyl / iso-decyl acrylate, commercial isomer MIXTURES; a single SMILES is a convention.",
+ "MW_range": [
+  666.05,
+  2453.0
+ ]
+}

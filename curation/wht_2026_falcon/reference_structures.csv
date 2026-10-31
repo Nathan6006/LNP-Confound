@@ -1,0 +1,3 @@
+lipid_name,reference_SMILES,source_figure,read_on,read_by,note
+DLin-MC3-DMA,CCCCC/C=C\C/C=C\CCCCCCCCC(OC(=O)CCCN(C)C)CCCCCCCC/C=C\C/C=C\CCCCC,IUPAC name,2026-10-29,claude,"Written from the registry name (6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl 4-(dimethylamino)butanoate, in a deliberately different atom order from the corpus string, so the comparison tests the structure and not a copy. The paper draws no structures; MC3 is a catalogue reagent (MedKoo)."
+SM-102,CCCCCCCCC(CCCCCCCC)OC(=O)CCCCCCCN(CCO)CCCCCC(=O)OCCCCCCCCCCC,IUPAC name,2026-10-29,claude,"Written from the registry name heptadecan-9-yl 8-[(2-hydroxyethyl)(6-oxo-6-undecoxyhexyl)amino]octanoate, atom order chosen independently of the corpus string. Catalogue reagent (BroadPharm BP-25499)."

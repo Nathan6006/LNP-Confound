@@ -1,0 +1,59 @@
+{
+ "_what": "The quality / provenance columns appended to the 72-column corpus schema on 2026-10-30, taking it to 79. THIS FILE IS THE SINGLE SOURCE OF TRUTH for their names and allowed values: build_dataset.py reads it to build the output header, every curation that emits a flag reads it to get the column names, and audit.py C13 reads it to enforce the vocabulary. Do not restate this list anywhere in code -- the reason these columns exist at all is that a per-curation flag was restated, drifted, and then silently died at the merge (review finding F-001).",
+
+ "_why": "Before this, 1,137 corpus rows carried a convention rather than a measurement and said nothing about it. CLAUDE.md claimed the project flagged such rows 'in the data (positional_ambiguity, *_assumed, confidence)'; none of those columns existed, in data/ or in any file build_dataset.py's MERGE reads. The flags were produced, written into each curation's own QC JSON, and then dropped one stage BEFORE the merge, when each curation emitted the 72-column schema. So no change to the builder could have preserved them, and a consumer of data_vitro.csv could not tell a digitized colormap floor from a measurement.",
+
+ "_blank_means": "not stated. It does NOT mean clean. A blank confidence on a curation that never assessed confidence is an absence of information, not an assurance -- which is why value_normalization_unit is populated for every row and the rest are not.",
+
+ "columns": [
+  {
+   "name": "Experiment_value_within_model",
+   "type": "float",
+   "allowed": null,
+   "meaning": "Experiment_value re-standardized within (Experiment_ID x Model_type). Computed by build_dataset.py for every row whose experiment is on the z-score scale, by affine renormalization of Experiment_value -- which is exact, because a per-block z of an affine function of log10 signal is the per-block z of the signal. Identical to Experiment_value wherever an experiment has one Model_type. Use this where a between-assay offset would be a nuisance; use Experiment_value where it is the quantity of interest. Blank where the experiment is not on the z-score scale (the vivo blocks floored at 0).",
+   "added_for": "F-016"
+  },
+  {
+   "name": "value_normalization_unit",
+   "type": "enum",
+   "allowed": ["experiment", "source_file", "experiment_x_model_type", ""],
+   "meaning": "The unit over which Experiment_value was standardized, stated on the row so a consumer never infers it. 'experiment' is the corpus convention (CLAUDE.md section 3). 'source_file' is WT_2026, where the authors' own dataset_info.txt forbids comparing across their seven files but their published Selectivity column compares cell types within one. 'experiment_x_model_type' is error class 22 -- the between-assay offset has been deleted -- and is only legitimate where that offset is unrecoverable from what we hold; see curation_note on those rows.",
+   "added_for": "F-016"
+  },
+  {
+   "name": "confidence",
+   "type": "enum",
+   "allowed": ["high", "medium", "low", ""],
+   "meaning": "Confidence in the stored STRUCTURE, as assessed by the curation that produced it. 'low' means an element of the structure is an assumption the paper does not pin. Must be the lipid's own assessment: in ZT_2026 a join silently replaced it with the cholesterol-tail block's value under the same column name, turning 24 'low' rows into 'medium' and 'high' (F-011).",
+   "added_for": "F-001"
+  },
+  {
+   "name": "positional_ambiguity",
+   "type": "0|1",
+   "allowed": ["0", "1", ""],
+   "meaning": "1 where which heteroatom bears which substituent is a convention rather than a measurement -- typically a one-pot library purified without chromatography, so the stored regiochemistry is one member of a mixture.",
+   "added_for": "F-001"
+  },
+  {
+   "name": "structure_assumed",
+   "type": "0|1",
+   "allowed": ["0", "1", ""],
+   "meaning": "1 where a specific structural feature was assumed rather than read from the paper: a quaternization site the paper draws no structure for, a commercial reagent that is a branched isomer mixture sold under one name, an ester connectivity inferred from a single NMR shift. Pairs with curation_note, which must say WHICH feature.",
+   "added_for": "F-001"
+  },
+  {
+   "name": "value_is_bound",
+   "type": "enum",
+   "allowed": ["upper", "lower", ""],
+   "meaning": "The value is a bound, not a measurement. 'upper' where the true value is at or below it -- a digitized heatmap cell on the colormap floor, where every value from 0 to the floor renders the same colour. 'lower' where the true value is at or above it -- a bar or point censored past the top of the axis. A model that treats these as measurements is fitting the floor of a colour ramp.",
+   "added_for": "F-001"
+  },
+  {
+   "name": "curation_note",
+   "type": "free text",
+   "allowed": null,
+   "meaning": "One short sentence naming what is uncertain about THIS row and, where there is one, where the fuller account lives. Free text on purpose: a controlled vocabulary cannot carry 'two figures of the paper disagree 7.3x on this lipid' and a flag that cannot say what it means gets ignored. Written for a reader of data_vitro.csv who has not opened the curation folder.",
+   "added_for": "F-001"
+  }
+ ]
+}

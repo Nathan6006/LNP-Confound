@@ -1,0 +1,122 @@
+{
+ "panels": "Fig 2d (by amine, n=40), 2e (by tail number, n=40 flat), 2f (by tail length, n=64)",
+ "hit_definition": "RLU > 2e4",
+ "bars": {
+  "2d:70": {
+   "read_pct": 0.0,
+   "n": 40,
+   "implied_count": 0,
+   "exact_pct": 0.0,
+   "abs_error_pct": 0.0
+  },
+  "2d:75": {
+   "read_pct": 5.16,
+   "n": 40,
+   "implied_count": 2,
+   "exact_pct": 5.0,
+   "abs_error_pct": 0.16
+  },
+  "2d:80": {
+   "read_pct": 5.16,
+   "n": 40,
+   "implied_count": 2,
+   "exact_pct": 5.0,
+   "abs_error_pct": 0.16
+  },
+  "2d:400": {
+   "read_pct": 2.713,
+   "n": 40,
+   "implied_count": 1,
+   "exact_pct": 2.5,
+   "abs_error_pct": 0.213
+  },
+  "2d:113": {
+   "read_pct": 10.16,
+   "n": 40,
+   "implied_count": 4,
+   "exact_pct": 10.0,
+   "abs_error_pct": 0.16
+  },
+  "2d:114": {
+   "read_pct": 5.16,
+   "n": 40,
+   "implied_count": 2,
+   "exact_pct": 5.0,
+   "abs_error_pct": 0.16
+  },
+  "2d:110": {
+   "read_pct": 19.84,
+   "n": 40,
+   "implied_count": 8,
+   "exact_pct": 20.0,
+   "abs_error_pct": 0.16
+  },
+  "2d:T3A": {
+   "read_pct": 42.447,
+   "n": 40,
+   "implied_count": 17,
+   "exact_pct": 42.5,
+   "abs_error_pct": 0.053
+  },
+  "2e:1": {
+   "read_pct": 12.869,
+   "n": 40,
+   "implied_count": 5,
+   "exact_pct": 12.5,
+   "abs_error_pct": 0.369
+  },
+  "2e:2": {
+   "read_pct": 15.492,
+   "n": 40,
+   "implied_count": 6,
+   "exact_pct": 15.0,
+   "abs_error_pct": 0.492
+  },
+  "2e:3": {
+   "read_pct": 62.295,
+   "n": 40,
+   "implied_count": 25,
+   "exact_pct": 62.5,
+   "abs_error_pct": 0.205
+  },
+  "2f:C6": {
+   "read_pct": 4.688,
+   "n": 64,
+   "implied_count": 3,
+   "exact_pct": 4.6875,
+   "abs_error_pct": 0.0
+  },
+  "2f:C8": {
+   "read_pct": 9.287,
+   "n": 64,
+   "implied_count": 6,
+   "exact_pct": 9.375,
+   "abs_error_pct": 0.088
+  },
+  "2f:C10": {
+   "read_pct": 20.224,
+   "n": 64,
+   "implied_count": 13,
+   "exact_pct": 20.3125,
+   "abs_error_pct": 0.088
+  },
+  "2f:C12": {
+   "read_pct": 12.412,
+   "n": 64,
+   "implied_count": 8,
+   "exact_pct": 12.5,
+   "abs_error_pct": 0.088
+  },
+  "2f:C14": {
+   "read_pct": 10.82,
+   "n": 64,
+   "implied_count": 7,
+   "exact_pct": 10.9375,
+   "abs_error_pct": 0.117
+  }
+ },
+ "max_snap_error_pct": 0.492,
+ "implied_total_hits_from_2d": 36,
+ "implied_total_hits_from_2e": 36,
+ "implied_total_hits_from_2f": 37
+}
