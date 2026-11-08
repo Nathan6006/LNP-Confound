@@ -128,7 +128,7 @@ for n, v, zz in zip(names, vals, z):
             'external anchor against which to check it.'))
     elif n in {m['lipid'] for m in mism}:
         # A benchmark whose emitted structure deliberately DISAGREES with the
-        # figure it came from needs to say so on the row (F-029). Until
+        # figure it came from needs to say so on the row (F-030). Until
         # 2026-11-07 this row read confidence=high with an empty curation_note,
         # so data_vivo.csv presented it as a lipid whose drawing and structure
         # agree. The override itself was recorded -- in 07_qc.json,

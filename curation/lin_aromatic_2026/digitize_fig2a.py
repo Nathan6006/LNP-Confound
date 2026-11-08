@@ -39,7 +39,29 @@ REVIEW = "review"
 # body = the CELLS only. An earlier box ran to y=1308 and sampled pure white
 # on the bottom rows; the heatmap actually ends at 1072, verified by matching
 # a single column against the palette and reading off the row separators.
-BODY = (640, 679, 3161, 1073)
+#
+# CORRECTED 2026-11-07 (F-008). The right edge read 3161 where the heatmap's
+# blue ink ends at 3104.7 -- a 56.3 px overrun, i.e. almost half a 117 px cell.
+# Measured two independent ways: sub-pixel coverage integration of the blueness
+# profile (B-R) gives the body as x [641.69, 3104.74], y [676.65, 1072.78] with
+# a column pitch of 117.288; and a plain threshold scan of the same band puts
+# the last blue column at 3106 with the first pure-white column at 3109.
+#
+# The consequence was a drifting sampling window: with 21 columns across a box
+# 56 px too wide, the window centre walked right by -2.15 + 2.758*(c+0.5) px, so
+# columns 11-19 bled into the NEXT amine's column and column 20 (12A2) sampled
+# 26 px of blank page -- 43.7% of its window.
+#
+# NO BIN CHANGED, and the reason is thinner than it sounds: the sample is a
+# per-channel np.median, and 43.7% is under 50%, so the correct cell always kept
+# a strict majority. Six percentage points of slack. A mean instead of a median,
+# or one more column, and cells would have flipped.
+#
+# It also shows what CLAUDE.md §5's "max colour distance above ~5 means the
+# geometry is wrong" gate can and cannot do: the distance was 2.29 under the old
+# geometry and 0.00 under the corrected one. The gate catches catastrophic
+# offsets, not drift.
+BODY = (642, 677, 3105, 1073)
 NROW, NCOL = 7, 21
 
 # three swatches, sampled from the legend strip at y=600

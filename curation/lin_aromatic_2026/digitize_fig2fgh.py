@@ -78,20 +78,38 @@ TICK_PCT = 20.0
 
 # Tolerance on the Fig 2f-h vs Fig 2e agreement, in percentage points.
 #
-# 1.1, set against a MEASURED residual of max 1.00 pp and mean -0.52 pp, and
-# deliberately not set to whatever the current worst value happens to be. The
-# remaining bias is real and one-sided -- 47 of 48 deltas are negative -- and its
-# probable cause is the BOTTOM edge: a bar sits on the axis rule, and the colour
-# mask's last saturated row is 1-2 px above the rule's top, so every bar is
-# short by that much (1.5 px / 5.35 px per pp = 0.28 pp on panel 2h). Correcting
-# the bottom edge sub-pixel as well as the top would remove most of it.
+# CORRECTED 2026-11-07 (round-2 finding E2). This read 1.1, against a measured
+# max of 1.00 pp and a mean of -0.52 pp with 47 of 48 deltas negative, and the
+# comment attributed that one-sided bias to the BOTTOM edge -- the colour mask's
+# last saturated row sitting 1-2 px above the axis rule.
 #
-# NOT chased further, on purpose. These 48 numbers are a VALIDATION of the Fig 2e
-# heatmap read; no corpus value is computed from them (`build_rows.py` reads
-# 06_merged.csv, not 05_fig2fgh_bars.csv), so the residual costs accuracy in a
-# check rather than in the data. The reason it is recorded here instead of being
-# tuned away is that tuning it away is exactly what the old fitted scale did.
-WORST_TOL = 1.1
+# That diagnosis was wrong, and the bias was removable rather than inherent. The
+# dominant term was the ORIGIN: F-006 re-anchored the scale on the ticks and
+# left the 0% line as three hard-coded literals. On 2f and 2g the 0% tick is not
+# drawn, the ladder extrapolates it 3-4 px below the panel box, and the literal
+# 3335 was short by 0.61 pp on each. Deriving the origin from the tick fit, as
+# the scale already was:
+#
+#     mean   -0.52 pp  ->  -0.042 pp
+#     max |d| 1.00 pp  ->   0.40 pp
+#     negative 47/48   ->   25/48      <- the one-sided signature is gone
+#
+# 25 of 48 is what unbiased noise looks like, which is the real evidence the
+# cause was found rather than the number massaged.
+#
+# 0.6 is set from the MEASUREMENT FLOOR, not from the new worst value: a
+# sub-pixel top edge is good to roughly half a pixel, and half a pixel is
+# ~0.1 pp here, so 0.6 pp is several times the floor and still less than a
+# sixth of the old tolerance. Deliberately not 0.45 -- a tolerance pinned to
+# whatever the current maximum happens to be is a tolerance that cannot fail.
+#
+# The old comment's closing point still stands and is why the residual is
+# recorded rather than driven to zero: these 48 numbers VALIDATE the Fig 2e
+# heatmap read, no corpus value is computed from them (`build_rows.py` reads
+# 06_merged.csv, not 05_fig2fgh_bars.csv), and tuning a residual away is exactly
+# what the old fitted scale did. What changed is that this particular residual
+# turned out to be an error with an address, not noise to be tolerated.
+WORST_TOL = 0.6
 
 
 def bars_in(mask, baseline, xwin, min_area=3000):
@@ -242,10 +260,41 @@ def main():
                  "scale_source": "y-axis tick centres only; NOT fitted to the "
                                  "Fig 2e rates being validated (F-006)",
                  "measured": {}, "digitized": {}, "delta": {}}
+        # THE ORIGIN, ALSO FROM AXIS FURNITURE (round-2 finding E2). F-006
+        # re-anchored the SCALE on the ticks and left the ORIGIN as three
+        # hard-coded literals -- error class 20 surviving the repair meant to
+        # clear it, on the other end of the same axis.
+        #
+        # The ladder runs 100% at the top in steps of TICK_PCT, so 0% sits
+        # 100/TICK_PCT tick-intervals below the first tick. On 2h the 0% tick is
+        # actually drawn and the literal 4055 was nearly right (0.28 pp), which
+        # is why the old comment -- which quoted only the 2h number and blamed
+        # the colour mask's bottom edge -- sounded adequate. On 2f and 2g the 0%
+        # tick is NOT drawn (it merges into the x-axis rule), the ladder
+        # extrapolates it 3-4 px BELOW the panel box, and the axis origin, not
+        # the mask, is the dominant term: 0.61 pp on each.
+        #
+        # Bar-count weighted that predicts (14*0.61 + 10*0.61 + 24*0.28)/48 =
+        # 0.44 pp of the recorded mean -0.52 pp, with 47 of 48 deltas negative.
+        # The previous comment's "recorded here instead of being tuned away" was
+        # right in spirit and wrong about the cause, so it under-reported a bias
+        # that was removable rather than inherent.
+        #
+        # `baseline` is still what the bars are DETECTED on -- they really do sit
+        # on the drawn rule. Only the conversion to percent uses the tick origin.
+        intercept = float(np.linalg.lstsq(A, tick_y, rcond=None)[0][1])
+        zero_y = intercept + px_per_tick_fit * (100.0 / TICK_PCT)
+        panel_zero_shift = zero_y - baseline
+        assert abs(panel_zero_shift) < 12.0, (
+            f"panel {pid}: tick-derived 0% at y={zero_y:.1f} is "
+            f"{panel_zero_shift:+.1f} px from the drawn baseline {baseline}. "
+            f"More than a few px means the tick ladder was mis-detected, not "
+            f"that the baseline is wrong.")
+
         # sub-pixel top edges, uniformly for every bar (see subpixel_top)
         for bar in lb + list(dark_for.values()):
             bar["top_subpixel"] = subpixel_top(img, bar, baseline)
-            bar["height"] = bar["bottom"] - bar["top_subpixel"]
+            bar["height"] = zero_y - bar["top_subpixel"]
 
         for j, c in enumerate(cats):
             m5 = lb[j]["height"] / slope

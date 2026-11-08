@@ -58,7 +58,7 @@ ADDED = {
    rows_vitro=987, rows_vivo=0, added="2026-10-28",
    what="840 aromatic ionizable lipids (Fig 2e) + 147 initial screen (Fig 2a), "
         "both IGROV1 luciferase",
-   validation="HRMS 4/4 exact to 0.0001 Da; 48/48 printed hit rates reproduced. NOTE 2026-10-30 (F-006): that hit-rate check was weaker than stated until this date -- its pixel scale was fitted to the rates it validated, so a uniform scale error was invisible. Re-anchored on axis ticks; the 48 values themselves hold, max |delta| 1.0 pp"),
+   validation="HRMS 5/5 exact (incl. two aromatic-free controls); 48/48 printed hit rates reproduced, max |delta| 0.40 pp. That hit-rate check was weaker than stated until 2026-10-30 (F-006: its pixel SCALE was fitted to the rates it validated) and still carried a removable -0.52 pp one-sided bias until 2026-11-07 (round-2 E2: its ORIGIN was a hard-coded literal, not the tick ladder). Both now come from axis furniture alone"),
  # Preprint: no PMID, so this key never matches a tracker row. Recorded here so
  # the ADDED registry stays the single list of what we curated.
  "doi:10.64898/2026.06.13.731774": dict(expid="WT_2026", folder="wht_2026_falcon",

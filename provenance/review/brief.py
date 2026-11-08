@@ -164,15 +164,20 @@ def slice_stats(rows, eids):
     # `QL_2026` packet showed NO flag block at all while 116 of its 344 rows
     # carry `value_is_bound` -- the colormap floor that round 1 spent F-019
     # establishing -- and the `WT_2026` packet hid the `source_file`
-    # normalisation unit that is the entire F-003 repair (F-028).
+    # normalisation unit that is the entire F-003 repair (F-029).
     #
     # Error class 34 one layer out: the flags now exist in the data and were
     # being dropped at the REVIEW boundary instead of the merge boundary. The
     # remedy is the one F-001 applied to the builder -- read the names from the
     # schema instead of restating them. Any extraction/figure columns a curation
     # invents are still picked up by the prefix test, which is kept alongside.
+    # Every schema_quality column EXCEPT the derived numeric one:
+    # `Experiment_value_within_model` is a continuous z, so a top-10 value count
+    # of it is noise in a packet, not a flag. `value_normalization_unit` stays --
+    # it is a small vocabulary and it is the whole F-016/F-003 declaration.
     quality = [c["name"] for c in json.load(open(os.path.join(
-        ROOT, "provenance", "schema_quality.json")))["columns"]]
+        ROOT, "provenance", "schema_quality.json")))["columns"]
+        if c["name"] != "Experiment_value_within_model"]
     for col in sel[0]:
         if col in quality or col.lower().startswith(
                 ("flag", "note", "source_fig", "extraction")):

@@ -123,10 +123,48 @@ def quality(r):
     out = {}
     if str(r.get("positional_ambiguity")) == "1":
         out["positional_ambiguity"] = "1"
+        # "ring nitrogen" was a stray literal: only 3A (N-aminoethylpiperazine)
+        # contributes a reactive ring N-H, which is 7 rows, all in LL_2026_2.
+        # 7A's piperazine nitrogens are tertiary and cannot react, 6A's ring is
+        # carbocyclic, and every LL_2026 amine (8A-12A) is an acyclic
+        # polyamine -- the spermine in 10A2-3B-EP10 has no ring at all. The
+        # docstring four lines up said "WHICH nitrogen" correctly, without the
+        # word. Dropped 2026-11-07 (round-2 LL_2026 reviewer, E3).
         out["curation_note"] = (
             "One-pot library, no chromatographic separation of regioisomers: "
-            "which ring nitrogen bears which arm is a curation convention, not "
+            "which nitrogen bears which arm is a curation convention, not "
             "a measurement.")
+    # F-009. The 5B aromatic arm comes from an ENANTIOPURE reagent and the
+    # stored SMILES leaves its carbinol unassigned. 141 rows (120 LL_2026 +
+    # 21 LL_2026_2). Flagged rather than rewritten, for three reasons:
+    #   - the configuration is never measured on a PRODUCT. The SI reports no
+    #     optical rotation, no chiral HPLC, no ee, anywhere; and none of the
+    #     four "precise synthesis" compounds even contains 5B;
+    #   - each of these molecules carries 4-6 other carbinols that genuinely
+    #     ARE racemic, so asserting this one would emit a partially specified
+    #     stereoisomer -- neither specified nor unspecified -- and stereo-aware
+    #     fingerprints would read these 141 rows as a distinct chemotype for a
+    #     reason that is an artifact of which reagent the vendor sold
+    #     enantiopure;
+    #   - one-pot, 75 C, 48 h, no chromatography leaves no way to exclude
+    #     minor attack at C2.
+    # The evidence that it IS (S) is nonetheless strong and the paper asserts it
+    # twice: the SI Materials list names "(S)-glycidyl trityl ether" -- the only
+    # stereodescriptor in either document -- and Fig 1b draws 5B with a solid
+    # stereo wedge, the only one of the seven mB analogs drawn with any
+    # stereobond. Amine opening at the terminal CH2 breaks no bond to C2, so the
+    # configuration survives into the product.
+    # confidence stays `high`: the CONNECTIVITY is not in doubt.
+    if str(r.get("aromatic")) == "5B":
+        out["structure_assumed"] = "1"
+        note = ("The 5B aromatic arm comes from (S)-glycidyl trityl ether "
+                "(named enantiopure in the SI Materials list and drawn with a "
+                "stereo wedge in Figure 1b), and amine opening at the terminal "
+                "CH2 leaves that carbinol configurationally defined, but no "
+                "product in this paper was characterised stereochemically, so "
+                "the stored SMILES leaves it unassigned.")
+        out["curation_note"] = (out["curation_note"] + " " + note
+                                if out.get("curation_note") else note)
     if r.get("confidence"):
         out["confidence"] = r["confidence"]
     if r.get("confidence") == "medium":
@@ -213,7 +251,7 @@ def main():
         "validation": {
             "HRMS_anchors": "4/4 exact to +/-0.0001 Da "
                             "(10A2-3B-EP10, 9A2-3B-EP10, 9A2-4B-EP10, 10A2-3B-EP12)",
-            "fig2fgh_hit_rates": "48/48 printed hit rates reproduced from a TICK-ANCHORED scale, max |delta| 1.0 pp, mean -0.52 pp. Corrected 2026-10-30 (F-006): until then the pixels-per-percent scale was least-squares fitted onto the Fig 2e rates this panel validates, so the agreement could not detect a scale error AND was absorbing a real one -- a systematic ~1% top-edge bias from the colour mask. Sub-pixel top edges plus a tick-only scale; the residual -0.52 pp one-sided bias is recorded, not tuned away",
+            "fig2fgh_hit_rates": "48/48 printed hit rates reproduced from a scale AND an origin taken from the y-axis ticks alone, max |delta| 0.40 pp, mean -0.04 pp, 25 of 48 deltas negative. Corrected twice. 2026-10-30 (F-006): until then the pixels-per-percent scale was least-squares fitted onto the Fig 2e rates this panel validates, so the agreement could not detect a scale error AND was absorbing a real one. 2026-11-07 (round-2 E2): the SCALE was re-anchored on the ticks but the ORIGIN was left as three hard-coded literals, and on 2f/2g the 0% tick is not drawn, so the literal baseline was 0.61 pp short on each -- that, not the colour mask, was the cause of the -0.52 pp one-sided residual the previous note recorded as inherent. Deriving the origin from the same tick fit removed it: mean -0.52 -> -0.04 pp and the negative-delta count fell from 47/48 to 25/48, which is what unbiased noise looks like",
             "colour_match": "max distance 2.24, zero ambiguous cells",
         },
     }

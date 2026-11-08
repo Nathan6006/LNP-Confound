@@ -10,7 +10,7 @@
   ">1e6": 87
  },
  "colour_match": {
-  "max_distance": 2.29,
+  "max_distance": 0.0,
   "cells_within_10_of_second_swatch": 0
  },
  "overlap_with_fig2e": {

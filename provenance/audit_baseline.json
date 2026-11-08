@@ -171,6 +171,16 @@
    "value": 0,
    "why": "ACCEPTED AS ZERO: a medium or low confidence with no curation_note tells a reader something is uncertain but not what. No vitro row has one."
   },
+  "C13_quality_vocabulary.rows_with_a_note": {
+   "mode": "exact",
+   "value": 3600,
+   "why": "ACCEPTED: 3,600 vitro rows carry a curation_note. 2,400 YX_2024 + 96 LZ_2025 of those are the class-22 declaration (both cell types z-scored separately upstream, so the between-assay offset is identically zero by construction) -- a property of the NORMALISATION, already declared by value_normalization_unit, not a statement that the row's structure or value is qualified. Counted separately from rows_with_a_caveat for that reason: folding the two together moved the caveat count 1,103 -> 3,600 as a side effect of a +1 fix (F-024)."
+  },
+  "C13_quality_vocabulary.rows_with_only_a_note": {
+   "mode": "exact",
+   "value": 1,
+   "why": "ACCEPTED: QL_2026's T3A-L8-C14, whose only marker is a note saying Fig 2b and Fig 2c disagree about it by 7.3x. Found by the round-2 QL_2026 reviewer, which correctly contradicted CLAUDE.md's claim that this row 'carries no flag column at all'. The schema has no vocabulary term for 'two sources disagree', so it is named here rather than absorbed into a total or given a term it does not fit."
+  },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",
    "value": 0,
@@ -347,6 +357,16 @@
    "mode": "max",
    "value": 0,
    "why": "ACCEPTED AS ZERO since 2026-11-07. It was 6 for a few hours on the day the metric was added: ZT_2026's C5O1B1/C6O1B1/C5O1B2/C6O1B2/C5O1B3/C6O1B3 carried confidence = medium with an empty curation_note, so the corpus said six structures were less certain without saying why (F-024). The reason was in 03_enumerated.csv all along -- their O1 arm is isodecyl acrylate, a commercial BRANCHED ISOMER MIXTURE, so the stored SMILES is one isomer of a mixture, while the high-confidence O2 rows use single-compound dodecyl acrylate. build_new_curation.py now writes that reason onto the row and sets structure_assumed = 1, matching how LL_2026 flags the identical condition. Note the qc file's own confidence_basis had attributed their medium to the C5/C6 core, which cannot be right -- the high O2 rows share those cores. Gated at 0: a medium or low confidence must always say why."
+  },
+  "C13_quality_vocabulary.rows_with_a_note": {
+   "mode": "exact",
+   "value": 55,
+   "why": "ACCEPTED: 45 ZT_2026 + 9 XD_2026 caveated rows, plus the ALC-0315 override note added 2026-11-07 (F-030)."
+  },
+  "C13_quality_vocabulary.rows_with_only_a_note": {
+   "mode": "exact",
+   "value": 1,
+   "why": "ACCEPTED: XD_2026's ALC-0315. Its emitted structure deliberately disagrees with the figure it came from (the paper draws the head one carbon short), so it carries a note and confidence = high -- correctly, because the emitted structure is the published compound and is MORE trustworthy than the drawing. structure_assumed is deliberately not set: nothing was assumed, it was overridden from an external source (F-030)."
   },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",

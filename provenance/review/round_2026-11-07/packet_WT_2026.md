@@ -68,6 +68,11 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "673 distinct",
   "CHL_molratio": "695 distinct",
   "PEG_molratio": "613 distinct"
+ },
+ "flag_columns": {
+  "value_normalization_unit": {
+   "source_file": 2544
+  }
  }
 }
 ```
@@ -88,7 +93,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "24.0",
   "CHL_molratio": "19.0",
   "PEG_molratio": "1.0",
-  "Publication_PMID": "",
+  "Publication_PMID": "42367940",
   "Publication_DOI": "10.64898/2026.06.13.731774"
  },
  {
@@ -103,7 +108,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "9.37403927",
   "CHL_molratio": "57.42151576",
   "PEG_molratio": "5.60148424",
-  "Publication_PMID": "",
+  "Publication_PMID": "42367940",
   "Publication_DOI": "10.64898/2026.06.13.731774"
  },
  {
@@ -118,7 +123,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "0.8",
   "CHL_molratio": "19.0",
   "PEG_molratio": "1.0",
-  "Publication_PMID": "",
+  "Publication_PMID": "42367940",
   "Publication_DOI": "10.64898/2026.06.13.731774"
  },
  {
@@ -133,7 +138,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "10.0",
   "CHL_molratio": "79.84",
   "PEG_molratio": "0.16",
-  "Publication_PMID": "",
+  "Publication_PMID": "42367940",
   "Publication_DOI": "10.64898/2026.06.13.731774"
  },
  {
@@ -148,7 +153,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "2.0",
   "CHL_molratio": "79.2",
   "PEG_molratio": "0.8",
-  "Publication_PMID": "",
+  "Publication_PMID": "42367940",
   "Publication_DOI": "10.64898/2026.06.13.731774"
  },
  {
@@ -163,7 +168,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "15.0",
   "CHL_molratio": "49.5",
   "PEG_molratio": "0.5",
-  "Publication_PMID": "",
+  "Publication_PMID": "42367940",
   "Publication_DOI": "10.64898/2026.06.13.731774"
  }
 ]
@@ -181,7 +186,7 @@ Subdirectories:
 
 ## 3. Extraction code in the folder
 
-- `build_rows.py   (421 lines)  Emit the FALCON datasets (Toh et al., bioRxiv 2026) in the 72-column corpus schema.`
+- `build_rows.py   (439 lines)  Emit the FALCON datasets (Toh et al., bioRxiv 2026) in the 72-column corpus schema.`
 - `make_merge_subset.py   (99 lines)  Collapse the FALCON curation into the single block that merges into data/.`
 - `validate.py   (244 lines)  Independent check of 01_WT_2026_rows.csv. Reads the OUTPUT and the SOURCE and`
 
@@ -199,7 +204,7 @@ Subdirectories:
 - `reference_structures.csv   2 rows x 6 cols
         cols: lipid_name, reference_SMILES, source_figure, read_on, read_by, note`
 
-- `PROVENANCE.md   (9.5 kB)`
+- `PROVENANCE.md   (10.5 kB)`
 
 ## 5. C10 drawn-structure anchors for this folder
 
@@ -315,6 +320,11 @@ worth paying for. Re-discovering one is not.
 
 | 35 | **A mask change silently invalidating every window tuned against the old mask** (switching Fig 3c's bar detector from a blue-hue mask to a luminance mask made the panel box's own top rule visible at y = 2301-2314, and the search window started at 2311 — inside it — so every bar would have returned the same wrong top) | 2026-10-30, `QL_2026` Fig 3c | per-curation | assert the first scanned row is not already a full-width rule. Generally: a mask defines what counts as ink, so every threshold, window and offset calibrated under the old one has to be re-derived, not inherited |
 | 36 | **A calibration measured mostly from our own detector error** (the `QL_2026` cross-library offset was computed from four benchmark LNPs plotted in both panels — and three of the four were dot-contaminated, so the 1.1116 "offset between the two screens" was largely the bar-top bug measuring itself. Correcting the detector did not sharpen the offset, it removed it: 1.0071 ± 0.0247, not distinguishable from 1.0) | 2026-10-30, `QL_2026` | per-curation | a quantity derived from a small set of shared anchors inherits every bias those anchors carry; check the anchors for the defect under investigation BEFORE trusting a constant derived from them |
+| 37 | **A check made blind to a class by the normalization it performs before testing** (915 `IL_name` cells carried a trailing space from upstream. C7's required-field check called `.strip()` on each value *before* asking whether it was blank, so a padded value passed as present and the check could not see padding at all. `"A1I5R22C8 "` and `"A1I5R22C8"` are distinct dict keys carrying the *same* SMILES, so this is a silent join hazard, not a cosmetic one — and the condition was DISCLOSED in `CLAUDE.md` and worked around with two defensive `.strip()` calls in `build_dataset.py` for the corpus's whole life) | 2026-11-07, `BL_2023` + `ZH_2023` | **C7 `padded_cells`** | strip at the single emit choke point, and test for padding on EVERY cell rather than normalizing it away inside the test. Generally: a check that canonicalises its input before comparing has deliberately given up the ability to detect non-canonical input, so whatever it normalises away needs its own check. A known-and-worked-around defect is worse than an unknown one, because the workarounds are evidence everybody saw it and nobody owned it |
+| 38 | **A tracked artifact whose input lives in a session scratchpad** (`build_manifest.py` read its NCBI cross-check cache from `.../claude-501/<old-session-uuid>/scratchpad/esum.json`. Scratchpads are session-scoped and get cleared, so the script raised `FileNotFoundError` and `data/experiment_manifest.csv` — committed to git — could not be regenerated from anything in the repository. The cache was also silently STALE: it predated the `QL_2026` and `XD_2026` merges, so the manifest recorded "PMID … not checked against NCBI" for both) | 2026-11-07, second instance — `lit_review/build_data.py` had it on 2026-10-30 | the rule, plus `fetch_esummary.py` | **no script in this repo may read an input from a session scratchpad**; anything a tracked output depends on is written into the repo together with the script that fetches it. Derive paths from `__file__`, not from an absolute path under `/Users/`. Two instances make this a missing rule rather than an oversight |
+| 39 | **A number asserted in the project's own documentation that nothing measures** (`CLAUDE.md` stated the F-001 flag count as 1,152 and told the reader to re-measure it with `C13.rows_carrying_a_flag`, which returns 1,652 because it counts `confidence = high`; the figure matching the prose is 1,157. It also gave the chance baseline as `1/31` vitro — the S from before a July re-trim, matching neither the live corpus (42) nor the frozen run (34) — and described a trailing-space defect as affecting "several" rows when it was 915 cells. The count had moved four times, ≥266 → 1,137 → 1,152 → 1,157, each correction by hand) | 2026-11-07, corpus-wide (F-022/F-024/F-026) | **C15** | `provenance/check_docs.py` + `docs_claims.json` — every documented number paired with an expression that measures it, each tagged with the section that claims it. Deliberately does NOT parse the Markdown: the expected value is transcribed by hand, so changing a doc number means changing both and the pair either agrees or the build fails. **A quantity with a prose definition and no implementation gets re-implemented, slightly differently, by every pass that touches it.** Narrower cousin of class 21, which is a curation's provenance text contradicting its own code |
+| 40 | **A source stating the same quantity in two parameterisations where only ONE is row-aligned** (`WT_2026`'s URS file gives each formulation as four design parameters AND four molar percents. On that one file of seven they describe different formulations: 0 of 129 design rows agree with their own percent row, while 126 derive exactly one OTHER row's percents, injectively. The design block's `PEG_PEG+Chol` is strictly monotone over all 129 rows with zero violations -- impossible under uniform random sampling, and the signature of a spreadsheet sort applied to a contiguous column selection. `IL_to_nucleicacid_chargeratio` was taken from `NP_ratio`, which travels with the sorted block, so it is wrong on 129 corpus rows: median error 6.86 against a file range of 4.01-25.54. C4, C5 and C6 are all blind because every row's percents still sum to exactly 100) | 2026-11-07, `WT_2026` | per-curation, automatable | where a source gives both parameterisations, DERIVE one from the other and require **row-wise** agreement. The positive signature of the defect is a cross-row injective match with ZERO self-matches. Note what does not work: a range check passes identically on misassigned values because a permutation preserves the multiset, which is why this curation's `validate.py` recorded `PASS N/P range 3.33-37.12` on 129 wrong rows |
+| 41 | **A derived "within-model" column silently pooling normalisation units the source says are incomparable** (`Experiment_value_within_model` re-standardises inside (`Experiment_ID` x `Model_type`), but `WT_2026` is normalised per SOURCE FILE and one `Model_type` spans several files -- `Ramos` alone covers 959 rows across five. So the derived column straddles five scales the authors' own `dataset_info.txt` forbids comparing, and `value_normalization_unit` does not describe it: that column declares the unit of `Experiment_value` only. A consumer reaching for the "within model" column to remove an assay offset gets exactly the cross-file mixing the `source_file` flag exists to prevent) | 2026-11-07, `WT_2026` | **open** | a derived column needs its own declared unit, or must refuse to compute where the base unit is not the one it assumes. Generally: adding a re-normalised convenience column creates a SECOND normalisation contract, and a flag that describes only the first one is not a flag on the second |
 
 ## A note on the numbering above
 

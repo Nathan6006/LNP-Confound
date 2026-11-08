@@ -192,7 +192,9 @@
    "bad_values": 0,
    "examples": [],
    "rows_carrying_a_flag": 1589,
-   "rows_with_a_caveat": 3600,
+   "rows_with_a_caveat": 1103,
+   "rows_with_a_note": 3600,
+   "rows_with_only_a_note": 1,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0
   },
@@ -370,7 +372,9 @@
    "bad_values": 0,
    "examples": [],
    "rows_carrying_a_flag": 63,
-   "rows_with_a_caveat": 55,
+   "rows_with_a_caveat": 54,
+   "rows_with_a_note": 55,
+   "rows_with_only_a_note": 1,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0
   },

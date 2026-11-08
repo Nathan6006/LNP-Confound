@@ -5,20 +5,20 @@
  "stereo_only_differences": 0,
  "expected_mismatches_paper_drawing_wrong": 1,
  "papers_with_no_drawn_structure": 9,
- "anchors_that_may_be_a_copy_of_the_enumeration": 7,
+ "anchors_that_may_be_a_copy_of_the_enumeration": 6,
  "results": [
   {
    "paper": "lin_aromatic_2026",
    "lipid_name": "10A2-3B-EP10",
-   "source_figure": "Fig S17",
-   "read_on": "2026-10-29",
-   "note": "Final product of the PRECISE protection/deprotection synthesis, so the regiochemistry is pinned by the route, not assumed: one 3B aromatic arm on EACH primary nitrogen, four EP10 tails on the remaining N-H. Assembled from fragments independently of enumerate_library.py. No stereocentres are drawn (the epoxide-opened carbinols are racemic), so none are asserted.",
+   "source_figure": "Fig S17 (+ Fig S21 HRMS)",
+   "read_on": "2026-11-07",
+   "note": "Final product of the PRECISE protection/deprotection synthesis, so the regiochemistry is pinned by the route rather than assumed: one 3B arm on EACH primary nitrogen, four EP10 tails on the remaining N-H. Rebuilt 2026-11-07 by make_reference.py, which concatenates three fragments written from the reagents' chemical names and uses no RWMol/AddBond/RemoveAtom and no import from this folder -- so the different-code-path claim is executed, not asserted (F-008 round). The anchor is checked against the SI's own HRMS ([M+H]+ 1127.9648), which makes it testable against the paper and not merely against us.",
    "reference_inchikey": "JUAPTPKSYXADRC-UHFFFAOYSA-N",
    "enumerated_inchikey": "JUAPTPKSYXADRC-UHFFFAOYSA-N",
    "skeleton_match": true,
    "stereo_match": true,
    "status": "exact_match",
-   "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
+   "anchor_derivation": "make_reference.py"
   },
   {
    "paper": "ng_2025",

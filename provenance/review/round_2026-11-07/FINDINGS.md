@@ -567,9 +567,507 @@ instead of the primary one.
 
 ---
 
+---
+
+## F-025 — APPLIED, with the modification the validator argued for
+
+Status moved from `out for validation` to **applied 2026-11-07**. The validator
+said **APPLY WITH MODIFICATION** and was right on both counts. Every mechanical
+claim it made reproduced when I checked it:
+
+| claim | verified |
+|---|---|
+| `COMMERCIAL_CORES` is read in exactly one place | yes — definition line 92, sole read line 374 |
+| `quaternize()`'s own docstring says these rows carry `medium` | yes, ~line 229, contradicting the branch 140 lines below it |
+| `PROVENANCE.md` §4 says the 15 read `medium` | yes, line 262 |
+| `new_curation_qc.json` contradicts itself | yes — `confidence_basis` routes commercial-core conjugates to `medium` while `by_confidence.high` lists all six |
+| `_quaternization_site` returns the ASSUMED string for all five cores | yes, all five |
+| that string pairs with `confidence = low` on 24/24 rows of `03_enumerated.csv` | yes |
+| distinct tertiary-amine symmetry classes: MC3 1, SM-102 1, TT3 3 N but 1 class, OF-2 2 N but 1 class, **Lipid 14 2 N and 2 classes** | yes, exactly |
+
+**One of my own checks was wrong, not the validator's.** I reported
+`new_curation_qc.json` as having no `confidence_basis` key. It has one — nested
+under `IL_SMILES_resolution`, and I had looked only at the top level. Sixth
+instance this project of concluding from the wrong level of an artifact.
+
+**What was applied.** `COMMERCIAL_CORES` now stores **SMILES only**; a new
+`_site_confidence()` derives both the confidence and its note from the core's own
+structure, counting tertiary amines **distinct under graph symmetry**:
+
+- more than one distinct candidate → `low`, with a note saying the site was
+  chosen by heuristic and that an earlier pass chose the other one (F-015);
+- one, or several equivalent under symmetry → `medium`, with a note saying the
+  site is forced rather than chosen.
+
+Both branches use it, so `PARENT`'s hard-coded `"medium"` is gone too. Capping
+the output was rejected for the validator's reason: it would leave
+`"TT3": (…, "high")` in the table for the next reader to misuse.
+
+**Net effect, diffed position-aligned against the pre-fix file:** 21 of 537 rows
+changed; only `curation_note` (21), `confidence` (6) and `structure_assumed` (6).
+`Lipid 14-CB1/2/3` **high → low**, `TT3-CB1/2/3` **high → medium**, the nine
+`MC3`/`SM-102`/`OF-2` conjugates unchanged at `medium`. **No SMILES, no value, no
+row count moved.** As the validator predicted, no gated baseline count changed.
+
+**The direction this cuts is worth keeping.** The labelling was *inverted*: the 3
+rows with the most structural uncertainty carried the project's highest
+confidence, and the 6 with the least (a single forced amine) carried `medium`.
+
+**Also closed, from F-024's `confidence_without_a_note` metric.** The 6
+`C5O1B*`/`C6O1B*` rows carrying `medium` with an empty note now carry the real
+reason, which was in `03_enumerated.csv` all along: their `O1` arm is **isodecyl
+acrylate, a commercial branched isomer mixture**, so the stored SMILES is one
+isomer — while the `high` `O2` rows use single-compound dodecyl acrylate. They
+also take `structure_assumed = 1`, matching how `LL_2026` flags the identical
+condition. Note the qc file's own `confidence_basis` attributed their `medium` to
+the C5/C6 **core**, which cannot be right: the `high` O2 rows share those cores.
+`confidence_without_a_note` 6 → **0**, re-baselined in the same change.
+
+---
+
+## F-029 — `brief.py` hid 4 of the 7 quality columns from every packet this round
+
+| | |
+|---|---|
+| **found by** | the `XD_2026` reviewer — and it is the largest thing that round found, while not being about `XD_2026` at all |
+| **status** | **applied** 2026-11-07 |
+| **severity** | **metadata**, but it degraded every Wave-1 review in this round |
+| **confidence** | certain — I reproduced the filter against the schema before fixing it |
+
+The packet generator selected the quality columns with a hard-coded prefix tuple:
+
+```python
+startswith(("flag", "note", "positional", "confid", "source_fig", "extraction"))
+```
+
+which matches **2 of the 7** columns `schema_quality.json` defines.
+`structure_assumed`, `value_is_bound`, `value_normalization_unit` and
+`Experiment_value_within_model` match nothing, and `curation_note` misses because
+it starts "curation", not "note".
+
+| packet | what the data holds | what the packet showed |
+|---|---|---|
+| `QL_2026` | **116 `value_is_bound`** rows + 117 notes | **no `flag_columns` block at all** |
+| `WT_2026` | `value_normalization_unit = source_file` on all 2,544 — the whole F-003 repair | **no block at all** |
+| `XD_2026` | 9 `structure_assumed`, 10 notes | `confidence` only |
+| `LL_2026` | 140 `structure_assumed`, 987 notes | `confidence` + `positional_ambiguity` |
+
+**This is error class 34 one layer out.** The flags now exist in the data and were
+being dropped at the **review** boundary instead of the merge boundary. A
+`QL_2026` reviewer briefed from its packet was given no indication that a third
+of that slice sits on a colormap floor — the exact condition round 1 spent F-019
+establishing. It is probably also part of why F-024's count had to be re-derived
+by hand against the corpus: the packets could not have shown it.
+
+**Applied**: the names come from `schema_quality.json`, the file CLAUDE.md §3
+names as their single source — the same remedy F-001 applied to the builder. The
+prefix test is kept alongside it so a curation's own extraction/figure columns
+still appear. `Experiment_value_within_model` is excluded: it is a continuous z,
+so a top-10 value count of it is noise in a packet rather than a flag.
+
+**Verified after regenerating all five packets**: `QL_2026` now shows
+`value_is_bound = 116` and `curation_note = 117`; `WT_2026` shows its
+normalisation unit; `XD_2026` shows 9 `structure_assumed` and 10 notes;
+`LL_2026` shows 987 / 140 / 987.
+
+**I told the still-running `QL_2026` reviewer what its packet had omitted** rather
+than let it finish under-briefed. It replied that it had read the flags out of
+`data_vitro.csv` directly and none of its findings changed — and corrected two
+statements in my message (below).
+
+---
+
+## F-030 — `XD_2026`'s ALC-0315 override was invisible in the corpus
+
+| | |
+|---|---|
+| **found by** | the `XD_2026` reviewer |
+| **status** | **applied** 2026-11-07 |
+| **severity** | **metadata**, 1 vivo row |
+| **confidence** | certain |
+
+This row's emitted structure deliberately **disagrees** with the figure it came
+from: Fig 5A draws ALC-0315's head one carbon short, so the corpus carries the
+published compound instead. That is the right call — the reviewer re-measured it
+independently and confirmed the override (see below). But the decision lived in
+`07_qc.json`, `reference_structures.csv`, `README.md` and `audit_findings.json`
+— four files inside the curation folder and **no column of the emitted row**, so
+`data_vivo.csv` presented it as a lipid whose drawing and structure agree. §6
+states the principle in the strongest terms it uses anywhere: *a flag that lives
+only in a per-folder QC file is not a flag, it is a memo.*
+
+**Applied** as a `curation_note`, conditional on the row actually being in the
+C10 mismatch list, so `SM-102` and `MC3` correctly stay empty. Two deliberate
+non-changes, both the reviewer's reasoning and both right:
+
+- **`confidence` stays `high`.** The emitted structure is the published compound,
+  pinned by `reagent_registry.json`, and is *more* trustworthy than the drawing.
+- **`structure_assumed` is NOT set.** Nothing was assumed; it was *overridden*
+  from an external source, and the schema has no term for that. Stretching
+  `structure_assumed` to cover it would make the flag mean two things.
+
+**The override itself was independently confirmed and should stand.** The
+reviewer's centreline profiler gives ALC-0315 **3** chain vertices between the O
+and N glyphs and E1 **4**, with the heteroatom-to-first-vertex bond one full bond
+in *both* — so no drawing convention hides a carbon, or ALC-0315 would read 4 and
+E1 would read 5. And the panel draws **two** benchmarks correctly (SM-102's head
+is the 2 it should be, MC3's the 3 it should be), which a convention removing one
+carbon would have made 1 and 2.
+
+---
+
+## F-031 — `ZT_2026`'s `OF-2` core had all four tails one carbon short
+
+| | |
+|---|---|
+| **found by** | the `ZT_2026` reviewer |
+| **status** | **applied** 2026-11-07 |
+| **severity** | **changes a structure**, 3 vivo rows |
+| **confidence** | certain — and the decisive check is mechanical |
+
+The largest finding of round 2. `COMMERCIAL_CORES["OF-2"]` wrote all four tails
+as **C17**; they are **C18**.
+
+**Three independent lines, all pointing the same way** — which is what settles
+the `AC_2025` question of *which half* is wrong (here, the structure, not the
+name):
+
+1. **Geometry.** Fig 1b at 600 dpi: five carbons after the second *cis* bond on
+   three of the four tails. Span arithmetic — carbinol C2 at x = 3521 to the
+   terminus at 4311 is 790 px, and 16 bonds (14 zigzag at a measured constant
+   48 px pitch + 2 flat *cis* at ~55) predicts 782; a C17 chain predicts a
+   terminus at 4255, **54 px short of where the ink demonstrably ends**.
+2. **An independent curation of the same reagent already in our own corpus.**
+   `LL_2025` carries it as `OF-02`: **C84H152N4O6,
+   `UMSCHHWDFWCONK-RGLFHLPNSA-N`**. I rebuilt the corrected core and it
+   reproduces that **full** InChIKey, stereo included. The stored one was
+   **C80H144N4O6, `VWUVJOOCHBGZLR-NFMFUWBKSA-N`** — four CH₂ lighter, a different
+   skeleton block.
+3. **Chemistry.** The tail is the ring-opened epoxide of a **linoleyl**
+   (C18:2 Δ9,12) alcohol. A C17 chain carrying a 9,12-diene is not a
+   fatty-chain-derived tail.
+
+**Applied.** `OF-2-CB1/2/3` are now C114H201N4O8⁺ / C116H205N4O8⁺ /
+C118H209N4O8⁺ at MW 1755.88 / 1783.94 / 1811.99 — exactly the values the reviewer
+predicted. Row counts, every `Experiment_value`, and every other structure
+unchanged; `AUDIT PASS` and C15 green after the rebuild.
+
+**Why nothing caught it.** The error was internally *consistent* — formula,
+descriptors and canonical SMILES all agreed with each other. C10 has one anchor
+in this folder (`C6O2B2`) and the 15 commercial-core conjugates have none; C11's
+registry has no `OF-2` entry; C14 cleaves the sterol, which was correct here. And
+the folder's own `confidence_basis` records that the apex chain counter was
+**not** used on OF-2 because its alkenes break the zig-zag — so this is precisely
+the lipid where a by-eye count was the only evidence the structure ever had.
+Error class 19, realised.
+
+**The cheap check this earns, and the sharpest lesson of the round.** An
+independent structure for the same named reagent **already existed in our corpus
+and was never consulted**. For every reagent name appearing in more than one
+experiment, compare skeleton InChIKeys and report disagreements. `OF-2` vs
+`OF-02` needs a small alias table, but the comparison is otherwise mechanical and
+would have caught this for free. Not yet implemented — see the open list.
+
+---
+
+## Corrections to my own claims this round
+
+**The `QL_2026` reviewer corrected me twice, and was right both times.**
+
+1. I told it mid-run that `curation_note` was empty on all 344 `QL_2026` rows. It
+   is populated on **117** — 113 floor notes, 3 saturation notes, 1 cross-figure
+   conflict. I had asserted it from a reading of the columns rather than a count.
+2. `CLAUDE.md` §6, written by me earlier the same day, said the 117th row
+   "carries no flag column at all". False: `T3A-L8-C14` carries a populated
+   `curation_note` saying Fig 2b and Fig 2c disagree about it by 7.3×. What it
+   lacks is `value_is_bound`.
+
+**And my fix for (2) was wrong in a way worth recording.** Folding
+`curation_note` into `rows_with_a_caveat` moved it **1,103 → 3,600** on vitro,
+because 2,400 `YX_2024` and 96 `LZ_2025` rows carry a note declaring the class-22
+condition — a property of the *normalisation*, already declared by
+`value_normalization_unit`, not a statement that the row's structure or value is
+qualified. **That is the F-024 mistake one level down: a +1 fix that silently
+became +2,497.** Resolved by counting the populations separately —
+`rows_with_a_caveat` (1,157), `rows_with_a_note` (3,655) and
+`rows_with_only_a_note` (2, both named in the baseline) — so the genuine miss is
+named rather than absorbed into a total, and no term is invented for "two sources
+disagree" that the schema does not have. Baseline 70 → **74** metrics.
+
+Also mine, not round 1's: I told the `WT_2026` reviewer that Suppl Table 5 was on
+**p. 59** of `media-1.pdf`. It is on **p. 8**; 59 was a line number from a
+`pdftotext` dump that I passed on as a page number. The reviewer found the right
+page and said so.
+
+---
+
+## F-008 — APPLIED. The Fig 2a sampling window overran the heatmap by 56 px
+
+| | |
+|---|---|
+| **found by** | round 1 (unreproduced); **settled** by the round-2 `LL_2026` reviewer |
+| **status** | **applied** 2026-11-07 |
+| **severity** | **cosmetic today, latent off-by-N**; 0 of 147 bins change |
+| **confidence** | certain — measured three independent ways |
+
+`digitize_fig2a.py` had `BODY = (640, 679, 3161, 1073)` where the heatmap's blue
+ink ends at **3104.7**. Round 1's "57 px" was right to within a pixel.
+
+| | measured | script |
+|---|---|---|
+| right edge x | **3104.74** (reviewer, sub-pixel coverage integral) | 3161 |
+| right edge x | **3106** (my own threshold scan of the same band) | 3161 |
+| column pitch | **117.288** | 120.048 |
+
+With 21 columns across a box 56 px too wide, the sampling centre drifted right by
+`-2.15 + 2.758*(c+0.5)` px: columns 11-19 bled into the **next amine's column**,
+and column 20 (`12A2`) sampled **26.2 px of blank page -- 43.7% of its window**.
+
+**No bin changed, and the reason is thinner than it sounds.** The sample is a
+per-channel `np.median`, and 43.7% is under 50%, so the correct cell always kept
+a strict majority. **Six percentage points of slack.** A mean instead of a
+median, or one more column, and cells would have flipped. Confirmed by a fully
+independent re-digitization (147/147 identical, histogram 19/41/87) and by my own
+diff after applying the fix: **0 of 147 `bin_label`/`bin_index` changed**, only
+`cell_rgb`, `match_distance` and `runner_up_margin` on 7 rows.
+
+**The most useful thing this finding produced is about a check, not a number.**
+Max colour distance was **2.29 under the old geometry and 0.00 under the
+corrected one**. CLAUDE.md §5 says "anything above ~5 means the geometry is
+wrong" — and that gate passed a window sitting 44% off its cell. **The gate
+catches catastrophic offsets, not drift.**
+
+---
+
+## F-009 — APPLIED as a flag. The paper asserts (S) twice; nothing measures it
+
+| | |
+|---|---|
+| **found by** | round 1 (`claimed`); **confirmed and strengthened** in round 2 |
+| **status** | **applied** 2026-11-07 — as a flag, not a structure change |
+| **severity** | **metadata**, 141 rows |
+| **confidence** | certain on the disclosure; probable on (S) being the product's true configuration |
+
+The SI Materials list names reagent `5B` as **"(S)-glycidyl trityl ether"**, and
+`(S)` occurs **exactly once** in the main text and SI combined — no other block
+in the 30-block list carries any stereodescriptor.
+
+**Evidence round 1 did not have: the paper draws it too.** Fig 1b draws 5B with a
+solid **stereo wedge** — the only one of the seven mB analogs drawn with any
+stereobond. The wedge taper rises monotonically 3.5 -> 9.5 px from the epoxide
+methine to the exocyclic CH2, so the narrow end is at the stereocentre; building
+a molblock from the measured vertex coordinates and letting RDKit assign CIP
+gives **S**. Two independent assertions in the paper that agree.
+
+**And nothing measures it on a product.** Zero hits for optical rotation, chiral
+HPLC, ee or diastereo anywhere; none of the four "precise synthesis" compounds
+even contains 5B, so **no 5B product is characterised at all**.
+
+**Flagged, not rewritten** — round 1's posture, on a firmer basis:
+- the configuration is never measured on a product;
+- each molecule carries **4-6 other carbinols that genuinely are racemic**, so
+  asserting this one emits a *partially specified* stereoisomer — neither
+  specified nor unspecified — and stereo-aware fingerprints would read these 141
+  rows as a distinct chemotype for a reason that is an artifact of which reagent
+  the vendor happened to sell enantiopure;
+- one-pot, 75 C, 48 h, no chromatography leaves no way to exclude minor attack
+  at C2.
+
+**Applied**: `structure_assumed = 1` plus a `curation_note` naming the feature,
+on exactly **141 rows** (120 `LL_2026` + 21 `LL_2026_2`) — verified against the
+emitted corpus. `confidence` stays `high`: the **connectivity** is not in doubt.
+`positional_ambiguity` would have been the wrong column. The 20 rows that are
+also `Ac8-1`/`Ac10-1` correctly carry both notes.
+
+One edit covered both experiments because `enumerate_147.py` calls
+`build_rows.quality()` — the single implementation, which is why F-001's "define
+it once" repair keeps paying.
+
+---
+
+## F-032 — the `10A2-3B-EP10` C10 anchor: value correct, provenance claim unexecuted
+
+| | |
+|---|---|
+| **found by** | carried from round 1's open list |
+| **status** | **applied** 2026-11-07 |
+| **severity** | **verification coverage** — no structure or value changes |
+| **confidence** | certain |
+
+The anchor was a typed literal with no generator, so C10 reported
+`anchor_may_be_a_copy`: a reference copied out of the enumeration is
+byte-identical to an honestly re-derived one after canonicalisation and can
+therefore only pass.
+
+**The value turned out to be correct.** The reviewer derived the structure from
+scratch — Fig S17 plus the SI's protection/deprotection route, by f-string
+concatenation of three fragments written from chemical names, before opening
+`enumerate_library.py` — and got **`JUAPTPKSYXADRC-UHFFFAOYSA-N`**, which I
+confirmed is identical to the stored anchor and to the corpus `IL_SMILES`. **This
+is not F-013 repeating.**
+
+What the route pins, and why it is a route rather than an assumption: P1 is
+bis-TFA spermine on the **primaries** ([M+H]+ 395.19, and the 1H NMR integrates
+**4H** next to the amide N — it would be 8H had the TFA gone on the
+secondaries); P2/P3 put Boc on the secondaries (403.33, 18H Boc singlet); 3B is
+then added to P3, whose only free N-H are the two primaries; P5 (503.36) confirms
+exactly two 3B arms.
+
+**Applied**: `make_reference.py` now *builds* it — no `RWMol`, no `AddBond`, no
+`RemoveAtom`, no import from this folder, RDKit used only to canonicalise and
+weigh. **The assert that matters is the HRMS one**: `[M+H]+` must equal the
+**1127.9648 the SI prints**, which makes the anchor testable against the *paper*
+rather than against us. It also asserts the formula, four nitrogens, two phenyl
+rings, six secondary carbinols, no uncapped N-H, and no stereocentre — and
+refuses to overwrite a stored anchor whose value has moved.
+
+**C10's `anchors that may be a copy` is now 6, down from 7.** All six remaining
+are in `curation/ng_2025/`, untouched.
+
+---
+
+## F-033 — error class 20 surviving the repair that was meant to clear it
+
+| | |
+|---|---|
+| **found by** | the round-2 `LL_2026` reviewer (its E2) — NEW |
+| **status** | **applied** 2026-11-07 |
+| **severity** | **metadata** — no corpus value is computed from these 48 numbers |
+| **confidence** | certain on the geometry; the outcome confirms the attribution |
+
+F-006 re-anchored `digitize_fig2fgh.py`'s **scale** on the tick ladder and left
+the **origin** as three hard-coded literals. On panel 2h the 0% tick *is* drawn
+and the literal 4055 was nearly right (0.28 pp), which is why the file's comment
+— which quoted only the 2h number and blamed the colour mask's bottom edge —
+sounded adequate. **On 2f and 2g the 0% tick is not drawn**, the ladder
+extrapolates it 3-4 px *below* the panel box, and the literal 3335 was short by
+**0.61 pp on each**.
+
+Deriving the origin from the same tick fit as the scale:
+
+| | before | after |
+|---|---|---|
+| mean delta | **-0.52 pp** | **-0.042 pp** |
+| max abs delta | 1.00 pp | **0.40 pp** |
+| negative deltas | **47 of 48** | **25 of 48** |
+
+**25 of 48 is what unbiased noise looks like.** The one-sided signature is gone,
+which is the evidence that the cause was found rather than the number massaged.
+
+**The lesson is sharper than the fix.** Round 1 recorded this residual as
+inherent and wrote, correctly in spirit, that it was "recorded here instead of
+being tuned away … because tuning it away is exactly what the old fitted scale
+did." The posture was right and the diagnosis was wrong, so a **removable** error
+was documented as an irreducible one. *Declining to tune a residual away is not
+the same as knowing what causes it.*
+
+`WORST_TOL` 1.1 -> **0.6**, set from the measurement floor (a sub-pixel top edge
+is good to about half a pixel, ~0.1 pp here) and deliberately **not** to the new
+maximum of 0.40 — a tolerance pinned to the current worst value is a tolerance
+that cannot fail.
+
+Three places asserted the stale figure and were corrected in the same change:
+`digitize_fig2fgh.py`'s comment, `11_LL_2026_qc.json`'s
+`fig2fgh_hit_rates`, and `lit_review/build_data.py`'s `validation` string.
+
+---
+
+## Also from the `LL_2026` reviewer: applied, and deliberately not applied
+
+**Applied — the stray literal (its E3).** The `positional_ambiguity`
+`curation_note` said *"which **ring** nitrogen bears which arm"* on **987 of 987**
+rows. Only `3A` (N-aminoethylpiperazine) contributes a reactive ring N-H — **7
+rows, all in `LL_2026_2`**. `7A`'s piperazine nitrogens are tertiary and cannot
+react, `6A`'s ring is carbocyclic, every `LL_2026` amine (8A-12A) is an acyclic
+polyamine, and the spermine in `10A2-3B-EP10` has no ring at all. The docstring
+four lines above said "WHICH nitrogen" correctly, without the word. Verified 0
+rows now say "ring nitrogen".
+
+**Cleared — the lead I passed on was wrong.** I had handed the reviewer
+`enumerate_147.py:111`'s `{**r, "confidence": "high"}` as a possible F-011
+instance, from the `WT_2026` reviewer. It is **benign**: F-011's defect was a
+literal *discarding* an assessment that existed, and here `EL.build()` returns
+only `(smiles, n_tails, n_sites)` with no `confidence` column anywhere upstream,
+so there is nothing to discard. One latent fragility noted: the value is a
+literal rather than the rule, so a future 147-style screen with a branched tail
+would silently emit `high`.
+
+**Not applied, logged (its E4).** `positional_ambiguity = 1` on **126 rows that
+have no positional ambiguity**. The rule is `int(eq < n_sites)` — fewer arms than
+N-H sites — which ignores molecular symmetry. Where one arm goes on an amine
+whose reactive N-H are all equivalent (`11A1`, tren: 3 equivalent NH2, 84 rows)
+or on the only nitrogen (`1A1`, decylamine, 7 rows), the product is **unique**.
+By `schema_quality.json`'s own definition the flag is wrong on these. The error
+is conservative, but it dilutes the flag: `positional_ambiguity` currently means
+"this is a Lin lipid", not "this is ambiguous". Not applied because the fix needs
+an automorphism-orbit rule or a per-amine table with its reasoning recorded, and
+inventing either under time pressure is how a flag gets *differently* wrong.
+
+**Not applied, logged (its E5/E6).** The two screens of the same paper use
+**different vocabularies** in the decomposition columns — `IL_head_name` is
+`Spermine` in `LL_2026` and `10A` in `LL_2026_2`, `IL_tail1_name` is
+`(S)-glycidyl trityl ether` vs `5B`. Same reagents, same paper, two keys; any
+join across the two silently splits one reagent in two. **That is F-022's shape
+one experiment apart instead of one trailing space.** And the aromatic module is
+stored in `IL_tail1_name` while `blocks.csv` classes 1B-7B as `block_class =
+linker` and `IL_linker_name` sits empty.
+
+---
+
+## A datum for the manuscript, not a finding
+
+The two Lin screens share **70 identical structures** — same lab, same library,
+same cells, same dose; only the formulation (15/20/25/2 -> 15/15/25/2) and the
+IL:mRNA ratio (20:1 -> 10:1) change. **Spearman = 0.496 (p = 1.3e-5, n = 70)**,
+52/70 in the same bin.
+
+It sits as a third rung between the two the project already has:
+
+| comparison | Spearman |
+|---|---|
+| within-experiment (Result 6) | ~0.37 |
+| **same lab, same lipids, formulation changes (new)** | **~0.50** |
+| same lab, same lipids, cell type changes (`molea`) | 0.30 |
+| cross-lab shared lipids (Result 3) | 0.083 |
+
+**Heavily ceiling-limited and tie-dominated** — 50 of the 70 are top-bin in both,
+on 4 and 3 ordinal levels — so it is a loose upper bound, not a point estimate.
+If it is used at all, it must be stated as an ordinal-with-ties correlation on a
+saturated distribution.
+
+---
+
+## Still open after round 2
+
+**Closed this round from round 1's carried list:** F-008 (applied), F-009
+(applied as a flag), the `10A2-3B-EP10` C10 anchor (generator written). F-004 is
+*settled on the evidence* but not applied — it needs a decision, not more work.
+
+| id | what it needs | who |
+|---|---|---|
+| **F-021** | the `ZH_2023` source paper — He Z et al., *Angew Chem Int Ed* 2023, 62, e202310401. **Blocked: not held locally.** | user |
+| **F-004** | a decision. The percent block is authoritative (the URS design block's `PEG_PEG+Chol` is strictly monotone over all 129 rows — verified, 128/0 violations, nothing else in the file sorted but the row label), and `N:P` has **three mutually inconsistent candidates** (7.199 stored / 16.766 reconstructed / 6.0 from a Suppl Table 5 row that is itself demonstrably block-pasted). Recommended repair: **blank `N:P` on the 129 URS rows**, leave the percents. | user |
+| **QL E-1** | a decision. `d.argmin()` over the Fig 2b LUT returns the **topmost tying row**, so every heatmap value is the top of its quantisation band, up to **+18%**. Band midpoints give **rms Δz 0.149, max 0.321 over 293 rows** — 16× any other candidate correction here, and it moves manuscript numbers. | user |
+| **QL E-2** | unambiguous, apply with E-1 or alone: the `< 4.0` floor threshold crosses one real LUT step, so **65 of the 113 `value_is_bound = upper` rows** sit at 1367.1 RLU with a band of ~[1018, 1367] — bounded below, and stored *above* the `[0, ~982]` band their own note declares. Verified: the 113 split 65/48 exactly. The F-019 contradiction on the rows F-019 did not touch. | me |
+| **ZT E2/E3** | two **dead checks**. `digitize_bars.py` raises `KeyError` on 3 of 4 panels after a 2026-10-28 column rename, and `07b_fig2c_qc.json` records three marginal checks as all-zeros with deltas of −41/−21/−31 etc., one of them as `rank_order_matches: true` — while `07_qc.json`, `PROVENANCE.md` and `CLAUDE.md` §9 all say "all four exact" / "15/15 bins exact". The 15 values are right (re-derived tick-only this round); the checks are not running. | me |
+| **F-028** | `Experiment_value_within_model` pools five `WT_2026` source-file scales that `dataset_info.txt` forbids comparing, and no column declares it. Repair is a research decision. | user |
+| **LL E-4** | `positional_ambiguity = 1` on 126 rows with no actual ambiguity (the rule ignores molecular symmetry). Needs an automorphism-orbit rule or a per-amine table. | me |
+| **LL E-5/E-6** | the two Lin screens use different vocabularies in the decomposition columns (F-022's shape, one experiment apart), and the aromatic module is stored as a tail while `blocks.csv` classes it a linker. | me |
+| **QL E-5 / ZT E7 / WT E6** | three curation docs carry stale assertions. **`ql_2026/PROVENANCE.md` is the dangerous one**: it lists four round-1 findings as "Open after merging" when all four are fixed and one was **refuted**, so a reader will re-open F-017. | me |
+| **reagent cross-check** | the check F-031 earns: compare skeleton InChIKeys for every reagent name appearing in more than one experiment. **This is the one that would have caught the `OF-2` error for free.** Error class 40; not implemented. | me |
+| **C10 coverage** | `ql_2026` has 1 typed anchor for 344 structures with nothing anchoring L1 or L2; `xd_2026_lipidai` has 3 typed anchors and no `make_reference.py`. Fig 3b and Fig 5A respectively draw enough to generate one. | me |
+| **`ng_2025`** | 6 of the 7 remaining `anchor_may_be_a_copy` anchors, and **333 curated `NG_2025` rows that are not merged**. Untouched all round, per instruction. | user |
+
 ## Wave 1 reports
 
-Reports land in this directory as `report_<TARGET>.md`. Adjudication follows the
-Wave 3 rule in `../REVIEW_PROGRAM.md` §5: nothing is applied because a reviewer
-said so — I reproduce the evidence myself, and a reviewer's finding is a claim
-until then.
+`report_ZT_2026.md`, `report_LL_2026.md`, `report_WT_2026.md`,
+`report_XD_2026.md`, `report_QL_2026.md`, plus `validation_F025.md`. All five
+reviewers were blocked by the harness from writing their own files; each report
+was returned as text and saved here verbatim by me, with my own notes marked.
+
+Adjudication followed `../REVIEW_PROGRAM.md` §5: nothing was applied because a
+reviewer said so. Every applied finding was reproduced from the primary object
+first — and doing that caught **one reviewer claim that was mine to correct**
+(the F-025 `confidence_basis` key I said was absent is nested one level down)
+and **two of my own statements that a reviewer corrected** (the QL
+`curation_note` count, and CLAUDE.md's "carries no flag column at all").

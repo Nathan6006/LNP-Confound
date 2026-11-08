@@ -115,7 +115,7 @@ COMMERCIAL_CORES = {
             "CCCCCCCCCCCC)cc(C(=O)NCCCN(CCCCCCCCCCCC)CCCCCCCCCCCC)c1"),
     "Lipid 14": ("CN(C)CCCC(=O)OCCN(CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC)"
                  "CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC"),
-    # CORRECTED 2026-11-07 (F-030). All four tails were written C17; they are
+    # CORRECTED 2026-11-07 (F-031). All four tails were written C17; they are
     # C18. The tail is the ring-opened epoxide of a LINOLEYL (C18:2 delta-9,12)
     # alcohol -- a methylene-interrupted 9,12-diene with a 2-hydroxy head -- and
     # a C17 chain carrying a 9,12-diene is not a fatty-chain-derived tail at all.
