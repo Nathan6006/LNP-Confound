@@ -1,0 +1,205 @@
+{
+ "_what": "Numbers CLAUDE.md and the provenance docs ASSERT, each paired with an expression that measures the same thing from the live corpus. check_docs.py evaluates every expression and fails on any mismatch.",
+ "_why": "Three documented numbers were stale or undefined on 2026-11-07 and none of them failed anything: the F-001 flag count (1,152, and the metric the docs told you to re-measure it with returned 1,652 -- F-024), the chance baseline (1/31 vitro, which matched neither the live corpus nor the frozen run -- F-026), and a trailing-space condition understated as 'several' when it was 915 cells (F-022). Prose cannot be audited. A number in prose with no executable twin drifts the moment the corpus moves, and the drift is invisible because nothing compares them.",
+ "_how": "Add an entry whenever a doc states a number about the corpus. `expr` is evaluated with `V` (vitro rows), `W` (vivo rows), `O` (Original_LNPDB rows), `A` (audit_findings.json), `S` (schema_quality.json columns) in scope -- see check_docs.py. Keep `where` pointing at the file and section that makes the claim, so a failure says which prose to fix.",
+ "claims": [
+  {
+   "id": "vitro_rows",
+   "where": "CLAUDE.md \u00a72, \u00a73",
+   "expect": 28885,
+   "expr": "len(V)"
+  },
+  {
+   "id": "vitro_cols",
+   "where": "CLAUDE.md \u00a72, \u00a73",
+   "expect": 79,
+   "expr": "len(V[0])"
+  },
+  {
+   "id": "vitro_experiments",
+   "where": "CLAUDE.md \u00a73",
+   "expect": 42,
+   "expr": "len({r['Experiment_ID'] for r in V})"
+  },
+  {
+   "id": "vivo_rows",
+   "where": "CLAUDE.md \u00a72, \u00a73",
+   "expect": 1780,
+   "expr": "len(W)"
+  },
+  {
+   "id": "vivo_cols",
+   "where": "CLAUDE.md \u00a72, \u00a73",
+   "expect": 79,
+   "expr": "len(W[0])"
+  },
+  {
+   "id": "vivo_experiments",
+   "where": "CLAUDE.md \u00a73",
+   "expect": 19,
+   "expr": "len({r['Experiment_ID'] for r in W})"
+  },
+  {
+   "id": "original_lnpdb_rows",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 19797,
+   "expr": "len(O)"
+  },
+  {
+   "id": "original_lnpdb_cols",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 66,
+   "expr": "len(O[0])"
+  },
+  {
+   "id": "quality_columns",
+   "where": "CLAUDE.md \u00a73 (79 = 67 + 5 + 7)",
+   "expect": 7,
+   "expr": "len(S)"
+  },
+  {
+   "id": "schema_total",
+   "where": "CLAUDE.md \u00a73",
+   "expect": 79,
+   "expr": "67 + 5 + len(S)"
+  },
+  {
+   "id": "chance_baseline_S_vitro",
+   "where": "CLAUDE.md \u00a77 -- was stale at 31 until 2026-11-07 (F-026)",
+   "expect": 42,
+   "expr": "len({r['Experiment_ID'] for r in V})"
+  },
+  {
+   "id": "chance_baseline_S_vivo",
+   "where": "CLAUDE.md \u00a77 -- was stale at 17 until 2026-11-07 (F-026)",
+   "expect": 19,
+   "expr": "len({r['Experiment_ID'] for r in W})"
+  },
+  {
+   "id": "rows_with_a_caveat",
+   "where": "CLAUDE.md \u00a75, \u00a76 -- the F-001 number. NOT rows_carrying_a_flag (F-024)",
+   "expect": 1157,
+   "expr": "A['vitro']['C13_quality_vocabulary']['rows_with_a_caveat'] + A['vivo']['C13_quality_vocabulary']['rows_with_a_caveat']"
+  },
+  {
+   "id": "rows_carrying_a_flag",
+   "where": "CLAUDE.md \u00a76 -- includes confidence=high, which is an assurance not a caveat",
+   "expect": 1652,
+   "expr": "A['vitro']['C13_quality_vocabulary']['rows_carrying_a_flag'] + A['vivo']['C13_quality_vocabulary']['rows_carrying_a_flag']"
+  },
+  {
+   "id": "positional_ambiguity_rows",
+   "where": "CLAUDE.md \u00a73",
+   "expect": 987,
+   "expr": "sum(1 for r in V + W if r.get('positional_ambiguity') == '1')"
+  },
+  {
+   "id": "ZT_2026_vitro",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 486,
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'ZT_2026')"
+  },
+  {
+   "id": "ZT_2026_vivo",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 51,
+   "expr": "sum(1 for r in W if r['Experiment_ID'] == 'ZT_2026')"
+  },
+  {
+   "id": "LL_2026_vitro",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 840,
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'LL_2026')"
+  },
+  {
+   "id": "LL_2026_2_vitro",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 147,
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'LL_2026_2')"
+  },
+  {
+   "id": "WT_2026_vitro",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 2544,
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'WT_2026')"
+  },
+  {
+   "id": "XD_2026_vivo",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 12,
+   "expr": "sum(1 for r in W if r['Experiment_ID'] == 'XD_2026')"
+  },
+  {
+   "id": "QL_2026_vitro",
+   "where": "CLAUDE.md \u00a72",
+   "expect": 344,
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'QL_2026')"
+  },
+  {
+   "id": "names_multi_structure_across_experiments",
+   "where": "CLAUDE.md \u00a73 -- 288 names carry DIFFERENT structures in DIFFERENT experiments. Distinct from error class 30's 292, which counts names with >1 structure regardless of experiment",
+   "expect": 288,
+   "expr": "n_names_multi_structure_cross_experiment(V)"
+  },
+  {
+   "id": "unassigned_stereogenic_CC_vitro",
+   "where": "CLAUDE.md \u00a73 (FG_2026 120, YX_2026_SDL 79, NC_2024 13 = 212). This is the VITRO count; \u00a73 does not mention the vivo rows, see the next claim",
+   "expect": 212,
+   "expr": "A['vitro']['C9_stereochemistry']['rows_with_unassigned_stereogenic_CC']"
+  },
+  {
+   "id": "unassigned_stereogenic_CC_vivo",
+   "where": "NOT stated in CLAUDE.md \u00a73, which gives only the vitro 212. Recorded here so the 2 vivo rows are visible rather than absent",
+   "expect": 2,
+   "expr": "A['vivo']['C9_stereochemistry']['rows_with_unassigned_stereogenic_CC']"
+  },
+  {
+   "id": "unassigned_CN_imine_vitro",
+   "where": "NOT stated in CLAUDE.md \u00a73 either, and it is 240 rows -- larger than the C=C count the docs do mention",
+   "expect": 240,
+   "expr": "A['vitro']['C9_stereochemistry']['rows_with_unassigned_CN_imine']"
+  },
+  {
+   "id": "SB_SY_non_zscore_vivo_rows",
+   "where": "CLAUDE.md \u00a73, \u00a78",
+   "expect": 60,
+   "expr": "sum(1 for r in W if r['Experiment_ID'] in ('SB_2024', 'SY_2025'))"
+  },
+  {
+   "id": "padded_cells_vitro",
+   "where": "CLAUDE.md \u00a73 -- fixed 2026-11-07 (F-022); was 720",
+   "expect": 0,
+   "expr": "A['vitro']['C7_fields']['padded_cells']"
+  },
+  {
+   "id": "padded_cells_vivo",
+   "where": "CLAUDE.md \u00a73 -- fixed 2026-11-07 (F-022); was 195",
+   "expect": 0,
+   "expr": "A['vivo']['C7_fields']['padded_cells']"
+  },
+  {
+   "id": "registered_reagents",
+   "where": "CLAUDE.md \u00a73 -- C11 pins 13 named reagents",
+   "expect": 13,
+   "expr": "n_registered_reagents()"
+  },
+  {
+   "id": "blank_pmid_vitro",
+   "where": "CLAUDE.md \u00a73 -- was 2,544 (all of WT_2026) on a false 'preprint, not indexed' reason until 2026-11-07 (F-027)",
+   "expect": 0,
+   "expr": "A['vitro']['C7_fields']['blank_required_fields'].get('Publication_PMID', 0)"
+  },
+  {
+   "id": "blank_pmid_vivo",
+   "where": "CLAUDE.md \u00a73 -- every vivo paper is indexed",
+   "expect": 0,
+   "expr": "A['vivo']['C7_fields']['blank_required_fields'].get('Publication_PMID', 0)"
+  },
+  {
+   "id": "WT_2026_pmid",
+   "where": "CLAUDE.md \u00a73 -- PMID 42367940, indexed 2026-06-29; verified by esearch on the stored DOI",
+   "expect": "42367940",
+   "expr": "next(iter({r['Publication_PMID'] for r in V if r['Experiment_ID'] == 'WT_2026'}))"
+  }
+ ]
+}

@@ -274,9 +274,26 @@ def c7_fields(rows, expect_model):
     for c in ("IL_name", "IL_SMILES", "Experiment_method", "Model_type",
               "Cargo", "Experiment_value", "Publication_PMID"):
         blank[c] = sum(1 for r in rows if not str(r.get(c, "")).strip())
+
+    # Surrounding whitespace on ANY cell, not just the required ones. 915
+    # IL_name cells carried a trailing space from upstream for the corpus's
+    # whole life, disclosed in CLAUDE.md and worked around with .strip() at two
+    # call sites, but never checked: blank_required_fields already called
+    # .strip() before testing, so a padded value passed as present and the
+    # check was structurally blind to the class. "A1I5R22C8 " and "A1I5R22C8"
+    # are different dict keys carrying the same SMILES, which is a silent join
+    # hazard rather than a cosmetic one (F-022).
+    padded = Counter()
+    for r in rows:
+        for c, v in r.items():
+            if isinstance(v, str) and v != v.strip():
+                padded[c] += 1
+
     return {"wrong_Model": len(bad_model), "wrong_Route": len(bad_route),
             "cargo_pairs": {f"{a}|{b}": n for (a, b), n in cargo.most_common()},
-            "blank_required_fields": {k: v for k, v in blank.items() if v}}
+            "blank_required_fields": {k: v for k, v in blank.items() if v},
+            "padded_cells": sum(padded.values()),
+            "padded_columns": dict(padded)}
 
 
 def c8_descriptors(rows):
@@ -534,7 +551,7 @@ def c13_quality_vocabulary(rows):
     """
     schema = json.load(open(os.path.join(HERE, "schema_quality.json")))
     allowed = {c["name"]: c["allowed"] for c in schema["columns"]}
-    bad, unexplained = [], 0
+    bad, unexplained, conf_unexplained = [], 0, 0
     for r in rows:
         for col, ok in allowed.items():
             if ok is None:
@@ -545,12 +562,67 @@ def c13_quality_vocabulary(rows):
         if (r.get("structure_assumed") == "1" or r.get("value_is_bound")) \
                 and not r.get("curation_note"):
             unexplained += 1
+        # A medium/low confidence with nothing saying WHY is the same defect as
+        # an unexplained structure_assumed, and the check above could not see it
+        # because it never looked at `confidence` (F-024).
+        if r.get("confidence") in ("medium", "low") and not r.get("curation_note"):
+            conf_unexplained += 1
+
+    # TWO different counts, because conflating them is how "the number of
+    # flagged rows" moved four times (>=266 -> 1,137 -> 1,152 -> 1,157) without
+    # anyone noticing that each figure answered a different question (F-024).
+    #
+    #   rows_carrying_a_flag  any quality column is populated at all. This
+    #                         INCLUDES confidence = high, which is an assurance
+    #                         rather than a caveat, so it is the larger number
+    #                         and it is NOT the F-001 quantity.
+    #   rows_with_a_caveat    the row's structure or value is actually
+    #                         qualified: an ambiguity, an assumed feature, a
+    #                         bound, or a confidence below `high`. THIS is the
+    #                         number F-001 is about and the one to quote.
+    #
+    # CLAUDE.md pointed readers at rows_carrying_a_flag to re-measure 1,152; it
+    # returns 1,652, because 495 ZT_2026/XD_2026 rows carry confidence = high
+    # and nothing else. Both counts are now emitted so the ambiguity cannot
+    # survive another round.
     flagged = sum(1 for r in rows
                   if any(r.get(c) for c in ("confidence", "positional_ambiguity",
                                             "structure_assumed", "value_is_bound")))
+    # `curation_note` is deliberately NOT part of this count, and the attempt to
+    # add it is worth recording. The round-2 QL_2026 reviewer correctly pointed
+    # out that `T3A-L8-C14` carries a note saying Fig 2b and Fig 2c disagree
+    # about it by 7.3x and nothing else, so it is a caveated row this metric
+    # misses. Folding `curation_note` in to fix that moved the count 1,103 ->
+    # 3,600 on vitro -- because 2,400 `YX_2024` and 96 `LZ_2025` rows carry a
+    # note declaring the class-22 condition ("HeLa and RAW264.7 were z-scored
+    # separately upstream, so the between-assay offset is identically zero by
+    # construction"). That is a real and serious caveat, but it is a property of
+    # the NORMALISATION, already declared by `value_normalization_unit`, not a
+    # statement that this row's structure or value is qualified. Conflating them
+    # is the F-024 mistake one level down: a +1 fix that silently became +2,497.
+    #
+    # So the two populations are counted separately, and `rows_with_a_note`
+    # below makes the notes visible rather than folded in. The genuine miss is
+    # exactly one row, named in CLAUDE.md §6 rather than absorbed into a total.
+    caveat = sum(1 for r in rows
+                 if any(r.get(c) for c in ("positional_ambiguity",
+                                           "structure_assumed", "value_is_bound"))
+                 or r.get("confidence") in ("medium", "low"))
+    noted = sum(1 for r in rows if r.get("curation_note"))
+    note_only = sum(1 for r in rows
+                    if r.get("curation_note")
+                    and not any(r.get(c) for c in ("positional_ambiguity",
+                                                   "structure_assumed",
+                                                   "value_is_bound"))
+                    and r.get("confidence") not in ("medium", "low")
+                    and r.get("value_normalization_unit") != "experiment_x_model_type")
     return {"bad_values": len(bad), "examples": bad[:8],
             "rows_carrying_a_flag": flagged,
-            "flagged_without_a_note": unexplained}
+            "rows_with_a_caveat": caveat,
+            "rows_with_a_note": noted,
+            "rows_with_only_a_note": note_only,
+            "flagged_without_a_note": unexplained,
+            "confidence_without_a_note": conf_unexplained}
 
 
 def check_baseline(findings):

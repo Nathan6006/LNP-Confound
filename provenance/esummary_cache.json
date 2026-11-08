@@ -1,0 +1,8208 @@
+{
+ "result": {
+  "uids": [
+   "18438401",
+   "20080679",
+   "22902058",
+   "24969323",
+   "26729861",
+   "27981708",
+   "29653760",
+   "31570898",
+   "32080183",
+   "33305471",
+   "33542471",
+   "35879315",
+   "36997680",
+   "37127709",
+   "37480759",
+   "37591187",
+   "37661193",
+   "37679571",
+   "37853662",
+   "37985700",
+   "38060560",
+   "38082180",
+   "38409275",
+   "38424061",
+   "38437545",
+   "38740955",
+   "38779592",
+   "38969646",
+   "39060305",
+   "39099464",
+   "39354147",
+   "39424104",
+   "39497197",
+   "39502027",
+   "39578640",
+   "39742515",
+   "39875076",
+   "40060499",
+   "40131321",
+   "40234552",
+   "40796944",
+   "40817189",
+   "41145968",
+   "41689530",
+   "41742414",
+   "41922838",
+   "42050330",
+   "42592089",
+   "42634137"
+  ],
+  "18438401": {
+   "uid": "18438401",
+   "pubdate": "2008 May",
+   "epubdate": "2008 Apr 27",
+   "source": "Nat Biotechnol",
+   "authors": [
+    {
+     "name": "Akinc A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zumbuehl A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Goldberg M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Leshchiner ES",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Busini V",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hossain N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bacallado SA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Nguyen DN",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fuller J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alvarez R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Borodovsky A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Borland T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Constien R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "de Fougerolles A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dorkin JR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Narayanannair Jayaprakash K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jayaraman M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "John M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Koteliansky V",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Manoharan M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Nechev L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Qin J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Racie T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Raitcheva D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Rajeev KG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sah DW",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Soutschek J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Toudjarska I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vornlocher HP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zimmermann TS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "A combinatorial library of lipid-like materials for delivery of RNAi therapeutics.",
+   "sorttitle": "combinatorial library of lipid like materials for delivery of rnai therapeutics",
+   "volume": "26",
+   "issue": "5",
+   "pages": "561-9",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "9604648",
+   "issn": "1087-0156",
+   "essn": "1546-1696",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "18438401"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS258527"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC3014085"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC3014085;manuscript-id: NIHMS258527;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/nbt1402"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "nbt1402"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2007/11/29 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2008/04/07 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2008/04/29 09:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2008/06/05 09:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2008/04/29 09:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2011/01/03 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 34,
+   "fulljournalname": "Nature biotechnology",
+   "elocationid": "doi: 10.1038/nbt1402",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2008/05/01 00:00",
+   "sortfirstauthor": "Akinc A",
+   "vernaculartitle": ""
+  },
+  "20080679": {
+   "uid": "20080679",
+   "pubdate": "2010 Feb 2",
+   "epubdate": "2010 Jan 11",
+   "source": "Proc Natl Acad Sci U S A",
+   "authors": [
+    {
+     "name": "Love KT",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mahon KP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Levins CG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Whitehead KA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Querbes W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dorkin JR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Qin J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cantley W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Qin LL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Racie T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Frank-Kamenetsky M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yip KN",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alvarez R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sah DW",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "de Fougerolles A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fitzgerald K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Koteliansky V",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Akinc A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Lipid-like materials for low-dose, in vivo gene silencing.",
+   "sorttitle": "lipid like materials for low dose in vivo gene silencing",
+   "volume": "107",
+   "issue": "5",
+   "pages": "1864-9",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7505876",
+   "issn": "0027-8424",
+   "essn": "1091-6490",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "20080679"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC2804742"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC2804742;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1073/pnas.0910603106"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "0910603106"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "entrez",
+     "date": "2010/01/19 06:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2010/01/19 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2010/03/06 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2010/01/11 00:00"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Proc Natl Acad Sci U S A. 2010 May 25;107(21):9915",
+     "reftype": "Erratum in",
+     "pmid": "",
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 34,
+   "fulljournalname": "Proceedings of the National Academy of Sciences of the United States of America",
+   "elocationid": "doi: 10.1073/pnas.0910603106",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2010/02/02 00:00",
+   "sortfirstauthor": "Love KT",
+   "vernaculartitle": ""
+  },
+  "22902058": {
+   "uid": "22902058",
+   "pubdate": "2012 Nov",
+   "epubdate": "2012 Aug 16",
+   "source": "Biomaterials",
+   "authors": [
+    {
+     "name": "Li L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zahner D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Su Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gruen C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Davidson G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Levkin PA",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Levkin PA",
+   "title": "A biomimetic lipid library for gene delivery through thiol-yne click chemistry.",
+   "sorttitle": "biomimetic lipid library for gene delivery through thiol yne click chemistry",
+   "volume": "33",
+   "issue": "32",
+   "pages": "8160-6",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "8100316",
+   "issn": "0142-9612",
+   "essn": "1878-5905",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "22902058"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.biomaterials.2012.07.044"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S0142-9612(12)00839-3"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2012/07/05 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2012/07/21 00:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2012/08/21 06:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2012/08/21 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2013/01/17 06:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Biomaterials",
+   "elocationid": "doi: 10.1016/j.biomaterials.2012.07.044",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2012/11/01 00:00",
+   "sortfirstauthor": "Li L",
+   "vernaculartitle": ""
+  },
+  "24969323": {
+   "uid": "24969323",
+   "pubdate": "2014 Jun 27",
+   "epubdate": "2014 Jun 27",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Whitehead KA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dorkin JR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vegas AJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chang PH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Veiseh O",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Matthews J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fenton OS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Olejnik KT",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yesilyurt V",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Barros S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Klebanov B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Novobrantseva T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Degradable lipid nanoparticles with predictable in vivo siRNA delivery activity.",
+   "sorttitle": "degradable lipid nanoparticles with predictable in vivo sirna delivery activity",
+   "volume": "5",
+   "issue": "",
+   "pages": "4277",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "24969323"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS601451"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC4111939"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC4111939;manuscript-id: NIHMS601451;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/ncomms5277"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "ncomms5277"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2013/11/25 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2014/06/02 00:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2014/06/28 06:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2014/06/28 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2015/07/16 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2014/12/27 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 44,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/ncomms5277",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2014/06/27 00:00",
+   "sortfirstauthor": "Whitehead KA",
+   "vernaculartitle": ""
+  },
+  "26729861": {
+   "uid": "26729861",
+   "pubdate": "2016 Jan 19",
+   "epubdate": "2016 Jan 4",
+   "source": "Proc Natl Acad Sci U S A",
+   "authors": [
+    {
+     "name": "Zhou K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Nguyen LH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Miller JB",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yan Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kos P",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiong H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hao J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Minnig JT",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhu H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Siegwart DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Siegwart DJ",
+   "title": "Modular degradable dendrimers enable small RNAs to extend survival in an aggressive liver cancer model.",
+   "sorttitle": "modular degradable dendrimers enable small rnas to extend survival in an aggressive liver cancer model",
+   "volume": "113",
+   "issue": "3",
+   "pages": "520-5",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7505876",
+   "issn": "0027-8424",
+   "essn": "1091-6490",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "26729861"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC4725465"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC4725465;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1073/pnas.1520756113"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "1520756113"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "entrez",
+     "date": "2016/01/06 06:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2016/01/06 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2016/06/14 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2016/07/19 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 43,
+   "fulljournalname": "Proceedings of the National Academy of Sciences of the United States of America",
+   "elocationid": "doi: 10.1073/pnas.1520756113",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2016/01/19 00:00",
+   "sortfirstauthor": "Zhou K",
+   "vernaculartitle": ""
+  },
+  "27981708": {
+   "uid": "27981708",
+   "pubdate": "2017 Jan 19",
+   "epubdate": "2016 Dec 16",
+   "source": "Angew Chem Int Ed Engl",
+   "authors": [
+    {
+     "name": "Miller JB",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kos P",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiong H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhou K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Perelman SS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhu H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Siegwart DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Siegwart DJ",
+   "title": "Non-Viral CRISPR/Cas Gene Editing In Vitro and In Vivo Enabled by Synthetic Nanoparticle Co-Delivery of Cas9 mRNA and sgRNA.",
+   "sorttitle": "non viral crispr cas gene editing in vitro and in vivo enabled by synthetic nanoparticle co delivery of cas9 mrna and sgrna",
+   "volume": "56",
+   "issue": "4",
+   "pages": "1059-1063",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "0370543",
+   "issn": "1433-7851",
+   "essn": "1521-3773",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "27981708"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS846240"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC5521011"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC5521011;manuscript-id: NIHMS846240;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/anie.201610209"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2016/10/21 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2016/11/30 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2016/12/17 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2018/10/16 06:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2016/12/17 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2018/01/19 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 16,
+   "fulljournalname": "Angewandte Chemie (International ed. in English)",
+   "elocationid": "doi: 10.1002/anie.201610209",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2017/01/19 00:00",
+   "sortfirstauthor": "Miller JB",
+   "vernaculartitle": ""
+  },
+  "29653760": {
+   "uid": "29653760",
+   "pubdate": "2018 Jun 6",
+   "epubdate": "2018 Mar 14",
+   "source": "Mol Ther",
+   "authors": [
+    {
+     "name": "Sabnis S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kumarasinghe ES",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Salerno T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mihai C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ketova T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Senn JJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lynn A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bulychev A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "McFadyen I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chan J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Almarsson \u00d6",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Stanton MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Benenato KE",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Benenato KE",
+   "title": "A Novel Amino Lipid Series for mRNA Delivery: Improved Endosomal Escape and Sustained Pharmacology and Safety in Non-human Primates.",
+   "sorttitle": "novel amino lipid series for mrna delivery improved endosomal escape and sustained pharmacology and safety in non human primates",
+   "volume": "26",
+   "issue": "6",
+   "pages": "1509-1519",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "100890581",
+   "issn": "1525-0016",
+   "essn": "1525-0024",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "29653760"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC5986714"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC5986714;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.ymthe.2018.03.010"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S1525-0016(18)30118-7"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2017/11/20 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2018/03/07 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2018/03/09 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2018/04/15 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2019/06/14 06:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2018/04/15 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2019/06/06 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 20,
+   "fulljournalname": "Molecular therapy : the journal of the American Society of Gene Therapy",
+   "elocationid": "doi: 10.1016/j.ymthe.2018.03.010",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2018/06/06 00:00",
+   "sortfirstauthor": "Sabnis S",
+   "vernaculartitle": ""
+  },
+  "31570898": {
+   "uid": "31570898",
+   "pubdate": "2019 Oct",
+   "epubdate": "2019 Sep 30",
+   "source": "Nat Biotechnol",
+   "authors": [
+    {
+     "name": "Miao L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Huang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Delcassian D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chahal J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Han J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sadtler K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gao W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Doloff JC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Delivery of mRNA vaccines with heterocyclic lipids increases anti-tumor efficacy by STING-mediated immune cell activation.",
+   "sorttitle": "delivery of mrna vaccines with heterocyclic lipids increases anti tumor efficacy by sting mediated immune cell activation",
+   "volume": "37",
+   "issue": "10",
+   "pages": "1174-1185",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "9604648",
+   "issn": "1087-0156",
+   "essn": "1546-1696",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "31570898"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41587-019-0247-3"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41587-019-0247-3"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2018/08/15 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2019/07/29 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2019/07/13 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2019/10/02 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2020/01/28 06:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2019/10/02 06:00"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Nat Rev Drug Discov. 2019 Nov;18(12):902. doi: 10.1038/d41573-019-00192-8.",
+     "reftype": "Comment in",
+     "pmid": 31780853,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biotechnology",
+   "elocationid": "doi: 10.1038/s41587-019-0247-3",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2019/10/01 00:00",
+   "sortfirstauthor": "Miao L",
+   "vernaculartitle": ""
+  },
+  "32080183": {
+   "uid": "32080183",
+   "pubdate": "2020 Feb 20",
+   "epubdate": "2020 Feb 20",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Patel S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ashwanikumar N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Robinson E",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xia Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mihai C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Griffith JP 3rd",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hou S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Esposito AA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ketova T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Welsher K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Joyal JL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Almarsson \u00d6",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sahay G",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Sahay G",
+   "title": "Naturally-occurring cholesterol analogues in lipid nanoparticles induce polymorphic shape and enhance intracellular delivery of mRNA.",
+   "sorttitle": "naturally occurring cholesterol analogues in lipid nanoparticles induce polymorphic shape and enhance intracellular delivery of mrna",
+   "volume": "11",
+   "issue": "1",
+   "pages": "983",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "32080183"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC7033178"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC7033178;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41467-020-14527-2"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41467-020-14527-2"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2019/01/11 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2020/01/14 00:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2020/02/22 06:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2020/02/23 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2020/05/06 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2020/02/20 00:00"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Nat Commun. 2020 Jul 6;11(1):3435. doi: 10.1038/s41467-020-17025-7.",
+     "reftype": "Erratum in",
+     "pmid": 32632117,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 70,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/s41467-020-14527-2",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2020/02/20 00:00",
+   "sortfirstauthor": "Patel S",
+   "vernaculartitle": ""
+  },
+  "33305471": {
+   "uid": "33305471",
+   "pubdate": "2021 Mar 8",
+   "epubdate": "2021 Feb 1",
+   "source": "Angew Chem Int Ed Engl",
+   "authors": [
+    {
+     "name": "Lee SM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cheng Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yu X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Johnson LT",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Siegwart DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Siegwart DJ",
+   "title": "A Systematic Study of Unsaturation in Lipid Nanoparticles Leads to Improved mRNA Transfection In Vivo.",
+   "sorttitle": "systematic study of unsaturation in lipid nanoparticles leads to improved mrna transfection in vivo",
+   "volume": "60",
+   "issue": "11",
+   "pages": "5848-5853",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "0370543",
+   "issn": "1433-7851",
+   "essn": "1521-3773",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "33305471"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS1657436"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC8100975"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC8100975;manuscript-id: NIHMS1657436;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/anie.202013927"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2020/10/18 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2020/12/07 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2020/12/12 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2021/07/15 06:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2020/12/11 06:09"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2022/03/08 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 14,
+   "fulljournalname": "Angewandte Chemie (International ed. in English)",
+   "elocationid": "doi: 10.1002/anie.202013927",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2021/03/08 00:00",
+   "sortfirstauthor": "Lee SM",
+   "vernaculartitle": ""
+  },
+  "33542471": {
+   "uid": "33542471",
+   "pubdate": "2021 May",
+   "epubdate": "2021 Feb 4",
+   "source": "Nat Mater",
+   "authors": [
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cheng Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wei T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yu X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Johnson LT",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Farbiak L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Siegwart DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Siegwart DJ",
+   "title": "Membrane-destabilizing ionizable phospholipids for organ-selective mRNA delivery and CRISPR-Cas gene editing.",
+   "sorttitle": "membrane destabilizing ionizable phospholipids for organ selective mrna delivery and crispr cas gene editing",
+   "volume": "20",
+   "issue": "5",
+   "pages": "701-710",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101155473",
+   "issn": "1476-1122",
+   "essn": "1476-4660",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "33542471"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS1648724"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC8188687"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC8188687;manuscript-id: NIHMS1648724;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41563-020-00886-0"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41563-020-00886-0"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2020/03/25 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2020/11/20 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2021/02/06 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2021/08/04 06:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2021/02/05 05:55"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2021/08/04 00:00"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Nat Mater. 2021 May;20(5):575-577. doi: 10.1038/s41563-021-00988-3.",
+     "reftype": "Comment in",
+     "pmid": 33911220,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 53,
+   "fulljournalname": "Nature materials",
+   "elocationid": "doi: 10.1038/s41563-020-00886-0",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2021/05/01 00:00",
+   "sortfirstauthor": "Liu S",
+   "vernaculartitle": ""
+  },
+  "35879315": {
+   "uid": "35879315",
+   "pubdate": "2022 Jul 25",
+   "epubdate": "2022 Jul 25",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Zhu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shen R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vuong I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Reynolds RA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shears MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yao ZC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cho WJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kong J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Reddy SK",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Murphy SC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mao HQ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mao HQ",
+   "title": "Multi-step screening of DNA/lipid nanoparticles and co-delivery with siRNA to enhance and prolong gene expression.",
+   "sorttitle": "multi step screening of dna lipid nanoparticles and co delivery with sirna to enhance and prolong gene expression",
+   "volume": "13",
+   "issue": "1",
+   "pages": "4282",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "35879315"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC9310361"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC9310361;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41467-022-31993-y"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41467-022-31993-y"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2021/12/13 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2022/07/07 00:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2022/07/25 23:16"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2022/07/26 06:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2022/07/28 06:00"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2022/07/25 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 37,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/s41467-022-31993-y",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2022/07/25 00:00",
+   "sortfirstauthor": "Zhu Y",
+   "vernaculartitle": ""
+  },
+  "36997680": {
+   "uid": "36997680",
+   "pubdate": "2023 Oct",
+   "epubdate": "2023 Mar 30",
+   "source": "Nat Biotechnol",
+   "authors": [
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Manan RS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liang SQ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gordon A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jiang A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Varley A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gao G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xue W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson D",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson D",
+   "title": "Combinatorial design of nanoparticles for pulmonary mRNA delivery and genome editing.",
+   "sorttitle": "combinatorial design of nanoparticles for pulmonary mrna delivery and genome editing",
+   "volume": "41",
+   "issue": "10",
+   "pages": "1410-1415",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "9604648",
+   "issn": "1087-0156",
+   "essn": "1546-1696",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "36997680"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS1924272"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC10544676"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC10544676;manuscript-id: NIHMS1924272;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41587-023-01679-x"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41587-023-01679-x"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2022/07/21 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/01/18 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/12/13 00:23"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/03/31 06:00"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/03/30 23:23"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2023/10/23 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 36,
+   "fulljournalname": "Nature biotechnology",
+   "elocationid": "doi: 10.1038/s41587-023-01679-x",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/10/01 00:00",
+   "sortfirstauthor": "Li B",
+   "vernaculartitle": ""
+  },
+  "37127709": {
+   "uid": "37127709",
+   "pubdate": "2023 Jul",
+   "epubdate": "2023 May 1",
+   "source": "Nat Biomed Eng",
+   "authors": [
+    {
+     "name": "Rhym LH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Manan RS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Koller A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Stephanie G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Peptide-encoding mRNA barcodes for the high-throughput in vivo screening of libraries of lipid nanoparticles for mRNA delivery.",
+   "sorttitle": "peptide encoding mrna barcodes for the high throughput in vivo screening of libraries of lipid nanoparticles for mrna delivery",
+   "volume": "7",
+   "issue": "7",
+   "pages": "901-910",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101696896",
+   "issn": "",
+   "essn": "2157-846X",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37127709"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41551-023-01030-4"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41551-023-01030-4"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2022/08/19 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/03/26 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2023/07/26 06:43"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/05/02 00:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/05/01 23:22"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Cell Rep Methods. 2023 Aug 28;3(8):100572. doi: 10.1016/j.crmeth.2023.100572.",
+     "reftype": "Comment in",
+     "pmid": 37671015,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biomedical engineering",
+   "elocationid": "doi: 10.1038/s41551-023-01030-4",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/07/01 00:00",
+   "sortfirstauthor": "Rhym LH",
+   "vernaculartitle": ""
+  },
+  "37480759": {
+   "uid": "37480759",
+   "pubdate": "2023 Oct",
+   "epubdate": "2023 Jul 8",
+   "source": "Biomaterials",
+   "authors": [
+    {
+     "name": "Goldman RL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vittala Murthy NT",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Northen TP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Balakrishnan A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chivukula S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Danz H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tibbitts T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dias A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vargas J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cooper D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gopani H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Beaulieu A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kalnin KV",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Plitnik T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Karmakar S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dasari R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Landis R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Karve S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "DeRosa F",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "DeRosa F",
+   "title": "Understanding structure activity relationships of Good HEPES lipids for lipid nanoparticle mRNA vaccine applications.",
+   "sorttitle": "understanding structure activity relationships of good hepes lipids for lipid nanoparticle mrna vaccine applications",
+   "volume": "301",
+   "issue": "",
+   "pages": "122243",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "8100316",
+   "issn": "0142-9612",
+   "essn": "1878-5905",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37480759"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.biomaterials.2023.122243"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S0142-9612(23)00251-X"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/04/25 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2023/07/05 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/07/07 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2023/09/06 06:42"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/07/23 01:11"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/07/22 18:06"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Biomaterials",
+   "elocationid": "doi: 10.1016/j.biomaterials.2023.122243",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/10/01 00:00",
+   "sortfirstauthor": "Goldman RL",
+   "vernaculartitle": ""
+  },
+  "37591187": {
+   "uid": "37591187",
+   "pubdate": "2023 Oct",
+   "epubdate": "2023 Aug 14",
+   "source": "Biomaterials",
+   "authors": [
+    {
+     "name": "Yan Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wu C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shuai Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Liu S",
+   "title": "Branched hydrophobic tails in lipid nanoparticles enhance mRNA delivery for cancer immunotherapy.",
+   "sorttitle": "branched hydrophobic tails in lipid nanoparticles enhance mrna delivery for cancer immunotherapy",
+   "volume": "301",
+   "issue": "",
+   "pages": "122279",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "8100316",
+   "issn": "0142-9612",
+   "essn": "1878-5905",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37591187"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.biomaterials.2023.122279"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S0142-9612(23)00287-9"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/04/10 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2023/07/11 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/08/12 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2023/09/06 06:42"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/08/18 00:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/08/17 18:07"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Biomaterials",
+   "elocationid": "doi: 10.1016/j.biomaterials.2023.122279",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/10/01 00:00",
+   "sortfirstauthor": "Yan Y",
+   "vernaculartitle": ""
+  },
+  "37661193": {
+   "uid": "37661193",
+   "pubdate": "2023 Oct 23",
+   "epubdate": "2023 Sep 15",
+   "source": "Angew Chem Int Ed Engl",
+   "authors": [
+    {
+     "name": "He Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Le Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen Y",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Chen Y",
+   "title": "A Multidimensional Approach to Modulating Ionizable Lipids for High-Performing and Organ-Selective mRNA Delivery.",
+   "sorttitle": "multidimensional approach to modulating ionizable lipids for high performing and organ selective mrna delivery",
+   "volume": "62",
+   "issue": "43",
+   "pages": "e202310401",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "0370543",
+   "issn": "1433-7851",
+   "essn": "1521-3773",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37661193"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/anie.202310401"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/07/20 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/03/11 06:55"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/09/04 00:41"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/09/03 22:43"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Angewandte Chemie (International ed. in English)",
+   "elocationid": "doi: 10.1002/anie.202310401",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/10/23 00:00",
+   "sortfirstauthor": "He Z",
+   "vernaculartitle": ""
+  },
+  "37679571": {
+   "uid": "37679571",
+   "pubdate": "2025 Feb",
+   "epubdate": "2023 Sep 7",
+   "source": "Nat Biomed Eng",
+   "authors": [
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jiang AY",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Raji I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Atyeo C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Raimondo TM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gordon AGR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Rhym LH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Samad T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "MacIsaac C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Witten J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mughal H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chicz TM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "McNamara RP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bhatia S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alter G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Enhancing the immunogenicity of lipid-nanoparticle mRNA vaccines by adjuvanting the ionizable lipid and the mRNA.",
+   "sorttitle": "enhancing the immunogenicity of lipid nanoparticle mrna vaccines by adjuvanting the ionizable lipid and the mrna",
+   "volume": "9",
+   "issue": "2",
+   "pages": "167-184",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101696896",
+   "issn": "",
+   "essn": "2157-846X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37679571"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41551-023-01082-6"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41551-023-01082-6"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2022/07/06 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/07/27 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/02/20 00:21"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/09/08 00:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/09/07 23:37"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Nat Biomed Eng. 2025 Feb;9(2):280. doi: 10.1038/s41551-025-01347-2.",
+     "reftype": "Erratum in",
+     "pmid": 39820560,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biomedical engineering",
+   "elocationid": "doi: 10.1038/s41551-023-01082-6",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/02/01 00:00",
+   "sortfirstauthor": "Li B",
+   "vernaculartitle": ""
+  },
+  "37853662": {
+   "uid": "37853662",
+   "pubdate": "2023 Nov 8",
+   "epubdate": "2023 Oct 19",
+   "source": "J Am Chem Soc",
+   "authors": [
+    {
+     "name": "Chen Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tian Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yang J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wu F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cao W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hu T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Siegwart DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiong H",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Xiong H",
+   "title": "Modular Design of Biodegradable Ionizable Lipids for Improved mRNA Delivery and Precise Cancer Metastasis Delineation In Vivo.",
+   "sorttitle": "modular design of biodegradable ionizable lipids for improved mrna delivery and precise cancer metastasis delineation in vivo",
+   "volume": "145",
+   "issue": "44",
+   "pages": "24302-24314",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7503056",
+   "issn": "0002-7863",
+   "essn": "1520-5126",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37853662"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1021/jacs.3c09143"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2023/11/09 06:42"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/10/19 06:43"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/10/19 01:03"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Journal of the American Chemical Society",
+   "elocationid": "doi: 10.1021/jacs.3c09143",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/11/08 00:00",
+   "sortfirstauthor": "Chen Z",
+   "vernaculartitle": ""
+  },
+  "37985700": {
+   "uid": "37985700",
+   "pubdate": "2024 Mar",
+   "epubdate": "2023 Nov 20",
+   "source": "Nat Nanotechnol",
+   "authors": [
+    {
+     "name": "Jiang AY",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Witten J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Raji IO",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Eweje F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "MacIsaac C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Meng S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Oladimeji FA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Manan RS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Combinatorial development of nebulized mRNA delivery formulations for the lungs.",
+   "sorttitle": "combinatorial development of nebulized mrna delivery formulations for the lungs",
+   "volume": "19",
+   "issue": "3",
+   "pages": "364-375",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101283273",
+   "issn": "1748-3387",
+   "essn": "1748-3395",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "37985700"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS1949779"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC10954414"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC10954414;manuscript-id: NIHMS1949779;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41565-023-01548-3"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41565-023-01548-3"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2022/07/26 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/10/16 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/03/21 12:47"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/11/21 06:43"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/11/21 00:14"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/03/21 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 95,
+   "fulljournalname": "Nature nanotechnology",
+   "elocationid": "doi: 10.1038/s41565-023-01548-3",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/03/01 00:00",
+   "sortfirstauthor": "Jiang AY",
+   "vernaculartitle": ""
+  },
+  "38060560": {
+   "uid": "38060560",
+   "pubdate": "2023 Dec 12",
+   "epubdate": "2023 Dec 7",
+   "source": "Proc Natl Acad Sci U S A",
+   "authors": [
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhou M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Varley AJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Golubovic A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu RXZ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang KC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yeganeh M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vosoughi D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Li B",
+   "title": "Combinatorial design of ionizable lipid nanoparticles for muscle-selective mRNA delivery with minimized off-target effects.",
+   "sorttitle": "combinatorial design of ionizable lipid nanoparticles for muscle selective mrna delivery with minimized off target effects",
+   "volume": "120",
+   "issue": "50",
+   "pages": "e2309472120",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7505876",
+   "issn": "0027-8424",
+   "essn": "1091-6490",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38060560"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC10723144"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC10723144;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1073/pnas.2309472120"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2023/12/17 17:42"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/12/07 18:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/12/07 13:44"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/06/07 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 51,
+   "fulljournalname": "Proceedings of the National Academy of Sciences of the United States of America",
+   "elocationid": "doi: 10.1073/pnas.2309472120",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2023/12/12 00:00",
+   "sortfirstauthor": "Chen J",
+   "vernaculartitle": ""
+  },
+  "38082180": {
+   "uid": "38082180",
+   "pubdate": "2024 May",
+   "epubdate": "2023 Dec 11",
+   "source": "Nat Biomed Eng",
+   "authors": [
+    {
+     "name": "Zhu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ma J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shen R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Stelzel JL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kong J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cheng L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vuong I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yao ZC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wei C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Korinetz NM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Toh WH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Choy J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Reynolds RA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shears MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cho WJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Livingston NK",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Howard GP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tzeng SY",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zack DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Green JJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zheng L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Doloff JC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Schneck JP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Reddy SK",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Murphy SC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mao HQ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mao HQ",
+   "title": "Screening for lipid nanoparticles that modulate the immune activity of helper T cells towards enhanced antitumour activity.",
+   "sorttitle": "screening for lipid nanoparticles that modulate the immune activity of helper t cells towards enhanced antitumour activity",
+   "volume": "8",
+   "issue": "5",
+   "pages": "544-560",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101696896",
+   "issn": "",
+   "essn": "2157-846X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38082180"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS1966249"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11162325"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11162325;manuscript-id: NIHMS1966249;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41551-023-01131-0"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41551-023-01131-0"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2022/12/04 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2023/10/15 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/06/08 10:44"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2023/12/12 00:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2023/12/11 23:51"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/06/09 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 70,
+   "fulljournalname": "Nature biomedical engineering",
+   "elocationid": "doi: 10.1038/s41551-023-01131-0",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/05/01 00:00",
+   "sortfirstauthor": "Zhu Y",
+   "vernaculartitle": ""
+  },
+  "38409275": {
+   "uid": "38409275",
+   "pubdate": "2024 Feb 26",
+   "epubdate": "2024 Feb 26",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "El-Mayta R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Palanki R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Warzecha CC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vaughan AE",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wilson JM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "In situ combinatorial synthesis of degradable branched lipidoids for systemic delivery of mRNA therapeutics and gene editors.",
+   "sorttitle": "in situ combinatorial synthesis of degradable branched lipidoids for systemic delivery of mrna therapeutics and gene editors",
+   "volume": "15",
+   "issue": "1",
+   "pages": "1762",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S.",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38409275"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC10897129"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC10897129;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41467-024-45537-z"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41467-024-45537-z"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/06/27 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/01/26 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/02/28 06:43"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/02/27 00:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/02/26 23:55"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/02/26 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 52,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/s41467-024-45537-z",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/02/26 00:00",
+   "sortfirstauthor": "Han X",
+   "vernaculartitle": ""
+  },
+  "38424061": {
+   "uid": "38424061",
+   "pubdate": "2024 Feb 29",
+   "epubdate": "2024 Feb 29",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hamilton AG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiao Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "El-Mayta R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiong X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Figueroa-Espada CG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shepherd SJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mukalel AJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cui J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vaughan AE",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "High-throughput barcoding of nanoparticles identifies cationic, degradable lipid-like materials for mRNA delivery to the lungs in female preclinical models.",
+   "sorttitle": "high throughput barcoding of nanoparticles identifies cationic degradable lipid like materials for mrna delivery to the lungs in female preclinical models",
+   "volume": "15",
+   "issue": "1",
+   "pages": "1884",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S.",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38424061"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC10904786"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC10904786;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41467-024-45422-9"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41467-024-45422-9"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/05/25 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/01/22 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/03/04 06:49"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/03/01 01:27"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/02/29 23:15"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/02/29 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 80,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/s41467-024-45422-9",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/02/29 00:00",
+   "sortfirstauthor": "Xue L",
+   "vernaculartitle": ""
+  },
+  "38437545": {
+   "uid": "38437545",
+   "pubdate": "2024 Mar 12",
+   "epubdate": "2024 Mar 4",
+   "source": "Proc Natl Acad Sci U S A",
+   "authors": [
+    {
+     "name": "Chaudhary N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Newby AN",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Arral ML",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yerneni SS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "LoPresti ST",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Doerfler R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Petersen DMS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Montoya C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kim JS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fox B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Coon T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Malaney A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sadovsky Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Whitehead KA",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Whitehead KA",
+   "title": "Lipid nanoparticle structure and delivery route during pregnancy dictate mRNA potency, immunogenicity, and maternal and fetal outcomes.",
+   "sorttitle": "lipid nanoparticle structure and delivery route during pregnancy dictate mrna potency immunogenicity and maternal and fetal outcomes",
+   "volume": "121",
+   "issue": "11",
+   "pages": "e2307810121",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7505876",
+   "issn": "0027-8424",
+   "essn": "1091-6490",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, U.S. Gov't, Non-P.H.S.",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38437545"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC10945816"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC10945816;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1073/pnas.2307810121"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2024/03/06 06:44"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/03/04 18:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/03/04 15:23"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/03/04 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 72,
+   "fulljournalname": "Proceedings of the National Academy of Sciences of the United States of America",
+   "elocationid": "doi: 10.1073/pnas.2307810121",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/03/12 00:00",
+   "sortfirstauthor": "Chaudhary N",
+   "vernaculartitle": ""
+  },
+  "38740955": {
+   "uid": "38740955",
+   "pubdate": "2024 Jul",
+   "epubdate": "2024 May 13",
+   "source": "Nat Mater",
+   "authors": [
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Raji IO",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gordon AGR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sun L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Raimondo TM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Oladimeji FA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jiang AY",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Varley A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Langer RS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Anderson DG",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Anderson DG",
+   "title": "Accelerating ionizable lipid discovery for mRNA delivery using machine learning and combinatorial chemistry.",
+   "sorttitle": "accelerating ionizable lipid discovery for mrna delivery using machine learning and combinatorial chemistry",
+   "volume": "23",
+   "issue": "7",
+   "pages": "1002-1008",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101155473",
+   "issn": "1476-1122",
+   "essn": "1476-4660",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38740955"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41563-024-01867-3"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41563-024-01867-3"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/04/04 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/03/15 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/07/09 06:42"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/05/14 00:43"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/05/13 23:41"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature materials",
+   "elocationid": "doi: 10.1038/s41563-024-01867-3",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/07/01 00:00",
+   "sortfirstauthor": "Li B",
+   "vernaculartitle": ""
+  },
+  "38779592": {
+   "uid": "38779592",
+   "pubdate": "2024 Aug",
+   "epubdate": "2024 May 14",
+   "source": "Bioact Mater",
+   "authors": [
+    {
+     "name": "Bae SH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yoo S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lee J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Park HJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kwon SP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jin H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Park SI",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lee YS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bang YJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Roh G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lee S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Youn SB",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kim IW",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Oh HR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "El-Damasy AK",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Keum G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kim H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Youn H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Nam JH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bang EK",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Bang EK",
+   "title": "A lipid nanoparticle platform incorporating trehalose glycolipid for exceptional mRNA vaccine safety.",
+   "sorttitle": "lipid nanoparticle platform incorporating trehalose glycolipid for exceptional mrna vaccine safety",
+   "volume": "38",
+   "issue": "",
+   "pages": "486-498",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101685294",
+   "issn": "",
+   "essn": "2452-199X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed",
+   "pubstatus": "258",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38779592"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11109743"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11109743;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.bioactmat.2024.05.012"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S2452-199X(24)00178-6"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/11/14 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2024/04/06 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/05/05 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/05/23 06:45"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/05/23 06:44"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/05/23 04:02"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/05/14 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 49,
+   "fulljournalname": "Bioactive materials",
+   "elocationid": "doi: 10.1016/j.bioactmat.2024.05.012",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/05/14 00:00",
+   "sortfirstauthor": "Bae SH",
+   "vernaculartitle": ""
+  },
+  "38969646": {
+   "uid": "38969646",
+   "pubdate": "2024 Jul 5",
+   "epubdate": "2024 Jul 5",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Su K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sheng T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yan X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Meng C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Qiu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ping Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gu Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Liu S",
+   "title": "Reformulating lipid nanoparticles for organ-targeted mRNA accumulation and translation.",
+   "sorttitle": "reformulating lipid nanoparticles for organ targeted mrna accumulation and translation",
+   "volume": "15",
+   "issue": "1",
+   "pages": "5659",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38969646"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11226454"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11226454;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41467-024-50093-7"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41467-024-50093-7"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/03/12 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/07/01 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/07/06 10:44"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/07/06 10:43"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/07/05 23:14"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/07/05 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 57,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/s41467-024-50093-7",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/07/05 00:00",
+   "sortfirstauthor": "Su K",
+   "vernaculartitle": ""
+  },
+  "39060305": {
+   "uid": "39060305",
+   "pubdate": "2024 Jul 26",
+   "epubdate": "2024 Jul 26",
+   "source": "Nat Commun",
+   "authors": [
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ma S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cui H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Golubovic A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhou M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang KC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Varley A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu RXZ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Li B",
+   "title": "AGILE platform: a deep learning powered approach to accelerate LNP development for mRNA delivery.",
+   "sorttitle": "agile platform a deep learning powered approach to accelerate lnp development for mrna delivery",
+   "volume": "15",
+   "issue": "1",
+   "pages": "6305",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101528555",
+   "issn": "",
+   "essn": "2041-1723",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39060305"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11282250"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11282250;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41467-024-50619-z"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41467-024-50619-z"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/01/29 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/07/09 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/07/28 14:51"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/07/27 10:42"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/07/26 23:19"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/07/26 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 71,
+   "fulljournalname": "Nature communications",
+   "elocationid": "doi: 10.1038/s41467-024-50619-z",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/07/26 00:00",
+   "sortfirstauthor": "Xu Y",
+   "vernaculartitle": ""
+  },
+  "39099464": {
+   "uid": "39099464",
+   "pubdate": "2024 Aug 22",
+   "epubdate": "2024 Aug 22",
+   "source": "J Mater Chem B",
+   "authors": [
+    {
+     "name": "Ren Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zeng L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liao J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jiang M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cao X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fan H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Chen J",
+   "title": "Enhancing spleen-targeted mRNA delivery with branched biodegradable tails in lipid nanoparticles.",
+   "sorttitle": "enhancing spleen targeted mrna delivery with branched biodegradable tails in lipid nanoparticles",
+   "volume": "12",
+   "issue": "33",
+   "pages": "8062-8066",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101598493",
+   "issn": "2050-750X",
+   "essn": "2050-7518",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39099464"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1039/d4tb00960f"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2024/08/22 12:42"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/08/05 06:43"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/08/05 04:33"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Journal of materials chemistry. B",
+   "elocationid": "doi: 10.1039/d4tb00960f",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/08/22 00:00",
+   "sortfirstauthor": "Ren Y",
+   "vernaculartitle": ""
+  },
+  "39354147": {
+   "uid": "39354147",
+   "pubdate": "2025 Jan",
+   "epubdate": "2024 Oct 1",
+   "source": "Nat Nanotechnol",
+   "authors": [
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shepherd SJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiong X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiao Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Palanki R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Swingle KL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Warzecha CC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "El-Mayta R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chowdhary V",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yoon IC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cui J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Pochan DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vaughan AE",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wilson JM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "Combinatorial design of siloxane-incorporated lipid nanoparticles augments intracellular processing for tissue-specific mRNA therapeutic delivery.",
+   "sorttitle": "combinatorial design of siloxane incorporated lipid nanoparticles augments intracellular processing for tissue specific mrna therapeutic delivery",
+   "volume": "20",
+   "issue": "1",
+   "pages": "132-143",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101283273",
+   "issn": "1748-3387",
+   "essn": "1748-3395",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39354147"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS2089007"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC12207990"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC12207990;manuscript-id: NIHMS2089007;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41565-024-01747-6"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41565-024-01747-6"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/04/09 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/07/08 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/01/22 05:33"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/10/02 07:20"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/10/01 23:31"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2025/07/01 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 52,
+   "fulljournalname": "Nature nanotechnology",
+   "elocationid": "doi: 10.1038/s41565-024-01747-6",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/01/01 00:00",
+   "sortfirstauthor": "Xue L",
+   "vernaculartitle": ""
+  },
+  "39424104": {
+   "uid": "39424104",
+   "pubdate": "2024 Dec",
+   "epubdate": "2024 Oct 20",
+   "source": "J Control Release",
+   "authors": [
+    {
+     "name": "Wu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Su K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yan X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ren E",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhou J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Song Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Liu S",
+   "title": "Paracyclophane-based ionizable lipids for efficient mRNA delivery in vivo.",
+   "sorttitle": "paracyclophane based ionizable lipids for efficient mrna delivery in vivo",
+   "volume": "376",
+   "issue": "",
+   "pages": "395-401",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "8607908",
+   "issn": "0168-3659",
+   "essn": "1873-4995",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39424104"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.jconrel.2024.10.028"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S0168-3659(24)00701-6"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/08/22 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2024/10/03 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/10/15 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/12/02 05:29"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/10/19 16:23"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/10/18 19:20"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Journal of controlled release : official journal of the Controlled Release Society",
+   "elocationid": "doi: 10.1016/j.jconrel.2024.10.028",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/12/01 00:00",
+   "sortfirstauthor": "Wu S",
+   "vernaculartitle": ""
+  },
+  "39497197": {
+   "uid": "39497197",
+   "pubdate": "2024 Nov 4",
+   "epubdate": "2024 Nov 4",
+   "source": "J Nanobiotechnology",
+   "authors": [
+    {
+     "name": "Li J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jin D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Huo H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu X",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Lu X",
+   "title": "High-throughput synthesis and optimization of ionizable lipids through A(3) coupling for efficient mRNA delivery.",
+   "sorttitle": "high throughput synthesis and optimization of ionizable lipids through a 3 coupling for efficient mrna delivery",
+   "volume": "22",
+   "issue": "1",
+   "pages": "672",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101152208",
+   "issn": "",
+   "essn": "1477-3155",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39497197"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11536852"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11536852;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1186/s12951-024-02919-1"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1186/s12951-024-02919-1"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/08/24 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/10/09 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/11/05 10:18"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/11/05 00:21"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/11/04 23:52"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2024/11/04 00:00"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "J Nanobiotechnology. 2026 Oct 28;24(1):997. doi: 10.1186/s12951-026-05165-9.",
+     "reftype": "Erratum in",
+     "pmid": 42958335,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 53,
+   "fulljournalname": "Journal of nanobiotechnology",
+   "elocationid": "doi: 10.1186/s12951-024-02919-1",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/11/04 00:00",
+   "sortfirstauthor": "Li J",
+   "vernaculartitle": ""
+  },
+  "39502027": {
+   "uid": "39502027",
+   "pubdate": "2025 Mar",
+   "epubdate": "2024 Nov 6",
+   "source": "Adv Healthc Mater",
+   "authors": [
+    {
+     "name": "Yoo S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Faisal M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bae SH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Youn K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Park HJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kwon SP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hwang IK",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lee J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kim HJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Nam JH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Keum G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bang EK",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Bang EK",
+   "title": "Novel Less Toxic, Lymphoid Tissue-Targeted Lipid Nanoparticles Containing a Vitamin B5-Derived Ionizable Lipid for mRNA Vaccine Delivery.",
+   "sorttitle": "novel less toxic lymphoid tissue targeted lipid nanoparticles containing a vitamin b5 derived ionizable lipid for mrna vaccine delivery",
+   "volume": "14",
+   "issue": "7",
+   "pages": "e2403366",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101581613",
+   "issn": "2192-2640",
+   "essn": "2192-2659",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39502027"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11912100"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11912100;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/adhm.202403366"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "revised",
+     "date": "2024/10/23 00:00"
+    },
+    {
+     "pubstatus": "received",
+     "date": "2024/09/05 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/03/17 15:19"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/11/06 06:21"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/11/06 04:53"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2025/03/17 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 38,
+   "fulljournalname": "Advanced healthcare materials",
+   "elocationid": "doi: 10.1002/adhm.202403366",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/03/01 00:00",
+   "sortfirstauthor": "Yoo S",
+   "vernaculartitle": ""
+  },
+  "39578640": {
+   "uid": "39578640",
+   "pubdate": "2024 Nov",
+   "epubdate": "2024 Nov 22",
+   "source": "Nat Biomed Eng",
+   "authors": [
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Palanki R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "El-Mayta R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dwivedi G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Swingle KL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yoon IC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Warzecha CC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wilson JM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "Optimization of the activity and biodegradability of ionizable lipids for mRNA delivery via directed chemical evolution.",
+   "sorttitle": "optimization of the activity and biodegradability of ionizable lipids for mrna delivery via directed chemical evolution",
+   "volume": "8",
+   "issue": "11",
+   "pages": "1412-1424",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101696896",
+   "issn": "",
+   "essn": "2157-846X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39578640"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41551-024-01267-7"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41551-024-01267-7"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2023/09/07 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2024/09/21 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2024/11/23 11:18"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2024/11/23 11:17"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2024/11/23 02:15"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biomedical engineering",
+   "elocationid": "doi: 10.1038/s41551-024-01267-7",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2024/11/01 00:00",
+   "sortfirstauthor": "Han X",
+   "vernaculartitle": ""
+  },
+  "39742515": {
+   "uid": "39742515",
+   "pubdate": "2025 Jan 15",
+   "epubdate": "2025 Jan 1",
+   "source": "J Am Chem Soc",
+   "authors": [
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiong X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Molina-Arocho W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Palanki R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xiao Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yoon IC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Figueroa-Espada CG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Vaughan AE",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Haldar M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "Multiarm-Assisted Design of Dendron-like Degradable Ionizable Lipids Facilitates Systemic mRNA Delivery to the Spleen.",
+   "sorttitle": "multiarm assisted design of dendron like degradable ionizable lipids facilitates systemic mrna delivery to the spleen",
+   "volume": "147",
+   "issue": "2",
+   "pages": "1542-1552",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7503056",
+   "issn": "0002-7863",
+   "essn": "1520-5126",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39742515"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS2089005"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC12190489"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC12190489;manuscript-id: NIHMS2089005;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1021/jacs.4c10265"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2025/01/15 06:21"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/01/02 00:21"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/01/01 16:54"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2026/01/15 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 65,
+   "fulljournalname": "Journal of the American Chemical Society",
+   "elocationid": "doi: 10.1021/jacs.4c10265",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/01/15 00:00",
+   "sortfirstauthor": "Xue L",
+   "vernaculartitle": ""
+  },
+  "39875076": {
+   "uid": "39875076",
+   "pubdate": "2025 Apr 10",
+   "epubdate": "2025 Feb 5",
+   "source": "J Control Release",
+   "authors": [
+    {
+     "name": "Zhang L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Seow BYL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bae KH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liao KC",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wan Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yang YY",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Yang YY",
+   "title": "Role of PEGylated lipid in lipid nanoparticle formulation for in vitro and in vivo delivery of mRNA vaccines.",
+   "sorttitle": "role of pegylated lipid in lipid nanoparticle formulation for in vitro and in vivo delivery of mrna vaccines",
+   "volume": "380",
+   "issue": "",
+   "pages": "108-124",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "8607908",
+   "issn": "0168-3659",
+   "essn": "1873-4995",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "39875076"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.jconrel.2025.01.071"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S0168-3659(25)00081-1"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/10/10 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2025/01/16 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2025/01/24 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/03/15 00:37"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/01/29 00:20"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/01/28 19:12"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Journal of controlled release : official journal of the Controlled Release Society",
+   "elocationid": "doi: 10.1016/j.jconrel.2025.01.071",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/04/10 00:00",
+   "sortfirstauthor": "Zhang L",
+   "vernaculartitle": ""
+  },
+  "40060499": {
+   "uid": "40060499",
+   "pubdate": "2025 Mar 1",
+   "epubdate": "2025 Mar 1",
+   "source": "bioRxiv",
+   "authors": [
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ricciardi A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Palanki R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chowdhary V",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Peranteau WH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wilson JM",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "Plug-and-play assembly of biodegradable ionizable lipids for potent mRNA delivery and gene editing in vivo.",
+   "sorttitle": "plug and play assembly of biodegradable ionizable lipids for potent mrna delivery and gene editing in vivo",
+   "volume": "",
+   "issue": "",
+   "pages": "",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101680187",
+   "issn": "",
+   "essn": "2692-8205",
+   "pubtype": [
+    "Journal Article",
+    "Preprint"
+   ],
+   "recordstatus": "PubMed",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "40060499"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11888472"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11888472;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1101/2025.02.25.640222"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "2025.02.25.640222"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/03/10 17:18"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/03/10 17:19"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/03/10 06:22"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2025/03/07 00:00"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Proc Natl Acad Sci U S A. 2026 Jun 02;123(22):e2528144123. doi: 10.1073/pnas.2528144123.",
+     "reftype": "Update in",
+     "pmid": 42190011,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 25,
+   "fulljournalname": "bioRxiv : the preprint server for biology",
+   "elocationid": "pii: 2025.02.25.640222. doi: 10.1101/2025.02.25.640222",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/03/01 00:00",
+   "sortfirstauthor": "Han X",
+   "vernaculartitle": ""
+  },
+  "40131321": {
+   "uid": "40131321",
+   "pubdate": "2025 May 9",
+   "epubdate": "2025 May 9",
+   "source": "Nanoscale",
+   "authors": [
+    {
+     "name": "Liu L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kim JH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sun M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Northen T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tang J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mcintosh E",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Karve S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "DeRosa F",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "DeRosa F",
+   "title": "PEGylated lipid screening, composition optimization, and structure-activity relationship determination for lipid nanoparticle-mediated mRNA delivery.",
+   "sorttitle": "pegylated lipid screening composition optimization and structure activity relationship determination for lipid nanoparticle mediated mrna delivery",
+   "volume": "17",
+   "issue": "18",
+   "pages": "11329-11344",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101525249",
+   "issn": "2040-3364",
+   "essn": "2040-3372",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "40131321"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1039/d5nr00433k"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2025/05/09 18:34"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/03/25 12:40"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/03/25 11:53"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nanoscale",
+   "elocationid": "doi: 10.1039/d5nr00433k",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/05/09 00:00",
+   "sortfirstauthor": "Liu L",
+   "vernaculartitle": ""
+  },
+  "40234552": {
+   "uid": "40234552",
+   "pubdate": "2025 Apr 16",
+   "epubdate": "2025 Apr 16",
+   "source": "Commun Chem",
+   "authors": [
+    {
+     "name": "Pe\u00f1a \u00c1",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Heredero J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bland\u00edn B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mata E",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "De Miguel D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Toro A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alejo T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Casabona D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "L\u00f3pez A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gallego-Lleyda A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "P\u00e9rez-Herr\u00e1n E",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mart\u00ednez-Oliv\u00e1n J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gim\u00e9nez-Warren J",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Gim\u00e9nez-Warren J",
+   "title": "Multicomponent thiolactone-based ionizable lipid screening platform for efficient and tunable mRNA delivery to the lungs.",
+   "sorttitle": "multicomponent thiolactone based ionizable lipid screening platform for efficient and tunable mrna delivery to the lungs",
+   "volume": "8",
+   "issue": "1",
+   "pages": "116",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101725670",
+   "issn": "",
+   "essn": "2399-3669",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "40234552"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC12000586"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC12000586;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s42004-025-01516-z"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s42004-025-01516-z"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/10/15 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2025/04/04 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/04/16 00:25"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/04/16 00:24"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/04/15 23:33"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2025/04/16 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 43,
+   "fulljournalname": "Communications chemistry",
+   "elocationid": "doi: 10.1038/s42004-025-01516-z",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/04/16 00:00",
+   "sortfirstauthor": "Pe\u00f1a \u00c1",
+   "vernaculartitle": ""
+  },
+  "40796944": {
+   "uid": "40796944",
+   "pubdate": "2026 Mar",
+   "epubdate": "2025 Aug 12",
+   "source": "Nat Biomed Eng",
+   "authors": [
+    {
+     "name": "Xu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liang D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cheng Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xie D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gui Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Feng C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ren W",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sun G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lai Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fu B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang ZJ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Wu Y",
+   "title": "In vivo genome editing of human haematopoietic stem cells for treatment of blood disorders using mRNA delivery.",
+   "sorttitle": "in vivo genome editing of human haematopoietic stem cells for treatment of blood disorders using mrna delivery",
+   "volume": "10",
+   "issue": "3",
+   "pages": "473-489",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101696896",
+   "issn": "",
+   "essn": "2157-846X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "40796944"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41551-025-01480-y"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41551-025-01480-y"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/04/29 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2025/07/10 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/03/24 07:41"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/08/13 00:27"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/08/12 23:42"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biomedical engineering",
+   "elocationid": "doi: 10.1038/s41551-025-01480-y",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/03/01 00:00",
+   "sortfirstauthor": "Xu S",
+   "vernaculartitle": ""
+  },
+  "40817189": {
+   "uid": "40817189",
+   "pubdate": "2025 Oct",
+   "epubdate": "2025 Aug 15",
+   "source": "Nat Nanotechnol",
+   "authors": [
+    {
+     "name": "Chan A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kirtane AR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Qu QR",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Huang X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Woo J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Subramanian DA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dey R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Semalty R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Bernstock JD",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ahmed T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Honeywell R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hanhurst C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Diaz Becdach I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Prizant LS",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Brown AK",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Song H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Law Cobb J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "DeRidder LB",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Santos B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jimenez M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sun M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Huang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Byrne C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Traverso G",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Traverso G",
+   "title": "Designing lipid nanoparticles using a transformer-based neural network.",
+   "sorttitle": "designing lipid nanoparticles using a transformer based neural network",
+   "volume": "20",
+   "issue": "10",
+   "pages": "1491-1501",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101283273",
+   "issn": "1748-3387",
+   "essn": "1748-3395",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "40817189"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC12534189"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC12534189;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41565-025-01975-4"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41565-025-01975-4"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/05/25 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2025/06/13 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/10/18 00:30"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/08/16 00:29"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/08/15 23:24"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2025/08/15 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 58,
+   "fulljournalname": "Nature nanotechnology",
+   "elocationid": "doi: 10.1038/s41565-025-01975-4",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/10/01 00:00",
+   "sortfirstauthor": "Chan A",
+   "vernaculartitle": ""
+  },
+  "41145968": {
+   "uid": "41145968",
+   "pubdate": "2026 Feb",
+   "epubdate": "2025 Oct 27",
+   "source": "Adv Healthc Mater",
+   "authors": [
+    {
+     "name": "Liu Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Guo Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sun J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Pan Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fan K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Luo T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li J",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Li J",
+   "title": "Synthesis and Screening of Bispecific Linker-based Combinatorial Libraries Identified Thiosuccinimide Lipids for mRNA Delivery.",
+   "sorttitle": "synthesis and screening of bispecific linker based combinatorial libraries identified thiosuccinimide lipids for mrna delivery",
+   "volume": "15",
+   "issue": "5",
+   "pages": "e02225",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101581613",
+   "issn": "2192-2640",
+   "essn": "2192-2659",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "41145968"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/adhm.202502225"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "revised",
+     "date": "2025/09/26 00:00"
+    },
+    {
+     "pubstatus": "received",
+     "date": "2025/05/09 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/02/03 07:40"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/10/28 06:29"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/10/28 00:46"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Advanced healthcare materials",
+   "elocationid": "doi: 10.1002/adhm.202502225",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/02/01 00:00",
+   "sortfirstauthor": "Liu Q",
+   "vernaculartitle": ""
+  },
+  "41689530": {
+   "uid": "41689530",
+   "pubdate": "2026 Feb 25",
+   "epubdate": "2026 Feb 14",
+   "source": "J Am Chem Soc",
+   "authors": [
+    {
+     "name": "Lin L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yan X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Su K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "He S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yu M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Fu X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Sheng X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Liu S",
+   "title": "Aromatic Ionizable Lipids Enhance mRNA Delivery via Coordinating Multiple Mechanisms.",
+   "sorttitle": "aromatic ionizable lipids enhance mrna delivery via coordinating multiple mechanisms",
+   "volume": "148",
+   "issue": "7",
+   "pages": "6960-6969",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "7503056",
+   "issn": "0002-7863",
+   "essn": "1520-5126",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - in process",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "41689530"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1021/jacs.5c16971"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/02/14 13:38"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/02/14 13:38"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/02/14 09:33"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Journal of the American Chemical Society",
+   "elocationid": "doi: 10.1021/jacs.5c16971",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/02/25 00:00",
+   "sortfirstauthor": "Lin L",
+   "vernaculartitle": ""
+  },
+  "41742414": {
+   "uid": "41742414",
+   "pubdate": "2026 Mar 19",
+   "epubdate": "2026 Feb 24",
+   "source": "Cell",
+   "authors": [
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cui H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Pang K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dong S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Li B",
+   "title": "LUMI-lab: A foundation model-driven autonomous platform enabling discovery of ionizable lipid designs for mRNA delivery.",
+   "sorttitle": "lumi lab a foundation model driven autonomous platform enabling discovery of ionizable lipid designs for mrna delivery",
+   "volume": "189",
+   "issue": "6",
+   "pages": "1620-1635.e25",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "0413066",
+   "issn": "0092-8674",
+   "essn": "1097-4172",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "41742414"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.cell.2026.01.012"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S0092-8674(26)00099-1"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2025/02/26 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2025/08/26 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2026/01/17 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/03/21 00:34"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/02/26 15:25"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/02/26 00:24"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Cell",
+   "elocationid": "doi: 10.1016/j.cell.2026.01.012",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/03/19 00:00",
+   "sortfirstauthor": "Xu Y",
+   "vernaculartitle": ""
+  },
+  "41922838": {
+   "uid": "41922838",
+   "pubdate": "2026 Apr 1",
+   "epubdate": "2026 Apr 1",
+   "source": "Nat Mater",
+   "authors": [
+    {
+     "name": "Gong F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dong S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Healy L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Seto B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhou M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu RXZ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Thomson T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tang Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Antonio K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Varley A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen DXW",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hodges CA",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wong AP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Hubbard BP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Engelhardt JF",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yan Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Li B",
+   "title": "Amino acid-derived ionizable lipids enable inhaled base editing for therapeutic gene correction in the lung.",
+   "sorttitle": "amino acid derived ionizable lipids enable inhaled base editing for therapeutic gene correction in the lung",
+   "volume": "",
+   "issue": "",
+   "pages": "",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101155473",
+   "issn": "1476-1122",
+   "essn": "1476-4660",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - as supplied by publisher",
+   "pubstatus": "10",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "41922838"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41563-026-02555-0"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41563-026-02555-0"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2025/05/19 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2026/02/20 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/04/02 00:29"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/04/02 00:29"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/04/01 23:33"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature materials",
+   "elocationid": "doi: 10.1038/s41563-026-02555-0",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/04/01 00:00",
+   "sortfirstauthor": "Gong F",
+   "vernaculartitle": ""
+  },
+  "42050330": {
+   "uid": "42050330",
+   "pubdate": "2026 Apr 28",
+   "epubdate": "2026 Apr 28",
+   "source": "Nat Biotechnol",
+   "authors": [
+    {
+     "name": "Zhou M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Savguira M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Seto B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gong F",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Thomson T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu RXZ",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dong S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Eileen C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zheng G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li B",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Li B",
+   "title": "A multiobjective AI model for LNP engineering enhances tissue-selective mRNA delivery.",
+   "sorttitle": "multiobjective ai model for lnp engineering enhances tissue selective mrna delivery",
+   "volume": "",
+   "issue": "",
+   "pages": "",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "9604648",
+   "issn": "1087-0156",
+   "essn": "1546-1696",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - as supplied by publisher",
+   "pubstatus": "10",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "42050330"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41587-026-03109-0"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41587-026-03109-0"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2025/08/12 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2026/03/26 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/04/29 00:34"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/04/29 00:34"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/04/28 23:38"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biotechnology",
+   "elocationid": "doi: 10.1038/s41587-026-03109-0",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/04/28 00:00",
+   "sortfirstauthor": "Zhou M",
+   "vernaculartitle": ""
+  },
+  "42592089": {
+   "uid": "42592089",
+   "pubdate": "2026 Aug",
+   "epubdate": "2025 Nov 7",
+   "source": "Acta Pharm Sin B",
+   "authors": [
+    {
+     "name": "Duan X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chen J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jiang S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Qing L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "He X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "He J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lei Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Song T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jiao X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Huang H",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Guo M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Gu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhao C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yin X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang P",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Song X",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Song X",
+   "title": "A novel machine learning framework-based rapid screening of ionizable lipids in LNPs for highly-efficient mRNA expression.",
+   "sorttitle": "novel machine learning framework based rapid screening of ionizable lipids in lnps for highly efficient mrna expression",
+   "volume": "16",
+   "issue": "8",
+   "pages": "5053-5069",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101600560",
+   "issn": "2211-3835",
+   "essn": "2211-3843",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "42592089"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC13464080"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC13464080;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1016/j.apsb.2025.10.040"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "S2211-3835(25)00722-1"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2025/04/25 00:00"
+    },
+    {
+     "pubstatus": "revised",
+     "date": "2025/07/26 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2025/08/12 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/08/13 12:44"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/08/13 12:43"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/08/13 06:59"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2025/11/07 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 87,
+   "fulljournalname": "Acta pharmaceutica Sinica. B",
+   "elocationid": "doi: 10.1016/j.apsb.2025.10.040",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/08/01 00:00",
+   "sortfirstauthor": "Duan X",
+   "vernaculartitle": ""
+  },
+  "42634137": {
+   "uid": "42634137",
+   "pubdate": "2026 Oct",
+   "epubdate": "2026 Aug 23",
+   "source": "Adv Mater",
+   "authors": [
+    {
+     "name": "Tian Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wang X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Benitez AP",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Guerrero E",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Duan Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Wei J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Farbiak L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Siegwart DJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Siegwart DJ",
+   "title": "Esterified Cholesterol Conjugates Enable LNP-Mediated mRNA Delivery to the Blood-Brain Barrier Following Intravenous Administration.",
+   "sorttitle": "esterified cholesterol conjugates enable lnp mediated mrna delivery to the blood brain barrier following intravenous administration",
+   "volume": "38",
+   "issue": "59",
+   "pages": "",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "9885358",
+   "issn": "0935-9648",
+   "essn": "1521-4095",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "42634137"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC13689884"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC13689884;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/adma.74762"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "e74762"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "revised",
+     "date": "2026/08/12 00:00"
+    },
+    {
+     "pubstatus": "received",
+     "date": "2025/11/30 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2026/08/14 00:00"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/08/24 06:59"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2026/08/24 05:34"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/08/24 00:13"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2026/10/22 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": 43,
+   "fulljournalname": "Advanced materials (Deerfield Beach, Fla.)",
+   "elocationid": "pii: e74762. doi: 10.1002/adma.74762",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/10/01 00:00",
+   "sortfirstauthor": "Tian Z",
+   "vernaculartitle": ""
+  }
+ }
+}

@@ -126,6 +126,31 @@ for n, v, zz in zip(names, vals, z):
             '(stage02_trace.py). The paper gives this lipid no name, no '
             'molecular formula, no HRMS and no SI structure, so there is no '
             'external anchor against which to check it.'))
+    elif n in {m['lipid'] for m in mism}:
+        # A benchmark whose emitted structure deliberately DISAGREES with the
+        # figure it came from needs to say so on the row (F-029). Until
+        # 2026-11-07 this row read confidence=high with an empty curation_note,
+        # so data_vivo.csv presented it as a lipid whose drawing and structure
+        # agree. The override itself was recorded -- in 07_qc.json,
+        # reference_structures.csv, README.md and audit_findings.json, i.e. four
+        # files inside this folder and no column of the emitted row. CLAUDE.md
+        # §6: "a flag that lives only in a per-folder QC file is not a flag, it
+        # is a memo."
+        #
+        # confidence stays `high`: the emitted structure is the published
+        # compound, pinned by reagent_registry.json, and is MORE trustworthy
+        # than the drawing -- not less. `structure_assumed` is deliberately NOT
+        # set, because nothing here was assumed; it was overridden from an
+        # external source, and the schema has no term for that. Stretching
+        # `structure_assumed` to cover it would make the flag mean two things.
+        r.update(curation_note=(
+            'Emitted with the published ALC-0315 structure, which is what the '
+            'reagent registry pins. Fig 5A of the source draws this head one '
+            'carbon short (3-hydroxypropyl where the compound has 4): a '
+            'localised authoring error, not a convention -- SM-102 and MC3 in '
+            'the same panel reproduce the corpus exactly and E1, drawn in the '
+            'same style, does have 4. C10 records this as '
+            'expected_mismatch_paper_drawing_is_wrong.'))
     rows.append(r)
     meta.append(dict(IL_name=n, source='benchmark_corpus_SMILES' if is_bench
                                         else 'Fig5A_geometric_trace',

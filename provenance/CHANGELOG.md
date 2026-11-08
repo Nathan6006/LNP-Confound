@@ -445,8 +445,13 @@ greater than 1e5".
 
 Its `Publication_PMID` was initially left blank as "not indexed"; PMID 41145968
 was in fact already indexed with a matching DOI and first author. Corrected in
-`curation/ql_2026/build_rows.py`. `WT_2026` (a preprint) is now the only
-experiment with a blank PMID.
+`curation/ql_2026/build_rows.py`. ~~`WT_2026` (a preprint) is now the only
+experiment with a blank PMID.~~
+
+**That last sentence was wrong too, and it was written in the entry that records
+this exact mistake.** `WT_2026`'s PMID 42367940 had been live since 2026-06-29;
+it was corrected 2026-11-07 (F-027, §13). **No experiment in the corpus has a
+blank PMID**, and `C7_fields.blank_Publication_PMID` is now gated at 0.
 
 ---
 
@@ -633,8 +638,10 @@ appeared in the report and 5 failed a command. `build_dataset.py` never imported
 
 The obvious fix is wrong on its own: failing on anything printed would fail
 forever on conditions we accept on purpose — 48 duplicate SMILES groups, 212
-unassigned stereogenic C=C, 2,544 blank PMIDs on a preprint, 3 `SB_2024` rows
-whose ratios do not sum to 100. That is probably why it was left print-only. So:
+unassigned stereogenic C=C, 2,544 blank PMIDs on a preprint *(no longer — that
+one turned out to be a real defect accepted on a false reason, and is gated at 0
+since 2026-11-07, F-027)*, 3 `SB_2024` rows whose ratios do not sum to 100. That
+is probably why it was left print-only. So:
 
 - **`provenance/audit_baseline.json`** — 62 gated metrics, each with the reason
   it is accepted. Departure in **either** direction fails. A decrease fails
@@ -1016,3 +1023,311 @@ right.
 and not applied: that `digitize_fig2b.py`'s LUT window ran 6 px into the border
 skirt. `np.arange(BAR_TOP + 18, BAR_BOT - 17)` ends at 1955, exactly where the
 ramp ends, so there was nothing to fix.
+
+---
+
+## 13. 2026-11-07 — round-2 corpus review opens; four repairs, none to a value
+
+Round 2 of the Tier-4 program (`review/round_2026-11-07/`). Five read-only
+Wave-1 reviewers over the five curated papers, each briefed from a packet
+generated out of live data that day and **told what round 1 already fixed in its
+curation, with instructions not to spend budget re-confirming it** — that is the
+difference between a round and a re-run. Round 2 started from round 1's open
+list rather than a blank sheet, which was the lesson written into
+`REVIEW_PROGRAM.md` §7 after round 1.
+
+**Corpus: 28,885 × 79 vitro / 1,780 × 79 vivo. Row counts, structures and
+`Experiment_value` all unchanged.** Every repair below is an identifier, a
+metric or a piece of provenance.
+
+**F-022 — 915 `IL_name` cells carried a trailing space.** 720 `BL_2023` vitro;
+150 `ZH_2023` + 45 `BL_2023` vivo. `IL_name` was the only affected column in the
+corpus. All trailing, never leading, and in `ZH_2023` the padding tracked the
+organ *exactly* — every liver row padded, every spleen row not — which is the
+fingerprint of two source tables concatenated upstream.
+
+`"A1I5R22C8 "` and `"A1I5R22C8"` are different dict keys carrying the **same**
+`IL_SMILES`, so any join or `groupby` on `IL_name` split one lipid in two. It
+survived because it was **known**: `CLAUDE.md` listed it as "several `BL_2023`
+values" — understating it by two orders of magnitude — and `build_dataset.py`
+worked around it with two defensive `.strip()` calls. Meanwhile C7's
+required-field check *also* stripped before asking whether a value was blank, so
+a padded value passed as present and the check was structurally incapable of
+seeing the class. That is **error class 37**: a check that canonicalises its
+input has given up the ability to detect non-canonical input. A
+known-and-worked-around defect is worse than an unknown one — the workarounds
+are evidence that several passes saw it and nobody owned it.
+
+Verified safe before applying, because stripping identifiers can merge rows: no
+two distinct names collapse inside any experiment, no name gains a second
+SMILES, and the duplicate `(Experiment_ID, IL_name, Model_target, Model_type)`
+count stays at **40 → 40**. The 12 `ZH_2023` names that exist in both forms are
+one lipid measured in two organs, i.e. two legitimate rows. Post-apply diff
+against the pre-fix corpus: exactly 915 cells, one column, every change exactly
+a strip, row order and `LNP_ID` alignment preserved.
+
+**The first attempt at this fix was wrong in an instructive way.** Stripping
+inside `write()` emitted a clean file while `validate()` went on reading the
+padded rows still in memory, so `dataset_validation.json` named `A55-T3 ` as a
+duplicate-SMILES partner for a lipid the corpus no longer contained. **A fix
+applied downstream of the validator makes the validator lie.** `strip_cells()`
+is now called from `main()` before both.
+
+**F-023 — `build_manifest.py` could not run at all.** It read its NCBI
+cross-check cache from a path inside a *previous session's* Claude scratchpad.
+Scratchpads are session-scoped and get cleared, so the file was gone, the script
+raised `FileNotFoundError`, and `data/experiment_manifest.csv` — **tracked in
+git** — could not be regenerated from anything in the repository. New
+`provenance/fetch_esummary.py` derives the PMID list from the emitted corpus and
+fetches the records into `provenance/esummary_cache.json` (49 records); the
+script's paths now come from `__file__` instead of hard-coded `/Users/nathanliu/`.
+
+**Second instance of the class** — `lit_review/build_data.py` had it on
+2026-10-30 — so it is now a rule in `CLAUDE.md` §7 and **error class 38**: *no
+script in this repository may read an input from a session scratchpad.* One
+occurrence is an oversight; two is a missing rule.
+
+The recovery is faithful and it closed two gaps: the rebuilt manifest is
+identical to the 2026-10-30 version on 59 of 61 rows, and the two that moved
+both *improved* — `QL_2026` and `XD_2026` previously read "PMID … not checked
+against NCBI" because the stale cache predated those merges, and now carry a
+verified citation with `PMID → DOI` confirmed. So the cache had been silently
+stale as well as ephemeral.
+
+**F-024 — "the number of flagged rows" had no definition in code.** Round 1
+recorded the F-001 figure as **1,152** and told the reader to re-measure it with
+`audit.py` C13's `rows_carrying_a_flag`. That metric returns **1,652**. Neither
+is a typo; they answer different questions and nothing wrote the question down.
+The 495-row gap is rows carrying `confidence = high` **and nothing else** (486
+`ZT_2026` vitro, 6 `ZT_2026` vivo, 3 `XD_2026` benchmarks) — and `high` is an
+*assurance*, so counting it as a flag inverts the meaning of the number.
+
+**1,152 was also wrong twice over, in ways that nearly cancelled:** `QL_2026` is
+**116**, not 117 (the 117th was a cross-figure conflict carrying no flag column
+at all, counted in a total of flagged rows while not being one), and `ZT_2026`
+is **45**, not 39 (39 is the `structure_assumed` count; six more rows carry
+`confidence = medium` with no other marker and were missed). Net −1 + 6. The
+honest total is **1,157**.
+
+This count has now moved four times — ≥266 → 1,137 → 1,152 → 1,157 — and every
+correction came from someone re-deriving it by hand. **A quantity with a prose
+definition and no implementation gets re-implemented, slightly differently, by
+every pass that touches it.** C13 now emits `rows_carrying_a_flag` *and*
+`rows_with_a_caveat` with the distinction stated in code, both gated; the
+baseline is 62 → **70** metrics.
+
+A third new metric, `confidence_without_a_note`, earned itself immediately:
+**6 `ZT_2026` vivo rows** (`C5O1B1`, `C6O1B1`, `C5O1B2`, `C6O1B2`, `C5O1B3`,
+`C6O1B3`) carry `confidence = medium` with an **empty** `curation_note`. The
+existing `flagged_without_a_note` returned 0 because it only ever inspected
+`structure_assumed` and `value_is_bound`, never `confidence`. Gated at 6 **with
+the instruction to re-baseline to 0 once the curation supplies the reason** —
+not to clear the flag instead.
+
+**F-026 — the chance baseline in `CLAUDE.md` §7 matched no corpus this project
+has ever had.** It read `1/31 vitro, 1/17 vivo`. The live corpus is
+**S = 42 / 19**; the corpus the frozen pipeline ran on was **S = 34 / 17**. The
+`31` is the S from before the in-vitro corpus was re-trimmed in July 2026 and
+had been carried through every change since. Corrected, and §7 now says
+explicitly that `results/` and `reports/` are still the S = 34 / 17 run.
+
+**New check C15 (`provenance/check_docs.py` + `docs_claims.json`), error class
+39.** C1–C14 compare the data against itself or against a paper; none of them
+notice when our own prose goes stale, and the prose is what the next session
+reads first and what Methods is written from. 30 claims now checked, each tagged
+with the section that makes it so a failure names the prose to fix. It
+deliberately does **not** parse the Markdown — the expected value is transcribed
+by hand, so changing a documented number means changing both, and the pair
+either agrees or the build fails.
+
+The rest of that sweep found the docs **correct** on row/column/experiment
+counts, `Original_LNPDB` dimensions, the 7 quality columns, the 987
+`positional_ambiguity` rows, all six per-curation row counts, the 60
+`SB_2024`/`SY_2025` rows and the 13 registered reagents. **Two of my own
+"findings" were my error, not the docs':** §3's "288 IL names carry different
+structures in different experiments" is exactly right (292 is the count
+regardless of experiment — a different quantity, which is what error class 30
+cites), and the registry has 13 entries, not the 4 I counted from
+`reagent_registry.json`, which is the audit's *output* rather than the registry.
+Both are the round-1 pattern — reading a secondary artifact instead of the
+primary one — landing on me again.
+
+**F-025 — APPLIED, with the validator's modification.** All 15 `ZT_2026` commercial-core
+cholesterol conjugates carry `structure_assumed = 1` and the *identical*
+`curation_note` ("Cholesterol conjugation site inferred: the paper draws no -C
+conjugate for any commercial core"), yet six of them — `Lipid 14-CB1/2/3` and
+`TT3-CB1/2/3` — carry `confidence = high` while the other nine carry `medium`.
+Traced to `COMMERCIAL_CORES` in `build_new_curation.py`, which stores
+`(core_SMILES, confidence)` where that confidence describes **how well the
+parent core is known**, and whose value is then attached to the *conjugate*
+while `structure_assumed` is set unconditionally. So `confidence` answers "how
+well do we know the core?" while `schema_quality.json` defines it as the
+confidence of the structure that was *emitted*. Held back because the
+alternative reading is live — if the paper does draw the site for `TT3` and
+`Lipid 14` and not the others, the six `high` rows are right and the note is
+what is wrong. This is **error class 29 surviving the round that was supposed to
+have cleared it.**
+
+### F-025's repair, as actually applied (the validator changed it)
+
+Verdict **APPLY WITH MODIFICATION**, and the modification mattered. Every
+mechanical claim the validator made was re-derived here before anything was
+edited; all reproduce exactly.
+
+**The defect I had missed.** The local `quaternize()` wrapper calls the shared
+`_EN.quaternize()` and assigns its second return value to `_note` — discarding
+the site classification the shared function had already computed.
+`enumerate.py::_quaternization_site` returns `"ASSUMED: no ring N and the paper
+draws no structure"` for **all five** cores, and that exact string is paired with
+`confidence = low` on **24 of 24** rows in `03_enumerated.csv`. The curation's own
+implementation already classified these five into the `low` condition; the branch
+threw that away and wrote a softer label from a table that means something else.
+
+**Why neither a flat `medium` nor a flat `low` was right.** Tertiary amines
+distinct under `CanonicalRankAtoms(breakTies=False)`: MC3 **1**, SM-102 **1**,
+TT3 3 amines but **1** symmetry class, OF-2 2 but **1**, **Lipid 14 2 amines in
+2 distinct classes**. Only `Lipid 14` presents a real choice. So the labelling
+was **inverted** — the three rows with the most structural uncertainty carried
+the project's highest confidence, while six rows whose site is forced by having a
+single amine carried `medium`. `Lipid 14` is not hypothetical: it was previously
+alkylated at the *hindered central* nitrogen, the answer falling out of a
+SMILES-order tiebreak (F-015).
+
+Three project documents already said `medium` and the code was the outlier:
+`quaternize()`'s own docstring 140 lines above the branch, `PROVENANCE.md` §4,
+and `new_curation_qc.json`'s `confidence_basis` — while the **same** qc file's
+`by_confidence` listed `Lipid 14-CB*` and `TT3-CB*` under `high`.
+
+**Applied as recommended, not as I proposed.** A cap at `medium` was rejected
+because it would leave `"TT3": (..., "high")` in the table for the next reader to
+misuse. `COMMERCIAL_CORES` is now **SMILES-only**; `_site_confidence()` derives
+the confidence *and* its note from the core's structure (`low` where >1
+chemically distinct amine could carry the conjugate, `medium` where the site is
+forced), and the `PARENT` branch's hard-coded `"medium"` now comes from the same
+function. That matches the pattern already used elsewhere — `enumerate.py:309`
+forces `low` over the component confidence when the site is ASSUMED, and
+`lin_aromatic_2026` starts at `high` and downgrades. The commercial-core branch
+had been the only place in the repo passing a component confidence straight
+through while setting `structure_assumed = 1`.
+
+**Measured:** 21 of 537 rows changed; `curation_note` (21), `confidence` (6),
+`structure_assumed` (6); **no SMILES changed**. `Lipid 14-CB1/2/3` `high` →
+**`low`**, `TT3-CB1/2/3` `high` → **`medium`**, the other nine unchanged at
+`medium` with a more specific note. Scope verified by grep: one definition, one
+read, no second copy.
+
+**A second finding fell out of the same trace.** The 6 rows F-024's new
+`confidence_without_a_note` metric had just flagged (`C5O1B*`, `C6O1B*`) are
+`medium` because their **`O1` arm is isodecyl acrylate, a commercial branched
+isomer mixture** — the reason was in `03_enumerated.csv` all along, while the qc
+file's `confidence_basis` attributed it to the C5/C6 core, which cannot be the
+discriminator because the `high` `O2` rows share those cores. The note is now on
+the row with `structure_assumed = 1`, matching how `LL_2026` flags the identical
+condition. `confidence_without_a_note` went **6 → 0**, which made the audit
+**FAIL** on *"a known condition VANISHED"* — the baseline's decrease-also-fails
+design catching a real improvement for the first time since it was built.
+Re-baselined to 0 in the same change, with the reason.
+
+## 14. 2026-11-07 — `WT_2026`: the PMID, and F-004 settled
+
+**F-027 — the blank PMID was accepted on a reason that was false when written.**
+`build_rows.py` read `PMID = ""`, commented *"preprint, not in PubMed as of
+2026-10-29"*. PMID **42367940** had been live since **2026-06-29**, four months
+earlier. Verified independently, two ways, before applying:
+
+```
+esearch db=pubmed term="10.64898/2026.06.13.731774[doi]"  ->  42367940
+esummary 42367940 -> "FALCON: Closed-Loop Multi-Objective Optimization of Lipid
+   Nanoparticles for Cell-Selective mRNA Delivery.", bioRxiv, entrez 2026/06/29
+```
+
+The first query is the one that stings: it searches PubMed for **the DOI this
+curation already stored**, so no new information was needed at any point.
+
+**The rule was written down and not applied to the case in front of it.**
+`CLAUDE.md` §3 carried the previous instance (`QL_2026`) *and* the rule it earned
+— "Look the PMID up before recording a paper as unindexed" — and then asserted
+`WT_2026` was unindexed on the next line. `CHANGELOG.md` §11 did the same: the
+sentence recording the `QL_2026` fix ends *"`WT_2026` (a preprint) is now the
+only experiment with a blank PMID."* **And `audit_baseline.json` was accepting
+2,544 blanks with that false statement as its justification** — a baseline `why`
+is load-bearing, because it is what a future session reads instead of
+re-deriving.
+
+Applied: PMID set with the query recorded beside it; WT regenerated (validator
+**18/18**, all 7 blocks round-trip, selectivity residuals ≤4.0e-9); corpus
+rebuilt; `blank_Publication_PMID` re-baselined **2,544 → 0**; stale assertions
+corrected in `CLAUDE.md` §3, `CHANGELOG.md` §11 and §12, and the curation's
+`PROVENANCE.md`. The manifest now reconciles at **61/61 PMIDs and 61/61 DOIs**,
+up from 60/61. C15 guards all three facts. **"Look it up" demonstrably did not
+work as a rule, so it is now: a paper may be recorded as unindexed only with a
+dated query result stored in `provenance/esummary_cache.json`.**
+
+**F-004 — the evidence is settled; the repair is still the user's call and is NOT
+applied.** The reviewer established which of the URS file's two parameterisations
+is authoritative, and the strongest argument needs no external source:
+`PEG_PEG+Chol` in the design block is **strictly monotone decreasing across all
+129 rows with zero violations**, while every other column has ~60 ascending and
+~60 descending violations. That cannot arise from uniform random sampling, no
+other file has it, and it is the signature of a spreadsheet sort over a
+contiguous column selection with the sort key last — **the design block moved,
+not the percents.** Three independent ties agree: the paper names `U0036` the top
+URS composition and that row carries the file-maximum value; Suppl Table 5
+(**page 8**, not p. 59 as round 1 recorded) pins `FALCON_ID` to the **percent**
+block to the printed decimal; and URS row 1's percents are byte-identical to
+`F0162`'s in the clean E0 file.
+
+So **the stored molar percents are correct** — the half that matters, and no
+structure or endpoint is affected. But `N:P` is **not recoverable**: `NP_ratio`
+sits in the same column block and nothing observable says whether it was inside
+the sorted selection, the one tabulated formulation has **three mutually
+inconsistent candidates** (7.199 stored / 16.766 reconstructed / 6.0 printed),
+neither alignment correlates with the response above a random-pairing floor, and
+Suppl Table 5 is itself block-pasted in two places. Recommendation, unchanged
+from before this round: **blank** `IL_to_nucleicacid_chargeratio` on the 129
+`WT_2026_U*` rows rather than reconstruct it.
+
+**Error class 40** added for the general case — *a source stating the same
+quantity in two parameterisations where only one is row-aligned* — with its
+detection rule: derive one from the other and require **row-wise** agreement.
+A range check cannot see it, because a permutation preserves the multiset, which
+is precisely why this curation's `validate.py` recorded `PASS N/P range
+3.33-37.12` on 129 misassigned rows.
+
+**F-028 (new, open) — `Experiment_value_within_model` pools five normalisation
+units the source forbids comparing.** That column re-standardises inside
+(`Experiment_ID` × `Model_type`), but `WT_2026` is normalised per **source file**
+because the authors' `dataset_info.txt` forbids cross-file comparison, and one
+`Model_type` spans several files — `Ramos` alone covers 959 rows across five, and
+the derived column's per-file means run **−0.488 to +0.613** instead of being
+centred. Nothing declares this: `value_normalization_unit` documents
+`Experiment_value` only. A consumer reaching for the "within model" column
+precisely to remove an assay offset gets the cross-file mixing the `source_file`
+flag exists to prevent. **Error class 41**, left open because the fix is a schema
+decision, not a bug fix.
+
+**Also open from this reviewer:** URS percent rows 1–3 are not uniform-random
+samples (`U0001`/`U0002` byte-identical to `F0162`/`F0192`, `U0003` a round
+designed composition with `(IL+HL)% = 60.0000` exactly; the 3-and-3 unmatched
+rows landing at positions 1–3 is 1 in 357,760) — certain on the observation,
+speculative on the cause, needs the authors. And the five quality columns are
+blank on all 2,544 rows although three conventions are in force, including
+`18PG`'s expansion to SOPG being inherited from `YZ_2022` and never stated by
+this paper, and experiment 2's N/P being adjusted for DSPC nitrogens per Suppl
+Table 3 — the F-001 failure mode recurring in the one curation that had no flags
+at all.
+
+**One finding was already closed** and is recorded because of *how* it was
+checked: the reviewer reported six stale assertions in `PROVENANCE.md` ("14
+experiment blocks", "72 cols"). Checking **by content rather than by its line
+numbers** showed the file says 7 blocks and 79 columns throughout, and the two
+surviving strings are deliberate historical annotations. Its line numbers had
+shifted under the PMID edit. Also corrected: **round 1's locator for Suppl Table
+5 was a text-extraction line number that I passed on as a page number**, which
+cost the reviewer its first moves.
+
+**F-003 closed.** Re-derived independently from `data/`, not from the curation:
+all 2,544 rows round-trip at ≤2.7e-15, the selectivity identity holds at
+1.78e-15, Spearman(raw, stored) = **1.000000**, and **0 of 180** sign inversions
+where round 1 measured 92. Both C10 anchors confirmed **byte-different** from the
+corpus strings and InChIKey-identical, so not the F-013 failure mode.

@@ -218,6 +218,36 @@ stop. If it finds a new class, add the check and go again.
 |---|---|---|---|---|---|
 | 1 | 2026-10-30 | 5 (ZT, LL×2, WT, XD, QL) | 1, 2, 3 complete | 27-36 | 8 reviewers + 2 validators + 2 re-measurers, 21 findings: **16 fixed, 5 open, 1 new found by a new check**. 537 rows epi-cholesterol → cholesterol (+15 more in a second copy a validator found); 3 rows rebuilt on the right parent; `Lipid 14-CB*` re-sited; `WT_2026`'s 2,544 rows re-standardised 14 blocks → 7; `QL_2026`'s colorbar re-anchored and 15 of 60 bar tops corrected; `XD_2026`'s 12 bar tops corrected; schema 72 → **79** so 1,152 flagged rows carry their flag; C2 coverage 235 → 634 series; the Tier-1 audit now **gates** (62 baselined metrics, 29/29 seeded mutations caught). New checks C12/C13/C14. |
 
+| 2 | 2026-11-07 | 5 (same) | 1 in progress; Wave 3 running continuously alongside | 37-41 | **In progress.** Started from round 1's open list, not a blank sheet. 7 findings so far (F-022…F-028): **5 applied, 3 open, 1 settled-but-deferred-to-the-user.** Applied: 915 padded `IL_name` cells stripped and gated; `build_manifest.py` made runnable again (it read a *deleted session scratchpad*); the F-001 flag count given a definition in code (**1,157**, not 1,152 — and the metric the docs pointed at returns 1,652); `ZT_2026`'s inverted conjugate confidences derived from structure instead of a literal; `WT_2026`'s PMID, blank on a reason that was false when written. New check **C15** (docs-vs-data, 33 claims) and C7 `padded_cells`; baseline 62 → **70** metrics. F-004 settled on evidence (the design block moved, percents are right, `N:P` unrecoverable) but the repair is the user's call. |
+
+### Round 2 — what changed in how the round was run
+
+**Briefing each reviewer with what round 1 already fixed, and telling it not to
+re-confirm that**, is the single change that made round 2 produce new findings
+instead of a re-run. Round 1's own lesson — start from the open list — was
+necessary but not sufficient; the reviewers also had to be told what ground is
+*closed*.
+
+**Three failure modes of the program itself showed up, all mine:**
+
+1. **A wrong locator in a brief costs the reviewer its first moves.** I told the
+   `WT_2026` reviewer that Supplementary Table 5 was on "p. 59" of `media-1.pdf`.
+   That was a **text-extraction line number** I had passed on as a page number;
+   the table is on page 8. Put locators in a brief only if they came from a page
+   render, not from a `grep -n` of extracted text.
+2. **Reviewer line numbers go stale between the report and the adjudication.**
+   The `WT_2026` reviewer reported six stale assertions in `PROVENANCE.md` by
+   line number; by the time I checked, the PMID edit had shifted them and the
+   file was already correct. **Adjudicate a documentation finding by content, not
+   by the line number it cites** — grep for the stale string.
+3. **Background agents do not survive the process.** Four of five Wave-1
+   reviewers were killed when the CLI process exited and their in-process state
+   was lost; only `WT_2026` had reported, and the harness had blocked it from
+   writing its report to disk, so the only copy was in my context. **A reviewer's
+   report must be captured the moment it lands** — subagents here cannot write
+   into the repo, so the handler saves the returned text verbatim
+   (`report_WT_2026.md` records that provenance in its own header).
+
 ### Round 1 — what the program got right, and what it did not
 
 **The waves earned their keep.** Three of the four largest findings could not

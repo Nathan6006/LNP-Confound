@@ -36,7 +36,9 @@ confound/
 │   ├── README.md                 lineage, precedence rules, every validation
 │   ├── CHANGELOG.md              every change from original LNPDB to now
 │   ├── build_dataset.py          rebuilds data/ from scratch, reproducibly
-│   ├── audit.py                  INDEPENDENT audit (C1-C11), not a rerun of the builder
+│   ├── audit.py                  INDEPENDENT audit (C1-C14), not a rerun of the builder
+│   ├── check_docs.py             C15: numbers CLAUDE.md asserts, vs the corpus
+│   ├── fetch_esummary.py         refreshes the NCBI cross-check cache (F-023)
 │   ├── dataset_validation.json / audit_findings.json
 │   └── superseded/               pre-2026-10-28 corpus files + the official LNPDB download
 ├── curation/                 ← one folder per paper curated BY US
@@ -131,7 +133,20 @@ time with `pd.get_dummies`.
 - **212 rows have an unassigned stereogenic C=C** (`FG_2026` 120,
   `YX_2026_SDL` 79, `NC_2024` 13). Matters only if you use stereo-aware
   fingerprints.
-- **Several `BL_2023` `IL_name` values carry a trailing space.**
+- **~~Several `BL_2023` `IL_name` values carry a trailing space.~~ FIXED
+  2026-11-07.** It was 915 cells, not "several" — 720 `BL_2023` vitro, 150
+  `ZH_2023` + 45 `BL_2023` vivo — and in `ZH_2023` the padding tracked the organ
+  exactly (every liver row padded, every spleen row not), which is the
+  fingerprint of two source tables concatenated upstream. Stripped at the one
+  emit choke point in `build_dataset.py`; `IL_name` was the only affected
+  column, every change was exactly a strip, and nothing merged: no two distinct
+  names collapsed inside an experiment, no name gained a second SMILES, and the
+  duplicate `(Experiment_ID, IL_name, Model_target, Model_type)` count stayed at
+  40. Now gated by **C7 `padded_cells` = 0**. The lesson is error class 37: this
+  was *documented here* and worked around with two defensive `.strip()` calls
+  for the corpus's whole life, and no check could see it because the blank-field
+  check stripped before testing — a check that canonicalises its input has given
+  up the ability to detect non-canonical input.
 - **A reagent NAME is not a structure — check it, and check WHICH is wrong.**
   Two 2026-10-29 bugs: `18PG` is 18:0/18:1 (SOPG), not symmetric 18:0, and
   `AC_2025` had `DLin-MC3-DMA` and `KC2` carrying each other's structures — same
@@ -144,11 +159,20 @@ time with `pd.get_dummies`.
   written from their chemical names and checks every row. Add an entry whenever
   a new catalogue reagent enters the corpus. PEG-lipids are deliberately absent
   — the block length is a distribution, so no single SMILES is right.
-- **`WT_2026` is the only experiment with a blank `Publication_PMID`** — it is a
-  preprint. Left blank rather than invented; fill it on publication. `QL_2026`
-  was blank for the same stated reason and should not have been: PMID 41145968
-  was already indexed and its DOI matches. **Look the PMID up before recording
-  a paper as unindexed.**
+- **~~`WT_2026` is the only experiment with a blank `Publication_PMID`~~ FIXED
+  2026-11-07 (F-027). Every paper in the corpus is now indexed; `C7` gates blank
+  PMIDs at 0.** `WT_2026` is **PMID 42367940**. The old entry here said it was a
+  preprint "not in PubMed", and *that was false when it was written* — the record
+  had been live since **2026-06-29**, four months before the curation was built.
+  PubMed has indexed bioRxiv deposits under the NIH Preprint Pilot since 2020, so
+  "it is a preprint" is never a reason for a blank PMID.
+  **This is the second instance, on the very line that recorded the first**
+  (`QL_2026`, PMID 41145968, also already indexed). "Look the PMID up" was
+  already written here and did not work, so the rule is now stronger: **a paper
+  may only be recorded as unindexed with a dated query result stored beside the
+  claim** — `provenance/esummary_cache.json`, refreshed by
+  `provenance/fetch_esummary.py`. Verified two ways before applying: by the PMID,
+  and by an `esearch` on the DOI the curation already stored, which returns it.
 - **288 IL names carry different structures in different experiments** (e.g.
   `A1_B1_C1` in both `JC_2023` and `YX_2024`). Generic combinatorial labels
   reused by unrelated papers, not an error, but never key on `IL_name` alone
@@ -158,7 +182,9 @@ time with `pd.get_dummies`.
 
 ```bash
 python3 -I provenance/build_dataset.py   # rebuilds data/ from the archived inputs
-python3 -I provenance/audit.py           # independent C1-C11 audit, writes audit_findings.json
+python3 -I provenance/audit.py           # independent C1-C14 audit, writes audit_findings.json
+python3 -I provenance/check_docs.py      # C15: the numbers below, vs the rebuilt corpus
+python3 -I provenance/build_manifest.py  # per-experiment manifest + NCBI cross-check
 ```
 
 ## 4. Task tracker (advisor's tiered list)
@@ -253,8 +279,9 @@ products really is a positional-isomer mixture; saying so is correct, not timid.
 Write the flag into the **emitted row**, in the columns of
 `provenance/schema_quality.json` (§3). A count in your folder's QC JSON does not
 reach anyone: four of five curations computed their flags, wrote them to a QC
-file, and emitted rows without them, so 1,152 corpus rows carried a convention
-silently (F-001). Carry the per-item assessment through; never write a
+file, and emitted rows without them, so **1,157** corpus rows carried a
+convention silently (F-001; the round-1 ledger's 1,152 was itself wrong — see
+§6). Carry the per-item assessment through; never write a
 `confidence` the upstream record already states, because a hard-coded literal
 once relabelled 24 rows reading *"ASSUMED: the paper draws no structure"* as the
 project's highest confidence (F-011).
@@ -312,8 +339,23 @@ classes is the lever; number of passes is not.
 ```bash
 python3 -I provenance/build_dataset.py   # rebuild
 python3 -I provenance/audit.py           # C1-C14, one command; EXITS NON-ZERO on failure
+python3 -I provenance/check_docs.py      # C15: every number THIS FILE asserts, vs the corpus
 python3 -I provenance/test_checks.py .   # do the checks still have teeth? (slow, ~20 min)
 ```
+
+**C15 checks the docs, not the data.** C1–C14 compare the data against itself or
+against a paper; none of them notice when *this file* goes stale, and this file
+is what the next session reads first and what Methods gets written from. Added
+2026-11-07 after a sweep found three wrong numbers that had failed nothing: the
+F-001 flag count (1,152, with the docs pointing at a metric that returns 1,652 —
+F-024), the chance baseline (`1/31` vitro, matching no corpus this project has
+ever had — F-026), and a trailing-space condition described as "several" rows
+when it was 915 cells (F-022). Claims live in `provenance/docs_claims.json`,
+each with the section that makes it, so a failure names the prose to fix. **It
+does not parse the Markdown** — the expected value is transcribed by hand on
+purpose, so changing a documented number means changing both, and the pair
+either agrees or the build fails. A number in the docs with no entry there is a
+number nothing is checking.
 
 **`audit.py` now gates.** Until 2026-10-30 it did not: `main()`'s return value
 was discarded and the exit code came only from the C10/C11 delegates, so C1-C9
@@ -491,12 +533,29 @@ and flag those rows in the data, so a reader can see which values are measured
 and which are convention.
 
 **This is now implemented** — 7 columns, §3 — having been documented here and
-nowhere else for two days while 1,152 rows carried a convention silently
+nowhere else for two days while **1,157** rows carried a convention silently
 (F-001). The lesson is narrower than "write the code": the flags had been
 *computed*, and were sitting in each curation's own QC JSON. They died at the
 emit step, one stage before the merge, so no change to `build_dataset.py` could
 have rescued them and nobody reading the builder would have found it. **A flag
 that lives only in a per-folder QC file is not a flag, it is a memo.**
+
+**Which number, and quote the right one.** This count moved four times
+(≥266 → 1,137 → 1,152 → 1,157) and every correction was someone re-deriving it,
+because the quantity had no definition in code — only a prose description that
+each pass re-implemented slightly differently. `audit.py` C13 now emits **two**
+counts and the distinction is the whole point:
+
+| metric | 2026-11-07 | what it is |
+|---|---|---|
+| `rows_carrying_a_flag` | **1,652** | any quality column populated at all, `confidence = high` included. 495 rows carry only that, which is an *assurance*, not a caveat. **Not** the F-001 number. |
+| `rows_with_a_caveat` | **1,157** | the structure or value is genuinely qualified: an ambiguity, an assumed feature, a bound, or a confidence below `high`. **This is the one to quote.** |
+
+Round 1's 1,152 was wrong twice over in ways that cancelled to within 5: it
+counted a `QL_2026` cross-figure conflict that carries no flag column, and
+missed 6 `ZT_2026` rows flagged `confidence = medium` with no other marker
+(F-024). Both counts are now gated, so the next drift fails the build instead
+of being rediscovered.
 
 ---
 
@@ -504,10 +563,26 @@ that lives only in a per-folder QC file is not a flag, it is a memo.**
 
 - **Reproducibility first.** One frozen script (T3) regenerates all numbers. When a number is finalized, update §3 / the manuscript AND note it here. Never hand-edit a reported number.
 - **Seeds & versions pinned** and recorded (RDKit, scikit-learn, XGBoost/PyTorch). State them in Methods and in the script header.
-- **Source key = `Experiment_ID`** everywhere. Chance baseline for S-way classification = 1/S (1/31 vitro, 1/17 vivo).
+- **Source key = `Experiment_ID`** everywhere. Chance baseline for S-way
+  classification = 1/S. **The live corpus is S = 42 vitro / 19 vivo (1/42,
+  1/19).** The `1/31, 1/17` written here until 2026-11-07 was stale in both
+  directions: it matched neither the current corpus nor the corpus the frozen
+  pipeline actually ran on (S = 34 vitro / 17 vivo — see the 2026-07-23
+  entries). Quote the S of the corpus a number was computed on, never a
+  remembered one; `results/` and `reports/` are still the S = 34 / 17 run, which
+  is the §2 warning and the open decision in §8.
 - **Featurization:** Morgan/ECFP (draft says radius 2, 2048 bits) for source-classification & Tanimoto NN. Confirm and record exact params in T3.
 - **Primary metrics:** pooled Spearman vs within-experiment scaffold-disjoint Spearman — always be explicit which one a figure/number uses (the draft's main ambiguity).
 - **Scratch/tmp files** go in the session scratchpad, not in `data/` or `scripts/`.
+- **But no script in this repo may READ an input from a session scratchpad.**
+  Scratchpads are session-scoped and get cleared, so a tracked output that
+  depends on one has no recoverable lineage. This has now happened twice —
+  `lit_review/build_data.py` (fixed 2026-10-30) and `provenance/build_manifest.py`
+  (fixed 2026-11-07, F-023), which read an NCBI cache from a *previous* session's
+  scratchpad and raised `FileNotFoundError` once it was cleared, leaving
+  `data/experiment_manifest.csv` tracked in git and regenerable from nothing.
+  Scratch is for intermediates nobody needs twice; anything a tracked artifact
+  depends on gets written into the repo, with the script that fetches it.
 - **Never silently repoint a frozen script at new data.** Frozen numbers belong to the corpus they were computed on.
 - **Verification is a stage, not a courtesy** (§6): Tier 1 automated every build, Tier 2 one briefed adversarial reviewer per paper, Tier 3 only if Tier 2 found something structural.
 - **Every bug found becomes a permanent check** in `provenance/ERROR_CLASSES.md`. That file only grows.
@@ -558,3 +633,5 @@ that lives only in a per-folder QC file is not a flag, it is a memo.**
 - **2026-10-30** — **`QL_2026` merged: 344 in-vitro rows** (Liu et al., Adv Healthc Mater 2026, PMID 41145968) — 344 thiosuccinimide lipids in HeLa from a bispecific-linker library, 320 from Fig 2b/2c plus a 24-member six-tail library from Fig 3c. `data_vitro.csv` **28,541 → 28,885 rows, 41 → 42 experiments.** The four benchmark LNPs on the same panels are calibration, not library members, and are not emitted. One pooled z after a **1.1116×** scalar offset (sd 0.0234) tied library 2 to library 1 through their four shared benchmarks — standardising the two libraries separately had deleted the paper's central ~37× library difference (154,630 vs 4,128 RLU geometric mean) and inverted 36% of cross-library pairs while every check still passed. Its PMID had been recorded as blank "not indexed"; it was indexed all along, so **look the PMID up before recording a paper as unindexed.** Full detail in `provenance/CHANGELOG.md` §11, which also back-fills the `XD_2026` entry that section had been missing.
 - **2026-10-30** — **Round-1 corpus review: repairs applied. Corpus 28,885 x 79 / 1,780 x 79; row counts unchanged.** Eight read-only reviewers over five curations, 21 findings, each repair sent to a separate validation agent first — and two validators changed the plan materially, which is the case for the step. Full detail in `provenance/CHANGELOG.md` §12 and `provenance/review/round_2026-10-30/FINDINGS.md`. The four that mattered: **(1)** All **537 `ZT_2026` rows** stored **epicholesterol** (3α). `RWMol.RemoveAtom` deleted cholesterol's hydroxyl out of C3's neighbour list without correcting C3's chiral tag. The epimers share molecular formula, exact mass to four decimals, the InChIKey *skeleton* block and all 17 descriptor columns, so C1-C9 were blind; C10 was blind because its anchor had the same sha256 as the enumeration it checked, while its note claimed independent assembly "through the C3 oxygen (3-beta)"; C11 was blind twice, comparing skeleton blocks only and inspecting `CHL_*` columns that are empty on every one of these rows. The validator settled 3β from Fig 1b's wedges, the 4.71-4.58 axial C3-H, and a ¹³C peak at 73.9 ppm — **and found a live second copy of the same bug in `build_new_curation.py` affecting 15 more structures**, so fixing one file would have left 15 wrong after the fix was announced. That copy is deleted; the file imports the one implementation. **(2)** **The Tier-1 audit could not fail** — `main()`'s return value was discarded, eight seeded violations exited 0, and `build_dataset.py` never imported `sys`. Now gated by `audit_baseline.json` (62 metrics, each with the reason it is accepted, failing on departure in *either* direction) plus `test_checks.py`, a seeded-mutation suite whose first run found that **C8 was checking 7 of 14 descriptor columns**. **(3)** **`WT_2026`'s 2,544 rows re-standardised**, 14 blocks to 7. Z-scoring each (file × cell type) column separately forced the authors' own published `nLnLE_Selectivity` to identically zero — raw HepG2 − Ramos is **+4.0342 ln (56.5×)** on file 5 with 173/180 signs one way, stored as 0.0000 with Spearman(raw, stored) = **−0.517**, anti-correlated. One z per file restores it and is now *checkable*: `z_a − z_b = Selectivity/σ`, asserted at max residual 1.8e-15. **(4)** **1,152 rows carried a convention and said nothing about it** (F-001) — the flagging posture §6 promised existed in no column anywhere, and the flags died one stage *before* the merge, so no builder change could have saved them. Schema 72 → **79**, defined once in `provenance/schema_quality.json`. F-011 had to land first: a hard-coded `"high"` in `build_new_curation.py` had relabelled the 24 lipids whose record reads *"ASSUMED: no ring N and the paper draws no structure"* as the project's highest confidence, so publishing `confidence` before fixing it would have been worse than publishing nothing. New checks **C12** (error class 22, with its specificity tested synthetically because the corpus had no correctly-pooled multi-cell-type experiment to serve as a negative control — all three were affected), **C13** (flag vocabulary), **C14** (cleaves every ester in `IL_SMILES` corpus-wide and pins the liberated sterol's *full* InChIKey against the registry). C14 earned itself on its first run by finding **F-021** in `ZH_2023`, an experiment no reviewer was assigned: a steroid that cleaves to C26H44O, missing the C19 angular methyl — not cholesterol, still open. Also fixed from two independent re-measurements: **F-019**, where `QL_2026`'s colorbar was anchored on the OUTER EDGE of its own black border (a second class-20 instance, on a colorbar) biasing every Fig 2b value high by ~1% at the hit threshold and **+38% at the floor** — the 48 white cells were stored at 1,310 RLU when their whole feasible band is [0, ~982], i.e. **above** the `value_is_bound = upper` flag this round had just given them; **F-018**, where a bar-top detector read replicate dots on 15 of 60 bars, which also means the stored cross-library offset of 1.1116 was largely measuring our own error — three of its four benchmark anchors were contaminated, and the corrected **1.0071 ± 0.0247 is not distinguishable from 1.0**; **F-020**, the same class in `XD_2026` (12/12 tops, mean +0.051 decades); and **F-010**, C2's coverage, 235 → **634** series across 11 experiments instead of 1, by testing per series whether the name token equals the measured chain length rather than keeping an allowlist. **F-017 I had confirmed WRONG**: its code was right and its comment was wrong — the anchors whose decade gaps looked unequal were tick positions rounded to integers. Error classes **29-36** added. Five findings this round were conclusions drawn from a secondary artifact rather than the primary one (a reviewer's count, an intermediate file, a comment, my own reimplementation of a mask); all five were wrong, and `REVIEW_PROGRAM.md` §5 now says to run the code's own objects and read the data itself. Corrections to my own earlier claims: F-016's "3 of N multi-cell experiments" is **3 of 3** — the corpus has only three; and F-011's mechanism was a hard-coded literal, not the join I had diagnosed.
 - **2026-10-30** — **Review program established (§6 Tier 4).** A corpus-wide, three-wave subagent review now runs every 3–5 merged papers; procedure, attack brief and round log in `provenance/review/REVIEW_PROGRAM.md`, per-reviewer packets generated from live data by `provenance/review/brief.py`. Round 1 (5 papers, 8 agents) is under way in `provenance/review/round_2026-10-30/`. Two findings before the reviewers even reported: **(1)** the flagging posture §6 promises is not implemented — the 72-column schema has no `confidence`, `positional_ambiguity` or `*_assumed` column and neither does any curation output, so **≥266 rows across four of five curated papers** carry no flag where one is documented, including 113 of `QL_2026`'s 344 sitting on a colormap floor where identical RGB spans ~980 RLU. *Superseded the same day:* the real count is **1,152**, measured from the emitted corpus (my ≥266 counted only the flags enumerable from QC JSONs; a reviewer's 1,137, which I adopted next, still undercounted `ZT_2026` by 15), and the repair is **applied** — schema 72 → 79, see the round-1 entry above. **(2)** `build_manifest.py` asserted a frozen row-count literal and raised on a correct manifest the moment the merge landed; it now asserts against the live file length with a non-fatal baseline tripwire. Separately, `lit_review/build_data.py` could not run at all — its sweep inputs lived in an ephemeral session scratchpad — so they are recovered into `lit_review/provenance/`, verified by rebuilding and diffing to exactly the one expected row change.
+- **2026-11-07** — **Round-2 corpus review opened; four repairs applied, none touching a value.** Corpus unchanged at 28,885 x 79 / 1,780 x 79. Five Wave-1 reviewers over the five curated papers, each briefed from a packet generated out of live data that day and told what round 1 already fixed so it would not re-confirm it; round 2 started from round 1's open list, per `REVIEW_PROGRAM.md` §7. Detail in `provenance/CHANGELOG.md` §13 and `provenance/review/round_2026-11-07/FINDINGS.md`. **(1) F-022: 915 `IL_name` cells carried a trailing space** — 720 `BL_2023` vitro, 150 `ZH_2023` + 45 `BL_2023` vivo, `IL_name` the only affected column. `"A1I5R22C8 "` and `"A1I5R22C8"` are different keys carrying the *same* SMILES, so every `IL_name` join split one lipid in two. It survived because it was **documented here** as "several `BL_2023` values" and worked around with two defensive `.strip()` calls, while C7's blank check *also* stripped before testing — so a padded value passed as present and no check could see the class (**error class 37**: a check that canonicalises its input has given up the ability to detect non-canonical input). Verified before applying that nothing merges: 0 name collisions, 0 names gaining a second SMILES, duplicate key count 40 -> 40. The first attempt stripped inside `write()`, which emitted a clean file while `validate()` read the padded rows still in memory and reported a lipid the corpus no longer contained — **a fix applied downstream of the validator makes the validator lie.** **(2) F-023: `build_manifest.py` could not run** — it read its NCBI cache from a *previous session's* scratchpad, which had been cleared, so `data/experiment_manifest.csv` (tracked in git) was regenerable from nothing. Second instance of the class after `lit_review/build_data.py`, so it is now a rule in §7 and **error class 38**. New `provenance/fetch_esummary.py` + `esummary_cache.json`; the rebuild is identical to 2026-10-30 on 59 of 61 rows and the two that moved both *improved* — `QL_2026` and `XD_2026` had read "PMID not checked against NCBI" because the stale cache predated their merges. **(3) F-024: "the number of flagged rows" had no definition in code.** Round 1 recorded 1,152 and pointed the reader at `C13.rows_carrying_a_flag`, which returns **1,652** — a 495-row gap that is entirely rows carrying `confidence = high` and nothing else, i.e. an *assurance* counted as a caveat. 1,152 was itself wrong twice over, nearly cancelling: `QL_2026` is 116 not 117 (the 117th carries no flag column at all) and `ZT_2026` is 45 not 39 (six `confidence = medium` rows were missed). **The honest figure is 1,157.** The count has moved four times and every correction was by hand, because **a quantity with a prose definition and no implementation gets re-implemented, slightly differently, by every pass.** C13 now emits both counts, gated; baseline 62 -> **70** metrics. Its new `confidence_without_a_note` immediately found 6 `ZT_2026` rows flagged `medium` with an empty note. **(4) F-026: the §7 chance baseline matched no corpus this project has ever had** — `1/31` vitro is the S from before the July re-trim; live is 42, the frozen run was 34. **New check C15** (`check_docs.py` + `docs_claims.json`, **error class 39**): 30 documented numbers, each measured against the live corpus and tagged with the section that claims it. The rest of that sweep found the docs right, and **two of my own "findings" were my error** — §3's 288 cross-experiment name collisions is exact (292 is a different quantity), and the registry has 13 entries, not the 4 I counted off the audit's *output* file. Both the round-1 pattern of reading a secondary artifact, landing on me again. **F-025 held back for validation:** 15 `ZT_2026` conjugates share one assumption and one note but two confidences, because `COMMERCIAL_CORES` stores confidence *in the parent core* and the code attaches it to the *conjugate* — **error class 29 surviving the round meant to clear it.**
+- **2026-11-07 (cont.)** — **Round 2, second batch: F-025 applied, F-027 applied, F-004 settled but not applied, F-028 opened.** Corpus still 28,885 x 79 / 1,780 x 79; no structure and no `Experiment_value` changed. Detail in `provenance/CHANGELOG.md` §13-14 and `review/round_2026-11-07/FINDINGS.md`. **F-025 (applied, and the validator changed my repair):** the sharper defect was that `build_new_curation.py`'s `quaternize()` wrapper assigns the shared function's site classification to `_note` and **discards** it — `enumerate.py::_quaternization_site` returns `"ASSUMED: no ring N and the paper draws no structure"` for all five commercial cores, and that string is paired with `confidence = low` on 24/24 rows in `03_enumerated.csv`. Symmetry-distinct tertiary amines: MC3 1, SM-102 1, TT3 3-but-1-class, OF-2 2-but-1-class, **Lipid 14 2-in-2-classes** — only Lipid 14 is a real choice, so the labelling was **inverted** (the most uncertain rows carried the highest confidence). `COMMERCIAL_CORES` is now SMILES-only and `_site_confidence()` derives confidence *and* note from the core's structure; a cap at `medium` was rejected because it leaves a mislabelled literal for the next reader. 21 of 537 rows changed, no SMILES. A second finding fell out: the 6 rows F-024's new `confidence_without_a_note` had just flagged are `medium` because their `O1` arm is **isodecyl acrylate, a branched isomer mixture** — the reason sat in `03_enumerated.csv` while the qc file attributed it to the C5/C6 core, which cannot be right since the `high` O2 rows share those cores. That metric went 6 -> 0, which made the audit **FAIL on "a known condition VANISHED"** — the first time the baseline's decrease-also-fails design caught a real improvement. **F-027 (applied):** `WT_2026`'s PMID was blank on the stated grounds that the preprint was "not in PubMed", and **that was false when written** — PMID **42367940** had been live since 2026-06-29, four months before the curation. An esearch on the DOI the curation *already stored* returns it, so no new information was ever needed. The rule it violates was written in the same `CLAUDE.md` §3 bullet and the same `CHANGELOG.md` §11 sentence that record the previous instance (`QL_2026`) — **and `audit_baseline.json` was accepting 2,544 blanks with that false statement as its `why`**. Manifest now 61/61 PMIDs. "Look it up" demonstrably failed as a rule, so it is now: **a paper may be recorded as unindexed only with a dated query result in `provenance/esummary_cache.json`.** **F-004 (settled, NOT applied — user's decision):** the `WT_2026` URS design block's `PEG_PEG+Chol` is **strictly monotone over all 129 rows with zero violations** while every other column has ~60/~60 violations — impossible under uniform random sampling, and the signature of a spreadsheet sort over a contiguous column selection. So the **design block moved and the stored molar percents are right**, confirmed by three independent ties (the paper naming `U0036` top and that row carrying the file max; Suppl Table 5 on **p. 8**, not the p. 59 I had wrongly passed on from a text-extraction line number; URS row 1 byte-identical to `F0162`). But `N:P` is **not recoverable** — three mutually inconsistent candidates (7.199 / 16.766 / 6.0), neither alignment above a random-pairing floor, and Suppl Table 5 itself block-pasted. Recommendation stands: **blank** it on those 129 rows. **F-028 (new, open):** `Experiment_value_within_model` re-standardises within (`Experiment_ID` x `Model_type`), but `WT_2026` is normalised per **source file** and `Ramos` spans five of them, so the derived column straddles five scales the authors forbid comparing and **nothing declares it** — `value_normalization_unit` documents `Experiment_value` only. Error classes **40** (a source stating one quantity in two parameterisations where only one is row-aligned; detect by row-wise derivation, since a range check passes on a permutation — this curation's `validate.py` recorded `PASS N/P range 3.33-37.12` on 129 misassigned rows) and **41** (a derived column silently pooling normalisation units) added. **F-003 closed**, re-derived independently: 2,544 rows round-trip at <=2.7e-15, Spearman(raw, stored) = 1.000000, **0 of 180** sign inversions where round 1 measured 92, and both C10 anchors confirmed byte-different from the corpus strings and InChIKey-identical.

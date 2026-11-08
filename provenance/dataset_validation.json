@@ -388,6 +388,10 @@
   },
   "verdict": "NOT FIXED and NOT DROPPED - flagged for the user. These are ratios to a benchmark (luminescence_relative_to_Spikevax), floored at 0, not z-scores. They are the vivo analogue of the ZL_2022 / YX_2023 problem that got those two dropped from the vitro corpus, and the same decision should probably apply."
  },
+ "cells_whitespace_stripped": {
+  "vitro": 720,
+  "vivo": 195
+ },
  "structure_patches": {
   "lipids_patched": {
    "KZ_2016": 42,
@@ -453,48 +457,48 @@
    ],
    "BL_2023": [
     [
-     "A55-T3 ",
-     "A57-T3 "
+     "A55-T3",
+     "A57-T3"
     ],
     [
-     "A24-T2 ",
-     "A25-T2 "
+     "A24-T2",
+     "A25-T2"
     ],
     [
-     "A55-T10 ",
-     "A57-T10 "
+     "A55-T10",
+     "A57-T10"
     ],
     [
-     "A55-T9 ",
-     "A57-T9 "
+     "A55-T9",
+     "A57-T9"
     ],
     [
-     "A55-T4 ",
-     "A57-T4 "
+     "A55-T4",
+     "A57-T4"
     ],
     [
-     "A55-T2 ",
-     "A57-T2 "
+     "A55-T2",
+     "A57-T2"
     ],
     [
-     "A55-T5 ",
-     "A57-T5 "
+     "A55-T5",
+     "A57-T5"
     ],
     [
-     "A55-T1 ",
-     "A57-T1 "
+     "A55-T1",
+     "A57-T1"
     ],
     [
-     "A55-T6 ",
-     "A57-T6 "
+     "A55-T6",
+     "A57-T6"
     ],
     [
-     "A55-T7 ",
-     "A57-T7 "
+     "A55-T7",
+     "A57-T7"
     ],
     [
-     "A55-T8 ",
-     "A57-T8 "
+     "A55-T8",
+     "A57-T8"
     ]
    ],
    "JW_2024": [

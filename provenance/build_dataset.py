@@ -510,6 +510,7 @@ def main():
     merged = merge_curations(rows, vivo, out_cols)
     quality = {"vitro": add_quality_columns(rows),
                "vivo": add_quality_columns(vivo)}
+    stripped = {"vitro": strip_cells(rows), "vivo": strip_cells(vivo)}
     rows.sort(key=lambda r: (r["Experiment_ID"],
                              int(r["Index"]) if str(r["Index"]).isdigit() else 0))
     vivo.sort(key=lambda r: (r["Experiment_ID"],
@@ -518,6 +519,7 @@ def main():
     write(OUT_VIVO, out_cols, vivo)
 
     qc = validate(rows, vivo, P, V, out_cols, provenance, fix)
+    qc["cells_whitespace_stripped"] = stripped
     qc["structure_patches"] = patch_summary(rows, patch_log)
     qc["name_patches"] = {
         "n_rows_relabelled": len(name_log),
@@ -724,6 +726,42 @@ def add_quality_columns(rows):
             if str(r.get(col, "")) not in ok:
                 log["bad_values"].append((r["LNP_ID"], col, r.get(col)))
     return log
+
+
+def strip_cells(rows):
+    """Strip surrounding whitespace from every cell, in place. Returns the count.
+
+    915 `IL_name` cells arrived from upstream padded with a trailing space --
+    720 `BL_2023` vitro, 150 `ZH_2023` + 45 `BL_2023` vivo -- and in `ZH_2023`
+    the padding tracks the organ exactly (every liver row padded, every spleen
+    row not), which is the fingerprint of two source tables concatenated. No
+    cell anywhere else in the corpus carries padding.
+
+    The padding is a join hazard that no check could see: `"A1I5R22C8 "` and
+    `"A1I5R22C8"` are different dict keys carrying the *same* SMILES, while C7
+    only ever tested for a blank -- and it stripped before testing, so a padded
+    value passed as present. Two comparisons in this file already called
+    `.strip()` defensively, which is the workaround and not the fix (F-022).
+
+    Called from main() BEFORE write() and validate(), not inside write(). Doing
+    it inside write() emitted stripped rows while validate() went on reading the
+    padded ones in memory, so the QC JSON named `A55-T3 ` as a duplicate-SMILES
+    partner and the emitted corpus contained no such lipid -- the exact
+    docs-disagree-with-data split this project keeps hitting.
+
+    Verified safe before applying: stripping merges no two distinct names inside
+    any experiment, maps no name onto a second SMILES, and leaves the duplicate
+    `(Experiment_ID, IL_name, Model_target, Model_type)` key count unchanged at
+    40 -- the padded/unpadded pairs in `ZH_2023` are one lipid measured in two
+    organs, which is two legitimate rows.
+    """
+    n = 0
+    for r in rows:
+        for k, v in r.items():
+            if isinstance(v, str) and v != v.strip():
+                r[k] = v.strip()
+                n += 1
+    return n
 
 
 def write(path, cols, rows):

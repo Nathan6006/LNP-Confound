@@ -132,9 +132,9 @@
     "pDNA|FLuc": 1080,
     "pDNA|GFP": 112
    },
-   "blank_required_fields": {
-    "Publication_PMID": 2544
-   }
+   "blank_required_fields": {},
+   "padded_cells": 0,
+   "padded_columns": {}
   },
   "C8_descriptors": {
    "rows_checked": 28885,
@@ -192,7 +192,9 @@
    "bad_values": 0,
    "examples": [],
    "rows_carrying_a_flag": 1589,
-   "flagged_without_a_note": 0
+   "rows_with_a_caveat": 3600,
+   "flagged_without_a_note": 0,
+   "confidence_without_a_note": 0
   },
   "C14_embedded_sterol": {
    "authority": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
@@ -336,7 +338,9 @@
     "siRNA|FVII": 117,
     "mRNA|RLuc": 60
    },
-   "blank_required_fields": {}
+   "blank_required_fields": {},
+   "padded_cells": 0,
+   "padded_columns": {}
   },
   "C8_descriptors": {
    "rows_checked": 1780,
@@ -366,7 +370,9 @@
    "bad_values": 0,
    "examples": [],
    "rows_carrying_a_flag": 63,
-   "flagged_without_a_note": 0
+   "rows_with_a_caveat": 55,
+   "flagged_without_a_note": 0,
+   "confidence_without_a_note": 0
   },
   "C14_embedded_sterol": {
    "authority": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",

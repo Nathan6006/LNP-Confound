@@ -123,8 +123,13 @@
   },
   "C7_fields.blank_Publication_PMID": {
    "mode": "exact",
-   "value": 2544,
-   "why": "ACCEPTED: all 2,544 WT_2026 rows. The FALCON paper is a bioRxiv preprint (10.64898/2026.06.13.731774) and was not in PubMed as of 2026-10-30, so there is no PMID to record. A blank here is the honest value; writing anything else would invent an identifier. Re-baseline to 0 when it is indexed."
+   "value": 0,
+   "why": "ACCEPTED AS ZERO since 2026-11-07. It was 2,544 -- all of WT_2026 -- on the stated grounds that the FALCON paper was 'a bioRxiv preprint not in PubMed as of 2026-10-30'. THAT REASON WAS FALSE WHEN WRITTEN: PMID 42367940 was indexed 2026-06-29, four months before the curation was built, and an esearch on the DOI the curation already stored returns it. Found by the round-2 WT_2026 reviewer (F-027). PubMed has indexed bioRxiv deposits under the NIH Preprint Pilot since 2020, so 'it is a preprint' is never a reason for a blank PMID. Second instance after QL_2026, so the baseline must not accept a blank PMID again without a dated query result stored in provenance/esummary_cache.json. Gated at 0: every paper in the corpus is now indexed."
+  },
+  "C7_fields.padded_cells": {
+   "mode": "max",
+   "value": 0,
+   "why": "ACCEPTED AS ZERO: no cell in the corpus may carry leading or trailing whitespace. 915 IL_name cells did -- 720 BL_2023 vitro, 150 ZH_2023 + 45 BL_2023 vivo -- for the corpus's whole life, and in ZH_2023 the padding tracked the organ exactly, the fingerprint of two source tables concatenated. It was disclosed in CLAUDE.md and worked around with .strip() at two call sites in build_dataset.py, but no check could see it: blank_required_fields strips before testing, so a padded value passes as present. Stripped at the single emit choke point 2026-11-07 (F-022); gated at 0 so it cannot come back with the next upstream merge."
   },
   "C8_descriptors.rows_disagreeing": {
    "mode": "max",
@@ -150,6 +155,21 @@
    "mode": "max",
    "value": 0,
    "why": "every quality column must hold a value listed in schema_quality.json"
+  },
+  "C13_quality_vocabulary.rows_carrying_a_flag": {
+   "mode": "exact",
+   "value": 1589,
+   "why": "ACCEPTED: 1,589 vitro rows have ANY quality column populated. This is NOT the F-001 quantity -- it includes confidence = high, which is an assurance, not a caveat (486 ZT_2026 vitro rows carry only that). Quote rows_with_a_caveat instead. Gated so a curation cannot stop emitting flags unnoticed; update together with the merge that moves it."
+  },
+  "C13_quality_vocabulary.rows_with_a_caveat": {
+   "mode": "exact",
+   "value": 1103,
+   "why": "ACCEPTED: 1,103 vitro rows whose structure or value is actually qualified -- an ambiguity, an assumed feature, a bound, or a confidence below high. 840 LL_2026 + 147 LL_2026_2 positional_ambiguity + 116 QL_2026 bounds (113 upper, 3 lower). With vivo's 54 this is the F-001 number: 1,157, NOT the 1,152 the round-1 ledger recorded, which double-counted a QL_2026 cross-figure conflict carrying no flag and missed 6 ZT_2026 medium rows."
+  },
+  "C13_quality_vocabulary.confidence_without_a_note": {
+   "mode": "exact",
+   "value": 0,
+   "why": "ACCEPTED AS ZERO: a medium or low confidence with no curation_note tells a reader something is uncertain but not what. No vitro row has one."
   },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",
@@ -283,6 +303,11 @@
    "value": 0,
    "why": "every vivo paper is indexed"
   },
+  "C7_fields.padded_cells": {
+   "mode": "max",
+   "value": 0,
+   "why": "ACCEPTED AS ZERO: no cell in the corpus may carry leading or trailing whitespace. 915 IL_name cells did -- 720 BL_2023 vitro, 150 ZH_2023 + 45 BL_2023 vivo -- for the corpus's whole life, and in ZH_2023 the padding tracked the organ exactly, the fingerprint of two source tables concatenated. It was disclosed in CLAUDE.md and worked around with .strip() at two call sites in build_dataset.py, but no check could see it: blank_required_fields strips before testing, so a padded value passes as present. Stripped at the single emit choke point 2026-11-07 (F-022); gated at 0 so it cannot come back with the next upstream merge."
+  },
   "C8_descriptors.rows_disagreeing": {
    "mode": "max",
    "value": 0,
@@ -307,6 +332,21 @@
    "mode": "max",
    "value": 0,
    "why": "as vitro"
+  },
+  "C13_quality_vocabulary.rows_carrying_a_flag": {
+   "mode": "exact",
+   "value": 63,
+   "why": "ACCEPTED: as vitro. 9 of the 63 carry only confidence = high (6 ZT_2026, 3 XD_2026 benchmarks)."
+  },
+  "C13_quality_vocabulary.rows_with_a_caveat": {
+   "mode": "exact",
+   "value": 54,
+   "why": "ACCEPTED: 45 ZT_2026 (39 structure_assumed + 6 medium-only) + 9 XD_2026 vendor-supplied E-lipids with no external anchor of any kind."
+  },
+  "C13_quality_vocabulary.confidence_without_a_note": {
+   "mode": "max",
+   "value": 0,
+   "why": "ACCEPTED AS ZERO since 2026-11-07. It was 6 for a few hours on the day the metric was added: ZT_2026's C5O1B1/C6O1B1/C5O1B2/C6O1B2/C5O1B3/C6O1B3 carried confidence = medium with an empty curation_note, so the corpus said six structures were less certain without saying why (F-024). The reason was in 03_enumerated.csv all along -- their O1 arm is isodecyl acrylate, a commercial BRANCHED ISOMER MIXTURE, so the stored SMILES is one isomer of a mixture, while the high-confidence O2 rows use single-compound dodecyl acrylate. build_new_curation.py now writes that reason onto the row and sets structure_assumed = 1, matching how LL_2026 flags the identical condition. Note the qc file's own confidence_basis had attributed their medium to the C5/C6 core, which cannot be right -- the high O2 rows share those cores. Gated at 0: a medium or low confidence must always say why."
   },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",

@@ -34,13 +34,7 @@
     "C5O2B3",
     "C6O2B1",
     "C6O2B2",
-    "C6O2B3",
-    "Lipid 14-CB1",
-    "Lipid 14-CB2",
-    "Lipid 14-CB3",
-    "TT3-CB1",
-    "TT3-CB2",
-    "TT3-CB3"
+    "C6O2B3"
    ],
    "medium": [
     "C5O1B1",
@@ -57,7 +51,10 @@
     "OF-2-CB3",
     "SM-102-CB1",
     "SM-102-CB2",
-    "SM-102-CB3"
+    "SM-102-CB3",
+    "TT3-CB1",
+    "TT3-CB2",
+    "TT3-CB3"
    ],
    "low": [
     "C1O1B1",
@@ -83,7 +80,10 @@
     "C4O1B3",
     "C4O2B1",
     "C4O2B2",
-    "C4O2B3"
+    "C4O2B3",
+    "Lipid 14-CB1",
+    "Lipid 14-CB2",
+    "Lipid 14-CB3"
    ]
   },
   "structure_assumed": [
@@ -111,6 +111,12 @@
    "C4O2B1",
    "C4O2B2",
    "C4O2B3",
+   "C5O1B1",
+   "C5O1B2",
+   "C5O1B3",
+   "C6O1B1",
+   "C6O1B2",
+   "C6O1B3",
    "Lipid 14-CB1",
    "Lipid 14-CB2",
    "Lipid 14-CB3",

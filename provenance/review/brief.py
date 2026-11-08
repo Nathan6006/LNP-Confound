@@ -149,10 +149,33 @@ def slice_stats(rows, eids):
             vals = sorted(set(r[k] for r in sel))
             ratios[k] = vals if len(vals) <= 8 else f"{len(vals)} distinct"
     out["molratios"] = ratios
-    # free-text columns that often carry our own flags
+    # The quality/provenance columns, taken from schema_quality.json -- the file
+    # CLAUDE.md §3 names as the single source of these column names.
+    #
+    # This used to select them with a hard-coded prefix tuple:
+    #
+    #     if col.lower().startswith(("flag", "note", "positional", "confid",
+    #                                "source_fig", "extraction")):
+    #
+    # which matched 2 of the 7 columns. `structure_assumed`, `value_is_bound`,
+    # `value_normalization_unit` and `Experiment_value_within_model` matched
+    # nothing, and `curation_note` missed because it starts "curation", not
+    # "note". So every packet this round under-briefed its reviewer: the
+    # `QL_2026` packet showed NO flag block at all while 116 of its 344 rows
+    # carry `value_is_bound` -- the colormap floor that round 1 spent F-019
+    # establishing -- and the `WT_2026` packet hid the `source_file`
+    # normalisation unit that is the entire F-003 repair (F-028).
+    #
+    # Error class 34 one layer out: the flags now exist in the data and were
+    # being dropped at the REVIEW boundary instead of the merge boundary. The
+    # remedy is the one F-001 applied to the builder -- read the names from the
+    # schema instead of restating them. Any extraction/figure columns a curation
+    # invents are still picked up by the prefix test, which is kept alongside.
+    quality = [c["name"] for c in json.load(open(os.path.join(
+        ROOT, "provenance", "schema_quality.json")))["columns"]]
     for col in sel[0]:
-        if col.lower().startswith(("flag", "note", "positional", "confid",
-                                   "source_fig", "extraction")):
+        if col in quality or col.lower().startswith(
+                ("flag", "note", "source_fig", "extraction")):
             c = Counter(r[col] for r in sel if r[col])
             if c:
                 out.setdefault("flag_columns", {})[col] = dict(c.most_common(10))

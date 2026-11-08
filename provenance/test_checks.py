@@ -108,6 +108,12 @@ MUT = {
  "C9 stereo stripped":         ("vitro", lambda r: r.update(
      IL_SMILES="CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C"
                .replace("/", "").replace("\\", ""))),
+ # F-022. A trailing space is the one corruption that leaves a value looking
+ # present to every check that strips before testing -- which the blank-field
+ # check does -- while making it a different join key. Mutating IL_name rather
+ # than a quality column because that is the column 915 real rows carried it on.
+ "C7 padded IL_name (F-022)":  ("vitro", lambda r: r.update(IL_name=r["IL_name"] + " ")),
+ "C7 padded Model_type":       ("vivo",  lambda r: r.update(Model_type=" " + r["Model_type"])),
 }
 
 def run(tmp):

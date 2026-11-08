@@ -2,9 +2,17 @@
 
 *"FALCON: Closed-Loop Multi-Objective Optimization of Lipid Nanoparticles for
 Cell-Selective mRNA Delivery."* Hai-Quan Mao lab, Johns Hopkins.
-DOI `10.64898/2026.06.13.731774`. Preprint — no PMID as of 2026-10-29.
+DOI `10.64898/2026.06.13.731774`. **PMID 42367940.**
+*This line read "Preprint -- no PMID as of 2026-10-29" and that was false when
+written: the PubMed record was created 2026-06-29, four months earlier. An
+`esearch` on the DOI above returns it. Corrected 2026-11-07, F-027.*
 
-**2,544 measurements over 1,218 formulations, 14 experiment blocks.**
+**2,544 measurements over 1,218 formulations, 7 experiment blocks** (one per
+source file). It was 14 -- one per (file x cell type) -- until round 1's F-003
+showed that splitting a file's cell types into separate z-blocks forced the
+authors' own published `nLnLE_Selectivity` to identically zero and left the
+stored values anti-correlated with the raw signal. Every "14" in the history
+below has been corrected to 7; see `CHANGELOG.md` §12.
 Built 2026-10-29. Not yet merged into `data/` — see "Before merging".
 
 ## Where the numbers come from
@@ -46,7 +54,8 @@ The paper also mentions "floor adjustment and min-max scaling". Both happen
 normalized, so not needed"*, and `MinMaxScaler` is fitted in
 `falcon_engine/utilities.py` at train time. The published numbers are untouched.
 
-## One experiment per (dataset × cell type) — 14 blocks
+## One experiment per SOURCE FILE — 7 blocks
+*(was "per (dataset x cell type) -- 14 blocks"; corrected 2026-10-30, F-003)*
 
 `WT_2026_<tag>_<CELL>`, e.g. `WT_2026_E1_RAMOS`, `WT_2026_E4_DC24`.
 
@@ -113,11 +122,11 @@ External anchor: Supplementary Table 9 prints the initial grid-search library
 size per experiment, a number the repo never states. **All five match** — 81,
 108, 36, 108, 108 formulations at iteration 0.
 
-Also passing: 2,544 rows × 72 cols; 14 blocks at mean 0 / sd 1 to 2e-16; molar
+Also passing: 2,544 rows x 79 cols; 7 blocks at mean 0 / sd 1 to 2e-16; molar
 percents sum to 100 (max deviation 0.1, which is dataset 1's own one-decimal
 rounding); all 7 components parse, canonical, single-fragment, radical-free; no
 component name maps to two SMILES; descriptors re-derived from SMILES on 300
-sampled rows with 0 mismatches; all 14 blocks round-trip to the source CSV.
+sampled rows with 0 mismatches; all 7 blocks round-trip to the source CSV.
 
 C10 (`provenance/structure_check.py`): `reference_structures.csv` holds MC3 and
 SM-102 written **from their IUPAC registry names in a deliberately different
@@ -155,13 +164,15 @@ Five `Model_type` values are new to the corpus: `Ramos`, `THP-1`, `INS-1E`,
 to avoid adding categories; that was dropped as indefensible.
 
 `make_merge_subset.py` writes `05_WT_2026_merge.csv`, which
-`provenance/build_dataset.py` appends via `MERGE`. The fourteen contributing
+`provenance/build_dataset.py` appends via `MERGE`. The seven contributing
 blocks keep the z-score computed inside their own normalization unit rather than
 being re-pooled, because the repo warns values "cannot be cross compared across
 files"; standardized blocks concatenate to mean 0 / population sd 1 by
 construction, and the merged block measures 1.15e-17 / 1.000000000000.
 
-`data_vitro.csv`: 25,997 -> 28,541 rows, 40 -> 41 experiments.
+`data_vitro.csv`: 25,997 -> 28,541 rows, 40 -> 41 experiments **at the time of
+this merge**. The corpus is now 28,885 rows / 42 experiments (`QL_2026` merged
+2026-10-30); this line records what this curation added, not the current total.
 
 Both corpus errors this curation surfaced were confirmed and patched
 (`provenance/CHANGELOG.md` §10), and a new Tier-1 check, **C11**
@@ -172,7 +183,9 @@ measured value moved.
 
 Two known gaps, both recorded rather than hidden:
 
-* `Publication_PMID` is blank — preprint. Fill on publication.
+* `Publication_PMID` = **42367940**. It was blank until 2026-11-07 on the
+  grounds that a preprint has no PMID -- which is simply untrue: PubMed has
+  indexed bioRxiv deposits under the NIH Preprint Pilot since 2020 (F-027).
 * Audit C4 reports one exact duplicate row. It is in the authors' table: F1109
   (iter 1) and F1120 (iter 2) share a composition and a byte-identical
   `nLnLE_RAMOS` while their `nLnLE_HEPG2` differ. Kept as published.
@@ -183,7 +196,7 @@ Two known gaps, both recorded rather than hidden:
 build_rows.py              source CSVs -> 01_WT_2026_rows.csv (+ 03_enumerated.csv)
 validate.py                independent 17-check pass -> 04_validation.json
 reference_structures.csv   C10 anchors, written from IUPAC names
-01_WT_2026_rows.csv        2,544 x 72, corpus schema
+01_WT_2026_rows.csv        2,544 x 79, corpus schema
 02_WT_2026_qc.json         per-block stats, selectivity derivation proof
 repo/                      upstream clone, untrusted, never executed
 ```

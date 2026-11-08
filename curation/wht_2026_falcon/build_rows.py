@@ -76,7 +76,25 @@ OUT = os.path.join(HERE, "01_WT_2026_rows.csv")
 
 LINK = "https://www.biorxiv.org/content/10.64898/2026.06.13.731774v1"
 DOI = "10.64898/2026.06.13.731774"
-PMID = ""                                  # preprint, not in PubMed as of 2026-10-29
+# CORRECTED 2026-11-07 (F-027). This read `PMID = ""` with the comment "preprint,
+# not in PubMed as of 2026-10-29" -- and that was false when it was written. The
+# record had been live since 2026-06-29, four months earlier:
+#
+#   esearch db=pubmed term="10.64898/2026.06.13.731774[doi]"  ->  42367940
+#   esummary 42367940 -> "FALCON: Closed-Loop Multi-Objective Optimization of
+#   Lipid Nanoparticles for Cell-Selective mRNA Delivery.", bioRxiv,
+#   doi 10.64898/2026.06.13.731774, entrez 2026/06/29
+#
+# Verified two ways: by the PMID, and by searching PubMed for the DOI this file
+# already stored -- which is the check that should have been run in the first
+# place. "It is a preprint" was never a reason for a blank PMID: PubMed has
+# indexed bioRxiv deposits under the NIH Preprint Pilot since 2020.
+#
+# Second instance of exactly this, on the same CLAUDE.md §3 line that records the
+# first (`QL_2026`, whose PMID 41145968 was also already indexed). So the rule is
+# no longer "look it up" but "a paper may only be recorded as unindexed with a
+# dated query result stored beside the claim" -- see provenance/esummary_cache.json.
+PMID = "42367940"
 
 # Per-cell doses, Methods: "150, 25, 5, and 10 ng/well for Ramos B, THP-1 cells,
 # HepG2, and INS-1E/DC2.4/C2C12/NIH-3T3, respectively", with one stated

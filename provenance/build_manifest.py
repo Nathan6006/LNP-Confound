@@ -4,9 +4,22 @@ import json
 import sys
 import pandas as pd
 
-DATA = "/Users/nathanliu/LNP/confound/data"
-OUT = f"{DATA}/experiment_manifest.csv"
-ESUM = "/private/tmp/claude-501/-Users-nathanliu-Documents-LNP-confound/ebd1fdd9-2e2e-4284-8eb1-27c940f1a93a/scratchpad/esum.json"
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.normpath(os.path.join(HERE, ".."))
+DATA = os.path.join(ROOT, "data")
+OUT = os.path.join(DATA, "experiment_manifest.csv")
+
+# The NCBI esummary cross-check cache, refreshed by provenance/fetch_esummary.py.
+#
+# This used to point at a path inside a Claude session scratchpad. Scratchpads
+# are session-scoped and get cleared, so by 2026-11-07 the file was gone, this
+# script raised FileNotFoundError, and data/experiment_manifest.csv -- tracked
+# in git -- could not be regenerated from anything in the repository (F-023).
+# Second instance of the class; lit_review/build_data.py had the same defect.
+# A script in this repo may not read an input from a session scratchpad.
+ESUM = os.path.join(HERE, "esummary_cache.json")
 
 # ---- authoritative "curated by us" map: ADDED dict in lit_review/build_data.py
 # cross-checked against the folders present in confound/curation/

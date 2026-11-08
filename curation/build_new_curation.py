@@ -89,15 +89,110 @@ SUPPLIED = {
 # chains that were counted, 0.31 on MC3. So TT3 and Lipid 14, which are fully
 # saturated, are machine-counted; OF-2's unsaturated tails were read by eye from
 # the alkene pattern and carry a lower confidence flag.
+# SMILES ONLY -- deliberately no confidence beside them (F-025).
+#
+# This table used to be {name: (smiles, confidence)} where the confidence was
+# how well the PARENT CORE's structure was known (TT3 and Lipid 14 "high" from
+# apex counting, OF-2 "medium" because its alkenes were read by eye). The
+# resolution branch below then attached that value to the CONJUGATE, which is a
+# different molecule and a different question: `schema_quality.json` defines
+# `confidence` as the confidence of the structure that was EMITTED, and the
+# emitted structure is a cholesteryl conjugate whose attachment site appears in
+# no figure and no spectrum in the paper.
+#
+# The result was inverted. `Lipid 14-CB1/2/3` -- the only rows where the site is
+# a real choice between two chemically distinct nitrogens, and the very rows
+# that were once alkylated at the WRONG one (F-015) -- carried the project's
+# highest confidence, while the MC3 and SM-102 conjugates, whose cores have a
+# single tertiary amine so the site is forced, carried `medium`.
+#
+# Capping the output at `medium` was rejected: it would leave `"TT3": (..., "high")`
+# sitting here to be misread the same way by the next reader. The confidence is
+# now DERIVED from the structure in `_site_confidence()` and the table carries
+# only what it is actually a table of.
 COMMERCIAL_CORES = {
     "TT3": ("O=C(NCCCN(CCCCCCCCCCCC)CCCCCCCCCCCC)c1cc(C(=O)NCCCN(CCCCCCCCCCCC)"
-            "CCCCCCCCCCCC)cc(C(=O)NCCCN(CCCCCCCCCCCC)CCCCCCCCCCCC)c1", "high"),
+            "CCCCCCCCCCCC)cc(C(=O)NCCCN(CCCCCCCCCCCC)CCCCCCCCCCCC)c1"),
     "Lipid 14": ("CN(C)CCCC(=O)OCCN(CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC)"
-                 "CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC", "high"),
-    "OF-2": (r"O=C1NC(CCCCN(CC(O)CCCCCC/C=C\C/C=C\CCCC)CC(O)CCCCCC/C=C\C/C=C\CCCC)"
-             r"C(=O)NC1CCCCN(CC(O)CCCCCC/C=C\C/C=C\CCCC)CC(O)CCCCCC/C=C\C/C=C\CCCC",
-             "medium"),
+                 "CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC"),
+    # CORRECTED 2026-11-07 (F-030). All four tails were written C17; they are
+    # C18. The tail is the ring-opened epoxide of a LINOLEYL (C18:2 delta-9,12)
+    # alcohol -- a methylene-interrupted 9,12-diene with a 2-hydroxy head -- and
+    # a C17 chain carrying a 9,12-diene is not a fatty-chain-derived tail at all.
+    #
+    # Three independent lines agree, so this is the STRUCTURE being wrong and
+    # not the name (the AC_2025 question, asked and answered):
+    #   1. Fig 1b at 600 dpi: five carbons after the second cis bond on three of
+    #      the four tails, and the ink ends 54 px past where a C17 terminus
+    #      would be, at a measured constant 48 px bond pitch.
+    #   2. `LL_2025` already carries this same reagent as `OF-02`, curated
+    #      independently, as C84H152N4O6 / UMSCHHWDFWCONK-RGLFHLPNSA-N. The
+    #      corrected core below reproduces that FULL InChIKey, stereo included;
+    #      the old one was C80H144N4O6 / VWUVJOOCHBGZLR-NFMFUWBKSA-N.
+    #   3. The chemistry, as above.
+    #
+    # Why nothing caught it: the error is internally consistent -- formula,
+    # descriptors and canonical SMILES all agreed with each other. C10 has one
+    # anchor in this folder (C6O2B2) and the 15 commercial-core conjugates have
+    # none; C11's registry has no OF-2 entry; C14 cleaves the sterol, which was
+    # correct here. This folder's own confidence_basis records that the apex
+    # chain counter was NOT used on OF-2 because its alkenes break the zig-zag,
+    # so a by-eye count was the only evidence this structure ever had.
+    #
+    # The general lesson, and the cheap check it earns: an independent structure
+    # for the same named reagent ALREADY EXISTED in our corpus and was never
+    # consulted. Comparing skeleton InChIKeys for every reagent name appearing
+    # in more than one experiment would have caught this for free.
+    "OF-2": (r"O=C1NC(CCCCN(CC(O)CCCCCC/C=C\C/C=C\CCCCC)CC(O)CCCCCC/C=C\C/C=C\CCCCC)"
+             r"C(=O)NC1CCCCN(CC(O)CCCCCC/C=C\C/C=C\CCCCC)CC(O)CCCCCC/C=C\C/C=C\CCCCC"),
 }
+
+
+def _site_confidence(core_smiles):
+    """Confidence in a commercial-core cholesteryl conjugate, and its reason.
+
+    The paper draws no `-C` conjugate for ANY of the five commercial cores --
+    Fig 1b draws them unconjugated, Fig 2a draws only the synthesized C6O2B2,
+    and the SI has NMR for no conjugate at all -- so the attachment site is
+    inferred on all 15 rows. What differs is how much of a choice it was, and
+    that IS measurable: count the TERTIARY AMINES that are distinct under graph
+    symmetry.
+
+        MC3      1 N  -> site forced
+        SM-102   1 N  -> site forced
+        TT3      3 N, 1 symmetry class  -> the three are equivalent
+        OF-2     2 N, 1 symmetry class  -> the two are equivalent
+        Lipid 14 2 N, 2 symmetry classes -> a GENUINE two-way choice
+
+    So `low` where more than one chemically distinct amine could carry the
+    conjugate, `medium` where the site is forced or the candidates are
+    equivalent. Distinguishing them matters: `enumerate.py`'s own rule assigns
+    `low` to the bare "site is ASSUMED" condition, which fires on all five via a
+    proxy ("is the N in a ring"), and flattening all 15 to `low` would say the
+    MC3 conjugate -- whose core has exactly one amine -- is as uncertain as the
+    Lipid 14 one, which it is not.
+
+    Symmetry classes, not a raw nitrogen count: TT3's three amines are
+    interchangeable, so picking one of them is not a choice in any sense that
+    could be wrong.
+    """
+    m = Chem.MolFromSmiles(core_smiles)
+    ranks = list(Chem.CanonicalRankAtoms(m, breakTies=False))
+    cands = [a.GetIdx() for a in m.GetAtoms()
+             if a.GetSymbol() == "N" and a.GetTotalNumHs() == 0
+             and a.GetFormalCharge() == 0
+             and sum(1 for nb in a.GetNeighbors() if nb.GetAtomicNum() > 1) == 3]
+    distinct = len({ranks[i] for i in cands})
+    base = ("Cholesterol conjugation site inferred: the paper draws no -C "
+            "conjugate for any commercial core.")
+    if distinct > 1:
+        return "low", (base + f" The core has {distinct} chemically distinct "
+                       "tertiary amines and the one carrying the conjugate was "
+                       "chosen by heuristic, not read from the paper; an earlier "
+                       "pass chose the other one (F-015).")
+    return "medium", (base + " The core has a single candidate tertiary amine "
+                      "(or several that are equivalent under symmetry), so the "
+                      "site is forced rather than chosen.")
 
 ESTER = Chem.MolFromSmarts("[CX3](=O)[OX2H0][#6]")
 CARBONATE = Chem.MolFromSmarts("[OX2][CX3](=O)[OX2]")
@@ -357,21 +452,43 @@ def main():
         if key in lib:
             e = enum[key]
             # the lipid's OWN assessment, carried not overwritten
+            # A medium/low confidence whose quaternization site is NOT the
+            # reason left the row with an empty note: six rows (C5O1B1/2/3,
+            # C6O1B1/2/3) said "this structure is less certain" and did not say
+            # why. Found by audit.py C13's new confidence_without_a_note metric
+            # on its first run (F-024).
+            #
+            # The reason is in 03_enumerated.csv all along: their `O1` arm is
+            # `isodecyl acrylate (branched terminus)`, a commercial BRANCHED
+            # ISOMER MIXTURE sold under one name, so the stored SMILES is one
+            # isomer of a mixture -- while the `O2` rows, which are `high`, use
+            # dodecyl acrylate, a single compound. The qc file's own
+            # `confidence_basis` attributed their `medium` to the C5/C6 core
+            # instead, which cannot be right: the `high` O2 rows have the same
+            # cores.
+            #
+            # `structure_assumed = 1` to match LL_2026, which flags exactly this
+            # condition the same way for iso-octyl / iso-decyl acrylate.
+            assumed = e.get("quaternization_site_assumed", "")
+            note = e.get("quaternization_site", "") if assumed == "1" else ""
+            if not note and e["confidence"] in ("medium", "low") \
+                    and "branched" in e.get("alkyl_desc", "").lower():
+                assumed, note = "1", (
+                    f"Tail reagent is {e['alkyl_desc']}, a commercial branched "
+                    "isomer mixture sold under one name; the stored SMILES is "
+                    "one isomer of that mixture.")
             resolved[key] = (lib[key], "enumerated from Fig 1b blocks",
                              e["confidence"] or "high",
-                             {"structure_assumed": e.get("quaternization_site_assumed", ""),
-                              "note": (e.get("quaternization_site", "")
-                                       if e.get("quaternization_site_assumed") == "1"
-                                       else "")})
+                             {"structure_assumed": assumed, "note": note})
             continue
-        parent_smiles, conf, how = None, None, None
+        parent_smiles, how = None, None
         if core in PARENT and smi(PARENT[core]):
             # smi(), not comp[], so an ambiguous parent name is a hard failure
             # rather than a silent row-order coin flip (F-014)
             parent_smiles = smi(PARENT[core])
-            conf, how = "medium", f"corpus {PARENT[core]}"
+            how = f"corpus {PARENT[core]}"
         elif core.endswith("-C") and core[:-2] in COMMERCIAL_CORES:
-            parent_smiles, conf = COMMERCIAL_CORES[core[:-2]]
+            parent_smiles = COMMERCIAL_CORES[core[:-2]]
             how = f"Fig 1b drawing of {core[:-2]}"
         if parent_smiles:
             smi_q = quaternize(parent_smiles, LINK_N[tail])
@@ -379,11 +496,16 @@ def main():
                 # The cholesterol CONJUGATION SITE on a commercial core is
                 # inferred -- the paper draws no -C conjugate at all -- so it is
                 # an assumed structural feature, not merely a lower confidence.
+                #
+                # BOTH branches now derive the confidence from the core's own
+                # structure instead of carrying a literal (F-025). This branch
+                # previously hard-coded "medium" and the other read a confidence
+                # that described the PARENT CORE, which is why six rows whose
+                # site is a genuine two-way choice ended up labelled `high`
+                # while six rows whose site is forced ended up `medium`.
+                conf, note = _site_confidence(parent_smiles)
                 resolved[key] = (smi_q, f"quaternized from {how}", conf,
-                                 {"structure_assumed": "1",
-                                  "note": "Cholesterol conjugation site inferred: "
-                                          "the paper draws no -C conjugate for "
-                                          "any commercial core."})
+                                 {"structure_assumed": "1", "note": note})
                 continue
         unresolved.append(key)
 
