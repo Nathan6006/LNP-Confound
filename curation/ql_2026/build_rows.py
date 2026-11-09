@@ -11,25 +11,37 @@ VALUE SOURCE, per lipid:
   library 2 (24)   Figure 3c, the only place these appear.
 
 HOW THE TWO LIBRARIES ARE PUT ON ONE SCALE. Four benchmark LNPs (DLin-MC3-DMA,
-SM102, ALC-0315, Lipid 5) are plotted in BOTH Fig 2c and Fig 3c, so the ratio
-between their readings measures the offset between the two screens. Library 2 is
-divided by that ratio and all 344 are then z-scored ONCE, together.
+SM102, ALC-0315, Lipid 5) are plotted in BOTH Fig 2c and Fig 3c. Comparing their
+readings across the two panels tests whether the panels share an absolute scale.
+They do, to within the spread of the benchmarks themselves, so all 344 are
+z-scored ONCE, together, with **no rescaling applied**.
 
-THE OFFSET IS NOT DISTINGUISHABLE FROM 1.0. Corrected 2026-10-30, review
-finding F-018. The measured offset is **1.0071, sd 0.0247** (DLin 1.011,
-SM102 1.035, ALC-0315 0.967, Lipid 5 1.015) -- the two screens agree to within
-+/-2.5%, which is the spread of the four benchmarks themselves.
+NO OFFSET IS APPLIED, and the number that used to be applied should not be
+quoted. Settled 2026-11-09, review finding F-031.
 
-The earlier "SCALAR ~1.1x" (1.1116, later 1.1069) was an artifact of the bar-top
-detector reading replicate dots instead of the bar top: ALC-0315 was
-dot-contaminated in BOTH panels (+24 px in Fig 2c, +16 px in Fig 3c) and Lipid 5
-in Fig 3c (+8 px), and those are three of the four benchmarks the offset is
-measured from. So the correction is not a refinement of the offset, it removes
-it: the quantity was mostly measuring our own detector error.
+The quantity went 1.1116 -> 1.1069 -> 1.0071 as the bar-top detector was
+repaired, and an independent round-2 re-measurement then returned **0.9929** --
+the reciprocal, on the far side of 1.0. The two honest measurements differ by
+more than the correction either one applies, because the quantity is below what
+these figures can resolve: 0.71% is 0.2 of ONE native pixel on Fig 3c, where one
+pixel is 1.5%. Worse, both panels are read at the TOP EDGE of the bar's outline
+stroke while the plotted value sits at the stroke's CENTRE, and Fig 2c is drawn
+with a thicker pen than Fig 3c (top-rule medians 10 px vs 6 px) -- an asymmetry
+that biases the ratio by +1.8% to +3.1% on its own, 2.5-4.4x the "offset" being
+measured through it.
 
-The division is kept rather than dropped, because 1.0071 is the honest estimate
-and hard-coding 1.0 would assert an agreement the figures do not quite show. The
-sd is reported beside it so a reader can see it covers 1.0.
+The earlier 1.1116 was an artifact of the same detector reading replicate dots
+instead of the bar top: ALC-0315 was dot-contaminated in BOTH panels (+24 px in
+Fig 2c, +16 px in Fig 3c) and Lipid 5 in Fig 3c (+8 px) -- three of the four
+benchmarks the offset was measured from. So each successive correction did not
+refine the offset, it removed more of our own detector error from it.
+
+WHAT THE CHECK IS WORTH, stated honestly: the four shared benchmarks place the
+two panels on a common scale to within **+/-2.5%**, consistent with 1.0. It had
+the power to detect a real inter-run offset of 1.5x and returned 1.00, and that
+is what licenses pooling the two panels into one z-score at all. That is the
+sentence to quote. Dropping the division moved the emitted corpus by rms dz
+0.0009, max |dz| 0.0047, Spearman 1.000000, zero rank changes.
 
 An earlier version standardised the two libraries separately. That was wrong
 twice over. The offset it cited, 1.54x, was an artifact of a miscalibrated Fig
@@ -220,15 +232,42 @@ def main():
                      "censored": censored, "conflict": conflict,
                      "floored": floored})
 
-    # cross-figure offset, measured on the four benchmarks plotted in both
+    # The four benchmarks plotted in BOTH panels. This is a SCALE CHECK, not a
+    # measurement, and since 2026-11-09 (F-031) no rescaling is applied.
+    #
+    # WHY THE DIVISION WAS DROPPED. The ratio went 1.1116 -> 1.1069 -> 1.0071 as
+    # the bar-top detector was repaired, and a round-2 reviewer re-measuring it
+    # independently got 0.9929 -- the reciprocal, on the other side of 1.0. The
+    # two honest measurements differ by more than the correction either applies.
+    # Three facts settle it:
+    #
+    #   * 0.71% is 0.2 of ONE native pixel on Fig 3c, where one pixel is 1.5%.
+    #   * Both panels are read at the TOP EDGE of the bar's outline stroke, but
+    #     the plotted value sits at the stroke's CENTRE -- and Fig 2c is drawn
+    #     with a thicker pen than Fig 3c (top-rule medians 10 px vs 6 px). That
+    #     asymmetry alone biases the ratio by +1.8% to +3.1%, i.e. 2.5-4.4x the
+    #     "offset" that was being measured through it.
+    #   * Dropping the division moves the emitted corpus by rms dz 0.0009,
+    #     max |dz| 0.0047, Spearman 1.000000, zero rank changes.
+    #
+    # So the check keeps its value and the number does not. What the four
+    # benchmarks establish is that the two panels sit on a COMMON SCALE to
+    # within +/-2.5% -- the spread of the benchmarks themselves -- which is what
+    # licenses z-scoring all 344 together at all. It had the power to detect a
+    # real inter-run offset of 1.5x and returned 1.00. Reported as agreement,
+    # not as a correction factor.
+    #
+    # Do NOT reinstate a divisor without first re-deriving the stroke-centre
+    # convention for both panels; otherwise the thing being corrected for is
+    # our own pen-width asymmetry.
     bm2 = {r["lipid_name"]: float(r["RLU"]) for r in
            csv.DictReader(open("07_fig2c_bars.csv")) if r["is_benchmark"] == "1"}
     bm3 = {r["lipid_name"]: float(r["RLU"]) for r in
            csv.DictReader(open("05_fig3c_24.csv")) if r["is_benchmark"] == "1"}
     ratios = [bm3[k] / bm2[k] for k in bm2]
-    offset = st.mean(ratios)
+    offset = 1.0            # reported, not applied -- see above
 
-    # put library 2 on library 1's scale, then z-score all 344 together
+    # z-score all 344 together, both libraries on their own measured scale
     for r in recs:
         r["value_scaled"] = r["value"] / offset if r["lib"] == "2" else r["value"]
     logs = [math.log10(r["value_scaled"]) for r in recs]
@@ -316,10 +355,25 @@ def main():
         "library2": sum(1 for r in recs if r["lib"] == "2"),
         "value_source": {s: sum(1 for r in recs if r["src"] == s)
                          for s in ("Fig 2b", "Fig 2c", "Fig 3c")},
-        "cross_figure_offset": {
+        "cross_figure_scale_check": {
             "benchmark_ratios_fig3c_over_fig2c": {k: round(bm3[k] / bm2[k], 3)
                                                   for k in bm2},
-            "applied": round(offset, 4), "sd": round(st.pstdev(ratios), 4)},
+            "measured_mean": round(st.mean(ratios), 4),
+            "sd": round(st.pstdev(ratios), 4),
+            "applied": round(offset, 4),
+            "finding": "F-031",
+            "what_this_establishes":
+                "The four benchmarks plotted in both Fig 2c and Fig 3c place the "
+                "two panels on a common scale to within +/-2.5%, consistent with "
+                "1.0. NO rescaling is applied. The measured mean is reported for "
+                "transparency and MUST NOT be quoted as an offset: it is 0.2 of "
+                "one native Fig 3c pixel, it moved 1.1116 -> 1.0071 as the "
+                "bar-top detector was repaired, an independent re-measurement "
+                "returned 0.9929 on the other side of 1.0, and the top-edge "
+                "reading convention biases it by +1.8-3.1% on its own because "
+                "Fig 2c's pen is thicker than Fig 3c's (10 px vs 6 px top rule). "
+                "The check's value is that it would have caught a real 1.5x "
+                "inter-run offset and did not."},
         "flags": {"value_censored": sum(r["censored"] for r in recs),
                   "value_conflict": sum(r["conflict"] for r in recs),
                   "value_floored": sum(r["floored"] for r in recs),
@@ -348,9 +402,10 @@ def main():
     print(f"{os.path.basename(OUT)}: {len(rows)} rows x {len(hdr)} cols")
     print(f"  library 1 {qc['library1']}, library 2 {qc['library2']}")
     print(f"  value source {qc['value_source']}")
-    print(f"  cross-figure offset applied to library 2: "
-          f"{qc['cross_figure_offset']['applied']}x "
-          f"(sd {qc['cross_figure_offset']['sd']})")
+    sc = qc["cross_figure_scale_check"]
+    print(f"  cross-figure SCALE CHECK: benchmarks agree to within "
+          f"+/-{100 * sc['sd']:.1f}% (mean {sc['measured_mean']}x, "
+          f"consistent with 1.0); applied {sc['applied']}x -- no rescaling")
     print(f"  geometric mean RLU: library 1 {qc['geometric_mean_RLU']['1']}, "
           f"library 2 {qc['geometric_mean_RLU']['2']}")
     print(f"  flags censored {qc['flags']['value_censored']}, floored "

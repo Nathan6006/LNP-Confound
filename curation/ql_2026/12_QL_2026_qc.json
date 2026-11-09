@@ -11,15 +11,18 @@
   "Fig 2c": 27,
   "Fig 3c": 24
  },
- "cross_figure_offset": {
+ "cross_figure_scale_check": {
   "benchmark_ratios_fig3c_over_fig2c": {
    "DLin-MC3-DMA": 1.011,
    "SM102": 1.035,
    "ALC-0315": 0.967,
    "Lipid 5": 1.015
   },
-  "applied": 1.0071,
-  "sd": 0.0247
+  "measured_mean": 1.0071,
+  "sd": 0.0247,
+  "applied": 1.0,
+  "finding": "F-031",
+  "what_this_establishes": "The four benchmarks plotted in both Fig 2c and Fig 3c place the two panels on a common scale to within +/-2.5%, consistent with 1.0. NO rescaling is applied. The measured mean is reported for transparency and MUST NOT be quoted as an offset: it is 0.2 of one native Fig 3c pixel, it moved 1.1116 -> 1.0071 as the bar-top detector was repaired, an independent re-measurement returned 0.9929 on the other side of 1.0, and the top-edge reading convention biases it by +1.8-3.1% on its own because Fig 2c's pen is thicker than Fig 3c's (10 px vs 6 px top rule). The check's value is that it would have caught a real 1.5x inter-run offset and did not."
  },
  "flags": {
   "value_censored": 3,
@@ -35,7 +38,7 @@
   ]
  },
  "geometric_mean_RLU": {
-  "1": 3555.7,
+  "1": 3310.2,
   "2": 144926.2
  },
  "z": {
@@ -43,8 +46,8 @@
   "pop_sd": 1.0,
   "pooled_once_over_all_344": true,
   "per_library_mean": {
-   "1": -0.1583,
-   "2": 2.1106
+   "1": -0.1591,
+   "2": 2.1216
   }
  },
  "molratio_sum": 100.0,

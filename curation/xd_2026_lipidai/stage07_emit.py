@@ -9,8 +9,18 @@ What is and is not in here
 IN  : 12 LNPs - E1-E9 plus ALC-0315, SM-102 and MC3 - one formulation, BALB/c
       male mice, tail-vein IV, whole-body IVIS at 6 h, p/sec/cm^2/sr.
 OUT : the 485-row LipidDB and its 720 MTA rows. LipidDB is a compilation across
-      299 publications, not an experiment (see stage06_lipiddb.py); the MTA rows
+      MANY studies, not an experiment (see stage06_lipiddb.py); the MTA rows
       are generated structures with inherited labels, not measurements.
+
+      The "299 publications" that stood here until 2026-11-09 was a round-1
+      reviewer's count, propagated into this docstring without being checked,
+      and retracted in round 1 itself -- see ERROR_CLASSES.md. This folder's own
+      06_lipiddb_qc.json records 47 stated by the paper, 56 after normalisation
+      and 50 letters-only, and the round-1 review found nine defensible
+      de-duplication rules spanning 50-116. NO SINGLE COUNT IS ASSERTED. The
+      retraction reached CHANGELOG.md, CLAUDE.md and ERROR_CLASSES.md but not
+      this file -- which is the file that emits the rows, so it is the one a
+      reader opens first (F-036).
 
 Values
 ------
@@ -121,11 +131,37 @@ for n, v, zz in zip(names, vals, z):
     # structure: the ONLY source is a geometric trace of the Fig 5A drawing.
     r.update(confidence='high' if is_bench else 'medium')
     if not is_bench:
-        r.update(structure_assumed='1', curation_note=(
-            'Structure recovered only by geometric trace of the Fig 5A drawing '
-            '(stage02_trace.py). The paper gives this lipid no name, no '
-            'molecular formula, no HRMS and no SI structure, so there is no '
-            'external anchor against which to check it.'))
+        # `structure_assumed` is deliberately NOT set (user decision,
+        # 2026-11-09, F-035). It had been set on these nine rows to mean "this
+        # structure has no external anchor", which is NOT what the schema
+        # defines it as: `structure_assumed` marks a SPECIFIC assumed feature
+        # and requires `curation_note` to name that feature. Here no feature was
+        # assumed -- the whole structure was read off Fig 5A, and a round-2
+        # reviewer has since re-traced all nine from the native raster and
+        # matched every one by FULL InChIKey. There is nothing to name.
+        #
+        # The decision is also the consistent one: F-030 declined to set this
+        # same flag on the ALC-0315 override for the same reason (see the
+        # `elif` below). Having a single source is the normal condition for
+        # these papers; data read correctly off the one place the authors put it
+        # is fully collected data, not assumed data.
+        #
+        # `confidence = medium` STAYS, and its basis is different: not "one
+        # source" but DRAWING RISK -- the risk that the source itself is wrong.
+        # That is not hypothetical in this panel. Fig 5A draws ALC-0315's head
+        # one carbon short, confirmed independently twice, so this figure has a
+        # demonstrated authoring error in it. Two concordant readings of a
+        # drawing drive transcription risk to ~0 and say nothing about whether
+        # the drawing is right.
+        r.update(curation_note=(
+            'Structure read from the Fig 5A drawing by geometric vertex trace '
+            '(stage02_trace.py), independently re-traced and confirmed by full '
+            'InChIKey. confidence=medium reflects DRAWING risk, not reading '
+            'risk: the paper gives this lipid no name, formula, HRMS or SI '
+            'structure, so the drawing cannot be cross-checked -- and Fig 5A '
+            'is known to contain one authoring error (it draws ALC-0315 a '
+            'carbon short). Nothing about this structure was assumed, so '
+            'structure_assumed is not set.'))
     elif n in {m['lipid'] for m in mism}:
         # A benchmark whose emitted structure deliberately DISAGREES with the
         # figure it came from needs to say so on the row (F-030). Until

@@ -151,9 +151,29 @@ def main():
     bm2 = {r["lipid_name"]: float(r["RLU"]) for r in b2c if r["is_benchmark"] == "1"}
     bm3 = {r["lipid_name"]: float(r["RLU"]) for r in b3c if r["is_benchmark"] == "1"}
     rr = [bm3[k] / bm2[k] for k in bm2]
-    check(st.pstdev(rr) < 0.1 and 1.0 < st.mean(rr) < 1.3,
-          f"the 4 shared benchmarks give a consistent scalar offset "
-          f"{st.mean(rr):.3f}x (sd {st.pstdev(rr):.3f}), applied to library 2")
+    # TWO-SIDED, and no longer pinned to the superseded 1.1116 era.
+    #
+    # This used to read `st.pstdev(rr) < 0.1 and 1.0 < st.mean(rr) < 1.3`. That
+    # window was chosen when the measured offset was 1.1116; after F-018 cut it
+    # to 1.0071 the test passed by 0.0071 on a quantity whose own spread is
+    # 0.0247 -- and an independent re-measurement returning 0.9929 would have
+    # FAILED it. A gate that an equally careful measurement fails is not testing
+    # what it claims (F-033, and error class 35 at the threshold rather than the
+    # search window: a constant calibrated under the old reading has to be
+    # re-derived, not inherited).
+    #
+    # What we actually need to know is that the two panels share a scale, which
+    # is a two-sided question about agreement with 1.0, not a one-sided question
+    # about exceeding it. Tolerance is 3 standard errors of the 4-benchmark mean
+    # in log space, so the test scales with the measurement's own precision.
+    import math
+    log_mean = math.log10(st.mean(rr))
+    tol = 3 * (st.pstdev(rr) / st.mean(rr)) / math.sqrt(len(rr)) / math.log(10)
+    check(abs(log_mean) < max(tol, 0.02),
+          f"the 4 shared benchmarks place Fig 2c and Fig 3c on a common scale: "
+          f"mean {st.mean(rr):.4f}x (sd {st.pstdev(rr):.4f}), "
+          f"|log10 mean| {abs(log_mean):.4f} < {max(tol, 0.02):.4f}. "
+          f"No rescaling applied (F-031)")
 
     # the biology must survive the scaling: library 2 is ~40x library 1
     import math as _m

@@ -64,7 +64,24 @@ BAR_TOP, BAR_BOT = 1103, 1973   # outer rows of the colorbar's black border
 # The top anchor is the weaker of the two and is stated as such: the bar's top
 # border abuts a near-black dark-blue ramp, so its inner edge cannot be read
 # from colour, which is why the ticks are the authority rather than the border.
-Y_VMAX, Y_VMIN = 1107.4, 1967.6
+# CORRECTED 2026-11-09 (F-034). This read `1967.6`, which is neither of the two
+# routes the comment above describes: the tick notches at 1393.98 and 1680.60
+# with 143.31 px per 1e4 give y(0) = 1680.60 + 2*143.31 = **1967.22** (the
+# comment even says so, "the tick-derived 1967.23"), while 1967.6 is within
+# rounding of the BORDER-CENTRE cross-check at 1967.5 -- the route this same
+# comment explicitly demotes, on the grounds that the bar's top border abuts a
+# near-black ramp and cannot be read from colour.
+#
+# So the constant was taken from the weaker anchor while the comment attributed
+# it to the stronger one. That is error class 21 (provenance text asserts one
+# thing, the code does another) in the very file the class was first logged
+# against. An independent round-2 re-measurement of the same notches in the same
+# raster gave 1967.05, i.e. the tick route is reproducible to ~0.2 px while the
+# code sat 0.4-0.6 px away from it.
+#
+# Effect: the upper bound carried on the 48 pure-white rows was 2.8% high
+# (948.6 -> 922.5 RLU). Negligible at the top of the scale (<0.1%).
+Y_VMAX, Y_VMIN = 1107.4, 1967.22
 VMAX, VMIN = 6.0e4, 0.0
 
 AMINES = ["70", "75", "80", "400", "113", "114", "110", "T3A"]
@@ -129,10 +146,37 @@ def main():
             col = np.median(img[a, b].reshape(-1, 3), axis=0)
             d = np.linalg.norm(lut - col, axis=1)
             i = int(d.argmin())
-            v = float(vals[i])
-            dists.append(float(d[i]))
+
+            # BAND MIDPOINT, not the band top (F-032, 2026-11-09).
+            #
+            # Near the bottom of the ramp several adjacent LUT rows carry the
+            # IDENTICAL RGB, so every distance in that run ties. `argmin`
+            # returns the FIRST tie, which is the smallest y, which is the
+            # LARGEST value -- so every cell in a degenerate band was stored at
+            # the top of its band. Band widths grow toward the floor (1 px at
+            # the top of the scale, hundreds of RLU near the bottom), so the
+            # bias is one-sided AND non-uniform: median +12.8% over the 186
+            # cells that are neither saturated nor floored, up to +17.9%. A
+            # one-sided non-uniform bias does not cancel in a z-score.
+            #
+            # The midpoint of the tied run is the honest point estimate: the
+            # colour says only "the truth is somewhere in this band". Taking
+            # the middle makes the error two-sided and bounded by half a band.
+            #
+            # Deliberately NOT applied to the floored cells. Those sit on the
+            # ramp's last colour, which is open downward -- their truth is
+            # anywhere in [0, floor], so they carry `value_is_bound = upper`
+            # and keep the bound itself as the stored number. Replacing a bound
+            # with a midpoint would invent a measurement (it would move them to
+            # ~474 RLU and claim precision the figure cannot support).
             sat = int(np.linalg.norm(col - top_colour) < 14.0)
             flo = int(np.linalg.norm(col - bottom_colour) < 4.0)
+            tied = np.flatnonzero(d <= d[i] + 1e-9)
+            # A floored cell keeps the band's TOP, because that number is its
+            # upper bound and is flagged as one. Everything else takes the
+            # midpoint.
+            v = float(vals[i] if flo else vals[tied].mean())
+            dists.append(float(d[i]))
             nsat += sat
             nflo += flo
             bl, tail = BLS[c // 5], TAILS[c % 5]

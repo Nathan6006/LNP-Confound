@@ -63,10 +63,47 @@ ENUMERATED = os.path.join(HERE, "03_enumerated.csv")
 # (confirmed by NMR: delta 4.04 t 10H = five ester OCH2, delta 0.87 t 15H = five
 # terminal CH3), and a piperazine ring one of whose nitrogens is quaternised by
 # the cholesteryl 5-carbon ester.
+# REWRITTEN 2026-11-09, review finding F-037. The previous template was NOT
+# typed from the figure, whatever this file said. It was the enumeration's own
+# canonical SMILES with the 82-character sterol substring replaced by `%` and
+# the ring digit renumbered 1 -> 5. Undoing those two edits reproduced
+# `03_enumerated.csv`'s C6O2B2 byte for byte, 141 characters -- and a hand-typed
+# SMILES cannot coincide with RDKit's canonical traversal, which happens to
+# start at a dodecyl chain terminus, over that length.
+#
+# So the round-1 repair cured the half F-013 was about (the sterol, which IS
+# genuinely independent below) and silently re-copied the other half. C10 could
+# therefore still not catch a connectivity or regiochemistry error here -- error
+# classes 14 and 15, the two it exists for -- on the project's flagship
+# curation. That is error class 24 recurring inside the file written to retire
+# it.
+#
+# This replacement is assembled from PARTS, head-first, starting at the
+# quaternised piperazine nitrogen. That traversal order is deliberately
+# different from the enumerator's, so agreement after canonicalisation is
+# evidence about the molecule rather than about the string.
+#
+# Connectivity, read off Fig 2a at 600 dpi (round-2 reviewer, recorded in
+# `provenance/review/round_2026-11-07/report_ZT_2026.md` section 1.7) and
+# consistent with the SI NMR integrals (delta 4.04 t 10H = five ester OCH2;
+# delta 0.87 t 15H = five terminal CH3, i.e. five arms):
+#
+#   N+(ring) carries the cholesteryl 5-carbon ester AND the branch
+#            -CH2CH2-N(1 arm)-CH2CH2-N(2 arms)
+#   the OTHER ring N carries -CH2CH2-N(2 arms) and no arm of its own
+#   arms total 1 + 2 + 2 = 5, matching the NMR
+#
+# Which of the two inequivalent C6 piperazine nitrogens is quaternised is
+# settled by the drawing, not by us: they are in DIFFERENT symmetry classes
+# (unlike C5's, which are equivalent), and Fig 2a draws the quaternised one as
+# the one bearing the three-arm branch.
+_ARM = "CCC(=O)OCCCCCCCCCCCC"          # N-CH2CH2-C(=O)-O-dodecyl (O2, Fig 1b)
+_B2 = "CCCCC(=O)O%"                    # N+-(CH2)4-C(=O)-O-cholesteryl (B2, 5 C)
+
 AMINE_HALF = (
-    "CCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCC)"
-    "CCN(CCC(=O)OCCCCCCCCCCCC)CC[N+]5(CCCCC(=O)O%)"
-    "CCN(CCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CC5"
+    "[N+]5(" + _B2 + ")"                               # quaternised ring N
+    "(CCN(" + _ARM + ")CCN(" + _ARM + ")" + _ARM + ")"  # its 1-arm then 2-arm branch
+    "CCN(CCN(" + _ARM + ")" + _ARM + ")CC5"             # ring -> other N -> 2-arm N
 )
 # Ring-closure digit 5 for the piperazine, so it cannot collide with the 1-4 the
 # registry's sterol string uses. Splicing two SMILES as text is only safe if
