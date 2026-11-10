@@ -77,14 +77,14 @@
   },
   {
    "id": "rows_with_a_caveat",
-   "where": "CLAUDE.md \u00a75, \u00a76 -- the F-001 number. NOT rows_carrying_a_flag (F-024)",
-   "expect": 1157,
+   "where": "CLAUDE.md \u00a75, \u00a76 -- the F-001 number. NOT rows_carrying_a_flag (F-024). 1,157 until 2026-11-09, when F-040 removed the bound flag from 65 QL_2026 cells that are measurements, not bounds",
+   "expect": 1092,
    "expr": "A['vitro']['C13_quality_vocabulary']['rows_with_a_caveat'] + A['vivo']['C13_quality_vocabulary']['rows_with_a_caveat']"
   },
   {
    "id": "rows_carrying_a_flag",
    "where": "CLAUDE.md \u00a76 -- includes confidence=high, which is an assurance not a caveat",
-   "expect": 1652,
+   "expect": 1587,
    "expr": "A['vitro']['C13_quality_vocabulary']['rows_carrying_a_flag'] + A['vivo']['C13_quality_vocabulary']['rows_carrying_a_flag']"
   },
   {
@@ -179,8 +179,8 @@
   },
   {
    "id": "registered_reagents",
-   "where": "CLAUDE.md \u00a73 -- C11 pins 13 named reagents",
-   "expect": 13,
+   "where": "CLAUDE.md \u00a73 -- C11 pins 15 named reagents. Was 13 until 2026-11-09, when F-043 added DODAP (on all 537 ZT_2026 rows) and DMPC. EggSM is deliberately NOT added: a natural mixture has no single right SMILES, same rule as the PEG-lipids",
+   "expect": 15,
    "expr": "n_registered_reagents()"
   },
   {

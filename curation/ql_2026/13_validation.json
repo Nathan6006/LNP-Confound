@@ -5,7 +5,7 @@
   "PASS  column count 79 (expect 79)",
   "PASS  Fig 2b cells 320",
   "PASS  Fig 3c library-2 bars = 24",
-  "PASS  pooled z mean -2.6e-16 sd 1.000000000000",
+  "PASS  pooled z mean -2.4e-16 sd 1.000000000000",
   "PASS  libraries are NOT standardised separately (that would force both block means to 0 and delete the between-library difference)",
   "PASS  molar percents sum to 100",
   "PASS  344 unique structures parse, canonical, single-fragment, radical-free ",
@@ -20,7 +20,7 @@
   "PASS  Fig 3e printed per-linker rates reproduced (incl. L8 = 0): {'L1': 1, 'L2': 0, 'L3': 0, 'L4': 0, 'L5': 2, 'L6': 1, 'L7': 1, 'L8': 0}",
   "PASS  Results sentence '17 lipids ... greater than 1e5' reproduced: 17",
   "PASS  the 4 shared benchmarks place Fig 2c and Fig 3c on a common scale: mean 1.0071x (sd 0.0247), |log10 mean| 0.0031 < 0.0200. No rescaling applied (F-031)",
-  "PASS  six-tail library 2 still sits far above library 1 after z-scoring (mean z 2.12 vs -0.16) - the paper's central finding is preserved, not standardised away",
-  "PASS  T3A-L8-C14 carries the HEATMAP value as documented: z=0.330 matches lipids at ~8e3 RLU (mean z 0.379), not the saturated band (z>=1.579)"
+  "PASS  six-tail library 2 still sits far above library 1 after z-scoring (mean z 2.11 vs -0.16) - the paper's central finding is preserved, not standardised away",
+  "PASS  T3A-L8-C14 carries the HEATMAP value as documented: z=0.342 matches lipids at ~8e3 RLU (mean z 0.390), not the saturated band (z>=1.576)"
  ]
 }

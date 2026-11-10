@@ -1,6 +1,6 @@
 {
  "what": "named commercial reagents vs their fixed structures",
- "registered": 13,
+ "registered": 15,
  "rows_mismatched": 0,
  "results": [
   {
@@ -159,6 +159,38 @@
       "YZ_2024",
       "ZC_2023",
       "ZH_2023"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DMPC",
+   "authority": "1,2-dimyristoyl-sn-glycero-3-phosphocholine; 14:0/14:0",
+   "registry_smiles": "CCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCC",
+     "matches_registry": true,
+     "rows": 81,
+     "experiments": [
+      "ZT_2026"
+     ]
+    }
+   ],
+   "status": "ok"
+  },
+  {
+   "reagent": "DODAP",
+   "authority": "1,2-dioleoyl-3-dimethylammonio-propane; 18:1/18:1 cis-9, the ionizable (not permanently cationic) counterpart of DOTAP",
+   "registry_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@@H](CN(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "variants": [
+    {
+     "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@@H](CN(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+     "matches_registry": true,
+     "rows": 537,
+     "experiments": [
+      "ZT_2026"
      ]
     }
    ],

@@ -25,6 +25,19 @@ Polymer-bearing reagents (DMG-PEG2000 and friends) are deliberately absent: the
 PEG block length is a distribution, so there is no single right SMILES and a
 registry entry would assert something false.
 
+NATURAL MIXTURES are absent for the same reason, and the rule is now stated
+rather than left implicit (F-043). **EggSM** -- egg sphingomyelin, on 81
+`ZT_2026` rows -- is the live case: it is a natural extract, roughly 84%
+N-palmitoyl with C18:0, C22:0 and C24:1 making up the rest, so "EggSM" names a
+composition rather than a compound. The corpus stores the single species SM
+16:0 for it, which is the conventional representative and is what a reader
+should expect, but pinning that in this registry would turn a convention into
+an assertion and make C11 certify it. The honest treatment is a flag on the
+row, not an entry here -- the same call CLAUDE.md §3 already makes for
+PEG-lipids, and the opposite of what happened with `18PG` (error class 19),
+where a shorthand was expanded to a specific structure with nothing recording
+that it had been.
+
 Disagreement is a FINDING, not proof the corpus is wrong -- when this was first
 run, one disagreement was the registry's own typo and the rest were real. Look
 at every one.
@@ -48,6 +61,17 @@ REGISTRY = {
     "DSPC": (
         "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
         "1,2-distearoyl-sn-glycero-3-phosphocholine; 18:0/18:0"),
+    # Added 2026-11-09 (F-043). All three appear in ZT_2026 and were outside
+    # this registry, so C11 -- the check that pins a NAME to a STRUCTURE -- did
+    # not cover them. DODAP is on every one of that experiment's 537 rows.
+    # C11 already scans `fifthcomponent`, so the gap was coverage, not design.
+    "DODAP": (
+        "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@@H](CN(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+        "1,2-dioleoyl-3-dimethylammonio-propane; 18:1/18:1 cis-9, the "
+        "ionizable (not permanently cationic) counterpart of DOTAP"),
+    "DMPC": (
+        "CCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCC",
+        "1,2-dimyristoyl-sn-glycero-3-phosphocholine; 14:0/14:0"),
     "DOPC": (
         "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
         "1,2-dioleoyl-sn-glycero-3-phosphocholine; 18:1/18:1 cis-9"),

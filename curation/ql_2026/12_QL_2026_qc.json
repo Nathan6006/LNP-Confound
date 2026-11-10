@@ -27,7 +27,7 @@
  "flags": {
   "value_censored": 3,
   "value_conflict": 1,
-  "value_floored": 113,
+  "value_floored": 48,
   "censored_lipids": [
    "400-L8-C12",
    "114-L4-C14",
@@ -38,7 +38,7 @@
   ]
  },
  "geometric_mean_RLU": {
-  "1": 3310.2,
+  "1": 3217.8,
   "2": 144926.2
  },
  "z": {
@@ -46,8 +46,8 @@
   "pop_sd": 1.0,
   "pooled_once_over_all_344": true,
   "per_library_mean": {
-   "1": -0.1591,
-   "2": 2.1216
+   "1": -0.1585,
+   "2": 2.1128
   }
  },
  "molratio_sum": 100.0,

@@ -92,42 +92,54 @@ def main():
     np_r = [float(r["IL_to_nucleicacid_chargeratio"]) for r in rows
             if str(r["IL_to_nucleicacid_chargeratio"]).strip() != ""]
     blank = len(rows) - len(np_r)
-    check(min(np_r) > 0 and blank == 3,
+    check(min(np_r) > 0 and blank == 129,
           f"N/P range {min(np_r):.2f}-{max(np_r):.2f} over {len(np_r)} rows; "
-          f"{blank} blank (the 3 unmappable URS formulations). NOTE: a range "
-          f"check cannot detect a permutation -- see the pairing check next")
+          f"{blank} blank (all of the URS file -- F-004). NOTE: a range check "
+          f"cannot detect a permutation, which is why the shipped "
+          f"`N/P range 3.33-37.12` passed on 129 misassigned values; the "
+          f"alignment check below is what actually tests this")
 
-    # The realignment, tested properly: every URS row whose N:P was
-    # reconstructed must now carry an N:P whose own design parameters derive
-    # THIS row's molar percents. That is the property the shipped file violated
-    # on all 129 rows, and it is what the repair restores.
+    # The URS file's N:P must be ABSENT, and it must be absent for the stated
+    # reason rather than by accident. So assert both halves: nothing emitted,
+    # and the misalignment that justifies it still measurable in the source.
     urs = [r for r in rows if str(r["Formulation_ID"]).startswith("U")]
+    check(len(urs) == 129 and all(
+              str(r["IL_to_nucleicacid_chargeratio"]).strip() == "" for r in urs),
+          f"all {len(urs)} URS rows carry a BLANK N:P (F-004: the source's "
+          f"design block is sorted out of alignment and all three candidate "
+          f"values are unsupported)")
+
     src_urs = list(csv.DictReader(open(os.path.join(
         SRC, "0_Norm_RAMOS_Single_Objective_UniformRandomSampling_Ctrl_MC3_DSPC.csv"),
         encoding="utf-8-sig")))
-    by_np = {}
-    for d in src_urs:
-        by_np.setdefault(round(float(d["NP_ratio"]), 6), []).append(d)
-    ok = 0
-    for r in urs:
-        v = str(r["IL_to_nucleicacid_chargeratio"]).strip()
-        if v == "":
-            continue
-        for d in by_np.get(round(float(v), 6), []):
-            ilhl, hlf = float(d["IL+HL"]), float(d["HL_IL+HL"])
-            pegf = float(d["PEG_PEG+Chol"])
-            hl = ilhl * hlf / 100.0
-            peg = (100.0 - ilhl) * pegf / 100.0
-            derived = (ilhl - hl, hl, (100.0 - ilhl) - peg, peg)
-            stated = (float(r["IL_molratio"]), float(r["HL_molratio"]),
-                      float(r["CHL_molratio"]), float(r["PEG_molratio"]))
-            if max(abs(a - b) for a, b in zip(derived, stated)) <= 0.15:
-                ok += 1
-                break
-    check(ok == 126,
-          f"N:P realignment: {ok}/126 reconstructed URS rows carry an N:P whose "
-          f"own design parameters derive that row's molar percents (the shipped "
-          f"file managed 0/129)")
+
+    def derive(d):
+        ilhl, hlf = float(d["IL+HL"]), float(d["HL_IL+HL"])
+        pegf = float(d["PEG_PEG+Chol"])
+        hl = ilhl * hlf / 100.0
+        peg = (100.0 - ilhl) * pegf / 100.0
+        return (ilhl - hl, hl, (100.0 - ilhl) - peg, peg)
+
+    def pct(d):
+        return (float(d["MC3_PcntMolar"]), float(d["DSPC_PcntMolar"]),
+                float(d["Cholesterol_PcntMolar"]), float(d["DMGPEG_PcntMolar"]))
+
+    self_ok = sum(1 for d in src_urs
+                  if max(abs(a - b) for a, b in zip(derive(d), pct(d))) <= 0.15)
+    peg = [float(d["PEG_PEG+Chol"]) for d in src_urs]
+    monotone = all(peg[i] > peg[i + 1] for i in range(len(peg) - 1))
+    check(self_ok == 0 and monotone,
+          f"the justification for blanking is still present in the source: "
+          f"{self_ok}/129 URS design rows agree with their own percents, and "
+          f"PEG_PEG+Chol is strictly monotone across all 129 "
+          f"({'yes' if monotone else 'NO'}) -- the sort fingerprint. If either "
+          f"ever changes, re-examine F-004 before trusting this blank")
+
+    # And the molar percents -- the half that stayed aligned -- must still be
+    # the authors' own on every row of every file.
+    check(all(str(r["IL_molratio"]).strip() != "" for r in urs),
+          f"the four molar percents are still emitted on all {len(urs)} URS "
+          f"rows: blanking N:P must not touch the half that is correct")
 
     # --- structures --------------------------------------------------------
     uniq = {(p, r[f"{p}_name"], r[f"{p}_SMILES"])

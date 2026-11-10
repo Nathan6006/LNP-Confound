@@ -170,7 +170,26 @@ def main():
             # with a midpoint would invent a measurement (it would move them to
             # ~474 RLU and claim precision the figure cannot support).
             sat = int(np.linalg.norm(col - top_colour) < 14.0)
-            flo = int(np.linalg.norm(col - bottom_colour) < 4.0)
+            # TIGHTENED 4.0 -> 2.5 on 2026-11-09 (F-040). At 4.0 this straddled
+            # TWO distinct LUT bands and flagged both as "on the floor":
+            #
+            #   48 cells  rgb 254,254,254 / 255,255,255   distance 1.73  <- floor
+            #   65 cells  rgb 254,254,252                 distance 3.32  <- NOT
+            #
+            # The 65 are measurably not white, and a true value of 0 would
+            # render white, so their band is bounded BELOW as well as above --
+            # they are measurements with ~15% quantization uncertainty, not
+            # upper bounds. Calling them `value_is_bound = upper` told a
+            # consumer that 65 real readings might be zero, so filtering on the
+            # flag either discarded them or treated a ~1.3e3 RLU reading as
+            # possibly nothing.
+            #
+            # 2.5 separates the two bands with margin on both sides (1.73 and
+            # 3.32). The consequence is also what makes the two fixes consistent:
+            # the 65 now fall through to the F-032 midpoint rule above, which is
+            # the right estimator for a two-sided band, while the 48 keep the
+            # band top because for them that number IS the upper bound.
+            flo = int(np.linalg.norm(col - bottom_colour) < 2.5)
             tied = np.flatnonzero(d <= d[i] + 1e-9)
             # A floored cell keeps the band's TOP, because that number is its
             # upper bound and is flagged as one. Everything else takes the

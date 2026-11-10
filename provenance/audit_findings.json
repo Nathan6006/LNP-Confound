@@ -191,10 +191,10 @@
   "C13_quality_vocabulary": {
    "bad_values": 0,
    "examples": [],
-   "rows_carrying_a_flag": 1589,
-   "rows_with_a_caveat": 1103,
-   "rows_with_a_note": 3729,
-   "rows_with_only_a_note": 130,
+   "rows_carrying_a_flag": 1524,
+   "rows_with_a_caveat": 1038,
+   "rows_with_a_note": 4150,
+   "rows_with_only_a_note": 616,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0
   },
@@ -373,8 +373,8 @@
    "examples": [],
    "rows_carrying_a_flag": 63,
    "rows_with_a_caveat": 54,
-   "rows_with_a_note": 55,
-   "rows_with_only_a_note": 1,
+   "rows_with_a_note": 61,
+   "rows_with_only_a_note": 7,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0
   },

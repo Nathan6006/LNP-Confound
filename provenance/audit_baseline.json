@@ -158,13 +158,13 @@
   },
   "C13_quality_vocabulary.rows_carrying_a_flag": {
    "mode": "exact",
-   "value": 1589,
-   "why": "ACCEPTED: 1,589 vitro rows have ANY quality column populated. This is NOT the F-001 quantity -- it includes confidence = high, which is an assurance, not a caveat (486 ZT_2026 vitro rows carry only that). Quote rows_with_a_caveat instead. Gated so a curation cannot stop emitting flags unnoticed; update together with the merge that moves it."
+   "value": 1524,
+   "why": "ACCEPTED: 1,589 vitro rows have ANY quality column populated. This is NOT the F-001 quantity -- it includes confidence = high, which is an assurance, not a caveat (486 ZT_2026 vitro rows carry only that). Quote rows_with_a_caveat instead. Gated so a curation cannot stop emitting flags unnoticed; update together with the merge that moves it. Changed 2026-11-09 by F-040: -65, the Fig 2b cells whose colour is measurably NOT the colorbar floor (rgb 254,254,252 at distance 3.32 from white, against 1.73 for the true floor band). They were flagged value_is_bound = upper by a threshold that straddled two LUT bands; their band is bounded below as well as above, so they are measurements with quantization uncertainty and now carry the F-032 midpoint and no bound flag."
   },
   "C13_quality_vocabulary.rows_with_a_caveat": {
    "mode": "exact",
-   "value": 1103,
-   "why": "ACCEPTED: 1,103 vitro rows whose structure or value is actually qualified -- an ambiguity, an assumed feature, a bound, or a confidence below high. 840 LL_2026 + 147 LL_2026_2 positional_ambiguity + 116 QL_2026 bounds (113 upper, 3 lower). With vivo's 54 this is the F-001 number: 1,157, NOT the 1,152 the round-1 ledger recorded, which double-counted a QL_2026 cross-figure conflict carrying no flag and missed 6 ZT_2026 medium rows."
+   "value": 1038,
+   "why": "ACCEPTED: 1,103 vitro rows whose structure or value is actually qualified -- an ambiguity, an assumed feature, a bound, or a confidence below high. 840 LL_2026 + 147 LL_2026_2 positional_ambiguity + 116 QL_2026 bounds (113 upper, 3 lower). With vivo's 54 this is the F-001 number: 1,157, NOT the 1,152 the round-1 ledger recorded, which double-counted a QL_2026 cross-figure conflict carrying no flag and missed 6 ZT_2026 medium rows. Changed 2026-11-09 by F-040: -65, the Fig 2b cells whose colour is measurably NOT the colorbar floor (rgb 254,254,252 at distance 3.32 from white, against 1.73 for the true floor band). They were flagged value_is_bound = upper by a threshold that straddled two LUT bands; their band is bounded below as well as above, so they are measurements with quantization uncertainty and now carry the F-032 midpoint and no bound flag."
   },
   "C13_quality_vocabulary.confidence_without_a_note": {
    "mode": "exact",
@@ -173,13 +173,13 @@
   },
   "C13_quality_vocabulary.rows_with_a_note": {
    "mode": "exact",
-   "value": 3729,
-   "why": "ACCEPTED: 3,729 vitro rows carry a curation_note. Was 3,600 until 2026-11-09; +129 are the WT_2026 URS rows whose IL_to_nucleicacid_chargeratio was RECONSTRUCTED (126) or blanked (3) after F-004, each saying so on the row. 2,400 YX_2024 + 96 LZ_2025 of the rest are normalization-unit declarations."
+   "value": 4150,
+   "why": "ACCEPTED: 3,729 vitro rows carry a curation_note. Was 3,600 until 2026-11-09; +129 are the WT_2026 URS rows whose IL_to_nucleicacid_chargeratio was RECONSTRUCTED (126) or blanked (3) after F-004, each saying so on the row. 2,400 YX_2024 + 96 LZ_2025 of the rest are normalization-unit declarations. Changed 2026-11-09 by F-040: -65, the Fig 2b cells whose colour is measurably NOT the colorbar floor (rgb 254,254,252 at distance 3.32 from white, against 1.73 for the true floor band). They were flagged value_is_bound = upper by a threshold that straddled two LUT bands; their band is bounded below as well as above, so they are measurements with quantization uncertainty and now carry the F-032 midpoint and no bound flag. Changed 2026-11-09 by F-041: +486 ZT_2026 vitro rows now disclose that the paper contradicts itself about the in-vitro dose (Fig 2c caption 20 ng/well n=3 vs Methods 4.8 15 ng/well n=5 for the same wells). Note-only by design: what is contested is a dose, and the schema's flags describe structures and bounds."
   },
   "C13_quality_vocabulary.rows_with_only_a_note": {
    "mode": "exact",
-   "value": 130,
-   "why": "ACCEPTED: 130 vitro rows whose ONLY quality marker is a curation_note, so rows_with_a_caveat does not count them. 1 is QL_2026's T3A-L8-C14 (Fig 2b and Fig 2c disagree 7.3x about it). The other 129 are the WT_2026 URS rows carrying the F-004 N:P reconstruction notice -- deliberately note-only, because the schema's flags describe STRUCTURES and bounds, and what is qualified here is a formulation descriptor. Worth revisiting if a 'value_reconstructed' term is ever added; until then the note is the only honest place to say it."
+   "value": 616,
+   "why": "ACCEPTED: 130 vitro rows whose ONLY quality marker is a curation_note, so rows_with_a_caveat does not count them. 1 is QL_2026's T3A-L8-C14 (Fig 2b and Fig 2c disagree 7.3x about it). The other 129 are the WT_2026 URS rows carrying the F-004 N:P reconstruction notice -- deliberately note-only, because the schema's flags describe STRUCTURES and bounds, and what is qualified here is a formulation descriptor. Worth revisiting if a 'value_reconstructed' term is ever added; until then the note is the only honest place to say it. Changed 2026-11-09 by F-041: +486 ZT_2026 vitro rows now disclose that the paper contradicts itself about the in-vitro dose (Fig 2c caption 20 ng/well n=3 vs Methods 4.8 15 ng/well n=5 for the same wells). Note-only by design: what is contested is a dose, and the schema's flags describe structures and bounds."
   },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",
@@ -360,13 +360,13 @@
   },
   "C13_quality_vocabulary.rows_with_a_note": {
    "mode": "exact",
-   "value": 55,
-   "why": "ACCEPTED: 45 ZT_2026 + 9 XD_2026 caveated rows, plus the ALC-0315 override note added 2026-11-07 (F-030)."
+   "value": 61,
+   "why": "ACCEPTED: 45 ZT_2026 + 9 XD_2026 caveated rows, plus the ALC-0315 override note added 2026-11-07 (F-030). Changed 2026-11-09 by F-042: +6 ZT_2026 vivo rows that previously carried no note now disclose the derived dose (0.1 mg/kg x an 18-20 g mouse = 1.8-2.0 ug; 2.0 is stored). The other 45 already had a structure note and the dose sentence is appended to it."
   },
   "C13_quality_vocabulary.rows_with_only_a_note": {
    "mode": "exact",
-   "value": 1,
-   "why": "ACCEPTED: XD_2026's ALC-0315. Its emitted structure deliberately disagrees with the figure it came from (the paper draws the head one carbon short), so it carries a note and confidence = high -- correctly, because the emitted structure is the published compound and is MORE trustworthy than the drawing. structure_assumed is deliberately not set: nothing was assumed, it was overridden from an external source (F-030)."
+   "value": 7,
+   "why": "ACCEPTED: XD_2026's ALC-0315. Its emitted structure deliberately disagrees with the figure it came from (the paper draws the head one carbon short), so it carries a note and confidence = high -- correctly, because the emitted structure is the published compound and is MORE trustworthy than the drawing. structure_assumed is deliberately not set: nothing was assumed, it was overridden from an external source (F-030). Changed 2026-11-09 by F-042: +6 ZT_2026 vivo rows that previously carried no note now disclose the derived dose (0.1 mg/kg x an 18-20 g mouse = 1.8-2.0 ug; 2.0 is stored). The other 45 already had a structure note and the dose sentence is appended to it."
   },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",

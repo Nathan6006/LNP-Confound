@@ -155,7 +155,7 @@ time with `pd.get_dummies`.
   (`github.com/alvinchangw/COMET`) stores SMILES and labels with no names at
   all, so the values belong to the structures. Fixing it the other way would
   have moved every measured value onto the wrong molecule. Both fixed; `C11`
-  (`provenance/reagent_registry.py`) now pins 13 named reagents to structures
+  (`provenance/reagent_registry.py`) now pins 15 named reagents to structures
   written from their chemical names and checks every row. Add an entry whenever
   a new catalogue reagent enters the corpus. PEG-lipids are deliberately absent
   — the block length is a distribution, so no single SMILES is right.
@@ -279,9 +279,10 @@ products really is a positional-isomer mixture; saying so is correct, not timid.
 Write the flag into the **emitted row**, in the columns of
 `provenance/schema_quality.json` (§3). A count in your folder's QC JSON does not
 reach anyone: four of five curations computed their flags, wrote them to a QC
-file, and emitted rows without them, so **1,157** corpus rows carried a
-convention silently (F-001; the round-1 ledger's 1,152 was itself wrong — see
-§6). Carry the per-item assessment through; never write a
+file, and emitted rows without them, so **1,092** corpus rows carry a
+convention and say so (F-001; it was 1,157 until F-040 removed the bound flag
+from 65 QL_2026 cells that are measurements, not bounds — and the round-1
+ledger's 1,152 was wrong for separate reasons, see §6). Carry the per-item assessment through; never write a
 `confidence` the upstream record already states, because a hard-coded literal
 once relabelled 24 rows reading *"ASSUMED: the paper draws no structure"* as the
 project's highest confidence (F-011).
@@ -533,7 +534,7 @@ and flag those rows in the data, so a reader can see which values are measured
 and which are convention.
 
 **This is now implemented** — 7 columns, §3 — having been documented here and
-nowhere else for two days while **1,157** rows carried a convention silently
+nowhere else for two days while **1,092** rows carried a convention silently
 (F-001). The lesson is narrower than "write the code": the flags had been
 *computed*, and were sitting in each curation's own QC JSON. They died at the
 emit step, one stage before the merge, so no change to `build_dataset.py` could
@@ -541,15 +542,15 @@ have rescued them and nobody reading the builder would have found it. **A flag
 that lives only in a per-folder QC file is not a flag, it is a memo.**
 
 **Which number, and quote the right one.** This count moved four times
-(≥266 → 1,137 → 1,152 → 1,157) and every correction was someone re-deriving it,
+(≥266 → 1,137 → 1,152 → 1,157 → 1,092) and every correction was someone re-deriving it,
 because the quantity had no definition in code — only a prose description that
 each pass re-implemented slightly differently. `audit.py` C13 now emits **two**
 counts and the distinction is the whole point:
 
 | metric | 2026-11-07 | what it is |
 |---|---|---|
-| `rows_carrying_a_flag` | **1,652** | any quality column populated at all, `confidence = high` included. 495 rows carry only that, which is an *assurance*, not a caveat. **Not** the F-001 number. |
-| `rows_with_a_caveat` | **1,157** | the structure or value is genuinely qualified: an ambiguity, an assumed feature, a bound, or a confidence below `high`. **This is the one to quote.** |
+| `rows_carrying_a_flag` | **1,587** | any quality column populated at all, `confidence = high` included. 495 rows carry only that, which is an *assurance*, not a caveat. **Not** the F-001 number. |
+| `rows_with_a_caveat` | **1,092** | the structure or value is genuinely qualified: an ambiguity, an assumed feature, a bound, or a confidence below `high`. **This is the one to quote.** |
 
 Round 1's 1,152 was wrong twice over in ways that cancelled to within 5: it
 counted a `QL_2026` cross-figure conflict that carries no flag column, and

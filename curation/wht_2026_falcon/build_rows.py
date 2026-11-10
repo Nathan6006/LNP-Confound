@@ -253,40 +253,40 @@ def realign_np_ratio(src, ilc, hlc, cholc, pegc, tag):
     `NP_ratio` sits inside the moved block, so it was wrong on 129 corpus rows
     (median error 6.86 against a column spanning 4.01-25.54).
 
-    WHAT THIS FUNCTION DOES, and the assumption it rests on. Reconstruct by
-    following the injective map: for each percent row, find the unique design
-    row whose knobs derive it, and take that design row's `NP_ratio`.
+    WHAT THIS FUNCTION DOES: it BLANKS `NP_ratio` on every row of a misaligned
+    file, and records why. It does not reconstruct.
 
-    **This assumes `NP_ratio` was INSIDE the sorted selection.** It is column F
-    and the three shape knobs are G-I; if the selection was G:I rather than F:I
-    then `NP_ratio` never moved and the ORIGINAL values were already right. No
-    observable in the repo, the preprint or the SI distinguishes the two cases,
-    and for the one formulation the SI tabulates there are three mutually
-    inconsistent candidates:
+    Reconstruction is possible in principle -- the map is injective, so each
+    percent row resolves to exactly one design row, and following it would give
+    126 of the 129 a value. It was implemented and then deliberately reverted
+    on 2026-11-09, because it rests on an assumption that cannot be checked:
 
-        stored (as shipped)            7.1985
-        reconstructed (this function) 16.7659
-        Supplementary Table 5          6.0      <- matches NEITHER
+    **it assumes `NP_ratio` was INSIDE the sorted selection.** `NP_ratio` is
+    column F and the three shape knobs are G-I. If the selection was G:I rather
+    than F:I, `NP_ratio` never moved and the as-shipped values were already
+    correct. Nothing in the repo, the preprint or the SI distinguishes the two
+    cases -- and for the one formulation the SI tabulates there are three
+    mutually inconsistent candidates:
 
-    and no `NP_ratio` in any of the seven files is within 0.02 of 6.0. Suppl
-    Table 5 cannot arbitrate because it is itself block-pasted in two places:
-    `U0036`'s last three cells repeat its own first three, and its bottom rows
-    slip by one. Neither alignment correlates with the response above a
-    random-pairing floor (Spearman +0.042 stored, -0.041 reconstructed, against
-    a 95th percentile of 0.167).
+        as shipped                7.1985
+        reconstructed            16.7659
+        Supplementary Table 5     6.0      <- matches NEITHER
 
-    So the reconstruction is a DECISION, taken deliberately 2026-11-09 in
-    preference to blanking the column, and every affected row says so in
-    `curation_note`. A reader who wants the as-shipped numbers can recover them
-    from the source CSV; a reader who wants no number at all should filter on
-    the note.
+    with no `NP_ratio` in any of the seven files within 0.02 of 6.0. Suppl
+    Table 5 cannot arbitrate: it is itself block-pasted in two places (`U0036`'s
+    last three cells repeat its own first three, and its bottom rows slip by
+    one). Neither alignment correlates with the response above a random-pairing
+    floor (Spearman +0.042 as shipped, -0.041 reconstructed, against a 95th
+    percentile of 0.167).
 
-    The 3 percent rows nothing maps to get a BLANK, not a guess. Those are
-    `U0001`-`U0003`, and they are the rows a reviewer showed are not uniform
-    random samples at all: `U0001` and `U0002` have percents byte-identical to
-    `F0162` and `F0192` in other files, and `U0003` is a round designed
-    composition with `(IL+HL)% = 60.0000` exactly. Three design rows are
-    likewise unclaimed. Whatever happened to those three, no mapping exists.
+    So all three candidate values are unsupported, and a blank is the only
+    entry that does not assert one of them. A consumer who wants to attempt the
+    reconstruction has everything needed to do so: the source CSV is in `repo/`,
+    the map is reproduced in `02_WT_2026_qc.json`, and the derivation is above.
+
+    The four molar percents are NOT affected and are emitted unchanged -- they
+    are the half that stayed aligned, and that is established independently of
+    all of this (see the WHICH HALF MOVED paragraph).
 
     Mutates each row, adding `_NP_RESOLVED`. Returns a dict for the QC file.
     """
@@ -325,29 +325,36 @@ def realign_np_ratio(src, ilc, hlc, cholc, pegc, tag):
         f"N:P to each formulation and is unsafe without injectivity -- blank "
         f"the column instead of guessing.")
 
-    rebuilt = blanked = 0
-    for j, r in enumerate(src):
-        if j in inv:
-            r["_NP_RESOLVED"] = float(src[inv[j]]["NP_ratio"])
-            rebuilt += 1
-        else:
-            r["_NP_RESOLVED"] = ""          # no mapping exists; do not guess
-            blanked += 1
+    # BLANK every row, including the 126 that are reconstructible. The map is
+    # recorded so the work is not lost, but no value is emitted from it.
+    for r in src:
+        r["_NP_RESOLVED"] = ""
 
-    return {"file": tag, "rows": len(src), "state": "REALIGNED (F-004)",
+    return {"file": tag, "rows": len(src), "state": "BLANKED (F-004)",
             "rows_self_consistent": self_ok,
-            "rows_reconstructed": rebuilt, "rows_blanked": blanked,
+            "rows_blanked": len(src),
+            "rows_that_WOULD_be_reconstructible": len(inv),
+            "rows_with_no_mapping_at_all": len(src) - len(inv),
             "unmapped_formulations": [src[j].get("FALCON_ID", j)
                                       for j in range(len(src)) if j not in inv],
-            "assumption": "NP_ratio moved with the three shape knobs it sits "
-                          "beside (spreadsheet selection F:I, not G:I). If the "
-                          "selection excluded it, the as-shipped values were "
-                          "already correct. Nothing available distinguishes "
-                          "these cases; see realign_np_ratio.__doc__.",
-            "known_conflict": "Suppl Table 5 p.8 prints N:P 6.0 for U0036, "
-                              "which matches neither the stored 7.1985 nor the "
-                              "reconstructed 16.7659. That table is itself "
-                              "block-pasted in two places."}
+            "design_to_percent_map": {src[i].get("FALCON_ID", i):
+                                      src[j].get("FALCON_ID", j)
+                                      for i, j in sorted(fwd.items())},
+            "why_blanked": "The map is injective, so 126 of 129 could be "
+                           "reconstructed -- but doing so assumes NP_ratio was "
+                           "inside the sorted spreadsheet selection (F:I rather "
+                           "than G:I). If it was not, the as-shipped values were "
+                           "already right. Nothing available distinguishes the "
+                           "cases, and the one formulation Suppl Table 5 "
+                           "tabulates has three mutually inconsistent candidates "
+                           "(7.1985 shipped / 16.7659 reconstructed / 6.0 "
+                           "printed), with that table itself block-pasted in two "
+                           "places. A blank is the only entry that asserts none "
+                           "of the three. Reconstruction was implemented and "
+                           "deliberately reverted 2026-11-09; the map above is "
+                           "kept so a consumer can attempt it knowingly.",
+            "not_affected": "The four molar percents are the half that stayed "
+                            "aligned and are emitted unchanged."}
 
 
 def main():
@@ -437,29 +444,25 @@ def main():
                 # own numbers -- they are ours, recovered through an injective
                 # realignment that rests on a stated assumption. The molar
                 # ratios on the same row ARE the authors' and are unaffected.
-                if np_note["state"].startswith("REALIGNED"):
+                if np_note["state"].startswith("BLANKED"):
                     row["curation_note"] = (
-                        "IL_to_nucleicacid_chargeratio RECONSTRUCTED, not as "
-                        "shipped: this source file states each formulation twice "
-                        "and its design-parameter block was sorted out of "
-                        "alignment with the ID, percent and response columns, so "
-                        "the N:P it shipped belongs to a different formulation "
-                        "(median error 6.86 on a 4.01-25.54 range). Recovered via "
-                        "the injective design->percent map. Assumes N:P moved "
+                        "IL_to_nucleicacid_chargeratio BLANK, deliberately. This "
+                        "source file states each formulation twice -- as design "
+                        "parameters and as molar percents -- and its design block "
+                        "was sorted out of alignment with the ID, percent and "
+                        "response columns, so the N:P it ships belongs to a "
+                        "different formulation (median error 6.86 on a 4.01-25.54 "
+                        "range). The misalignment is injective, so 126 of 129 "
+                        "could be reconstructed, but only by assuming N:P moved "
                         "with the three shape parameters beside it; if it did "
-                        "not, the shipped value was already right. Suppl Table 5 "
-                        "prints a third, different value for the one formulation "
-                        "it tabulates. The four molar ratios are unaffected and "
-                        "are the authors' own."
-                        if row["IL_to_nucleicacid_chargeratio"] != "" else
-                        "IL_to_nucleicacid_chargeratio BLANK: this source file's "
-                        "design-parameter block was sorted out of alignment with "
-                        "the rest of the row, and no design row maps to this "
-                        "formulation, so no N:P can be recovered for it. This is "
-                        "also one of three rows whose percents are not uniform "
-                        "random samples at all (they duplicate compositions from "
-                        "other files, or are round designed values). The four "
-                        "molar ratios are unaffected.")
+                        "not, the shipped value was already correct. The one "
+                        "formulation the SI tabulates has three mutually "
+                        "inconsistent candidates (shipped / reconstructed / "
+                        "printed), so all three are unsupported and no number is "
+                        "emitted. The map is in 02_WT_2026_qc.json for anyone "
+                        "who wants to attempt it knowingly. The four molar "
+                        "ratios are the half that stayed aligned and are the "
+                        "authors' own, unchanged.")
                 row.update(descriptors(row["IL_SMILES"]))
                 rows.append(row)
                 index += 1

@@ -417,7 +417,22 @@ def main():
             "Model": "in_vitro", "Model_type": "IGROV1", "Model_target": "in_vitro",
             "Route_of_administration": "in_vitro",
             "Cargo": "mRNA", "Cargo_type": "FLuc",
+            # The paper contradicts itself about this dose and about n, and
+            # until 2026-11-09 the contradiction lived only in
+            # new_curation_qc.json -- i.e. a memo, not a flag (F-041). Fig 2c's
+            # caption says 20 ng mRNA per well, n = 3; Methods section 4.8 says
+            # 15 ng per well, n = 5, and 4.8 is the only in-vitro subsection and
+            # describes these same wells. We take the caption, because it is
+            # attached to the figure the 486 values come from -- but a consumer
+            # of data_vitro.csv was seeing a settled 20 ng at confidence = high
+            # with nothing to indicate the source disagrees with itself.
             "Dose_ug_nucleicacid": 0.02,
+            "curation_note":
+                "Dose_ug_nucleicacid is CONTESTED IN THE SOURCE: Fig 2c's "
+                "caption says 20 ng mRNA per well (n = 3) and Methods 4.8 says "
+                "15 ng per well (n = 5) for the same wells. The caption's 20 ng "
+                "is stored, because it is attached to the figure these values "
+                "are read from. n is not representable in this schema.",
             "Experiment_method": "luminescence_discretized_normalized",
             "Experiment_batching": "individual",
             "Experiment_value": z,
@@ -532,6 +547,14 @@ def main():
             "Model": "in_vivo", "Model_type": "Mouse_B6", "Model_target": "brain",
             "Route_of_administration": "intravenous",
             "Cargo": "mRNA", "Cargo_type": "FLuc",
+            # 2.0 ug is DERIVED, not printed (F-042). The paper gives 0.1 mg/kg
+            # and Methods 4.11 gives the mice as 18-20 g, so the dose is
+            # 1.8-2.0 ug and 2.0 is the top of that range. The mg/kg -> ug
+            # conversion and the 20 g choice appeared in no file and on no row,
+            # which makes a stored absolute dose up to 11% high with nothing
+            # saying so. Kept at 2.0 rather than changed, because any single
+            # number here is a choice and 2.0 is the one already in the corpus;
+            # what was missing is the disclosure, which is now on the row.
             "Dose_ug_nucleicacid": 2.0,
             "Experiment_method": "luminescence_normalized",
             "Experiment_batching": "individual",
@@ -550,6 +573,17 @@ def main():
             row["curation_note"] = ("IL_SMILES could not be resolved for this "
                                     "lipid; see new_curation_qc.json "
                                     "IL_SMILES_resolution.unresolved.")
+        # The derived dose applies to every vivo row regardless of structure, so
+        # it is appended rather than written into the structure flag's note
+        # (F-042). Appended, not overwritten: a row can carry both an assumed
+        # structural feature and a derived dose, and losing either would be the
+        # F-001 failure in miniature.
+        dose_note = ("Dose_ug_nucleicacid 2.0 is DERIVED, not printed: the "
+                     "paper gives 0.1 mg/kg and the mice as 18-20 g, so the "
+                     "dose is 1.8-2.0 ug and 2.0 is the top of that range.")
+        row["curation_note"] = (
+            (row["curation_note"] + " " + dose_note).strip()
+            if row.get("curation_note") else dose_note)
         rows.append(row)
 
     with open(OUT, "w", newline="") as f:
