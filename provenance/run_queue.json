@@ -860,12 +860,13 @@
    "journal": "Angew Chem Int Ed Engl",
    "title": "Retinoic-Acid-Derived Ionizable Lipids Enable Spleen-Selective Antigen Expression for mRNA Cancer Vaccination.",
    "source": "new PubMed sweep 2026-11-10",
-   "stage": "queued",
-   "status": "pending_acquisition",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [],
    "rank": 33,
    "pmcid": null,
-   "value_reach": "E_nothing"
+   "value_reach": "E_nothing",
+   "agent_task_id": "a4debb7df5d12927b"
   },
   {
    "folder": "cheng_41656866",
@@ -1401,7 +1402,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T20:43:38Z",
+ "updated_utc": "2026-11-10T22:47:37Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {
