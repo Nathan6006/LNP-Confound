@@ -1,0 +1,304 @@
+{
+ "D_a_fig1c_formulas": {
+  "n": 10,
+  "exact_matches": 10,
+  "rows": [
+   {
+    "name": "A-9",
+    "printed_formula": "C30H54NO8P",
+    "our_formula": "C30H54NO8P",
+    "formula_match": true,
+    "printed_MW": 587.4,
+    "our_average_MW": 587.74,
+    "MW_delta": 0.34,
+    "printed_LogP": 1.62,
+    "our_Crippen_LogP": 5.4
+   },
+   {
+    "name": "A-10",
+    "printed_formula": "C31H56NO8P",
+    "our_formula": "C31H56NO8P",
+    "formula_match": true,
+    "printed_MW": 601.3,
+    "our_average_MW": 601.76,
+    "MW_delta": 0.46,
+    "printed_LogP": 1.97,
+    "our_Crippen_LogP": 5.79
+   },
+   {
+    "name": "A-11",
+    "printed_formula": "C32H58NO8P",
+    "our_formula": "C32H58NO8P",
+    "formula_match": true,
+    "printed_MW": 615.5,
+    "our_average_MW": 615.79,
+    "MW_delta": 0.29,
+    "printed_LogP": 2.3,
+    "our_Crippen_LogP": 6.18
+   },
+   {
+    "name": "A-12",
+    "printed_formula": "C33H60NO8P",
+    "our_formula": "C33H60NO8P",
+    "formula_match": true,
+    "printed_MW": 629.4,
+    "our_average_MW": 629.82,
+    "MW_delta": 0.42,
+    "printed_LogP": 2.63,
+    "our_Crippen_LogP": 6.57
+   },
+   {
+    "name": "A-13",
+    "printed_formula": "C34H62NO8P",
+    "our_formula": "C34H62NO8P",
+    "formula_match": true,
+    "printed_MW": 642.4,
+    "our_average_MW": 643.84,
+    "MW_delta": 1.44,
+    "printed_LogP": 2.93,
+    "our_Crippen_LogP": 6.96
+   },
+   {
+    "name": "A-14",
+    "printed_formula": "C35H64NO8P",
+    "our_formula": "C35H64NO8P",
+    "formula_match": true,
+    "printed_MW": 657.4,
+    "our_average_MW": 657.87,
+    "MW_delta": 0.47,
+    "printed_LogP": 3.2,
+    "our_Crippen_LogP": 7.35
+   },
+   {
+    "name": "A-15",
+    "printed_formula": "C36H66NO8P",
+    "our_formula": "C36H66NO8P",
+    "formula_match": true,
+    "printed_MW": 671.5,
+    "our_average_MW": 671.9,
+    "MW_delta": 0.4,
+    "printed_LogP": 3.46,
+    "our_Crippen_LogP": 7.74
+   },
+   {
+    "name": "A-16",
+    "printed_formula": "C37H68NO8P",
+    "our_formula": "C37H68NO8P",
+    "formula_match": true,
+    "printed_MW": 685.4,
+    "our_average_MW": 685.92,
+    "MW_delta": 0.52,
+    "printed_LogP": 3.7,
+    "our_Crippen_LogP": 8.13
+   },
+   {
+    "name": "A-17",
+    "printed_formula": "C38H70NO8P",
+    "our_formula": "C38H70NO8P",
+    "formula_match": true,
+    "printed_MW": 699.5,
+    "our_average_MW": 699.95,
+    "MW_delta": 0.45,
+    "printed_LogP": 3.96,
+    "our_Crippen_LogP": 8.52
+   },
+   {
+    "name": "A-17-2Z",
+    "printed_formula": "C38H66NO8P",
+    "our_formula": "C38H66NO8P",
+    "formula_match": true,
+    "printed_MW": 695.5,
+    "our_average_MW": 695.92,
+    "MW_delta": 0.42,
+    "printed_LogP": 3.75,
+    "our_Crippen_LogP": 8.07
+   }
+  ],
+  "_independence": "Fig 1c prints the NEUTRAL formula; Appendix S1 prints the ADDUCT formula. Different typesetting, different quantity, same ten molecules."
+ },
+ "D_b_A16_adjudicated": {
+  "SI_HRMS_prints": "calcd for C37H68NO8P [M + Na]+: 708.4575",
+  "problem": "that formula carries no Na although the adduct is [M+Na]+",
+  "fig1c_prints_neutral": "C37H68NO8P",
+  "our_neutral": "C37H68NO8P",
+  "our_Na_adduct_calcd": 708.4575,
+  "SI_printed_calcd": 708.4575,
+  "verdict": "The SI pasted the NEUTRAL formula into the adduct slot. Fig 1c prints that same neutral formula for A-16, and our C37H68NNaO8P+ reproduces the SI's own printed 708.4575. So the FORMULA STRING is the typo and both the mass and the structure are right -- decided from two printed sources, not from preference (the AC_2025 lesson)."
+ },
+ "D_c_molecular_weight": {
+  "convention": "AVERAGE, not monoisotopic. The printed column sits a median 0.44 Da below RDKit's average MW for all ten, which is a convention offset, not an error; the monoisotopic masses are ~0.4 Da lower still, so the column is certainly not monoisotopic.",
+  "median_offset_Da": 0.435,
+  "max_abs_residual_after_offset_Da": 1.008,
+  "worst": {
+   "name": "A-13",
+   "printed": 642.4,
+   "ours_average": 643.84,
+   "delta": 1.44,
+   "residual_after_offset": 1.008
+  },
+  "per_compound": [
+   {
+    "name": "A-9",
+    "printed": 587.4,
+    "ours_average": 587.74,
+    "delta": 0.34,
+    "residual_after_offset": -0.1
+   },
+   {
+    "name": "A-10",
+    "printed": 601.3,
+    "ours_average": 601.76,
+    "delta": 0.46,
+    "residual_after_offset": 0.027
+   },
+   {
+    "name": "A-11",
+    "printed": 615.5,
+    "ours_average": 615.79,
+    "delta": 0.29,
+    "residual_after_offset": -0.146
+   },
+   {
+    "name": "A-12",
+    "printed": 629.4,
+    "ours_average": 629.82,
+    "delta": 0.42,
+    "residual_after_offset": -0.019
+   },
+   {
+    "name": "A-13",
+    "printed": 642.4,
+    "ours_average": 643.84,
+    "delta": 1.44,
+    "residual_after_offset": 1.008
+   },
+   {
+    "name": "A-14",
+    "printed": 657.4,
+    "ours_average": 657.87,
+    "delta": 0.47,
+    "residual_after_offset": 0.035
+   },
+   {
+    "name": "A-15",
+    "printed": 671.5,
+    "ours_average": 671.9,
+    "delta": 0.4,
+    "residual_after_offset": -0.038
+   },
+   {
+    "name": "A-16",
+    "printed": 685.4,
+    "ours_average": 685.92,
+    "delta": 0.52,
+    "residual_after_offset": 0.089
+   },
+   {
+    "name": "A-17",
+    "printed": 699.5,
+    "ours_average": 699.95,
+    "delta": 0.45,
+    "residual_after_offset": 0.016
+   },
+   {
+    "name": "A-17-2Z",
+    "printed": 695.5,
+    "ours_average": 695.92,
+    "delta": 0.42,
+    "residual_after_offset": -0.016
+   }
+  ],
+  "printed_column_CH2_steps": {
+   "A-9->A-10": 13.9,
+   "A-10->A-11": 14.2,
+   "A-11->A-12": 13.9,
+   "A-12->A-13": 13.0,
+   "A-13->A-14": 15.0,
+   "A-14->A-15": 14.1,
+   "A-15->A-16": 13.9,
+   "A-16->A-17": 14.1
+  },
+  "steps_off_CH2_by_more_than_0.6": [
+   [
+    "A-12",
+    "A-13",
+    13.0
+   ],
+   [
+    "A-13",
+    "A-14",
+    15.0
+   ]
+  ],
+  "known_printed_typo": {
+   "A-13": "printed 642.4; the steps into and out of it are 13.0 and 15.0 Da where every other step in the homologous series is 13.9-14.2, and the two errors sum to exactly 28.0 = 2 x CH2. Its FORMULA (C34H62NO8P) is right in Fig 1c, right in the SI HRMS and right in our build, and the SI's [M+H]+ calcd 644.4286 reproduces exactly, so only the Fig 1c MW NUMERAL is wrong: it should read 643.4. A one-digit typo, 3 -> 2."
+  },
+  "_this_check_is_internal_to_the_paper": "The step test uses only the authors' own printed column; it would find A-13 even if our build were wrong."
+ },
+ "D_d_logp_monotone": {
+  "saturated_series": [
+   "A-9",
+   "A-10",
+   "A-11",
+   "A-12",
+   "A-13",
+   "A-14",
+   "A-15",
+   "A-16",
+   "A-17"
+  ],
+  "printed_logP": [
+   1.62,
+   1.97,
+   2.3,
+   2.63,
+   2.93,
+   3.2,
+   3.46,
+   3.7,
+   3.96
+  ],
+  "increments": [
+   0.35,
+   0.33,
+   0.33,
+   0.3,
+   0.27,
+   0.26,
+   0.24,
+   0.26
+  ],
+  "strictly_increasing": true,
+  "n_increments": 8,
+  "unsaturated_check": {
+   "A-17": 3.96,
+   "A-17-2Z": 3.75,
+   "two_cis_double_bonds_lower_logP": true
+  },
+  "_note": "Increments fall from 0.35 to 0.24 across the series rather than staying constant, so the authors' LogP is not a plain fragment sum. We report that, and do not reproduce their estimator; Crippen values are listed alongside for scale only and are NOT asserted to match."
+ },
+ "D_e_yield_range": {
+  "fig1a_prints_range_percent": [
+   77,
+   92
+  ],
+  "fig1a_prints_label": "A10-17-2Z",
+  "text_prints_count": 10,
+  "range_over_A9_to_A17_2Z": [
+   77,
+   92
+  ],
+  "range_over_A10_to_A17_2Z_only": [
+   77,
+   89
+  ],
+  "matches_with_A9": true,
+  "matches_without_A9": false,
+  "compounds_at_the_maximum": [
+   "A-9"
+  ],
+  "verdict": "The printed 77-92% range is reproduced ONLY when A-9 is included, and 92% is A-9's yield and no other compound's. So A-9 is a member of the series and the panel's own 'A10-17-2Z' label (and the Results sentence's 'A-10 to A-17-2Z') is an off-by-one on the range START -- which the same sentence contradicts by saying '10 compounds', since A-10..A-17-2Z is nine.",
+  "n_in_A10_to_A17_2Z": 9,
+  "n_in_A9_to_A17_2Z": 10
+ }
+}

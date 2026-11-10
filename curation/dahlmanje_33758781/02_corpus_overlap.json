@@ -1,0 +1,235 @@
+{
+ "token_pattern_test": {
+  "_labels_are": "A-9 ... A-17 plus A-17-2Z: CONTIGUOUS 9..17, which is the signature of LOCAL indices, so these names carry no cross-paper meaning.",
+  "_and_they_are_not_ionizable_lipid_names_at_all": "A-N names the HELPER PHOSPHOLIPID. Joining them against IL_name would be wrong twice over -- wrong column and wrong namespace.",
+  "_name_token_vs_chain_length": "A-9 is the DECANOYL (C10) ester, A-17 the STEAROYL (C18). The token counts the alkyl carbons BEYOND the ester carbonyl, so it is the acyl length MINUS ONE, every time. Trap 1, measured from the printed acid names in the synthesis.",
+  "hits": {
+   "A-9": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-10": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-11": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-12": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-13": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-14": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-15": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-16": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-17": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "A-17-2Z": {
+    "substring_rows": 0,
+    "substring_structures": 0,
+    "substring_experiments": [],
+    "exact_name_rows": 0
+   },
+   "9": {
+    "substring_rows": 5590,
+    "substring_structures": 4817,
+    "substring_experiments": [
+     "AA_2008",
+     "AC_2025",
+     "AP_2025",
+     "BL_2023",
+     "BL_2023_3CR",
+     "BL_2024",
+     "FG_2026",
+     "JC_2023",
+     "JL_2024",
+     "JW_2024",
+     "KL_2010",
+     "KW_2014",
+     "KZ_2016",
+     "LL_2012",
+     "LL_2026",
+     "LL_2026_2",
+     "LM_2019",
+     "LR_2023",
+     "LX_2024",
+     "LX_2024_2",
+     "LX_2024_3",
+     "NC_2024",
+     "NG_2025",
+     "NG_2025_2",
+     "SL_2020",
+     "SL_2021",
+     "SS_2018",
+     "SW_2024",
+     "SX_2025",
+     "SY_2025",
+     "XD_2026",
+     "XH_2024_2",
+     "XH_2025",
+     "YR_2024",
+     "YX_2024",
+     "YX_2026",
+     "YX_2026_SDL",
+     "ZH_2023"
+    ],
+    "exact_name_rows": 0
+   },
+   "11": {
+    "substring_rows": 2669,
+    "substring_structures": 2165,
+    "substring_experiments": [
+     "AA_2008",
+     "AP_2025",
+     "BL_2023",
+     "BL_2024",
+     "FG_2026",
+     "JC_2023",
+     "JL_2024",
+     "JW_2024",
+     "KL_2010",
+     "KS_2024",
+     "KW_2014",
+     "KZ_2016",
+     "LL_2012",
+     "LL_2026",
+     "LL_2026_2",
+     "LM_2019",
+     "LR_2023",
+     "LX_2024",
+     "LX_2024_2",
+     "LX_2024_3",
+     "NC_2024",
+     "NG_2025",
+     "NG_2025_2",
+     "QL_2026",
+     "SL_2021",
+     "SW_2024",
+     "SX_2025",
+     "XH_2024_2",
+     "XH_2025",
+     "YX_2024",
+     "YX_2026",
+     "YX_2026_SDL",
+     "ZH_2023"
+    ],
+    "exact_name_rows": 0
+   },
+   "17": {
+    "substring_rows": 671,
+    "substring_structures": 484,
+    "substring_experiments": [
+     "AA_2008",
+     "BL_2023",
+     "BL_2024",
+     "JL_2024",
+     "JW_2024",
+     "KL_2010",
+     "KW_2014",
+     "LR_2023",
+     "LX_2024_2",
+     "NC_2024",
+     "SL_2021",
+     "SX_2025",
+     "XH_2024_2",
+     "XH_2025",
+     "YX_2024",
+     "YX_2026",
+     "YX_2026_SDL",
+     "ZH_2023"
+    ],
+    "exact_name_rows": 0
+   }
+  }
+ },
+ "ckk_e15": {
+  "corpus_ckk_e12_smiles": "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC",
+  "corpus_ckk_e12_inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+  "corpus_ckk_e12_tail_lengths": [
+   12,
+   12,
+   12,
+   12
+  ],
+  "corpus_ckk_e12_names_held": [
+   "vitro/AC_2025/CKK-E12",
+   "vitro/JW_2024/other",
+   "vivo/BL_2023/MD-1"
+  ],
+  "corpus_ckk_e12_rows_by_name": "{('vitro', 'AC_2025', 'CKK-E12'): 216, ('vitro', 'JW_2024', 'other'): 19, ('vivo', 'BL_2023', 'MD-1'): 6}",
+  "_name_join_would_have_found": 216,
+  "_inchikey_join_finds": 241,
+  "inferred_ckk_e15_smiles": "CCCCCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCCCCC)CC(O)CCCCCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCCCCC",
+  "inferred_ckk_e15_inchikey": "FGDZRFPFIDLJAJ-UHFFFAOYSA-N",
+  "inferred_ckk_e15_tail_lengths": [
+   15,
+   15,
+   15,
+   15
+  ],
+  "ckk_e15_full_inchikey_rows_in_corpus": 0,
+  "ckk_e15_skeleton_block_rows_in_corpus": 0,
+  "_verdict": "cKK-E15 is NOT in the corpus under any name: 0 rows match its full InChIKey and 0 match even its skeleton block. cKK-E12 IS in the corpus and is a DIFFERENT molecule (C12 vs C15 arms), so this paper adds no in-vivo shared lipid. Note the corpus cKK-E12 is stored STEREO-FLAT (InChIKey suffix UHFFFAOYSA-N) although the real compound is lysine-derived; we inherit that convention rather than silently improving on it."
+ },
+ "substructure_sweep_SUPERSET": {
+  "_label": "SUPERSET. A hit is a CHEMOTYPE match (the cKK diketopiperazine scaffold), NOT this paper's molecule.",
+  "unique_structures_scanned": 19919,
+  "loose_hits_diketopiperazine_core_structures": 23,
+  "loose_hits_rows": 276,
+  "strict_hits_core_plus_two_bis(hydroxyalkyl)amine_arms_structures": 2,
+  "strict_hits_rows": 249,
+  "after_exact_inchikey_match_to_ckk_e15": 0
+ },
+ "helper_lipid_namespace": {
+  "_why": "A-N is a HELPER phospholipid, so the only column it could legitimately join is HL_name/HL_SMILES.",
+  "corpus_distinct_HL_names": 11,
+  "corpus_distinct_HL_SMILES": 11,
+  "rows_with_any_HL_name_matching_a_paper_label": {
+   "A-9": 0,
+   "A-10": 0,
+   "A-11": 0,
+   "A-12": 0,
+   "A-13": 0,
+   "A-14": 0,
+   "A-15": 0,
+   "A-16": 0,
+   "A-17": 0,
+   "A-17-2Z": 0
+  },
+  "any_adamantane_bearing_HL_SMILES_in_corpus": 0
+ }
+}

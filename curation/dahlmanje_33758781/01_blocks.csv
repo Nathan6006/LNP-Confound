@@ -1,0 +1,12 @@
+block_role,block_name,block_SMILES,source
+backbone_intermediate,compound 4,[C@@H](COP(=O)([O-])OCC[N+](C)(C)C)(O)COC(=O)CC12CC3CC(CC(C3)C1)C2,"Appendix S1 p.2, printed IUPAC name"
+acyl_donor,decanoic acid,OC(=O)CCCCCCCCC,"Appendix S1, synthesis of A-9 (printed reagent)"
+acyl_donor,undecanoic acid,OC(=O)CCCCCCCCCC,"Appendix S1, synthesis of A-10 (printed reagent)"
+acyl_donor,lauric acid,OC(=O)CCCCCCCCCCC,"Appendix S1, synthesis of A-11 (printed reagent)"
+acyl_donor,tridecanoic acid,OC(=O)CCCCCCCCCCCC,"Appendix S1, synthesis of A-12 (printed reagent)"
+acyl_donor,myristic acid,OC(=O)CCCCCCCCCCCCC,"Appendix S1, synthesis of A-13 (printed reagent)"
+acyl_donor,pentadecanoic acid,OC(=O)CCCCCCCCCCCCCC,"Appendix S1, synthesis of A-14 (printed reagent)"
+acyl_donor,palmitic acid,OC(=O)CCCCCCCCCCCCCCC,"Appendix S1, synthesis of A-15 (printed reagent)"
+acyl_donor,heptadecanoic acid,OC(=O)CCCCCCCCCCCCCCCC,"Appendix S1, synthesis of A-16 (printed reagent)"
+acyl_donor,stearic acid,OC(=O)CCCCCCCCCCCCCCCCC,"Appendix S1, synthesis of A-17 (printed reagent)"
+acyl_donor,linoleic acid,OC(=O)CCCCCCC/C=C\C/C=C\CCCCC,"Appendix S1, synthesis of A-17-2Z (printed reagent)"

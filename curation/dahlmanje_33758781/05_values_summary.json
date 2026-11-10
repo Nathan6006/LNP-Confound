@@ -1,0 +1,9 @@
+{
+ "value_loci_recorded": 55,
+ "corpus_admissible_yes": 0,
+ "corpus_admissible_no": 55,
+ "counts_sum": true,
+ "rows_emitted": 0,
+ "06_rows_csv": "header only, 79 columns read live from data/data_vivo.csv",
+ "distinct_ionizable_lipids_contributed": 1
+}

@@ -1,0 +1,153 @@
+{
+ "C_a_molar_ratio_sums": {
+  "per_formulation_sum": [
+   100,
+   100.0,
+   100,
+   100.0
+  ],
+  "n_summing_to_100": 4,
+  "n_formulations": 4,
+  "offenders": [],
+  "_not_a_tautology": "Each column is four numerals transcribed independently from the panel; nothing in our pipeline derives one of them from the others.",
+  "table": {
+   "Ionizable Lipid": [
+    15,
+    15,
+    19,
+    26
+   ],
+   "Cholesterol": [
+    28,
+    38.5,
+    44,
+    46.5
+   ],
+   "PEG-Lipid": [
+    2,
+    1.5,
+    2,
+    2.5
+   ],
+   "Phospholipid": [
+    55,
+    45,
+    35,
+    25
+   ]
+  }
+ },
+ "C_b_factorial": {
+  "phospholipids": 10,
+  "sterols": 3,
+  "molar_ratios": 4,
+  "product": 120,
+  "paper_states_total": 120,
+  "factorial_closes": true,
+  "passed_qc": 109,
+  "dropped_at_qc": 11,
+  "_which_were_dropped": "NOT IDENTIFIED ANYWHERE IN THE PAPER. The 11 failures are shown only as a change in the Fig 2c pie, so the 109 surviving members cannot be enumerated, let alone addressed."
+ },
+ "C_c_fig3h_sign_by_colour": {
+  "_method": "Colour identity, not a bar-top detector. Enriched bars are drawn teal and depleted bars grey, so the SIGN is carried by hue and survives a 709 px raster. Separation is categorical: every negative bar has EXACTLY 0 teal pixels and every positive bar has <=44 grey pixels against 260-572 teal.",
+  "bars": [
+   {
+    "label": "A-9",
+    "teal_px": 0,
+    "grey_px": 711,
+    "sign": "negative",
+    "teal_height_px": null
+   },
+   {
+    "label": "A-10",
+    "teal_px": 0,
+    "grey_px": 911,
+    "sign": "negative",
+    "teal_height_px": null
+   },
+   {
+    "label": "A-11",
+    "teal_px": 572,
+    "grey_px": 27,
+    "sign": "positive",
+    "teal_height_px": 44
+   },
+   {
+    "label": "A-12",
+    "teal_px": 260,
+    "grey_px": 44,
+    "sign": "positive",
+    "teal_height_px": 20
+   },
+   {
+    "label": "A-13",
+    "teal_px": 520,
+    "grey_px": 36,
+    "sign": "positive",
+    "teal_height_px": 40
+   },
+   {
+    "label": "A-14",
+    "teal_px": 0,
+    "grey_px": 308,
+    "sign": "negative",
+    "teal_height_px": null
+   },
+   {
+    "label": "A-15",
+    "teal_px": 520,
+    "grey_px": 22,
+    "sign": "positive",
+    "teal_height_px": 40
+   },
+   {
+    "label": "A-16",
+    "teal_px": 0,
+    "grey_px": 35,
+    "sign": "about_zero",
+    "teal_height_px": 0
+   },
+   {
+    "label": "A-17",
+    "teal_px": 260,
+    "grey_px": 31,
+    "sign": "positive",
+    "teal_height_px": 20
+   },
+   {
+    "label": "A-17-2Z",
+    "teal_px": 0,
+    "grey_px": 808,
+    "sign": "negative",
+    "teal_height_px": null
+   }
+  ],
+  "n_positive": 5,
+  "n_negative": 4,
+  "n_about_zero": 1,
+  "n_bars": 10,
+  "caption_prints": 5,
+  "matches_caption": true,
+  "positive_labels": [
+   "A-11",
+   "A-12",
+   "A-13",
+   "A-15",
+   "A-17"
+  ],
+  "_NOT_MEASURED": "The MAGNITUDE of the negative bars. Our grey mask over-captures below the baseline (all four returned an identical 93 px extent, which the drawing contradicts), so negative heights are reported as None rather than as a number we do not trust. The sign is unaffected: it comes from hue, not extent."
+ },
+ "C_d_fig3h_rank": {
+  "text_claims_most_enriched": "A-11",
+  "tallest_teal_bar": "A-11",
+  "teal_heights_px": {
+   "A-11": 44,
+   "A-12": 20,
+   "A-13": 40,
+   "A-15": 40,
+   "A-17": 20
+  },
+  "matches_text": true,
+  "_precision": "A RANK, not a value. 44 px vs the next 40 px is a 4 px margin on a 709 px-wide figure; it orders A-11 first but we do not convert any of these to enrichment units and no emitted number depends on them."
+ }
+}

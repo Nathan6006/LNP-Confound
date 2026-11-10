@@ -1,0 +1,341 @@
+{
+ "paper": {
+  "pmid": 33758781,
+  "pmcid": "PMC7974401",
+  "doi": "10.1002/btm2.10161",
+  "first_author": "Gan Z",
+  "last_author": "Dahlman JE",
+  "prospective_Experiment_ID": "ZG_2020",
+  "licence_article": "CC BY 4.0 (Europe PMC core record license field = 'cc by'; JATS <permissions> cites creativecommons.org/licenses/by/4.0/)",
+  "licence_repo": "n/a - no repository or deposit exists",
+  "endpoint": "Cre mRNA -> tdTomato recombination in Ai14 mice, read out as (i) % tdTom+ cells by flow cytometry and (ii) 'Normalized Delivery' from DNA-barcode sequencing of tdTomato+ sorted cells",
+  "readout_requires_expression": true,
+  "readout_compositional": true
+ },
+ "HEADLINE": {
+  "distinct_ionizable_lipids_contributed": 1,
+  "ionizable_lipid": "cKK-E15, identical on all 109 LNPs",
+  "distinct_helper_phospholipids_synthesised": 10,
+  "distinct_sterols": 3,
+  "distinct_molar_ratios": 4,
+  "formulations_designed": 120,
+  "formulations_passed_QC": 109,
+  "formulations_dropped_at_QC": 11,
+  "cell_types_assayed": 16,
+  "per_LNP_values_the_design_supports": 1744,
+  "per_LNP_values_the_paper_ATTRIBUTES": 0,
+  "individually_injected_LNPs": 1,
+  "value_loci_recorded_in_05_values": 55,
+  "corpus_admissible_yes": 0,
+  "corpus_admissible_no": 55,
+  "rows_emitted": 0,
+  "06_rows_csv_lines": 1,
+  "06_rows_csv_columns": 79
+ },
+ "P1_HRMS_vs_our_build": {
+  "n_compounds": 10,
+  "exact_mass_matches_within_0.6_mDa": 10,
+  "max_abs_delta_mDa": 0.03,
+  "adduct_formula_matches": 9,
+  "adduct_conventions_in_one_column": [
+   "[M+H]+",
+   "[M+Na]+"
+  ],
+  "_convention_drift": "Nine compounds are reported as [M+Na]+ and A-13 as [M+H]+, in the same column. Both reproduce. This is trap 2, measured.",
+  "unexplained_formula_mismatches": [],
+  "named_exception": [
+   "A-16"
+  ]
+ },
+ "P2_Fig1c_independent_property_table": {
+  "n": 10,
+  "neutral_formula_exact_matches": 10,
+  "mw_median_printed_offset_Da": 0.435,
+  "mw_max_abs_residual_after_offset_Da": 1.008,
+  "mw_printed_steps_off_CH2": [
+   [
+    "A-12",
+    "A-13",
+    13.0
+   ],
+   [
+    "A-13",
+    "A-14",
+    15.0
+   ]
+  ],
+  "logp_increments_positive": "8/8",
+  "_source": "Fig 1c is a pure BITMAP -- the JATS declares table-count=0 -- so its cells are transcribed by eye. A single misread character breaks the 10/10 formula match, which is what makes the transcription checkable."
+ },
+ "P3_free_checks_the_authors_left": {
+  "molar_ratio_columns_summing_to_100": "4/4",
+  "molar_ratio_offenders": [],
+  "factorial_10x3x4": 120,
+  "paper_states_total": 120,
+  "factorial_closes": true,
+  "fig3h_teal_bars": 5,
+  "fig3h_caption_prints": 5,
+  "fig3h_sign_counts_sum": true,
+  "fig3h_tallest_enriched": "A-11",
+  "text_claims_most_enriched": "A-11",
+  "printed_yield_range": [
+   77,
+   92
+  ],
+  "yield_range_reproduces_WITH_A9": true,
+  "yield_range_reproduces_WITHOUT_A9": false,
+  "_best_one": "The printed 77-92% yield range is a number the authors drew and never computed, and it settles their own off-by-one: 92% is A-9's yield alone, so A-9 is in the series that Fig 1a labels 'A10-17-2Z'."
+ },
+ "P4_name_token_vs_chain_length": {
+  "rule_measured": "A-N carries an acyl chain of N+1 carbons: A-9 is decanoyl (C10), A-17 is stearoyl (C18). The token counts the alkyl carbons BEYOND the ester carbonyl.",
+  "n_checked": 10,
+  "per_compound": {
+   "A-9": 10,
+   "A-10": 11,
+   "A-11": 12,
+   "A-12": 13,
+   "A-13": 14,
+   "A-14": 15,
+   "A-15": 16,
+   "A-16": 17,
+   "A-17": 18,
+   "A-17-2Z": 18
+  },
+  "all_consistent": true
+ },
+ "P5_corpus_overlap": {
+  "ckk_e15_rows_matching_full_InChIKey": 0,
+  "ckk_e15_rows_matching_skeleton_block": 0,
+  "ckk_e12_IS_in_corpus_under_names": [
+   "vitro/AC_2025/CKK-E12",
+   "vitro/JW_2024/other",
+   "vivo/BL_2023/MD-1"
+  ],
+  "name_join_would_find": 216,
+  "inchikey_join_finds": 241,
+  "substructure_sweep_SUPERSET": {
+   "structures_scanned": 19919,
+   "loose_chemotype_hits": 23,
+   "strict_hits": 2,
+   "after_exact_InChIKey": 0,
+   "_positive_control": "The first version of the core SMARTS demanded a ring CH2 and so could not match cKK-E12 itself; it reported a clean 0. A sweep that misses its own known positive is broken, not loose. The positive control that caught it is now permanent."
+  },
+  "token_pattern_damage_if_joined_on_a_bare_number": {
+   "9": {
+    "rows": 5590,
+    "structures": 4817,
+    "experiments": 38
+   },
+   "11": {
+    "rows": 2669,
+    "structures": 2165,
+    "experiments": 33
+   },
+   "17": {
+    "rows": 671,
+    "structures": 484,
+    "experiments": 18
+   }
+  },
+  "token_pattern_damage_if_joined_on_the_full_label": {
+   "A-9": 0,
+   "A-11": 0,
+   "A-17-2Z": 0
+  },
+  "_and_the_wrong_namespace": "A-N names a HELPER phospholipid, not an ionizable lipid, so an IL_name join would be wrong twice over.",
+  "adamantane_bearing_HL_SMILES_already_in_corpus": 0
+ },
+ "P6_anchors_C10_posture": {
+  "_recorded_by_hand_in_PROVENANCE.md": "provenance/structure_check.py, check_anchor_independence.py and check_anchor_coverage.py were NOT run: they write tracked files other agents read.",
+  "anchors_derived": [
+   "A-9",
+   "A-17"
+  ],
+  "anchor_chain_lengths": "A-9 (C10 acyl) and A-17 (C18 acyl) -- deliberately different lengths",
+  "registry_pin_not_independent": [
+   "Cholesterol"
+  ],
+  "declared_absent": [
+   "cKK-E15",
+   "beta-Sitosterol",
+   "20alpha-OH Cholesterol",
+   "C14PEG2000"
+  ],
+  "inchikey_agreement_with_enumeration": "2/2 (full InChIKey)",
+  "guard_1_AST": "walks make_reference.py's own syntax tree at run time for RDKit editing primitives and an `assemble` import; inspects Call/Import nodes ONLY, never string constants, so the ban list cannot match itself",
+  "guard_2_template_provenance": "no string literal of >=25 chars in make_reference.py may be a substring of any enumerated SMILES -- F-037's defect stated directly, which byte-comparison of the OUTPUT cannot see",
+  "byte_identical_to_enumeration": true,
+  "_and_that_is_not_the_signal": "A correct re-derivation canonicalises to the same string as a correct enumeration. That is exactly why C10's own anchor_may_be_a_copy missed F-037."
+ },
+ "P7_seeded_mutations": {
+  "stage_gates_harness": "stage09_seeds.py",
+  "stage_gates_exit": 0,
+  "stage_gates_summary": "14 seeds + 3 controls; 0 uncredited/unexpected: []",
+  "anchor_guard_harness": "make_reference.py --selftest",
+  "anchor_guard_exit": 0,
+  "anchor_guard_summary": "3 guard seeds; 0 uncredited: []",
+  "_credit_rule": "A seed is credited only if its child process REACHED a METRIC line. Two seeds were refused credit on the first run for exiting before their metric (a missing lib path, a missing input file); the harness was fixed, not the seeds.",
+  "measured_blind_spot": "S5 -- swapping the adamantylacetyl and fatty acyl on ALL TEN compounds leaves the HRMS gate GREEN. Measured delta: formula identical, exact mass identical to 0.000000 Da. Seed G3 shows the InChIKey anchor gate DOES catch the same defect (0/2 agreements), so the two checks have complementary coverage.",
+  "measured_sensitivity_limit": "S10 -- shifting every Fig 3h bar slot by half the 22.8 px pitch breaks both the sign count and the rank, so the slot positions are load-bearing at that scale and are detected, not assumed."
+ },
+ "P8_contradictions": {
+  "n": 6,
+  "resolved": 4,
+  "open": 2,
+  "ids": {
+   "X-1": "Which hydroxyl of the glycerol carries the adamantylacetyl group",
+   "X-2": "How many phospholipids the esterification afforded, and where the series starts",
+   "X-3": "A-16 HRMS formula",
+   "X-4": "A-13 molecular weight in Figure 1c",
+   "X-5": "How Normalized Delivery is computed",
+   "X-6": "Which sterol and which molar ratio LNP1 uses"
+  }
+ },
+ "P9_source_files": {
+  "source/article_epmc.pdf": {
+   "bytes": 5626,
+   "magic": "b'<!DO'",
+   "sha256": "672303e67499720f27edbee755ca7ca74d23b441cd293314425b9ebb4061e594"
+  },
+  "source/btm210161-sup-0001-AppendixS1.pdf": {
+   "bytes": 3324917,
+   "magic": "b'%PDF'",
+   "sha256": "24d89f54d064e46b7cfd30a1cce40c9a3892b9c7b352d2af4e2ec7a0f808cd58"
+  },
+  "source/epmc_suppl/suppl.zip": {
+   "bytes": 3257992,
+   "magic": "b'PK\\x03\\x04'",
+   "sha256": "31afaacbc877af4b3942fd279af87e080fdafdc86d14d8c62833d3013bc1efb7"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g001.jpg": {
+   "bytes": 3743,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "32c3af038496bbc924e824214ef8d827b4c29cadaec271cb4758a6725082ebe8"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g002.jpg": {
+   "bytes": 4199,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "de96c17d2585714511172b886243f7580f734e5ba8652d7ecb7f1b2792cc07f4"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g003.jpg": {
+   "bytes": 4324,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "cb156f7800deacffaf053289bbb1a3a14696f9a5df58a4f7dfb90c050cc95a85"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g004.jpg": {
+   "bytes": 4217,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "02e45f47728fa7e6563e6baccf211d7df97526e747d8925fb01ca95d7195e1f4"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g005.jpg": {
+   "bytes": 4464,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "8029cc9dd05e0836705961efcb24eaaa0a045ab3c39812311ce9dd722060fba8"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g006.jpg": {
+   "bytes": 4468,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "1dee903087da82c4b9d25080372f6cd9776885e0622864a2a283762376603704"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g007.jpg": {
+   "bytes": 4335,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "cfeb4b83e48a2ab6d4aa4f47c3a160e7b085a2751632ad174aa721bc343f3361"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g008.jpg": {
+   "bytes": 4423,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "d48d9b85b5674581e7463ff3a53818f2cb00017217f3755f49bc8c051fe868ee"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g009.jpg": {
+   "bytes": 4449,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "04706ce6658ec37e62d5268fb65d061100a505f94c13d46eefa0be8d22e0f0ce"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g010.jpg": {
+   "bytes": 4465,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "eaa238015f593af1fbbf0c9a28975c7a21e7fe504a124b915f3685cf985c9061"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g011.jpg": {
+   "bytes": 5925,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "52bf82bbd316ed78504d8cf491a5b20ec3c27b1266b4d66225c5435cdb2c018a"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g012.jpg": {
+   "bytes": 1653,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "43650aae7e5b11e9ec88cc84bf6c1b69609518317ad3ed2c8f9f364e5e5d4c52"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g013.gif": {
+   "bytes": 4800,
+   "magic": "b'GIF8'",
+   "sha256": "2130e7289b7bcb783f9633246b3d2c83f3c8645c073aadf668b8a695a6a3f85c"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g013.jpg": {
+   "bytes": 106646,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "079dd48180f6c83c426fb74a8360214cacd77bf73ad4bc74e9a2d8f5f0715a93"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g014.gif": {
+   "bytes": 3630,
+   "magic": "b'GIF8'",
+   "sha256": "1ce3a4655504e2d608637b6bf39b794a2f2afaa5329c02dd4aa0a12c32e2183d"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g014.jpg": {
+   "bytes": 75631,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "9e618c8c14821940370a87f3f7728ada0f0a8d1445741f6d7efd06f04096fcf7"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g015.gif": {
+   "bytes": 4318,
+   "magic": "b'GIF8'",
+   "sha256": "5aa4174e2822b1535a4276f3bb284fdc7c46eb0572c14677bcbb3c4eb43c4df7"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-g015.jpg": {
+   "bytes": 72577,
+   "magic": "b'\\xff\\xd8\\xff\\xe0'",
+   "sha256": "a90ac2b6fadb097f174ae100132e387022d237c4d5781855759711ed71ef3e7c"
+  },
+  "source/epmc_suppl/extracted/BTM2-5-e10161-s001.pdf": {
+   "bytes": 3324917,
+   "magic": "b'%PDF'",
+   "sha256": "24d89f54d064e46b7cfd30a1cce40c9a3892b9c7b352d2af4e2ec7a0f808cd58"
+  },
+  "source/pmc/PMC7974401.jats.xml": {
+   "bytes": 89915,
+   "magic": "b'<?xm'",
+   "sha256": "0efa05cf156c3ec99ef00804b0762ac3f373385b61b68804c2ed248c4966f60c"
+  }
+ },
+ "P9_provenance_note": "The Appendix S1 PDF that was already in the folder at task start was verified BYTE-IDENTICAL (sha256 24d89f54...) to the BTM2-5-e10161-s001.pdf served inside Europe PMC's supplementaryFiles ZIP for PMC7974401, which we downloaded independently. That is an F-065 contamination check on a file we did not fetch ourselves. No glob copy out of the session scratchpad was made at any point.",
+ "P10_tier3_null_result": {
+  "data_access_statement": "'The data, analyses, and scripts used to generate all figures in the paper are available upon request from J.E.D. or dahlmanlab.org.' No deposit.",
+  "jats_chars_searched": 88909,
+  "si_text_chars_searched": 25290,
+  "patterns": [
+   "GSE[0-9]+",
+   "SRP[0-9]+",
+   "PRJNA[0-9]+",
+   "SRX[0-9]+",
+   "SRR[0-9]+",
+   "SRA",
+   "accession",
+   "deposit",
+   "github",
+   "zenodo",
+   "dryad",
+   "figshare",
+   "osf.io"
+  ],
+  "hits_in_either_document": 0,
+  "find_repo_runs": 2,
+  "find_repo_authors_tried": [
+   "Dahlman",
+   "Gan"
+  ],
+  "find_repo_code_search_hits_on_doi_or_pmid": 0,
+  "find_repo_repo_hits": 0
+ },
+ "GATE_failures": []
+}

@@ -1,0 +1,245 @@
+{
+ "compound_4": {
+  "smiles": "C[N+](C)(C)CCOP(=O)([O-])OC[C@H](O)COC(=O)CC12CC3CC(CC(C3)C1)C2",
+  "neutral_formula": "C20H36NO7P",
+  "cip_codes": [
+   "R"
+  ],
+  "printed_formula": "C20H36NNaO7P",
+  "our_adduct_formula": "C20H36NNaO7P",
+  "formula_match": true,
+  "printed_calcd": 456.2122,
+  "our_calcd": 456.2122,
+  "delta_mDa": -0.04,
+  "printed_found": 456.2118
+ },
+ "products": [
+  {
+   "name": "A-9",
+   "acid_printed": "decanoic acid",
+   "acid_carbons": 10,
+   "name_token": "9",
+   "token_vs_acyl_carbons": "token 9 vs acyl 10 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C30H54NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C30H54NNaO8P",
+   "our_adduct_formula": "C30H54NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 610.3479,
+   "our_calcd": 610.3479,
+   "delta_mDa": 0.03,
+   "printed_found": 610.3468,
+   "printed_found_minus_calcd_mDa": -1.1
+  },
+  {
+   "name": "A-10",
+   "acid_printed": "undecanoic acid",
+   "acid_carbons": 11,
+   "name_token": "10",
+   "token_vs_acyl_carbons": "token 10 vs acyl 11 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C31H56NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C31H56NNaO8P",
+   "our_adduct_formula": "C31H56NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 624.3636,
+   "our_calcd": 624.3636,
+   "delta_mDa": -0.02,
+   "printed_found": 624.3624,
+   "printed_found_minus_calcd_mDa": -1.2
+  },
+  {
+   "name": "A-11",
+   "acid_printed": "lauric acid",
+   "acid_carbons": 12,
+   "name_token": "11",
+   "token_vs_acyl_carbons": "token 11 vs acyl 12 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C32H58NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C32H58NNaO8P",
+   "our_adduct_formula": "C32H58NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 638.3792,
+   "our_calcd": 638.3792,
+   "delta_mDa": 0.03,
+   "printed_found": 638.378,
+   "printed_found_minus_calcd_mDa": -1.2
+  },
+  {
+   "name": "A-12",
+   "acid_printed": "tridecanoic acid",
+   "acid_carbons": 13,
+   "name_token": "12",
+   "token_vs_acyl_carbons": "token 12 vs acyl 13 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C33H60NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C33H60NNaO8P",
+   "our_adduct_formula": "C33H60NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 652.3949,
+   "our_calcd": 652.3949,
+   "delta_mDa": -0.02,
+   "printed_found": 652.3939,
+   "printed_found_minus_calcd_mDa": -1.0
+  },
+  {
+   "name": "A-13",
+   "acid_printed": "myristic acid",
+   "acid_carbons": 14,
+   "name_token": "13",
+   "token_vs_acyl_carbons": "token 13 vs acyl 14 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C34H62NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+H]+",
+   "printed_formula": "C34H63NO8P",
+   "our_adduct_formula": "C34H63NO8P",
+   "formula_match": true,
+   "printed_calcd": 644.4286,
+   "our_calcd": 644.4286,
+   "delta_mDa": -0.02,
+   "printed_found": 644.4278,
+   "printed_found_minus_calcd_mDa": -0.8
+  },
+  {
+   "name": "A-14",
+   "acid_printed": "pentadecanoic acid",
+   "acid_carbons": 15,
+   "name_token": "14",
+   "token_vs_acyl_carbons": "token 14 vs acyl 15 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C35H64NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C35H64NNaO8P",
+   "our_adduct_formula": "C35H64NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 680.4262,
+   "our_calcd": 680.4262,
+   "delta_mDa": -0.02,
+   "printed_found": 680.4253,
+   "printed_found_minus_calcd_mDa": -0.9
+  },
+  {
+   "name": "A-15",
+   "acid_printed": "palmitic acid",
+   "acid_carbons": 16,
+   "name_token": "15",
+   "token_vs_acyl_carbons": "token 15 vs acyl 16 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C36H66NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C36H66NNaO8P",
+   "our_adduct_formula": "C36H66NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 694.4418,
+   "our_calcd": 694.4418,
+   "delta_mDa": 0.03,
+   "printed_found": 694.4417,
+   "printed_found_minus_calcd_mDa": -0.1
+  },
+  {
+   "name": "A-16",
+   "acid_printed": "heptadecanoic acid",
+   "acid_carbons": 17,
+   "name_token": "16",
+   "token_vs_acyl_carbons": "token 16 vs acyl 17 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C37H68NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C37H68NO8P",
+   "our_adduct_formula": "C37H68NNaO8P",
+   "formula_match": false,
+   "printed_calcd": 708.4575,
+   "our_calcd": 708.4575,
+   "delta_mDa": -0.02,
+   "printed_found": 708.4565,
+   "printed_found_minus_calcd_mDa": -1.0
+  },
+  {
+   "name": "A-17",
+   "acid_printed": "stearic acid",
+   "acid_carbons": 18,
+   "name_token": "17",
+   "token_vs_acyl_carbons": "token 17 vs acyl 18 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCCCCCCCCCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C38H70NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C38H70NNaO8P",
+   "our_adduct_formula": "C38H70NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 722.4731,
+   "our_calcd": 722.4731,
+   "delta_mDa": 0.03,
+   "printed_found": 722.4723,
+   "printed_found_minus_calcd_mDa": -0.8
+  },
+  {
+   "name": "A-17-2Z",
+   "acid_printed": "linoleic acid",
+   "acid_carbons": 18,
+   "name_token": "17",
+   "token_vs_acyl_carbons": "token 17 vs acyl 18 carbons (acid INCLUDES the carbonyl C; token counts the alkyl carbons beyond it)",
+   "smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCC(=O)O[C@H](COC(=O)CC12CC3CC(CC(C3)C1)C2)COP(=O)([O-])OCC[N+](C)(C)C",
+   "neutral_formula": "C38H66NO8P",
+   "cip_codes": [
+    "R"
+   ],
+   "printed_adduct": "[M+Na]+",
+   "printed_formula": "C38H66NNaO8P",
+   "our_adduct_formula": "C38H66NNaO8P",
+   "formula_match": true,
+   "printed_calcd": 718.4418,
+   "our_calcd": 718.4418,
+   "delta_mDa": 0.03,
+   "printed_found": 718.4399,
+   "printed_found_minus_calcd_mDa": -1.9
+  }
+ ],
+ "checks": {
+  "n_products": 10,
+  "formula_matches": 9,
+  "mass_matches_within_0.6_mDa": 10,
+  "adduct_conventions_used": [
+   "[M+H]+",
+   "[M+Na]+"
+  ],
+  "all_products_single_R_centre": true,
+  "_adamantyl_stereo_is_VACUOUS": "The printed names decorate the cage as (3r,5r,7r)- or (3R,5R,7R)-adamantan-1-yl. RDKit finds ONE stereocentre in every product, the glycerol C2. Adamantane's bridgeheads are not stereogenic, so those descriptors constrain nothing and the stereo assertion above says nothing about them -- it is vacuous there, not passing. The paper itself writes them lower-case 'r' in some entries and upper-case 'R' in others, which is the same point.",
+  "known_formula_typo": {
+   "A-16": "printed 'C37H68NO8P' carries no Na although its own adduct is [M+Na]+; our C37H68NNaO8P+ reproduces the printed calcd 708.4575 to -0.02 mDa, so the FORMULA is the typo and the MASS is right. Deciding which half is wrong from the number, not from preference (the AC_2025 lesson)."
+  },
+  "formula_mismatches_unexplained": [],
+  "mass_failures_over_0.6_mDa": [],
+  "max_abs_delta_mDa": 0.03
+ }
+}
