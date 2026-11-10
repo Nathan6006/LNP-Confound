@@ -2211,3 +2211,58 @@ fail on purpose:
 Note the seeded line also reveals the file was 8.9 MB, not the 140-byte stub —
 i.e. that agent had already resumed and written before the seed, so the guard is
 measuring liveness rather than file size, which is the right quantity.
+
+### 12:3x — pushed everything; `isolation: "remote"` measured and it does NOT leave the laptop
+
+The user asked to move the run to the cloud so the laptop could be closed and
+carried around. **A running session cannot be migrated** — the conversation and
+its in-process subagents live on the machine that started them, and there is no
+"move session" operation. What can move is the work, so:
+
+**Committed and pushed `d13782c` to `origin/main`: 847 paths, 22.0 MB.** Every
+extraction script, every `05_values.csv` / `06_rows.csv` / `07_qc.json` /
+`DECISIONS.md`, `curation/lib/`, `provenance/tools/`, the findings ledger and
+this log.
+
+**FINDING AY — the repo is PUBLIC, and a plain `git add -A` would have published
+60.2 MB of copyrighted publisher assets to it.** `.gitignore` already excluded
+`*.pdf` "for copyright"; it did **not** exclude anything else a publisher
+serves. Measured before committing: 101 files — **53 jpg, 16 xml, 14 png,
+7 jpeg, 4 tif, 3 zip** — from papers that are subscription-only or
+**CC BY-NC-ND**, where ND alone forbids redistribution, and §8 requires
+CC0/CC-BY compatibility before release. Extended the rule to figure rasters,
+supplementary archives, JATS XML, acquisition directories (`source_epmc/` was
+not covered by a `source/` rule and held 6 publisher JPEGs), page renders and
+annotated overlays — an overlay is the figure plus our annotation, not a new
+work.
+
+Getting that exclusion to bite took three attempts and the reasons are worth
+recording. A `curation/**/*.png` pattern **did not match**, while a slashless
+`*.png` did — which is why the original `*.pdf` rule has always worked. And once
+a path is in the index, `.gitignore` has no effect on it, so `git add -A` kept
+re-adding files the new rule covered; `git check-ignore` was silent for the same
+reason, and only `--no-index` revealed the rule was correct all along. The fix
+was `git reset` to clear the index first. Final staged set verified at **zero**
+matches for `.pdf`, `.png`, `.jpe?g`, `.tif`, `/source`, `/renders/`, `/figs/`.
+
+Separately noted and **not** acted on: **31 overlay images from earlier commits
+are already public** in `HEAD`. Removing them needs a history rewrite on a
+public repo, which is the user's call, not mine.
+
+**FINDING AZ — `isolation: "remote"` does not leave this machine.** I told the
+user cloud agents were available because the launch succeeded. That was wrong,
+and the probe I had already sent proved it: the agent reported
+`hostname: Nathans-MacBook-Air-6.local` and a path under
+`.claude/worktrees/agent-<id>` — **a local git worktree, not a cloud
+environment.** The flag degraded silently. Corrected to the user in the same
+turn. The probe still earned its cost: a fresh checkout at `d13782c` sees
+`data_vitro.csv` at 29,195 data rows, `curation/lib/`, the queue and the log,
+has network access (Europe PMC HTTP 200) and imports rdkit, pdfplumber,
+pymupdf, numpy and scipy — so the repo **is** a sufficient handoff for a session
+started elsewhere, which is the thing worth knowing.
+
+`provenance/HANDOFF_CLOUD.md` written: what transfers, what cannot and why
+(the 84 PDFs and the entitled-browser publishers), what a cloud session can do
+fully / partly / not at all, and the standing rule that **nothing in
+`curation/` has been merged** and the frozen pipeline must not be re-pointed
+without the user's decision.

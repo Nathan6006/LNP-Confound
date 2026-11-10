@@ -39,17 +39,35 @@ COMPONENTS = [
      "BroadPharm BP-29590, named in Methods 'LNP Formulation'"),
     ("DLin-MC3-DMA", "ionizable", None,
      "MedKoo 555308, named in Methods as 'MC3'; benchmark"),
+    # CORRECTED 2026-11-10. My first pass recorded these as "NO structure
+    # disclosed", from the Methods sentence alone. That was wrong: main-article
+    # Figure 1A DRAWS all four, as a piperazine-cored lipidoid with
+    # 2-hydroxyalkyl arms and explicit wedge stereochemistry, in panels headed
+    # "2 Stereopure R Lipids" and "2 Stereopure S Lipids", beside an "R Chains"
+    # key reading C12S = C12H25, C13S = C13H27, C12R = C12H25, C13R = C13H27.
+    # They are not enumerated here because the only copy of Figure 1 obtainable
+    # is 708 x 391 px for twelve panels -- about 110 x 57 px each -- which is
+    # far below what a vertex trace needs, and no emitted row uses them.
+    # NOTE ON THE TOKEN: the "12" in C12S is the R-CHAIN length. The arm is
+    # CH2-CH(OH)-R, so the arm carries 14 carbons, not 12. The token is not the
+    # arm length (error class 1).
     ("C12S", "ionizable", None,
-     "stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"),
+     "stereopure lipomer, 'provided from the Dahlman lab'; DRAWN in Fig 1A "
+     "(R = C12H25) but unreadable at the resolution held; no SI structure, "
+     "formula, HRMS or citation"),
     ("C12R", "ionizable", None,
-     "stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"),
+     "stereopure lipomer; DRAWN in Fig 1A (R = C12H25), unreadable at the "
+     "resolution held"),
     ("C13S", "ionizable", None,
-     "stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"),
+     "stereopure lipomer; DRAWN in Fig 1A (R = C13H27), unreadable at the "
+     "resolution held"),
     ("C13R", "ionizable", None,
-     "stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"),
+     "stereopure lipomer; DRAWN in Fig 1A (R = C13H27), unreadable at the "
+     "resolution held"),
     ("Cholesterol", "sterol", "Cholesterol", "Avanti"),
     ("20alpha-hydroxycholesterol", "sterol", None,
-     "named in Results; not in the registry and not in the corpus"),
+     "named in Results and drawn in Fig 1A as '20a-OH Cholesterol'; not in the "
+     "registry and not in the corpus; not needed by any emitted row"),
     ("C14PEG2K", "PEG", "C14-PEG2000",
      "Avanti; a PEG block length is a DISTRIBUTION, so no single SMILES is right"),
     ("C18PEG2K", "PEG", None, "named in Results; Screening 2 only"),

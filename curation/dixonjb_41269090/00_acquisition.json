@@ -42,6 +42,35 @@
       "pages": 24,
       "what": "Supporting Information: Figures S1-S14 and Tables S1-S4",
       "supplied_by": "already present in source/ when this curation opened; not re-downloaded"
+    },
+    {
+      "path": "source/pmc_oa/nn5c12080_0001.jpg",
+      "bytes": 100932,
+      "sha256": "718d4f2dfe85f32842e6d4ea1ebe9860a44962e8e4719b283d7515715ee1fc82",
+      "what": "main-article Figure 1 as PMC serves it. Figure 1A DRAWS the lipid structures.",
+      "supplied_by": "PMC Open Access asset route via provenance/tools/pmc_fetch.py, after NCBI elink confirmed a real pubmed_pmc SELF-link (12874650), fetched 2026-11-10",
+      "resolution_caveat": "708 x 391 px for the WHOLE twelve-panel figure. The cKK-E12 panel is 130 x 70 px and each stereopure-lipomer panel about 110 x 57 px. Two further attempts at a larger copy failed: Europe PMC fulltextRepo returned an HTML error page, and the PMC OA service returned 404 / an HTML shell on both hosts. No bot check was bypassed."
+    },
+    {
+      "path": "source/pmc_oa/nn5c12080_0002.jpg",
+      "bytes": 124925,
+      "sha256": "58e7842e44b7c04057a17430067accba66476ff35f233f81f1b7811722532f6b",
+      "what": "main-article Figure 2 (the lead-candidate validation panels)",
+      "supplied_by": "same route"
+    },
+    {
+      "path": "source/pmc_oa/nn5c12080_0004.jpg",
+      "bytes": 99939,
+      "sha256": "f8b45ccf94156906b7c24141ba00873cd20df123fb1515ecc62a09f728d6d592",
+      "what": "main-article Figure 4 (LNP7 vs MC3 vs free mRNA)",
+      "supplied_by": "same route"
+    },
+    {
+      "path": "source/pmc_oa/PMC12874650.jats.xml",
+      "bytes": 227904,
+      "sha256": "825f3468dad65d6257aac9d1e0887a5c4b67306b7dd075f665715eb494ed9522",
+      "what": "the article full text as JATS XML. The percentages quoted in 04_si_tables.json's printed_percentages_in_main_text are verbatim from this file, so that cross-check no longer depends on a scratchpad copy.",
+      "supplied_by": "same route"
     }
   ],
   "files_derived_in_session": [
@@ -50,16 +79,23 @@
       "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12874650/fullTextXML",
       "bytes": 237259,
       "where": "session scratchpad only, NOT in this folder",
-      "why_not_stored": "CLAUDE.md section 7 forbids a tracked artifact depending on a scratchpad input. Nothing tracked here depends on it: every number this curation emits comes from the SI PDF in source/. The XML was used for the title/endpoint resolution and for the printed percentages recorded in 08_contradictions.csv, each of which is quoted verbatim in this folder."
+      "why_not_stored": "CLAUDE.md section 7 forbids a tracked artifact depending on a scratchpad input. Nothing tracked here depends on it: every number this curation emits comes from the SI PDF in source/. The XML was used for the title/endpoint resolution and for the printed percentages recorded in 08_contradictions.csv, each of which is quoted verbatim in this folder.",
+      "superseded": "The same full text is now stored in the folder as source/pmc_oa/PMC12874650.jats.xml, so no claim here rests on a scratchpad file."
     }
   ],
   "main_article_pdf": {
     "held": false,
-    "why_it_does_not_matter": "All values emitted come from SI Tables S2, S3 and S4, which are in source/. The main-article figures are used only as a cross-check and their printed percentages are quoted from the PMC full text."
+    "what_is_held_instead": "the article's JATS full text and Figures 1, 2 and 4 as PMC serves them (source/pmc_oa/)",
+    "why_it_still_matters": "the PMC figure rasters are small (Figure 1 is 708 x 391 px for twelve panels), so Figure 1A's drawn structures can be described but not traced. The publisher PDF would carry them larger; it was not fetched because ACS needs a browser session and no value emitted here depends on it."
   },
   "repository_search": {
     "tool": "provenance/tools/find_repo.py",
-    "author_terms_tried": ["Dixon", "Michalaki", "Dahlman", "Paunovska"],
+    "author_terms_tried": [
+      "Dixon",
+      "Michalaki",
+      "Dahlman",
+      "Paunovska"
+    ],
     "result": "0 repo-search candidates for every author term. The single code-search hit ('mherweg/d-laser-fgtools') is an unrelated laser-physics repo matched on the literal PMID string and is not this paper's.",
     "paper_states_no_repository": "The Methods section 'Data Preparation, Visualization, and the Application of Machine Learning Models on the SANDS Library' names a 'custom-built Python script for SANDS analysis' and 'a custom Python-based tool' but gives no URL, and the article carries no Data Availability statement naming a repository.",
     "verdict": "no author repository; tier 3 is unavailable"

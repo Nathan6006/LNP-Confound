@@ -1,12 +1,12 @@
 component,role,SMILES,structure_source,note
 cKK-E12,ionizable,CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC,corpus_components[CKK-E12],"BroadPharm BP-29590, named in Methods 'LNP Formulation'"
 DLin-MC3-DMA,ionizable,CCCCC/C=C\C/C=C\CCCCCCCCC(OC(=O)CCCN(C)C)CCCCCCCC/C=C\C/C=C\CCCCC,reagent_registry,"(6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl 4-(dimethylamino)butanoate; ACYCLIC ESTER, no ring"
-C12S,ionizable,,none,"stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"
-C12R,ionizable,,none,"stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"
-C13S,ionizable,,none,"stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"
-C13R,ionizable,,none,"stereopure lipomer, 'provided from the Dahlman lab'; NO structure disclosed"
+C12S,ionizable,,none,"stereopure lipomer, 'provided from the Dahlman lab'; DRAWN in Fig 1A (R = C12H25) but unreadable at the resolution held; no SI structure, formula, HRMS or citation"
+C12R,ionizable,,none,"stereopure lipomer; DRAWN in Fig 1A (R = C12H25), unreadable at the resolution held"
+C13S,ionizable,,none,"stereopure lipomer; DRAWN in Fig 1A (R = C13H27), unreadable at the resolution held"
+C13R,ionizable,,none,"stereopure lipomer; DRAWN in Fig 1A (R = C13H27), unreadable at the resolution held"
 Cholesterol,sterol,CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C,reagent_registry,cholest-5-en-3beta-ol
-20alpha-hydroxycholesterol,sterol,,none,named in Results; not in the registry and not in the corpus
+20alpha-hydroxycholesterol,sterol,,none,named in Results and drawn in Fig 1A as '20a-OH Cholesterol'; not in the registry and not in the corpus; not needed by any emitted row
 C14PEG2K,PEG,CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC,corpus_components[C14-PEG2000],"Avanti; a PEG block length is a DISTRIBUTION, so no single SMILES is right"
 C18PEG2K,PEG,,none,named in Results; Screening 2 only
 DSPC,helper,CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC,reagent_registry,"1,2-distearoyl-sn-glycero-3-phosphocholine; 18:0/18:0"
