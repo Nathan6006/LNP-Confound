@@ -34,7 +34,7 @@ composition rather than a compound. The corpus stores the single species SM
 should expect, but pinning that in this registry would turn a convention into
 an assertion and make C11 certify it. The honest treatment is a flag on the
 row, not an entry here -- the same call CLAUDE.md §3 already makes for
-PEG-lipids, and the opposite of what happened with `18PG` (error class 19),
+PEG-lipids, and the opposite of what happened with `18PG` (error class 48),
 where a shorthand was expanded to a specific structure with nothing recording
 that it had been.
 

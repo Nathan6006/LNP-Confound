@@ -24,6 +24,16 @@ from rdkit import Chem, RDLogger
 
 import enumerate_library as EL
 import build_rows as BR
+# Component lookup goes through the ONE guarded loader (F-044). This used to be
+# `comp.setdefault(name, smiles)` over the corpus -- first row wins, over a file
+# in alphabetical experiment order -- which is error class 30 and is how
+# `MC3-CB*` were once built on the KC2 dioxolane. The shared `smi()` RAISES on
+# an ambiguous name instead of picking.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from corpus_components import load as _load_components, smi as _smi
+_sys.path.pop(0)
+
 
 RDLogger.DisableLog("rdApp.*")
 
@@ -58,11 +68,7 @@ def main():
             "..", "..", "provenance", "schema_quality.json")))["columns"]):
         if c not in hdr:
             hdr.append(c)
-    comp = {}
-    for r in corpus:
-        for pre in ("HL", "PEG", "CHL"):
-            if r[f"{pre}_name"] and r[f"{pre}_SMILES"]:
-                comp.setdefault(r[f"{pre}_name"], r[f"{pre}_SMILES"])
+    _resolved, _ambig = _load_components(corpus)
     start = 1 + max(int(r["Index"]) for r in corpus if r["Index"].isdigit())
 
     ordinals = [int(r["bin_index"]) - 1 for r in rows]
@@ -77,11 +83,11 @@ def main():
             "Experiment_ID": EID, "Formulation_ID": f"{EID}_F1",
             "IL_name": r["lipid_name"], "IL_SMILES": r["IL_SMILES"],
             "IL_molratio": MOLPCT["IL"], "IL_to_nucleicacid_massratio": 20.0,
-            "HL_name": "DOPE", "HL_SMILES": comp.get("DOPE", ""),
+            "HL_name": "DOPE", "HL_SMILES": _smi(_resolved, _ambig, "DOPE"),
             "HL_molratio": MOLPCT["HL"],
-            "CHL_name": "Cholesterol", "CHL_SMILES": comp.get("Cholesterol", ""),
+            "CHL_name": "Cholesterol", "CHL_SMILES": _smi(_resolved, _ambig, "Cholesterol"),
             "CHL_molratio": MOLPCT["CHL"],
-            "PEG_name": "DMG-PEG2000", "PEG_SMILES": comp.get("DMG-PEG2000", ""),
+            "PEG_name": "DMG-PEG2000", "PEG_SMILES": _smi(_resolved, _ambig, "DMG-PEG2000"),
             "PEG_molratio": MOLPCT["PEG"],
             "Aqueous_buffer": "citrate", "Mixing_method": "handmixed",
             "Model": "in_vitro", "Model_type": "IGROV1", "Model_target": "in_vitro",

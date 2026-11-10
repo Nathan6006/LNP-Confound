@@ -2,7 +2,11 @@
 
 *"Synthesis and Screening of Bispecific Linker-based Combinatorial Libraries."*
 Qiang Liu et al., **Adv Healthcare Mater 2026, 15, e02225**,
-DOI `10.1002/adhm.202502225`. Not in PubMed as of 2026-10-29.
+DOI `10.1002/adhm.202502225`. **PMID 41145968** -- this header read
+"Not in PubMed as of 2026-10-29" until 2026-11-09 and that was never
+true; the record was already indexed and its DOI matches. Same mistake
+as `WT_2026` (F-027). Look a PMID up before recording a paper as
+unindexed, and store the dated query result.
 
 **344 datapoints → `QL_2026`. Built 2026-10-29. MERGED into `data/` 2026-10-30** (`build_dataset.py` `MERGE`; `provenance/CHANGELOG.md` §11). `data_vitro.csv` 28,541 → 28,885 rows, 41 → 42 experiments.
 
@@ -138,9 +142,27 @@ two bars. Requiring a near-full-width rule fixes it.
 lipid (27), else Fig 2b (293); Fig 3c for library 2 (24). The three-component
 decomposition (`IL_head`, `IL_linker`, `IL_tail1`) is populated for all 344.
 
-**One pooled z-score, after a scalar offset.** The four benchmark LNPs appear in
-both Fig 2c and Fig 3c, giving a cross-figure ratio of **1.112× (sd 0.023)**.
-Library 2 is divided by that and all 344 are z-scored **once, together**.
+**One pooled z-score, and NO scalar offset.** The four benchmark LNPs appear in
+both Fig 2c and Fig 3c, so comparing their readings tests whether the two panels
+share an absolute scale. They do, to within **±2.5%** -- the spread of the
+benchmarks themselves -- so all 344 are z-scored **once, together**, with no
+rescaling applied.
+
+*This paragraph said "a cross-figure ratio of 1.112× (sd 0.023). Library 2 is
+divided by that" until 2026-11-09, which was two corrections out of date.* The
+quantity went 1.1116 -> 1.1069 -> 1.0071 as the bar-top detector was repaired
+(F-018), and an independent round-2 re-measurement then returned **0.9929**, the
+reciprocal. The division is now dropped entirely (F-031): 0.71% is 0.2 of one
+native Fig 3c pixel, and because both panels are read at the TOP EDGE of the
+bar's outline stroke while the value sits at the stroke CENTRE, the pen-width
+difference between them (10 px vs 6 px top rule) biases the ratio by +1.8-3.1%
+on its own -- 2.5-4.4× the offset that was being measured through it. Dropping
+it moved the corpus by rms Δz 0.0009 with zero rank changes.
+
+**Quote the agreement, not the number:** the four shared benchmarks place the
+two panels on a common scale to within ±2.5%, consistent with 1.0. The check
+earned its keep -- it would have caught a real 1.5× inter-run offset -- but it
+cannot measure a sub-pixel one.
 
 An earlier version standardised the two libraries separately, citing a 1.54×
 offset. Both halves were wrong. The 1.54 came from the miscalibrated Fig 3c

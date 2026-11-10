@@ -218,9 +218,44 @@ stop. If it finds a new class, add the check and go again.
 |---|---|---|---|---|---|
 | 1 | 2026-10-30 | 5 (ZT, LL×2, WT, XD, QL) | 1, 2, 3 complete | 27-36 | 8 reviewers + 2 validators + 2 re-measurers, 21 findings: **16 fixed, 5 open, 1 new found by a new check**. 537 rows epi-cholesterol → cholesterol (+15 more in a second copy a validator found); 3 rows rebuilt on the right parent; `Lipid 14-CB*` re-sited; `WT_2026`'s 2,544 rows re-standardised 14 blocks → 7; `QL_2026`'s colorbar re-anchored and 15 of 60 bar tops corrected; `XD_2026`'s 12 bar tops corrected; schema 72 → **79** so 1,152 flagged rows carry their flag; C2 coverage 235 → 634 series; the Tier-1 audit now **gates** (62 baselined metrics, 29/29 seeded mutations caught). New checks C12/C13/C14. |
 
-| 2 | 2026-11-07 | 5 (same) | 1 in progress; Wave 3 running continuously alongside | 37-41 | **In progress.** Started from round 1's open list, not a blank sheet. 7 findings so far (F-022…F-028): **5 applied, 3 open, 1 settled-but-deferred-to-the-user.** Applied: 915 padded `IL_name` cells stripped and gated; `build_manifest.py` made runnable again (it read a *deleted session scratchpad*); the F-001 flag count given a definition in code (**1,157**, not 1,152 — and the metric the docs pointed at returns 1,652); `ZT_2026`'s inverted conjugate confidences derived from structure instead of a literal; `WT_2026`'s PMID, blank on a reason that was false when written. New check **C15** (docs-vs-data, 33 claims) and C7 `padded_cells`; baseline 62 → **70** metrics. F-004 settled on evidence (the design block moved, percents are right, `N:P` unrecoverable) but the repair is the user's call. |
+| 2 | 2026-11-07 → 11-09 | 5 (same) | 1 and 3 complete | 37-48 | **Complete.** Started from round 1's open list. 22 findings (F-022…F-045): **19 applied, 3 open**, plus 5 user decisions. **No reviewer found a wrong structure or a wrong `Experiment_value` in any of the five curations** — 486/486 and 51/51 (ZT), 344/344 structures (QL), 840/840 + 147/147 (LL), 9/9 by full InChIKey and 12/12 values (XD), 2,544 rows at ≤2.7e-15 (WT). The findings are almost all **verification integrity**: the C10 anchor still not independent after the round-1 repair (F-037), three checks scoring a literal 0 for twelve days while a summary claimed they passed (F-038), error class 30 repaired only in the file where it was found (F-044), and this ledger's own class numbers used twice. New checks **C15** (docs-vs-data) and **C16** (anchor independence); baseline 62 → 70 metrics; `rows_with_a_caveat` 1,157 → 1,092. |
 
 ### Round 2 — what changed in how the round was run
+
+**Round 2's own lessons, added 2026-11-09 after Wave 1 closed.** Three of the
+four most consequential findings were about CHECKS, not data, and all three
+share a shape worth naming at the top of this file:
+
+> **A check that cannot see anything reports identically to a check that found
+> nothing.** Every time, the output was a clean line.
+
+- the C10 anchor had been re-copied from the enumeration, so it could only pass
+  (F-037);
+- three Fig 2c marginal checks had been scoring a literal `0` for twelve days
+  while a summary beside them asserted they passed (F-038);
+- **and my first two attempts at the new C16 did it too** — one examined zero
+  templates and one tested a string that can never match, both printing
+  "all derived".
+
+So the rule, which applies to every check added from here: **a new check is not
+done until it has been made to FAIL on purpose.** Seed the exact defect it is
+meant to catch, confirm the alarm fires with the right message, and only then
+trust a clean run. C16 and the F-044 guard were both verified this way
+(`check_anchor_independence.py` against a seeded copy of the pre-F-037 template;
+`corpus_components.smi()` against a seeded duplicate name). `test_checks.py`
+already encodes this for C1–C14 — the gap was that nothing encoded it for
+checks living outside `audit.py`.
+
+**Two more, cheaper:**
+
+- **Repair a class, then grep the corpus for the CONSTRUCT.** Round 1 fixed
+  error class 30 in one file; round 2 found it live in three more, one resolving
+  the exact name that had already caused the original damage. The remedy belongs
+  in one importable place, not copied per caller (F-044, error class 44).
+- **A ledger's identifiers have to be unique or it cannot be cited.** Classes 18
+  and 19 were each used twice for eleven days, and two documents ended up citing
+  "class 19" meaning different things. Take `max + 1` and check it is unused.
+
 
 **Briefing each reviewer with what round 1 already fixed, and telling it not to
 re-confirm that**, is the single change that made round 2 produce new findings

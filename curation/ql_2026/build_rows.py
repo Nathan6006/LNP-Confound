@@ -73,6 +73,16 @@ import statistics as st
 
 from rdkit import Chem, RDLogger
 from rdkit.Chem import Crippen, Descriptors as D, rdMolDescriptors as rd
+# Component lookup goes through the ONE guarded loader (F-044). This used to be
+# `comp.setdefault(name, smiles)` over the corpus -- first row wins, over a file
+# in alphabetical experiment order -- which is error class 30 and is how
+# `MC3-CB*` were once built on the KC2 dioxolane. The shared `smi()` RAISES on
+# an ambiguous name instead of picking.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from corpus_components import load as _load_components, smi as _smi
+_sys.path.pop(0)
+
 
 RDLogger.DisableLog("rdApp.*")
 
@@ -281,12 +291,7 @@ def main():
             HERE, "..", "..", "provenance", "schema_quality.json")))["columns"]):
         if c not in hdr:
             hdr.append(c)
-    comp = {}
-    for r in corpus:
-        for pre in ("HL", "CHL", "PEG"):
-            n = (r[f"{pre}_name"] or "").strip()
-            if n and r[f"{pre}_SMILES"]:
-                comp.setdefault(n, r[f"{pre}_SMILES"])
+    _resolved, _ambig = _load_components(corpus)
     start = 1 + max(int(r["Index"]) for r in corpus if r["Index"].isdigit())
 
     rows = []
@@ -304,15 +309,15 @@ def main():
             # lipid MW varies), so writing 20.0 here would assert something the
             # paper does not say. Left blank; see PROVENANCE.md.
             "IL_to_nucleicacid_massratio": "",
-            "HL_name": "DOPE", "HL_SMILES": comp.get("DOPE", ""),
+            "HL_name": "DOPE", "HL_SMILES": _smi(_resolved, _ambig, "DOPE"),
             "HL_molratio": MOLPCT["HL"],
-            "CHL_name": "Cholesterol", "CHL_SMILES": comp.get("Cholesterol", ""),
+            "CHL_name": "Cholesterol", "CHL_SMILES": _smi(_resolved, _ambig, "Cholesterol"),
             "CHL_molratio": MOLPCT["CHL"],
             # The SI Materials list names a phosphoethanolamine-PEG2000 from
             # Sigma, while the main text, Methods and every figure say
             # DMG-PEG 2000. The corpus distinguishes the two, so the figures'
             # name is used and the contradiction recorded in PROVENANCE.md.
-            "PEG_name": "DMG-PEG2000", "PEG_SMILES": comp.get("DMG-PEG2000", ""),
+            "PEG_name": "DMG-PEG2000", "PEG_SMILES": _smi(_resolved, _ambig, "DMG-PEG2000"),
             "PEG_molratio": MOLPCT["PEG"],
             "Aqueous_buffer": "citrate", "Mixing_method": "handmixed",
             "Model": "in_vitro", "Model_type": "HeLa", "Model_target": "in_vitro",

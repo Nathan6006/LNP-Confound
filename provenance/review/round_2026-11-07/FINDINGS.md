@@ -519,6 +519,183 @@ exists to answer a question the user asked for.
 
 ---
 
+## F-031 to F-045 — Wave 1 adjudicated and applied
+
+All five Wave-1 reports are on disk in this folder. Every finding below was
+re-derived here before anything was edited; where my re-derivation disagreed with
+the reviewer, that is said. **No reviewer found a wrong structure or a wrong
+`Experiment_value` in any of the five curations**, and nothing in this batch
+changed one. What they found is concentrated in verification integrity.
+
+### The user's five calls, and what they changed
+
+| | decision | effect in the data |
+|---|---|---|
+| **F-031** | `QL_2026`: drop the cross-library divisor, keep the benchmark comparison as a scale check | rms Δz 0.0009, zero rank changes |
+| **F-032** | `QL_2026`: heatmap cells take their band **midpoint** | 186 cells down a median 12.8% |
+| **F-035** | `XD_2026`: clear `structure_assumed` on E1–E9; keep `confidence = medium` | 9 rows, flag only |
+| **F-037** | re-derive the `ZT_2026` C10 anchor, and add a detector | no data change |
+| **F-004** | `WT_2026`: **blank** `N:P` on all 129 URS rows | 129 values removed |
+
+F-004 moved twice. Reconstruction was implemented, committed, and then reverted
+on the user's instruction. The reasoning is kept in
+`realign_np_ratio.__doc__` and the design→percent map in `02_WT_2026_qc.json`,
+so the work is recoverable; what is not kept is any emitted number, because all
+three candidates (7.1985 shipped / 16.7659 reconstructed / 6.0 printed) are
+unsupported and a blank asserts none of them.
+
+### F-037 — the C10 anchor was still not independent, and this is the round's most important finding
+
+`make_reference.py` was written in round 1 **specifically** to replace an anchor
+that was a byte copy of the enumeration (F-013, the epicholesterol bug). Its
+`AMINE_HALF` template turned out to be the enumeration's own canonical SMILES
+with the 82-character sterol substring replaced by `%` and the ring digit
+renumbered 1→5. I undid those two edits myself: **byte-identical over 141
+characters.** A hand-typed SMILES does not coincide with RDKit's canonical
+traversal — which starts C6O2B2 at a dodecyl chain terminus — over that length.
+
+So the round-1 repair cured the half the bug was in and silently re-copied the
+other half. C10 could still not catch a connectivity or regiochemistry error on
+the flagship curation: error classes 14 and 15, the two it exists for. **Error
+class 24 recurring inside the file written to retire it.**
+
+Nothing in the data is wrong — the reviewer read Fig 2a at 600 dpi and confirmed
+the connectivity, arm placement and quaternization site. Repaired by assembling
+the template from parts head-first, starting at the quaternised piperazine
+nitrogen, which is a different traversal from the enumerator's. It **agrees**, so
+the connectivity is now confirmed rather than compared to itself.
+
+**New check C16** (`provenance/check_anchor_independence.py`), and the way it had
+to be built is the lesson. **Byte-identity of the emitted anchor is not the
+signal, and testing for it is a trap**: a correctly re-derived structure is
+byte-identical to a correct enumeration once canonicalised — that is what
+agreement means. That is exactly why C10's existing `anchor_may_be_a_copy` missed
+this (the folder *did* have a generator). C16 works one level up, on the
+generator's composed template: strip placeholders and all ring digits, then
+require every long piece to appear in the enumeration in order.
+
+**My first two versions of C16 reported clean and could not see anything.** The
+first read quoted literals out of the source — my rewritten template is composed
+from variables, so it has no long literal and the check examined **zero**
+templates. The second read the composed template but tested it as one string,
+which can never match, because the enumeration has 82 characters of cholesterol
+sitting where the placeholder goes. Both printed "all derived". I only caught it
+by seeding the old pasted template into a throwaway copy and confirming the
+check *fires*. **A check that cannot see anything reports identically to a check
+that found nothing** — the failure this whole program exists to prevent, walked
+into twice in twenty minutes. C16 is now verified in both directions.
+
+### F-038 — three checks had been reporting failures as passes for twelve days
+
+Three of `ZT_2026`'s four Fig 2c marginal checks were keyed on `*_molpct`
+against `REPORTED` keys that are raw design levels (35/50/65, 1/2/4, 10/30/50).
+The 2026-10-28 column rename moved those levels to `*_molratio`, so every lookup
+missed every key and `got.get(k, 0)` returned the literal **0**. The QC file
+recorded exactly that — `"digitized": {"35":0,"50":0,"65":0}`,
+`"rank_order_matches": false` — while `07_qc.json` beside it asserted *"ALL FOUR
+EXACT … 15 of 15 bins match with zero deviation."* Only the fourth ever ran,
+because `helper_lipid` was not renamed.
+
+Classes 28 and 35 compounding: a `.get` default turned a miss into a datum, and
+a rename invalidated everything keyed on the old name. Re-keyed, with `got[k]`
+so a miss raises and an assert naming the column's actual contents. All four now
+run and all 15 bins match exactly — **the claim was substantively true the whole
+time, it simply had not been tested.** That is the worst version of this bug:
+nothing was wrong, so nothing drew attention to the fact that nothing was being
+checked.
+
+### F-040 — 65 rows were marked as bounds and are measurements
+
+`QL_2026`'s floor flag sat on 113 rows and belongs on 48. The `< 4.0` colour
+threshold straddled two LUT bands:
+
+| n | rgb | distance from white | what it is |
+|---|---|---|---|
+| 48 | 254,254,254 / 255,255,255 | **1.73** | the floor. Truth in [0, bound]. |
+| 65 | 254,254,252 | **3.32** | measurably not white |
+
+A true zero renders white, so the 65 are bounded **below** as well as above —
+measurements with ~15% quantization, not upper bounds. Flagging them
+`value_is_bound = upper` told a consumer that 65 real readings might be zero.
+Threshold tightened to 2.5, which splits the bands with margin either side; the
+65 now fall through to F-032's midpoint and the 48 keep the band top, because for
+them that number *is* the bound.
+
+**This moves the headline F-001 figure: `rows_with_a_caveat` 1,157 → 1,092.**
+Fifth value for that count. `CLAUDE.md`, `docs_claims.json` and the drift
+sequence were updated in the same change — C15 is what forces that, and it
+caught the reagent count going stale in the same pass.
+
+### F-041, F-042 — two `ZT_2026` caveats that lived only in a QC file
+
+Both are the F-001 failure recurring *after* the round that named it.
+
+- **F-041:** the paper contradicts itself about the in-vitro dose — Fig 2c's
+  caption says 20 ng/well (n=3), Methods 4.8 says 15 ng/well (n=5) for the same
+  wells. The caption's 20 ng is stored, correctly, but all 486 rows showed a
+  settled dose at `confidence = high` while the conflict sat in
+  `new_curation_qc.json`. Now on the row.
+- **F-042:** the 51 vivo rows' `Dose_ug_nucleicacid = 2.0` is **derived**, not
+  printed: 0.1 mg/kg × an 18–20 g mouse = 1.8–2.0 µg, and 2.0 is the top of the
+  range. The conversion and the 20 g choice were in no file and on no row. Kept
+  at 2.0 — any single number is a choice and that one is already in the corpus —
+  with the disclosure appended to whatever structure note the row already had,
+  because a row can carry both and losing either is F-001 in miniature.
+
+### F-043 — C11 now pins 15 reagents, and one is deliberately excluded
+
+`DODAP` (on all 537 `ZT_2026` rows) and `DMPC` were outside the registry, so the
+check that ties a **name** to a **structure** did not cover them. 15 clean, 0
+mismatched.
+
+`EggSM` is deliberately **not** added, and the rule is now written down: egg
+sphingomyelin is a natural extract (~84% N-palmitoyl plus C18:0, C22:0, C24:1),
+so the name denotes a composition, not a compound. The corpus stores SM 16:0 as
+its representative, which is conventional — but a registry entry would turn that
+convention into an assertion and have C11 certify it. Same call `CLAUDE.md` §3
+already makes for PEG-lipids, and the opposite of what happened with `18PG`.
+
+### F-044 — a known class repaired only where it was found
+
+Error class 30 — component lookup by name over the corpus, first row wins, over a
+file in alphabetical experiment order — was hardened in `build_new_curation.py`
+in round 1 and left live in **three more emitters**. One of them resolves
+`DLin-MC3-DMA`: the very name whose ambiguity once put 419 measurements on the
+wrong molecule, and which is unambiguous **today only because an unrelated name
+repair landed**. That is the "fixed by luck of row order rather than by a guard"
+case `build_new_curation.py`'s own docstring warns about.
+
+Fixed with a shared `curation/corpus_components.py` whose `smi()` **raises** on
+an ambiguous name rather than picking — a fourth copy of the guard would have
+been the same mistake again. Verified both ways: it resolves the real names,
+and it refuses on a seeded ambiguity and on an unknown name. It also reports
+that **292 names in the corpus carry more than one structure**, which is the
+figure error class 30 cites.
+
+### Documentation repaired, and one ledger-integrity failure
+
+`QL_2026`'s `PROVENANCE.md` asserted the superseded **1.112×** offset and a
+"Not in PubMed as of 2026-10-29" header that was never true. `XD_2026`'s
+`stage03_structures.py` claimed "every chain length is counted from the stage02
+polylines, not by eye" when the twelve SMILES are typed literals and nothing
+reads the polylines — class 24 again, costing nothing here only because a
+reviewer re-traced all twelve and matched by full InChIKey. The retracted "299
+publications" was removed from the one file the round-1 retraction never reached
+(F-036). `brief.py` dropped the fifth component, so every `ZT_2026` row in a
+packet appeared to sum to 79% with 20.55% unnamed — a packet that manufactures a
+false finding, and one reviewer duly chased it (F-039).
+
+**And this file's own ledger had broken identifiers.** Classes **18 and 19 were
+each used twice** from 2026-10-29, and the damage had already happened: two
+documents cite "error class 19" meaning *different* classes. Renumbered to 47 and
+48, keeping the numbers already cited correctly, with the collision and the rule
+(`max + 1`, and check it is unused) recorded in `ERROR_CLASSES.md`. A ratchet
+whose references do not resolve is not a ratchet.
+
+**Error classes 40–48** now carry this round; 48 classes, all distinct.
+
+---
+
 ## Wave 1 reports
 
 ## F-026 — the chance baseline in `CLAUDE.md` §7 matched no corpus this project has had
