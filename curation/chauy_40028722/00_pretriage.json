@@ -1,0 +1,25 @@
+{
+  "pretriaged_by": "orchestrator, 2026-11-10, before committing an extraction agent",
+  "why_pretriaged": "The ready queue was empty and this was one of two headlessly fetchable pending papers. Measuring the SI first cost two tool calls and changed the decision.",
+  "acquisition": {
+    "figures": "PMC articles/instance/<numeric>/bin/ -- worked",
+    "supplements": "Europe PMC /PMC11878168/supplementaryFiles -- HTTP 200, 5,367,946 B, magic 504b0304, VALID ZIP, extracted to source/suppl/ (33 files)",
+    "note": "The same route returned HTTP 500 for PMC13450591 and a 297-byte XML stub for PMC11099935, so it is per-PMCID and must be judged by magic bytes AND size together."
+  },
+  "si_tables_measured": {
+    "method": "dumped word/document.xml directly rather than trusting a scanner (F-070)",
+    "w_tbl_count": 6,
+    "table_1": "an IL10 mRNA ORF sequence -- not a screen",
+    "table_2": "5 rows (4 data) | HA to Lipids molar ratio % | Size | Zeta | EE% | Transfection Efficiency % <- THE ONLY DELIVERY READOUT",
+    "tables_3_to_6": "ML outputs and hyperparameter grids -- not measurements"
+  },
+  "verdict": "LOW YIELD, DEFERRED -- not refused",
+  "reasoning": [
+    "The only admissible readout is Transfection Efficiency % in a FOUR-data-row table, and its variable is the HA-to-lipid molar ratio -- a FORMULATION axis, not chemistry. That is F-067's pattern for the eighth time.",
+    "Labels (MC3, LNP2, PEG2000, S2) suggest one or two ionizable lipids, both likely benchmarks already in the corpus -- so the chemical support gained is ~0 regardless of row count.",
+    "Licence is CC BY-NC. NC fails CLAUDE.md section 8's CC0/CC-BY requirement on its own, so even a clean extraction could not be released with the corpus.",
+    "Two agents were already running and the marginal value of a third on ~4 formulation rows of benchmark chemistry is lower than the acquisition and adjudication work left."
+  ],
+  "what_a_future_session_should_do": "If the main text holds a larger per-formulation screen with a translated readout, extract it -- the SI alone does not. The figures are already on disk. Resolve the NC licence question before any release either way.",
+  "not_asserted": "This is a triage judgement from the SI only. The main-text figures were NOT read, so 'low yield' is a claim about what is on disk, not about the paper."
+}

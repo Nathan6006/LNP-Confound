@@ -29,6 +29,9 @@ def main():
 
     tw = {k: v for k, v in S["three_way_helper_concordance"].items()
           if not k.startswith("_")}
+    import statistics as _st
+    _zs = [float(r["Experiment_value"]) for r in rows]
+    _zmean, _zsd = _st.fmean(_zs), _st.pstdev(_zs)
 
     qc = {
 "_what": "KK_2015 quality control. Kauffman KJ et al., Nano Lett 15(11):7300-7306 "
@@ -163,8 +166,20 @@ def main():
     "quantity": "z of log10(serum EPO ng/mL), POPULATION sd (ddof=0)",
     "mean_log10": E["z_block"]["mu_log10"], "sd_log10": E["z_block"]["sd_log10"],
     "z_min": E["z_block"]["z_min"], "z_max": E["z_block"]["z_max"],
-    "block_mean_residual": "< 1e-12 (asserted)",
-    "block_sd_residual": "< 1e-12 (asserted)",
+    "block_mean_residual_computed": "< 1e-12, asserted in stage05_emit.py on the "
+                                    "in-memory floats",
+    "block_sd_residual_computed": "< 1e-12, asserted likewise",
+    "block_stats_AS_STORED": {
+      "mean": _zmean, "pop_sd": _zsd,
+      "note": "Experiment_value is written at 6 decimal places, following the "
+              "existing curations' convention, so the block statistics recomputed "
+              "FROM THE FILE differ from the in-memory ones by a rounding "
+              "artifact. Measured: mean %.3e and population sd %.12f. A 1e-12 "
+              "bound on the stored values could only ever fail, which is the "
+              "shape the briefing warns about; the figure predicted from 6-dp "
+              "rounding of 36 values is ~5e-7/sqrt(12) ~ 1.4e-7 for the mean, "
+              "and the observed 2.8e-8 sits inside that." % (_zmean, _zsd),
+    },
     "error_class_22_cannot_arise": "there is ONE Model_type and ONE organ across "
                                    "all 36 rows, so no per-cell or per-cohort z "
                                    "exists to delete a between-assay offset",

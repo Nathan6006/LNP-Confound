@@ -1053,8 +1053,8 @@
    "measures": "expression",
    "lib_src": "abstract",
    "note": "216 LNPs with ML-assisted design for dendritic-cell immunomodulation.",
-   "stage": "queued",
-   "status": "pending_acquisition",
+   "stage": "00_acquired",
+   "status": "pretriaged_low_yield",
    "blockers": [
     "216 LNP FORMULATIONS varying lipid composition, N/P and HA modification -- not 216 lipids. Abstract-verified 2026-11-10."
    ],
@@ -1388,7 +1388,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T18:57:33Z",
+ "updated_utc": "2026-11-10T18:58:53Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

@@ -223,8 +223,23 @@ Measured on three PMCIDs while clearing the pending-acquisition queue:
 | route | figures | supplements |
 |---|---|---|
 | PMC `articles/instance/<numeric>/bin/<name>` | **works** (ga1/gr1-gr5.jpg, nihms figures) | **HTML error page, ~21.5 kB**, every time |
-| Europe PMC `/<PMCID>/supplementaryFiles` | — | **HTTP 500** (10,135 B of HTML) |
+| Europe PMC `/<PMCID>/supplementaryFiles` | — | **per-PMCID, see below** |
 | **Elsevier CDN** `ars.els-cdn.com/content/image/1-s2.0-<PII>-mmc<N>.<ext>` | — | **works, anonymously** |
+
+**CORRECTION, same day.** I first wrote that the Europe PMC `supplementaryFiles`
+route "returns HTTP 500", having tested it on one PMCID. It is **per-PMCID**, and
+one of the three worked:
+
+| PMCID | HTTP | bytes | magic | verdict |
+|---|---|---|---|---|
+| `PMC13450591` (zhangn) | **500** | 10,135 | `3c21646f` = `<!do` | HTML error |
+| `PMC11878168` (chauy) | **200** | **5,367,946** | `504b0304` | **valid ZIP, extracted** |
+| `PMC11099935` (maohq) | 200 | **297** | `3c3f786d` = `<?xm` | XML stub, no files |
+
+So the route is worth trying on every PMCID and must be judged by **magic bytes
+and size together** — a 200 with 297 bytes of XML is as empty as a 500, and only
+`504b0304` means a real archive. Generalising from a single probe was the error;
+the Elsevier CDN route below is still the one that recovered the tier-1 file.
 
 So the `/bin/` route's success on figures says nothing about supplements, and the
 21.5 kB HTML body is the tell — **a size floor would have accepted it**, which is
