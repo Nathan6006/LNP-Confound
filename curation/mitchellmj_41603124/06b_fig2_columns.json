@@ -1,0 +1,53 @@
+{
+ "panel_borders_detected_px": [
+  48,
+  530
+ ],
+ "cells_span_px": 481,
+ "how_borders_were_found": "neutral-dark columns (saturation < 6, value < 200) over the Blood strip; coloured cells are excluded by saturation, which is what a plain darkness test got wrong",
+ "strips": {
+  "a-Blood": {
+   "dominant_cycles": 123.99999999999999,
+   "pitch_px": 3.879
+  },
+  "a-Lungs": {
+   "dominant_cycles": 123.99999999999999,
+   "pitch_px": 3.879
+  },
+  "a-Liver": {
+   "dominant_cycles": 123.99999999999999,
+   "pitch_px": 3.879
+  },
+  "a-Spleen": {
+   "dominant_cycles": 123.99999999999999,
+   "pitch_px": 3.879
+  },
+  "b-Blood": {
+   "dominant_cycles": 123.99999999999999,
+   "pitch_px": 3.879
+  }
+ },
+ "columns_measured": 124.0,
+ "all_strips_agree": true,
+ "pitch_px": 3.879,
+ "border_sensitivity_sweep": {
+  "combinations": 25,
+  "range": [
+   123,
+   125
+  ],
+  "mode": 124,
+  "what": "both borders moved +/- 2 px independently"
+ },
+ "supported_range": [
+  123,
+  125
+ ],
+ "printed_numbers_inside_the_range": [],
+ "printed_numbers_excluded": {
+  "122": "-1 from the nearest supported value",
+  "133": "+8 from the nearest supported value",
+  "134": "+9 from the nearest supported value"
+ },
+ "verdict": "Measured 123-125 columns (mode 124; all 5 strips agree exactly at the nominal borders, and the range is a +/-2 px sweep of both borders). Of the numbers this paper prints, NONE falls inside that range. Supplementary Table 3 lists 133 formulations, counted from native PDF text; the abstract says 122 LNPs were screened simultaneously. The figure's geometry supports NEITHER exactly: 133 and 134 are far outside, and 122 sits one column below the range. What is certain is that Figure 2 does NOT plot 133 LNPs, so the Conclusions' 'library of 133 distinct mRNA LNPs' is the number FORMULATED, not the number screened. The paper never reconciles them."
+}

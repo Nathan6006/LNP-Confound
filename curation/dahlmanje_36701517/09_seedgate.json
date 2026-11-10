@@ -1,0 +1,200 @@
+{
+ "_what": "seeded mutations, ONE PROCESS PER SEED, verdict from returncode; a seed with no METRIC line is NOT CREDITED",
+ "control": {
+  "bars_read": 6,
+  "returncode": 0,
+  "values_pct": [
+   5.894,
+   16.407,
+   19.772,
+   3.791,
+   41.64,
+   2.95
+  ]
+ },
+ "exit_codes": {
+  "0": "panel read",
+  "2": "detector refused",
+  "3": "crashed before the metric"
+ },
+ "move_threshold_pct": 0.25,
+ "n_credited": 7,
+ "n_harmless": 3,
+ "n_leaks": 1,
+ "n_seeds": 10,
+ "seeds": [
+  {
+   "bars_read": 0,
+   "bars_read_moved": "6 -> 0",
+   "credited": true,
+   "metric_line_present": true,
+   "refusal_text": "REFUSED CalibrationError calibrate: tick-fit residual 2.83 px exceeds 2.5 px over 6 ticks at [105.2, 146.86, 194.27, 241.97, 289.33, 337.09].",
+   "returncode": 2,
+   "route": "refusal",
+   "seed": "tick_shift 6",
+   "values_pct": [],
+   "values_that_moved": 0,
+   "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+   "why": "top y tick stub moved +6 px: a gross scale error"
+  },
+  {
+   "bars_read": 0,
+   "bars_read_moved": "6 -> 0",
+   "credited": true,
+   "metric_line_present": true,
+   "refusal_text": "REFUSED DetectionError panel at x=597: worst leave-one-out tick residual 2.95 px > the unrescaled 1.5 px gate. It would pass the 4.09 px rescaled gate, but widening is a decision to r",
+   "returncode": 2,
+   "route": "refusal",
+   "seed": "tick_shift 3",
+   "values_pct": [],
+   "values_that_moved": 0,
+   "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+   "why": "top y tick stub moved +3 px"
+  },
+  {
+   "bars_read": 0,
+   "bars_read_moved": "6 -> 0",
+   "credited": true,
+   "metric_line_present": true,
+   "refusal_text": "REFUSED DetectionError panel at x=597: worst leave-one-out tick residual 1.95 px > the unrescaled 1.5 px gate. It would pass the 4.09 px rescaled gate, but widening is a decision to r",
+   "returncode": 2,
+   "route": "refusal",
+   "seed": "tick_shift 2",
+   "values_pct": [],
+   "values_that_moved": 0,
+   "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+   "why": "top y tick stub moved +2 px"
+  },
+  {
+   "bars_read": 6,
+   "bars_read_moved": "no",
+   "credited": false,
+   "harmless": true,
+   "metric_line_present": true,
+   "returncode": 0,
+   "route": "value change",
+   "seed": "tick_shift 1",
+   "values_pct": [
+    5.831,
+    16.376,
+    19.751,
+    3.722,
+    41.685,
+    2.879
+   ],
+   "values_that_moved": 0,
+   "verdict": "HARMLESS, NOT CREDITED: nothing refused and no value moved by more than 0.25 pct. Correct behaviour, but it is not evidence that any check fired.",
+   "why": "top y tick stub moved +1 px: below the 1.5 px gate"
+  },
+  {
+   "bars_read": 0,
+   "bars_read_moved": "6 -> 0",
+   "credited": true,
+   "metric_line_present": true,
+   "refusal_text": "REFUSED DetectionError panel at x=597: 5 x-axis category ticks but 6 cell-type labels. Refusing: silently zipping a short list onto a long one is how values land on the wrong category",
+   "returncode": 2,
+   "route": "refusal",
+   "seed": "category_stub_deleted",
+   "values_pct": [],
+   "values_that_moved": 0,
+   "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+   "why": "one x category stub erased: six labels, five slots"
+  },
+  {
+   "bars_read": 6,
+   "bars_read_moved": "no",
+   "credited": false,
+   "harmless": true,
+   "metric_line_present": true,
+   "returncode": 0,
+   "route": "value change",
+   "seed": "marker 10",
+   "values_pct": [
+    5.894,
+    16.407,
+    19.772,
+    3.791,
+    41.64,
+    2.95
+   ],
+   "values_that_moved": 0,
+   "verdict": "HARMLESS, NOT CREDITED: nothing refused and no value moved by more than 0.25 pct. Correct behaviour, but it is not evidence that any check fired.",
+   "why": "a 10 px wide replicate marker on an 18 px bar (56%)"
+  },
+  {
+   "bars_read": 6,
+   "bars_read_moved": "no",
+   "credited": false,
+   "harmless": true,
+   "metric_line_present": true,
+   "returncode": 0,
+   "route": "value change",
+   "seed": "marker 16",
+   "values_pct": [
+    5.894,
+    16.407,
+    19.772,
+    3.791,
+    41.64,
+    2.95
+   ],
+   "values_that_moved": 0,
+   "verdict": "HARMLESS, NOT CREDITED: nothing refused and no value moved by more than 0.25 pct. Correct behaviour, but it is not evidence that any check fired.",
+   "why": "a 16 px wide replicate marker (89%, just under the 0.90 coverage rule)"
+  },
+  {
+   "bars_read": 5,
+   "bars_read_moved": "6 -> 5",
+   "credited": true,
+   "metric_line_present": true,
+   "returncode": 0,
+   "route": "silent bar loss",
+   "seed": "marker 17",
+   "values_pct": [
+    5.894,
+    16.407,
+    19.772,
+    3.791,
+    null,
+    2.95
+   ],
+   "values_that_moved": 0,
+   "verdict": "CREDITED by BAR LOSS: no exception was raised, but the bars-read count moved 6 -> 5 because the slot picker found no bar of measurable width in that slot. Output was removed, which is the count moving.",
+   "why": "a 17 px wide replicate marker (94%)"
+  },
+  {
+   "bars_read": 6,
+   "bars_read_moved": "no",
+   "credited": true,
+   "metric_line_present": true,
+   "returncode": 0,
+   "route": "value change",
+   "seed": "marker 18",
+   "values_pct": [
+    5.894,
+    16.407,
+    19.772,
+    3.791,
+    54.256,
+    2.95
+   ],
+   "values_that_moved": 1,
+   "verdict": "CREDITED as a demonstrated LEAK, not as a check with teeth: nothing refused, the panel still reported 6 bars, and 1 value(s) changed by more than 0.25 pct. This is a measured blind spot.",
+   "why": "a full-bar-width marker (100%)"
+  },
+  {
+   "bars_read": 0,
+   "bars_read_moved": "6 -> 0",
+   "credited": true,
+   "metric_line_present": true,
+   "refusal_text": "REFUSED DetectionError read: no y-axis spine found near x=597, y=99. The panel bounds are derived from the image, so an erased spine stops the read here.",
+   "returncode": 2,
+   "route": "refusal",
+   "seed": "spine_erased",
+   "values_pct": [],
+   "values_that_moved": 0,
+   "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+   "why": "the y-axis spine erased: removes the furniture the 100%-level check leans on"
+  }
+ ]
+}

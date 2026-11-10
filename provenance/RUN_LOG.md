@@ -2326,3 +2326,84 @@ benchmark-only for every cross-source pair but one.
 receive the limit notice; their output lands in their own folders and is
 recoverable from disk exactly as the four sleep-killed agents were. Nothing is
 merged; `data/` is untouched at 29,195 x 79 / 1,803 x 79.
+
+### 13:4x — `dahlmanje_36701517`: 37 rows, and the in-vivo pool's possible THIRD shared lipid
+
+**37 rows**, and the agent answered the question I had set it correctly: **this is
+not a zero.** The title's subject (scRNA-seq of the lung's own transcriptome) is
+the host response and is inadmissible, but the paper also reads **Cre→tdTomato
+genomic recombination**, which is downstream of translation and therefore a
+genuine delivery endpoint, plus an aVHH protein-abundance arm. 109 values
+classified, 37 yes / 72 no, sums exact, zero empty reasons.
+
+**FINDING BA (F-064) — merging it would add the in-vivo pool's third shared
+chemistry, and it is NOT a benchmark.** Verified against `data/data_vivo.csv`:
+
+| | |
+|---|---|
+| rows / distinct structures / experiments | 1,803 / 1,506 / 20 |
+| **structures shared by more than one experiment** | **exactly 2** |
+
+`DLin-MC3-DMA` (6 sources) and `SM-102` (4) — reproducing §8's statement
+exactly, and the reason T8 parked the in-vivo analysis as supplementary.
+
+**cKK-E12 is in the vivo pool once**, in `BL_2023`, 6 rows, named **`MD-1`** —
+five of them `lung_epithelium` on DOTAP/DOPE. This paper's whole
+137-formulation screen is cKK-E12, so merging makes it the **third** shared
+in-vivo chemistry, against the *same target organ*.
+
+And it is a different case from the one §8 worries about. That entry's hazard is
+a source whose only shared lipids are **MC3 and SM-102** — universal positive
+controls that top every screen and can push concordance toward +1 for reasons
+unrelated to transferable SAR. **cKK-E12 is a research lipid, not a control**,
+and in this very paper the lead cKK-E12 formulation **ranks 2 of 22**, not 1.
+
+**But the countervailing fact is just as sharp: this paper contributes exactly
+ONE ionizable-lipid structure.** All 137 formulations are cKK-E12; the variable
+is the helper lipid. So the question is not whether the screen is good — it is
+whether a one-lipid *formulation* screen belongs in a cross-lab **chemistry**
+corpus in exchange for a non-benchmark in-vivo shared point. **Three
+independent papers this run are one-lipid formulation screens**
+(`maohq_39375194` 5,112 rows on MC3, `dixonjb_41269090` 28 on cKK-E12, this one
+37 on cKK-E12), which says the corpus needs a stated policy rather than three
+separate judgements.
+
+**F-063 is worse than it looked**, and this is the proof: the overlap above is
+invisible to an `IL_name` join, because those six rows are called `MD-1`. With
+`CKK-E12` in `AC_2025` and the literal **`other`** in `JW_2024`, a name lookup
+finds **1 of 3** — and the overlap *is* the entire argument. A C19 grouping by
+full InChIKey would have surfaced it automatically.
+
+**Its seeding is the most honest of the run: 7/10 credited, 3 harmless, 1 LEAK,
+all stated.** A +1 px tick shift moved no value by >0.25% — recorded as
+*harmless, not credited*, and named as the measured sensitivity limit rather
+than hidden. A marker sweep found 10/16 px harmless, 17 px credited *by silent
+bar loss*, and **18 px leaks** — a full-width marker read as a bar top. It then
+measured the headroom: the widest real cap in that panel is **0.647** of its bar
+across 16/16 against the 0.90 gate, margin 0.253, so the leak is a stated
+limitation and not a live defect. Its `spine_erased` seed was a **no-op until
+fixed**, because the bounds came from a constant rather than the image.
+
+**It hit the direction trap and turned it into a permanent guard.** Its first
+DSPC build reported `C44H88NO8P` at `789.624755` — right formula, right mass,
+parsed, canonicalised — and was **a ketone bearing an ether**. Caught only by
+InChIKey, and that exact defect is now its seeded test (identical formula,
+Δmass 4e-7, different skeleton, exit 1). Third agent today to hit this class.
+
+**A refusal it declined to engineer around:** Fig S13c's liver bars are
+**parallelograms** (~2 px shear) and `bars.bar_top` refuses 5 of 6. It tried a
+de-skew and **rejected it** — the spine's own slope recovers 4/6 and the bar-edge
+slope 3/6, so no estimate validates itself — and explicitly declined to widen
+the flank tolerance, trim the window, or take the better-looking flank.
+
+Its unprinted checks: **the average column equals the mean of its own three
+organ columns to 1.67e-9 on 22/22**, which validates all 88 transcribed numerals
+because one misread digit breaks it; **pie labels pin a unique composition row
+3/3 and recover an unlabelled PEG slice**; and pool shares summing short in one
+direction, where mean(3 organ residuals) matches the average-column residual to
+**3.3e-10** — i.e. exactly one missing pooled LNP, independently corroborating a
+text-vs-table count gap it had found separately (137 stated, 130 tabulated).
+
+Licence **CC BY** — §8-compatible, the third such source this run.
+
+Launched `dahlmanje_30394729`.

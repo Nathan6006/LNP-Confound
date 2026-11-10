@@ -32,7 +32,7 @@ this paper would add **cKK-E12 as a third shared in-vivo lipid**, and
 same chemistry and the same target as Cat-LNP. That is a shared-lipid pair with
 chemistry held constant, which is what Result 3 is made of.
 
-**STATUS: OPEN**
+STATUS: OPEN
 
 ---
 
@@ -62,7 +62,7 @@ one used here is that the table's `average normalized delivery` column is the
 arithmetic mean of its three organ columns to **1.7e-9 on 22 of 22 rows**, which
 a single misread digit in any of 88 numerals would break.
 
-**STATUS: OPEN**
+STATUS: OPEN
 
 ---
 
@@ -75,7 +75,7 @@ different timepoint (1 day, not 4) and a different dose path. Emitting it
 beside the Fig S13 rows would put two assays under one `Experiment_ID`, which is
 the shape of error class 22.
 
-**STATUS: OPEN**
+STATUS: OPEN
 
 ---
 
@@ -92,7 +92,7 @@ baselined at 40.
 **`kidney`** and **`heart`** (existing set: bone_marrow, brain, ear, liver,
 lung_epithelium, muscle, spleen, whole_body).
 
-**STATUS: OPEN**
+STATUS: OPEN
 
 ---
 
@@ -103,7 +103,7 @@ Cre recombinase is none of them. `SX_2025` pairs `Mouse_Ai14` with
 `base_editor`, but that is a different chemistry and reusing the label would
 assert something false. `Cre` is declared here rather than forced.
 
-**STATUS: OPEN**
+STATUS: OPEN
 
 ---
 
@@ -118,7 +118,7 @@ alternative — writing the stereoisomer from the chemical name — would be
 inventing a structure the paper does not state, and `provenance/reagent_registry.py`
 has no cKK-E12 entry to take it from.
 
-**STATUS: OPEN**
+STATUS: OPEN
 
 ---
 
@@ -133,4 +133,4 @@ inadmissible, because mixing two normalisations inside one `Experiment_ID` is
 error class 22. An-LNP therefore contributes 6 rows where Cat-LNP contributes 16
 and Neu-LNP 15, and the imbalance is a refusal, not a finding about An-LNP.
 
-**STATUS: OPEN**
+STATUS: OPEN

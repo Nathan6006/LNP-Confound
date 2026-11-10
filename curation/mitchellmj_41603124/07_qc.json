@@ -328,5 +328,101 @@
   "SI_figures": "all flattened rasters; page.get_drawings() over all 29 SI pages returns chemistry-free paths only (the TOC rule, table rules, and two flow-cytometry gating panels on pp. 25-26). Supp Fig 2 is 722x1004 at a measured 137.5 dpi; Supp Fig 14 is 1800x2400 at a measured 300.0 dpi."
  },
  "_rows_emitted": 0,
- "_why_zero": "Two independent blockers, either one sufficient. (1) The screen's 3,840 attributable values are b-mRNA ACCUMULATION measured by RNA sequencing before peak translation, which is not one of the four delivery readouts data/ records. (2) The validation panels ARE delivery readouts and ARE attributable, but 5 of their 7 ionizable lipids have no determinable structure, and the 2 that do are the 2 the paper did not need to draw."
+ "_why_zero": "Two independent blockers, either one sufficient. (1) The screen's 3,840 attributable values are b-mRNA ACCUMULATION measured by RNA sequencing before peak translation, which is not one of the four delivery readouts data/ records. (2) The validation panels ARE delivery readouts and ARE attributable, but 5 of their 7 ionizable lipids have no determinable structure, and the 2 that do are the 2 the paper did not need to draw.",
+ "P19_fig2_column_count": {
+  "why": "the abstract says 122 LNPs, the Conclusions say 133, and Supp Table 3 lists 133. Figure 2's x axis is 'Barcode number' with NO tick labels, so the count cannot be read -- but the cell pitch can be measured, and the candidates are ~9 FFT bins apart.",
+  "borders_detected_px": [
+   48,
+   530
+  ],
+  "cells_span_px": 481,
+  "columns_measured": 124.0,
+  "all_five_strips_agree_exactly": true,
+  "border_sensitivity_sweep": {
+   "combinations": 25,
+   "range": [
+    123,
+    125
+   ],
+   "mode": 124,
+   "what": "both borders moved +/- 2 px independently"
+  },
+  "printed_numbers_inside_the_range": [],
+  "printed_numbers_excluded": {
+   "122": "-1 from the nearest supported value",
+   "133": "+8 from the nearest supported value",
+   "134": "+9 from the nearest supported value"
+  },
+  "returncode": 0,
+  "verdict": "Measured 123-125 columns (mode 124; all 5 strips agree exactly at the nominal borders, and the range is a +/-2 px sweep of both borders). Of the numbers this paper prints, NONE falls inside that range. Supplementary Table 3 lists 133 formulations, counted from native PDF text; the abstract says 122 LNPs were screened simultaneously. The figure's geometry supports NEITHER exactly: 133 and 134 are far outside, and 122 sits one column below the range. What is certain is that Figure 2 does NOT plot 133 LNPs, so the Conclusions' 'library of 133 distinct mRNA LNPs' is the number FORMULATED, not the number screened. The paper never reconciles them."
+ },
+ "P20_same_lab_siblings": {
+  "mitchellmj_38982196": {
+   "grammar": "<amine>T-O<tail> (2-iminothiolane / thioether / acrylate)",
+   "members": 100,
+   "shared_member_names_with_this_paper": 0,
+   "shared_chemistry": "none"
+  },
+  "mitchellmj_41555650": {
+   "grammar": "C<tail>-<amine core> (epoxide + polyamine)",
+   "members": 15,
+   "shared_member_names_with_this_paper": [
+    "C12-200",
+    "C12-494",
+    "C14-494"
+   ],
+   "n_shared": 3,
+   "structures": {
+    "C12-200": {
+     "sibling_inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+     "corpus_inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+     "in_live_corpus": true
+    },
+    "C12-494": {
+     "sibling_inchikey": "QZHJDCDIFKCBDW-UHFFFAOYSA-N",
+     "corpus_inchikey": null,
+     "in_live_corpus": false
+    },
+    "C14-494": {
+     "sibling_inchikey": "OQALBVGFAKJDAR-UHFFFAOYSA-N",
+     "corpus_inchikey": null,
+     "in_live_corpus": false
+    }
+   },
+   "but": "this paper attributes NO VALUE to any of the three. The 13 catalogue reagents (Index 121-133) appear only in Figure 2's UNLABELLED heat map; Supplementary Figure 14, the panel that makes the screen attributable, is the 20x6 nDm grid and does not contain them. None of the three is in Figure 3b either, whose only benchmark is SM-102. So the shared chemistry yields no usable cross-source pair."
+  },
+  "same_lab_is_not_same_numbering": "Three Mitchell-lab folders, three unrelated numbering systems: 38982196's amines are 1-25 from its own building-block set, 41555650's cores are 114/200/306/490/494, and this paper's amines are 1-20. A bare integer means a different molecule in each. This is why no name join on an amine token is performed anywhere here."
+ },
+ "P21_degree_of_substitution": {
+  "why_asked": "a structureless row cannot be emitted (data/ has 0 blank IL_SMILES in 30,998 rows), and a polydisperse conjugate with an unstated degree of substitution has no determinable SMILES.",
+  "is_this_a_polymer_conjugate": "NO. These are discrete small molecules: a one-step aza-Michael addition of an amine N-H onto a dialkyl maleate.",
+  "degree_of_substitution_STATED": "YES, qualitatively, and it is the scheme's own sentence. Supplementary Figure 2 caption, verbatim: 'Dialkyl maleates provide higher reactivity and FAVOR MONO-ADDITION, facilitating plug-and-play diversification.' The three drawn products confirm it: 18D4 carries exactly one arm on each of its three N-H nitrogens and none on its two piperazine tertiary N.",
+  "confirmed_arithmetically_on_18D4": "3 arms gives a+b = 8.017 carbons against the drawn n-butyl 4+4 = 8; 4 arms would require M = 1128.5 and there is no peak within 200 Da of its [M+H]+.",
+  "so_the_blocker_is_not_substitution": "It is that amines 1-16 and 19, and maleates 6.2, 8 and 18, are drawn NOWHERE in this paper. They are defined only in reference 34 (Xu, Han, Xu, Ricciardi et al., bioRxiv Mar 2025), a different paper."
+ },
+ "P22_validation_subset_structural_variance": {
+  "n_formulations": 7,
+  "distinct_ionizable_lipids": 7,
+  "distinct_amines": [
+   "17",
+   "18",
+   "2",
+   "20",
+   "7"
+  ],
+  "distinct_maleates": [
+   "4",
+   "8",
+   "8i",
+   "9.2"
+  ],
+  "verdict": "REAL structural variance: six nDm members drawn from five different amines and four different maleates, plus SM-102. This is NOT the sibling case of two formulations built on one compound differing only in helper lipid.",
+  "excipients": "all six nDm LNPs share one recipe exactly (35 / DOPE 16 / Chol 46.5 / C14-PEG2000 2.5); SM-102 uses the clinical recipe (50 / DSPC 10 / Chol 38.5 / DMG-PEG2000 1.5), so the SM-102 comparison confounds lipid with formulation."
+ },
+ "P23_licence": {
+  "article": "CC BY. Europe PMC core record for PMID 41603124: license = 'cc by', isOpenAccess = 'Y', inPMC = 'Y'.",
+  "article_verdict": "CC-BY-compatible, satisfies CLAUDE.md s8.",
+  "supplementary": "ADMA-38-e14370-s001.pdf is served from the same CC BY PMC deposit; no separate licence string is printed on it.",
+  "repository": "NONE EXISTS - no code or data deposit of any kind (P16), so there is no repository licence to record."
+ }
 }

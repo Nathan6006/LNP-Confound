@@ -1,0 +1,179 @@
+{
+ "benchmarks_and_whether_the_lead_tops_its_screen": {
+  "_what": "This paper contains NO literature benchmark ionizable lipid -- no MC3, no SM-102, no ALC-0315. Its only ionizable lipid is cKK-E12 in every formulation, so there is no benchmark-vs-novel comparison to make on chemistry.",
+  "cationic_screen_table_figS6c": {
+   "lead": "LNP #11, barcode TCCTAAGA, DDAB, C14PEG2K, 35/18/2.5/44.5 -- Cat-LNP's composition exactly as printed in Fig 3a",
+   "lead_identified_by": "the red vector stroke, colour exactly (1.0,0.0,0.0), 1.25 pt, SI p.17 y=[221.1,230.7] pt, on the 10th data row",
+   "lead_rank_by_average_normalized_delivery": "2 of 22 (7.065 vs LNP #2 at 8.163)",
+   "lead_rank_by_lung_average": "2 of 22 (10.708 vs LNP #2 at 12.563)",
+   "ratio_top_to_lead_average": 1.1555,
+   "ratio_top_to_lead_lung": 1.1732,
+   "verdict": "NO -- the lead does not top its own screen on either column. 'Lead' is never defined in the paper. See 08_contradictions.csv X-2."
+  },
+  "one_other_individually_measured_LNP": "Fig S14 compares Cat-LNP at 0.3 mg/kg against a previously reported lung-targeting LNP (the 'Kauffman LNP', ref 13). Not digitised; recorded in 05_values.csv.",
+  "the_comparable_question": "does the LNP the authors took forward top its own screen?"
+ },
+ "endpoint_determination": {
+  "_question": "Does this paper contain ANY cargo-expression measurement?",
+  "answer": "YES.",
+  "borderline_called_explicitly": "Fig 4b,c reports the % of cells positive for an aVHH PSEUDOGENE built from scRNA-seq reads. That counts cargo mRNA molecules, not expressed protein, it is reported per transcriptional cluster for one LNP, and no per-formulation value table exists. Marked inadmissible.",
+  "evidence": [
+   "Cre mRNA is the cargo of every LNP in the screens and of Cat-/Neu-/An-LNP individually. SI Methods: mRNA was transcribed from a pMA7 construct with full N1-methyl-pseudouridine substitution, Cap1, enzymatic polyadenylation.",
+   "The readout is GENOMIC RECOMBINATION: Ai14 reporter mice, in which Cre protein translated from the delivered mRNA excises a Lox-Stop cassette and the cell becomes tdTomato+. Main text: 'functional mRNA delivery is quantified as the percentage of tdTomato+ cells'. That is downstream of translation, so it is cargo expression, not particle arrival.",
+   "A second cargo-expression readout exists: Fig S17 measures % aVHH+ cells and aVHH MFI by flow cytometry after delivering mRNA encoding a GPI-anchored VHH -- protein abundance.",
+   "The corpus already carries this readout convention: SX_2025 has 141 in-vivo rows at Model_type = Mouse_Ai14 with Experiment_method = editing_efficiency_normalized."
+  ],
+  "what_the_title_refers_to_is_NOT_delivery": "Figures 4a and 5 and Supplementary Figures 20-22 are single-cell RNA-seq of the LUNG'S OWN transcriptome one hour after injection -- 27 clusters, 243/145 differentially expressed genes vs PBS, 27 of 835 Reactome pathways. That is what the tissue does ABOUT the particle. It is recorded in 05_values.csv as corpus_admissible = no."
+ },
+ "error_class_32_headroom_measured": {
+  "_verdict": "The widest real cap is 0.647 of its bar, against a 0.90 gate -- a margin of 0.253 on 16 of 16 bars. The width sweep in seeded_selfchecks shows that a marker would have to reach the FULL bar width to be read as a top, and nothing in this figure comes close. That is what makes the error-class-32 exposure in that sweep a stated limitation rather than a live defect.",
+  "_what": "How close does a REAL error-bar cap in this figure come to the 0.90 full-width coverage rule that bars.bar_top uses? Measured on all 16 readable Cat-LNP bars of Fig S13a: the widest contiguous bar-coloured run in the 26 rows above each bar's detected top.",
+  "coverage_gate": 0.9,
+  "margin_to_gate": 0.253,
+  "max_cap_to_bar_ratio": 0.647,
+  "min_cap_to_bar_ratio": 0.524,
+  "n_bars": 16,
+  "per_bar": [
+   {
+    "bar_width_px": 21,
+    "cell_type": "ECs",
+    "organ": "heart",
+    "ratio": 0.571,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "Immune cells",
+    "organ": "heart",
+    "ratio": 0.524,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "ECs",
+    "organ": "kidney",
+    "ratio": 0.619,
+    "widest_coloured_run_above_the_top_px": 13
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "Monocytes",
+    "organ": "kidney",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "B cells",
+    "organ": "liver",
+    "ratio": 0.647,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 18,
+    "cell_type": "DCs",
+    "organ": "liver",
+    "ratio": 0.556,
+    "widest_coloured_run_above_the_top_px": 10
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "ECs",
+    "organ": "liver",
+    "ratio": 0.647,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "Hepatocytes",
+    "organ": "liver",
+    "ratio": 0.647,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 18,
+    "cell_type": "Kupffer Cells",
+    "organ": "liver",
+    "ratio": 0.556,
+    "widest_coloured_run_above_the_top_px": 10
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "T cells",
+    "organ": "liver",
+    "ratio": 0.588,
+    "widest_coloured_run_above_the_top_px": 10
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "B cells",
+    "organ": "lung",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "DCs",
+    "organ": "lung",
+    "ratio": 0.619,
+    "widest_coloured_run_above_the_top_px": 13
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "ECs",
+    "organ": "lung",
+    "ratio": 0.619,
+    "widest_coloured_run_above_the_top_px": 13
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "Monocytes",
+    "organ": "lung",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "T cells",
+    "organ": "lung",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 23,
+    "cell_type": "DCs",
+    "organ": "spleen",
+    "ratio": 0.609,
+    "widest_coloured_run_above_the_top_px": 14
+   }
+  ]
+ },
+ "figS6_table_row_counts": {
+  "_method": "horizontal rule detection on each raster: a rule is a row where >60% of the first 700 columns are below grey 200",
+  "_see": "08_contradictions.csv X-1",
+  "anionic_p16": {
+   "bands": 52,
+   "header": 1,
+   "lnp_rows": 50,
+   "naked_barcode": 1,
+   "rules": 53
+  },
+  "cationic_p17": {
+   "bands": 24,
+   "header": 1,
+   "lnp_rows": 22,
+   "naked_barcode": 1,
+   "rules": 25
+  },
+  "deficit": 7,
+  "neutral_p15": {
+   "bands": 60,
+   "header": 1,
+   "lnp_rows": 58,
+   "naked_barcode": 1,
+   "rules": 61
+  },
+  "stated_in_text": 137,
+  "total_lnp_rows": 130
+ }
+}

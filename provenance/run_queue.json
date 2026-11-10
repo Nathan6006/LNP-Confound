@@ -969,13 +969,15 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "137 LNPs with paired transcriptomics.",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted",
    "blockers": [],
    "n_files": 1,
    "pmcid": "PMC9912332",
    "value_reach": "C_pmc_fulltext",
-   "agent_task_id": "ae1cf935025179201"
+   "agent_task_id": "ae1cf935025179201",
+   "rows_emitted": 37,
+   "structures_enumerated": 1
   },
   {
    "rank": 39,
@@ -1155,15 +1157,16 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "109 glycolipid nanoparticles, spleen-targeting without charge changes.",
-   "stage": "00_acquired",
-   "status": "ready_to_extract",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [
     "BARCODED IN VIVO SCREEN -- likely a FORMULATION screen in disguise. dahlmanje_29489381 stated 281 and turned out to be 564 formulations over only 15 distinct lipomers, 206 of them sharing one (7C1); 7 of the 15 are PEI polymers with no determinable SMILES. Deprioritised: confirm DISTINCT IONIZABLE STRUCTURES before spending an agent."
    ],
    "n_files": 1,
    "pmcid": "PMC12625924",
    "value_reach": "C_pmc_fulltext",
-   "kind_original": "ivv"
+   "kind_original": "ivv",
+   "agent_task_id": "acec759d30ea4a081"
   },
   {
    "rank": 46,
@@ -1209,15 +1212,16 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "~100 LNPs.",
-   "stage": "00_acquired",
-   "status": "ready_to_extract",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [
     "BARCODED IN VIVO SCREEN -- likely a FORMULATION screen in disguise. dahlmanje_29489381 stated 281 and turned out to be 564 formulations over only 15 distinct lipomers, 206 of them sharing one (7C1); 7 of the 15 are PEI polymers with no determinable SMILES. Deprioritised: confirm DISTINCT IONIZABLE STRUCTURES before spending an agent."
    ],
    "n_files": 1,
    "pmcid": "PMC6556374",
    "value_reach": "C_pmc_fulltext",
-   "kind_original": "ivv"
+   "kind_original": "ivv",
+   "agent_task_id": "af0a55fd218bee1fc"
   },
   {
    "rank": 48,
@@ -1365,7 +1369,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T14:09:04Z",
+ "updated_utc": "2026-11-10T16:59:23Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

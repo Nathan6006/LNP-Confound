@@ -29,6 +29,70 @@
   }
  },
  "_what": "QC for PMID 36701517, every check in numbers",
+ "anchor_seed_gate_returncodes": {
+  "_all_as_expected": true,
+  "_expected": {
+   "clean": 0,
+   "seed_ast_guard": 1,
+   "seed_isomeric_ester_reversal": 1
+  },
+  "clean": {
+   "argv": [
+    "python3",
+    "-I",
+    "make_reference.py"
+   ],
+   "returncode": 0,
+   "stdout_tail": [
+    "18:0 PC (DSPC)     C44H88NO8P     789.624755  rings=0 stereo=2 C=C=[]",
+    "18:1 PA            C39H72O8P-     699.497029  rings=0 stereo=2 C=C=['STEREOCIS', 'STEREOCIS']",
+    "AST guard: {'forbidden_calls_found': 0, 'forbidden_imports_found': 0, 'nodes_walked': 1776}",
+    "wrote /Users/nathanliu/LNP/confound/curation/dahlmanje_36701517/reference_structures.csv"
+   ],
+   "verdict_source": "proc.returncode"
+  },
+  "seed_ast_guard": {
+   "argv": [
+    "python3",
+    "-I",
+    "make_reference.py",
+    "--seed-guard"
+   ],
+   "returncode": 1,
+   "stdout_tail": [],
+   "verdict_source": "proc.returncode"
+  },
+  "seed_isomeric_ester_reversal": {
+   "argv": [
+    "python3",
+    "-I",
+    "make_reference.py",
+    "--seed-ester"
+   ],
+   "returncode": 1,
+   "stdout_tail": [
+    "  formula    clean C44H88NO8P   seeded C44H88NO8P   same=True",
+    "  exact mass clean 789.624755 seeded 789.624755  delta 0.000000406",
+    "  skeleton   clean NRJAVPSFFCBXDT seeded YXPWLPQHOHNCMY   DIFFERENT=True",
+    "  gate refused the seeded build: True"
+   ],
+   "verdict_source": "proc.returncode"
+  }
+ },
+ "benchmarks_and_whether_the_lead_tops_its_screen": {
+  "_what": "This paper contains NO literature benchmark ionizable lipid -- no MC3, no SM-102, no ALC-0315. Its only ionizable lipid is cKK-E12 in every formulation, so there is no benchmark-vs-novel comparison to make on chemistry.",
+  "cationic_screen_table_figS6c": {
+   "lead": "LNP #11, barcode TCCTAAGA, DDAB, C14PEG2K, 35/18/2.5/44.5 -- Cat-LNP's composition exactly as printed in Fig 3a",
+   "lead_identified_by": "the red vector stroke, colour exactly (1.0,0.0,0.0), 1.25 pt, SI p.17 y=[221.1,230.7] pt, on the 10th data row",
+   "lead_rank_by_average_normalized_delivery": "2 of 22 (7.065 vs LNP #2 at 8.163)",
+   "lead_rank_by_lung_average": "2 of 22 (10.708 vs LNP #2 at 12.563)",
+   "ratio_top_to_lead_average": 1.1555,
+   "ratio_top_to_lead_lung": 1.1732,
+   "verdict": "NO -- the lead does not top its own screen on either column. 'Lead' is never defined in the paper. See 08_contradictions.csv X-2."
+  },
+  "one_other_individually_measured_LNP": "Fig S14 compares Cat-LNP at 0.3 mg/kg against a previously reported lung-targeting LNP (the 'Kauffman LNP', ref 13). Not digitised; recorded in 05_values.csv.",
+  "the_comparable_question": "does the LNP the authors took forward top its own screen?"
+ },
  "cross_panel_figS13_vs_figS15": {
   "_expected": "the difference should be the PBS level, which Fig S13 shows at 0-4.5% everywhere. A difference outside roughly [-0.6, 5] would mean the two panels do not plot the same measurement.",
   "_join": "on (organ, cell type) LABEL, never on column index -- Fig S13 lung is ECs/Monocytes/DCs/T/B and Fig S15 lung is ECs/DCs/T/B/Monocytes",
@@ -180,6 +244,141 @@
   "raw_minus_abovebackground_median": 0.635,
   "raw_minus_abovebackground_min": -0.361
  },
+ "endpoint_determination": {
+  "_question": "Does this paper contain ANY cargo-expression measurement?",
+  "answer": "YES.",
+  "borderline_called_explicitly": "Fig 4b,c reports the % of cells positive for an aVHH PSEUDOGENE built from scRNA-seq reads. That counts cargo mRNA molecules, not expressed protein, it is reported per transcriptional cluster for one LNP, and no per-formulation value table exists. Marked inadmissible.",
+  "evidence": [
+   "Cre mRNA is the cargo of every LNP in the screens and of Cat-/Neu-/An-LNP individually. SI Methods: mRNA was transcribed from a pMA7 construct with full N1-methyl-pseudouridine substitution, Cap1, enzymatic polyadenylation.",
+   "The readout is GENOMIC RECOMBINATION: Ai14 reporter mice, in which Cre protein translated from the delivered mRNA excises a Lox-Stop cassette and the cell becomes tdTomato+. Main text: 'functional mRNA delivery is quantified as the percentage of tdTomato+ cells'. That is downstream of translation, so it is cargo expression, not particle arrival.",
+   "A second cargo-expression readout exists: Fig S17 measures % aVHH+ cells and aVHH MFI by flow cytometry after delivering mRNA encoding a GPI-anchored VHH -- protein abundance.",
+   "The corpus already carries this readout convention: SX_2025 has 141 in-vivo rows at Model_type = Mouse_Ai14 with Experiment_method = editing_efficiency_normalized."
+  ],
+  "what_the_title_refers_to_is_NOT_delivery": "Figures 4a and 5 and Supplementary Figures 20-22 are single-cell RNA-seq of the LUNG'S OWN transcriptome one hour after injection -- 27 clusters, 243/145 differentially expressed genes vs PBS, 27 of 835 Reactome pathways. That is what the tissue does ABOUT the particle. It is recorded in 05_values.csv as corpus_admissible = no."
+ },
+ "error_class_32_headroom_measured": {
+  "_verdict": "The widest real cap is 0.647 of its bar against a 0.90 gate -- a margin of 0.253 on 16 of 16 bars. The width sweep in the seed gate shows a marker must reach the FULL bar width to be read as a top, and nothing drawn in this figure comes close.",
+  "_what": "the widest contiguous bar-coloured run in the 26 rows above each bar's detected top, over every readable Cat-LNP bar of Fig S13a. These are the figure's own error-bar caps.",
+  "coverage_gate": 0.9,
+  "margin_to_gate": 0.253,
+  "max_cap_to_bar_ratio": 0.647,
+  "min_cap_to_bar_ratio": 0.524,
+  "n_bars": 16,
+  "per_bar": [
+   {
+    "bar_width_px": 21,
+    "cell_type": "ECs",
+    "organ": "heart",
+    "ratio": 0.571,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "Immune cells",
+    "organ": "heart",
+    "ratio": 0.524,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "ECs",
+    "organ": "kidney",
+    "ratio": 0.619,
+    "widest_coloured_run_above_the_top_px": 13
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "Monocytes",
+    "organ": "kidney",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "B cells",
+    "organ": "liver",
+    "ratio": 0.647,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 18,
+    "cell_type": "DCs",
+    "organ": "liver",
+    "ratio": 0.556,
+    "widest_coloured_run_above_the_top_px": 10
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "ECs",
+    "organ": "liver",
+    "ratio": 0.647,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "Hepatocytes",
+    "organ": "liver",
+    "ratio": 0.647,
+    "widest_coloured_run_above_the_top_px": 11
+   },
+   {
+    "bar_width_px": 18,
+    "cell_type": "Kupffer Cells",
+    "organ": "liver",
+    "ratio": 0.556,
+    "widest_coloured_run_above_the_top_px": 10
+   },
+   {
+    "bar_width_px": 17,
+    "cell_type": "T cells",
+    "organ": "liver",
+    "ratio": 0.588,
+    "widest_coloured_run_above_the_top_px": 10
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "B cells",
+    "organ": "lung",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "DCs",
+    "organ": "lung",
+    "ratio": 0.619,
+    "widest_coloured_run_above_the_top_px": 13
+   },
+   {
+    "bar_width_px": 21,
+    "cell_type": "ECs",
+    "organ": "lung",
+    "ratio": 0.619,
+    "widest_coloured_run_above_the_top_px": 13
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "Monocytes",
+    "organ": "lung",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 20,
+    "cell_type": "T cells",
+    "organ": "lung",
+    "ratio": 0.6,
+    "widest_coloured_run_above_the_top_px": 12
+   },
+   {
+    "bar_width_px": 23,
+    "cell_type": "DCs",
+    "organ": "spleen",
+    "ratio": 0.609,
+    "widest_coloured_run_above_the_top_px": 14
+   }
+  ]
+ },
  "figS1_molar_ratios": {
   "_why": "a round number the authors implied but never printed",
   "columns": [
@@ -237,6 +436,34 @@
   ],
   "sum": 100.0,
   "sum_residual_vs_100": 0.0
+ },
+ "figS6_table_row_counts": {
+  "_method": "horizontal rule detection on each raster: a rule is a row where >60% of the first 700 columns are below grey 200",
+  "_see": "08_contradictions.csv X-1",
+  "anionic_p16": {
+   "bands": 52,
+   "header": 1,
+   "lnp_rows": 50,
+   "naked_barcode": 1,
+   "rules": 53
+  },
+  "cationic_p17": {
+   "bands": 24,
+   "header": 1,
+   "lnp_rows": 22,
+   "naked_barcode": 1,
+   "rules": 25
+  },
+  "deficit": 7,
+  "neutral_p15": {
+   "bands": 60,
+   "header": 1,
+   "lnp_rows": 58,
+   "naked_barcode": 1,
+   "rules": 61
+  },
+  "stated_in_text": 137,
+  "total_lnp_rows": 130
  },
  "figS6c_average_is_the_mean_of_the_three_organ_columns": {
   "_why": "reproduces a column the authors derived but never defined, and simultaneously validates 88 transcribed numerals.",
@@ -482,6 +709,367 @@
   "value_pct_min": 2.027,
   "z_mean": 0.0,
   "z_sd_population": 1.0
+ },
+ "seed_gate_one_process_per_seed": {
+  "_what": "seeded mutations, ONE PROCESS PER SEED, verdict from returncode; a seed with no METRIC line is NOT CREDITED",
+  "control": {
+   "bars_read": 6,
+   "returncode": 0,
+   "values_pct": [
+    5.894,
+    16.407,
+    19.772,
+    3.791,
+    41.64,
+    2.95
+   ]
+  },
+  "exit_codes": {
+   "0": "panel read",
+   "2": "detector refused",
+   "3": "crashed before the metric"
+  },
+  "move_threshold_pct": 0.25,
+  "n_credited": 7,
+  "n_harmless": 3,
+  "n_leaks": 1,
+  "n_seeds": 10,
+  "seeds": [
+   {
+    "bars_read": 0,
+    "bars_read_moved": "6 -> 0",
+    "credited": true,
+    "metric_line_present": true,
+    "refusal_text": "REFUSED CalibrationError calibrate: tick-fit residual 2.83 px exceeds 2.5 px over 6 ticks at [105.2, 146.86, 194.27, 241.97, 289.33, 337.09].",
+    "returncode": 2,
+    "route": "refusal",
+    "seed": "tick_shift 6",
+    "values_pct": [],
+    "values_that_moved": 0,
+    "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+    "why": "top y tick stub moved +6 px: a gross scale error"
+   },
+   {
+    "bars_read": 0,
+    "bars_read_moved": "6 -> 0",
+    "credited": true,
+    "metric_line_present": true,
+    "refusal_text": "REFUSED DetectionError panel at x=597: worst leave-one-out tick residual 2.95 px > the unrescaled 1.5 px gate. It would pass the 4.09 px rescaled gate, but widening is a decision to r",
+    "returncode": 2,
+    "route": "refusal",
+    "seed": "tick_shift 3",
+    "values_pct": [],
+    "values_that_moved": 0,
+    "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+    "why": "top y tick stub moved +3 px"
+   },
+   {
+    "bars_read": 0,
+    "bars_read_moved": "6 -> 0",
+    "credited": true,
+    "metric_line_present": true,
+    "refusal_text": "REFUSED DetectionError panel at x=597: worst leave-one-out tick residual 1.95 px > the unrescaled 1.5 px gate. It would pass the 4.09 px rescaled gate, but widening is a decision to r",
+    "returncode": 2,
+    "route": "refusal",
+    "seed": "tick_shift 2",
+    "values_pct": [],
+    "values_that_moved": 0,
+    "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+    "why": "top y tick stub moved +2 px"
+   },
+   {
+    "bars_read": 6,
+    "bars_read_moved": "no",
+    "credited": false,
+    "harmless": true,
+    "metric_line_present": true,
+    "returncode": 0,
+    "route": "value change",
+    "seed": "tick_shift 1",
+    "values_pct": [
+     5.831,
+     16.376,
+     19.751,
+     3.722,
+     41.685,
+     2.879
+    ],
+    "values_that_moved": 0,
+    "verdict": "HARMLESS, NOT CREDITED: nothing refused and no value moved by more than 0.25 pct. Correct behaviour, but it is not evidence that any check fired.",
+    "why": "top y tick stub moved +1 px: below the 1.5 px gate"
+   },
+   {
+    "bars_read": 0,
+    "bars_read_moved": "6 -> 0",
+    "credited": true,
+    "metric_line_present": true,
+    "refusal_text": "REFUSED DetectionError panel at x=597: 5 x-axis category ticks but 6 cell-type labels. Refusing: silently zipping a short list onto a long one is how values land on the wrong category",
+    "returncode": 2,
+    "route": "refusal",
+    "seed": "category_stub_deleted",
+    "values_pct": [],
+    "values_that_moved": 0,
+    "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+    "why": "one x category stub erased: six labels, five slots"
+   },
+   {
+    "bars_read": 6,
+    "bars_read_moved": "no",
+    "credited": false,
+    "harmless": true,
+    "metric_line_present": true,
+    "returncode": 0,
+    "route": "value change",
+    "seed": "marker 10",
+    "values_pct": [
+     5.894,
+     16.407,
+     19.772,
+     3.791,
+     41.64,
+     2.95
+    ],
+    "values_that_moved": 0,
+    "verdict": "HARMLESS, NOT CREDITED: nothing refused and no value moved by more than 0.25 pct. Correct behaviour, but it is not evidence that any check fired.",
+    "why": "a 10 px wide replicate marker on an 18 px bar (56%)"
+   },
+   {
+    "bars_read": 6,
+    "bars_read_moved": "no",
+    "credited": false,
+    "harmless": true,
+    "metric_line_present": true,
+    "returncode": 0,
+    "route": "value change",
+    "seed": "marker 16",
+    "values_pct": [
+     5.894,
+     16.407,
+     19.772,
+     3.791,
+     41.64,
+     2.95
+    ],
+    "values_that_moved": 0,
+    "verdict": "HARMLESS, NOT CREDITED: nothing refused and no value moved by more than 0.25 pct. Correct behaviour, but it is not evidence that any check fired.",
+    "why": "a 16 px wide replicate marker (89%, just under the 0.90 coverage rule)"
+   },
+   {
+    "bars_read": 5,
+    "bars_read_moved": "6 -> 5",
+    "credited": true,
+    "metric_line_present": true,
+    "returncode": 0,
+    "route": "silent bar loss",
+    "seed": "marker 17",
+    "values_pct": [
+     5.894,
+     16.407,
+     19.772,
+     3.791,
+     null,
+     2.95
+    ],
+    "values_that_moved": 0,
+    "verdict": "CREDITED by BAR LOSS: no exception was raised, but the bars-read count moved 6 -> 5 because the slot picker found no bar of measurable width in that slot. Output was removed, which is the count moving.",
+    "why": "a 17 px wide replicate marker (94%)"
+   },
+   {
+    "bars_read": 6,
+    "bars_read_moved": "no",
+    "credited": true,
+    "metric_line_present": true,
+    "returncode": 0,
+    "route": "value change",
+    "seed": "marker 18",
+    "values_pct": [
+     5.894,
+     16.407,
+     19.772,
+     3.791,
+     54.256,
+     2.95
+    ],
+    "values_that_moved": 1,
+    "verdict": "CREDITED as a demonstrated LEAK, not as a check with teeth: nothing refused, the panel still reported 6 bars, and 1 value(s) changed by more than 0.25 pct. This is a measured blind spot.",
+    "why": "a full-bar-width marker (100%)"
+   },
+   {
+    "bars_read": 0,
+    "bars_read_moved": "6 -> 0",
+    "credited": true,
+    "metric_line_present": true,
+    "refusal_text": "REFUSED DetectionError read: no y-axis spine found near x=597, y=99. The panel bounds are derived from the image, so an erased spine stops the read here.",
+    "returncode": 2,
+    "route": "refusal",
+    "seed": "spine_erased",
+    "values_pct": [],
+    "values_that_moved": 0,
+    "verdict": "CREDITED by REFUSAL: the detector refused and the bars-read count moved 6 -> 0, so real output was removed.",
+    "why": "the y-axis spine erased: removes the furniture the 100%-level check leans on"
+   }
+  ]
+ },
+ "seeded_selfchecks": {
+  "_what": "seeded mutations against this folder's own geometry; credited only when a count MOVES",
+  "control": {
+   "lnp_bars_read": 6,
+   "loo_max_px": 0.178,
+   "panel": "Fig S13a Liver",
+   "spine_top_residual_px": 0.225,
+   "values_pct": [
+    5.894,
+    16.407,
+    19.772,
+    3.791,
+    41.64,
+    2.95
+   ],
+   "verdict": "PASS -- the control must still pass, or a seed proves nothing"
+  },
+  "n_credited": 5,
+  "n_seeds": 8,
+  "seeds": {
+   "below_the_gate_+1px_on_the_top_tick": {
+    "credited": false,
+    "lnp_bars_read": 6,
+    "loo_max_px": 0.953,
+    "returncode_equivalent": 0,
+    "seed": "y tick stub at row 99 moved +1 px",
+    "values_pct": [
+     5.831,
+     16.376,
+     19.751,
+     3.722,
+     41.685,
+     2.879
+    ],
+    "values_that_moved_by_more_than_0.25pct": 0,
+    "verdict": "NOT CAUGHT. The scale was corrupted and 0 of 6 values moved by more than 0.25 pct, and nothing refused. This is the gate's measured SENSITIVITY LIMIT and it is reported, not hidden: a 1 px tick error on this panel gives a leave-one-out residual of 0.953 px against the 1.5 px gate, which is 0.42 pct of signal on a 2.378 px/pct axis."
+   },
+   "category_stub_deleted": {
+    "count_moved": "6 -> 0",
+    "credited": true,
+    "message": "panel at x=597: 5 x-axis category ticks but 6 cell-type labels. Refusing: silently zipping a short list onto a long one is how values land on the wrong category.",
+    "returncode_equivalent": 1,
+    "seed": "x category stub at column 758 erased",
+    "verdict": "CAUGHT and CREDITED. Without this the remaining five bars would have been labelled ECs, Kupffer Cells, DCs, T cells, B cells -- every value after the gap on the wrong cell type."
+   },
+   "centred_replicate_marker": {
+    "control_value_pct": 41.64,
+    "credited": false,
+    "kupffer_value_pct": 41.64,
+    "lnp_bars_read": 6,
+    "returncode_equivalent": 0,
+    "seed": "an 8 px tall, 60%-wide bar-coloured blob 25 px above the Kupffer Cells bar top -- a replicate marker",
+    "value_moved": false,
+    "verdict": "NOT CREDITED, and that is the honest label. Nothing refused and no count moved: the full-width coverage rule simply stepped past a blob that never reaches 0.90 of the bar width, and the value came back unchanged. Correct behaviour, but it is not evidence that the flank test fired. The wider variant below is what exercises that path."
+   },
+   "centred_replicate_marker_width_sweep": {
+    "bar_width_px": 18,
+    "control_value_pct": 41.64,
+    "credited": false,
+    "n_harmless_or_refused": 9,
+    "n_that_changed_the_value": 1,
+    "n_widths_tested": 10,
+    "seed": "an 8 px tall bar-coloured blob 25 px above the Kupffer Cells bar top, swept from 9 to 18 px wide on a 18 px bar",
+    "sweep": {
+     "10": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "11": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "12": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "13": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "14": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "15": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "16": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     },
+     "17": {
+      "moved": false,
+      "refused": false,
+      "value_pct": null
+     },
+     "18": {
+      "moved": true,
+      "refused": false,
+      "value_pct": 54.256
+     },
+     "9": {
+      "moved": false,
+      "refused": false,
+      "value_pct": 41.64
+     }
+    },
+    "verdict": "NOT CREDITED: widths [18] changed the value. MEASURED LIMITATION, stated rather than glossed: on an 18 px bar the flank test has almost no room to operate. A marker must cover >= 90% of the bar to get past the coverage rule, i.e. >= 17 px, and a centred marker that wide already covers both 5 px flanks -- so the two guards do not overlap at this bar width and the protection here is the coverage rule alone. The flank test earns its keep on wider bars; it is not what is holding this panel up.",
+    "widths_that_changed_the_value": [
+     18
+    ]
+   },
+   "gross_+6px_on_the_top_tick": {
+    "count_moved": "6 -> 0",
+    "credited": true,
+    "lnp_bars_read": 0,
+    "message": "calibrate: tick-fit residual 2.83 px exceeds 2.5 px over 6 ticks at [105.2, 146.86, 194.27, 241.97, 289.33, 337.09].",
+    "raised": "CalibrationError",
+    "returncode_equivalent": 1,
+    "seed": "y tick stub at row 99 moved +6 px",
+    "verdict": "CAUGHT, and CREDITED: the readable-bar count moved from 6 to 0. This is not a bare raise -- the control run reads 6 bars from the same panel, so the refusal removed real output."
+   },
+   "inverted_tick_value_order": {
+    "calibrate_raised": false,
+    "caught_by_spine_check": true,
+    "credited": true,
+    "seed": "TICK_VALUES passed bottom-up instead of top-down",
+    "spine_top_residual_px": 238.02,
+    "tick_fit_residual_px": 0.1283,
+    "verdict": "calibrate itself is BLIND to this -- it fits cleanly at 0.1283 px residual with 0% at the top of the panel. The spine check catches it at 238.02 px against a 3.0 px gate. This is the bug this file actually had, and the spine check is why it is now impossible."
+   },
+   "moderate_+3px_on_the_top_tick": {
+    "count_moved": "6 -> 0",
+    "credited": true,
+    "lnp_bars_read": 0,
+    "message": "panel at x=597: worst leave-one-out tick residual 2.95 px > the unrescaled 1.5 px gate. It would pass the 4.09 px rescaled gate, but widening is a decision to record in DECISIONS.md, not one to take here.",
+    "raised": "DetectionError",
+    "returncode_equivalent": 1,
+    "seed": "y tick stub at row 99 moved +3 px",
+    "verdict": "CAUGHT, and CREDITED: the readable-bar count moved from 6 to 0. This is not a bare raise -- the control run reads 6 bars from the same panel, so the refusal removed real output."
+   },
+   "subtle_+2px_on_the_top_tick": {
+    "count_moved": "6 -> 0",
+    "credited": true,
+    "lnp_bars_read": 0,
+    "message": "panel at x=597: worst leave-one-out tick residual 1.95 px > the unrescaled 1.5 px gate. It would pass the 4.09 px rescaled gate, but widening is a decision to record in DECISIONS.md, not one to take here.",
+    "raised": "DetectionError",
+    "returncode_equivalent": 1,
+    "seed": "y tick stub at row 99 moved +2 px",
+    "verdict": "CAUGHT, and CREDITED: the readable-bar count moved from 6 to 0. This is not a bare raise -- the control run reads 6 bars from the same panel, so the refusal removed real output."
+   }
+  }
  },
  "the_three_numbers": {
   "distinct_formulations_designed": 144,

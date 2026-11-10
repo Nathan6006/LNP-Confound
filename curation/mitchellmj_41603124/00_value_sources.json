@@ -1,0 +1,101 @@
+{
+ "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). For every panel or table that supplies a VALUE, the tier it came from. Tiers: 1_publisher_source_data > 2_si_tables > 3_author_repository > 4_pdf_text_table > 5_pixels. Anything at 5_pixels must say WHY 1-4 failed, in a sentence a reviewer can check.",
+ "_honesty_note": "The tier reconnaissance (Source Data -> SI tables -> repository -> PDF text) was done BEFORE any digitiser was written, in that order, and 01_extract_table3.py reads native PDF text only. But THIS FILE was written after stage 04, not before it. Recorded plainly rather than back-dated.",
+ "paper": {
+  "pmid": "41603124",
+  "pmcid": "PMC12957869",
+  "doi": "10.1002/adma.202514370",
+  "proposed_experiment_id": "AH_2026",
+  "collision_check": "EXECUTED: 54 Experiment_IDs in the live corpus, 0 beginning 'AH'.",
+  "lab": "Michael J. Mitchell (UPenn); Hamilton AG first author"
+ },
+ "THE_ENDPOINT": {
+  "screen": "Mean normalized intracellular b-mRNA ACCUMULATION, by sequencing barcoded mRNA recovered from FACS-sorted cells. NOT a transfection readout: the authors sampled deliberately before peak translation and ran Figure 3 to confirm transfection separately. See DECISIONS D-1.",
+  "validation": "NanoLuc organ luminescence (Fig 3b) and EGFP+ cell fraction (Fig 3f/3j) -- both genuine delivery readouts.",
+  "excluded_as_not_delivery": [
+   "DiR+ cells (Fig 3d/3h) = particle accumulation",
+   "tumour volume and survival (Fig 4b/4c)",
+   "anti-OVA antibody titres (Fig 4d-4g)",
+   "ApoE / beta2-GPI adsorption (Fig 5, Supp Fig 17)",
+   "hydrodynamic diameter, b-mRNA concentration, entrapment efficiency (Supp Fig 1, Supp Fig 10)",
+   "body weight and tumour growth curves (Supp Fig 15, 16)",
+   "barcode pool-narrowing enrichment (Fig 1f/1g) -- characterises the BARCODES, in one formulation"
+  ]
+ },
+ "tier_1_publisher_source_data": {
+  "available": false,
+  "checked_how": "The article JATS declares exactly ONE supplementary item, ADMA-38-e14370-s001.pdf, which is source/adma72049-sup-0001-SuppMat.pdf. Wiley published no Source Data workbook of any kind."
+ },
+ "tier_2_si_tables": {
+  "available": "FOR FORMULATION ONLY, NOT FOR ANY VALUE",
+  "si_tables": {
+   "1": "Top 200 barcode sequences",
+   "2": "Final 134 barcode sequences",
+   "3": "Formulation details of tested LNP library",
+   "4": "Antibody clones"
+  },
+  "tables_carrying_a_delivery_value": 0,
+  "used": "Supplementary Table 3 (SI pp. 11-13) -> 01_blocks.csv, 133 formulations. Native PDF TEXT, not an image: page.get_images() on those pages returns only the 295x88 running-header logo. Words are taken WITH COORDINATES and clustered by y, never from the linear text stream, because stream order is a rendering artefact and one mis-ordered span would shift a whole row silently."
+ },
+ "tier_3_author_repository": {
+  "available": false,
+  "checked_how": "provenance/tools/find_repo.py --pmid 41603124 --doi 10.1002/adma.202514370 --author Mitchell: zero candidates, every code-search hit an unrelated project. Zero occurrences of GSE/SRP/PRJNA/SRA/E-MTAB/zenodo/dryad/github/figshare in the article XML or in all 22,296 characters of SI text. Data Availability, verbatim: 'The data that support the findings of this study are available from the corresponding author upon reasonable request.'",
+  "note": "Methods name the UMI-tools Python package and an R/renv analysis with a lockfile hash ('3ff0e34b'), but no analysis code is deposited. A sequencing deposit would not have been a delivery value anyway; there is not even that."
+ },
+ "tier_4_pdf_text_table": {
+  "available": "only for Supp Table 3 (see tier 2)",
+  "why_not_for_values": "every value-bearing panel is a flattened raster. page.get_drawings() over all 29 SI pages returns chemistry-free paths only -- the TOC rule, table rules, and two flow-cytometry gating panels on pp. 25-26. The ARTICLE has no PDF rendition obtainable at all (three routes, all refused; see 00_acquisition.json)."
+ },
+ "value_panels": [
+  {
+   "panel": "Figure 2a/2b",
+   "quantity": "log(1 + mean normalized b-mRNA accumulation), 16 sorted populations x 2 strains",
+   "tier": "5_pixels, NOT ATTEMPTED",
+   "attributable": "NO. The x axis is labelled 'Barcode number' and carries NO tick labels whatsoever; ~124 unlabelled columns. A numeric colour scale does not rescue unlabelled columns.",
+   "not_digitised_because": "the endpoint is excluded by DECISIONS D-1, so no value was read."
+  },
+  {
+   "panel": "Supplementary Figure 14a/14b",
+   "quantity": "the same screen, re-laid-out",
+   "tier": "5_pixels, NOT ATTEMPTED",
+   "attributable": "YES -- and this is the panel that makes the screen attributable at all. x = 'Amine or thiol' 1..20 with printed ticks, y = 'Dialkyl maleate' 4/6.2/8/8i/9.2/18. 120 cells x 16 panels x 2 strains = 3,840 values, each mapping to an IL_name via Supp Table 3.",
+   "note": "It covers the 120 nDm members ONLY. The 13 catalogue reagents at Index 121-133 appear nowhere attributable.",
+   "not_digitised_because": "the endpoint is excluded by DECISIONS D-1. Had it been admissible this is a CONTINUOUS colour ramp (white floor, scale ticks at 1/2/3) at a measured 300.0 dpi -- readable, but the second-worst tier in PROTOCOL's ordering, and curation/lib/heatmap.py is built for a discrete LUT."
+  },
+  {
+   "panel": "Figure 3b",
+   "quantity": "Total liver and total spleen luminescence (p/s), NanoLuc, 0.1 mg/kg, 6 h, i.v., C57BL/6",
+   "tier": "5_pixels, DIGITISED",
+   "why_tiers_1_4_failed": "no Source Data (tier 1); no SI table carries a luminescence value (tier 2); no repository (tier 3); the figure is a flattened JPEG and no PDF rendition of the article is obtainable (tier 4).",
+   "attributable": "YES -- seven groups named in the panel's own legend, and the LNP index -> lipid name mapping is confirmed 6/6 across three independent loci (main-text sentence, Fig 3a panel headers, Supp Table 3 Index).",
+   "gate": "the panel's own printed '18.1x'. Measured 18.123x, px error 0.01, ratio of ratios 1.0013. The gate caught three real mask defects before it passed; see 07_qc.json P12.",
+   "resolution": "18.42 px per decade. One pixel is a factor of 1.133. axis.TICK_RESIDUAL_PX = 2.5 px, set for 600 dpi renders, would permit a factor-1.37 error here, which is why the printed statistic is the real gate.",
+   "emitted": "NOTHING -- blocked by structure, not by the value. See DECISIONS D-2."
+  },
+  {
+   "panel": "Figure 3f / 3j",
+   "quantity": "EGFP+ cells (%) in 4 liver and 5 spleen populations, 0.6 mg/kg, 12 h",
+   "tier": "5_pixels, NOT ATTEMPTED",
+   "attributable": "YES, same seven groups by legend colour.",
+   "not_digitised_because": "blocked by the SAME structure gap as Fig 3b (DECISIONS D-2). Digitising 63 bar tops to emit at most 2 lipids would not change the decision."
+  }
+ ],
+ "structure_sources": [
+  {
+   "what": "the ionizable lipids",
+   "source": "Supplementary Figure 2 (SI p.16), measured native dpi 137.5",
+   "tier_for_STRUCTURE": "5_pixels",
+   "covers": "3 of 120 members (17D9.2, 18D4, 20D8i), each with the amine, the maleate and the product drawn",
+   "external_checks": "Supp Figs 4-6, printed ESI m/z with ion labels; Supp Figs 7-9, 1H NMR",
+   "outcome": "1 of 120 DETERMINED (18D4, MS-confirmed at a 45.8x discrimination margin). 111 of 120 NOT DETERMINABLE -- their amine or maleate is drawn nowhere in this paper and is defined only in reference 34."
+  },
+  {
+   "what": "the excipients and benchmarks",
+   "source": "Supplementary Table 3 -- NAMED, never DRAWN",
+   "tier": "4_pdf_text_table for the NAME; provenance/reagent_registry.py for the structure",
+   "outcome": "DOPE, Cholesterol, DSPC, SM-102, DLin-MC3-DMA and ALC-0315 resolve identically in the registry and in the live corpus, 6/6 by FULL InChIKey. C14-PEG2000, DMG-PEG2000 and ALC-0159 are deliberately unpinned: a PEG block length is a distribution.",
+   "consequence_for_C10": "this paper draws no excipient, so there is nothing of ITS OWN to anchor them against. reference_structures.csv carries them as empty-SMILES rows naming that absence, and the registry-vs-corpus agreement is recorded as a check instead."
+  }
+ ],
+ "digitisers_written": "ONE, 04_digitize_fig3b.py, for the one panel whose endpoint is admissible. It emits no corpus row."
+}

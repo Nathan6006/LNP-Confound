@@ -1,0 +1,88 @@
+{
+ "_what": "Where each input came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "retrieved_utc": "2026-11-10",
+ "paper": {
+  "title": "High-Throughput In Vivo Screening Using Barcoded mRNA Identifies Lipid Nanoparticles With Extrahepatic Tropism for In Situ Immunoengineering.",
+  "journal": "Advanced Materials 38(13):e14370 (2026-03)",
+  "pmid": "41603124",
+  "pmcid": "PMC12957869",
+  "doi": "10.1002/adma.202514370",
+  "first_author": "Hamilton AG",
+  "last_author": "Mitchell MJ",
+  "lab": "Michael J. Mitchell, University of Pennsylvania",
+  "lab_verified_how": "Europe PMC REST core record, EXT_ID:41603124 AND SRC:MED, one call, 2026-11-10. authorString ends 'Drew Weissman, Michael J. Mitchell.' and the SI title page lists 'Michael J. Mitchell*' as corresponding. The brief's attribution was correct; it was checked rather than trusted.",
+  "proposed_experiment_id": "AH_2026",
+  "experiment_id_basis": "Experiment_ID is INITIALS_YEAR from the FIRST author (CLAUDE.md s3). Alex G. Hamilton -> AH_2026. Collision check against the live corpus: no AH_* Experiment_ID exists in data_vitro.csv or data_vivo.csv.",
+  "is_a_research_article": "YES. abstractText length 1433 and a full Results/Methods body with 39 sections. The no-original-data discriminator (abstractText length 0 plus no Methods/Results) does not apply."
+ },
+ "licence": {
+  "article": "CC BY",
+  "source": "Europe PMC core record: license='cc by', isOpenAccess='Y', inPMC='Y', inEPMC='Y'",
+  "verdict": "CC-BY-compatible; satisfies CLAUDE.md s8",
+  "repository": "none exists"
+ },
+ "files": [
+  {
+   "path": "curation/mitchellmj_41603124/source/adma72049-sup-0001-SuppMat.pdf",
+   "sha256": "cd081dc704c8b3a7f56d018d414fc9b092c909e9cd4a57b3f611a66c2b13aaf0",
+   "bytes": 2182075
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/PMC12957869.jats.xml",
+   "sha256": "f02502f57e98840df1350c5ae8e376701903ec13611e0adb4a1b4bd96da8fe85",
+   "bytes": 175840
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/figs/ADMA-38-e14370-g001.jpg",
+   "sha256": "a31fb125482af75f5e33d296bfdef243d3090106b9f2b8f402a26b61d2ab7633",
+   "bytes": 121855
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/figs/ADMA-38-e14370-g002.jpg",
+   "sha256": "a0502b559e3dc2c0ddc4f35af8bd97a7c69a147785a4ba0d12fea062c1eb4b72",
+   "bytes": 93562
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/figs/ADMA-38-e14370-g003.jpg",
+   "sha256": "e7a424b1f2086324186c0ecfb3b55ce635d8eeb0f24f23a2cc65253397e99634",
+   "bytes": 78641
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/figs/ADMA-38-e14370-g004.jpg",
+   "sha256": "9665732db3a3b75e4936e872ae0a7702a6dc3edf1e8b4b74d60b546b4522282f",
+   "bytes": 71070
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/figs/ADMA-38-e14370-g005.jpg",
+   "sha256": "a47394f7da585c4259af50755c6854b17538b8178952ea17e03353160595c23c",
+   "bytes": 17201
+  },
+  {
+   "path": "curation/mitchellmj_41603124/source/figs/ADMA-38-e14370-g006.jpg",
+   "sha256": "09b639db66738dd08306d692b3187e682517286ac50e072f587a7124cf6f83e3",
+   "bytes": 98227
+  }
+ ],
+ "how_obtained": {
+  "SI PDF": "already staged in source/ when this curation opened; sha256 recorded above, not re-fetched.",
+  "article full text (JATS XML) + 6 figure rasters": "provenance/tools/pmc_fetch.py PMC12957869. The elink check ran FIRST: dbfrom=pubmed&db=pmc&id=41603124 returns a real 'pubmed_pmc' SELF-link to 12957869 (as well as pubmed_pmc_refs), so a genuine deposit exists.",
+  "magic bytes": "all six rasters verified as JPEG (ff d8 ff e0 ... JF) by pmc_fetch's own magic check, and each sha256 re-verified in place after the copy into source/figs/.",
+  "WHY THAT RE-VERIFICATION MATTERS": "the session scratchpad is SHARED with the sibling curation agents in this run. A glob copy out of it put 17 figure files from OTHER papers into source/figs/. They were found by listing the directory immediately after the copy and deleted; the six survivors were then re-hashed against pmc_fetch's own report, 6/6 identical. A file-count or size check would have passed. Recorded in 08_contradictions.csv."
+ },
+ "not_obtained": {
+  "the article PDF / any higher-resolution figure": [
+   "PMC /bin/ instance route for ADMA-38-e14370.pdf -> HTML error page (21,483 B)",
+   "europepmc.org/api/fulltextRepo ... .pdf&mimeType=application/pdf -> HTTP 403, body {\"error\":\"PDF link h...\"}",
+   "europepmc.org/api/fulltextRepo ... .jpg&mimeType=image/jpeg -> 200, but byte-identical to the PMC copy, same 546 px",
+   "onlinelibrary.wiley.com/doi/10.1002/adma.202514370 -> HTTP 403 to a plain client",
+   "onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202514370 -> HTTP 403"
+  ],
+  "browser": "not used. The shared Playwright browser was out of scope for this run and no bot check was bypassed.",
+  "consequence": "Figure 3 exists only as a 546 px JPEG. Its x axis carries 18.42 px per decade, so one pixel is a factor of 1.133. See 07_qc.json P13 and P18."
+ },
+ "reference_34_NOT_obtained": {
+  "citation": "Xu J, Han X, Xu Y, Ricciardi A, et al. 'Plug-and-Play Assembly of Biodegradable Ionizable Lipids for Potent mRNA Delivery and Gene Editing in Vivo.' bioRxiv, Mar 2025. The JATS carries a PNAS DOI stub, 10.1073/pnas.252814...",
+  "why_it_matters": "it defines amines 1-20 and maleates 4/6.2/8/8i/9.2/18. Without it 111 of this paper's 120 library members have no determinable structure. See DECISIONS D-2.",
+  "status": "not fetched in this run; it is a separate paper and would be its own acquisition."
+ }
+}

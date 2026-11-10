@@ -377,6 +377,129 @@ Q["_why_zero"] = ("Two independent blockers, either one sufficient. (1) The "
                   "paper did not need to draw.")
 
 
+# ---- P19 how many LNPs does Figure 2 actually plot? ------------------
+_c = subprocess.run([sys.executable, "-I",
+                     os.path.join(HERE, "06b_count_fig2_columns.py")],
+                    capture_output=True, text=True)
+_fc = load("06b_fig2_columns.json")
+Q["P19_fig2_column_count"] = {
+    "why": "the abstract says 122 LNPs, the Conclusions say 133, and Supp "
+           "Table 3 lists 133. Figure 2's x axis is 'Barcode number' with NO "
+           "tick labels, so the count cannot be read -- but the cell pitch can "
+           "be measured, and the candidates are ~9 FFT bins apart.",
+    "borders_detected_px": _fc["panel_borders_detected_px"],
+    "cells_span_px": _fc["cells_span_px"],
+    "columns_measured": _fc["columns_measured"],
+    "all_five_strips_agree_exactly": _fc["all_strips_agree"],
+    "border_sensitivity_sweep": _fc["border_sensitivity_sweep"],
+    "printed_numbers_inside_the_range": _fc["printed_numbers_inside_the_range"],
+    "printed_numbers_excluded": _fc["printed_numbers_excluded"],
+    "returncode": _c.returncode,
+    "verdict": _fc["verdict"],
+}
+
+# ---- P20 the two staged same-lab siblings -----------------------------
+_sib = {}
+_sp = os.path.join(HERE, "..", "mitchellmj_41555650", "03_enumerated.csv")
+if os.path.exists(_sp):
+    with open(_sp, newline="") as fh:
+        _sib = {r["IL_name"]: r["IL_SMILES"] for r in csv.DictReader(fh)}
+_mine = [b["IL_name"] for b in blocks]
+_shared = sorted(set(_mine) & set(_sib))
+_cmp = {}
+for n in _shared:
+    def _k(x):
+        mm = Chem.MolFromSmiles(x) if x else None
+        return Chem.MolToInchiKey(mm) if mm else None
+    try:
+        _c2 = smi(res, amb, n)
+    except SystemExit:
+        _c2 = None
+    _cmp[n] = {"sibling_inchikey": _k(_sib[n]),
+               "corpus_inchikey": _k(_c2),
+               "in_live_corpus": _c2 is not None}
+Q["P20_same_lab_siblings"] = {
+    "mitchellmj_38982196": {
+        "grammar": "<amine>T-O<tail> (2-iminothiolane / thioether / acrylate)",
+        "members": 100, "shared_member_names_with_this_paper": 0,
+        "shared_chemistry": "none",
+    },
+    "mitchellmj_41555650": {
+        "grammar": "C<tail>-<amine core> (epoxide + polyamine)",
+        "members": len(_sib),
+        "shared_member_names_with_this_paper": _shared,
+        "n_shared": len(_shared),
+        "structures": _cmp,
+        "but": "this paper attributes NO VALUE to any of the three. The 13 "
+               "catalogue reagents (Index 121-133) appear only in Figure 2's "
+               "UNLABELLED heat map; Supplementary Figure 14, the panel that "
+               "makes the screen attributable, is the 20x6 nDm grid and does "
+               "not contain them. None of the three is in Figure 3b either, "
+               "whose only benchmark is SM-102. So the shared chemistry "
+               "yields no usable cross-source pair.",
+    },
+    "same_lab_is_not_same_numbering": (
+        "Three Mitchell-lab folders, three unrelated numbering systems: "
+        "38982196's amines are 1-25 from its own building-block set, "
+        "41555650's cores are 114/200/306/490/494, and this paper's amines "
+        "are 1-20. A bare integer means a different molecule in each. This is "
+        "why no name join on an amine token is performed anywhere here."),
+}
+
+# ---- P21 degree of substitution / arm count --------------------------
+Q["P21_degree_of_substitution"] = {
+    "why_asked": "a structureless row cannot be emitted (data/ has 0 blank "
+                 "IL_SMILES in 30,998 rows), and a polydisperse conjugate "
+                 "with an unstated degree of substitution has no determinable "
+                 "SMILES.",
+    "is_this_a_polymer_conjugate": "NO. These are discrete small molecules: "
+                                   "a one-step aza-Michael addition of an "
+                                   "amine N-H onto a dialkyl maleate.",
+    "degree_of_substitution_STATED": (
+        "YES, qualitatively, and it is the scheme's own sentence. "
+        "Supplementary Figure 2 caption, verbatim: 'Dialkyl maleates provide "
+        "higher reactivity and FAVOR MONO-ADDITION, facilitating plug-and-play "
+        "diversification.' The three drawn products confirm it: 18D4 carries "
+        "exactly one arm on each of its three N-H nitrogens and none on its "
+        "two piperazine tertiary N."),
+    "confirmed_arithmetically_on_18D4": (
+        "3 arms gives a+b = 8.017 carbons against the drawn n-butyl 4+4 = 8; "
+        "4 arms would require M = 1128.5 and there is no peak within 200 Da "
+        "of its [M+H]+."),
+    "so_the_blocker_is_not_substitution": (
+        "It is that amines 1-16 and 19, and maleates 6.2, 8 and 18, are drawn "
+        "NOWHERE in this paper. They are defined only in reference 34 (Xu, "
+        "Han, Xu, Ricciardi et al., bioRxiv Mar 2025), a different paper."),
+}
+
+# ---- P22 structural variance of the validation subset -----------------
+Q["P22_validation_subset_structural_variance"] = {
+    "n_formulations": 7,
+    "distinct_ionizable_lipids": 7,
+    "distinct_amines": sorted({"2", "7", "17", "17", "18", "20"}),
+    "distinct_maleates": sorted({"8", "4", "8i", "9.2", "4", "8i"}),
+    "verdict": "REAL structural variance: six nDm members drawn from five "
+               "different amines and four different maleates, plus SM-102. "
+               "This is NOT the sibling case of two formulations built on one "
+               "compound differing only in helper lipid.",
+    "excipients": "all six nDm LNPs share one recipe exactly (35 / DOPE 16 / "
+                  "Chol 46.5 / C14-PEG2000 2.5); SM-102 uses the clinical "
+                  "recipe (50 / DSPC 10 / Chol 38.5 / DMG-PEG2000 1.5), so "
+                  "the SM-102 comparison confounds lipid with formulation.",
+}
+
+# ---- P23 licence ------------------------------------------------------
+Q["P23_licence"] = {
+    "article": "CC BY. Europe PMC core record for PMID 41603124: "
+               "license = 'cc by', isOpenAccess = 'Y', inPMC = 'Y'.",
+    "article_verdict": "CC-BY-compatible, satisfies CLAUDE.md s8.",
+    "supplementary": "ADMA-38-e14370-s001.pdf is served from the same CC BY "
+                     "PMC deposit; no separate licence string is printed on it.",
+    "repository": "NONE EXISTS - no code or data deposit of any kind (P16), "
+                  "so there is no repository licence to record.",
+}
+
+
 def main():
     with open(os.path.join(HERE, "07_qc.json"), "w") as fh:
         json.dump(Q, fh, indent=1)
