@@ -32,6 +32,10 @@ import build_rows as BR
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
 from corpus_components import load as _load_components, smi as _smi
+
+# This file's sole tail, named once so EL.build() and the confidence rule
+# below cannot drift apart (F-046).
+TAIL = "EP10"
 _sys.path.pop(0)
 
 
@@ -46,7 +50,7 @@ def main():
     cells = list(csv.DictReader(open("04b_fig2a_147.csv")))
     rows, fails = [], []
     for c in cells:
-        smi, n_tails, n_sites = EL.build(c["amine"], c["aromatic"], "EP10",
+        smi, n_tails, n_sites = EL.build(c["amine"], c["aromatic"], TAIL,
                                          int(c["equiv"]))
         if smi is None:
             fails.append(c["lipid_name"])
@@ -103,7 +107,7 @@ def main():
         row.update({
             "IL_head_name": r.get("amine", ""),
             "IL_tail1_name": r.get("aromatic", ""),
-            "IL_tail2_name": "EP10",
+            "IL_tail2_name": TAIL,
         })
         row.update(BR.descriptors(r["IL_SMILES"]))
         # Same flags as the 840-row slice (F-001). `confidence` is set here
@@ -114,7 +118,22 @@ def main():
         # by that same rule, not invented -- stated because the sibling file
         # states it for identical chemistry and a silent blank would read as
         # "not assessed".
-        row.update(BR.quality({**r, "confidence": "high"}))
+        # DERIVED from the shared rule, not a literal (F-046). This read
+        # `{**r, "confidence": "high"}` -- a hard-coded literal at a call site
+        # standing in for a per-item assessment, which is error class 29 in
+        # form. It happened to be CORRECT, because `EL.build(..., "EP10", ...)`
+        # hard-wires the one defined tail for all 147 rows and the rule only
+        # assigns `medium` to the two commercial isomer-mixture tails. But
+        # "correct by a property of today's input" is how class 29 bugs sit
+        # quietly: the moment a row with an Ac8-1/Ac10-1 tail enters
+        # `04b_fig2a_147.csv`, a literal `high` would silently mislabel it,
+        # and a literal also overwrites whatever a per-item record says.
+        #
+        # Now it asks `EL.SUPPLIED` -- the same table the 840-row slice
+        # consults -- so the two sibling experiments cannot drift apart.
+        _tail = r.get("tail", TAIL)
+        _conf = EL.SUPPLIED[_tail][2] if _tail in EL.SUPPLIED else "high"
+        row.update(BR.quality({**r, "confidence": _conf}))
         out.append(row)
 
     with open(OUT, "w", newline="") as f:
