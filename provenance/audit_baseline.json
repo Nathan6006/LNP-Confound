@@ -379,9 +379,9 @@
    "why": "COVERAGE FLOOR: 51 ZT_2026 + 2 ZH_2023."
   },
   "C14_embedded_sterol.rows_steroid_present_but_no_cleavable_ester": {
-   "mode": "exact",
-   "value": 2,
-   "why": "ACCEPTED AND OPEN, review finding F-021. 2 ZH_2023 rows, lipid 'A4I18-1R2C70'. Its steroid cleaves to C26H44O, InChIKey skeleton DZKYBYMQFBHTTM -- NOT cholesterol (C27H46O, HVYWMOMLDIMFJA). It is missing the C19 angular methyl and carries no stereochemistry at all, so it is a 19-nor sterol, not a cholesteryl ester. Found by C14 the first time it ran, in an experiment no reviewer was assigned this round. Gated at 2 so it cannot spread, NOT accepted as correct: resolving it needs the ZH_2023 source paper and is open work."
+   "mode": "max",
+   "value": 0,
+   "why": "ACCEPTED AS ZERO -- F-021 RESOLVED 2026-11-09. It was 2 (ZH_2023's A4I18-1R2C70) from 2026-10-30, when C14 found on its first run that this lipid's sterol cleaves to C26H44O, a 19-nor sterol missing the C10 angular methyl and carrying no stereochemistry -- a connectivity error, not F-013's epimer. The source paper was not held at the time and the entry was gated at its count so it could not spread, explicitly NOT accepted as correct. The user supplied the paper (He et al., Angew Chem Int Ed 2023, 62, e202310401) and SI Section D, 'Detailed List of Ugi Reactants Used in the Study', draws C70 in full as CHOLESTERYL HEMISUCCINATE with both angular methyls and the C3-O on a bold wedge (3-beta). Rebuilt by esterifying the Ugi acid with the registry's cholesterol; the corrected lipid liberates C27H46O / HVYWMOMLDIMFJA-DPAQBDIFSA-N, matching reagent_registry.json exactly. Gated at 0: every sterol in the corpus must now cleave cleanly."
   }
  }
 }

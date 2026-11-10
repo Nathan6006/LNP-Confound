@@ -623,10 +623,11 @@
   }
  },
  "component_patches": {
-  "n_rows_changed": 360,
+  "n_rows_changed": 362,
   "by_component": {
    "YZ_2022/18PG": 180,
-   "YZ_2024/18PG": 180
+   "YZ_2024/18PG": 180,
+   "ZH_2023/A4I18-1R2C70": 2
   },
   "examples": {
    "YZ_2022/18PG": {
@@ -636,6 +637,10 @@
    "YZ_2024/18PG": {
     "before": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC(O)CO)OC(=O)CCCCCCCCCCCCCCCCC",
     "after": "CCCCCCCC/C=C\\CCCCCCCC(=O)O[C@H](COC(=O)CCCCCCCCCCCCCCCCC)COP(=O)([O-])OCC(O)CO"
+   },
+   "ZH_2023/A4I18-1R2C70": {
+    "before": "CCCCCCCC/C=C\\CCCCCCCCNC(=O)C(C(CC)CCCC)N(CCCN(C)C)C(=O)CCC(=O)OC1CCC2C(=CCC3C2CCC2(C)C(C(C)CCCC(C)C)CCC32)C1",
+    "after": "CCCCCCCC/C=C\\CCCCCCCCNC(=O)C(C(CC)CCCC)N(CCCN(C)C)C(=O)CCC(=O)O[C@H]1CC[C@@]2(C)C(=CC[C@H]3[C@@H]4CC[C@H]([C@H](C)CCCC(C)C)[C@@]4(C)CC[C@@H]32)C1"
    }
   }
  },

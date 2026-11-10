@@ -149,8 +149,8 @@ def enumerated_smiles(folder):
 def main():
     hits, checked = [], 0
     for folder in sorted(glob.glob(os.path.join(ROOT, "curation", "*"))):
-        if not os.path.isdir(folder) or folder.endswith("ng_2025"):
-            continue                              # ng_2025: another session owns it
+        if not os.path.isdir(folder):
+            continue
         enum = enumerated_smiles(folder)
         if not enum:
             continue

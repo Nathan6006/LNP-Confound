@@ -201,6 +201,48 @@ DISULFIDE = Chem.MolFromSmarts("[#16X2][#16X2]")
 # same C5 formula. With SC1 = isobutyl (C4, chain 3) and SC2 = isopentyl
 # (C5, chain 4), SC3 = neopentyl (C5, chain 3). The patch preserves the
 # molecular formula exactly and restores the chain length the metadata records.
+# ZH_2023 / A4I18-1R2C70 (2 vivo rows) ----------------------------------------
+#
+# RESOLVED 2026-11-09, review finding F-021 -- found by C14 on its first run, in
+# an experiment no reviewer had been assigned.
+#
+# The upstream structure's sterol cleaves to **C26H44O**, a 19-NOR sterol
+# missing the C10 angular methyl, with no stereochemistry at all. Cholesterol is
+# C27H46O. That is a connectivity error, not a stereochemistry one, so it is a
+# different class from F-013's epimer.
+#
+# Settled from the paper, which we did not hold until the user supplied it. The
+# library is a Ugi four-component reaction, so the `C` token is the CARBOXYLIC
+# ACID component -- and SI "Section D. Detailed List of Ugi Reactants Used in
+# the Study" (p. 34) draws C70 in full as **cholesteryl hemisuccinate**:
+# HOOC-CH2CH2-C(=O)-O-cholesteryl, with both angular methyls present, the C8/
+# C14/C17 hydrogens marked, the iso-octyl side chain, and the C3-O on a BOLD
+# WEDGE (3-beta).
+#
+# Worth recording how nearly this went wrong in the other direction: Figure 2a's
+# `-C` menu lists only C18, C18-1, C18-2, C18-3 and C23, the SI text layer
+# mentions C70 exactly once (a data row in Table S1), and the word "cholesterol"
+# appears in this paper only as a FORMULATION EXCIPIENT. On that evidence the
+# reasonable conclusion was that no sterol belonged in this lipid at all. The
+# structure is drawn in an image with no text layer, in an appendix section the
+# table of contents names but the body never cross-references.
+#
+# Rebuilt rather than hand-edited: the corrected string is the esterification of
+# the Ugi acid with the registry's cholesterol, run as a reaction so the ACID
+# loses its OH and the alcohol's oxygen is retained -- nothing adjacent to a
+# stereocentre is deleted, which is the F-013 hazard. Verified with audit.py's
+# OWN C14 reaction object: the corrected lipid liberates C27H46O /
+# HVYWMOMLDIMFJA-DPAQBDIFSA-N, matching reagent_registry.json exactly, where the
+# upstream one liberated C26H44O / DZKYBYMQFBHTTM-UHFFFAOYSA-N.
+#
+# Formula C62H111N3O4 -> C63H113N3O4 (the restored C19 methyl).
+# A COMPONENT patch, not a substring PATCH: the whole IL structure is
+# replaced, and COMPONENT_PATCHES strips the name -- which matters here,
+# because ZH_2023 is one of the two experiments whose IL_name arrives from
+# upstream with a trailing space (F-022), so an exact-match key would
+# silently never fire.
+ZH_C70 = ("CCCCCCCC/C=C\\CCCCCCCCNC(=O)C(C(CC)CCCC)N(CCCN(C)C)C(=O)CCC(=O)O[C@H]1CC[C@@]2(C)C(=CC[C@H]3[C@@H]4CC[C@H]([C@H](C)CCCC(C)C)[C@@]4(C)CC[C@@H]32)C1")
+
 PATCHES = {
     ("SL_2020", "4A3-SC6"): [("SCCCCCCCC", "SCCCCCC"), ("^CCCCCCCCS", "CCCCCCS")],
     ("KZ_2016", "*-SC3"): [("CC(C)CCS", "CC(C)(C)CS"), ("SCCC(C)C", "SCC(C)(C)C")],
@@ -242,6 +284,7 @@ SOPG = ("CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC(O)CO)"
         "OC(=O)CCCCCCC/C=C\\CCCCCCCC")
 
 COMPONENT_PATCHES = {
+    ("ZH_2023", "IL_SMILES", "A4I18-1R2C70"): ZH_C70,
     ("YZ_2022", "HL_SMILES", "18PG"): SOPG,
     ("YZ_2024", "HL_SMILES", "18PG"): SOPG,
 }
@@ -503,9 +546,25 @@ def main():
         for c in SMILES_COLS:
             if row.get(c):
                 row[c] = canon(row[c])
-        row.update(descriptors(row["IL_SMILES"]))
+    # ORDER CORRECTED 2026-11-09 (F-047). This path used to compute descriptors
+    # INSIDE the canonicalisation loop above, i.e. BEFORE the component patches
+    # -- the opposite of the vitro path twenty lines up, which patches first and
+    # then computes. So any component patch touching `IL_SMILES` on a vivo row
+    # left all 14 descriptor columns describing the PRE-patch molecule.
+    #
+    # It had never bitten because the only two COMPONENT_PATCHES were on
+    # `HL_SMILES` (the 18PG expansion), which does not feed the IL descriptors.
+    # F-021's cholesteryl-hemisuccinate repair is the first one on `IL_SMILES`
+    # in vivo, and it surfaced immediately: `Molecular.Weight` stayed at 962.59
+    # for a structure whose formula had changed to C63H113N3O4.
+    #
+    # C8 caught it, which is the system working -- but C8 compares descriptors to
+    # the SMILES, so it can only ever catch this AFTER a patch has shipped wrong
+    # numbers in an intermediate. The ordering is the actual fix.
     component_log += apply_component_patches(vivo)
     name_log += apply_name_patches(vivo)
+    for row in vivo:
+        row.update(descriptors(row["IL_SMILES"]))
     meta_fixed = apply_metadata_patches(rows) + apply_metadata_patches(vivo)
     merged = merge_curations(rows, vivo, out_cols)
     quality = {"vitro": add_quality_columns(rows),

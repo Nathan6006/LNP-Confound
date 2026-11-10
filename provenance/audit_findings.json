@@ -387,10 +387,8 @@
    },
    "rows_wrong_epimer": 0,
    "wrong_by_experiment": {},
-   "rows_steroid_present_but_no_cleavable_ester": 2,
-   "nosite_by_experiment": {
-    "ZH_2023": 2
-   }
+   "rows_steroid_present_but_no_cleavable_ester": 0,
+   "nosite_by_experiment": {}
   }
  }
 }
