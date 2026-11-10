@@ -33,29 +33,5 @@
   "14PA",
   "18PG"
  ],
- "selftest": [
-  {
-   "seed": "CONTROL",
-   "returncode": 0,
-   "verdict": "PASS"
-  },
-  {
-   "seed": "forbidden_import(reagent_registry, in a never-called function so the AST sees it and nothing executes)",
-   "returncode": 1,
-   "guard_message": [
-    "GUARD ast_independence {\"forbidden_imports_found\": [\"reagent_registry\"], \"forbidden_calls_found\": [], \"independent\": false}",
-    "GUARD template_provenance {\"long_literals_found_inside_a_target\": [], \"clean\": true}"
-   ],
-   "verdict": "CREDITED"
-  },
-  {
-   "seed": "template_copy(40-char slice of the target)",
-   "returncode": 1,
-   "guard_message": [
-    "GUARD ast_independence {\"forbidden_imports_found\": [], \"forbidden_calls_found\": [], \"independent\": true}",
-    "GUARD template_provenance {\"long_literals_found_inside_a_target\": [\"CCCCC/C=C\\\\C/C=C\\\\CCCCCCCCC(CCCCCCCC/C=C\\\\C\"], \"clean\": false}"
-   ],
-   "verdict": "CREDITED"
-  }
- ]
+ "selftest": null
 }
