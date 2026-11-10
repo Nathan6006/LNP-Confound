@@ -1,0 +1,402 @@
+{
+ "_what": "Every check for PL_2018, with numbers.",
+ "checks": {
+  "PRINTED": {
+   "library_arithmetic": {
+    "printed": "SI p.7 Scheme S2: 'There are 16 series, each series contains 18 lipidoids and in total 288 lipidoids are present in the library.'",
+    "recomputed": "288 labels (4 thiolactones x 4 pyridyl disulfides x 18 amines)",
+    "match": true
+   },
+   "inclusion_threshold": {
+    "printed": "Figure S3 caption: '45 lipidoids which have transfection efficiency >= 40% in HEK293T cells'",
+    "recomputed": {
+     "rows": 45,
+     "min_value": 40,
+     "max_value": 95
+    },
+    "match": true
+   },
+   "HRMS_8_of_8": {
+    "printed": "the SI's own 'calcd for ... [M+H]+' for 4 thiolactones and 4 pyridyl disulfides",
+    "recomputed_worst_abs_delta_mDa": 0.77,
+    "per_block": [
+     {
+      "block": "T14",
+      "formula": "C18H33NO2S",
+      "our_MplusH": 328.2305,
+      "printed_calcd": 328.2312,
+      "delta_mDa": -0.72
+     },
+     {
+      "block": "T16",
+      "formula": "C20H37NO2S",
+      "our_MplusH": 356.2618,
+      "printed_calcd": 356.2625,
+      "delta_mDa": -0.72
+     },
+     {
+      "block": "T18",
+      "formula": "C22H41NO2S",
+      "our_MplusH": 384.2931,
+      "printed_calcd": 384.2938,
+      "delta_mDa": -0.72
+     },
+     {
+      "block": "T18U",
+      "formula": "C22H39NO2S",
+      "our_MplusH": 382.2774,
+      "printed_calcd": 382.2782,
+      "delta_mDa": -0.77
+     },
+     {
+      "block": "PY12",
+      "formula": "C17H29NS2",
+      "our_MplusH": 312.1814,
+      "printed_calcd": 312.1821,
+      "delta_mDa": -0.68
+     },
+     {
+      "block": "PY14",
+      "formula": "C19H33NS2",
+      "our_MplusH": 340.2127,
+      "printed_calcd": 340.2134,
+      "delta_mDa": -0.68
+     },
+     {
+      "block": "PY16",
+      "formula": "C21H37NS2",
+      "our_MplusH": 368.244,
+      "printed_calcd": 368.2447,
+      "delta_mDa": -0.68
+     },
+     {
+      "block": "PY18",
+      "formula": "C23H41NS2",
+      "our_MplusH": 396.2753,
+      "printed_calcd": 396.276,
+      "delta_mDa": -0.68
+     }
+    ],
+    "match": true,
+    "note": "the residual is a UNIFORM -0.68 to -0.77 mDa on all eight, which is the electron mass (0.549 mDa) plus rounding -- i.e. the authors did not subtract it. A uniform offset across eight independent compositions is itself evidence that the difference is a convention, not an error."
+   },
+   "MALDI_T18U_PY16_A1": {
+    "printed": "SI p.6: 'm/z calcd for C44H88N3O2S2 [M+H]+ : 754.62; found: 754.59'",
+    "our_structure": "CCCCCCCC/C=C\\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC",
+    "our_MplusH": 754.6318,
+    "delta_vs_printed_calcd_Da": 0.0118,
+    "match": true,
+    "note": "this is the ONLY lipidoid in the paper whose structure we can build AND whose mass is printed, because it is the only one using a named amine."
+   },
+   "A8_formula_solve_consistency": {
+    "printed": [
+     "T18U-PY12-A8 = C41H81N4O2S2",
+     "T14-PY12-A8 = C37H75N4O2S2"
+    ],
+    "difference": "C4H6",
+    "expected_difference": "T18U (C22H39NO2S) - T14 (C18H33NO2S) = C4H6",
+    "match": true,
+    "solved_amine_formula": "C7H17N3",
+    "note": "two printed formulae, one unknown; the solve is over-determined and consistent. It still yields a FORMULA, not a structure. DECISIONS.md D-2."
+   }
+  },
+  "DRAWN": {
+   "positive_control_bar_is_1.000": {
+    "what": "'Relative Transfection Efficiency' is relative to a positive control, so that control's own bar must be drawn at exactly 1.000. The axis is calibrated from tick marks alone, so where that bar lands is EXTERNAL to this pipeline. Two green 'Positive control' bars exist, SFA and L2K, and the figure never says which is the normaliser -- so both are measured and the data chooses.",
+    "SFA_measured": 1.0064,
+    "SFA_pct_from_1.000": 0.64,
+    "L2K_measured": 1.0291,
+    "L2K_pct_from_1.000": 2.91,
+    "normaliser_indicated": "SFA",
+    "corroboration": "Figure S6 (SI p.19) states 'T18U-PY16-A1 shows 35% higher transfection efficiency compared to positive control SFA', i.e. SFA is the normaliser there too.",
+    "residual_is_explained_by": "bars.bar_top returns the OUTER edge of the top rule, which sits ~5 px (0.004 units) above the plotted value at this line width.",
+    "the_authors_never_printed_this_number": true
+   },
+   "chain_lengths_vs_HRMS": {
+    "what": "every block's chain length measured from the PDF's own bond coordinates, against the carbon count of its printed HRMS formula -- two routes with nothing in common",
+    "per_block": {
+     "PY18": {
+      "geometry": 18,
+      "HRMS": 18,
+      "agree": true
+     },
+     "PY16": {
+      "geometry": 16,
+      "HRMS": 16,
+      "agree": true
+     },
+     "PY14": {
+      "geometry": 14,
+      "HRMS": 14,
+      "agree": true
+     },
+     "PY12": {
+      "geometry": 12,
+      "HRMS": 12,
+      "agree": true
+     },
+     "T18": {
+      "geometry": 18,
+      "HRMS": 18,
+      "agree": true
+     },
+     "T16": {
+      "geometry": 16,
+      "HRMS": 16,
+      "agree": true
+     },
+     "T14": {
+      "geometry": 14,
+      "HRMS": 14,
+      "agree": true
+     },
+     "T18U": {
+      "geometry": 18,
+      "HRMS": 18,
+      "agree": true
+     }
+    },
+    "all_agree": true,
+    "name_token_mismatches": [],
+    "note": "ALL EIGHT name tokens also equal the measured length here, which is NOT guaranteed -- KS_2024's C24 is two C4 tails. The one place a name disagrees with the chemistry is PY12's prose name 'decyl' (08_contradictions.csv C-2), and that is caught precisely because the token, the mass and the geometry were measured separately."
+   },
+   "oleoyl_unsaturation_position": {
+    "measured": [
+     9,
+     10
+    ],
+    "method": "cis/Z -- drawn as a HORIZONTAL bond joining two up-vertices of the zig-zag, which is the standard ChemDraw cis depiction. Corroborated by 13C 129.99/129.73 and 1H 5.36-5.27 (m, 2H).",
+    "note": "MASS CANNOT SEE THIS. C18:1 is C18:1 wherever the double bond sits, so the HRMS check above is blind to it and the position comes from the drawing's own horizontal stroke pair, counted against the vertices to its left."
+   },
+   "A5_linker_is_not_A1": {
+    "lag_sweep": {
+     "3": 3,
+     "4": 3,
+     "5": 5,
+     "6": 3,
+     "7": 3,
+     "8": 3,
+     "9": 3,
+     "10": 3
+    },
+    "lags_agreeing": "7/8",
+    "linker_carbons": 3,
+    "why_it_matters": "a 2-carbon linker would make A5 the same molecule as A1; the measurement separates them"
+   },
+   "A10_ring_size": {
+    "verdict": "INCONCLUSIVE -- the tolerance sweep returns heptagon_7/hexagon_6, so the drawn ring size is NOT decided by this measurement",
+    "sweep": {
+     "1": {
+      "side_px": 0,
+      "width_over_side": null,
+      "nearest": null
+     },
+     "2": {
+      "side_px": 1,
+      "width_over_side": 57.0,
+      "nearest": "heptagon_7"
+     },
+     "3": {
+      "side_px": 30,
+      "width_over_side": 1.9,
+      "nearest": "heptagon_7"
+     },
+     "4": {
+      "side_px": 34,
+      "width_over_side": 1.6765,
+      "nearest": "hexagon_6"
+     },
+     "5": {
+      "side_px": 34,
+      "width_over_side": 1.6765,
+      "nearest": "hexagon_6"
+     }
+    },
+    "note": "A CHECK THAT REFUSED. Recorded as a result, not hidden; A10 is therefore not enumerated. DECISIONS.md D-3."
+   }
+  },
+  "CROSS_TIER": {
+   "figS9_legend_text_vs_tableS2_pixels": {
+    "what": "Figure S9's legend (SI p.21) names the top eleven lipidoids as TEXT OBJECTS. pdfplumber reads them without touching a pixel. Table S2 is a raster. If the raster transcription were wrong, or off by a row, these would disagree.",
+    "from_text_tier4": [
+     "T18U-PY16-A1",
+     "T18U-PY12-A8",
+     "T14-PY12-A8",
+     "T14-PY16-A14",
+     "T14-PY16-A13",
+     "T18U-PY18-A4",
+     "T14-PY14-A13",
+     "T18-PY12-A3",
+     "T14-PY16-A17",
+     "T14-PY14-A17",
+     "T16-PY12-A1"
+    ],
+    "from_raster_tier5": [
+     "T18U-PY16-A1",
+     "T18U-PY12-A8",
+     "T14-PY12-A8",
+     "T14-PY16-A14",
+     "T14-PY16-A13",
+     "T18U-PY18-A4",
+     "T14-PY14-A13",
+     "T18-PY12-A3",
+     "T14-PY16-A17",
+     "T14-PY14-A17",
+     "T16-PY12-A1"
+    ],
+    "identical_and_in_order": true,
+    "n": 11
+   },
+   "figS3_bars_vs_tableS2_numerals": {
+    "bars_compared": 42,
+    "bars_refused": [
+     "L1",
+     "L18",
+     "L40"
+    ],
+    "pearson": 0.996524,
+    "ratio_cv_pct": 2.304,
+    "implied_normaliser_%TE": 86.93,
+    "row_shift_test": {
+     "-2": {
+      "n": 41,
+      "cv_pct": 4.444,
+      "pearson": 0.984833
+     },
+     "-1": {
+      "n": 42,
+      "cv_pct": 3.463,
+      "pearson": 0.9921
+     },
+     "0": {
+      "n": 42,
+      "cv_pct": 2.304,
+      "pearson": 0.996524
+     },
+     "1": {
+      "n": 41,
+      "cv_pct": 2.743,
+      "pearson": 0.990696
+     },
+     "2": {
+      "n": 40,
+      "cv_pct": 3.599,
+      "pearson": 0.983044
+     }
+    },
+    "row_shift_caveat": "Table S2 is sorted by value, so the drawn vector is monotone and a one-row shift still correlates. The test is therefore SUGGESTIVE, not decisive: shift 0 is uniquely best on both CV and Pearson, but the margin over shift +1 is small by construction.",
+    "monotone": false,
+    "note": "three bars were REFUSED by bars.bar_top because the figure's large green arrow crosses their top rule and the left/right flanks disagree by 13-66 px. They are left out rather than rescued by lowering `frac`, which is F-018."
+   }
+  },
+  "INTAKE": {
+   "page17_is_a_raster": {
+    "words_on_the_page": 52,
+    "all_of_them_are_caption": true,
+    "pdfplumber_find_tables": 0,
+    "note": "the checkable reason Table S2 is tier 5 and not tier 4"
+   }
+  },
+  "ANCHOR_C10": {
+   "lipid": "T18U-PY16-A1",
+   "inchikey_anchor": "WOFVCSMBTGALCP-LNVKXUELSA-N",
+   "inchikey_enumeration": "WOFVCSMBTGALCP-LNVKXUELSA-N",
+   "full_inchikey_match": true,
+   "stereo_block_included": true,
+   "anchor_string_byte_identical_to_enumeration": false,
+   "independence": "built head-first by string concatenation of name-derived fragments; no assemble, no RWMol, no atom maps, no shared template. F-013 and F-037 are both anchors that were copies of the enumeration, the second inside the file written to fix the first.",
+   "anchors_with_no_reference": 2,
+   "why_absent": "T18-PY18-A5 (Figure S1's raster could not be measured) and T18U-PY12-A8 (A8 has no structure). Stored as empty rows so the gap is visible."
+  },
+  "EMIT": {
+   "rows_with_a_value": 45,
+   "rows_emittable": 5,
+   "rows_with_a_caveat_F024_definition": 2,
+   "under_100_usable_rows": true,
+   "flags_go_through": "curation/lib/emit.emit_rows (F-001: a flag in a QC file is a memo, not a flag)"
+  }
+ },
+ "seeded_defects": {
+  "rule": "CLAUDE.md section 6: a new check is not done until it has been made to fail on purpose.",
+  "harness": "10_seed_checks.py -- each mutation applied to a COPY of this folder, the stage re-run, and BOTH a non-zero exit and the expected message required; plus an unmutated control run of the whole pipeline.",
+  "n_mutations": 14,
+  "n_fired": 14,
+  "all_fired": true,
+  "control_clean": true,
+  "mutations": [
+   {
+    "id": "M1-chain-length",
+    "stage": "stage01_chains.py",
+    "FIRED": true
+   },
+   {
+    "id": "M2-oleoyl-position",
+    "stage": "make_reference.py",
+    "FIRED": true
+   },
+   {
+    "id": "M3-A1-branches",
+    "stage": "stage02_amines.py",
+    "FIRED": true
+   },
+   {
+    "id": "M4-block-composition",
+    "stage": "stage03_enumerate.py",
+    "FIRED": true
+   },
+   {
+    "id": "M5-lost-cis",
+    "stage": "stage03_enumerate.py",
+    "FIRED": true
+   },
+   {
+    "id": "M6-tick-set",
+    "stage": "stage04_figS3.py",
+    "FIRED": true
+   },
+   {
+    "id": "M7-bar-count",
+    "stage": "stage04_figS3.py",
+    "FIRED": true
+   },
+   {
+    "id": "M8-class27",
+    "stage": "stage04_figS3.py",
+    "FIRED": true
+   },
+   {
+    "id": "M9-value-order",
+    "stage": "stage05_values.py",
+    "FIRED": true
+   },
+   {
+    "id": "M10-unknown-label",
+    "stage": "stage05_values.py",
+    "FIRED": true
+   },
+   {
+    "id": "M11-literal-confidence",
+    "stage": "stage06_emit.py",
+    "FIRED": true
+   },
+   {
+    "id": "M12-caveat-no-note",
+    "stage": "stage06_emit.py",
+    "FIRED": true
+   },
+   {
+    "id": "M13-anchor-is-a-copy",
+    "stage": "make_reference.py",
+    "FIRED": true
+   },
+   {
+    "id": "M14-wrong-anchor",
+    "stage": "make_reference.py",
+    "FIRED": true
+   }
+  ],
+  "what_it_found": "M4 initially MISSED: the block SMILES written into 01_blocks.csv was a SECOND literal for the same molecule the enumerator builds from a fragment, so corrupting the fragment left the HRMS check passing on an uncorrupted block while every product carried a wrong tail. The two are now one string. That is a real coverage gap found only by seeding."
+ },
+ "failing_checks": [],
+ "all_passing": true
+}

@@ -1,0 +1,92 @@
+{
+  "paper": {
+    "pmid": "23651337",
+    "doi": "10.1021/sb300023h",
+    "title": "A combinatorial library of unsaturated lipidoids for efficient intracellular gene delivery.",
+    "title_source": "Europe PMC REST core record, resultType=core, SRC:MED, fetched 2026-11-10",
+    "journal": "ACS Synthetic Biology",
+    "journal_year_vol_issue": [
+      "2012",
+      "1",
+      "9"
+    ],
+    "note_on_journal_year": "Europe PMC journalInfo.yearOfPublication = 2012 (ACS issue 1(9)); PubMed entry date 2013. The task brief and PMID record say 2013. Both are recorded; nothing downstream depends on it because no row is emitted.",
+    "authors": "Wang M, Sun S, Alberti KA, Xu Q.",
+    "pubType": [
+      "Letter"
+    ],
+    "is_original_research": true,
+    "original_research_discriminator": "abstractText length = 797 characters, describing the paper's own synthesis (Michael addition of amines to oleyl acrylamide), its own screen (HeLa, EGFP pDNA and mRNA) and its own mechanistic attribution. pubType 'Letter' is NOT the discriminator; the no-original-data discriminator is abstractText length 0 plus no Methods/Results."
+  },
+  "endpoint": {
+    "primary_as_stated": "EGFP expression in HeLa cells after transfection with EGFP-encoding plasmid DNA and with EGFP mRNA",
+    "corpus_mapping": "luminescence/fluorescent-reporter protein-abundance class -> ADMISSIBLE in kind (GFP% is an admissible delivery endpoint)",
+    "but": "The main article, which is where every EGFP value lives, is NOT IN HAND. See acquisition.unobtainable below. Nothing admissible is present in the only file we have."
+  },
+  "acquisition": {
+    "files_in_hand": [
+      {
+        "path": "source/sb300023h_si_001.pdf",
+        "what": "Supporting Information, 3 pages",
+        "sha256": "92256854c364c0b0e32e3b4ff956177e7dbcb9c0defc2572b49f627fbf1ae353",
+        "provenance_watermark": "Every page carries 'Downloaded from pubs.acs.org/asbcd6/article-supplement/1448672/pdf/sb300023h_si_001/ by PHILLIPS EXETER ACADEMY user on 10 November 2026' - supplied to this curation, not fetched by it.",
+        "licence": "NOT RECORDED - no landing page was visited by this curation (no browser was used). CLAUDE.md 8 needs a CC0/CC-BY-compatible licence string before release; it is MISSING for this source. Recorded as a gap, not as compliance.",
+        "bytes": 1028490
+      }
+    ],
+    "unobtainable": {
+      "what": "the main article PDF (all figures, all EGFP transfection values, the amine catalogue)",
+      "checkable_negatives": [
+        "Europe PMC core record: isOpenAccess=N, inEPMC=N, inPMC=N, hasSuppl=N; fullTextUrlList has exactly one entry, availability='Subscription required', documentStyle='doi'.",
+        "NCBI elink dbfrom=pubmed db=pmc id=23651337 returns ONLY linkname 'pubmed_pmc_refs' (17 links = papers citing it). There is NO 'pubmed_pmc' self-link, i.e. no PMC deposit exists.",
+        "NCBI esearch db=pmc term=10.1021/sb300023h -> count=0, 'No items found.'",
+        "NCBI esearch db=pmc term=sb300023h -> count=0, quotedphrasesnotfound=['sb300023h'].",
+        "provenance/tools/find_repo.py --pmid 23651337 --title 'unsaturated lipidoid library' --author Xu -> no candidate repository; every hit is an unrelated string collision (e.g. 'Anythink-Market-lnp8p3xu'). A 2012 ACS Synth Biol Letter predates data-availability mandates.",
+        "Repository-wide search: find ~/LNP -iname '*sb300023*' returns only the SI we already have; ~/LNP/Papers/ holds no Wang 2012/2013 and no Xu 2012 (its only Xu 2013 is 'Lipid-Modified Aminoglycoside Derivatives', a different paper)."
+      ],
+      "why_not_fetched": "ACS requires a browser session; the shared Playwright browser is out of scope for this run by instruction, and no paywall or bot-check bypass is permitted. The SI in hand was itself obtained through an institutional subscription by someone else.",
+      "consequence": "Tier 1, 2 and 3 are all unavailable and tier 4/4b/5 can only be applied to the 3-page SI. The SI contains no delivery endpoint."
+    }
+  },
+  "panels": [
+    {
+      "panel": "Figure S3 (per its own caption) = 'Cell variability [sic] of HeLa cells upon exposure to unsaturated lipidoids'",
+      "page": 3,
+      "what_it_plots": "Cell Viability (%) vs Lipidoid, 16 bars labelled 1..16",
+      "tier": "4b_pdf_vector_geometry",
+      "why_not_higher": "Tier 1 (publisher Source Data): ACS Synth Biol 2012 published no Source Data files; hasSuppl=N in Europe PMC and the only supplementary asset is this PDF. Tier 2 (SI numeric table): pdfplumber find_tables() returns 0 tables on all 3 pages and the page text layer contains only axis numerals and captions - there is no numeric table anywhere in the SI. Tier 3 (author repo): find_repo.py found none (see acquisition.unobtainable).",
+      "why_not_lower": "No rendering and no pixel reading was needed or done. page.get_drawings() returns 239 path groups on this page: 16 filled black rectangles (the bars), 16 stroked rectangles at stroke width 0.4596 pt (their outlines, geometrically coincident with the fills), and line segments at three further exact stroke widths (1.19 / 0.46 / 0.28 pt). Bar body, outline and axis furniture are separated by EXACT STROKE WIDTH, which closes error class 32 (a bar-top detector reading an overlaid marker) by construction rather than by threshold.",
+      "native_dpi": "NOT APPLICABLE - vector. No raster was rendered, so no pixel tolerance was applied and axis.native_tol() was not needed.",
+      "corpus_admissible": "no",
+      "admissible_reason": "Cell viability is a cytotoxicity endpoint. data/'s Experiment_method vocabulary is delivery-only (luminescence / protein-abundance / editing-efficiency / knockdown). Viability is explicitly not a delivery endpoint."
+    },
+    {
+      "panel": "Figure S2 (per its own caption) = 'Ethidium bromide (EB) exclusion assay of 16I/DNA and 16II/DNA'",
+      "page": 2,
+      "what_it_plots": "Relative Fluorescence Intensity (%) vs Heparin concentration (ug/mL), two series legended 'Unsaturated Lipidoid' and 'Saturated Lipidoid'",
+      "tier": "4b_pdf_vector_geometry",
+      "why_not_higher": "same as Figure S3",
+      "corpus_admissible": "no",
+      "admissible_reason": "An EB exclusion / heparin displacement assay measures nucleic-acid binding and polyanion-competition release of a lipoplex in a cuvette. It is a physicochemical complexation readout, not delivery into a cell: no cells, no cargo expression, no knockdown. Not in the Experiment_method vocabulary.",
+      "not_extracted": "Not digitised. It is non-admissible, and its x-axis unit (heparin concentration) has no corpus column."
+    },
+    {
+      "panel": "Figure S1 (per its own caption) = 'TEM images of 16II/DNA (A) and 16II/mRNA complexes (B)'",
+      "page": 2,
+      "what_it_plots": "transmission electron micrographs",
+      "tier": "5_pixels",
+      "embedded_images": "4 Indexed-colour images, 1681 x 149/150/150/150 px, i.e. the micrograph panel stored as four horizontal strips",
+      "corpus_admissible": "no",
+      "admissible_reason": "Micrographs carry no numeric value at all. Particle morphology/size is not a delivery endpoint (size is explicitly excluded).",
+      "not_extracted": "Nothing to extract: no scale bar value, no stated diameter and no numeral appears in the page text layer for this panel."
+    }
+  ],
+  "totals": {
+    "panels_in_the_only_file_we_have": 3,
+    "panels_supplying_any_number": 2,
+    "panels_digitised": 1,
+    "values_located": 16,
+    "values_corpus_admissible": 0,
+    "rows_emittable": 0
+  }
+}

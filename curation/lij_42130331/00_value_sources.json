@@ -1,0 +1,56 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser was written.",
+ "_why": "The two curations that took their values from a publisher Source Data file (NG_2025) and from the authors' own repository (WT_2026) have ZERO digitisation defects between them. The four that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+ "_also": "Once the numbers are in hand from tiers 1-3, use the figure to VERIFY rather than to extract.",
+
+ "_headline": "Both value tables ARE the authors' own source-data tables -- the captions say so verbatim ('Source data for the heatmap in Fig. 1C' / 'Fig. 1E'). They are published as FLATTENED 1-BIT RASTER IMAGES inside the SI PDF, with no text layer. So the tier is 5_pixels, but it is the most favourable kind of 5_pixels this project has met: the pixels encode PRINTED NUMERALS, not a colour ramp or a bar height. There is no axis, no origin, no scale factor and no colormap anywhere in the read, so error classes 16 (colormap floor), 20 (origin on a border), 23, 27 (scale fitted on the validation target), 32 (bar top on a replicate dot), 33 and 43 are STRUCTURALLY INAPPLICABLE -- not merely checked and passed. The only failure mode left is misreading a glyph, and that is testable exactly: every glyph is assigned to a cluster, the cluster representatives are labelled by eye, and the maximum intra-cluster and minimum inter-cluster distances are reported in 07_qc.json.",
+
+ "panels": [
+  {
+   "panel": "Table S1 (SI p. 38) -- 'Source data for the heatmap in Fig. 1C'",
+   "supplies": "50 values: 10 amine columns (70, 75, 80, 400, 96, 113, 414, 616, 110, T3A) x 5 epoxide rows (C8, C10, C12, C14, OG8). Library 1.",
+   "tier": "5_pixels",
+   "locator": "source/nn6c00706_si_001.pdf page 38, image xref 299, 1422 x 193 px, 1-bit PNG, 12,172 bytes",
+   "why_tiers_1_to_4_failed": "TIER 1: the article page at pubs.acs.org (loaded 2026-11-10T04:50Z, HTTP 200 on the second navigation) exposes exactly ONE supplementary asset -- '/ancac3/article-supplement/5105918/pdf/nn6c00706_si_001/', a PDF. Enumerated by querying every <a href> on the loaded page for suppl_file|supporting|si_<n>|.xlsx|.zip|.csv|.xls; the two hits are the same PDF under two link labels. No Source Data workbook exists. TIER 2: the SI contains the tables, and they ARE the source data, but as images -- pdfplumber's extract_text() on page 38 returns 194 characters, which is the caption and the download watermark and nothing else, and find_tables() returns 0. TIER 3: Europe PMC core record for PMID 42130331 (queried 2026-11-10T04:52Z) returns isOpenAccess=N, inEPMC=N, inPMC=N, hasSuppl=N and a single fullTextUrl marked 'Subscription required'; there is no repository, accession or deposit of any kind, and the paper's data-availability statement is behind the paywall. TIER 4: pymupdf's page.get_drawings() returns 0 paths on this page -- the page holds no vector content at all -- and the page holds exactly one image object, which is the whole table. Every one of these is reproducible from the committed PDF plus two network queries whose results are recorded in 00_acquisition.json.",
+   "verified_against": "see 07_qc.json: (a) the paper's own lead compound, 113-AA-C8C14, must be the maximum of Table S2 -- an external statistic we did not fit to; (b) glyph-cluster separation; (c) grid geometry derived from the table's own ruled lines, cross-checked against the column count the header names."
+  },
+  {
+   "panel": "Table S2 (SI p. 39) -- 'Source data for the heatmap in Fig. 1E'",
+   "supplies": "250 values: 5 stacked blocks, each 10 columns (<amine>-AA-<Cx>) x 5 rows (Cl6, Cl8, Cl10, Cl12, Cl14). Library 2.",
+   "tier": "5_pixels",
+   "locator": "source/nn6c00706_si_001.pdf page 39, image xref 303, 1421 x 1126 px, 1-bit PNG, 66,378 bytes",
+   "why_tiers_1_to_4_failed": "Identical to Table S1 and established by the same four checks on the same two pages: one PDF-only supplementary asset; extract_text() on page 39 returns 194 characters (caption + watermark), find_tables() 0; Europe PMC has no deposit; get_drawings() returns 0 paths and the page holds one image object.",
+   "verified_against": "see 07_qc.json; the lead-compound maximum test lands in this table."
+  },
+  {
+   "panel": "Fig. S3 (SI p. 4) -- cytotoxicity of Library 1 and Library 2",
+   "supplies": "NOTHING EMITTED. Read only to establish that both libraries were screened in cells, and to read the amine ordering convention off the x-axis labels.",
+   "tier": "5_pixels",
+   "locator": "page 4, image xref 174",
+   "why_tiers_1_to_4_failed": "n/a -- no value from this panel is emitted, so no tier was needed. It is listed so a reviewer can see which panels were opened and why.",
+   "verified_against": "Its x-axis group labels (70-AA-C8 ... T3A-AA-C8; 70-AA-C8C6 ... T3A-AA-C8C6) independently confirm the two libraries' naming convention and that Library 2 names are <amine>-AA-<Cx><Cy>."
+  },
+  {
+   "panel": "Fig. S1 (SI p. 2) and Fig. S2 (SI p. 3) -- reaction scheme, amine blocks, R-group legend",
+   "supplies": "STRUCTURES, not values.",
+   "tier": "5_pixels",
+   "locator": "page 2 image xref 160 (1113 x 1287 JPEG); page 3 image xref 171 (1095 x 836 JPEG)",
+   "why_tiers_1_to_4_failed": "The structures are published only as drawings. There is no SMILES, InChI, MOL or SDF anywhere in the SI (grep of the full extracted text), no deposited structure file, and no HRMS table -- the only characterisation given for any library member is Fig. S9, a mass spectrum and a 1H NMR of the lead compound as IMAGES. So the figure is the only statement of connectivity that exists. Chain lengths are counted by curation/lib/chains, never by eye.",
+   "verified_against": "The C10 anchor (make_reference.py) rebuilds the lead compound from the scheme by a different route; chain counts are cross-checked by two independent raster methods."
+  }
+ ],
+
+ "_what_is_NOT_available_at_any_tier": [
+  "The identity of the assay behind Fig. 1C and Fig. 1E -- cell line, readout, units, dose, timepoint, and whether the screen was in vitro or in vivo. The SI never names it; the main text is paywalled. See DECISIONS.md D-1. This blocks the merge, by design.",
+  "Whether Fig. 1C and Fig. 1E share a measurement scale, i.e. whether Library 1 and Library 2 are one experiment or two. See DECISIONS.md D-2.",
+  "The LNP formulation (molar ratios, PEG-lipid, helper lipid, N:P, mRNA dose) used in the Fig. 1C/1E screen. Fig. S11 optimises the ratios for the LEAD compound only, and that optimisation is downstream of the screen, so its ratios are not the screen's. See DECISIONS.md D-3."
+ ]
+}

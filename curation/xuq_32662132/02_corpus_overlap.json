@@ -1,0 +1,389 @@
+{
+ "_what": "Overlap of this paper's enumerable structures against the live corpus.",
+ "keys_used": [
+  "full InChIKey",
+  "skeleton InChIKey",
+  "IL_name (exact and token)",
+  "3-aminopropylimidazole substructure",
+  "Morgan r2 2048 Tanimoto NN"
+ ],
+ "pools": {
+  "vitro": {
+   "n_rows": 29195,
+   "n_unique_IL_SMILES": 18720,
+   "full_inchikey_hits": 0,
+   "skeleton_inchikey_hits": 0,
+   "IL_name_exact_hits": [],
+   "rows_with_any_imidazole": 273,
+   "near_miss_head_93": {
+    "n_unique_structures": 173,
+    "n_rows": 277,
+    "experiments": [
+     "AA_2008",
+     "BL_2023",
+     "BL_2023_3CR",
+     "BL_2024",
+     "JW_2024",
+     "KW_2014",
+     "KZ_2016",
+     "XH_2024_2",
+     "YR_2024",
+     "YY_2023",
+     "ZC_2023"
+    ],
+    "example_names_per_experiment": {
+     "AA_2008": [
+      "93_N12",
+      "93_N14",
+      "93_N15",
+      "93_N16",
+      "93_N18",
+      "93_O10"
+     ],
+     "BL_2023": [
+      "A26-T1",
+      "A26-T10",
+      "A26-T2",
+      "A26-T3",
+      "A26-T4",
+      "A26-T5"
+     ],
+     "BL_2023_3CR": [
+      "A6_I1_T1",
+      "A6_I1_T2",
+      "A6_I1_T3",
+      "A6_I1_T4",
+      "A6_I1_T5",
+      "A6_I1_T6"
+     ],
+     "BL_2024": [
+      "111-6",
+      "241-6",
+      "244-6",
+      "611-6",
+      "613-6",
+      "621-6"
+     ],
+     "JW_2024": [
+      "IR_red_amin_IRh19_IRt11",
+      "IR_red_amin_IRh19_IRt12",
+      "RM_branched_ester_M71_R10",
+      "RM_branched_ester_M71_R14",
+      "RM_branched_ester_M71_R15",
+      "RM_branched_ester_M71_R5"
+     ],
+     "KW_2014": [
+      "A93_C10",
+      "A93_C11",
+      "A93_C12",
+      "A93_C13",
+      "A93_C14"
+     ],
+     "KZ_2016": [
+      "2A8-SC1",
+      "2A8-SC10",
+      "2A8-SC11",
+      "2A8-SC12",
+      "2A8-SC14",
+      "2A8-SC16"
+     ],
+     "XH_2024_2": [
+      "Han_dir_evo_A15_Formaldehyde_AlkA",
+      "Han_dir_evo_A15_Formaldehyde_AlkB",
+      "Han_dir_evo_A15_Formaldehyde_AlkC"
+     ],
+     "YR_2024": [
+      "A9322_C2'L6",
+      "A9322_C2'L7",
+      "A9322_C2'L8",
+      "A9322_C2'L9",
+      "A9322_C5'L6",
+      "A9322_C5'L7"
+     ],
+     "YY_2023": [
+      "2A6_2C10",
+      "2A6_2C4",
+      "2A6_2C6",
+      "2A6_2C8",
+      "2A6_C12",
+      "2A6_C18"
+     ],
+     "ZC_2023": [
+      "2A4-SCC-10",
+      "2A4-SCC-12",
+      "2A4-SCC-14",
+      "2A4-SCC-4",
+      "2A4-SCC-8",
+      "2A4-SCC-BO"
+     ]
+    }
+   },
+   "nearest_neighbour": {
+    "93-N16S-S": {
+     "tanimoto": 0.804,
+     "smiles": "CCCCCCCCCCCCCCCCCCNC(=O)CCN(CCCn1ccnc1)CCC(=O)NCCCCCCCCCCCCCCCCCC",
+     "experiments": [
+      "AA_2008"
+     ],
+     "names": [
+      "93_N18"
+     ]
+    },
+    "93-O16S-S": {
+     "tanimoto": 0.804,
+     "smiles": "CCCCCCCCCCCCCCCCCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCCCCCCCCCCCCCCCCC",
+     "experiments": [
+      "AA_2008"
+     ],
+     "names": [
+      "93_O18"
+     ]
+    },
+    "93-O17O": {
+     "tanimoto": 0.875,
+     "smiles": "CCCCCCCCCCCCCCCCCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCCCCCCCCCCCCCCCCC",
+     "experiments": [
+      "AA_2008"
+     ],
+     "names": [
+      "93_O18"
+     ]
+    },
+    "93-O17S": {
+     "tanimoto": 0.804,
+     "smiles": "CCCCCCCCCCCCCCCCCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCCCCCCCCCCCCCCCCC",
+     "experiments": [
+      "AA_2008"
+     ],
+     "names": [
+      "93_O18"
+     ]
+    },
+    "93-O17Se": {
+     "tanimoto": 0.804,
+     "smiles": "CCCCCCCCCCCCCCCCCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCCCCCCCCCCCCCCCCC",
+     "experiments": [
+      "AA_2008"
+     ],
+     "names": [
+      "93_O18"
+     ]
+    },
+    "9322-N16S-S": {
+     "tanimoto": 0.574,
+     "smiles": "CCCCCCC(=O)OCCN(CCCn1ccnc1C)CCOC(=O)CCCCCC",
+     "experiments": [
+      "YR_2024"
+     ],
+     "names": [
+      "A9322_C2'L7"
+     ]
+    },
+    "9322-O16S-S": {
+     "tanimoto": 0.745,
+     "smiles": "CCCCCCC(=O)OCCN(CCCn1ccnc1C)CCOC(=O)CCCCCC",
+     "experiments": [
+      "YR_2024"
+     ],
+     "names": [
+      "A9322_C2'L7"
+     ]
+    },
+    "9322-O17O": {
+     "tanimoto": 0.792,
+     "smiles": "CCCCCC(=O)OCCCCCCN(CCCCCCOC(=O)CCCCC)CCCn1ccnc1C",
+     "experiments": [
+      "YR_2024"
+     ],
+     "names": [
+      "A9322_C6'L6"
+     ]
+    },
+    "9322-O17S": {
+     "tanimoto": 0.745,
+     "smiles": "CCCCCCC(=O)OCCN(CCCn1ccnc1C)CCOC(=O)CCCCCC",
+     "experiments": [
+      "YR_2024"
+     ],
+     "names": [
+      "A9322_C2'L7"
+     ]
+    },
+    "9322-O17Se": {
+     "tanimoto": 0.745,
+     "smiles": "CCCCCCC(=O)OCCN(CCCn1ccnc1C)CCOC(=O)CCCCCC",
+     "experiments": [
+      "YR_2024"
+     ],
+     "names": [
+      "A9322_C2'L7"
+     ]
+    }
+   },
+   "leading_token_trap": {
+    "n_rows_whose_IL_name_starts_with_93_or_9322": 11,
+    "examples": [
+     "93_N12",
+     "93_N14",
+     "93_N15",
+     "93_N16",
+     "93_N18",
+     "93_O10",
+     "93_O12",
+     "93_O13"
+    ],
+    "note": "reported, NOT acted on. A leading number token is not an identity."
+   }
+  },
+  "vivo": {
+   "n_rows": 1803,
+   "n_unique_IL_SMILES": 1506,
+   "full_inchikey_hits": 0,
+   "skeleton_inchikey_hits": 0,
+   "IL_name_exact_hits": [],
+   "rows_with_any_imidazole": 26,
+   "near_miss_head_93": {
+    "n_unique_structures": 25,
+    "n_rows": 25,
+    "experiments": [
+     "AP_2025",
+     "BL_2024",
+     "LR_2023",
+     "ZC_2023"
+    ],
+    "example_names_per_experiment": {
+     "AP_2025": [
+      "STAAR_A6_B2_C1",
+      "STAAR_A6_B2_C2",
+      "STAAR_A6_B2_C3",
+      "STAAR_A6_B2_C4",
+      "STAAR_A6_B2_C5",
+      "STAAR_A6_B2_C6"
+     ],
+     "BL_2024": [
+      "111-6"
+     ],
+     "LR_2023": [
+      "A24_T1",
+      "A24_T10",
+      "A24_T11",
+      "A24_T12",
+      "A24_T13",
+      "A24_T133"
+     ],
+     "ZC_2023": [
+      "2A4-SCC-10"
+     ]
+    }
+   },
+   "nearest_neighbour": {
+    "93-N16S-S": {
+     "tanimoto": 0.565,
+     "smiles": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "2A4-SCC-10"
+     ]
+    },
+    "93-O16S-S": {
+     "tanimoto": 0.8,
+     "smiles": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "2A4-SCC-10"
+     ]
+    },
+    "93-O17O": {
+     "tanimoto": 0.631,
+     "smiles": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "2A4-SCC-10"
+     ]
+    },
+    "93-O17S": {
+     "tanimoto": 0.77,
+     "smiles": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "2A4-SCC-10"
+     ]
+    },
+    "93-O17Se": {
+     "tanimoto": 0.612,
+     "smiles": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "2A4-SCC-10"
+     ]
+    },
+    "9322-N16S-S": {
+     "tanimoto": 0.407,
+     "smiles": "CCCCCCCCCCCCCCN(CCCCCCCCCCCCCC)CCNC(=O)CCN(C)CCN(C)CCC(=O)NCCN(CCCCCCCCCCCCCC)CCCCCCCCCCCCCC",
+     "experiments": [
+      "XD_2026"
+     ],
+     "names": [
+      "E5"
+     ]
+    },
+    "9322-O16S-S": {
+     "tanimoto": 0.6,
+     "smiles": "CCCCCCCCCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCCCCCCCCC)CCC(=O)OCCSSCCCCCCCCCC)CCC(=O)OCCSSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "4A3-SSC-10"
+     ]
+    },
+    "9322-O17O": {
+     "tanimoto": 0.588,
+     "smiles": "CCCCCCCCCCCCCCOC(=O)CCN(CCCOCCOCCOCCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC",
+     "experiments": [
+      "KW_2014"
+     ],
+     "names": [
+      "A161_C14"
+     ]
+    },
+    "9322-O17S": {
+     "tanimoto": 0.528,
+     "smiles": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCn1ccnc1)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+     "experiments": [
+      "ZC_2023"
+     ],
+     "names": [
+      "2A4-SCC-10"
+     ]
+    },
+    "9322-O17Se": {
+     "tanimoto": 0.475,
+     "smiles": "CCCCCCCCCCCCCCOC(=O)CCN(CCCN1CCN(CCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CC1)CCC(=O)OCCCCCCCCCCCCCC",
+     "experiments": [
+      "KW_2014"
+     ],
+     "names": [
+      "A313_C14"
+     ]
+    }
+   },
+   "leading_token_trap": {
+    "n_rows_whose_IL_name_starts_with_93_or_9322": 0,
+    "examples": [],
+    "note": "reported, NOT acted on. A leading number token is not an identity."
+   }
+  }
+ },
+ "conclusion": "ZERO full-InChIKey and ZERO skeleton-InChIKey overlap in either pool: none of the five enumerable lipidoids is already in the corpus. But the NEAR MISS is the important result. The corpus already carries 173 unique structures over 277 in-vitro rows (11 experiments) and 25 in-vivo rows (4) built on this exact amine head, named 93_O12 / 93_O14 / 93_N12 by AA_2008 and A93_C12 by KW_2014. Those are two independent curations of two unrelated papers, and together with curation/xuq_32520527 (which read head 93 off a drawn figure in a third paper) they fix amine 93 = 1-(3-aminopropyl)imidazole from three sources this paper did not supply. They also confirm this paper's tail-prefix convention externally: AA_2008 carries 93_O14 as a tetradecyl ESTER and 93_N14 as the corresponding AMIDE on the same head, which is exactly the O/N split the SI's O16S-S / N16S-S pair implies. REPORTED, NOT ACTED ON."
+}

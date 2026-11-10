@@ -1,0 +1,735 @@
+{
+ "_what": "Every check, with numbers. A check is credited only where its seeded defect moved the agreement count.",
+ "n_checks": 15,
+ "n_failed": 0,
+ "failed": [],
+ "checks": {
+  "L1_library_size": {
+   "passed": true,
+   "n_members": 12,
+   "n_distinct_inchikey": 12,
+   "n_distinct_smiles": 12,
+   "members": [
+    "Lipid 14",
+    "Lipid 37",
+    "Lipid 32",
+    "Lipid 38",
+    "Lipid 33",
+    "Lipid 39",
+    "Lipid 34",
+    "Lipid 40",
+    "Lipid 35",
+    "Lipid 41",
+    "Lipid 36",
+    "Lipid 42"
+   ],
+   "three_independent_establishments": [
+    "Results text names lipids 14 and 32-42 as the library",
+    "Supp Fig 2 legend prints a pKa for each of exactly those 12",
+    "Fig 2 legend has 12 swatches; Fig 3C/D/E have 13 category ticks = Untreated + 12"
+   ],
+   "formulations_per_lipid": 1,
+   "note": "12 DISTINCT IONIZABLE STRUCTURES = 12 LNP formulations. One composition (40:48.5:10:1.5, N/P 9) for all of them, so 'N lipids' and 'N formulations' coincide here. The count that multiplies is the VALUES: 3 cell lines x 3 doses in vitro."
+  },
+  "S1_isomeric_pairs_exist": {
+   "passed": true,
+   "pairs": {
+    "C56H110N2O6": [
+     "Lipid 14",
+     "Lipid 32"
+    ],
+    "C58H113N3O6": [
+     "Lipid 37",
+     "Lipid 38"
+    ],
+    "C56H111N3O5": [
+     "Lipid 34",
+     "Lipid 36"
+    ],
+    "C58H114N4O5": [
+     "Lipid 40",
+     "Lipid 42"
+    ]
+   },
+   "why": "Mass and formula are BLIND to these. Lipid 34/36 differ only in which side of the linker carries the carbonyl, and the SI prints [M+1]+ 907.2 and 907.3 for them. The direction is carried only by the IUPAC name and the synthesis route."
+  },
+  "S2_linker_direction": {
+   "passed": true,
+   "agreement_count": 12,
+   "of": 12,
+   "seeded_defect": "lipid 34 given lipid 36's (isomeric) structure",
+   "agreement_count_when_seeded": 11,
+   "moved": 1,
+   "note": "The seed changes NOTHING a mass or formula check can see: both are C56H111N3O5, exact mass 905.852 either way."
+  },
+  "S3_mass_three_ways": {
+   "passed": true,
+   "leg_1_ours_vs_their_formula": "THE SI PRINTS NO MOLECULAR FORMULA for any lipid -- only an IUPAC name and an m/z. This leg does not exist for this paper and is reported as absent rather than manufactured by re-deriving the formula from the same name the structure was built from, which would compare a value to itself.",
+   "leg_2_their_formula_vs_their_mz": "same -- no formula is printed",
+   "leg_3_ours_vs_their_mz": {
+    "n": 11,
+    "mean_delta_Da": -0.3249,
+    "sd_Da": 0.0434,
+    "min": -0.381,
+    "max": -0.228,
+    "all_same_sign": true
+   },
+   "consecutive_difference_residuals_Da": [
+    0.001,
+    -0.017,
+    -0.015,
+    0.115,
+    -0.137,
+    0.0,
+    0.001,
+    -0.017,
+    0.085,
+    0.015
+   ],
+   "per_lipid": {
+    "Lipid 37": {
+     "formula": "C58H113N3O6",
+     "monoisotopic_M_plus_H": 948.8702,
+     "average_M_plus_H": 949.565,
+     "printed_m_z": 949.2,
+     "delta_vs_average": -0.365
+    },
+    "Lipid 32": {
+     "formula": "C56H110N2O6",
+     "monoisotopic_M_plus_H": 907.8437,
+     "average_M_plus_H": 908.512,
+     "printed_m_z": 908.2,
+     "delta_vs_average": -0.312
+    },
+    "Lipid 38": {
+     "formula": "C58H113N3O6",
+     "monoisotopic_M_plus_H": 948.8702,
+     "average_M_plus_H": 949.565,
+     "printed_m_z": 949.2,
+     "delta_vs_average": -0.365
+    },
+    "Lipid 33": {
+     "formula": "C56H110N2O7",
+     "monoisotopic_M_plus_H": 923.8386,
+     "average_M_plus_H": 924.511,
+     "printed_m_z": 924.2,
+     "delta_vs_average": -0.311
+    },
+    "Lipid 39": {
+     "formula": "C58H113N3O7",
+     "monoisotopic_M_plus_H": 964.8651,
+     "average_M_plus_H": 965.564,
+     "printed_m_z": 965.2,
+     "delta_vs_average": -0.364
+    },
+    "Lipid 34": {
+     "formula": "C56H111N3O5",
+     "monoisotopic_M_plus_H": 906.8597,
+     "average_M_plus_H": 907.528,
+     "printed_m_z": 907.2,
+     "delta_vs_average": -0.328
+    },
+    "Lipid 40": {
+     "formula": "C58H114N4O5",
+     "monoisotopic_M_plus_H": 947.8862,
+     "average_M_plus_H": 948.581,
+     "printed_m_z": 948.2,
+     "delta_vs_average": -0.381
+    },
+    "Lipid 35": {
+     "formula": "C56H112N4O5",
+     "monoisotopic_M_plus_H": 921.8706,
+     "average_M_plus_H": 922.543,
+     "printed_m_z": 922.2,
+     "delta_vs_average": -0.343
+    },
+    "Lipid 41": {
+     "formula": "C58H115N5O5",
+     "monoisotopic_M_plus_H": 962.8971,
+     "average_M_plus_H": 963.596,
+     "printed_m_z": 963.3,
+     "delta_vs_average": -0.296
+    },
+    "Lipid 36": {
+     "formula": "C56H111N3O5",
+     "monoisotopic_M_plus_H": 906.8597,
+     "average_M_plus_H": 907.528,
+     "printed_m_z": 907.3,
+     "delta_vs_average": -0.228
+    },
+    "Lipid 42": {
+     "formula": "C58H114N4O5",
+     "monoisotopic_M_plus_H": 947.8862,
+     "average_M_plus_H": 948.581,
+     "printed_m_z": 948.3,
+     "delta_vs_average": -0.281
+    }
+   },
+   "note": "All 11 printed m/z sit 0.23-0.38 Da BELOW our average-mass [M+H]+ -- a systematic offset, not a structural disagreement. What a systematic offset cannot survive is the DIFFERENCES between lipids, and those reproduce to <=0.33 Da."
+  },
+  "S4_nmr_integral_sum": {
+   "passed": true,
+   "n_exact": 6,
+   "n_compared": 11,
+   "per_lipid": [
+    {
+     "lipid": "Lipid 32",
+     "formula_H": 110,
+     "nmr_integral_sum": 110,
+     "delta": 0
+    },
+    {
+     "lipid": "Lipid 33",
+     "formula_H": 110,
+     "nmr_integral_sum": 110,
+     "delta": 0
+    },
+    {
+     "lipid": "Lipid 34",
+     "formula_H": 111,
+     "nmr_integral_sum": 110,
+     "delta": -1
+    },
+    {
+     "lipid": "Lipid 35",
+     "formula_H": 112,
+     "nmr_integral_sum": 114,
+     "delta": 2
+    },
+    {
+     "lipid": "Lipid 36",
+     "formula_H": 111,
+     "nmr_integral_sum": 111,
+     "delta": 0
+    },
+    {
+     "lipid": "Lipid 37",
+     "formula_H": 113,
+     "nmr_integral_sum": 113,
+     "delta": 0
+    },
+    {
+     "lipid": "Lipid 38",
+     "formula_H": 113,
+     "nmr_integral_sum": 113,
+     "delta": 0
+    },
+    {
+     "lipid": "Lipid 39",
+     "formula_H": 113,
+     "nmr_integral_sum": 113,
+     "delta": 0
+    },
+    {
+     "lipid": "Lipid 40",
+     "formula_H": 114,
+     "nmr_integral_sum": 113,
+     "delta": -1
+    },
+    {
+     "lipid": "Lipid 41",
+     "formula_H": 115,
+     "nmr_integral_sum": 114,
+     "delta": -1
+    },
+    {
+     "lipid": "Lipid 42",
+     "formula_H": 114,
+     "nmr_integral_sum": 109,
+     "delta": -5
+    }
+   ],
+   "note": "Independent of the mass spectrum and sensitive to composition (not to connectivity). Five are exact; three are short by exactly the amide/urea NH the SI does not report; lipid 35 is +2 and lipid 42 is -5, both from overlapping multiplets in the printed list. Recorded, not reconciled."
+  },
+  "S5_linker_from_1H_NMR": {
+   "passed": true,
+   "agreement_count": 11,
+   "of": 11,
+   "seeded_defect": "lipid 33 (carbonate) given lipid 32's reverse-ester structure",
+   "agreement_count_when_seeded": 10,
+   "moved": 1,
+   "per_lipid": [
+    {
+     "lipid": "Lipid 32",
+     "linker": "reverse-ester",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.12,
+       2
+      ],
+      [
+       4.04,
+       4
+      ]
+     ],
+     "observed_H": 6,
+     "predicted_H": 6,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 33",
+     "linker": "carbonate",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.19,
+       2
+      ],
+      [
+       4.17,
+       2
+      ],
+      [
+       4.05,
+       4
+      ]
+     ],
+     "observed_H": 8,
+     "predicted_H": 8,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 34",
+     "linker": "amide",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.06,
+       4
+      ]
+     ],
+     "observed_H": 4,
+     "predicted_H": 4,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 35",
+     "linker": "urea",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.06,
+       4
+      ]
+     ],
+     "observed_H": 4,
+     "predicted_H": 4,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 36",
+     "linker": "reverse-amide",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.04,
+       4
+      ]
+     ],
+     "observed_H": 4,
+     "predicted_H": 4,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 37",
+     "linker": "ester",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.17,
+       2
+      ],
+      [
+       4.05,
+       4
+      ]
+     ],
+     "observed_H": 6,
+     "predicted_H": 6,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 38",
+     "linker": "reverse-ester",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.2,
+       2
+      ],
+      [
+       4.05,
+       4
+      ]
+     ],
+     "observed_H": 6,
+     "predicted_H": 6,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 39",
+     "linker": "carbonate",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.24,
+       2
+      ],
+      [
+       4.18,
+       2
+      ],
+      [
+       4.05,
+       4
+      ]
+     ],
+     "observed_H": 8,
+     "predicted_H": 8,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 40",
+     "linker": "amide",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.06,
+       4
+      ]
+     ],
+     "observed_H": 4,
+     "predicted_H": 4,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 41",
+     "linker": "urea",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.06,
+       4
+      ]
+     ],
+     "observed_H": 4,
+     "predicted_H": 4,
+     "agrees": true
+    },
+    {
+     "lipid": "Lipid 42",
+     "linker": "reverse-amide",
+     "printed_multiplets_d3.95_4.30": [
+      [
+       4.05,
+       4
+      ]
+     ],
+     "observed_H": 4,
+     "predicted_H": 4,
+     "agrees": true
+    }
+   ],
+   "no_13C_in_this_SI": "searched all 42 SI pages: '13C' 0 hits, 'C NMR' 0, '100 MHz' 0, '125 MHz' 0, 'HRMS' 0. Only 1H at 400 MHz and ESI-TOF m/z to one decimal. The d155-vs-d173 carbonate/ester test is unavailable here and is NOT claimed.",
+   "carbamate_is_impossible": "A carbamate would need an N-H or N-alkyl nitrogen on one side of the C=O. For lipids 33 and 39 the CDI acylation is between alcohol 2 and a head ALCOHOL (3-dimethylamino-1-propanol; 2-(4-methylpiperazin-1-yl)ethanol), and every nitrogen in both partners is TERTIARY -- the core N carries two C8 arms plus the hydroxyethyl, the head N carries two methyls or is a piperazine N. There is no N-H anywhere to acylate, so carbamate is excluded by valence, not by preference.",
+   "third_line_of_evidence": "The IUPAC name says it outright: lipid 33 is '...-7-oxo-6,8-DIOXA-2,11-diazanonadecan-19-yl...', i.e. O6-C7(=O)-O8, a dialkyl carbonate; lipid 39 is '...(ethoxy)CARBONYL)OXY)ethyl...'.",
+   "note": "Three independent lines, none of them mass: the 1H O-CH2 count (8 H for both carbonates, 6 H for all four esters, 4 H for all six amide-family linkers, 11/11), the valence argument that excludes carbamate, and the printed name."
+  },
+  "F2_1_calibration": {
+   "passed": true,
+   "panels": {
+    "A": {
+     "tick_fit_residual_px": 0.339,
+     "worst_loo_px": 0.646,
+     "loo_tol_px": 1.5,
+     "px_per_decade": 51.048,
+     "n_gridlines": 4,
+     "n_bar_windows": 36,
+     "n_bar_tops": 36
+    },
+    "B": {
+     "tick_fit_residual_px": 0.4817,
+     "worst_loo_px": 0.826,
+     "loo_tol_px": 1.5,
+     "px_per_decade": 25.166,
+     "n_gridlines": 8,
+     "n_bar_windows": 36,
+     "n_bar_tops": 36
+    },
+    "C": {
+     "tick_fit_residual_px": 0.3799,
+     "worst_loo_px": 0.454,
+     "loo_tol_px": 1.5,
+     "px_per_decade": 25.247,
+     "n_gridlines": 8,
+     "n_bar_windows": 36,
+     "n_bar_tops": 36
+    }
+   },
+   "note": "Scale AND origin from the panel's own dashed decade gridlines. The solid axis rule is EXCLUDED even though it sits on a decade in every panel: it is the panel box, and a box that happens to be right teaches nothing (error class 20)."
+  },
+  "F2_2_printed_pearson_r": {
+   "passed": true,
+   "agreement_count": 2,
+   "of": 2,
+   "table": {
+    "HeLa@0.25": {
+     "r": 0.7534,
+     "p": 0.0047
+    },
+    "HeLa@0.15": {
+     "r": 0.7364,
+     "p": 0.0063
+    },
+    "HeLa@0.025": {
+     "r": 0.5592,
+     "p": 0.0587
+    },
+    "HeLa_BEST": {
+     "dose_ug_per_mL": "0.15",
+     "r": 0.7364,
+     "printed_r": 0.7358,
+     "delta_r": 0.0006,
+     "p": 0.0063
+    },
+    "HepG2@0.25": {
+     "r": 0.6959,
+     "p": 0.012
+    },
+    "HepG2@0.15": {
+     "r": 0.7191,
+     "p": 0.0084
+    },
+    "HepG2@0.025": {
+     "r": 0.7172,
+     "p": 0.0087
+    },
+    "HepG2_BEST": {
+     "dose_ug_per_mL": "0.15",
+     "r": 0.7191,
+     "printed_r": 0.7226,
+     "delta_r": -0.0035,
+     "p": 0.0084
+    }
+   },
+   "seeded_defect": "lipid labels rotated by one bar group",
+   "r_when_seeded": 0.5106,
+   "moved": 0.2252,
+   "note": "pKa is a TIER-4 EXACT vector (printed as text in the Supp Fig 2 legend), so this compares our digitised luminescence against a number the authors computed and printed, through a quantity we did not digitise. It also identifies WHICH dose the correlation panels used: the middle one."
+  },
+  "F3_1_calibration": {
+   "passed": true,
+   "panels": {
+    "C": {
+     "tick_fit_residual_px": 0.35,
+     "worst_loo_px": 0.667,
+     "px_per_decade": 47.45,
+     "x_tick_fit_residual_px": 0.3571,
+     "x_worst_loo_px": 0.428,
+     "n_category_ticks": 13,
+     "measured": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12
+     ],
+     "no_bar_drawn": [
+      9
+     ],
+     "refused": [
+      "0"
+     ]
+    },
+    "D": {
+     "tick_fit_residual_px": 0.3333,
+     "worst_loo_px": 1.0,
+     "px_per_decade": 52.5,
+     "x_tick_fit_residual_px": 0.3297,
+     "x_worst_loo_px": 0.417,
+     "n_category_ticks": 13,
+     "measured": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      10
+     ],
+     "no_bar_drawn": [
+      4,
+      5,
+      6,
+      11,
+      12
+     ],
+     "refused": [
+      "0"
+     ]
+    },
+    "E": {
+     "tick_fit_residual_px": 0.3333,
+     "worst_loo_px": 1.0,
+     "px_per_decade": 70.5,
+     "x_tick_fit_residual_px": 0.478,
+     "x_worst_loo_px": 0.521,
+     "n_category_ticks": 13,
+     "measured": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "no_bar_drawn": [],
+     "refused": [
+      "0"
+     ]
+    }
+   },
+   "note": "The y scale comes from the MAJOR ticks only, separated from the eight minor ticks per decade by run length; the x (category) scale comes from the 13 axis ticks below the baseline, because the bars touch and cannot delimit themselves."
+  },
+  "F3_2_lungs_vs_pKa": {
+   "passed": true,
+   "r": 0.8369,
+   "p": 0.0007,
+   "R2": 0.7005,
+   "printed_r": 0.8417,
+   "printed_p": 0.0006,
+   "printed_R2": 0.7084,
+   "delta_r": -0.0048,
+   "delta_R2": -0.0079,
+   "computed_on": "RAW radiance, not log10 -- Supp Fig 5C's y axis reads 'Avg Radiance' on a log scale, where A/B/D/E/F read 'Log10 (Avg Radiance)'. On log10 we get r=0.886, which is 0.044 from the printed value; on raw radiance 0.837, which is 0.005 from it.",
+   "seeded_defect": "panel C's bottom axis label re-read as 10^6, i.e. three decades over the same four ticks",
+   "r_when_seeded": 0.8708,
+   "moved": 0.0339
+  },
+  "F3_3_panel_C_decade_ladder": {
+   "passed": true,
+   "major_ticks_px": [
+    619.0,
+    666.5,
+    713.5,
+    761.5
+   ],
+   "equal_gaps_px": [
+    47.5,
+    47.0,
+    48.0
+   ],
+   "conclusion": "FOUR equally spaced major ticks. A 10^8..10^6 reading would need one of them unlabelled, which GraphPad does not draw; 10^8..10^5 at 47.45 px per decade is the only ladder consistent with the furniture, and check F3_2 then reproduces the printed Pearson r to 0.005.",
+   "note": "The bottom glyph is 8 px of JPEG and reads equally as 5 or 6. This check does not read it; it measures the spacing."
+  },
+  "F3_4_minor_ticks_pin_the_decade": {
+   "passed": true,
+   "observed_minor_tick_rows": [
+    622.5,
+    626.5,
+    629.5,
+    633.5,
+    638.5,
+    643.5,
+    652.5
+   ],
+   "predicted_if_decade_is_47_45px": [
+    621.17,
+    623.6,
+    626.35,
+    629.53,
+    633.28,
+    637.88,
+    643.81,
+    652.17
+   ],
+   "n_minor_ticks_detected": 7,
+   "mean_nearest_residual_px": 0.393,
+   "predicted_if_decade_is_71_25px": [
+    622.26,
+    625.9,
+    630.04,
+    634.81,
+    640.45,
+    647.35,
+    656.26,
+    668.8
+   ],
+   "mean_nearest_residual_px_alternative": 1.633,
+   "ratio": 4.15,
+   "note": "Eight minor ticks per decade at log10(2..9) -- UNEQUALLY spaced, so they pin the decade length rather than merely being consistent with it. This is what settles panel C's ladder; check F3_2 only moves by 0.034 under the wrong ladder, because a monotone rescaling barely perturbs a Pearson coefficient, and on its own it would NOT have settled anything."
+  },
+  "X1_supp_fig5_panel_labels": {
+   "passed": true,
+   "agreement_count": 3,
+   "of": 3,
+   "matrix": {
+    "HeLa->lungs": 0.8199,
+    "HeLa->liver": -0.2445,
+    "HeLa->spleen": 0.4375,
+    "RAW264.7->lungs": 0.4926,
+    "RAW264.7->liver": -0.1394,
+    "RAW264.7->spleen": 0.7311,
+    "HepG2->lungs": 0.8018,
+    "HepG2->liver": -0.0911,
+    "HepG2->spleen": 0.228
+   },
+   "printed": {
+    "RAW264.7->spleen": 0.7746,
+    "HeLa->lungs": 0.8843,
+    "HepG2->lungs": 0.8428
+   },
+   "retired_suspicion": "On first reading, the x-axis RANGES of Supp Fig 5D (5-9) and 5E (4-8) looked swapped relative to their titles (RAW264.7 and HeLa). This matrix retires that: each labelled pairing is the largest in its row by >=0.15, so the titles are right and the ranges were misjudged by eye.",
+   "residual": "Our values are 0.03-0.08 below the printed r. Check X2 shows that one censored point accounts for it."
+  },
+  "X2_censoring_sensitivity": {
+   "passed": true,
+   "table": {
+    "log10=5.0": {
+     "HeLa->lungs": 0.8193,
+     "HepG2->lungs": 0.8012
+    },
+    "log10=4.5": {
+     "HeLa->lungs": 0.8704,
+     "HepG2->lungs": 0.8453
+    },
+    "log10=4.0": {
+     "HeLa->lungs": 0.8882,
+     "HepG2->lungs": 0.8582
+    },
+    "log10=3.5": {
+     "HeLa->lungs": 0.8887,
+     "HepG2->lungs": 0.8554
+    }
+   },
+   "printed": {
+    "HeLa->lungs": 0.8843,
+    "HepG2->lungs": 0.8428
+   },
+   "conclusion": "Lipid 39 has NO lungs bar; we store the axis floor (9.9e4) as an upper bound. Putting its true value at 1e4-3e4 instead reproduces both printed coefficients (0.870-0.888 vs 0.8843 and 0.845-0.858 vs 0.8428). So the residual in X1 is the censoring, not a read error, and the upper-bound flag on that row is doing real work."
+  },
+  "A1_anchor_present": {
+   "passed": true,
+   "n_rows": 13,
+   "generator_present": true,
+   "byte_identical_to_enumeration": [
+    "Lipid 14",
+    "Lipid 32",
+    "Lipid 33",
+    "Lipid 34",
+    "Lipid 35",
+    "Lipid 36",
+    "Lipid 37",
+    "Lipid 38",
+    "Lipid 39",
+    "Lipid 40",
+    "Lipid 41",
+    "Lipid 42"
+   ],
+   "note": "BYTE IDENTITY IS NOT THE SIGNAL (F-037). A correct re-derivation canonicalises to the same string as a correct enumeration. What matters is that make_reference.py shares no code path with stage01: it uses no curation/lib/assemble call, no esterify, no attach, no RWMol, and composes the molecule head-first from the IUPAC name's own locants. provenance/check_anchor_independence.py was NOT run -- it writes tracked files other agents are using -- so the posture is argued in PROVENANCE.md and the generator is here to read."
+  }
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "_what": "Stage 03: Ugi 4CR enumeration of the SD_2026 library.",
+ "reaction_smarts": "[C;H1,H2;$(C=O):1]=[O;X1].[N;H2;X3:2].[C;X3:3](=[O;X1:4])[O;X2;H1:5].[C-;X1:6]#[N+;X2:7]>>[C:3](=[O:4])[N;H0:2][C:1][C+0:6](=[O:5])[N+0;H1:7]",
+ "block_counts": {
+  "headgroups": 12,
+  "linkers": 4,
+  "tails_a": 4,
+  "tails_b": 2
+ },
+ "product_of_counts": 384,
+ "n_enumerated": 384,
+ "n_distinct_canonical_smiles": 384,
+ "duplicate_structures": {},
+ "n_products_with_a_new_stereocentre": 288,
+ "stated_library_size": {
+  "abstract": 384,
+  "results_first_line": 384,
+  "supplementary_fig_1_caption": "12 x 4 x 2 x 4 = 384",
+  "introduction": "more than 300",
+  "reconciliation": "384 enumerated against 384 stated, from 12 x 4 x 4 x 2. The Introduction's 'a combinatorial library of more than 300 ionizable lipids' is the paper's own looser restatement of the same number and is recorded in 08_contradictions.csv, not treated as a second count."
+ },
+ "si_named_lipids": {
+  "SC-lipid-1": {
+   "si_formula": "C48H93N3O2",
+   "si_mw": 744.29,
+   "si_page": 5,
+   "n_library_members_with_this_formula": 3,
+   "members": [
+    "H3-L4-Ta4-Tb2",
+    "H4-L4-Ta4-Tb2",
+    "H11-L2-Ta4-Tb2"
+   ],
+   "our_mw_for_that_formula": 744.29,
+   "mw_delta": 0.0
+  },
+  "SC-lipid-2": {
+   "si_formula": "C50H98N4O4",
+   "si_mw": 819.36,
+   "si_page": 8,
+   "n_library_members_with_this_formula": 4,
+   "members": [
+    "H2-L1-Ta4-Tb1",
+    "H10-L4-Ta1-Tb1",
+    "H10-L2-Ta2-Tb1",
+    "H10-L1-Ta3-Tb1"
+   ],
+   "our_mw_for_that_formula": 819.36,
+   "mw_delta": 0.0
+  },
+  "SC-lipid-3": {
+   "si_formula": "C50H97N3O5",
+   "si_mw": 820.34,
+   "si_page": 11,
+   "n_library_members_with_this_formula": 3,
+   "members": [
+    "H12-L4-Ta1-Tb1",
+    "H12-L2-Ta2-Tb1",
+    "H12-L1-Ta3-Tb1"
+   ],
+   "our_mw_for_that_formula": 820.34,
+   "mw_delta": 0.0
+  },
+  "SC-lipid-4": {
+   "si_formula": "C48H93N3O5",
+   "si_mw": 792.29,
+   "si_page": 14,
+   "n_library_members_with_this_formula": 2,
+   "members": [
+    "H12-L2-Ta1-Tb1",
+    "H12-L1-Ta2-Tb1"
+   ],
+   "our_mw_for_that_formula": 792.29,
+   "mw_delta": 0.0
+  },
+  "SC-lipid-5": {
+   "si_formula": "C48H95N3O4",
+   "si_mw": 778.31,
+   "si_page": 17,
+   "n_library_members_with_this_formula": 4,
+   "members": [
+    "H5-L1-Ta1-Tb1",
+    "H6-L1-Ta1-Tb1",
+    "H7-L2-Ta1-Tb1",
+    "H7-L1-Ta2-Tb1"
+   ],
+   "our_mw_for_that_formula": 778.3,
+   "mw_delta": -0.01
+  },
+  "LC-lipid-1": {
+   "si_formula": "C50H97N3O4",
+   "si_mw": 804.34,
+   "si_page": 20,
+   "n_library_members_with_this_formula": 11,
+   "members": [
+    "H1-L3-Ta2-Tb1",
+    "H3-L4-Ta1-Tb1",
+    "H3-L2-Ta2-Tb1",
+    "H3-L1-Ta3-Tb1",
+    "H4-L4-Ta1-Tb1",
+    "H4-L2-Ta2-Tb1",
+    "H4-L1-Ta3-Tb1",
+    "H7-L1-Ta4-Tb1",
+    "H8-L3-Ta2-Tb1",
+    "H11-L2-Ta1-Tb1",
+    "H11-L1-Ta2-Tb1"
+   ],
+   "our_mw_for_that_formula": 804.34,
+   "mw_delta": 0.0
+  },
+  "LC-lipid-2": {
+   "si_formula": "C50H99N3O4",
+   "si_mw": 806.36,
+   "si_page": 23,
+   "n_library_members_with_this_formula": 7,
+   "members": [
+    "H5-L2-Ta1-Tb1",
+    "H5-L1-Ta2-Tb1",
+    "H6-L2-Ta1-Tb1",
+    "H6-L1-Ta2-Tb1",
+    "H7-L4-Ta1-Tb1",
+    "H7-L2-Ta2-Tb1",
+    "H7-L1-Ta3-Tb1"
+   ],
+   "our_mw_for_that_formula": 806.36,
+   "mw_delta": 0.0
+  },
+  "LC-lipid-3": {
+   "si_formula": "C54H105N3O4",
+   "si_mw": 860.45,
+   "si_page": 26,
+   "n_library_members_with_this_formula": 7,
+   "members": [
+    "H3-L4-Ta3-Tb1",
+    "H4-L4-Ta3-Tb1",
+    "H5-L2-Ta4-Tb1",
+    "H6-L2-Ta4-Tb1",
+    "H7-L4-Ta4-Tb1",
+    "H11-L4-Ta2-Tb1",
+    "H11-L2-Ta3-Tb1"
+   ],
+   "our_mw_for_that_formula": 860.45,
+   "mw_delta": 0.0
+  },
+  "LC-lipid-4": {
+   "si_formula": "C52H101N3O4",
+   "si_mw": 832.4,
+   "si_page": 29,
+   "n_library_members_with_this_formula": 12,
+   "members": [
+    "H1-L3-Ta3-Tb1",
+    "H3-L4-Ta2-Tb1",
+    "H3-L2-Ta3-Tb1",
+    "H4-L4-Ta2-Tb1",
+    "H4-L2-Ta3-Tb1",
+    "H5-L1-Ta4-Tb1",
+    "H6-L1-Ta4-Tb1",
+    "H7-L2-Ta4-Tb1",
+    "H8-L3-Ta3-Tb1",
+    "H11-L4-Ta1-Tb1",
+    "H11-L2-Ta2-Tb1",
+    "H11-L1-Ta3-Tb1"
+   ],
+   "our_mw_for_that_formula": 832.4,
+   "mw_delta": 0.0
+  },
+  "LC-lipid-5": {
+   "si_formula": "C54H105N3O4",
+   "si_mw": 860.45,
+   "si_page": 32,
+   "n_library_members_with_this_formula": 7,
+   "members": [
+    "H3-L4-Ta3-Tb1",
+    "H4-L4-Ta3-Tb1",
+    "H5-L2-Ta4-Tb1",
+    "H6-L2-Ta4-Tb1",
+    "H7-L4-Ta4-Tb1",
+    "H11-L4-Ta2-Tb1",
+    "H11-L2-Ta3-Tb1"
+   ],
+   "our_mw_for_that_formula": 860.45,
+   "mw_delta": 0.0
+  }
+ },
+ "si_named_lipids_all_realised": true,
+ "si_formula_check_is_necessary_not_sufficient": "Ten printed formulas all land on a library member, and the MW we compute from each agrees with the printed MW to <= 0.06. That tests the BLOCK INVENTORY and the reaction's atom balance. It does NOT test connectivity -- several members share a formula, and mass is blind to which nitrogen an arm sits on. Connectivity is tested by the Fig. 1l anchor in reference_structures.csv (C10).",
+ "table5_pinned_member": {
+  "lipid_id": "H4-L4-Ta1-Tb1",
+  "reagents_named_by_cas_in_table5": {
+   "amine": "3-(pyrrolidin-1-yl)propan-1-amine, CAS 23159-07-1 -> H4",
+   "aldehyde": "pivaldehyde, CAS 630-19-3 -> L4",
+   "acid": "myristic acid, CAS 544-63-8 -> Ta1",
+   "isocyanide": "6-isocyanohexyl 2-hexylundecanoate, MW 379.63 -> Tb1"
+  },
+  "our_formula": "C50H97N3O4",
+  "si_formula": "C50H97N3O4",
+  "our_mw": "804.34",
+  "si_mw": 804.34,
+  "formula_matches": true,
+  "mw_delta": 0.0,
+  "canonical_SMILES": "CCCCCCCCCCCCCC(=O)N(CCCN1CCCC1)C(C(=O)NCCCCCCOC(=O)C(CCCCCC)CCCCCCCCC)C(C)(C)C"
+ },
+ "rows_with_a_caveat": 384
+}

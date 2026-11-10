@@ -1,0 +1,50 @@
+{
+  "_what": "Where every input file came from. Filled at Stage 00, before any digitiser ran.",
+  "paper": {
+    "title": "Photochemistry-Based Development of Ionizable Lipid Library for mRNA-Lipid Nanoparticle Delivery In Vivo",
+    "journal": "Journal of the American Chemical Society",
+    "year": 2026,
+    "volume": "148",
+    "issue": "39",
+    "pages": "42494-42507",
+    "doi": "10.1021/jacs.6c13674",
+    "pmid": "42690843",
+    "corresponding_author": "Heebeom Koo, The Catholic University of Korea",
+    "proposed_experiment_id": "HK_2026",
+    "pmid_verified": {
+      "how": "Europe PMC REST search on DOI:\"10.1021/jacs.6c13674\", 2026-11-10 UTC",
+      "hitCount": 1,
+      "returned_pmid": "42690843",
+      "note": "PMID is indexed. CLAUDE.md section 3 forbids recording a paper as unindexed without a dated query result; this one is indexed, so no esummary_cache entry is needed to justify a blank."
+    }
+  },
+  "files": [
+    {
+      "path": "source/ja6c13674_si_001.pdf",
+      "role": "Supporting Information (the only file held)",
+      "bytes": 5349238,
+      "sha256": "4889dba5903b29ff80cb000f312b292660ffd4ed145ad99d5d3dc04e755c15f5",
+      "src": "https://pubs.acs.org/jacsat/article-supplement/5284007/pdf/ja6c13674_si_001/",
+      "magic": "%PDF-1.7",
+      "pages": 49,
+      "acquired_utc": "2026-11-09 (recorded in curation/_received.jsonl)",
+      "watermark": "Downloaded ... by PHILLIPS EXETER ACADEMY user on 10 November 2026 -- the file was served through an institutional subscription session."
+    }
+  ],
+  "NOT_held": {
+    "main_article_pdf": {
+      "why_it_matters": "EVERY transfection measurement in this paper lives in the main article (Figures 2-4). The SI contains no screening table, no heatmap and no per-lipid value of any kind.",
+      "attempts": [
+        {"route": "Europe PMC REST (DOI query)", "result": "isOpenAccess=N, inPMC=N, hasPDF=N, fullTextUrl availability='Subscription required'", "date": "2026-11-10"},
+        {"route": "plain HTTPS GET of https://pubs.acs.org/doi/10.1021/jacs.6c13674 with a generic client name", "result": "HTTP 403, Cloudflare interstitial (<title>Just a moment...</title>, 5442 bytes)", "date": "2026-11-10"},
+        {"route": "author repository sweep (provenance find_repo.py: GitHub code search on DOI and PMID, repo search on author/topic)", "result": "0 candidates; the two code searches additionally returned HTTP 429 and so are NOT a negative result -- they were rate-limited, not answered", "date": "2026-11-10"}
+      ],
+      "status": "BLOCKED. Acquisition needs the institutional browser session that served the SI. Not attempted from this agent: going through a paywall is a decision for the project owner, not for a curation agent."
+    }
+  },
+  "licence": {
+    "string": "NOT CAPTURED -- the landing page could not be loaded (403).",
+    "known": "ACS JACS research articles are (c) American Chemical Society, subscription access, unless an author selected ACS AuthorChoice. Europe PMC reports license=null and isOpenAccess=N.",
+    "release_gate": "CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release. This source is NOT known to be. See DECISIONS.md D-5."
+  }
+}

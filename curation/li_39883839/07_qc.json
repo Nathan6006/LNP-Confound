@@ -1,0 +1,667 @@
+{
+ "_what": "Every check for curation/li_39883839, with numbers. Each metric has a seeded counterpart that was confirmed to MOVE it; 'an exception was raised' is not the bar (three ZT_2026 checks scored a literal 0 for twelve days while the summary said ALL FOUR EXACT).",
+ "counts": {
+  "distinct_ionizable_lipid_structures_synthesised_by_the_paper": 147,
+  "names_the_paper_uses_for_them": 148,
+  "combinatorial_library_members": 144,
+  "library_grid": "9 head groups x 4 tail A x 4 tail B",
+  "made_outside_the_grid": 4,
+  "of_those_4_that_are_already_library_members": 1,
+  "LNP_formulations_characterised_in_Table_S1": 144,
+  "delivery_measurements_of_an_INDIVIDUAL_lipid": 13,
+  "distinct_structures_with_an_individual_delivery_measurement": 9,
+  "of_those_that_are_benchmarks": 2,
+  "library_members_with_a_per_member_delivery_value": 0,
+  "library_members_with_a_per_member_delivery_value_note": "The 144 were screened POOLED -- 16 LNPs per mouse in batch 1, 4 per mouse in batch 2. Only lipids promoted out of the pools were ever injected alone."
+ },
+ "P1_tableS1_formula": {
+  "n_compared": 144,
+  "n_exact": 138,
+  "n_mismatch": 6,
+  "mismatches": [
+   [
+    "H6A2B4",
+    "C46H88N2O5",
+    "C42H80N2O5"
+   ],
+   [
+    "H7A2B2",
+    "C36H64N2O3",
+    "C40H70N2O3"
+   ],
+   [
+    "H7A2B3",
+    "C40H70N2O3",
+    "C40H70N2O5"
+   ],
+   [
+    "H7A3B1",
+    "C44H78N2O3",
+    "C36H64N2O3"
+   ],
+   [
+    "H7A3B2",
+    "C44H78N2O5",
+    "C44H78N2O3"
+   ],
+   [
+    "H7A3B3",
+    "C40H70N2O5",
+    "C44H78N2O5"
+   ]
+  ],
+  "what": "Each of the 144 enumerated library structures vs the molecular formula Table S1 prints for that name. External to the enumeration: the formula is the authors', the structure ours."
+ },
+ "P1b_tableS1_self_consistency": {
+  "n_rows": 144,
+  "n_formula_disagrees_with_own_MW": 1,
+  "rows": [
+   [
+    "H6A2B4",
+    "C46H88N2O5",
+    693.11,
+    749.22
+   ]
+  ],
+  "what": "A check on the PAPER alone -- it uses no structure of ours. It separates 'our structure is wrong' from 'their table is wrong' for every P1 mismatch."
+ },
+ "P1c_mismatch_diagnosis": {
+  "names": [
+   "H6A2B4",
+   "H7A2B2",
+   "H7A2B3",
+   "H7A3B1",
+   "H7A3B2",
+   "H7A3B3"
+  ],
+  "n_where_printed_MW_equals_OUR_formula_weight": 1,
+  "which": [
+   "H6A2B4"
+  ],
+  "our_MW_multiset": [
+   572.92,
+   627.01,
+   659.01,
+   683.12,
+   693.11,
+   715.12
+  ],
+  "printed_MW_multiset": [
+   572.92,
+   627.01,
+   659.01,
+   683.12,
+   693.11,
+   715.12
+  ],
+  "multisets_identical": true,
+  "what": "If the two multisets are identical the printed cells are the RIGHT values on the WRONG names -- a row-alignment slip in the table, not a missing or extra composition."
+ },
+ "P2_tableS1_MW": {
+  "n_compared": 144,
+  "max_abs_delta_Da": 110.2,
+  "worst": {
+   "name": "H7A3B1",
+   "printed": 683.12,
+   "ours": 572.92
+  },
+  "n_within_0.05_Da": 139,
+  "mean_abs_delta_Da": 1.9754
+ },
+ "P3_grid": {
+  "n_library": 144,
+  "n_heads": 9,
+  "n_tailA": 4,
+  "n_tailB": 4,
+  "product": 144,
+  "complete": true
+ },
+ "P4_reagent_stoichiometry": {
+  "n_reagents": 18,
+  "n_within_0.5_pct": 16,
+  "n_lipids": 6,
+  "n_lipids_matching_as_printed": 5,
+  "n_lipids_matching_as_a_multiset": 6,
+  "max_abs_rel_err_pct": 27.77,
+  "worst": {
+   "lipid": "A4B4-S3",
+   "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+   "block": "A4",
+   "implied_MW": 354.57,
+   "block_MW": 277.5,
+   "rel_err_pct": 27.77
+  },
+  "per_lipid": [
+   {
+    "lipid": "H2A4B3",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     298.45
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     298.47
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "H2A4B4",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     354.56
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     354.58
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     266.47
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     266.47
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     298.45
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     298.47
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "A4B4-S3",
+    "matches_as_printed": false,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     131.18,
+     354.57,
+     278.27
+    ],
+    "claimed_block_MWs": [
+     131.18,
+     277.5,
+     354.58
+    ],
+    "mass_order_vs_name_order": [
+     "S3",
+     "B4",
+     "A4"
+    ]
+   },
+   {
+    "lipid": "A4B4-S4",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     145.21,
+     277.49,
+     354.6
+    ],
+    "claimed_block_MWs": [
+     145.2,
+     277.5,
+     354.58
+    ],
+    "mass_order_vs_name_order": null
+   }
+  ],
+  "what": "mg / umol is the authors' own number pair and is independent of the reagent NAME printed beside it. This is what settles the A4B4-S3/S4 aldehyde against a wrong printed name."
+ },
+ "P5_block_MS": {
+  "n": 9,
+  "n_matching_neutral_monoisotopic_within_0.02": 8,
+  "n_matching_MH_plus_within_0.02": 0,
+  "rows": [
+   {
+    "block": "A1",
+    "printed_formula": "C12H23N",
+    "printed_calc": 181.18,
+    "our_neutral_monoisotopic": 181.183,
+    "delta_vs_neutral_mono": -0.003,
+    "delta_vs_MH_plus": -1.01
+   },
+   {
+    "block": "A2",
+    "printed_formula": "C13H25N",
+    "printed_calc": 195.2,
+    "our_neutral_monoisotopic": 195.199,
+    "delta_vs_neutral_mono": 0.001,
+    "delta_vs_MH_plus": -1.006
+   },
+   {
+    "block": "A3",
+    "printed_formula": "C17H33N",
+    "printed_calc": 251.26,
+    "our_neutral_monoisotopic": 251.261,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.009
+   },
+   {
+    "block": "A4",
+    "printed_formula": "C19H35N",
+    "printed_calc": 277.28,
+    "our_neutral_monoisotopic": 277.277,
+    "delta_vs_neutral_mono": 0.003,
+    "delta_vs_MH_plus": -1.004
+   },
+   {
+    "block": "B1",
+    "printed_formula": "C10H20O",
+    "printed_calc": 156.15,
+    "our_neutral_monoisotopic": 156.151,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.009
+   },
+   {
+    "block": "B2",
+    "printed_formula": "C18H34O",
+    "printed_calc": 266.26,
+    "our_neutral_monoisotopic": 266.261,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.008
+   },
+   {
+    "block": "B3",
+    "printed_formula": "C18H34O3",
+    "printed_calc": 298.25,
+    "our_neutral_monoisotopic": 298.251,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.008
+   },
+   {
+    "block": "B4",
+    "printed_formula": "C22H42O3",
+    "printed_calc": 354.31,
+    "our_neutral_monoisotopic": 354.313,
+    "delta_vs_neutral_mono": -0.003,
+    "delta_vs_MH_plus": -1.011
+   },
+   {
+    "block": "Bbu",
+    "printed_formula": "C18H34O3",
+    "printed_calc": 299.47,
+    "our_neutral_monoisotopic": 298.251,
+    "delta_vs_neutral_mono": 1.219,
+    "delta_vs_MH_plus": 0.212
+   }
+  ],
+  "what": "The SI labels these '(M + H+)' but the numbers are the NEUTRAL monoisotopic masses. Testing both readings is the point: one of them fits 8/9 and the other fits none."
+ },
+ "P6_lipid_MS": {
+  "n": 6,
+  "n_fit_average_MH_within_0.05": 4,
+  "n_fit_monoisotopic_MH_within_0.05": 2,
+  "n_fit_either": 6,
+  "rows": [
+   {
+    "lipid": "H2A4B3",
+    "printed_cation_formula": "C42H81N2O5+",
+    "printed_calc": 694.11,
+    "printed_found": 694.8,
+    "avg_MH": 694.12,
+    "mono_MH": 693.61,
+    "d_avg": -0.01,
+    "d_mono": 0.5
+   },
+   {
+    "lipid": "H2A4B4",
+    "printed_cation_formula": "C46H88N2O5+",
+    "printed_calc": 750.22,
+    "printed_found": 750.55,
+    "avg_MH": 750.23,
+    "mono_MH": 749.68,
+    "d_avg": -0.01,
+    "d_mono": 0.54
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "printed_cation_formula": "C42H81N2O3+",
+    "printed_calc": 662.11,
+    "printed_found": 662.34,
+    "avg_MH": 662.12,
+    "mono_MH": 661.62,
+    "d_avg": -0.01,
+    "d_mono": 0.49
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "printed_cation_formula": "C42H81N2O5+",
+    "printed_calc": 694.11,
+    "printed_found": 694.15,
+    "avg_MH": 694.12,
+    "mono_MH": 693.61,
+    "d_avg": -0.01,
+    "d_mono": 0.5
+   },
+   {
+    "lipid": "A4B4-S3",
+    "printed_cation_formula": "C47H90N2O5+",
+    "printed_calc": 763.68,
+    "printed_found": 763.49,
+    "avg_MH": 764.25,
+    "mono_MH": 763.69,
+    "d_avg": -0.57,
+    "d_mono": -0.01
+   },
+   {
+    "lipid": "A4B4-S4",
+    "printed_cation_formula": "C48H92N2O5+",
+    "printed_calc": 777.7,
+    "printed_found": 777.82,
+    "avg_MH": 778.28,
+    "mono_MH": 777.71,
+    "d_avg": -0.58,
+    "d_mono": -0.01
+   }
+  ],
+  "what": "The SI uses TWO mass conventions without saying so: average [M+H]+ for the four H2A4* lipids, monoisotopic [M+H]+ for A4B4-S3/S4. Checked against only one, four or two of six would look wrong."
+ },
+ "P7_distinct_structures": {
+  "n_names": 148,
+  "n_distinct_full_InChIKeys": 147,
+  "duplicate_groups": {
+   "WNUMPPMZXDNLCE-WRBBJXAJSA-N": [
+    "H2A4-Ole",
+    "H2A4B2"
+   ]
+  },
+  "what": "Trap 1 of the brief. The paper's own count of what it made is 144 + 4; two of those names are ONE molecule."
+ },
+ "P8_corpus_overlap": {
+  "vitro": {
+   "corpus_rows_scanned": 29195,
+   "n_our_structures_present_by_FULL_InChIKey": 0,
+   "n_our_structures_present_by_SKELETON": 0,
+   "n_our_names_present": 0
+  },
+  "vivo": {
+   "corpus_rows_scanned": 1803,
+   "n_our_structures_present_by_FULL_InChIKey": 0,
+   "n_our_structures_present_by_SKELETON": 0,
+   "n_our_names_present": 0
+  },
+  "same_lab_in_corpus": {
+   "BL_2023": "PMID 36997680 (Li lab, A*-T* amino-lipid library)",
+   "BL_2023_3CR": "PMID 37679571 (Li lab, Ugi 3CR, A*_I*_T* names)",
+   "BL_2024": "PMID 38740955 (Li lab, numeric names)",
+   "note": "Three Bowen Li experiments are already in the corpus. None is PMID 39883839. The Ugi 3CR paper is this paper's own ref 1 and is the closest relative: a different multicomponent reaction giving an alpha-AMINO amide, not an alpha-ACYLOXY amide."
+  },
+  "what": "Three comparisons -- full InChIKey, skeleton InChIKey, IL_name -- across both pools. Zero on all six."
+ },
+ "P9_axis_calibration": {
+  "Fig2H": {
+   "n_major_ticks": 4,
+   "residual_px": 0.0,
+   "n_minor_ticks_ignored": 24
+  },
+  "Fig2K": {
+   "n_major_ticks": 4,
+   "residual_px": 0.2,
+   "n_minor_ticks_ignored": 38,
+   "short_tick_check": {
+    "value": 40000000.0,
+    "drawn_row_px": 3512.0,
+    "predicted_row_px": 3512.25,
+    "delta_px": -0.25
+   }
+  },
+  "Fig3I": {
+   "n_major_ticks": 6,
+   "residual_px": 0.0218,
+   "baseline_from_fit_vs_drawn_px": 3284.0
+  },
+  "what": "Scale AND origin fitted together on detected tick positions only (axis.calibrate has no API for supplying an origin -- F-033). Fig 2K's 4e7 tick is drawn short at the axis break, so it is VERIFIED against the fit rather than fed into it."
+ },
+ "P10_bar_detection": {
+  "n_bars_attempted": 13,
+  "n_point_values": 10,
+  "n_bounds": 3,
+  "max_flank_delta_px": 0.0,
+  "flank_tolerance_px": 2.0,
+  "n_refusals": 3,
+  "refusals": [
+   {
+    "panel": "Fig2H",
+    "lipid": "H2A4B1",
+    "reason": "bar_top: no row in [2350,3049) reaches 0.90 coverage of the full 101px bar for 3 contiguous rows."
+   },
+   {
+    "panel": "Fig2H",
+    "lipid": "H2A4B2",
+    "reason": "bar_top: no row in [2350,3049) reaches 0.90 coverage of the full 103px bar for 3 contiguous rows."
+   },
+   {
+    "panel": "Fig2K",
+    "lipid": "SM-102",
+    "reason": "this bar's own side edges carry 376 ink px ABOVE the highest calibrated tick (3e+07 at row 3663), so its top lies in the UPPER segment of the broken axis. That "
+   }
+  ],
+  "what": "bars.bar_top requires full-width coverage plus left/right flank agreement, so a centred replicate marker cannot be read as a top (error class 32, F-018/F-020). Every flank delta here is 0.0 px. Three refusals were kept as refusals and turned into bounds, not argued down by lowering a threshold (F-018, F-051)."
+ },
+ "V1_fig3H_printed_ROI_containment": {
+  "n": 3,
+  "n_inside": 3,
+  "legibility": "leading digit and exponent legible; 2nd-4th mantissa digits are not resolvable at the embedded resolution (~1 px per stroke). Read as 3.0e7 / 1.7e8 / 4.1e7 with an uncertainty of about +/-0.1 in the leading decimal.",
+  "rows": [
+   {
+    "lipid": "H2A4B4",
+    "roi": "ROI 1",
+    "printed_value": 30000000.0,
+    "bar_replicate_span": [
+     17010000.0,
+     35150000.0
+    ],
+    "inside": true,
+    "bar_mean_digitised": 27330000.0,
+    "ratio_to_bar_mean": 1.098
+   },
+   {
+    "lipid": "A4B4-S3",
+    "roi": "ROI 2",
+    "printed_value": 170000000.0,
+    "bar_replicate_span": [
+     157300000.0,
+     219000000.0
+    ],
+    "inside": true,
+    "bar_mean_digitised": 184900000.0,
+    "ratio_to_bar_mean": 0.919
+   },
+   {
+    "lipid": "A4B4-S4",
+    "roi": "ROI 3",
+    "printed_value": 41000000.0,
+    "bar_replicate_span": [
+     3346000.0,
+     43790000.0
+    ],
+    "inside": true,
+    "bar_mean_digitised": 21200000.0,
+    "ratio_to_bar_mean": 1.934
+   }
+  ],
+  "what": "A number the authors DREW on the image and never discussed, external to our calibration. Each is one representative mouse, so the test is containment in the group's drawn spread -- NOT equality with the n=3 bar mean."
+ },
+ "V2_H2A4B4_two_panels": {
+  "Fig2K": 28400000.0,
+  "Fig3I": 27330000.0,
+  "ratio": 1.0392,
+  "pct_difference": 3.92,
+  "what": "Independent panels, independent tick sets, independent calibrations, one lipid at one dose and route. NOTE: this is NOT evidence for panel K's linear axis -- the linear reading was already forced by panel K's own four equally spaced labelled ticks and verified by its 4e7 short tick. It is a check on the two digitisations given that scale."
+ },
+ "V3_same_molecule_two_names": {
+  "Fig2K_H2A4-Ole": 1118000.0,
+  "Fig2H_H2A4B2_upper_bound": 688000.0,
+  "Fig2H_H2A4B2_measured": null,
+  "consistent": true,
+  "what": "H2A4-Ole and H2A4B2 have the same full InChIKey. On Fig 2H the bar has no resolvable height; on Fig 2K it is the second smallest bar. Both say 'at the floor', which is as much agreement as either panel can express."
+ },
+ "V4_fig2H_vs_fig2K": {
+  "shared": {
+   "H2A4B3": {
+    "Fig2H": 37390000.0,
+    "Fig2K": 1450000.0,
+    "ratio_H_over_K": 25.79
+   },
+   "H2A4B4": {
+    "Fig2H": 79360000.0,
+    "Fig2K": 28400000.0,
+    "ratio_H_over_K": 2.79
+   }
+  },
+  "what": "Both panels state 0.05 mg/kg mLuc, I.M., 6 h. The same two lipids differ by 2.8x and 25.8x between them, in the same direction, so the panels are different cohorts on different effective scales and must NOT share a z-score block without a decision. This is DECISIONS D-1."
+ },
+ "V5_molar_percent_sum": {
+  "components": {
+   "ionizable": 50.0,
+   "DSPC": 10.0,
+   "cholesterol": 38.5,
+   "C14-PEG2000": 1.5
+  },
+  "sum": 100.0,
+  "exactly_100": true,
+  "what": "The Methods print the ratio 50:10:38.5:1.5 and never say it is a mole-percent set. It sums to exactly 100, which fixes the formulation columns without a further assumption."
+ },
+ "V6_batch_dose": {
+  "caption_mg_per_kg": {
+   "batch1": 0.32,
+   "batch2": 0.08
+  },
+  "methods_mg_per_kg": {
+   "batch1": 0.25,
+   "batch2": 0.8
+  },
+  "caption_per_LNP": {
+   "batch1": 0.02,
+   "batch2": 0.02
+  },
+  "methods_per_LNP": {
+   "batch1": 0.015625,
+   "batch2": 0.2
+  },
+  "caption_per_LNP_identical": true,
+  "methods_per_LNP_ratio": 12.8,
+  "what": "Batch 1 pooled 16 LNPs per mouse and batch 2 pooled 4. The caption's two doses give EXACTLY the same per-LNP dose (0.02 mg/kg each); the Methods' two give 0.0156 and 0.200, a 12.8x spread. A screen that changes the per-LNP dose 13-fold between rounds cannot compare them, so the caption is the self-consistent pair. No row is emitted from either batch (both are pooled mixtures), so this adjudicates a recorded contradiction, not a value."
+ },
+ "C10_anchors": {
+  "n": 3,
+  "n_full_InChIKey_match": 3,
+  "lipids": [
+   "H1A1B1",
+   "H2A4B4",
+   "A4B4-S3"
+  ],
+  "route": "plain string substitution into one head-first template; no assemble/RWMol/AddBond/RemoveAtom/atom-map shared with stage02_enumerate.py",
+  "template_is_a_copy_of_the_enumeration": false,
+  "seeded_copy_detected": true,
+  "seeded_connectivity_swap": {
+   "what": "head acid amidated and the isocyanide alkyl esterified -- the Passerini run backwards",
+   "same_molecular_formula": true,
+   "same_exact_mass_to_4dp": true,
+   "formula": "C47H90N2O5",
+   "InChIKey_anchor": "JBBSMSLXXPFXRD-MRCUWXFGSA-N",
+   "InChIKey_defect": "IMLLCXMYOUBAES-MRCUWXFGSA-N",
+   "C10_would_catch_it": true
+  },
+  "what": "C16 exists because C10's independence was asserted twice and false twice. The seeded connectivity swap has the SAME molecular formula and the SAME exact mass to 4 dp as the correct structure and a different InChIKey -- which is the whole argument for an anchor, and the measurement that shows this one has teeth."
+ },
+ "flags_on_the_row": {
+  "n_rows": 13,
+  "rows_with_a_caveat": 5,
+  "by_confidence": {
+   "high": 11,
+   "medium": 2,
+   "low": 0,
+   "": 0
+  },
+  "value_is_bound_upper": 2
+ },
+ "seeded_defects_structure": {
+  "cases": [
+   {
+    "seeded": "swap the head groups of H1A1B1 and H2A1B1 in the enumeration",
+    "check": "P1_tableS1_formula",
+    "metric": "n_mismatch",
+    "clean_run": 6,
+    "with_defect": 8,
+    "metric_moved": true
+   },
+   {
+    "seeded": "set one enumerated MW to 999.99",
+    "check": "P2_tableS1_MW",
+    "metric": "max_abs_delta_Da",
+    "clean_run": 110.2,
+    "with_defect": 348.96,
+    "metric_moved": true
+   },
+   {
+    "seeded": "believe the printed reagent NAME for A4B4-S3 (B3 instead of B4)",
+    "check": "P4_reagent_stoichiometry",
+    "metric": "n_lipids_matching_as_a_multiset",
+    "clean_run": 6,
+    "with_defect": 5,
+    "metric_moved": true
+   },
+   {
+    "seeded": "corrupt B4's printed calc'd mass 354.31 -> 340.0",
+    "check": "P5_block_MS",
+    "metric": "n_matching_neutral_monoisotopic_within_0.02",
+    "clean_run": 8,
+    "with_defect": 7,
+    "metric_moved": true
+   }
+  ],
+  "control_reproduces": true,
+  "all_moved": true
+ },
+ "seeded_defects_values": {
+  "cases": [
+   {
+    "seeded": "class 20: Fig 3I origin anchored one tick out (+5e7 on every value)",
+    "check": "V1_fig3H_printed_ROI_containment",
+    "metric": "n_inside",
+    "clean_run": 3,
+    "with_defect": 0,
+    "metric_moved": true
+   },
+   {
+    "seeded": "read panel K's LOG-styled minor ticks as the scale (x22 on a mid bar)",
+    "check": "V2_H2A4B4_two_panels",
+    "metric": "ratio",
+    "clean_run": 1.0392,
+    "with_defect": 22.8613,
+    "metric_moved": true
+   }
+  ],
+  "control_reproduces": true,
+  "all_moved": true
+ }
+}

@@ -71,17 +71,29 @@ def key_parts(smiles):
     return k, k.split("-")[0], (k.split("-")[1] if "-" in k else "")
 
 
+# Column aliases seen across curation folders. `lipid_name`/`IL_SMILES` is the
+# convention; `label`/`SMILES` turned up in andersondg_41203968 on 2026-11-10
+# and C10 silently found ZERO structures there, reporting the anchor as
+# ENUMERATED_STRUCTURE_NOT_FOUND when the structure was present under another
+# name. Tolerate the aliases, but COUNT what was found per folder so that zero
+# coverage is visible instead of looking like a missing anchor.
+NAME_COLS = ("lipid_name", "label", "name", "compound_id", "IL_name")
+SMILES_COLS = ("IL_SMILES", "SMILES", "smiles", "canonical_smiles")
+
+
 def enumerated_lookup(folder):
     """lipid_name -> SMILES from whatever enumeration file the folder has."""
     out = {}
     for name in ("03_enumerated.csv", "06_merged.csv", "13_enumerated_147.csv",
-                 "09_enumerated_344.csv"):
+                 "09_enumerated_344.csv", "02_structures.csv"):
         p = os.path.join(folder, name)
         if not os.path.exists(p):
             continue
         for r in csv.DictReader(open(p)):
-            if r.get("lipid_name") and r.get("IL_SMILES"):
-                out.setdefault(r["lipid_name"], r["IL_SMILES"])
+            k = next((r[c] for c in NAME_COLS if r.get(c)), None)
+            v = next((r[c] for c in SMILES_COLS if r.get(c)), None)
+            if k and v:
+                out.setdefault(k.strip(), v.strip())
     return out
 
 
@@ -89,11 +101,23 @@ def main():
     results, n_checked, n_fail, n_stereo, n_missing = [], 0, 0, 0, 0
     n_copy = 0
     n_expected = 0
+    malformed = []
+    coverage = {}
     for ref_path in sorted(glob.glob(os.path.join(CURATION, "*", "reference_structures.csv"))):
         folder = os.path.dirname(ref_path)
         paper = os.path.basename(folder)
         enum = enumerated_lookup(folder)
+        coverage[paper] = len(enum)
         for r in csv.DictReader(open(ref_path)):
+            if "lipid_name" not in r:
+                # A single folder with the wrong header used to take the whole
+                # check down with a bare KeyError naming no file (found
+                # 2026-11-10: new_curation.py scaffolded `compound_id,...`).
+                # Record it and SKIP the folder -- one malformed anchor file
+                # must not stop C10 from checking every other curation, and
+                # raising here did exactly that.
+                malformed.append((ref_path, ",".join(r.keys())))
+                break
             name = r["lipid_name"]
             ref = (r.get("reference_SMILES") or "").strip()
             entry = {"paper": paper, "lipid_name": name,
@@ -211,7 +235,20 @@ def main():
     print(f"\nconnectivity failures: {n_fail}   stereo-only: {n_stereo}   "
           f"papers with no drawn structure: {n_missing}   "
           f"anchors that may be a copy: {n_copy}")
-    return 1 if n_fail else 0
+    zero = [k for k, v in coverage.items() if v == 0]
+    if zero:
+        print(f"\n{len(zero)} folder(s) have an anchor file but ZERO "
+              f"enumerated structures C10 could read: {zero}")
+        print("  An anchor with nothing to compare against is not a check.")
+    if malformed:
+        print(f"\n{len(malformed)} anchor file(s) have the WRONG HEADER and "
+              f"were skipped -- C10 checked nothing in those folders:")
+        for pth, hdr in malformed:
+            print(f"  * {os.path.relpath(pth, HERE)}\n      found:    {hdr}\n"
+                  f"      expected: lipid_name,reference_SMILES,source_figure,"
+                  f"read_on,read_by,expected_mismatch,note")
+        print("  A skipped anchor is an UNCHECKED curation, so this fails.")
+    return 1 if (n_fail or malformed or zero) else 0
 
 
 if __name__ == "__main__":

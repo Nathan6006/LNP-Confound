@@ -1,0 +1,153 @@
+{
+ "checks": {
+  "P1_LCMS_three_published_m_z": {
+   "what": "our computed [M+H]+ for the TREN/glycidyl-ester ladder vs the three ESI m/z printed on SI p.5",
+   "split_ours_vs_their_formula": "NOT AVAILABLE - the paper prints no molecular formula for H9T6 or any congener",
+   "split_their_formula_vs_their_m_z": "NOT AVAILABLE, same reason",
+   "split_ours_vs_their_m_z": {
+    "4-tailed H9T6 (tR 6.7)": {
+     "assignment": "4-tailed",
+     "computed_MH": 1059.851,
+     "published_MH": 1059.99,
+     "delta_Da": 0.139,
+     "ppm": 131.5
+    },
+    "tR 12.4": {
+     "assignment": "5-tailed",
+     "computed_MH": 1288.023,
+     "published_MH": 1288.09,
+     "delta_Da": 0.067,
+     "ppm": 51.9
+    },
+    "tR 12.9": {
+     "assignment": "5-tailed + 1 glycidol arm",
+     "computed_MH": 1362.06,
+     "published_MH": 1362.11,
+     "delta_Da": 0.05,
+     "ppm": 36.8
+    }
+   },
+   "agreement_count_C10": 3,
+   "max_abs_delta_Da": 0.139,
+   "SEEDED_with_C8": 0,
+   "SEEDED_with_C12": 0,
+   "SEEDED_with_C14": 0,
+   "verdict": "3/3 assigned at C10 and 0/3 at every other chain length the SI lists, so the tail of H9T6 is decanoate; the count moves from 3 to 0 under the seed."
+  },
+  "P2_1H_NMR_integrals": {
+   "what": "integrals predicted from our H9T6 structure vs the integrals printed on SI p.5",
+   "published": {
+    "CH3 (0.89 t)": 18,
+    "Hbeta (1.53-1.69)": 12,
+    "Halpha (2.16-2.37)": 12,
+    "bulk CH2 (1.21-1.36)": 72
+   },
+   "predicted_6_tailed": {
+    "CH3 (0.89 t)": 18,
+    "Hbeta (1.53-1.69)": 12,
+    "Halpha (2.16-2.37)": 12,
+    "bulk CH2 (1.21-1.36)": 72
+   },
+   "agreement_count": 4,
+   "SEEDED_predicted_5_tailed": {
+    "CH3 (0.89 t)": 15,
+    "Hbeta (1.53-1.69)": 10,
+    "Halpha (2.16-2.37)": 10,
+    "bulk CH2 (1.21-1.36)": 60
+   },
+   "SEEDED_agreement_count": 0,
+   "not_checked": "the 2.36-5.37 multiplet, printed as 46H; our structure predicts 48H there, and that window overlaps the separately-printed Halpha window, so the two integrals are not independent and the 2H gap is not evidence of anything either way",
+   "verdict": "4/4 exact on the independent windows; 1/4 under the seed."
+  },
+  "P3_drawn_but_never_printed_reference_line": {
+   "what": "both panels carry a dashed horizontal rule the authors drew at the SM102 benchmark and never labelled. Calibrate on the y ticks ONLY, then predict the rule's value; a round 1.0 is the target.",
+   "S4A_predicted": 0.9965,
+   "S4C_predicted": 0.9998,
+   "worst_error_pct": 0.35,
+   "SEEDED_S4A_scale_+2pct": 1.0164,
+   "SEEDED_S4C_scale_+2pct": 1.0198,
+   "verdict": "0.35% and 0.02% off a round 1.0 on two independently calibrated panels; a 2% scale error would put them at 1.016 and 1.020, outside that."
+  },
+  "P4_SM102_bar_is_unity_by_construction": {
+   "what": "every bar is divided by SM102, so SM102's own bar is exactly 1.000. It is measured by the same detector as a closed loop.",
+   "S4A_measured": 0.986,
+   "S4C_measured": 0.9896,
+   "worst_error_pct": 1.4,
+   "note": "this is an END-TO-END check: axis, window, silhouette walk, stroke centre. It is NOT used to tune anything -- no constant in 04_digitize_figS4.py was fitted to it, which is the error class 27 trap.",
+   "verdict": "both panels low by ~1.1-1.4%, a systematic sub-pixel bias; reported, not corrected."
+  },
+  "P5_axis_leave_one_out": {
+   "what": "axis.loo_residuals on both tick ladders. calibrate's max-residual test is weak against a single bad tick; LOO is not.",
+   "LOO_TOL_PX": 1.5,
+   "S4A_y": 0.234,
+   "S4C_y": 0.01,
+   "S4A_x": 0.189,
+   "S4C_x": 0.204,
+   "SEEDED_one_tick_moved_6px": 5.99,
+   "verdict": "all four ladders <= 0.24 px; moving one tick by 6 px takes the worst LOO residual to the seeded value above, far past the 1.5 px tolerance."
+  },
+  "P6_bar_top_crosscheck_vs_library": {
+   "what": "bars.bar_top run top-down over the same windows, with its own full-width, flank and baseline guards, against the bottom-up silhouette walk that produced the values.",
+   "per_panel": {
+    "S4A": {
+     "bars_measured": 40,
+     "crosscheck_returned": 34,
+     "exact": 20,
+     "within_1px": 30,
+     "within_3px": 34,
+     "worst_px": 2
+    },
+    "S4C": {
+     "bars_measured": 39,
+     "crosscheck_returned": 37,
+     "exact": 22,
+     "within_1px": 28,
+     "within_3px": 36,
+     "worst_px": 4
+    }
+   },
+   "verdict": "two detectors with different failure modes; where the library one returns at all it agrees within 1 px on most bars."
+  },
+  "P7_formulation_mol_percent_sums": {
+   "what": "Table S1's four lipid mol% must sum to 100 on every row",
+   "rows": 77,
+   "exact_100": 77,
+   "SEEDED_one_row_PEG_+1": 76,
+   "verdict": "all rows exact; the seed moves the count by one."
+  },
+  "P8_cross_panel_same_formulations": {
+   "what": "Fig S3A and Fig S4C both report C2C12 luciferase relative to SM102 at 24 h for formulations 1-F1..1-F16, digitised independently (S3A by height ratio, no axis fit; S4C by a calibrated axis).",
+   "n_shared": 12,
+   "spearman": 0.9352,
+   "spearman_p": 8.06e-06,
+   "pearson_on_log10": 0.7938,
+   "ratio_S3A_over_S4C": {
+    "median": 8.96,
+    "min": 2.72,
+    "max": 17.51
+   },
+   "different_cell_line_control_S3A_vs_S4A": {
+    "n": 15,
+    "spearman": 0.4365
+   },
+   "verdict": "the two panels RANK-agree at rho = 0.94 (p = 8e-06) and disagree in MAGNITUDE by a median factor of ~9. Two independent reads of two different panels tracking each other that closely is strong evidence the reads are right; the factor of 9 is the paper's, not ours, and means 'relative to SM102' does not denote the same quantity in the two figures. See 08_contradictions.csv C-04."
+  }
+ },
+ "summary": {
+  "rows_emitted": 77,
+  "panels": [
+   "Figure S4A (DC2.4)",
+   "Figure S4C (C2C12)"
+  ],
+  "bars_measured": {
+   "S4A": 40,
+   "S4C": 39
+  },
+  "bars_refused": {
+   "S4A": 4,
+   "S4C": 5
+  },
+  "distinct_ionizable_lipid_structures": 1,
+  "corpus_overlap_full_InChIKey": 0
+ }
+}

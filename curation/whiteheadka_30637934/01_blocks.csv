@@ -1,0 +1,13 @@
+block_type,block_name,reagent,alcohol_name,alcohol_SMILES,tail_carbons,arm_after_michael_addition
+tail,O6,n-hexyl acrylate,hexan-1-ol,CCCCCCO,6,N-CH2CH2-C(=O)O-n-hexyl
+tail,O8,n-octyl acrylate,octan-1-ol,CCCCCCCCO,8,N-CH2CH2-C(=O)O-n-octyl
+tail,O9,n-nonyl acrylate,nonan-1-ol,CCCCCCCCCO,9,N-CH2CH2-C(=O)O-n-nonyl
+tail,Oi10,isodecyl (8-methylnonyl) acrylate,8-methylnonan-1-ol,CC(C)CCCCCCCO,10,N-CH2CH2-C(=O)O-isodecyl (8-methylnonyl)
+tail,O10,n-decyl acrylate,decan-1-ol,CCCCCCCCCCO,10,N-CH2CH2-C(=O)O-n-decyl
+tail,O11,n-undecyl acrylate,undecan-1-ol,CCCCCCCCCCCO,11,N-CH2CH2-C(=O)O-n-undecyl
+tail,O12,n-dodecyl acrylate,dodecan-1-ol,CCCCCCCCCCCCO,12,N-CH2CH2-C(=O)O-n-dodecyl
+tail,O13,n-tridecyl acrylate,tridecan-1-ol,CCCCCCCCCCCCCO,13,N-CH2CH2-C(=O)O-n-tridecyl
+tail,O14,n-tetradecyl acrylate,tetradecan-1-ol,CCCCCCCCCCCCCCO,14,N-CH2CH2-C(=O)O-n-tetradecyl
+tail,O16,n-hexadecyl acrylate,hexadecan-1-ol,CCCCCCCCCCCCCCCCO,16,N-CH2CH2-C(=O)O-n-hexadecyl
+tail,O18,n-octadecyl acrylate,octadecan-1-ol,CCCCCCCCCCCCCCCCCCO,18,N-CH2CH2-C(=O)O-n-octadecyl
+amine_core,306,"3,3'-diamino-N-methyldipropylamine (306)",,,,"4 N-H, tetra-substituted at 1:4 amine:acrylate"

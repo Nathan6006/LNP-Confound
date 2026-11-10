@@ -1,0 +1,243 @@
+{
+ "_what": "Chain lengths measured from Figure 1b by raster tracing.",
+ "n_components": 15,
+ "tails": [
+  {
+   "tail": "SC1",
+   "bbox_w_px": 31,
+   "bbox_h_px": 18,
+   "area_px": 68,
+   "skeleton_branch_nodes": 1,
+   "measured_carbons": null,
+   "why_not_measured": "branched skeleton",
+   "structure_source": "drawn structure, Fig 1b"
+  },
+  {
+   "tail": "SC2",
+   "bbox_w_px": 45,
+   "bbox_h_px": 19,
+   "area_px": 92,
+   "skeleton_branch_nodes": 3,
+   "measured_carbons": null,
+   "why_not_measured": "branched skeleton",
+   "structure_source": "drawn structure, Fig 1b"
+  },
+  {
+   "tail": "SC3",
+   "bbox_w_px": 31,
+   "bbox_h_px": 9,
+   "area_px": 49,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 4,
+   "measured_carbons": 3,
+   "name_token_check": {
+    "label": "SC3",
+    "name_token_length": 3,
+    "measured_length": 3,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC4",
+   "bbox_w_px": 44,
+   "bbox_h_px": 9,
+   "area_px": 73,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 5,
+   "measured_carbons": 4,
+   "name_token_check": {
+    "label": "SC4",
+    "name_token_length": 4,
+    "measured_length": 4,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC5",
+   "bbox_w_px": 58,
+   "bbox_h_px": 9,
+   "area_px": 87,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 6,
+   "measured_carbons": 5,
+   "name_token_check": {
+    "label": "SC5",
+    "name_token_length": 5,
+    "measured_length": 5,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC6",
+   "bbox_w_px": 71,
+   "bbox_h_px": 9,
+   "area_px": 124,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 7,
+   "measured_carbons": 6,
+   "name_token_check": {
+    "label": "SC6",
+    "name_token_length": 6,
+    "measured_length": 6,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC7",
+   "bbox_w_px": 86,
+   "bbox_h_px": 10,
+   "area_px": 136,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 8,
+   "measured_carbons": 7,
+   "name_token_check": {
+    "label": "SC7",
+    "name_token_length": 7,
+    "measured_length": 7,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC8",
+   "bbox_w_px": 99,
+   "bbox_h_px": 9,
+   "area_px": 154,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 9,
+   "measured_carbons": 8,
+   "name_token_check": {
+    "label": "SC8",
+    "name_token_length": 8,
+    "measured_length": 8,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC9",
+   "bbox_w_px": 113,
+   "bbox_h_px": 10,
+   "area_px": 193,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 10,
+   "measured_carbons": 9,
+   "name_token_check": {
+    "label": "SC9",
+    "name_token_length": 9,
+    "measured_length": 9,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC10",
+   "bbox_w_px": 127,
+   "bbox_h_px": 10,
+   "area_px": 204,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 11,
+   "measured_carbons": 10,
+   "name_token_check": {
+    "label": "SC10",
+    "name_token_length": 10,
+    "measured_length": 10,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC11",
+   "bbox_w_px": 141,
+   "bbox_h_px": 10,
+   "area_px": 244,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 12,
+   "measured_carbons": 11,
+   "name_token_check": {
+    "label": "SC11",
+    "name_token_length": 11,
+    "measured_length": 11,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC12",
+   "bbox_w_px": 155,
+   "bbox_h_px": 10,
+   "area_px": 266,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 13,
+   "measured_carbons": 12,
+   "name_token_check": {
+    "label": "SC12",
+    "name_token_length": 12,
+    "measured_length": 12,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC14",
+   "bbox_w_px": 182,
+   "bbox_h_px": 9,
+   "area_px": 288,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 15,
+   "measured_carbons": 14,
+   "name_token_check": {
+    "label": "SC14",
+    "name_token_length": 14,
+    "measured_length": 14,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC16",
+   "bbox_w_px": 209,
+   "bbox_h_px": 10,
+   "area_px": 378,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 17,
+   "measured_carbons": 16,
+   "name_token_check": {
+    "label": "SC16",
+    "name_token_length": 16,
+    "measured_length": 16,
+    "matches": true,
+    "note": ""
+   }
+  },
+  {
+   "tail": "SC18",
+   "bbox_w_px": 237,
+   "bbox_h_px": 9,
+   "area_px": 415,
+   "skeleton_branch_nodes": 0,
+   "rdp_vertices": 19,
+   "measured_carbons": 18,
+   "name_token_check": {
+    "label": "SC18",
+    "name_token_length": 18,
+    "measured_length": 18,
+    "matches": true,
+    "note": ""
+   }
+  }
+ ],
+ "linker": {
+  "name": "AEMA (G1)",
+  "reagent": "2-(acryloyloxy)ethyl methacrylate",
+  "smiles": "C=CC(=O)OCCOC(=O)C(C)=C",
+  "arm_after_both_additions": "N-CH2CH2-C(=O)-O-CH2CH2-O-C(=O)-CH(CH3)-CH2-S-R",
+  "source": "Scheme 1, and the Methods 'Synthesis of Modified Amine Core' / 'Synthesis of the Ionizable Amino Lipid' paragraphs",
+  "regiochemistry_note": "Read from the SYNTHESIS, not from a mass. The aza-Michael goes onto the ACRYLATE end (1.1 equiv per arm, BHT, 50 C) and the sulfa-Michael onto the METHACRYLATE end (DMPP, 50 C), so the thiol lands on the beta carbon and the alpha carbon keeps the methyl. Scheme 1 draws the product 3A4-SC5 with that connectivity. Molecular formula is identical for the swapped assignment, so HRMS or any mass check is blind to it -- this is the Lin regiochemistry class."
+ },
+ "name_token_mismatches": []
+}

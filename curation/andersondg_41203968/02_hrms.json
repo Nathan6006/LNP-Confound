@@ -1,0 +1,989 @@
+{
+ "AMG11": {
+  "label": "AMG11",
+  "page": 46,
+  "mz": 1132.8882,
+  "formula_ion": "C69H118N3O9",
+  "ion": "M+H"
+ },
+ "AMG12": {
+  "label": "AMG12",
+  "page": 46,
+  "mz": 1132.8888,
+  "formula_ion": "C69H118N3O9",
+  "ion": "M+H"
+ },
+ "AMG13": {
+  "label": "AMG13",
+  "page": 47,
+  "mz": 1138.9351,
+  "formula_ion": "C69H124N3O9",
+  "ion": "M+H"
+ },
+ "AMG14": {
+  "label": "AMG14",
+  "page": 47,
+  "mz": 1144.9824,
+  "formula_ion": "C69H130N3O9",
+  "ion": "M+H"
+ },
+ "AMG15": {
+  "label": "AMG15",
+  "page": 48,
+  "mz": 1235.1246,
+  "formula_ion": "C75H148N3O9",
+  "ion": "M+H"
+ },
+ "AMG16": {
+  "label": "AMG16",
+  "page": 48,
+  "mz": 1361.262,
+  "formula_ion": "C84H166N3O9",
+  "ion": "M+H"
+ },
+ "AMG17": {
+  "label": "AMG17",
+  "page": 49,
+  "mz": 1583.1539,
+  "formula_ion": "C87H160N3O21",
+  "ion": "M+H"
+ },
+ "AMG18": {
+  "label": "AMG18",
+  "page": 49,
+  "mz": 1240.9502,
+  "formula_ion": "C69H130N3O15",
+  "ion": "M+H"
+ },
+ "AMG19": {
+  "label": "AMG19",
+  "page": 50,
+  "mz": 1409.1404,
+  "formula_ion": "C81H154N3O15",
+  "ion": "M+H"
+ },
+ "AMG110": {
+  "label": "AMG110",
+  "page": 50,
+  "mz": 1577.3272,
+  "formula_ion": "C93H178N3O15",
+  "ion": "M+H"
+ },
+ "AMG21": {
+  "label": "AMG21",
+  "page": 51,
+  "mz": 755.5943,
+  "formula_ion": "C46H79N2O6",
+  "ion": "M+H"
+ },
+ "AMG22": {
+  "label": "AMG22",
+  "page": 51,
+  "mz": 755.5931,
+  "formula_ion": "C46H79N2O6",
+  "ion": "M+H"
+ },
+ "AMG23": {
+  "label": "AMG23",
+  "page": 52,
+  "mz": 759.6277,
+  "formula_ion": "C46H83N2O6",
+  "ion": "M+H"
+ },
+ "AMG24": {
+  "label": "AMG24",
+  "page": 53,
+  "mz": 763.6587,
+  "formula_ion": "C46H87N2O6",
+  "ion": "M+H"
+ },
+ "AMG25": {
+  "label": "AMG25",
+  "page": 53,
+  "mz": 823.751,
+  "formula_ion": "C50H99N2O6",
+  "ion": "M+H"
+ },
+ "AMG26": {
+  "label": "AMG26",
+  "page": 53,
+  "mz": 907.8463,
+  "formula_ion": "C56H111N2O6",
+  "ion": "M+H"
+ },
+ "AMG27": {
+  "label": "AMG27",
+  "page": 54,
+  "mz": 1055.772,
+  "formula_ion": "C58H107N2O14",
+  "ion": "M+H"
+ },
+ "AMG28": {
+  "label": "AMG28",
+  "page": 55,
+  "mz": 827.6385,
+  "formula_ion": "C46H87N2O10",
+  "ion": "M+H"
+ },
+ "AMG29": {
+  "label": "AMG29",
+  "page": 55,
+  "mz": 939.7601,
+  "formula_ion": "C54H103N2O10",
+  "ion": "M+H"
+ },
+ "AMG210": {
+  "label": "AMG210",
+  "page": 56,
+  "mz": 1051.884,
+  "formula_ion": "C62H119N2O10",
+  "ion": "M+H"
+ },
+ "AMG31": {
+  "label": "AMG31",
+  "page": 56,
+  "mz": 769.6112,
+  "formula_ion": "C47H81N2O6",
+  "ion": "M+H"
+ },
+ "AMG32": {
+  "label": "AMG32",
+  "page": 57,
+  "mz": 769.6086,
+  "formula_ion": "C47H81N2O6",
+  "ion": "M+H"
+ },
+ "AMG33": {
+  "label": "AMG33",
+  "page": 57,
+  "mz": 773.6433,
+  "formula_ion": "C47H85N2O6",
+  "ion": "M+H"
+ },
+ "AMG34": {
+  "label": "AMG34",
+  "page": 58,
+  "mz": 777.674,
+  "formula_ion": "C47H89N2O6",
+  "ion": "M+H"
+ },
+ "AMG35": {
+  "label": "AMG35",
+  "page": 59,
+  "mz": 837.7679,
+  "formula_ion": "C51H101N2O6",
+  "ion": "M+H"
+ },
+ "AMG36": {
+  "label": "AMG36",
+  "page": 59,
+  "mz": 921.8576,
+  "formula_ion": "C57H113N2O6",
+  "ion": "M+H"
+ },
+ "AMG37": {
+  "label": "AMG37",
+  "page": 60,
+  "mz": 1069.786,
+  "formula_ion": "C59H109N2O14",
+  "ion": "M+H"
+ },
+ "AMG38": {
+  "label": "AMG38",
+  "page": 60,
+  "mz": 841.6543,
+  "formula_ion": "C47H89N2O10",
+  "ion": "M+H"
+ },
+ "AMG39": {
+  "label": "AMG39",
+  "page": 61,
+  "mz": 953.778,
+  "formula_ion": "C55H105N2O10",
+  "ion": "M+H"
+ },
+ "AMG310": {
+  "label": "AMG310",
+  "page": 61,
+  "mz": 1065.9051,
+  "formula_ion": "C63H121N2O10",
+  "ion": "M+H"
+ },
+ "AMG42": {
+  "label": "AMG42",
+  "page": 62,
+  "mz": 799.6217,
+  "formula_ion": "C63H121N2O10",
+  "ion": "M+H"
+ },
+ "AMG44": {
+  "label": "AMG44",
+  "page": 62,
+  "mz": 807.6803,
+  "formula_ion": "C48H91N2O7",
+  "ion": "M+H"
+ },
+ "AMG45": {
+  "label": "AMG45",
+  "page": 63,
+  "mz": 867.7794,
+  "formula_ion": "C52H103N2O7",
+  "ion": "M+H"
+ },
+ "AMG46": {
+  "label": "AMG46",
+  "page": 64,
+  "mz": 951.8734,
+  "formula_ion": "C58H115N2O7",
+  "ion": "M+H"
+ },
+ "AMG47": {
+  "label": "AMG47",
+  "page": 64,
+  "mz": 1099.7956,
+  "formula_ion": "C60H111N2O15",
+  "ion": "M+H"
+ },
+ "AMG48": {
+  "label": "AMG48",
+  "page": 65,
+  "mz": 871.6643,
+  "formula_ion": "C48H91N2O11",
+  "ion": "M+H"
+ },
+ "AMG49": {
+  "label": "AMG49",
+  "page": 65,
+  "mz": 983.7892,
+  "formula_ion": "C56H107N2O11",
+  "ion": "M+H"
+ },
+ "AMG410": {
+  "label": "AMG410",
+  "page": 66,
+  "mz": 1095.9156,
+  "formula_ion": "C64H123N2O11",
+  "ion": "M+H"
+ },
+ "AMG51": {
+  "label": "AMG51",
+  "page": 66,
+  "mz": 809.6426,
+  "formula_ion": "C50H85N2O6",
+  "ion": "M+H"
+ },
+ "AMG52": {
+  "label": "AMG52",
+  "page": 67,
+  "mz": 809.6433,
+  "formula_ion": "C50H85N2O6",
+  "ion": "M+H"
+ },
+ "AMG53": {
+  "label": "AMG53",
+  "page": 67,
+  "mz": 813.6739,
+  "formula_ion": "C50H89N2O6",
+  "ion": "M+H"
+ },
+ "AMG54": {
+  "label": "AMG54",
+  "page": 68,
+  "mz": 817.7022,
+  "formula_ion": "C50H93N2O6",
+  "ion": "M+H"
+ },
+ "AMG55": {
+  "label": "AMG55",
+  "page": 68,
+  "mz": 877.7978,
+  "formula_ion": "C54H105N2O6",
+  "ion": "M+H"
+ },
+ "AMG56": {
+  "label": "AMG56",
+  "page": 69,
+  "mz": 961.8927,
+  "formula_ion": "C60H117N2O6",
+  "ion": "M+H"
+ },
+ "AMG57": {
+  "label": "AMG57",
+  "page": 69,
+  "mz": 1109.8222,
+  "formula_ion": "C62H113N2O14",
+  "ion": "M+H"
+ },
+ "AMG58": {
+  "label": "AMG58",
+  "page": 70,
+  "mz": 881.6804,
+  "formula_ion": "C50H93N2O10",
+  "ion": "M+H"
+ },
+ "AMG59": {
+  "label": "AMG59",
+  "page": 71,
+  "mz": 993.8054,
+  "formula_ion": "C58H109N2O10",
+  "ion": "M+H"
+ },
+ "AMG510": {
+  "label": "AMG510",
+  "page": 71,
+  "mz": 1105.9321,
+  "formula_ion": "C66H125N2O10",
+  "ion": "M+H"
+ },
+ "AMG61": {
+  "label": "AMG61",
+  "page": 72,
+  "mz": 815.6153,
+  "formula_ion": "C48H83N2O8",
+  "ion": "M+H"
+ },
+ "AMG62": {
+  "label": "AMG62",
+  "page": 72,
+  "mz": 815.6125,
+  "formula_ion": "C48H87N2O8",
+  "ion": "M+H"
+ },
+ "AMG63": {
+  "label": "AMG63",
+  "page": 73,
+  "mz": 819.6492,
+  "formula_ion": "C48H87N2O8",
+  "ion": "M+H"
+ },
+ "AMG64": {
+  "label": "AMG64",
+  "page": 73,
+  "mz": 823.6775,
+  "formula_ion": "C48H91N2O8",
+  "ion": "M+H"
+ },
+ "AMG65": {
+  "label": "AMG65",
+  "page": 74,
+  "mz": 883.7722,
+  "formula_ion": "C52H103N2O8",
+  "ion": "M+H"
+ },
+ "AMG66": {
+  "label": "AMG66",
+  "page": 74,
+  "mz": 967.8634,
+  "formula_ion": "C58H115N2O8",
+  "ion": "M+H"
+ },
+ "AMG67": {
+  "label": "AMG67",
+  "page": 75,
+  "mz": 1115.7935,
+  "formula_ion": "C60H111N2O16",
+  "ion": "M+H"
+ },
+ "AMG68": {
+  "label": "AMG68",
+  "page": 75,
+  "mz": 887.6555,
+  "formula_ion": "C48H91N2O12",
+  "ion": "M+H"
+ },
+ "AMG69": {
+  "label": "AMG69",
+  "page": 76,
+  "mz": 999.7809,
+  "formula_ion": "C56H107N2O12",
+  "ion": "M+H"
+ },
+ "AMG610": {
+  "label": "AMG610",
+  "page": 76,
+  "mz": 1111.9104,
+  "formula_ion": "C64H123N2O12",
+  "ion": "M+H"
+ },
+ "AMG71": {
+  "label": "AMG71",
+  "page": 77,
+  "mz": 781.6109,
+  "formula_ion": "C48H81N2O6",
+  "ion": "M+H"
+ },
+ "AMG72": {
+  "label": "AMG72",
+  "page": 77,
+  "mz": 781.6066,
+  "formula_ion": "C48H81N2O6",
+  "ion": "M+H"
+ },
+ "AMG74": {
+  "label": "AMG74",
+  "page": 78,
+  "mz": 789.6736,
+  "formula_ion": "C48H89N2O6",
+  "ion": "M+H"
+ },
+ "AMG75": {
+  "label": "AMG75",
+  "page": 79,
+  "mz": 849.7655,
+  "formula_ion": "C52H101N2O6",
+  "ion": "M+H"
+ },
+ "AMG76": {
+  "label": "AMG76",
+  "page": 79,
+  "mz": 933.8575,
+  "formula_ion": "C58H113N2O6",
+  "ion": "M+H"
+ },
+ "AMG77": {
+  "label": "AMG77",
+  "page": 80,
+  "mz": 1081.7893,
+  "formula_ion": "C60H109N2O14",
+  "ion": "M+H"
+ },
+ "AMG78": {
+  "label": "AMG78",
+  "page": 80,
+  "mz": 853.6539,
+  "formula_ion": "C48H89N2O10",
+  "ion": "M+H"
+ },
+ "AMG79": {
+  "label": "AMG79",
+  "page": 81,
+  "mz": 965.7793,
+  "formula_ion": "C56H105N2O10",
+  "ion": "M+H"
+ },
+ "AMG710": {
+  "label": "AMG710",
+  "page": 82,
+  "mz": 1077.905,
+  "formula_ion": "C64H121N2O10",
+  "ion": "M+H"
+ },
+ "AMG81": {
+  "label": "AMG81",
+  "page": 82,
+  "mz": 785.6051,
+  "formula_ion": "C47H81N2O7",
+  "ion": "M+H"
+ },
+ "AMG82": {
+  "label": "AMG82",
+  "page": 83,
+  "mz": 785.607,
+  "formula_ion": "C47H81N2O7",
+  "ion": "M+H"
+ },
+ "AMG84": {
+  "label": "AMG84",
+  "page": 83,
+  "mz": 793.6666,
+  "formula_ion": "C47H89N2O7",
+  "ion": "M+H"
+ },
+ "AMG85": {
+  "label": "AMG85",
+  "page": 84,
+  "mz": 853.7616,
+  "formula_ion": "C51H101N2O7",
+  "ion": "M+H"
+ },
+ "AMG86": {
+  "label": "AMG86",
+  "page": 84,
+  "mz": 937.856,
+  "formula_ion": "C57H113N2O7",
+  "ion": "M+H"
+ },
+ "AMG87": {
+  "label": "AMG87",
+  "page": 85,
+  "mz": 1085.7832,
+  "formula_ion": "C59H109N2O15",
+  "ion": "M+H"
+ },
+ "AMG88": {
+  "label": "AMG88",
+  "page": 85,
+  "mz": 857.6459,
+  "formula_ion": "C47H89N2O11",
+  "ion": "M+H"
+ },
+ "AMG89": {
+  "label": "AMG89",
+  "page": 86,
+  "mz": 969.7692,
+  "formula_ion": "C55H105N2O11",
+  "ion": "M+H"
+ },
+ "AMG810": {
+  "label": "AMG810",
+  "page": 86,
+  "mz": 1081.8952,
+  "formula_ion": "C63H121N2O11",
+  "ion": "M+H"
+ },
+ "AMG91": {
+  "label": "AMG91",
+  "page": 87,
+  "mz": 879.7163,
+  "formula_ion": "C55H95N2O6",
+  "ion": "M+H"
+ },
+ "AMG92": {
+  "label": "AMG92",
+  "page": 87,
+  "mz": 879.7185,
+  "formula_ion": "C55H95N2O6",
+  "ion": "M+H"
+ },
+ "AMG93": {
+  "label": "AMG93",
+  "page": 88,
+  "mz": 883.7489,
+  "formula_ion": "C55H99N2O6",
+  "ion": "M+H"
+ },
+ "AMG94": {
+  "label": "AMG94",
+  "page": 88,
+  "mz": 887.7833,
+  "formula_ion": "C55H103N2O6",
+  "ion": "M+H"
+ },
+ "AMG95": {
+  "label": "AMG95",
+  "page": 89,
+  "mz": 947.8769,
+  "formula_ion": "C59H115N2O6",
+  "ion": "M+H"
+ },
+ "AMG96": {
+  "label": "AMG96",
+  "page": 89,
+  "mz": 1031.9716,
+  "formula_ion": "C65H127N2O6",
+  "ion": "M+H"
+ },
+ "AMG97": {
+  "label": "AMG97",
+  "page": 90,
+  "mz": 1179.8968,
+  "formula_ion": "C67H123N2O14",
+  "ion": "M+H"
+ },
+ "AMG98": {
+  "label": "AMG98",
+  "page": 90,
+  "mz": 951.7628,
+  "formula_ion": "C55H103N2O10",
+  "ion": "M+H"
+ },
+ "AMG99": {
+  "label": "AMG99",
+  "page": 91,
+  "mz": 1063.8888,
+  "formula_ion": "C63H119N2O10",
+  "ion": "M+H"
+ },
+ "AMG101": {
+  "label": "AMG101",
+  "page": 92,
+  "mz": 769.6099,
+  "formula_ion": "C94H161N4O12",
+  "ion": "M+2H"
+ },
+ "AMG102": {
+  "label": "AMG102",
+  "page": 92,
+  "mz": 769.6113,
+  "formula_ion": "C94H161N4O12",
+  "ion": "M+2H"
+ },
+ "AMG103": {
+  "label": "AMG103",
+  "page": 93,
+  "mz": 1546.2751,
+  "formula_ion": "C94H169N4O12",
+  "ion": "M+H"
+ },
+ "AMG104": {
+  "label": "AMG104",
+  "page": 93,
+  "mz": 1554.3359,
+  "formula_ion": "C94H177N4O12",
+  "ion": "M+H"
+ },
+ "AMG105": {
+  "label": "AMG105",
+  "page": 94,
+  "mz": 1674.5241,
+  "formula_ion": "C102H201N4O12",
+  "ion": "M+H"
+ },
+ "AMG106": {
+  "label": "AMG106",
+  "page": 94,
+  "mz": 1843.7177,
+  "formula_ion": "C114H226N4O12",
+  "ion": "M+H"
+ },
+ "AMG108": {
+  "label": "AMG108",
+  "page": 95,
+  "mz": 1682.2958,
+  "formula_ion": "C94H177N4O20",
+  "ion": "M+H"
+ },
+ "AMG109": {
+  "label": "AMG109",
+  "page": 96,
+  "mz": 1906.5465,
+  "formula_ion": "C110H209N4O20",
+  "ion": "M+H"
+ },
+ "AMG10C12": {
+  "label": "AMG10C12",
+  "page": 97,
+  "mz": 1226.0238,
+  "formula_ion": "C70H137N4O12",
+  "ion": "M+H"
+ },
+ "AMG10C14": {
+  "label": "AMG10C14",
+  "page": 97,
+  "mz": 1338.1491,
+  "formula_ion": "C78H153N4O12",
+  "ion": "M+H"
+ },
+ "AMG10C16": {
+  "label": "AMG10C16",
+  "page": 97,
+  "mz": 1450.2754,
+  "formula_ion": "C86H169N4O12",
+  "ion": "M+H"
+ },
+ "AMG10C18": {
+  "label": "AMG10C18",
+  "page": 98,
+  "mz": 1562.4009,
+  "formula_ion": "C94H185N4O12",
+  "ion": "M+H"
+ },
+ "AMG1041": {
+  "label": "AMG1041",
+  "page": 98,
+  "mz": 1217.9609,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1041R": {
+  "label": "AMG1041R",
+  "page": 99,
+  "mz": 1217.9609,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1041S": {
+  "label": "AMG1041S",
+  "page": 99,
+  "mz": 1217.9611,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1042": {
+  "label": "AMG1042",
+  "page": 100,
+  "mz": 1330.0861,
+  "formula_ion": "C78H145N4O12",
+  "ion": "M+H"
+ },
+ "AMG1043": {
+  "label": "AMG1043",
+  "page": 100,
+  "mz": 1442.2111,
+  "formula_ion": "C86H161N4O12",
+  "ion": "M+H"
+ },
+ "AMG1044": {
+  "label": "AMG1044",
+  "page": 101,
+  "mz": 1554.3366,
+  "formula_ion": "C94H177N4O12",
+  "ion": "M+H"
+ },
+ "AMG1047": {
+  "label": "AMG1047",
+  "page": 101,
+  "mz": 1217.9626,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1048": {
+  "label": "AMG1048",
+  "page": 102,
+  "mz": 1217.9613,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1049": {
+  "label": "AMG1049",
+  "page": 102,
+  "mz": 1217.9629,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1050": {
+  "label": "AMG1050",
+  "page": 102,
+  "mz": 1217.962,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1051": {
+  "label": "AMG1051",
+  "page": 103,
+  "mz": 1217.9616,
+  "formula_ion": "C70H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG1053": {
+  "label": "AMG1053",
+  "page": 103,
+  "mz": 1209.8977,
+  "formula_ion": "C70H121N4O12",
+  "ion": "M+H"
+ },
+ "AMG1054": {
+  "label": "AMG1054",
+  "page": 104,
+  "mz": 1209.8969,
+  "formula_ion": "C70H121N4O12",
+  "ion": "M+H"
+ },
+ "AMG1055": {
+  "label": "AMG1055",
+  "page": 104,
+  "mz": 1209.8988,
+  "formula_ion": "C70H121N4O12",
+  "ion": "M+H"
+ },
+ "AMG1056": {
+  "label": "AMG1056",
+  "page": 105,
+  "mz": 1209.896,
+  "formula_ion": "C70H121N4O12",
+  "ion": "M+H"
+ },
+ "AMG1059": {
+  "label": "AMG1059",
+  "page": 105,
+  "mz": 1153.9823,
+  "formula_ion": "C70H129N4O8",
+  "ion": "M+H"
+ },
+ "AMG1041-OHD": {
+  "label": "AMG1041-OHD",
+  "page": 106,
+  "mz": 1152.9806,
+  "formula_ion": "C70H129N4O8",
+  "ion": "M+H"
+ },
+ "AMG1061": {
+  "label": "AMG1061",
+  "page": 106,
+  "mz": 1297.8514,
+  "formula_ion": "C66H129N4O12",
+  "ion": "M+H"
+ },
+ "AMG141": {
+  "label": "AMG141",
+  "page": 107,
+  "mz": 892.6968,
+  "formula_ion": "C51H94N3O9",
+  "ion": "M+H"
+ },
+ "AMG124": {
+  "label": "AMG124",
+  "page": 107,
+  "mz": 1526.3054,
+  "formula_ion": "C92H173N4O12",
+  "ion": "M+H"
+ },
+ "AMG134": {
+  "label": "AMG134",
+  "page": 107,
+  "mz": 1187.0279,
+  "formula_ion": "C72H136N3O9",
+  "ion": "M+H"
+ },
+ "AMG1241": {
+  "label": "AMG1241",
+  "page": 108,
+  "mz": 1189.9303,
+  "formula_ion": "C68H125N4O12",
+  "ion": "M+H"
+ },
+ "AMG1341": {
+  "label": "AMG1341",
+  "page": 109,
+  "mz": 934.7434,
+  "formula_ion": "C54H100N3O9",
+  "ion": "M+H"
+ },
+ "AMG1441": {
+  "label": "AMG1441",
+  "page": 109,
+  "mz": 736.6107,
+  "formula_ion": "C42H80N4O6",
+  "ion": "M+H"
+ },
+ "AMG1541": {
+  "label": "AMG1541",
+  "page": 110,
+  "mz": 1784.3886,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1541R": {
+  "label": "AMG1541R",
+  "page": 110,
+  "mz": 1784.389,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1541S": {
+  "label": "AMG1541S",
+  "page": 111,
+  "mz": 1784.3911,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1547": {
+  "label": "AMG1547",
+  "page": 111,
+  "mz": 1784.3873,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1548": {
+  "label": "AMG1548",
+  "page": 112,
+  "mz": 1784.3924,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1549": {
+  "label": "AMG1549",
+  "page": 112,
+  "mz": 1784.3919,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1550": {
+  "label": "AMG1550",
+  "page": 113,
+  "mz": 1784.3931,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1551": {
+  "label": "AMG1551",
+  "page": 113,
+  "mz": 1784.3912,
+  "formula_ion": "C102H187N6O18",
+  "ion": "M+H"
+ },
+ "AMG1553": {
+  "label": "AMG1553",
+  "page": 114,
+  "mz": 1772.2944,
+  "formula_ion": "C102H175N6O18",
+  "ion": "M+H"
+ },
+ "AMG1554": {
+  "label": "AMG1554",
+  "page": 114,
+  "mz": 1772.2966,
+  "formula_ion": "C102H175N6O18",
+  "ion": "M+H"
+ },
+ "AMG1555": {
+  "label": "AMG1555",
+  "page": 115,
+  "mz": 1772.2959,
+  "formula_ion": "C102H175N6O18",
+  "ion": "M+H"
+ },
+ "AMG1556": {
+  "label": "AMG1556",
+  "page": 115,
+  "mz": 1772.2934,
+  "formula_ion": "C102H175N6O18",
+  "ion": "M+H"
+ },
+ "AMG1559": {
+  "label": "AMG1559",
+  "page": 115,
+  "mz": 1688.4221,
+  "formula_ion": "C102H187N6O12",
+  "ion": "M+H"
+ },
+ "AMG15C12": {
+  "label": "AMG15C12",
+  "page": 116,
+  "mz": 1796.4867,
+  "formula_ion": "C102H199N6O18",
+  "ion": "M+H"
+ },
+ "AMG1541-OHD": {
+  "label": "AMG1541-OHD",
+  "page": 117,
+  "mz": 1689.652,
+  "formula_ion": "C102H187N6O12",
+  "ion": "M+H"
+ },
+ "AMG15L-41": {
+  "label": "AMG15L-41",
+  "page": 117,
+  "mz": 1786.4071,
+  "formula_ion": "C102H189N6O18",
+  "ion": "M+H"
+ },
+ "AMG1641": {
+  "label": "AMG1641",
+  "page": 118,
+  "mz": 1487.1618,
+  "formula_ion": "C85H156N5O15",
+  "ion": "M+H"
+ },
+ "AMG1741": {
+  "label": "AMG1741",
+  "page": 119,
+  "mz": 1041.3133,
+  "formula_ion": "C119H219N7O21",
+  "ion": "M+2H"
+ },
+ "AMG1841": {
+  "label": "AMG1841",
+  "page": 119,
+  "mz": 1868.4825,
+  "formula_ion": "C108H199N6O18",
+  "ion": "M+H"
+ },
+ "AMG1941": {
+  "label": "AMG1941",
+  "page": 120,
+  "mz": 1896.5175,
+  "formula_ion": "C110H203N6O18",
+  "ion": "M+H"
+ }
+}

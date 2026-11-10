@@ -1,0 +1,31 @@
+block_type,block_id,IL_name_token,structure_known,SMILES,source,note
+amine_head,amine_1,1,yes,NCCN1CCCC1,SI p.3 synthesis of lipidoid 1C12,"1-(2-aminoethyl)pyrrolidine; a PRIMARY amine, so the one-pot alkylation gives a mono/di mixture"
+amine_head,amine_2,2,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 129.06 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_3,3,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 115.16 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_4,4,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 101.11 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_5,5,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 129.16 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_6,6,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 73.07 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_7,7,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 102.12 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_8,8,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 59.05 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_9,9,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 87.09 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_10,10,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 147.12 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_11,11,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 144.14 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_12,12,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 60.01 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_13,13,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 74.06 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_14,14,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 117.13 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_15,15,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 145.16 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_16,16,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 199.2 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_17,17,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 103.1 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_18,18,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 128.12 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_19,19,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 120.1 Da; a mass is not a structure. DECISIONS.md D-1.
+amine_head,amine_20,20,no,,SI Table S1 'Amine' column (an integer only),NOT IN THIS SI. Solved neutral mass 113.09 Da; a mass is not a structure. DECISIONS.md D-1.
+alkyl_halide,C6,C6,yes,CCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 6 carbons, unbranched. Adds C6H12 per alkylation."
+alkyl_halide,C7,C7,yes,CCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 7 carbons, unbranched. Adds C7H14 per alkylation."
+alkyl_halide,C8,C8,yes,CCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 8 carbons, unbranched. Adds C8H16 per alkylation."
+alkyl_halide,C9,C9,yes,CCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 9 carbons, unbranched. Adds C9H18 per alkylation."
+alkyl_halide,C10,C10,yes,CCCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 10 carbons, unbranched. Adds C10H20 per alkylation."
+alkyl_halide,C11,C11,yes,CCCCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 11 carbons, unbranched. Adds C11H22 per alkylation."
+alkyl_halide,C12,C12,yes,CCCCCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 12 carbons, unbranched. Adds C12H24 per alkylation."
+alkyl_halide,C14,C14,yes,CCCCCCCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 14 carbons, unbranched. Adds C14H28 per alkylation."
+alkyl_halide,C16,C16,yes,CCCCCCCCCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 16 carbons, unbranched. Adds C16H32 per alkylation."
+alkyl_halide,C18,C18,yes,CCCCCCCCCCCCCCCCCCI,SI Table S1 'Alkyl halides' column; SI p.3 names 1-iodododecane for C12,"1-iodo-n-alkane, 18 carbons, unbranched. Adds C18H36 per alkylation."

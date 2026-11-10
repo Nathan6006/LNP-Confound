@@ -1,0 +1,1701 @@
+{
+ "_what": "Stage 01. The library's blocks and shape, from Table S1's text layer. Tier 4; no pixels.",
+ "library_shape": {
+  "distinct_amine_numbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "n_amines": 20,
+  "distinct_alkyl_halides": [
+   "C6",
+   "C7",
+   "C8",
+   "C9",
+   "C10",
+   "C11",
+   "C12",
+   "C14",
+   "C16",
+   "C18"
+  ],
+  "n_alkyl_halides": 10,
+  "product": 200,
+  "tracker_claim": 200,
+  "agrees": true,
+  "what_the_200_ARE": "200 crude one-pot REACTION PRODUCTS, each a mixture of mono- through penta-alkylated species. NOT 200 distinct structures and NOT 200 individually reported measurements."
+ },
+ "amine_1": {
+  "number": 1,
+  "name": "1-(2-aminoethyl)pyrrolidine",
+  "source": "SI p.3, 'Synthesis of lipidoid 1C12': 'The 1-(2-aminoethyl)pyrrolidine (1 eq., 0.25 mmol, 31.7 ul) and 1-iodododecane (2 eq., 0.5 mmol, 123.3 ul) were added to the vial.'",
+  "smiles_mapped": "C1CCN(C1)CC[NH2:1]",
+  "smiles": "NCCN1CCCC1",
+  "corroboration": "the three purified hits' IUPAC names (SI pp.7/10/13) all contain '(2-(pyrrolidin-1-yl)ethyl)', which is this amine minus the alkylated primary N's hydrogens"
+ },
+ "amine_1_our_mass_vs_their_calc": [
+  {
+   "amine": 1,
+   "alkyl": "C14",
+   "tails": 1,
+   "our_neutral_exact": 310.3348,
+   "our_MH_plus": 311.3421,
+   "their_calc": 310.3,
+   "their_observed": 311.5,
+   "residual_our_neutral_vs_their_calc": 0.0348,
+   "residual_our_MH_vs_their_observed": -0.1579,
+   "their_obs_minus_their_calc": 1.2
+  },
+  {
+   "amine": 1,
+   "alkyl": "C14",
+   "tails": 2,
+   "our_neutral_exact": 506.5539,
+   "our_MH_plus": 507.5612,
+   "their_calc": 506.6,
+   "their_observed": 507.9,
+   "residual_our_neutral_vs_their_calc": -0.0461,
+   "residual_our_MH_vs_their_observed": -0.3388,
+   "their_obs_minus_their_calc": 1.3
+  },
+  {
+   "amine": 1,
+   "alkyl": "C12",
+   "tails": 1,
+   "our_neutral_exact": 282.3035,
+   "our_MH_plus": 283.3108,
+   "their_calc": 282.3,
+   "their_observed": 283.5,
+   "residual_our_neutral_vs_their_calc": 0.0035,
+   "residual_our_MH_vs_their_observed": -0.1892,
+   "their_obs_minus_their_calc": 1.2
+  },
+  {
+   "amine": 1,
+   "alkyl": "C12",
+   "tails": 2,
+   "our_neutral_exact": 450.4913,
+   "our_MH_plus": 451.4986,
+   "their_calc": 450.5,
+   "their_observed": 451.6,
+   "residual_our_neutral_vs_their_calc": -0.0087,
+   "residual_our_MH_vs_their_observed": -0.1014,
+   "their_obs_minus_their_calc": 1.1
+  }
+ ],
+ "unprinted_increment_check": {
+  "n_consecutive_pairs": 38,
+  "tolerance_Da": 0.15,
+  "rationale": "their calc column is printed to one decimal, so two roundings permit +/-0.1 before any chemistry is wrong",
+  "n_within_tolerance": 38,
+  "worst": {
+   "amine": 20,
+   "alkyl": "C7",
+   "tails": "3->4",
+   "observed_step": 98.2,
+   "expected_CnH2n": 98.1096,
+   "residual": 0.0904
+  },
+  "all_pairs": [
+   {
+    "amine": 1,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.3,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0809
+   },
+   {
+    "amine": 2,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 3,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 4,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.3,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0809
+   },
+   {
+    "amine": 5,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 6,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 6,
+    "alkyl": "C14",
+    "tails": "2->3",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 6,
+    "alkyl": "C14",
+    "tails": "3->4",
+    "observed_step": 196.3,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0809
+   },
+   {
+    "amine": 7,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.3,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0809
+   },
+   {
+    "amine": 7,
+    "alkyl": "C14",
+    "tails": "2->3",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 7,
+    "alkyl": "C14",
+    "tails": "3->4",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 7,
+    "alkyl": "C14",
+    "tails": "4->5",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 8,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 8,
+    "alkyl": "C14",
+    "tails": "2->3",
+    "observed_step": 196.23,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0109
+   },
+   {
+    "amine": 8,
+    "alkyl": "C14",
+    "tails": "3->4",
+    "observed_step": 196.17,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0491
+   },
+   {
+    "amine": 9,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 9,
+    "alkyl": "C14",
+    "tails": "2->3",
+    "observed_step": 196.3,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0809
+   },
+   {
+    "amine": 10,
+    "alkyl": "C14",
+    "tails": "1->2",
+    "observed_step": 196.3,
+    "expected_CnH2n": 196.2191,
+    "residual": 0.0809
+   },
+   {
+    "amine": 10,
+    "alkyl": "C14",
+    "tails": "2->3",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 10,
+    "alkyl": "C14",
+    "tails": "3->4",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 1,
+    "alkyl": "C12",
+    "tails": "1->2",
+    "observed_step": 168.2,
+    "expected_CnH2n": 168.1878,
+    "residual": 0.0122
+   },
+   {
+    "amine": 11,
+    "alkyl": "C14",
+    "tails": "2->3",
+    "observed_step": 196.2,
+    "expected_CnH2n": 196.2191,
+    "residual": -0.0191
+   },
+   {
+    "amine": 12,
+    "alkyl": "C12",
+    "tails": "1->2",
+    "observed_step": 168.2,
+    "expected_CnH2n": 168.1878,
+    "residual": 0.0122
+   },
+   {
+    "amine": 13,
+    "alkyl": "C16",
+    "tails": "1->2",
+    "observed_step": 224.3,
+    "expected_CnH2n": 224.2504,
+    "residual": 0.0496
+   },
+   {
+    "amine": 14,
+    "alkyl": "C18",
+    "tails": "1->2",
+    "observed_step": 252.3,
+    "expected_CnH2n": 252.2817,
+    "residual": 0.0183
+   },
+   {
+    "amine": 14,
+    "alkyl": "C18",
+    "tails": "2->3",
+    "observed_step": 252.3,
+    "expected_CnH2n": 252.2817,
+    "residual": 0.0183
+   },
+   {
+    "amine": 15,
+    "alkyl": "C9",
+    "tails": "4->5",
+    "observed_step": 126.2,
+    "expected_CnH2n": 126.1409,
+    "residual": 0.0591
+   },
+   {
+    "amine": 15,
+    "alkyl": "C9",
+    "tails": "5->6",
+    "observed_step": 126.1,
+    "expected_CnH2n": 126.1409,
+    "residual": -0.0409
+   },
+   {
+    "amine": 16,
+    "alkyl": "C8",
+    "tails": "3->4",
+    "observed_step": 112.1,
+    "expected_CnH2n": 112.1252,
+    "residual": -0.0252
+   },
+   {
+    "amine": 17,
+    "alkyl": "C10",
+    "tails": "2->3",
+    "observed_step": 140.2,
+    "expected_CnH2n": 140.1565,
+    "residual": 0.0435
+   },
+   {
+    "amine": 18,
+    "alkyl": "C11",
+    "tails": "1->2",
+    "observed_step": 154.2,
+    "expected_CnH2n": 154.1722,
+    "residual": 0.0278
+   },
+   {
+    "amine": 18,
+    "alkyl": "C11",
+    "tails": "2->3",
+    "observed_step": 154.1,
+    "expected_CnH2n": 154.1722,
+    "residual": -0.0722
+   },
+   {
+    "amine": 19,
+    "alkyl": "C6",
+    "tails": "1->2",
+    "observed_step": 84.1,
+    "expected_CnH2n": 84.0939,
+    "residual": 0.0061
+   },
+   {
+    "amine": 20,
+    "alkyl": "C7",
+    "tails": "2->3",
+    "observed_step": 98.1,
+    "expected_CnH2n": 98.1096,
+    "residual": -0.0096
+   },
+   {
+    "amine": 20,
+    "alkyl": "C7",
+    "tails": "3->4",
+    "observed_step": 98.2,
+    "expected_CnH2n": 98.1096,
+    "residual": 0.0904
+   },
+   {
+    "amine": 11,
+    "alkyl": "C12",
+    "tails": "2->3",
+    "observed_step": 168.2,
+    "expected_CnH2n": 168.1878,
+    "residual": 0.0122
+   },
+   {
+    "amine": 11,
+    "alkyl": "C12",
+    "tails": "3->4",
+    "observed_step": 168.2,
+    "expected_CnH2n": 168.1878,
+    "residual": 0.0122
+   },
+   {
+    "amine": 11,
+    "alkyl": "C16",
+    "tails": "2->3",
+    "observed_step": 224.2,
+    "expected_CnH2n": 224.2504,
+    "residual": -0.0504
+   }
+  ]
+ },
+ "solved_amine_neutral_masses": {
+  "1": {
+   "solved_neutral_masses": [
+    113.07,
+    113.15,
+    113.1,
+    113.12
+   ],
+   "spread": 0.08,
+   "mean": 113.11,
+   "structure_known": true,
+   "note": "amine 1 = 1-(2-aminoethyl)pyrrolidine, named on SI p.3"
+  },
+  "2": {
+   "solved_neutral_masses": [
+    129.07,
+    129.05
+   ],
+   "spread": 0.02,
+   "mean": 129.06,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "3": {
+   "solved_neutral_masses": [
+    115.17,
+    115.15
+   ],
+   "spread": 0.02,
+   "mean": 115.16,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "4": {
+   "solved_neutral_masses": [
+    101.07,
+    101.15
+   ],
+   "spread": 0.08,
+   "mean": 101.11,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "5": {
+   "solved_neutral_masses": [
+    129.17,
+    129.15
+   ],
+   "spread": 0.02,
+   "mean": 129.16,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "6": {
+   "solved_neutral_masses": [
+    73.07,
+    73.05,
+    73.04,
+    73.12
+   ],
+   "spread": 0.08,
+   "mean": 73.07,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "7": {
+   "solved_neutral_masses": [
+    102.07,
+    102.15,
+    102.14,
+    102.12,
+    102.1
+   ],
+   "spread": 0.08,
+   "mean": 102.12,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "8": {
+   "solved_neutral_masses": [
+    59.07,
+    59.05,
+    59.07,
+    59.02
+   ],
+   "spread": 0.05,
+   "mean": 59.05,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "9": {
+   "solved_neutral_masses": [
+    87.07,
+    87.05,
+    87.14
+   ],
+   "spread": 0.09,
+   "mean": 87.09,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "10": {
+   "solved_neutral_masses": [
+    147.07,
+    147.15,
+    147.14,
+    147.12
+   ],
+   "spread": 0.08,
+   "mean": 147.12,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "11": {
+   "solved_neutral_masses": [
+    144.15,
+    144.14,
+    144.12,
+    144.13,
+    144.14,
+    144.19,
+    144.14
+   ],
+   "spread": 0.07,
+   "mean": 144.14,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "12": {
+   "solved_neutral_masses": [
+    60.0,
+    60.02
+   ],
+   "spread": 0.02,
+   "mean": 60.01,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "13": {
+   "solved_neutral_masses": [
+    74.04,
+    74.09
+   ],
+   "spread": 0.05,
+   "mean": 74.06,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "14": {
+   "solved_neutral_masses": [
+    117.11,
+    117.13,
+    117.15
+   ],
+   "spread": 0.04,
+   "mean": 117.13,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "15": {
+   "solved_neutral_masses": [
+    145.13,
+    145.19,
+    145.15
+   ],
+   "spread": 0.06,
+   "mean": 145.16,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "16": {
+   "solved_neutral_masses": [
+    199.22,
+    199.19
+   ],
+   "spread": 0.03,
+   "mean": 199.2,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "17": {
+   "solved_neutral_masses": [
+    103.08,
+    103.12
+   ],
+   "spread": 0.04,
+   "mean": 103.1,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "18": {
+   "solved_neutral_masses": [
+    128.12,
+    128.15,
+    128.08
+   ],
+   "spread": 0.07,
+   "mean": 128.12,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "19": {
+   "solved_neutral_masses": [
+    120.1,
+    120.1
+   ],
+   "spread": 0.0,
+   "mean": 120.1,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  },
+  "20": {
+   "solved_neutral_masses": [
+    113.07,
+    113.06,
+    113.15
+   ],
+   "spread": 0.09,
+   "mean": 113.09,
+   "structure_known": false,
+   "note": "STRUCTURE UNKNOWN. A solved mass constrains the formula and nothing more; this curation does not guess a structure from a mass. DECISIONS.md D-1."
+  }
+ },
+ "multiple_alkylation_evidence": {
+  "rows_with_more_than_one_tail_count": 23,
+  "max_tail_count_observed": 6,
+  "paper_says": "SI p.7: 'The 1C12-D product was isolated from the crude lipidoid mixture by column chromatography'"
+ },
+ "rows": [
+  {
+   "page": 4,
+   "y": 171.5,
+   "amine": 1,
+   "alkyl": "C14",
+   "cells": [
+    "1",
+    "C14",
+    "310.3",
+    "311.5",
+    "506.6",
+    "507.9",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 199.7,
+   "amine": 2,
+   "alkyl": "C14",
+   "cells": [
+    "2",
+    "C14",
+    "326.3",
+    "327.4",
+    "522.5",
+    "524.0",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 227.9,
+   "amine": 3,
+   "alkyl": "C14",
+   "cells": [
+    "3",
+    "C14",
+    "312.4",
+    "313.5",
+    "508.6",
+    "509.8",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 256.1,
+   "amine": 4,
+   "alkyl": "C14",
+   "cells": [
+    "4",
+    "C14",
+    "298.3",
+    "299.5",
+    "494.6",
+    "495.7",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 284.3,
+   "amine": 5,
+   "alkyl": "C14",
+   "cells": [
+    "5",
+    "C14",
+    "326.4",
+    "327.4",
+    "522.6",
+    "524.0",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 312.5,
+   "amine": 6,
+   "alkyl": "C14",
+   "cells": [
+    "6",
+    "C14",
+    "270.3",
+    "271.4",
+    "466.5",
+    "467.8",
+    "662.7",
+    "664.2",
+    "859.0",
+    "860.3",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 340.7,
+   "amine": 7,
+   "alkyl": "C14",
+   "cells": [
+    "7",
+    "C14",
+    "299.3",
+    "300.7",
+    "495.6",
+    "497.2",
+    "691.8",
+    "693.4",
+    "888.0",
+    "889.6",
+    "1084.2",
+    "1086.1",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 368.9,
+   "amine": 8,
+   "alkyl": "C14",
+   "cells": [
+    "8",
+    "C14",
+    "256.3",
+    "257.6",
+    "452.5",
+    "453.9",
+    "648.73",
+    "650.4",
+    "844.9",
+    "846.6",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 397.1,
+   "amine": 9,
+   "alkyl": "C14",
+   "cells": [
+    "9",
+    "C14",
+    "284.3",
+    "285.3",
+    "480.5",
+    "481.5",
+    "676.8",
+    "678.3",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 425.3,
+   "amine": 10,
+   "alkyl": "C14",
+   "cells": [
+    "10",
+    "C14",
+    "344.3",
+    "345.3",
+    "540.6",
+    "541.4",
+    "736.8",
+    "738.2",
+    "933.0",
+    "934.8",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 467.66,
+   "amine": 1,
+   "alkyl": "C12",
+   "cells": [
+    "1",
+    "C12",
+    "282.3",
+    "283.5",
+    "450.5",
+    "451.6",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 509.9,
+   "amine": 11,
+   "alkyl": "C14",
+   "cells": [
+    "11",
+    "C14",
+    "",
+    "",
+    "537.6",
+    "539.0",
+    "733.8",
+    "735.6",
+    "",
+    "931.6",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "270.1",
+     "",
+     "368.4",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+2H+)",
+     "",
+     "(M+2H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 580.46,
+   "amine": 12,
+   "alkyl": "C12",
+   "cells": [
+    "12",
+    "C12",
+    "229.2",
+    "230.3",
+    "397.4",
+    "398.3",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 608.66,
+   "amine": 13,
+   "alkyl": "C16",
+   "cells": [
+    "13",
+    "C16",
+    "299.3",
+    "300.2",
+    "523.6",
+    "525.2",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 636.86,
+   "amine": 14,
+   "alkyl": "C18",
+   "cells": [
+    "14",
+    "C18",
+    "370.4",
+    "371.5",
+    "622.7",
+    "624.3",
+    "875.0",
+    "876.7",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 665.06,
+   "amine": 15,
+   "alkyl": "C9",
+   "cells": [
+    "15",
+    "C9",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "650.7",
+    "652.2",
+    "776.9",
+    "778.3",
+    "903.0",
+    "904.8"
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)"
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "y": 693.26,
+   "amine": 16,
+   "alkyl": "C8",
+   "cells": [
+    "16",
+    "C8",
+    "",
+    "",
+    "",
+    "",
+    "536.6",
+    "537.9",
+    "648.7",
+    "649.6",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "269.5",
+     "",
+     "325.6",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+2H+)",
+     "",
+     "(M+2H+)",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "y": 81.62,
+   "amine": 17,
+   "alkyl": "C10",
+   "cells": [
+    "17",
+    "C10",
+    "",
+    "",
+    "384.4",
+    "385.6",
+    "524.6",
+    "525.6",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "y": 109.82,
+   "amine": 18,
+   "alkyl": "C11",
+   "cells": [
+    "18",
+    "C11",
+    "283.3",
+    "284.6",
+    "437.5",
+    "438.9",
+    "591.6",
+    "593.0",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "y": 138.02,
+   "amine": 19,
+   "alkyl": "C6",
+   "cells": [
+    "19",
+    "C6",
+    "205.2",
+    "206.1",
+    "289.3",
+    "289.8",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "y": 166.22,
+   "amine": 20,
+   "alkyl": "C7",
+   "cells": [
+    "20",
+    "C7",
+    "",
+    "",
+    "310.3",
+    "311.6",
+    "408.4",
+    "409.4",
+    "506.6",
+    "507.8",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "y": 194.42,
+   "amine": 11,
+   "alkyl": "C12",
+   "cells": [
+    "11",
+    "C12",
+    "",
+    "",
+    "481.5",
+    "482.5",
+    "649.7",
+    "651.1",
+    "817.9",
+    "819.5",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "326.1",
+     "",
+     "410.4",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+2H+)",
+     "",
+     "(M+2H+)",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "y": 250.82,
+   "amine": 11,
+   "alkyl": "C16",
+   "cells": [
+    "11",
+    "C16",
+    "",
+    "",
+    "593.7",
+    "595.0",
+    "817.9",
+    "819.4",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "extra_lines": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+H+)",
+     "",
+     "(M+H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "298.2",
+     "",
+     "410.4",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "(M+2H+)",
+     "",
+     "(M+2H+)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  }
+ ]
+}

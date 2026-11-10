@@ -1,0 +1,96 @@
+{
+ "_what": "Stage 00 acquisition record. 00_acquisition_raw.json is the untouched browser log; this file is the curated version plus the two figure rasters fetched afterwards.",
+ "paper": {
+  "pmid": "38982196",
+  "pmcid": "PMC11446653",
+  "doi": "10.1038/s41557-024-01557-2",
+  "citation": "Wang et al., Nat Chem 16, 1436-1446 (2024)",
+  "proposed_experiment_id": "MW_2024"
+ },
+ "licence": {
+  "landing_page_string": "NOT CAPTURED. www.nature.com redirects to idp.nature.com without a session, so the licence line on the article landing page was not read. Europe PMC reports isOpenAccess = \"N\" and license = null for PMID 38982196; the record is an NIH author manuscript (nihAuthMan). CLAUDE.md section 8 requires a CC0/CC-BY-compatible licence before corpus RELEASE -- this is UNRESOLVED and is DECISIONS.md D-5.",
+  "europepmc_isOpenAccess": "N",
+  "europepmc_license": null,
+  "checked_utc": "2026-11-10T04:48Z"
+ },
+ "supplementary": [
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM1_ESM.pdf",
+   "file": "41557_2024_1557_MOESM1_ESM.pdf",
+   "bytes": 5748191,
+   "sha256": "562bce4401238606883ac29801dc11f58b5da70f941f49a656af9f0ffd0ea5dc"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM2_ESM.pdf",
+   "file": "41557_2024_1557_MOESM2_ESM.pdf",
+   "bytes": 55091,
+   "sha256": "9ff7580b9d5f6a06fa09362e0c5f916f76edf57280f674a23cec7da51b18d156"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM3_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM3_ESM.xlsx",
+   "bytes": 25962,
+   "sha256": "aedc67e910628062e2ad17f26d4da953a4ea2b49f0f6e46169c00d6a850fb098"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM4_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM4_ESM.xlsx",
+   "bytes": 18750,
+   "sha256": "6da42342fd2936f2634964e0ad99637a0678779d18486fce11db37be04f6c878"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM5_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM5_ESM.xlsx",
+   "bytes": 12214,
+   "sha256": "cd8f70367decca73da368c7c38de897a5422418c813a0a346a79d16fa43974ad"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM6_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM6_ESM.xlsx",
+   "bytes": 13772,
+   "sha256": "dfa8018bb4bc0a873f6d82fea77b4d840dc024569f902d6bdc571c2fe3e7f248"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM7_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM7_ESM.xlsx",
+   "bytes": 11578,
+   "sha256": "9083e1a94f502ef754f5d122523bc627ffafe6a2d78b31adf9b9e16aae806082"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM8_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM8_ESM.xlsx",
+   "bytes": 13925,
+   "sha256": "7261f2892a612c793eae1d0d5c8b7afd2752790b8e073f21a048a9a5b07a272b"
+  }
+ ],
+ "figures": [
+  {
+   "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_Fig1_HTML.png",
+   "file": "nature_fig1_full.png",
+   "bytes": 515393,
+   "sha256": "996380d85164e611c93dd79dca9db064e7f548fa7bad2205117b6c144a6440e5",
+   "retrieved_utc": "2026-11-10T04:52Z",
+   "why": "Fig. 1a is the ONLY place the 25 amines and 4 acrylates are drawn. No machine-readable structure file exists among the publisher assets and the SI has no vector chemistry."
+  },
+  {
+   "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_Fig2_HTML.png",
+   "file": "nature_fig2_full.png",
+   "bytes": 375851,
+   "sha256": "b52214f0f186e2b9cf16a6e7470dc448e7a784a2033843595451c6f57829d88f",
+   "retrieved_utc": "2026-11-10T04:52Z",
+   "why": "Fig. 2b/2c/2d/2f carry printed marginal statistics that the Source Data values must reproduce. Used to VERIFY, never to extract."
+  }
+ ],
+ "source_dir_sha256": {
+  "41557_2024_1557_MOESM1_ESM.pdf": "562bce4401238606883ac29801dc11f58b5da70f941f49a656af9f0ffd0ea5dc",
+  "41557_2024_1557_MOESM2_ESM.pdf": "9ff7580b9d5f6a06fa09362e0c5f916f76edf57280f674a23cec7da51b18d156",
+  "41557_2024_1557_MOESM3_ESM.xlsx": "aedc67e910628062e2ad17f26d4da953a4ea2b49f0f6e46169c00d6a850fb098",
+  "41557_2024_1557_MOESM4_ESM.xlsx": "6da42342fd2936f2634964e0ad99637a0678779d18486fce11db37be04f6c878",
+  "41557_2024_1557_MOESM5_ESM.xlsx": "cd8f70367decca73da368c7c38de897a5422418c813a0a346a79d16fa43974ad",
+  "41557_2024_1557_MOESM6_ESM.xlsx": "dfa8018bb4bc0a873f6d82fea77b4d840dc024569f902d6bdc571c2fe3e7f248",
+  "41557_2024_1557_MOESM7_ESM.xlsx": "9083e1a94f502ef754f5d122523bc627ffafe6a2d78b31adf9b9e16aae806082",
+  "41557_2024_1557_MOESM8_ESM.xlsx": "7261f2892a612c793eae1d0d5c8b7afd2752790b8e073f21a048a9a5b07a272b",
+  "nature_fig1_full.png": "996380d85164e611c93dd79dca9db064e7f548fa7bad2205117b6c144a6440e5",
+  "nature_fig2_full.png": "b52214f0f186e2b9cf16a6e7470dc448e7a784a2033843595451c6f57829d88f"
+ }
+}

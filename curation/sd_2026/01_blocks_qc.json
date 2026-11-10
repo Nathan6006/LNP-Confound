@@ -1,0 +1,248 @@
+{
+ "_what": "Stage 01: Ugi building blocks of the 384-member SD_2026 library, from Supplementary Fig. 1 and Supplementary Table 5.",
+ "chain_trace_method": "raster (curation/lib/chains.raster_chain_length); the SI page carries one flattened image and no stroked vector paths, so chains.vector_bonds is unavailable and the two-method contract cannot be satisfied by geometry alone -- the second, independent method is the molecular-formula arithmetic in stage03 against the ten formulas the SI prints.",
+ "chain_trace": {
+  "Ta1": {
+   "vertices": 14,
+   "eps_sweep": {
+    "0.8": 14,
+    "1.0": 14,
+    "1.2": 14,
+    "1.5": 14,
+    "1.8": 14,
+    "2.0": 14,
+    "2.5": 14,
+    "3.0": 14
+   },
+   "path_points": 193,
+   "x_first": 22.0,
+   "x_last": 214.0,
+   "px_per_bond": 14.769
+  },
+  "Ta2": {
+   "vertices": 16,
+   "eps_sweep": {
+    "0.8": 16,
+    "1.0": 16,
+    "1.2": 16,
+    "1.5": 16,
+    "1.8": 16,
+    "2.0": 16,
+    "2.5": 16,
+    "3.0": 16
+   },
+   "path_points": 222,
+   "x_first": 22.0,
+   "x_last": 243.0,
+   "px_per_bond": 14.733
+  },
+  "Ta3": {
+   "vertices": 18,
+   "eps_sweep": {
+    "0.8": 18,
+    "1.0": 18,
+    "1.2": 18,
+    "1.5": 18,
+    "1.8": 18,
+    "2.0": 18,
+    "2.5": 18,
+    "3.0": 18
+   },
+   "path_points": 252,
+   "x_first": 22.0,
+   "x_last": 273.0,
+   "px_per_bond": 14.765
+  },
+  "Tb2": {
+   "vertices": 18,
+   "eps_sweep": {
+    "0.8": 18,
+    "1.0": 18,
+    "1.2": 18,
+    "1.5": 18,
+    "1.8": 18,
+    "2.0": 18,
+    "2.5": 18,
+    "3.0": 18
+   },
+   "path_points": 248,
+   "x_first": 57.0,
+   "x_last": 304.0,
+   "px_per_bond": 14.529
+  },
+  "Tb1_hexyl": {
+   "vertices": 8,
+   "eps_sweep": {
+    "0.8": 8,
+    "1.0": 8,
+    "1.2": 8,
+    "1.5": 8,
+    "1.8": 8,
+    "2.0": 8,
+    "2.5": 8,
+    "3.0": 8
+   },
+   "path_points": 93,
+   "x_first": 57.0,
+   "x_last": 149.0,
+   "px_per_bond": 13.143
+  },
+  "Ta4": {
+   "vertices": 18,
+   "eps_sweep": {
+    "0.8": 9,
+    "1.0": 9,
+    "1.2": 9,
+    "1.5": 9,
+    "1.8": 9,
+    "2.0": 9,
+    "2.5": 9,
+    "3.0": 9
+   },
+   "path_points": 238,
+   "x_first": 22.0,
+   "x_last": 275.0,
+   "px_per_bond": 14.75,
+   "double_bond_columns": [
+    142,
+    157
+   ],
+   "carbons_methyl_side_of_C=C": 9,
+   "carbons_acid_side_of_C=C": 9,
+   "delta_position_from_carboxyl": 9,
+   "segments": {
+    "methyl_side": {
+     "vertices": 9,
+     "eps_sweep": {
+      "0.8": 9,
+      "1.0": 9,
+      "1.2": 9,
+      "1.5": 9,
+      "1.8": 9,
+      "2.0": 9,
+      "2.5": 9,
+      "3.0": 9
+     },
+     "path_points": 120,
+     "x_first": 22.0,
+     "x_last": 141.0,
+     "px_per_bond": 14.875
+    },
+    "acid_side": {
+     "vertices": 9,
+     "eps_sweep": {
+      "0.8": 9,
+      "1.0": 9,
+      "1.2": 9,
+      "1.5": 9,
+      "1.8": 9,
+      "2.0": 9,
+      "2.5": 9,
+      "3.0": 9
+     },
+     "path_points": 118,
+     "x_first": 158.0,
+     "x_last": 275.0,
+     "px_per_bond": 14.625
+    }
+   }
+  }
+ },
+ "table5_mw_check": {
+  "H4": {
+   "table5": 128.22,
+   "from_smiles": 128.22,
+   "delta": -0.001
+  },
+  "L4": {
+   "table5": 86.13,
+   "from_smiles": 86.13,
+   "delta": 0.004
+  },
+  "Ta1": {
+   "table5": 228.37,
+   "from_smiles": 228.38,
+   "delta": 0.006
+  },
+  "Tb1": {
+   "table5": 379.63,
+   "from_smiles": 379.63,
+   "delta": -0.001
+  },
+  "6-aminohexan-1-ol": {
+   "table5": 117.19,
+   "from_smiles": 117.19,
+   "delta": 0.002
+  },
+  "2-hexylundecanoic acid": {
+   "table5": 270.45,
+   "from_smiles": 270.46,
+   "delta": 0.007
+  },
+  "6-aminohexyl 2-hexylundecanoate": {
+   "table5": 369.61,
+   "from_smiles": 369.63,
+   "delta": 0.024
+  }
+ },
+ "name_token_checks": [
+  {
+   "label": "Ta1",
+   "name_token_length": 1,
+   "measured_length": 14,
+   "matches": false,
+   "note": "Name token does not equal the measured chain length. This is NOT automatically an error -- it is how KS_2024's C24 (two C4 tails) and KZ_2016's SC1/SC2/SC3 (isobutyl/isopentyl/neopentyl) are written. Decide from the paper which the token means and record it in DECISIONS.md."
+  },
+  {
+   "label": "Ta2",
+   "name_token_length": 2,
+   "measured_length": 16,
+   "matches": false,
+   "note": "Name token does not equal the measured chain length. This is NOT automatically an error -- it is how KS_2024's C24 (two C4 tails) and KZ_2016's SC1/SC2/SC3 (isobutyl/isopentyl/neopentyl) are written. Decide from the paper which the token means and record it in DECISIONS.md."
+  },
+  {
+   "label": "Ta3",
+   "name_token_length": 3,
+   "measured_length": 18,
+   "matches": false,
+   "note": "Name token does not equal the measured chain length. This is NOT automatically an error -- it is how KS_2024's C24 (two C4 tails) and KZ_2016's SC1/SC2/SC3 (isobutyl/isopentyl/neopentyl) are written. Decide from the paper which the token means and record it in DECISIONS.md."
+  },
+  {
+   "label": "Ta4",
+   "name_token_length": 4,
+   "measured_length": 18,
+   "matches": false,
+   "note": "Name token does not equal the measured chain length. This is NOT automatically an error -- it is how KS_2024's C24 (two C4 tails) and KZ_2016's SC1/SC2/SC3 (isobutyl/isopentyl/neopentyl) are written. Decide from the paper which the token means and record it in DECISIONS.md."
+  },
+  {
+   "label": "Tb2",
+   "name_token_length": 2,
+   "measured_length": 17,
+   "matches": false,
+   "note": "Name token does not equal the measured chain length. This is NOT automatically an error -- it is how KS_2024's C24 (two C4 tails) and KZ_2016's SC1/SC2/SC3 (isobutyl/isopentyl/neopentyl) are written. Decide from the paper which the token means and record it in DECISIONS.md."
+  }
+ ],
+ "ta4_double_bond": {
+  "double_bond_columns": [
+   142,
+   157
+  ],
+  "carbons_acid_side": 9,
+  "carbons_methyl_side": 9,
+  "delta_from_carboxyl_measured": 9,
+  "delta_from_carboxyl_in_our_smiles": 9,
+  "geometry": "Z (cis): both chain substituents leave the horizontal C=C upward, which is read off the band directly -- the chain descends into the left olefinic vertex and ascends out of the right one.",
+  "note": "cis/trans is NOT visible to mass or formula. It is read from the drawing and nowhere else, which is why it is stated here rather than left implicit in the SMILES."
+ },
+ "tb2_label_offset": {
+  "tb1_hexyl_vertices": 8,
+  "tb1_hexyl_carbons_from_table5": 6,
+  "label_end_cost_vertices": 1,
+  "tb2_traced_vertices": 18,
+  "tb2_carbons": 17,
+  "ta_mean_px_per_bond": 14.756,
+  "label_inset_px": 5.645,
+  "tb2_implied_px_per_bond": 14.861,
+  "why": "Tb2's trace starts at the drawn 'CN' label and ends at a free terminal methyl, so exactly one of its endpoints is a phantom. The size of that phantom is measured on Tb1's hexyl, whose length Supplementary Table 5 fixes externally, and the result is then checked a second way against the bond pitch."
+ }
+}

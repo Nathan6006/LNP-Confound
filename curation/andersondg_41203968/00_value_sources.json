@@ -1,0 +1,121 @@
+{
+ "_what": "The intake gate. One entry per panel or table that could supply a VALUE, with the tier it was taken from. Filled BEFORE any digitiser was written; no digitiser was written, because every value in this curation is tier 1.",
+ "_tiers": ["1_publisher_source_data", "2_si_tables", "3_author_repository", "4_pdf_text_table", "5_pixels"],
+ "_paper": {
+  "pmid": "41203968",
+  "doi": "10.1038/s41565-025-02044-6",
+  "title": "Degradable cyclic amino alcohol ionizable lipids as vectors for potent influenza mRNA vaccines",
+  "journal": "Nature Nanotechnology 2025",
+  "source_data_statement": "Data availability: 'Source data are available for the Figures 1-5 and the Extended Figures 1-5 in the manuscript.' Twelve supplementary files were downloaded (00_acquisition_raw.json); MOESM3-MOESM12 are the ten Source Data workbooks, one per figure.",
+  "full_text": "The article PDF was NOT among the downloaded assets. The NIH author manuscript is open in PubMed Central as PMC13387048 and its JATS XML carries the full text and every figure legend, which is where the dosing, the cell line, the route and the timepoints below come from. The author manuscript letters its Figure 1 panels c,d,e where the published Source Data workbook letters the same three panels d,e,f; see 08_contradictions.csv."
+ },
+ "_screen_triage": {
+  "tool": "find_screens.py was run over all ten workbooks first, as instructed, because cell count is not library size.",
+  "result": "It flagged NO sheet as a screen: no sheet has 15 or more distinct compound-like labels in one column. That is correct here and it is the shape of the data, not a failure. The 100-member library sits in Extended Figure 1 as a 10 x 10 MATRIX -- rows labelled G1..G10, column groups labelled Am1..Am10 -- so the compound names are not in any single column and exist only as the product of a row label and a column label. Every other sheet is a handful of named lipids, a time course, a pH titration, a cytokine panel or a flow-cytometry readout.",
+  "time_series_sheets_excluded": ["Figure 2e (lipid PK, 'Time (hrs)' x-axis)", "Figure 5b (TNS pKa titration, pH x-axis)", "Extended Figure 3a (hEPO dose response)"]
+ },
+ "panels": [
+  {
+   "panel": "Extended Figure 1",
+   "supplies": "the whole 100-member library, one value per lipid",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM8_ESM.xlsx",
+   "sheet": "Extended Figure 1",
+   "cells": "B14:AE23 (rows G1..G10 x ten Am column-groups of RFU/Stdev/n)",
+   "model": "in_vitro",
+   "system": "C2C12 myoblast cells",
+   "readout": "firefly luciferase, RLU",
+   "dose": "40 ng mRNA per well",
+   "timepoint": "24 h",
+   "n": "3 wells, stated per cell in the sheet's own 'n' column",
+   "note": "The sheet carries the authors' own mean and standard deviation, so no bar is measured and no axis is calibrated. This is the only panel that covers the library."
+  },
+  {
+   "panel": "Figure 1f (screen 3)",
+   "supplies": "six individually formulated lipids, Am8-Am10 x G4, G5",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM3_ESM.xlsx",
+   "sheet": "Figure 1",
+   "cells": "C27:H29",
+   "model": "in_vivo",
+   "system": "mouse, IM injection, whole-body IVIS",
+   "readout": "firefly luciferase, total flux [p/s]",
+   "dose": "1 ug mRNA",
+   "timepoint": "24 h"
+  },
+  {
+   "panel": "Figure 1d (screen 1) and Figure 1e (screen 2)",
+   "supplies": "NOTHING -- deliberately not emitted",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM3_ESM.xlsx",
+   "sheet": "Figure 1",
+   "cells": "B3:K5 and C15:K17",
+   "note": "These are BATCH screens. 'each AMG lipid was individually formulated into LNPs with FLuc mRNA and pooled into 10 different batches based on the structure of their tail groups' (screen 1), then into nine batches of three-to-four headgroups (screen 2). A bar is a pool, so no bar belongs to a lipid. Treating a 10-column sheet as ten lipids would have invented 10 and then 9 measurements."
+  },
+  {
+   "panel": "Figure 2a",
+   "supplies": "six 2nd-generation tails on the Am10 headgroup",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM4_ESM.xlsx",
+   "sheet": "Figure 2",
+   "cells": "B2:G4",
+   "model": "in_vivo", "system": "mouse, IM, IVIS",
+   "readout": "firefly luciferase, total flux [p/s]",
+   "dose": "5 ug mRNA", "timepoint": "24 h"
+  },
+  {
+   "panel": "Figure 2b",
+   "supplies": "eleven 3rd-generation headgroups, all carrying G41",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM4_ESM.xlsx",
+   "sheet": "Figure 2",
+   "cells": "B8:L12",
+   "model": "in_vivo", "system": "mouse, IM, IVIS",
+   "readout": "firefly luciferase, total flux [p/s]",
+   "dose": "1 ug mRNA", "timepoint": "6 h"
+  },
+  {
+   "panel": "Figure 2c",
+   "supplies": "three library lipids plus two benchmarks (SM-102, cKK-E12)",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM4_ESM.xlsx",
+   "sheet": "Figure 2",
+   "cells": "B15:F21",
+   "model": "in_vivo", "system": "mouse, IM, IVIS",
+   "readout": "firefly luciferase, total flux [p/s]",
+   "dose": "1 ug mRNA", "timepoint": "6 h",
+   "note": "The two benchmarks are not library members and are not emitted as such."
+  },
+  {
+   "panel": "Extended Figure 2b",
+   "supplies": "ten 4th-generation tails on the Am15 headgroup",
+   "tier": "1_publisher_source_data",
+   "file": "41565_2025_2044_MOESM9_ESM.xlsx",
+   "sheet": "Extended Figure 2",
+   "cells": "A2:J6",
+   "model": "in_vivo", "system": "mouse, IM, IVIS",
+   "readout": "firefly luciferase, total flux [p/s]",
+   "dose": "0.1 ug mRNA", "timepoint": "6 h"
+  },
+  {
+   "panel": "Figure 2f, Figure 5c, Figure 5e, Figure 5f, Extended Figure 5a-d",
+   "supplies": "used only to RECOMPUTE printed statistics (07_qc.json P6a-P6e), not to emit rows",
+   "tier": "1_publisher_source_data",
+   "file": "MOESM4, MOESM7, MOESM12",
+   "note": "Figure 2f's two columns are unlabelled in the Source Data; the printed 8.3-fold identifies them. Figure 5c is a derived fold-change relative to AMG104 plus an apparent pKa, neither of which is a delivery endpoint on the corpus's scale."
+  },
+  {
+   "panel": "Figures 3 and 4, Extended Figures 3 and 4",
+   "supplies": "nothing",
+   "tier": "1_publisher_source_data",
+   "note": "Immunogenicity, flow cytometry, cytokines, germinal-centre counts, hEPO dose response. Two lipids and a buffer control, no library, and none of these is an mRNA-delivery readout comparable with the corpus."
+  }
+ ],
+ "_pixels": {
+  "panels_read_from_pixels": 0,
+  "why_none": "Every panel that supplies a per-lipid value is published as Source Data at tier 1, so tiers 2-5 were never reached. The SI figures were rendered and looked at only to resolve STRUCTURE, never to read a value."
+ },
+ "_structures": {
+  "tier": "not a value tier, but recorded for symmetry: the structures come from the SI PDF's own VECTOR drawing coordinates (bond polygons and heteroatom label boxes), not from a raster trace and not from an OCR of a name. See chemdraw_vector.py."
+ }
+}

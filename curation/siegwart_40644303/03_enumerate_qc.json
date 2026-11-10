@@ -1,0 +1,14 @@
+{
+ "_what": "Every library member, built bond by bond with curation/lib/assemble.attach.",
+ "n_total": 489,
+ "n_vitro_screen": 465,
+ "abstract_claims": 465,
+ "reconciliation": "15 amine cores x 31 thiol tails = 465, and the figure's own row and column labels are exactly those 15 and those 31. The abstract's 465 is reproduced exactly, with no residual.",
+ "n_new_invivo_variants": 24,
+ "invivo_total_42": "7 cores x 6 tails = 42, matching the paper's '42 lipids in total, including the parent lipids'. 18 of the 42 (3A4, 4A3 and 5A4 x SC5-SC10) are already members of the 465, so only 24 structures are new.",
+ "n_unique_smiles": 489,
+ "duplicate_structures": {},
+ "n_positional_ambiguity": 130,
+ "arm_fragment": "[CH3:1]CC(=O)OCCOC(=O)C(C)[CH3:2]",
+ "bonds_formed": 2594
+}

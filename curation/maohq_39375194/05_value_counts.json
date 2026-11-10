@@ -1,0 +1,56 @@
+{
+ "values_rows_total": 10368,
+ "admissible_yes": 5112,
+ "admissible_no": 5256,
+ "yes_plus_no_equals_total": true,
+ "emitted_rows_total": 5112,
+ "emitted_equals_admissible": true,
+ "breakdown": {
+  "training_RLU_cells": 6480,
+  "training_RLU_blank_never_run": 720,
+  "training_RLU_HepG2_duplicate_of_YZ_2022": 1080,
+  "training_RLU_emitted": 4680,
+  "training_physicochemical": 3240,
+  "validation_RLU_cells": 432,
+  "validation_RLU_blank_never_run": 0,
+  "validation_RLU_emitted": 432,
+  "validation_physicochemical": 216
+ },
+ "per_experiment": {
+  "LC_2024": {
+   "library": "training_1080",
+   "source_file": "1080_LNP_OHE.csv",
+   "rows": 4680,
+   "cells": [
+    "ARPE-19",
+    "B16F10",
+    "HEK293T",
+    "Neuro2a",
+    "PC3"
+   ],
+   "ln_mean": 4.341323,
+   "ln_pop_sd": 2.750764,
+   "z_mean": -0.0,
+   "z_pop_sd": 1.0,
+   "caveat_rows": 1800
+  },
+  "LC_2024_2": {
+   "library": "validation_72",
+   "source_file": "Compiled_validation.xlsx",
+   "rows": 432,
+   "cells": [
+    "ARPE-19",
+    "B16F10",
+    "HEK293T",
+    "HepG2",
+    "Neuro2a",
+    "PC3"
+   ],
+   "ln_mean": 5.546311,
+   "ln_pop_sd": 2.451561,
+   "z_mean": 0.0,
+   "z_pop_sd": 1.0,
+   "caveat_rows": 144
+  }
+ }
+}

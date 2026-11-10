@@ -1,0 +1,12 @@
+{
+ "library_size_STATED_by_the_paper": 288,
+ "stated_where": "SI p.7 Scheme S2 and its caption: 'There are 16 series, each series contains 18 lipidoids and in total 288 lipidoids are present in the library.' 4 thiolactones x 4 disulfides = 16; 16 x 18 = 288.",
+ "label_grid_ENUMERATED_here": 288,
+ "arithmetic_matches_the_claim": true,
+ "structures_DETERMINED": 32,
+ "structures_not_determined": 256,
+ "why": "4 x 4 = 16 backbone combinations are fully determined, but only 2 of the 18 amines are. 16 x 2 = 32.",
+ "unique_canonical_SMILES": 32,
+ "duplicate_structures": 0,
+ "block_HRMS_worst_abs_delta_mDa": 0.77
+}

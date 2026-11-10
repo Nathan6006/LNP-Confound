@@ -1,0 +1,92 @@
+{
+ "_what": "THE INTAKE GATE (PIPELINE_V2 section 3, stage 00b). Filled 2026-11-10, BEFORE any digitiser was written. One entry per panel or table that supplies a value.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "Anything recorded as 5_pixels must say WHY tiers 1-4 failed, in a sentence a reviewer can check. 'Not available' is not such a sentence.",
+
+ "tier_1_to_4_search": {
+  "publisher_source_data": "Advanced Healthcare Materials published no Source Data file for this article. The article's only supplementary item is adhm202400225-sup-0001-suppmat.docx (one file; the Wiley supplement index names no second item, and the PMC record lists exactly one <supplementary-material>, NIHMS2006250-supplement-1.pdf, which is the same document).",
+  "si_tables": "The .docx WAS opened and fully enumerated: it unzips to 375 <w:p> paragraphs and FOUR embedded images (word/media/image1.tiff, image2.png, image3.jpeg, image4.jpeg). Its live Word tables are Table S1 (29 amine heads: code, name, source), Table S2 (20 acrylate tails: code, name, source) and Table S3 (flow-cytometry antibody panels). The three images are Figures S1, S2 and S3. THERE IS NO TABLE OF PER-LIPIDOID VALUES ANYWHERE IN THE SI -- not as text, not as an image.",
+  "author_repository": "None. The JATS full text has no data-availability section and no Zenodo/Dryad/figshare/GitHub/Mendeley accession. Searched for all of those terms plus 'deposit', 'accession', 'repository'; the only hit is 'Supporting Information is available from the Wiley Online Library or from the author.' This is a DARPA-funded paper and the funding statement carries no data-deposit condition. See 00_acquisition.json:data_availability_statement.",
+  "pdf_text_table": "There is no values table in the PDF to extract. The figures in the PMC author-manuscript deposit are flattened 300 dpi JPEGs with no text layer at all, so pdfplumber has nothing to read even for the axis labels."
+ },
+
+ "_the_decisive_finding": "'Figure S2. Raw GFP transfection efficacy data' is named in the SI and is NOT the library screen. Its own caption says it is the pre-normalisation flow-cytometry data for 514O6,10 LNPs formulated three ways (16PE / 40PE / 40TAP) -- ONE lipidoid, three formulations, by cell type. The per-lipidoid values of the 580-member library live only in main-article Figure 2, and the main-article figures were not in source/ at all until they were fetched (00_acquisition.json).",
+
+ "panels": [
+  {
+   "panel": "Figure 2B",
+   "supplies": "Total luminescent flux (p/s) in vivo, 3 h after IV injection of 0.75 mg/kg mLuc LNP, summed over six organs. 49 named lipidoids plus two controls (Untreated, Naked mLuc).",
+   "is_this_a_delivery_endpoint": "YES. This is the only corpus-eligible value in the paper that is resolved per lipidoid.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "The publisher released no Source Data; the sole SI file is a .docx whose every live table is Table S1 (heads), Table S2 (tails) or Table S3 (antibody panels), none of which carries a measurement; there is no author repository or accession anywhere in the JATS text; and the figure is a flattened raster with no text layer, so no text-table route exists. Each of those four statements is checkable against the artifacts in source/.",
+   "geometry": "log10 y axis, decade ticks 1e5..1e10, vertical bars, one colour, symmetric error whiskers drawn on top of the bars. Bars are read with curation/lib bars.bar_top (full-width coverage + left/right flank agreement), the axis with curation/lib axis.calibrate on detected tick positions only.",
+   "emitted": "yes -- 05_values.csv"
+  },
+  {
+   "panel": "Figure 2A",
+   "supplies": "TNS fluorescence at pH 5 (AU) for all 580 library members. 29 rows x 20 columns, continuous white->blue colormap with a colorbar labelled 10,000 / 20,000 / 30,000. N=12, average shown.",
+   "is_this_a_delivery_endpoint": "NO. TNS fluorescence is an LNP SURFACE-IONIZATION measurement -- the same class as diameter, zeta potential and uptake, which the corpus's in-vivo definition explicitly excludes (CLAUDE.md changelog 2026-07-23: 'same delivery-only definition, excl. diameter/zeta/uptake'). It is a physicochemical property of the formulation, not a delivery outcome, so it is NOT emitted as Experiment_value. Queued as DECISIONS.md D-3.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "Same four statements as Figure 2B: no Source Data file exists, the .docx contains no values table, no repository is named anywhere in the JATS text, and the figure is a flattened raster.",
+   "geometry": "CONTINUOUS colormap, which CLAUDE.md section 5 ranks BELOW a discrete-binned heatmap: there is no swatch set to nearest-neighbour against, so the lookup table has to be sampled off the colorbar itself and inverted. That is strictly weaker evidence than a discrete legend and is recorded as such.",
+   "emitted": "no -- extracted to 06_tns.csv for the cross-checks only, never into 05_values.csv"
+  },
+  {
+   "panel": "Figure 2C (top)",
+   "supplies": "49 unlabelled points, (TNS fluorescence at pH 5, AU) x (luminescence in vivo, p/s).",
+   "is_this_a_delivery_endpoint": "the y axis is, but the points carry no lipidoid identity.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "as above.",
+   "use": "VERIFICATION ONLY, and this is the strongest check available in the paper. The point SET must equal the set of (Fig 2A TNS, Fig 2B flux) pairs for the 49 selected lipidoids. That comparison needs no attribution, is external to both digitisers, and would catch a uniform scale error in either. See 07_qc.json:P4.",
+   "emitted": "no"
+  },
+  {
+   "panel": "Figure 2C (bottom)",
+   "supplies": "unlabelled points, (luminescence in vitro in HeLa, RLU) x (luminescence in vivo, p/s). The in-vitro HeLa assay is described in Methods (15,000 cells/well, BrightGlo, N=4).",
+   "is_this_a_delivery_endpoint": "YES in kind -- it is the corpus's luminescence endpoint in HeLa -- but the points are UNLABELLED, so no in-vitro value can be attributed to a lipidoid.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "as above.",
+   "use": "NOT emitted. Attribution would have to run through the shared y axis (in-vivo flux) back to the Fig 2B bars, and on a log axis with 49 points spanning ~4 decades the bars are too densely packed near 1e7 for that map to be injective. Guessing an identity here is exactly the AC_2025 failure -- a confident, internally consistent assignment of measured values to the wrong molecules. Queued as DECISIONS.md D-4.",
+   "emitted": "no"
+  },
+  {
+   "panel": "Figure 3A",
+   "supplies": "liver / lung / spleen luminescent flux, STACKED, same 49 lipidoids in the same left-to-right order as Figure 2B.",
+   "is_this_a_delivery_endpoint": "YES, per organ.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "as above.",
+   "use": "NOT emitted as three per-organ values. A stacked bar on a LOG axis does not decompose: the drawn height of a segment is log(cumulative) - log(cumulative below it), so each segment's value depends on every segment beneath it and a 1 px error in the bottom segment propagates multiplicatively into the top one. The panel IS used two ways that do not require decomposition: (a) its total height must equal the Figure 2B bar for the same lipidoid, an independent redraw of the same number by the same authors (07_qc.json:P5); (b) its x-axis label order is transcribed independently of Figure 2B's and the two must agree (07_qc.json:P2).",
+   "emitted": "no"
+  },
+  {
+   "panel": "Figure 3B, 3C (six pie charts)",
+   "supplies": "organ fractions for 306Oi10, 402O8,12, 500O6,10, 514O6,10, 503Oi10, 503O8,12.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "as above.",
+   "use": "verification only -- the text prints '514O6,10 produced 35% of the signal in the lung and spleen each, with only 30% in the liver', which is a printed statistic the pie must reproduce (07_qc.json:P6).",
+   "emitted": "no"
+  },
+  {
+   "panel": "Figure 4, Figure 5, Figure S1, Figure S2, Figure S3",
+   "supplies": "Figures 4 and 5 and S2 are the 514O6,10 helper-lipid series -- ONE lipidoid, three formulations. Figure S1 is entrapment / diameter / zeta for a subset. Figure S3 is a gating strategy.",
+   "tier": "5_pixels",
+   "why_tiers_1_to_4_failed": "as above.",
+   "use": "NOT emitted. Figure S1 is characterization, not delivery. Figures 4/5/S2 hold no chemistry variation at all -- one ionizable lipid, so they contribute nothing to a cross-laboratory chemistry corpus and would enter as three formulation rows on a single molecule.",
+   "emitted": "no"
+  }
+ ],
+
+ "summary": {
+  "library_members_enumerated": 580,
+  "members_with_ANY_measured_delivery_value": 49,
+  "members_with_only_a_physicochemical_value": 531,
+  "rows_emittable_into_the_corpus": 49,
+  "value_tier_used": "5_pixels, for every value in this folder, with tiers 1-4 exhausted as recorded above"
+ }
+}

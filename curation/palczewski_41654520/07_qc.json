@@ -1,0 +1,1620 @@
+{
+ "paper": "Zhang et al., Nat Commun 2026, PMID 41654520, PMC12992809",
+ "value_tier": "1_publisher_source_data for every emitted value; 4_pdfplumber_text (SI IUPAC names + HRMS) for every structure. No panel was digitised.",
+ "cargo": "Cre recombinase protein (Fig 2) and ABE8e RNP (Fig 4). NOT mRNA -- there is no mRNA in this paper.",
+ "library": {
+  "named_delivery_agents": 34,
+  "breakdown": "CBB1-CBB22 (22, of which CBB22 is commercial CBB G-250 and CBB21 is the un-acylated bis-amine core) + CBBox11 + CBBZ0 + CBBZ1-CBBZ10",
+  "compounds_with_one_definite_structure": 31,
+  "compounds_with_competing_candidates": [
+   "CBB18",
+   "CBB19"
+  ],
+  "compounds_with_no_structure": [
+   "CBBox11"
+  ],
+  "enumeration_rows": 36,
+  "structures_withheld": [
+   "CBBox11 (hydroxylation site undetermined; DECISIONS.md D-2)",
+   "CBB18 and CBB19 (CPP5 sequence contested; two candidates each are in 03_enumerated.csv; DECISIONS.md D-1)"
+  ],
+  "no_stated_library_size": "The paper states no library size and runs no Markush enumeration: every member is named, purified and individually characterised, so there is no block product to reconcile against.",
+  "enumerated_vs_stated": "34 named compounds enumerated; 34 named in the SI. Panels carry values for 22 + 12 + 22 + 8 compound-slots over four assay blocks."
+ },
+ "P1_hrms_formula_and_mz": {
+  "n_with_hrms": 33,
+  "A_formula_exact": 31,
+  "B_si_formula_matches_si_mz": 30,
+  "C_our_formula_matches_si_mz": 32,
+  "disagreements": [
+   {
+    "compound": "CBB7",
+    "A": "exact",
+    "B": "-0.3345",
+    "C": "-0.3345"
+   },
+   {
+    "compound": "CBB12",
+    "A": "MISMATCH {\"H\": [128, 130]}",
+    "B": "2.0156",
+    "C": "-0.0"
+   },
+   {
+    "compound": "CBB17",
+    "A": "MISMATCH {\"S\": [2, 3]}",
+    "B": "31.972",
+    "C": "-0.0001"
+   }
+  ]
+ },
+ "P2_molar_mass_from_the_authors_own_weighings": {
+  "n_weighings": 33,
+  "n_inside_printed_interval": 33,
+  "worst_rel_error": 0.25807,
+  "salt_delta_is_Na_minus_H": 21.9818,
+  "cbb22_free_acid_MW": 832.06,
+  "cbb22_sodium_salt_MW": 854.04,
+  "cbb22_si_weighing_MW": 854.0,
+  "salt_form_note": "The SI weighs 854 mg as 1.0 mmol. Our free acid is 832.06, and 854.04 is that plus exactly Na-for-H. The salt form is therefore read off the authors' own weighing, not assumed, and no tolerance was widened.",
+  "detail": [
+   {
+    "kind": "compound",
+    "name": "CBB22",
+    "weighed_form": "mono_sodium_salt",
+    "printed_mg": "854",
+    "printed_amount": "1.0 mmol",
+    "implied_MW_interval": [
+     812.86,
+     899.47
+    ],
+    "our_emitted_MW": 832.06,
+    "our_weighed_form_MW": 854.04,
+    "rel_error": 0.00248,
+    "ok": true,
+    "where": "SI p18, 'commercial brilliant G250 (854 mg, 1.0 mmol)'"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB22",
+    "weighed_form": "mono_sodium_salt",
+    "printed_mg": "200.0",
+    "printed_amount": "0.23 mmol",
+    "implied_MW_interval": [
+     850.85,
+     889.11
+    ],
+    "our_emitted_MW": 832.06,
+    "our_weighed_form_MW": 854.04,
+    "rel_error": 0.01832,
+    "ok": true,
+    "where": "SI p28, CBB15/16 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB21",
+    "weighed_form": "free_acid",
+    "printed_mg": "200.0",
+    "printed_amount": "0.184 mmol",
+    "implied_MW_interval": [
+     1083.74,
+     1090.19
+    ],
+    "our_emitted_MW": 1086.53,
+    "our_weighed_form_MW": 1086.53,
+    "rel_error": 0.0004,
+    "ok": true,
+    "where": "SI p19, CBB1 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB21",
+    "weighed_form": "free_acid",
+    "printed_mg": "100.0",
+    "printed_amount": "0.092 mmol",
+    "implied_MW_interval": [
+     1080.54,
+     1093.44
+    ],
+    "our_emitted_MW": 1086.53,
+    "our_weighed_form_MW": 1086.53,
+    "rel_error": 0.00043,
+    "ok": true,
+    "where": "SI p22, CBB6 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB21",
+    "weighed_form": "free_acid",
+    "printed_mg": "30.0",
+    "printed_amount": "27.6 umol",
+    "implied_MW_interval": [
+     1083.18,
+     1090.74
+    ],
+    "our_emitted_MW": 1086.53,
+    "our_weighed_form_MW": 1086.53,
+    "rel_error": 0.0004,
+    "ok": true,
+    "where": "SI p26, CBB12 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB21",
+    "weighed_form": "free_acid",
+    "printed_mg": "100.0",
+    "printed_amount": "92 umol",
+    "implied_MW_interval": [
+     1080.54,
+     1093.44
+    ],
+    "our_emitted_MW": 1086.53,
+    "our_weighed_form_MW": 1086.53,
+    "rel_error": 0.00043,
+    "ok": true,
+    "where": "SI p27, CBB13 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB21",
+    "weighed_form": "free_acid",
+    "printed_mg": "40.0",
+    "printed_amount": "36.9 umol",
+    "implied_MW_interval": [
+     1081.19,
+     1086.84
+    ],
+    "our_emitted_MW": 1086.53,
+    "our_weighed_form_MW": 1086.53,
+    "rel_error": 0.00232,
+    "ok": true,
+    "where": "SI p30, CBB20 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB21",
+    "weighed_form": "free_acid",
+    "printed_mg": "20.0",
+    "printed_amount": "18.4 umol",
+    "implied_MW_interval": [
+     1081.3,
+     1092.64
+    ],
+    "our_emitted_MW": 1086.53,
+    "our_weighed_form_MW": 1086.53,
+    "rel_error": 0.00041,
+    "ok": true,
+    "where": "SI p24, CBB10 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB1",
+    "weighed_form": "free_acid",
+    "printed_mg": "20.0",
+    "printed_amount": "10.5 umol",
+    "implied_MW_interval": [
+     1891.0,
+     1918.66
+    ],
+    "our_emitted_MW": 1911.84,
+    "our_weighed_form_MW": 1911.84,
+    "rel_error": 0.00368,
+    "ok": true,
+    "where": "SI p19, CBB2 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB3",
+    "weighed_form": "free_acid",
+    "printed_mg": "20.0",
+    "printed_amount": "11.7 umol",
+    "implied_MW_interval": [
+     1697.87,
+     1721.03
+    ],
+    "our_emitted_MW": 1707.49,
+    "our_weighed_form_MW": 1707.49,
+    "rel_error": 0.00115,
+    "ok": true,
+    "where": "SI p21, CBB4 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB6",
+    "weighed_form": "free_acid",
+    "printed_mg": "16.0",
+    "printed_amount": "10.2 umol",
+    "implied_MW_interval": [
+     1556.1,
+     1581.28
+    ],
+    "our_emitted_MW": 1563.36,
+    "our_weighed_form_MW": 1563.36,
+    "rel_error": 0.0034,
+    "ok": true,
+    "where": "SI p22, CBB7 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBB13",
+    "weighed_form": "free_acid",
+    "printed_mg": "15.0",
+    "printed_amount": "12.2 umol",
+    "implied_MW_interval": [
+     1220.41,
+     1238.68
+    ],
+    "our_emitted_MW": 1226.71,
+    "our_weighed_form_MW": 1226.71,
+    "rel_error": 0.00231,
+    "ok": true,
+    "where": "SI p27, CBB14 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBBZ0",
+    "weighed_form": "free_acid",
+    "printed_mg": "15.0",
+    "printed_amount": "17.8 umol",
+    "implied_MW_interval": [
+     837.54,
+     847.89
+    ],
+    "our_emitted_MW": 842.05,
+    "our_weighed_form_MW": 842.05,
+    "rel_error": 0.00078,
+    "ok": true,
+    "where": "SI pp43-49, CBBZ1/3/4/5/6/8/10 syntheses"
+   },
+   {
+    "kind": "compound",
+    "name": "CBBZ0",
+    "weighed_form": "free_acid",
+    "printed_mg": "20.0",
+    "printed_amount": "23.8 umol",
+    "implied_MW_interval": [
+     836.48,
+     844.21
+    ],
+    "our_emitted_MW": 842.05,
+    "our_weighed_form_MW": 842.05,
+    "rel_error": 0.00203,
+    "ok": true,
+    "where": "SI p44, CBBZ2 synthesis"
+   },
+   {
+    "kind": "compound",
+    "name": "CBBZ0",
+    "weighed_form": "free_acid",
+    "printed_mg": "10.0",
+    "printed_amount": "11.9 umol",
+    "implied_MW_interval": [
+     832.64,
+     848.1
+    ],
+    "our_emitted_MW": 842.05,
+    "our_weighed_form_MW": 842.05,
+    "rel_error": 0.002,
+    "ok": true,
+    "where": "SI pp48-49, CBBZ7/CBBZ9 syntheses"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z1-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "17.2 umol",
+    "implied_MW_interval": [
+     550.72,
+     612.24
+    ],
+    "our_emitted_MW": 580.9,
+    "our_weighed_form_MW": 580.9,
+    "rel_error": 0.00101,
+    "ok": true,
+    "where": "SI, the CBBZ1 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z2-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "15.3 umol",
+    "implied_MW_interval": [
+     618.89,
+     688.52
+    ],
+    "our_emitted_MW": 654.98,
+    "our_weighed_form_MW": 654.98,
+    "rel_error": 0.00194,
+    "ok": true,
+    "where": "SI, the CBBZ2 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z3-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "14.3 umol",
+    "implied_MW_interval": [
+     662.02,
+     736.84
+    ],
+    "our_emitted_MW": 693.11,
+    "our_weighed_form_MW": 693.11,
+    "rel_error": 0.00903,
+    "ok": true,
+    "where": "SI, the CBBZ3 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z4-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "13.8 umol",
+    "implied_MW_interval": [
+     685.92,
+     763.64
+    ],
+    "our_emitted_MW": 721.17,
+    "our_weighed_form_MW": 721.17,
+    "rel_error": 0.00498,
+    "ok": true,
+    "where": "SI, the CBBZ4 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z5-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "13.6 umol",
+    "implied_MW_interval": [
+     695.97,
+     774.91
+    ],
+    "our_emitted_MW": 735.2,
+    "our_weighed_form_MW": 735.2,
+    "rel_error": 0.00033,
+    "ok": true,
+    "where": "SI, the CBBZ5 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z6-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "13.4 umol",
+    "implied_MW_interval": [
+     706.32,
+     786.52
+    ],
+    "our_emitted_MW": 743.08,
+    "our_weighed_form_MW": 743.08,
+    "rel_error": 0.00447,
+    "ok": true,
+    "where": "SI, the CBBZ6 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z7-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "11.7 umol",
+    "implied_MW_interval": [
+     808.51,
+     901.29
+    ],
+    "our_emitted_MW": 855.3,
+    "our_weighed_form_MW": 855.3,
+    "rel_error": 0.00047,
+    "ok": true,
+    "where": "SI, the CBBZ7 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z8-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "13.0 umol",
+    "implied_MW_interval": [
+     727.97,
+     810.81
+    ],
+    "our_emitted_MW": 767.19,
+    "our_weighed_form_MW": 767.19,
+    "rel_error": 0.00285,
+    "ok": true,
+    "where": "SI, the CBBZ8 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z9-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "10.3 umol",
+    "implied_MW_interval": [
+     917.87,
+     1024.39
+    ],
+    "our_emitted_MW": 971.46,
+    "our_weighed_form_MW": 971.46,
+    "rel_error": 0.00034,
+    "ok": true,
+    "where": "SI, the CBBZ9 click step"
+   },
+   {
+    "kind": "azide_tail",
+    "name": "Z10-azide",
+    "weighed_form": "neutral azide",
+    "printed_mg": "10",
+    "printed_amount": "12.0 umol",
+    "implied_MW_interval": [
+     788.38,
+     878.66
+    ],
+    "our_emitted_MW": 831.19,
+    "our_weighed_form_MW": 831.19,
+    "rel_error": 0.0028,
+    "ok": true,
+    "where": "SI, the CBBZ10 click step"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "sodium butyrate",
+    "tail": "butyryl",
+    "weighed_form": "sodium_salt",
+    "printed_mg": "50",
+    "printed_amount": "0.5 mmol",
+    "implied_MW_interval": [
+     90.0,
+     112.22
+    ],
+    "our_emitted_MW": 88.11,
+    "our_weighed_form_MW": 110.09,
+    "rel_error": 0.08878,
+    "ok": true,
+    "where": "SI p26"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "lauric acid",
+    "tail": "lauroyl",
+    "weighed_form": "none",
+    "printed_mg": "20",
+    "printed_amount": "0.1 mmol",
+    "implied_MW_interval": [
+     130.0,
+     410.0
+    ],
+    "our_emitted_MW": 200.32,
+    "our_weighed_form_MW": 200.32,
+    "rel_error": 0.25807,
+    "ok": true,
+    "where": "SI p26"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "palmitic acid",
+    "tail": "palmitoyl",
+    "weighed_form": "none",
+    "printed_mg": "256",
+    "printed_amount": "1 mmol",
+    "implied_MW_interval": [
+     170.33,
+     513.0
+    ],
+    "our_emitted_MW": 256.43,
+    "our_weighed_form_MW": 256.43,
+    "rel_error": 0.24947,
+    "ok": true,
+    "where": "SI p28"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "melissic acid",
+    "tail": "triacontanoyl",
+    "weighed_form": "none",
+    "printed_mg": "25",
+    "printed_amount": "55 umol",
+    "implied_MW_interval": [
+     441.44,
+     467.89
+    ],
+    "our_emitted_MW": 452.81,
+    "our_weighed_form_MW": 452.81,
+    "rel_error": 0.00409,
+    "ok": true,
+    "where": "SI p24"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "alkynyl palmitic acid",
+    "tail": "15-hexadecynoyl",
+    "weighed_form": "none",
+    "printed_mg": "4.0",
+    "printed_amount": "15.8 umol",
+    "implied_MW_interval": [
+     249.21,
+     257.14
+    ],
+    "our_emitted_MW": 252.4,
+    "our_weighed_form_MW": 252.4,
+    "rel_error": 0.00308,
+    "ok": true,
+    "where": "SI p23"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "linoleic acid",
+    "tail": "linoleoyl",
+    "weighed_form": "none",
+    "printed_mg": "500",
+    "printed_amount": "1.78 mmol",
+    "implied_MW_interval": [
+     279.83,
+     281.97
+    ],
+    "our_emitted_MW": 280.45,
+    "our_weighed_form_MW": 280.45,
+    "rel_error": 0.0016,
+    "ok": true,
+    "where": "SI p25"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "all-trans-retinoic acid",
+    "tail": "retinoyl",
+    "weighed_form": "none",
+    "printed_mg": "50",
+    "printed_amount": "166 umol",
+    "implied_MW_interval": [
+     297.3,
+     305.14
+    ],
+    "our_emitted_MW": 300.44,
+    "our_weighed_form_MW": 300.44,
+    "rel_error": 0.00257,
+    "ok": true,
+    "where": "SI p30"
+   },
+   {
+    "kind": "tail_reagent",
+    "name": "cholesteryl chloroformate",
+    "tail": "cholesteryl carbamate",
+    "weighed_form": "chloroformate",
+    "printed_mg": "400",
+    "printed_amount": "0.89 mmol",
+    "implied_MW_interval": [
+     446.37,
+     452.54
+    ],
+    "our_emitted_MW": 386.66,
+    "our_weighed_form_MW": 449.12,
+    "rel_error": 0.00076,
+    "ok": true,
+    "where": "SI p19, the CBB1 synthesis"
+   }
+  ]
+ },
+ "P3_paper_own_hit_criterion_and_hit_list": {
+  "Fig2c": {
+   "control": "C",
+   "control_mean": 2.6176,
+   "threshold": 5.2352,
+   "criterion": "legend: 'considered positive hits if the ratio of red-to-green (RFP/GFP) with flow cytometry was more than twice that of C'",
+   "stated_hits": [
+    "CBB6",
+    "CBB11",
+    "CBB14",
+    "CBB18",
+    "CBB19",
+    "CBB21"
+   ],
+   "stated_from": "Results: 'Six compounds from the amide coupled library (CBB6, CBB11, CBB14, CBB18, CBB19, and CBB21) demonstrated the ability to enhance delivery of Cre'",
+   "reproduced_hits": [
+    "CBB11",
+    "CBB14",
+    "CBB18",
+    "CBB19",
+    "CBB21",
+    "CBB6"
+   ],
+   "n_stated": 6,
+   "n_reproduced": 6,
+   "exact_set_match": true,
+   "missing": [],
+   "extra": []
+  },
+  "Fig4c": {
+   "control": "A",
+   "control_mean": 1.1827,
+   "threshold": 2.3654,
+   "criterion": "legend: 'considered positive hits if the ratio of green-to-red (eGFP/mCherry) was more than twice that of A'",
+   "stated_hits": [
+    "CBB3",
+    "CBB11"
+   ],
+   "stated_from": "Results: 'among CBB1-22 and CBBZ1-Z7, consistent eGFP expression in reporter cells was only achieved by CBB3 (3.9 +/- 0.4%) and CBB11 (28.6 +/- 0.7%)'",
+   "reproduced_hits": [
+    "CBB11",
+    "CBB3"
+   ],
+   "n_stated": 2,
+   "n_reproduced": 2,
+   "exact_set_match": true,
+   "missing": [],
+   "extra": []
+  }
+ },
+ "P4_printed_mean_and_sd": {
+  "n_statements": 3,
+  "n_reproduced": 3,
+  "detail": [
+   {
+    "locus": "Fig2c",
+    "compound": "CBB19",
+    "printed_mean": 22.4,
+    "printed_sd": 0.6,
+    "our_mean": 22.4397,
+    "our_sample_sd": 0.5504,
+    "our_population_sd": 0.4766,
+    "sd_convention": "sample (ddof=1)",
+    "ok": true,
+    "where": "Results: 'up to 22.4 +/- 0.6% GFP-to-RFP conversion'"
+   },
+   {
+    "locus": "Fig4c",
+    "compound": "CBB3",
+    "printed_mean": 3.9,
+    "printed_sd": 0.4,
+    "our_mean": 3.9257,
+    "our_sample_sd": 0.3981,
+    "our_population_sd": 0.3448,
+    "sd_convention": "sample (ddof=1)",
+    "ok": true,
+    "where": "Results: 'CBB3 (3.9 +/- 0.4%)'"
+   },
+   {
+    "locus": "Fig4c",
+    "compound": "CBB11",
+    "printed_mean": 28.6,
+    "printed_sd": 0.7,
+    "our_mean": 28.6109,
+    "our_sample_sd": 0.6904,
+    "our_population_sd": 0.5979,
+    "sd_convention": "sample (ddof=1)",
+    "ok": true,
+    "where": "Results: 'CBB11 (28.6 +/- 0.7%)'"
+   }
+  ],
+  "fig6a_n_statements": 6,
+  "fig6a_n_reproduced_pop_sd": 6,
+  "fig6a_detail": [
+   {
+    "group": "TAS",
+    "n": 4,
+    "printed_mean": 45.8,
+    "printed_sd": 12.9,
+    "our_mean": 45.785,
+    "our_sample_sd": 14.867,
+    "our_population_sd": 12.875,
+    "matches_population_sd": true,
+    "matches_sample_sd": false
+   },
+   {
+    "group": "DMSO",
+    "n": 4,
+    "printed_mean": 50.6,
+    "printed_sd": 33.9,
+    "our_mean": 50.569,
+    "our_sample_sd": 39.196,
+    "our_population_sd": 33.945,
+    "matches_population_sd": true,
+    "matches_sample_sd": false
+   },
+   {
+    "group": "CBB11",
+    "n": 6,
+    "printed_mean": 60.8,
+    "printed_sd": 14.9,
+    "our_mean": 60.82,
+    "our_sample_sd": 16.3,
+    "our_population_sd": 14.88,
+    "matches_population_sd": true,
+    "matches_sample_sd": false
+   },
+   {
+    "group": "CBB14",
+    "n": 6,
+    "printed_mean": 58.5,
+    "printed_sd": 37.4,
+    "our_mean": 58.547,
+    "our_sample_sd": 40.961,
+    "our_population_sd": 37.392,
+    "matches_population_sd": true,
+    "matches_sample_sd": false
+   },
+   {
+    "group": "Lipo1",
+    "n": 6,
+    "printed_mean": 227.0,
+    "printed_sd": 69.0,
+    "our_mean": 227.25,
+    "our_sample_sd": 75.553,
+    "our_population_sd": 68.97,
+    "matches_population_sd": true,
+    "matches_sample_sd": false
+   },
+   {
+    "group": "Lipo2",
+    "n": 6,
+    "printed_mean": 95.3,
+    "printed_sd": 62.5,
+    "our_mean": 95.328,
+    "our_sample_sd": 68.43,
+    "our_population_sd": 62.467,
+    "matches_population_sd": true,
+    "matches_sample_sd": false
+   }
+  ],
+  "fig6a_best_lipo1_uV": 353.0,
+  "fig6a_printed_best": "353 uV, 'the best example of Lipo1-mediated editing achieved a b-wave amplitude of 353 uV'"
+ },
+ "P5_flow_versus_microscopy": {
+  "what": "the SAME compound, cargo and cell line read by flow cytometry and by microscopy in the same figure",
+  "pairs": [
+   {
+    "compound": "CBB14",
+    "flow_panel": "Fig2c",
+    "flow": 58.2104,
+    "microscopy_panel": "Fig2d",
+    "microscopy": 31.9512,
+    "microscopy_over_flow": 0.549
+   },
+   {
+    "compound": "CBB11",
+    "flow_panel": "Fig4c",
+    "flow": 28.6109,
+    "microscopy_panel": "Fig4d",
+    "microscopy": 53.296,
+    "microscopy_over_flow": 1.863
+   }
+  ],
+  "conclusion": "the two readouts disagree by about 2x in both directions, so Fig 2c/4c and Fig 2d/4d are four separate assay blocks and must not be pooled into one screen"
+ },
+ "P6_column_to_compound_mapping": {
+  "Fig2c": {
+   "n_compounds": 22,
+   "n_distinct": 22,
+   "injective": true,
+   "compounds": [
+    "CBB1",
+    "CBB10",
+    "CBB11",
+    "CBB12",
+    "CBB13",
+    "CBB14",
+    "CBB15",
+    "CBB16",
+    "CBB17",
+    "CBB18",
+    "CBB19",
+    "CBB2",
+    "CBB20",
+    "CBB21",
+    "CBB22",
+    "CBB3",
+    "CBB4",
+    "CBB5",
+    "CBB6",
+    "CBB7",
+    "CBB8",
+    "CBB9"
+   ],
+   "controls_excluded": [
+    "C",
+    "LF",
+    "NE"
+   ]
+  },
+  "Fig2d": {
+   "n_compounds": 12,
+   "n_distinct": 12,
+   "injective": true,
+   "compounds": [
+    "CBB14",
+    "CBBZ1",
+    "CBBZ10",
+    "CBBZ2",
+    "CBBZ3",
+    "CBBZ4",
+    "CBBZ5",
+    "CBBZ6",
+    "CBBZ7",
+    "CBBZ8",
+    "CBBZ9",
+    "CBBox11"
+   ],
+   "controls_excluded": [
+    "C",
+    "LF",
+    "NE"
+   ]
+  },
+  "Fig4c": {
+   "n_compounds": 22,
+   "n_distinct": 22,
+   "injective": true,
+   "compounds": [
+    "CBB1",
+    "CBB10",
+    "CBB11",
+    "CBB12",
+    "CBB13",
+    "CBB14",
+    "CBB15",
+    "CBB16",
+    "CBB17",
+    "CBB18",
+    "CBB19",
+    "CBB2",
+    "CBB20",
+    "CBB21",
+    "CBB22",
+    "CBB3",
+    "CBB4",
+    "CBB5",
+    "CBB6",
+    "CBB7",
+    "CBB8",
+    "CBB9"
+   ],
+   "controls_excluded": [
+    "A",
+    "LF",
+    "NE"
+   ]
+  },
+  "Fig4d": {
+   "n_compounds": 8,
+   "n_distinct": 8,
+   "injective": true,
+   "compounds": [
+    "CBB11",
+    "CBBZ1",
+    "CBBZ2",
+    "CBBZ3",
+    "CBBZ4",
+    "CBBZ5",
+    "CBBZ6",
+    "CBBZ7"
+   ],
+   "controls_excluded": [
+    "A",
+    "LF",
+    "NE"
+   ]
+  },
+  "Fig2c_covers_CBB1_to_CBB22": true,
+  "Fig4c_covers_CBB1_to_CBB22": true
+ },
+ "P7_replicate_count_vs_legend": {
+  "n_panels": 4,
+  "n_agreeing": 4,
+  "detail": [
+   {
+    "panel": "Fig2c",
+    "legend_n": 4,
+    "sheet_n": [
+     4
+    ],
+    "ok": true
+   },
+   {
+    "panel": "Fig2d",
+    "legend_n": 2,
+    "sheet_n": [
+     2
+    ],
+    "ok": true
+   },
+   {
+    "panel": "Fig4c",
+    "legend_n": 4,
+    "sheet_n": [
+     4
+    ],
+    "ok": true
+   },
+   {
+    "panel": "Fig4d",
+    "legend_n": 3,
+    "sheet_n": [
+     3
+    ],
+    "ok": true
+   }
+  ],
+  "legend_source": "Fig 2 legend: '(c) mean +/- SD; n = 4 replicates and (d) mean, n = 2 replicates'; Fig 4 legend: 'n = 4 replicates (c) and 3 replicates (d)'"
+ },
+ "P8_ring_methyl_regiochemistry": {
+  "what": "which ring position carries the toluidine methyl",
+  "si_phrasings": {
+   "CBB21 and CBB1 (divalent)": "bis(3-methyl-4,1-phenylene)",
+   "CBBZ1-CBBZ10 (divalent)": "bis(2-methyl-4,1-phenylene)",
+   "CBB6/7/12/13/14/20 (monovalent, twice in each name)": "(4-(...amino)-2-methylphenyl) attached to the central methine, AND ...-3-methylphenyl)(ethyl)amino cited on the nitrogen"
+  },
+  "resolution": "The two divalent forms contradict each other under any one locant convention. The monovalent prefixes do not: in a monovalent prefix position 1 IS the attachment, so both of them put the methyl ORTHO to the central methine and META to the nitrogen. The synthesis agrees -- both series come from I2, 3-((ethyl(m-tolyl)amino)methyl)benzenesulfonic acid, whose N-alkyl-m-toluidine is attacked para to the nitrogen (C4), ortho to the C3 methyl.",
+  "emitted": "methyl ortho to the central methine in BOTH series",
+  "NOT_CHECKABLE_BY_MASS": "every candidate is an isomer; see 08_contradictions.csv row 1"
+ },
+ "P10_drawn_markush_table_vs_iupac_names": {
+  "n_cells_drawn": 21,
+  "n_agreeing": 21,
+  "source": "Supplementary Figure 1, SI p2, rendered at 400 dpi and read by eye; renders/crop_table.png and renders/crop_linkers.png",
+  "what_this_adds": "the builder used the IUPAC names; this uses the drawn Markush table, so a compound-to-tail mix-up would have to be made identically twice from two different representations",
+  "detail": [
+   {
+    "compound": "CBB1",
+    "drawn": [
+     "L1",
+     "L1",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L1": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB2",
+    "drawn": [
+     "L1",
+     "L1",
+     "K2"
+    ],
+    "ok": true,
+    "detail": {
+     "L1": {
+      "expected": 2,
+      "found": 2
+     },
+     "K2": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB3",
+    "drawn": [
+     "L2",
+     "L2",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L2": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB4",
+    "drawn": [
+     "L2",
+     "L2",
+     "K2"
+    ],
+    "ok": true,
+    "detail": {
+     "L2": {
+      "expected": 2,
+      "found": 2
+     },
+     "K2": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB5",
+    "drawn": [
+     "L2",
+     "L12",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L2": {
+      "expected": 1,
+      "found": 1
+     },
+     "L12": {
+      "expected": 1,
+      "found": 1
+     },
+     "K1": {
+      "expected": 1,
+      "found": 1
+     }
+    }
+   },
+   {
+    "compound": "CBB6",
+    "drawn": [
+     "L3",
+     "L3",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L3": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB7",
+    "drawn": [
+     "L3",
+     "L3",
+     "K2"
+    ],
+    "ok": true,
+    "detail": {
+     "L3": {
+      "expected": 2,
+      "found": 2
+     },
+     "K2": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB8",
+    "drawn": [
+     "L4",
+     "L4",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L4": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB9",
+    "drawn": [
+     "-COCO-",
+     null,
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "-COCO-": {
+      "expected": 1,
+      "found": 1
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB10",
+    "drawn": [
+     "L5",
+     "L5",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L5": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB11",
+    "drawn": [
+     "L6",
+     "L6",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L6": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB12",
+    "drawn": [
+     "L7",
+     "L7",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L7": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB13",
+    "drawn": [
+     "L8",
+     "L8",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L8": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB14",
+    "drawn": [
+     "L8",
+     "L8",
+     "K2"
+    ],
+    "ok": true,
+    "detail": {
+     "L8": {
+      "expected": 2,
+      "found": 2
+     },
+     "K2": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB15",
+    "drawn": [
+     "L3",
+     "L3",
+     "K3"
+    ],
+    "ok": true,
+    "detail": {
+     "L3": {
+      "expected": 2,
+      "found": 2
+     },
+     "K3": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB16",
+    "drawn": [
+     "L3",
+     "L12",
+     "K3"
+    ],
+    "ok": true,
+    "detail": {
+     "L3": {
+      "expected": 1,
+      "found": 1
+     },
+     "L12": {
+      "expected": 1,
+      "found": 1
+     },
+     "K3": {
+      "expected": 1,
+      "found": 1
+     }
+    }
+   },
+   {
+    "compound": "CBB17",
+    "drawn": [
+     "L9",
+     "L9",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L9": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB18",
+    "drawn": [
+     "L9",
+     "L11",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L9": {
+      "expected": 1,
+      "found": 1
+     },
+     "L11": {
+      "expected": 1,
+      "found": 1
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB19",
+    "drawn": [
+     "L11",
+     "L11",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L11": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB20",
+    "drawn": [
+     "L10",
+     "L10",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "L10": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   },
+   {
+    "compound": "CBB21",
+    "drawn": [
+     "H",
+     "H",
+     "K1"
+    ],
+    "ok": true,
+    "detail": {
+     "H": {
+      "expected": 2,
+      "found": 2
+     },
+     "K1": {
+      "expected": 2,
+      "found": 2
+     }
+    }
+   }
+  ]
+ },
+ "P11_drawn_cbbz_table_vs_iupac_names": {
+  "n_cells_drawn": 10,
+  "n_agreeing": 9,
+  "n_declared_mismatches": 1,
+  "n_unresolved": 0,
+  "source": "Supplementary Figure 3, SI p4, rendered at 400 dpi and read by eye; renders/crop_fig3.png",
+  "drawn_core_protonation": "SI Fig 3 draws the dye as the N-protonated cation with both sulfonic acids as HO-SO2-. We emit the neutral quinoid-imine free acid, which is what the CBBZ IUPAC names say and what the [M+H]+ HRMS confirms. A charge-state difference, not a connectivity one.",
+  "detail": [
+   {
+    "compound": "CBBZ1",
+    "drawn_cell": {
+     "R1": "Dodecyl",
+     "R2": "Dodecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "CH2"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ2",
+    "drawn_cell": {
+     "R1": "Dodecyl",
+     "R2": "Dodecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "(PEG)2"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ3",
+    "drawn_cell": {
+     "R1": "Hexadecyl",
+     "R2": "Hexadecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "CH2"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ4",
+    "drawn_cell": {
+     "R1": "Heptadecan-9-yl",
+     "R2": "Heptadecan-9-yl",
+     "n1": 1,
+     "n2": 1,
+     "X": "CH2"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ5",
+    "drawn_cell": {
+     "R1": "Heptadecan-9-yl",
+     "R2": "Undecyl",
+     "n1": 6,
+     "n2": 4,
+     "X": "none"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ6",
+    "drawn_cell": {
+     "R1": "Dodecyl",
+     "R2": "Dodecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "(PEG)4"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ7",
+    "drawn_cell": {
+     "R1": "Hexadecyl",
+     "R2": "Hexadecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "(PEG)4"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ8",
+    "drawn_cell": {
+     "R1": "Hexadecyl",
+     "R2": "Hexadecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "(PEG)2"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ9",
+    "drawn_cell": {
+     "R1": "Heptadecan-9-yl",
+     "R2": "Heptadecan-9-yl",
+     "n1": 1,
+     "n2": 1,
+     "X": "(PEG)6"
+    },
+    "agrees": true,
+    "expected_mismatch": "",
+    "resolved": true
+   },
+   {
+    "compound": "CBBZ10",
+    "drawn_cell": {
+     "R1": "Hexadecyl",
+     "R2": "Hexadecyl",
+     "n1": 1,
+     "n2": 1,
+     "X": "(PEG)6"
+    },
+    "agrees": false,
+    "expected_mismatch": "SI Fig 3 draws R = L14 (hexadecyl); the SI text and the HRMS both say dodecyl (L13). We emit dodecyl.",
+    "resolved": true
+   }
+  ]
+ },
+ "P9_ratio_condition": {
+  "emitted_ratio": "[cargo]/[CBB(Z)] = 1:8",
+  "corroboration": "Supplementary Figure 4 is the ratio titration (2, 4, 8, 16) on CBB2/7/11/12/13/14/18/19/Z1 and contains an 8 row, and the Methods say 'decided to maintain the CBB:RNP ratio of 8:1'. So the emitted panels are the 8:1 condition, read from a second place.",
+  "not_emitted": "the titration itself -- it varies dose, not chemistry"
+ },
+ "seeded_defects": [
+  {
+   "seed": "P1_one_hydrogen_wrong_on_CBB11",
+   "metric": "A_formula_exact",
+   "before": 31,
+   "after": 30,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "a single H miscount on one compound, the exact class that is live in the SI's own CBB12 formula string"
+  },
+  {
+   "seed": "P2_K1_linker_shortened_by_two_carbons",
+   "metric": "n_inside_printed_interval",
+   "before": 33,
+   "after": 27,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "CBB21's diaminopropyl linker written as diaminoethyl, so six of the weighing checks should stop agreeing"
+  },
+  {
+   "seed": "P2b_CBBZ3_tail_hexadecyl_swapped_for_dodecyl",
+   "metric": "n_inside_printed_interval",
+   "before": 33,
+   "after": 32,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "CBBZ3's dihexadecyl ester written as didodecyl -- a four-carbon slip on each of two arms"
+  },
+  {
+   "seed": "P3_CBB6_value_zeroed",
+   "metric": "Fig2c.n_reproduced",
+   "before": 6,
+   "after": 5,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "one true hit pushed under the threshold, so the reproduced hit set must stop matching the six compounds the paper names"
+  },
+  {
+   "seed": "P3b_Fig4c_control_A_misread_as_NE",
+   "metric": "Fig4c.n_reproduced",
+   "before": 2,
+   "after": 22,
+   "direction": "up_or_down",
+   "metric_moved": true,
+   "what_was_seeded": "the control mean replaced by the no-enzyme well's, which is the mistake a mis-shifted column header would make; the hit count has to change because the threshold is 2x the control"
+  },
+  {
+   "seed": "P4_one_CBB11_replicate_shifted_by_2pct",
+   "metric": "n_reproduced",
+   "before": 3,
+   "after": 2,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "a 2-point change in one of four replicates, which is the size of error a one-row header offset would produce"
+  },
+  {
+   "seed": "P7_Fig2c_read_as_three_replicates",
+   "metric": "n_agreeing",
+   "before": 4,
+   "after": 3,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "one of Fig 2c's four replicate rows skipped, which is what an off-by-one first_data_row does"
+  },
+  {
+   "seed": "P10_CBB6_and_CBB12_tails_swapped",
+   "metric": "n_agreeing",
+   "before": 21,
+   "after": 19,
+   "direction": "down",
+   "metric_moved": true,
+   "what_was_seeded": "two compounds' structures exchanged -- the drawn table says CBB6 is palmitate and CBB12 laurate, so both cells must stop agreeing"
+  },
+  {
+   "seed": "P11_Z10_mismatch_declaration_removed",
+   "metric": "n_unresolved",
+   "before": 0,
+   "after": 1,
+   "direction": "up_or_down",
+   "metric_moved": true,
+   "what_was_seeded": "the declared Z10 exception deleted. This seeds the check's real failure mode -- a figure/text disagreement that nobody wrote down -- and the unresolved count has to go from 0 to 1"
+  },
+  {
+   "seed": "P6_two_Fig2c_columns_mapped_to_one_compound",
+   "metric": "Fig2c.injective",
+   "before": true,
+   "after": false,
+   "direction": "up_or_down",
+   "metric_moved": true,
+   "what_was_seeded": "a duplicated compound id, which is what a shifted header row gives"
+  }
+ ],
+ "gates": {
+  "P1 our formula reproduces the SI's printed m/z for all but CBB7": true,
+  "P2 every weighing lands inside the molar-mass interval its own printed precision allows": true,
+  "P3 both hit sets reproduce EXACTLY, no missing and no extra": true,
+  "P4 all three printed mean+/-SD statements reproduce": true,
+  "P4 all six Fig 6a statements reproduce on population SD": true,
+  "P6 every panel's column->compound map is injective": true,
+  "P6 Fig2c and Fig4c each cover CBB1..CBB22": true,
+  "P7 every panel's replicate count equals its legend's": true,
+  "P10 all 21 drawn Markush cells agree with the structures built from the IUPAC names": true,
+  "P11 every CBBZ drawn cell either agrees or has a declared, evidenced mismatch": true,
+  "every seeded defect moved its own metric": true
+ },
+ "all_gates_pass": true
+}

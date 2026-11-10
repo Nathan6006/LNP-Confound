@@ -1,0 +1,98 @@
+{
+ "TNS_range_AU": [
+  1046.0,
+  32934.9
+ ],
+ "cell_match": {
+  "_note": "On a CONTINUOUS ramp the 'ambiguous' count is not a defect signal the way it is for a discrete legend -- adjacent LUT entries are a fraction of an RGB unit apart by construction. The number that matters is the max nearest-LUT distance: CLAUDE.md section 5 says anything above ~5 means the GEOMETRY is wrong, not the colours.",
+  "max_dist_threshold": 5.0,
+  "max_nearest_lut_distance": 1.732,
+  "n_within_10_of_a_second_lut_entry": 580
+ },
+ "colorbar_axis": {
+  "kind": "linear",
+  "n_ticks": 3,
+  "origin_px": 248.391,
+  "origin_value": 30000.0,
+  "px_per_unit": 0.0311,
+  "tick_fit_residual_px": 0.0859,
+  "tick_residual_tol_px": 2.5,
+  "tick_step_units": -10000.0
+ },
+ "colorbar_notch_rows": [
+  248.434,
+  559.699,
+  871.221
+ ],
+ "colorbar_notches_are_drawn_not_inferred": "The three notches are short dark stubs the authors drew INTO the bar at 10,000 / 20,000 / 30,000. They are detected as a contrast between the bar's inner edge and its centre, so neither the bar's border nor its printed labels enters the fit.",
+ "column_grid": {
+  "kind": "linear",
+  "n_ticks": 19,
+  "origin_px": 201.921,
+  "origin_value": 1.0,
+  "px_per_unit": 50.44,
+  "tick_fit_residual_px": 1.102,
+  "tick_residual_tol_px": 2.5,
+  "tick_step_units": 1.0
+ },
+ "column_mean_TNS_AU": {
+  "O1,1,8": 11691.7,
+  "O10": 15803.9,
+  "O11": 14772.4,
+  "O12": 14010.5,
+  "O13": 14997.2,
+  "O14": 9125.4,
+  "O16": 5094.0,
+  "O18": 4678.7,
+  "O4,8": 13042.1,
+  "O6,10": 14819.4,
+  "O8,12": 14383.7,
+  "Oi10": 16344.8,
+  "X1": 10233.8,
+  "X2": 9740.0,
+  "X3": 11619.2,
+  "X4": 13622.4,
+  "X5": 8145.3,
+  "X6": 10996.3,
+  "X7": 12625.2,
+  "X8": 13266.4
+ },
+ "columns_lowest_to_highest": [
+  "O18",
+  "O16",
+  "X5",
+  "O14",
+  "X2",
+  "X1",
+  "X6",
+  "X3",
+  "O1,1,8",
+  "X7",
+  "O4,8",
+  "X8",
+  "X4",
+  "O12",
+  "O8,12",
+  "O11",
+  "O6,10",
+  "O13",
+  "O10",
+  "Oi10"
+ ],
+ "grid_cells": 580,
+ "lut_rows_sampled": 994,
+ "lut_unique_colours": 261,
+ "n_cells": 580,
+ "n_columns_from_boundaries": 20,
+ "n_rows_from_boundaries": 29,
+ "row_grid": {
+  "kind": "linear",
+  "n_ticks": 28,
+  "origin_px": 186.992,
+  "origin_value": 1.0,
+  "px_per_unit": 34.5759,
+  "tick_fit_residual_px": 1.0735,
+  "tick_residual_tol_px": 2.5,
+  "tick_step_units": 1.0
+ }
+}

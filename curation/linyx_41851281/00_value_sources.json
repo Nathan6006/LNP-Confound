@@ -1,0 +1,149 @@
+{
+ "paper": {
+  "title": "Artificial intelligence-guided design of LNPs for in vivo targeted mRNA delivery via analysis of the spatial conformation of ionisable lipids",
+  "journal": "Nature Biomedical Engineering",
+  "year": 2026,
+  "pmid": "41851281",
+  "doi": "10.1038/s41551-026-01640-8",
+  "corresponding": "Yao-Xin Lin",
+  "proposed_experiment_id": "YL_2026",
+  "main_article_pdf": "NOT IN HAND. Only the 17 publisher ESM assets were downloaded (SI, peer-review file, Source Data). Main-text figure legends (Fig. 3, Fig. 4, Extended Data Fig. 2) are therefore unread; every assay annotation below is taken from a Supplementary legend or Supplementary Methods that covers the same Source Data, and each is cited."
+ },
+ "library_size": {
+  "established_how": "Two independent enumerations of the same name list, read on 2026-11-10: (a) Supplementary Data 4 'Lipid_ML_ID_Correspondence_Table.xlsx' inside 41551_2026_1640_MOESM7_ESM.zip, rows 2-122 (ML ID -> lipid name); (b) Supplementary Fig. 1b (MOESM1 p.5, printed No./Lipid-name table, raster).",
+  "n_ml_ids": 121,
+  "n_library_lipids_named_H_T": 116,
+  "n_commercial_benchmarks": 3,
+  "n_external_test_lipids": 2,
+  "formulations_vs_structures": "NOT the 'N lipids = N formulations' trap. Supplementary Table 3 (MOESM1 p.39) gives ONE in-vitro screening formulation for every lipid: ionisable lipid:DOPE:Chol:DMG-PEG2000 = 45:15:38.5:1.5. One row per lipid. A separate formulation sweep exists (Supplementary Fig. 26, lipid P1 only, 18 formulations of ONE lipid) and is excluded from the screen."
+ },
+ "tiers": [
+  {
+   "id": "V1",
+   "tier": "1_publisher_source_data",
+   "what": "PRIMARY in-vitro screen. Raw luciferase RLU, n=3 technical replicates, 110 library lipids (IDs 1-110) + MC3 + ALC-0315 + SM-102.",
+   "file": "source/41551_2026_1640_MOESM4_ESM.xlsx",
+   "sheet": "Supplementary Fig. 10",
+   "cells": "A1:D113 (A=lipid id or benchmark name, B,C,D = replicate RLU)",
+   "measured_or_predicted": "measured",
+   "assay": "HEK293T, 1 ug/mL mFluc mRNA, 24 h, luciferase luminescence",
+   "assay_evidence": "Supplementary Fig. 10 legend, MOESM1 p.14: 'mRNA transfection efficiency in HEK293T cells. Luciferase expression following treatment of HEK293T cells with LNPs (1 ug mL-1 mFluc, 24 h). Data is presented as the mean +- s.d. (n = 3 ...)'",
+   "why_this_tier": "Publisher Source Data workbook, numeric, no digitisation."
+  },
+  {
+   "id": "V2",
+   "tier": "1_publisher_source_data",
+   "what": "Same screen as V1, expressed as log10(RLU), plus panel groupings 3d-3g.",
+   "file": "source/41551_2026_1640_MOESM9_ESM.xlsx",
+   "sheet": "Fig. 3",
+   "cells": "A2:D116 (Fig. 3c); F2:G..(3d); I2:J..(3e); L2:O17 (3f); Q2:T.. (3g)",
+   "measured_or_predicted": "measured",
+   "role": "CROSS-CHECK on V1, not a second source. 109 of 110 ids agree to <=1e-4 relative after 10^x; id 8 does not - see 08_contradictions.csv C-01.",
+   "why_this_tier": "Publisher Source Data workbook."
+  },
+  {
+   "id": "V3",
+   "tier": "1_publisher_source_data",
+   "what": "AI-designed lipids P1-P6 + ALC-0315: in-vitro RLU (n=3) and in-vivo whole-body total flux (n=3).",
+   "file": "source/41551_2026_1640_MOESM10_ESM.xlsx",
+   "sheet": "Fig. 4",
+   "cells": "E2:F23 (Fig. 4c 'In virto' [sic]); E24:F45 (Fig. 4c 'In vivo')",
+   "measured_or_predicted": "measured",
+   "assay_in_vitro": "assumed same as V1 (HEK293T, 1 ug/mL mFluc, 24 h) - the main-text Fig. 4c legend is NOT in hand; recorded as an open decision D-2.",
+   "assay_in_vivo": "mouse, IV, luciferase total flux (p/s). Route/dose/strain NOT stated in any document in hand for Fig. 4c; Supplementary Methods p.59 gives the biodistribution protocol for lipid P1 only. Open decision D-3.",
+   "why_this_tier": "Publisher Source Data workbook."
+  },
+  {
+   "id": "V7",
+   "tier": "1_publisher_source_data",
+   "what": "IN VIVO whole-animal luciferase total flux (n=3) for PBS, ALC-0315 and 12 library lipids (6, 11, 23, 29, 35, 42, 43, 49, 54, 55, 87, 107) -- Fig. 3i.",
+   "file": "source/41551_2026_1640_MOESM9_ESM.xlsx",
+   "sheet": "Fig. 3",
+   "cells": "W2:X43 (W = label, X = replicate)",
+   "measured_or_predicted": "measured",
+   "assay_in_vivo": "mouse, luciferase total flux (p/s). Strain, route, dose and timepoint are NOT stated in the SI, the Methods or the peer-review file. Left blank -- DECISIONS.md D-3.",
+   "role": "The LARGEST in-vivo source in the paper, and it was missed on the first pass over the workbooks because find_screens.py scores a sheet on distinct compound-like labels and Fig. 3's labels sit in column W of a 89-column sheet whose first panel is a per-lipid log10 table. ALC-0315's three values here are identical to Fig. 4c's in-vivo ALC-0315, so Fig. 3i and Fig. 4c in vivo are ONE experiment; ALC-0315 is emitted once.",
+   "why_this_tier": "Publisher Source Data workbook."
+  },
+  {
+   "id": "V4",
+   "tier": "1_publisher_source_data",
+   "what": "ML test set in vitro: Lipid T1-T12 + MC3/ALC-0315/SM-102 (ED Fig. 2c), and a second, lower-magnitude assay for ALC-0315 + T1-T6 (ED Fig. 2d).",
+   "file": "source/41551_2026_1640_MOESM16_ESM.xlsx",
+   "sheet": "Extended Data Fig. 2",
+   "cells": "A2:B46 (2c); D2:E22 (2d)",
+   "measured_or_predicted": "measured",
+   "role": "The ONLY source of measured values for Lipid T1 and Lipid T2 (ML IDs 114, 115), which are not in the H-T library. T3-T12 duplicate V1 ids 107,108,109,110,1,25,33,40,53,87 exactly (verified, 30/30 cells).",
+   "why_this_tier": "Publisher Source Data workbook.",
+   "caveat": "ED Fig. 2d is a DIFFERENT assay (ALC-0315 = 37,328 vs 957,212 in 2c). Its legend is in the main article, which is not in hand, so 2d is NOT emitted. Open decision D-4. DECISIONS.md D-4."
+  },
+  {
+   "id": "V5",
+   "tier": "3_author_supplementary_code_and_data",
+   "what": "label.txt - the ML regression target, one value per ML ID 1-121.",
+   "file": "source/41551_2026_1640_MOESM7_ESM.zip",
+   "path_in_archive": "Lin_Supplementary_Data_4/Data_Preparation/data/label.txt",
+   "measured_or_predicted": "measured, but DERIVED and partly WRONG - see 07_qc.json",
+   "role": "CROSS-CHECK ONLY. NOT emitted. It is the arithmetic mean of the three replicates for IDs 1-106 and 111-113 and 116-119 (agreement <=1e-4 relative), but it silently switches to REPLICATE 1 for IDs 8, 107-110, 114, 115, 121, and ID 120 is replicate 1 minus exactly 10,000 (101,189.38 -> 91,189.38).",
+   "why_not_tier_1": "It is a model input file, not a published measurement table; its provenance is a derivation we can only infer. The publisher Source Data give the three underlying replicates."
+  },
+  {
+   "id": "V6",
+   "tier": "1_publisher_source_data",
+   "what": "PREDICTED values. Fig. 4b parity plot: experimental log10 vs model-predicted log10, Train (90) / Test (15) / Prediction (7).",
+   "file": "source/41551_2026_1640_MOESM10_ESM.xlsx",
+   "sheet": "Fig. 4",
+   "cells": "B3:B116 experimental, C3:C116 PREDICTED",
+   "measured_or_predicted": "COLUMN C IS MODEL OUTPUT - EXCLUDED FROM EMISSION",
+   "why_excluded": "SISSO model prediction, not a measurement. CLAUDE.md: never emit a predicted value as a measurement. Column B is experimental but is unlabelled by lipid id, so it is unusable as a source and is only a consistency check."
+  },
+  {
+   "id": "M1",
+   "tier": "1_publisher_source_data",
+   "what": "Per-lipid LNP characterisation: size, PDI (Supp Fig. 9a), zeta (9b), encapsulation efficiency (9c), n=3, lipids 1-110.",
+   "file": "source/41551_2026_1640_MOESM4_ESM.xlsx",
+   "sheet": "Supplementary Fig. 9",
+   "cells": "A2:Q112",
+   "measured_or_predicted": "measured",
+   "role": "METADATA (Particle_size, PDI, Zeta_potential, Encapsulation_efficiency corpus columns), not Experiment_value."
+  },
+  {
+   "id": "M2",
+   "tier": "2_si_table",
+   "what": "LNP formulations (molar ratios) for every experiment in the paper.",
+   "file": "source/41551_2026_1640_MOESM1_ESM.pdf",
+   "locus": "Supplementary Table 3, p.39 (text layer, pdfplumber-readable)",
+   "role": "Formulation metadata: in-vitro screening LNPs = ionisable lipid:DOPE:Chol:DMG-PEG2000 = 45:15:38.5:1.5."
+  },
+  {
+   "id": "S1",
+   "tier": "5_pixels",
+   "what": "STRUCTURES. Heads H1-H14, linkers (ester/amide), tails T1-T16, and the No. -> lipid-name table.",
+   "file": "source/41551_2026_1640_MOESM1_ESM.pdf",
+   "locus": "Supplementary Fig. 1a (building blocks) and 1b (name table), p.5",
+   "why_tiers_1_to_4_failed": "Checked, in order. (1) No publisher Source Data file contains a structure, SMILES or formula column - all 19 sheets of MOESM5 are 100x100 MD projection-density matrices and the other 8 workbooks are numeric panel data (enumerated in this file). (2) The SI has no structure table: Supplementary Tables 1-5 are corona proteins, corona proteins, formulations, vaccine-LNP characterisation and antibodies. (3) No author repository exists - find_repo.py over GitHub returned 0 candidate matches for the DOI, PMID, title and author; the only code released is MOESM6/7/8, which contain SISSO inputs and 100x100 density matrices keyed by ML ID, with no structure representation of any kind. (4) MOESM1 p.5 carries ONE embedded raster image (2484x3047 px) and ZERO vector drawing paths, confirmed with pymupdf get_drawings() == 0, so the PDF's own bond coordinates do not exist on that page and curation/lib/chains.vector_bonds necessarily returns [].",
+   "second_independent_method": "HRMS. Supplementary Notes, MOESM1 pp.41-53, give 1H NMR and 'Mass calculated m/z ... found [M-H]- m/z ...' for a named subset of lipids. Exact mass pins the molecular formula and therefore every chain length in that lipid, independently of the raster trace. Mass is blind to connectivity (CLAUDE.md), so regiochemistry comes from the Michael-addition route in Supplementary Methods p.55, not from mass."
+  },
+  {
+   "id": "S2",
+   "tier": "2_si_text",
+   "what": "Synthesis route; head H11 and tail T14 drawn structures confirmed in words; general Michael addition.",
+   "file": "source/41551_2026_1640_MOESM1_ESM.pdf",
+   "locus": "Supplementary Methods pp.53-55 (text layer)",
+   "role": "Pins connectivity: 'All ionisable lipids were synthesized through the Michael addition reaction. Taking lipid P1 as an example, H4 (3 mmol) and T1 (7.5 mmol) ...' -> the (n) suffix is the number of tail arms."
+  }
+ ],
+ "decision": "PROCEED. A per-lipid value source exists at tier 1 for 121 of 121 ML IDs (V1 covers 113 in vitro, V3 covers P1-P6, V4 covers Lipid T1-T2) and a tier-1 in-vivo source for 19 lipids (V7 + V3). Independent tier-1 cross-check (V2) and tier-3 cross-check (V5). Structures are tier-5 pixels with HRMS as the second method; that is the bottleneck, not the values.",
+ "written_before_any_chemistry": true,
+ "written_utc": "2026-11-10",
+ "emitted": {
+  "file": "05_values.csv",
+  "rows": 140,
+  "in_vitro": 121,
+  "in_vivo": 19,
+  "distinct_lipids": 121,
+  "measured": 140,
+  "predicted": 0,
+  "predicted_columns_read": "none; MOESM10 'Fig. 4' column C was never opened by stage05_values.py"
+ }
+}

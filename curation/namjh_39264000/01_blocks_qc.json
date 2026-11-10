@@ -1,0 +1,440 @@
+{
+ "figure": "source/pdfimg/fig3_1590x2450.png",
+ "ink_sum_threshold": 300,
+ "rdp_eps_px": 3.0,
+ "chains": {
+  "FH-1 main chain": {
+   "component": 168,
+   "start_px": [
+    390,
+    377
+   ],
+   "end_px": [
+    391,
+    130
+   ],
+   "skeleton_path_px": 248,
+   "vertices": 9,
+   "carbons_excluding_branch_C": 8,
+   "rdp_eps_sweep": {
+    "2.5": 9,
+    "3.0": 9,
+    "4.0": 9
+   },
+   "meaning": "branch C + n carbons"
+  },
+  "FH-1 branch chain": {
+   "component": 168,
+   "start_px": [
+    444,
+    284
+   ],
+   "end_px": [
+    391,
+    130
+   ],
+   "skeleton_path_px": 191,
+   "vertices": 7,
+   "carbons_excluding_branch_C": 6,
+   "rdp_eps_sweep": {
+    "2.5": 7,
+    "3.0": 7,
+    "4.0": 7
+   },
+   "meaning": "branch C + n carbons"
+  },
+  "T-1 main chain": {
+   "component": 166,
+   "start_px": [
+    364,
+    1517
+   ],
+   "end_px": [
+    364,
+    1270
+   ],
+   "skeleton_path_px": 248,
+   "vertices": 9,
+   "carbons_excluding_branch_C": 8,
+   "rdp_eps_sweep": {
+    "2.5": 9,
+    "3.0": 9,
+    "4.0": 9
+   },
+   "meaning": "branch C + n carbons"
+  },
+  "T-1 branch chain": {
+   "component": 166,
+   "start_px": [
+    418,
+    1424
+   ],
+   "end_px": [
+    365,
+    1269
+   ],
+   "skeleton_path_px": 190,
+   "vertices": 7,
+   "carbons_excluding_branch_C": 6,
+   "rdp_eps_sweep": {
+    "2.5": 7,
+    "3.0": 7,
+    "4.0": 7
+   },
+   "meaning": "branch C + n carbons"
+  },
+  "T-2 main chain": {
+   "component": 224,
+   "start_px": [
+    534,
+    1549
+   ],
+   "end_px": [
+    534,
+    1239
+   ],
+   "skeleton_path_px": 311,
+   "vertices": 11,
+   "carbons_excluding_branch_C": 10,
+   "rdp_eps_sweep": {
+    "2.5": 11,
+    "3.0": 11,
+    "4.0": 11
+   },
+   "meaning": "branch C + n carbons"
+  },
+  "T-2 branch chain": {
+   "component": 224,
+   "start_px": [
+    588,
+    1456
+   ],
+   "end_px": [
+    535,
+    1238
+   ],
+   "skeleton_path_px": 253,
+   "vertices": 9,
+   "carbons_excluding_branch_C": 8,
+   "rdp_eps_sweep": {
+    "2.5": 9,
+    "3.0": 9,
+    "4.0": 9
+   },
+   "meaning": "branch C + n carbons"
+  }
+ },
+ "ester_bridges": {
+  "EB-5": {
+   "component": 167,
+   "carbonyl_C_px": [
+    [
+     370,
+     869
+    ],
+    [
+     370,
+     993
+    ]
+   ],
+   "backbone_carbons": 5,
+   "rdp_eps_sweep": {
+    "2.5": 5,
+    "3.0": 5,
+    "4.0": 5
+   },
+   "name_token_check": {
+    "label": "EB-5",
+    "name_token_length": 5,
+    "measured_length": 5,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "EB-6": {
+   "component": 211,
+   "carbonyl_C_px": [
+    [
+     483,
+     855
+    ],
+    [
+     501,
+     1004
+    ]
+   ],
+   "backbone_carbons": 6,
+   "rdp_eps_sweep": {
+    "2.5": 6,
+    "3.0": 6,
+    "4.0": 6
+   },
+   "name_token_check": {
+    "label": "EB-6",
+    "name_token_length": 6,
+    "measured_length": 6,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "EB-7": {
+   "component": 240,
+   "carbonyl_C_px": [
+    [
+     603,
+     839
+    ],
+    [
+     603,
+     1025
+    ]
+   ],
+   "backbone_carbons": 7,
+   "rdp_eps_sweep": {
+    "2.5": 7,
+    "3.0": 7,
+    "4.0": 7
+   },
+   "name_token_check": {
+    "label": "EB-7",
+    "name_token_length": 7,
+    "measured_length": 7,
+    "matches": true,
+    "note": ""
+   }
+  }
+ },
+ "aryl_rings": {
+  "FH-2": {
+   "component": 169,
+   "ring_centre_px": [
+    410.3,
+    505.4
+   ],
+   "hexagon_vertex_angles_deg": [
+    28.6,
+    89.7,
+    148.9,
+    209.5,
+    268.9,
+    329.8
+   ],
+   "exocyclic_angles_deg": [
+    149.5,
+    235.0
+   ],
+   "exocyclic_on_a_vertex_deg": [
+    149.5
+   ],
+   "attachment_angle_deg": 149.5,
+   "substituent_locants": []
+  },
+  "FH-4": {
+   "component": 223,
+   "ring_centre_px": [
+    568.3,
+    160.5
+   ],
+   "hexagon_vertex_angles_deg": [
+    28.0,
+    89.5,
+    150.2,
+    209.7,
+    269.5,
+    329.3
+   ],
+   "exocyclic_angles_deg": [
+    150.0,
+    270.0,
+    330.0
+   ],
+   "exocyclic_on_a_vertex_deg": [
+    150.0,
+    270.0,
+    330.0
+   ],
+   "attachment_angle_deg": 150.0,
+   "substituent_locants": [
+    3,
+    4
+   ]
+  },
+  "FH-5": {
+   "component": 221,
+   "ring_centre_px": [
+    566.9,
+    368.5
+   ],
+   "hexagon_vertex_angles_deg": [
+    28.7,
+    89.5,
+    150.3,
+    209.0,
+    269.4,
+    330.0
+   ],
+   "exocyclic_angles_deg": [
+    29.5,
+    150.0,
+    270.0
+   ],
+   "exocyclic_on_a_vertex_deg": [
+    29.5,
+    150.0,
+    270.0
+   ],
+   "attachment_angle_deg": 150.0,
+   "substituent_locants": [
+    3,
+    5
+   ]
+  },
+  "FH-6": {
+   "component": 222,
+   "ring_centre_px": [
+    566.8,
+    621.0
+   ],
+   "hexagon_vertex_angles_deg": [
+    30.7,
+    89.6,
+    149.0,
+    210.5,
+    269.4,
+    328.7
+   ],
+   "exocyclic_angles_deg": [
+    150.0,
+    270.0,
+    330.0
+   ],
+   "exocyclic_on_a_vertex_deg": [
+    150.0,
+    270.0,
+    330.0
+   ],
+   "attachment_angle_deg": 150.0,
+   "substituent_locants": [
+    3,
+    4
+   ]
+  }
+ },
+ "spacers": {
+  "FH-4": {
+   "carbonyl_C_px": [
+    532,
+    95
+   ],
+   "ring_C_px": [
+    550,
+    129
+   ],
+   "vertices_inclusive": 2,
+   "CH2_between_CO_and_ring": 0,
+   "rdp_eps_sweep": {
+    "2.5": 2,
+    "3.0": 2,
+    "4.0": 2
+   }
+  },
+  "FH-5": {
+   "carbonyl_C_px": [
+    531,
+    303
+   ],
+   "ring_C_px": [
+    548,
+    336
+   ],
+   "vertices_inclusive": 2,
+   "CH2_between_CO_and_ring": 0,
+   "rdp_eps_sweep": {
+    "2.5": 2,
+    "3.0": 2,
+    "4.0": 2
+   }
+  },
+  "FH-6": {
+   "carbonyl_C_px": [
+    531,
+    494
+   ],
+   "ring_C_px": [
+    548,
+    589
+   ],
+   "vertices_inclusive": 4,
+   "CH2_between_CO_and_ring": 2,
+   "rdp_eps_sweep": {
+    "2.5": 4,
+    "3.0": 4,
+    "4.0": 4
+   }
+  }
+ },
+ "calibration_against_named_reagents": [
+  {
+   "block": "T-1 total carbons",
+   "measured": 16,
+   "required": 16,
+   "pass": true,
+   "external_source": "SI 1.2.2: 2-hexyl-1-decanol, 1.00 g / 4.12 mmol -> MW 242.7; C16H34O = 242.44. A 2-hexyldecyl group is 16 carbons."
+  },
+  {
+   "block": "T-1 branch length",
+   "measured": 6,
+   "required": 6,
+   "pass": true,
+   "external_source": "the 'hexyl' of 2-hexyl-1-decanol"
+  },
+  {
+   "block": "T-2 total carbons",
+   "measured": 20,
+   "required": 20,
+   "pass": true,
+   "external_source": "SI 1.2.2: 2-octyl-1-dodecanol, 1.00 g / 3.35 mmol -> MW 298.5; C20H42O = 298.55."
+  },
+  {
+   "block": "T-2 branch length",
+   "measured": 8,
+   "required": 8,
+   "pass": true,
+   "external_source": "the 'octyl' of 2-octyl-1-dodecanol"
+  },
+  {
+   "block": "EB-5 backbone carbons",
+   "measured": 5,
+   "required": 5,
+   "pass": true,
+   "external_source": "SI 1.2.2: glutaric anhydride, 942 mg / 8.24 mmol -> MW 114.3; glutaric anhydride is C5H6O3, 114.10."
+  },
+  {
+   "block": "FH-5 substituent locants",
+   "measured": [
+    3,
+    5
+   ],
+   "required": [
+    3,
+    5
+   ],
+   "pass": true,
+   "external_source": "SI 1.2.1: 3,5-dihydroxybenzoic acid, 1.5 g / 9.7 mmol -> MW 154.6; C7H6O4 = 154.12."
+  },
+  {
+   "block": "FH-5 spacer CH2 count",
+   "measured": 0,
+   "required": 0,
+   "pass": true,
+   "external_source": "3,5-dihydroxyBENZOIC acid: the carbonyl is bonded to the ring."
+  },
+  {
+   "block": "FH-2 substituent count",
+   "measured": 0,
+   "required": 0,
+   "pass": true,
+   "external_source": "Fig 3a draws FH-2 as an unsubstituted phenyl -- a benzoyl group."
+  }
+ ]
+}

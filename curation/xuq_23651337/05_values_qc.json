@@ -1,0 +1,394 @@
+{
+  "panel": "Figure S3 (its own caption; the SI's table of contents calls it Figure S1 -- see 08_contradictions.csv)",
+  "tier": "4b_pdf_vector_geometry",
+  "readout_as_printed": "Cell Viability (%)",
+  "n_values": 16,
+  "checks": {
+    "CA_y_label_to_tick": {
+      "criterion": "each y-axis label's glyph-centre y must be nearest to the tick it is assigned to, beating the runner-up tick by >= 5.0 pt",
+      "agreement": "6/6",
+      "n_agree": 6,
+      "n_total": 6,
+      "worst_margin_pt": 29.8121,
+      "worst_label": "40",
+      "tol_margin_pt": 5.0,
+      "mean_label_minus_tick_offset_pt": 0.2939,
+      "note": "the ~0.33 pt systematic label-minus-tick offset is font metrics (glyph bbox centre vs baseline), not a read error. It is reported, and it is NOT used for the scale: the scale comes from tick positions only."
+    },
+    "CB_y_calibration": {
+      "kind": "linear",
+      "px_per_unit": 12.7115,
+      "origin_px": 993.103,
+      "origin_value": 100.0,
+      "tick_step_units": -20.0,
+      "n_ticks": 6,
+      "tick_fit_residual_px": 0.4427,
+      "tick_residual_tol_px": 2.5,
+      "units": "600-dpi pixels (PDF points x 600/72); the conversion is exact on vector coordinates and is what makes axis.LOO_TOL_PX mean what it was written to mean",
+      "tick_positions_pt": [
+        119.1615,
+        149.6411,
+        180.2405,
+        210.72,
+        241.2021,
+        271.6816
+      ],
+      "tick_values": [
+        100,
+        80,
+        60,
+        40,
+        20,
+        0
+      ],
+      "loo_worst_px": 0.5405,
+      "loo_worst_pt": 0.0649,
+      "loo_tol_px": 1.5,
+      "n_agree": 6,
+      "n_total": 6,
+      "agreement": "6/6",
+      "native_tol_called": false,
+      "native_tol_reason": "the panel is VECTOR. There is no native dpi to measure, and axis.native_tol() refuses a guessed one. No tolerance was widened."
+    },
+    "CC_minor_tick_holdout": {
+      "criterion": "the 6 minor y ticks -- HELD OUT of the fit -- must fall at 110/90/70/50/30/10 %, within 1.5 px (600 dpi)",
+      "agreement": "6/6",
+      "n_agree": 6,
+      "n_total": 6,
+      "worst_err_pt": 0.0964,
+      "worst_err_px600": 0.8033,
+      "tol_px600": 1.5,
+      "predicted_values_pct": [
+        110.0,
+        90.0,
+        70.0,
+        50.0,
+        30.0,
+        10.0
+      ],
+      "observed_minor_tick_y_pt": [
+        103.9205,
+        134.5225,
+        164.8821,
+        195.4816,
+        225.9611,
+        256.4406
+      ],
+      "why_this_is_an_unprinted_check": "no minor tick carries a printed numeral anywhere on the page; the authors drew them and left them unlabelled. Nothing in our pipeline could have fitted to them, because they were passed to calibrate() as forbid_target."
+    },
+    "CD_bar_top_three_way": {
+      "criterion": "for every bar, the FILL rectangle's top, the STROKED OUTLINE's top and the ERROR BAR's stem origin must agree within 0.01 pt (0.083 px at 600 dpi)",
+      "agreement": "16/16",
+      "n_agree": 16,
+      "n_total": 16,
+      "worst_spread_pt": 0.00269,
+      "worst_spread_px600": 0.0224,
+      "tol_pt": 0.01,
+      "why_error_class_32_cannot_arise": "the error bar is a DIFFERENT drawing object at a DIFFERENT stroke width (0.2757 vs 0.4596 pt) and is selected out by that width. Nothing is thresholded, so there is no threshold to be wrong. F-018 and F-020 were raster bar-top detectors reading an overlaid marker; that failure mode has no analogue here.",
+      "per_bar": [
+        {
+          "lipidoid": 1,
+          "fill_y0_pt": 151.8,
+          "outline_y0_pt": 151.8024,
+          "errorbar_stem_origin_y_pt": 151.8024,
+          "spread_pt": 0.00241
+        },
+        {
+          "lipidoid": 2,
+          "fill_y0_pt": 152.28,
+          "outline_y0_pt": 152.282,
+          "errorbar_stem_origin_y_pt": 152.282,
+          "spread_pt": 0.00201
+        },
+        {
+          "lipidoid": 3,
+          "fill_y0_pt": 141.12,
+          "outline_y0_pt": 141.1211,
+          "errorbar_stem_origin_y_pt": 141.1211,
+          "spread_pt": 0.0011
+        },
+        {
+          "lipidoid": 4,
+          "fill_y0_pt": 157.68,
+          "outline_y0_pt": 157.6813,
+          "errorbar_stem_origin_y_pt": 157.6813,
+          "spread_pt": 0.00134
+        },
+        {
+          "lipidoid": 5,
+          "fill_y0_pt": 136.56,
+          "outline_y0_pt": 136.5613,
+          "errorbar_stem_origin_y_pt": 136.5613,
+          "spread_pt": 0.0013
+        },
+        {
+          "lipidoid": 6,
+          "fill_y0_pt": 120.0,
+          "outline_y0_pt": 120.001,
+          "errorbar_stem_origin_y_pt": 120.001,
+          "spread_pt": 0.00104
+        },
+        {
+          "lipidoid": 7,
+          "fill_y0_pt": 148.08,
+          "outline_y0_pt": 148.082,
+          "errorbar_stem_origin_y_pt": 148.082,
+          "spread_pt": 0.00201
+        },
+        {
+          "lipidoid": 8,
+          "fill_y0_pt": 170.64,
+          "outline_y0_pt": 170.6412,
+          "errorbar_stem_origin_y_pt": 170.6412,
+          "spread_pt": 0.00119
+        },
+        {
+          "lipidoid": 9,
+          "fill_y0_pt": 137.88,
+          "outline_y0_pt": 137.8805,
+          "errorbar_stem_origin_y_pt": 137.8805,
+          "spread_pt": 0.0005
+        },
+        {
+          "lipidoid": 10,
+          "fill_y0_pt": 141.36,
+          "outline_y0_pt": 141.3609,
+          "errorbar_stem_origin_y_pt": 141.3609,
+          "spread_pt": 0.00092
+        },
+        {
+          "lipidoid": 11,
+          "fill_y0_pt": 151.2,
+          "outline_y0_pt": 151.2027,
+          "errorbar_stem_origin_y_pt": 151.2027,
+          "spread_pt": 0.00269
+        },
+        {
+          "lipidoid": 12,
+          "fill_y0_pt": 149.04,
+          "outline_y0_pt": 149.0414,
+          "errorbar_stem_origin_y_pt": 149.0414,
+          "spread_pt": 0.0014
+        },
+        {
+          "lipidoid": 13,
+          "fill_y0_pt": 147.84,
+          "outline_y0_pt": 147.8422,
+          "errorbar_stem_origin_y_pt": 147.8422,
+          "spread_pt": 0.00217
+        },
+        {
+          "lipidoid": 14,
+          "fill_y0_pt": 124.44,
+          "outline_y0_pt": 124.4409,
+          "errorbar_stem_origin_y_pt": 124.4409,
+          "spread_pt": 0.00092
+        },
+        {
+          "lipidoid": 15,
+          "fill_y0_pt": 128.76,
+          "outline_y0_pt": 128.7609,
+          "errorbar_stem_origin_y_pt": 128.7609,
+          "spread_pt": 0.00089
+        },
+        {
+          "lipidoid": 16,
+          "fill_y0_pt": 145.32,
+          "outline_y0_pt": 145.3211,
+          "errorbar_stem_origin_y_pt": 145.3211,
+          "spread_pt": 0.0011
+        }
+      ]
+    },
+    "CE_baseline_is_zero_tick": {
+      "criterion": "every bar's BOTTOM must sit on the 0 % major tick within 0.01 pt",
+      "agreement": "16/16",
+      "n_agree": 16,
+      "n_total": 16,
+      "worst_err_pt": 0.00161,
+      "zero_tick_y_pt": 271.6816,
+      "why_it_matters": "a bar chart whose bars do not start at the axis zero is not a bar chart of the quantity it looks like. This is the cheapest possible guard against a shifted origin, which is error class 20's signature."
+    },
+    "CF_bar_to_label_assignment": {
+      "criterion": "each bar's centre x must be NEAREST to the x major tick carrying its own label, beating the runner-up tick by >= 5.0 pt",
+      "agreement": "16/16",
+      "n_agree": 16,
+      "n_total": 16,
+      "worst_margin_pt": 12.3591,
+      "tol_margin_pt": 5.0,
+      "measured_centre_minus_tick_offset_pt": {
+        "max_abs": 0.06073,
+        "values": [
+          0.00109,
+          -0.05849,
+          -0.0011,
+          -0.06069,
+          0.00107,
+          -0.05842,
+          -0.0,
+          -0.06073,
+          0.00111,
+          -0.06067,
+          -3e-05,
+          0.05846,
+          0.00111,
+          0.06072,
+          4e-05,
+          0.05842
+        ],
+        "explanation": "alternating +/-0.06 pt. This is DEVICE QUANTISATION, measured in CH, not a read error: the bar right edges lie on a uniform grid to 0.0011 pt while ticks and left edges alternate about it, and the alternation equals half the 0.1191 pt difference between the file's two bar widths."
+      },
+      "why_it_matters": "this is what makes the bar -> lipidoid-number assignment MEASURED rather than assumed from left-to-right order. A dropped or duplicated bar, or a tick displaced by more than half the 12.48 pt pitch, would break it."
+    },
+    "CG_frame_top_is_110pct": {
+      "criterion": "the plot frame's top rule must land on the 110 % level predicted by the major-tick fit",
+      "frame_top_y_pt": 103.9205,
+      "predicted_110pct_y_pt": 103.9186,
+      "err_pt": 0.00191,
+      "err_px600": 0.0159,
+      "tol_px600": 1.5,
+      "agreement": "1/1",
+      "n_agree": 1,
+      "n_total": 1,
+      "why_this_is_external": "the axis upper limit is a CHOICE the authors made and never printed. 110 % is not a value any measurement would produce and nothing in our read could have been fitted to it."
+    },
+    "CH_one_x_grid": {
+      "criterion": "four independently drawn series (bar right edges, bar left edges, minor x ticks, major x ticks) must share one pitch within 0.01 pt, the right-edge series must be uniform to 0.01 pt, and the plot box must be exactly 16 bins wide",
+      "agreement": "5/5",
+      "n_agree": 5,
+      "n_total": 5,
+      "subchecks": {
+        "right_edge_series_is_an_exact_grid": true,
+        "minor_tick_pitch_agrees": true,
+        "left_edge_pitch_agrees": true,
+        "major_tick_pitch_agrees": true,
+        "plot_box_is_exactly_16_bins_wide": true
+      },
+      "pitch_pt": {
+        "bar_right_edges": 12.479997,
+        "bar_left_edges": 12.48135,
+        "minor_x_ticks": 12.480023,
+        "major_x_ticks": 12.475629
+      },
+      "max_grid_residual_pt": {
+        "bar_right_edges": 0.00111,
+        "bar_left_edges": 0.06942,
+        "minor_x_ticks": 0.06456,
+        "major_x_ticks": 0.09021
+      },
+      "plot_box_width_pt": 199.6795,
+      "sixteen_bins_pt": 199.6799,
+      "box_minus_16_bins_pt": -0.00048,
+      "the_unprinted_number": "the plot box is 199.6795 pt wide and 16 bins at the measured 12.4800 pt pitch is 199.6799 pt -- agreeing to 0.0005 pt. Nobody printed either figure; the authors chose an axis range of exactly 16 bins and the drawing records it. This is external to our read in the way a recomputed marginal is not.",
+      "the_quantisation_this_measures": "bar right edges are uniform to 0.0011 pt; bar left edges, minor ticks and major ticks each alternate about the same grid by up to 0.090 pt. The alternation is half the 0.1191 pt difference between the file's two bar widths (6.2391 / 6.1200), i.e. the generator snapped some series to a coarser device grid. This is why CF uses nearest-tick assignment and not coincidence."
+    }
+  },
+  "checks_failed": [],
+  "values": [
+    {
+      "lipidoid_label": 1,
+      "value": 78.61,
+      "err_low": 74.36,
+      "err_high": 82.86
+    },
+    {
+      "lipidoid_label": 2,
+      "value": 78.29,
+      "err_low": 75.23,
+      "err_high": 81.36
+    },
+    {
+      "lipidoid_label": 3,
+      "value": 85.61,
+      "err_low": 79.0,
+      "err_high": 92.14
+    },
+    {
+      "lipidoid_label": 4,
+      "value": 74.75,
+      "err_low": 71.84,
+      "err_high": 77.59
+    },
+    {
+      "lipidoid_label": 5,
+      "value": 88.6,
+      "err_low": 86.87,
+      "err_high": 90.33
+    },
+    {
+      "lipidoid_label": 6,
+      "value": 99.46,
+      "err_low": 97.73,
+      "err_high": 101.19
+    },
+    {
+      "lipidoid_label": 7,
+      "value": 81.05,
+      "err_low": 77.19,
+      "err_high": 84.98
+    },
+    {
+      "lipidoid_label": 8,
+      "value": 66.26,
+      "err_low": 58.94,
+      "err_high": 73.5
+    },
+    {
+      "lipidoid_label": 9,
+      "value": 87.74,
+      "err_low": 80.58,
+      "err_high": 94.81
+    },
+    {
+      "lipidoid_label": 10,
+      "value": 85.45,
+      "err_low": 76.09,
+      "err_high": 94.89
+    },
+    {
+      "lipidoid_label": 11,
+      "value": 79.0,
+      "err_low": 69.72,
+      "err_high": 88.21
+    },
+    {
+      "lipidoid_label": 12,
+      "value": 80.42,
+      "err_low": 71.21,
+      "err_high": 89.54
+    },
+    {
+      "lipidoid_label": 13,
+      "value": 81.2,
+      "err_low": 71.21,
+      "err_high": 91.28
+    },
+    {
+      "lipidoid_label": 14,
+      "value": 96.55,
+      "err_low": 86.48,
+      "err_high": 106.54
+    },
+    {
+      "lipidoid_label": 15,
+      "value": 93.71,
+      "err_low": 84.67,
+      "err_high": 102.68
+    },
+    {
+      "lipidoid_label": 16,
+      "value": 82.86,
+      "err_low": 75.93,
+      "err_high": 89.7
+    }
+  ],
+  "accounting": {
+    "rows_in_05_values_csv": 18,
+    "per_item_numeric_values_measured": 16,
+    "panels_recorded_without_a_per_item_number": 2,
+    "sum_check": "16 + 2 = 18",
+    "corpus_admissible_yes": 0,
+    "corpus_admissible_no": 18,
+    "admissible_plus_inadmissible_equals_total": true
+  }
+}

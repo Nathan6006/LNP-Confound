@@ -1,0 +1,262 @@
+{
+ "panels": [
+  {
+   "panel": "Fig S2c",
+   "image": "source/si_media/figS2_ID_RLuc.tif",
+   "box_px": {
+    "left": 815.5,
+    "right": 1157.5,
+    "top": 586.5,
+    "bottom": 923.5
+   },
+   "cell_px": {
+    "w": 57.0,
+    "h": 56.167
+   },
+   "gridlines_detected_x": [
+    873.0,
+    929.0,
+    988.0,
+    1043.0,
+    1102.0
+   ],
+   "gridlines_detected_y": [
+    643.0,
+    700.0,
+    756.0,
+    811.5,
+    868.0
+   ],
+   "grid_vs_border_max_disagreement_px": {
+    "x": 1.5,
+    "y": 1.17
+   },
+   "colourbar_px": {
+    "left": 1186.5,
+    "right": 1214.5
+   },
+   "colourbar_ticks_px": [
+    624.5,
+    699.5,
+    774.5,
+    849.25
+   ],
+   "colourbar_tick_values": [
+    4000,
+    3000,
+    2000,
+    1000
+   ],
+   "calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.0749,
+    "origin_px": 624.55,
+    "origin_value": 4000.0,
+    "tick_step_units": -1000.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.1,
+    "tick_residual_tol_px": 2.5
+   },
+   "DRAWN_ZERO": {
+    "_what": "The colourbar's own bottom edge is a round number the authors DREW and never printed. The calibration is fitted ONLY on the four tick notches, so where it puts value 0 is a prediction, not a fit.",
+    "predicted_px_for_value_0": 924.25,
+    "drawn_bar_bottom_px": 923.5,
+    "error_px": 0.75,
+    "error_in_value_units": 10.01
+   },
+   "colourbar_top_value": 4507.8,
+   "lut_distinct_swatches": 192,
+   "lut_tie_merges": [],
+   "lut_band_width_units": {
+    "median": 13.347,
+    "max": 26.693
+   },
+   "match_max_distance": 1.732,
+   "match_n_ambiguous": 36,
+   "cell_flat_fraction_min": 0.916,
+   "n_on_floor_swatch": 9,
+   "n_on_ceiling_swatch": 0
+  },
+  {
+   "panel": "Fig S2e",
+   "image": "source/si_media/figS2_ID_RLuc.tif",
+   "box_px": {
+    "left": 811.5,
+    "right": 1153.5,
+    "top": 1124.5,
+    "bottom": 1463.5
+   },
+   "cell_px": {
+    "w": 57.0,
+    "h": 56.5
+   },
+   "gridlines_detected_x": [
+    869.0,
+    926.0,
+    983.0,
+    1040.0,
+    1098.0
+   ],
+   "gridlines_detected_y": [
+    1182.0,
+    1238.0,
+    1293.0,
+    1351.0,
+    1406.0
+   ],
+   "grid_vs_border_max_disagreement_px": {
+    "x": 1.5,
+    "y": 1.0
+   },
+   "colourbar_px": {
+    "left": 1182.5,
+    "right": 1210.5
+   },
+   "colourbar_ticks_px": [
+    1162.5,
+    1238.0,
+    1313.5,
+    1388.5
+   ],
+   "colourbar_tick_values": [
+    4000,
+    3000,
+    2000,
+    1000
+   ],
+   "calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.0754,
+    "origin_px": 1162.6,
+    "origin_value": 4000.0,
+    "tick_step_units": -1000.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.2,
+    "tick_residual_tol_px": 2.5
+   },
+   "DRAWN_ZERO": {
+    "_what": "The colourbar's own bottom edge is a round number the authors DREW and never printed. The calibration is fitted ONLY on the four tick notches, so where it puts value 0 is a prediction, not a fit.",
+    "predicted_px_for_value_0": 1464.0,
+    "drawn_bar_bottom_px": 1463.5,
+    "error_px": 0.5,
+    "error_in_value_units": 6.636
+   },
+   "colourbar_top_value": 4505.6,
+   "lut_distinct_swatches": 192,
+   "lut_tie_merges": [],
+   "lut_band_width_units": {
+    "median": 13.271,
+    "max": 26.543
+   },
+   "match_max_distance": 1.732,
+   "match_n_ambiguous": 36,
+   "cell_flat_fraction_min": 0.916,
+   "n_on_floor_swatch": 3,
+   "n_on_ceiling_swatch": 0
+  },
+  {
+   "panel": "Fig 4b",
+   "image": "source/pdfimg/fig4_part1_1947x2228.png",
+   "box_px": {
+    "left": 194.5,
+    "right": 704.0,
+    "top": 522.5,
+    "bottom": 1032.5
+   },
+   "cell_px": {
+    "w": 84.917,
+    "h": 85.0
+   },
+   "gridlines_detected_x": [
+    280.0,
+    364.5,
+    451.0,
+    534.5,
+    620.5
+   ],
+   "gridlines_detected_y": [
+    607.0,
+    692.5,
+    777.7,
+    864.0,
+    947.0
+   ],
+   "grid_vs_border_max_disagreement_px": {
+    "x": 1.75,
+    "y": 1.5
+   },
+   "colourbar_px": {
+    "left": 747.0,
+    "right": 789.0
+   },
+   "colourbar_ticks_px": [
+    625.5,
+    727.0,
+    829.0,
+    931.75
+   ],
+   "colourbar_tick_values": [
+    8,
+    6,
+    4,
+    2
+   ],
+   "calibration": {
+    "kind": "linear",
+    "px_per_unit": 51.0375,
+    "origin_px": 625.2,
+    "origin_value": 8.0,
+    "tick_step_units": -2.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.35,
+    "tick_residual_tol_px": 2.5
+   },
+   "DRAWN_ZERO": {
+    "_what": "The colourbar's own bottom edge is a round number the authors DREW and never printed. The calibration is fitted ONLY on the four tick notches, so where it puts value 0 is a prediction, not a fit.",
+    "predicted_px_for_value_0": 1033.5,
+    "drawn_bar_bottom_px": 1032.5,
+    "error_px": 1.0,
+    "error_in_value_units": 0.02
+   },
+   "colourbar_top_value": 10.0,
+   "lut_distinct_swatches": 261,
+   "lut_tie_merges": [
+    {
+     "cell_index": 32,
+     "cell_rgb": [
+      179.0,
+      176.0,
+      216.0
+     ],
+     "swatch_a": [
+      180,
+      177,
+      216
+     ],
+     "swatch_b": [
+      179,
+      175,
+      215
+     ],
+     "band_a": [
+      3.03,
+      3.03
+     ],
+     "band_b": [
+      3.05,
+      3.05
+     ]
+    }
+   ],
+   "lut_band_width_units": {
+    "median": 0.0,
+    "max": 0.196
+   },
+   "match_max_distance": 0.707,
+   "match_n_ambiguous": 36,
+   "cell_flat_fraction_min": 0.881,
+   "n_on_floor_swatch": 0,
+   "n_on_ceiling_swatch": 0
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "_what": "Each check run clean and with a defect seeded. A check is credited only when the AGREEMENT COUNT MOVES -- a seed that merely raises proves the code has an exception, not that the check discriminates.",
+ "n_checks": 14,
+ "n_credited": 14,
+ "n_not_credited": [],
+ "checks": [
+  {
+   "check": "figS7_vs_tableS1_pKa",
+   "measures": "lipidoids whose Figure S7 printed pKa equals Table S1's pKa",
+   "unit": "of 8",
+   "clean": 8,
+   "seeded": 7,
+   "seed": "Table S1's 306O10 pKa nudged by +0.01",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "corpus_full_inchikey_overlap",
+   "measures": "enumerated lipidoids already in data/ by FULL InChIKey",
+   "unit": "of 11",
+   "clean": 6,
+   "seeded": 5,
+   "seed": "one CH2 removed from A306_O10's four decyl arms",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "mass_ladder_one_CnH2n_per_tail_carbon",
+   "measures": "consecutive linear-tail steps equal to exactly 4 x dC x CH2",
+   "unit": "of 9",
+   "clean": 9,
+   "seeded": 7,
+   "seed": "one CH2 subtracted from A306_O11's mass only",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "abstract_mass_identity_O10_vs_Oi10",
+   "measures": "the abstract's claim that 306O10 and 306Oi10 have identical MW",
+   "unit": "of 1",
+   "clean": 1,
+   "seeded": 0,
+   "seed": "Oi10 shortened to a nine-carbon tail",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "panelB_dose_monotonicity",
+   "measures": "Figure S6B lipidoids whose 10 < 50 < 100 ng values increase",
+   "unit": "of 4",
+   "clean": 4,
+   "seeded": 0,
+   "seed": "the 10 ng and 50 ng legend swatches swapped",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "category_assignment_label_right_edge",
+   "measures": "x labels whose right edge is within half a category pitch (6.40 pt) of its assigned tick",
+   "unit": "of 11",
+   "clean": 11,
+   "seeded": 0,
+   "seed": "the category list rotated by one slot",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "mole_percents_sum_to_100",
+   "measures": "the four printed mol% summing to exactly 100",
+   "unit": "of 1",
+   "clean": 1,
+   "seeded": 0,
+   "seed": "46.5 changed to 46.4",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "emit_refuses_a_literal_confidence",
+   "measures": "rows emit_rows produces (F-011 guard: a literal must produce 0)",
+   "unit": "rows",
+   "clean": 11,
+   "seeded": 0,
+   "seed": "confidence passed as the literal string 'high'",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "emit_refuses_a_caveat_with_no_note",
+   "measures": "rows emit_rows produces (F-024 guard)",
+   "unit": "rows",
+   "clean": 11,
+   "seeded": 0,
+   "seed": "confidence='medium' with an empty curation_note",
+   "moved": true,
+   "credited": true
+  },
+  {
+   "check": "axis_loo_is_sharper_than_max_residual",
+   "measures": "max tick-fit residual vs worst leave-one-out residual",
+   "unit": "pt",
+   "clean": {
+    "max_residual": 0.001,
+    "loo_worst": 0.002
+   },
+   "seeded": {
+    "max_residual": "RAISED",
+    "loo_worst": 6.001
+   },
+   "seed": "one y tick moved by +6.0 pt",
+   "moved": true,
+   "credited": true,
+   "note": "axis.calibrate REFUSED the seeded ticks outright (max_residual = 'RAISED'): its uniform-spacing assertion fires before any residual is computed, because a 6 pt shift on a 24.44 pt pitch is not a near-uniform ladder. So on THIS panel the single-bad-tick case never reaches the weak test the brief warns about. loo_residuals also moves, from 0.002 pt to 6.001 pt. The production calibration is NOT seeded: its real max residual is 0.001 pt and its real worst leave-one-out residual is 0.002 pt, both three orders of magnitude inside the 2.5 pt / 1.5 pt tolerances, as they must be for coordinates read out of a content stream rather than off pixels."
+  },
+  {
+   "check": "C10_anchor_gate[clean]",
+   "measures": "make_reference.py exit code, read from returncode",
+   "unit": "exit code",
+   "clean": 0,
+   "seeded": 0,
+   "seed": "none (this row IS the clean run)",
+   "moved": true,
+   "credited": true,
+   "note": ""
+  },
+  {
+   "check": "C10_anchor_gate[swap_tail_length]",
+   "measures": "make_reference.py exit code, read from returncode",
+   "unit": "exit code",
+   "clean": 0,
+   "seeded": 1,
+   "seed": "swap_tail_length",
+   "moved": true,
+   "credited": true,
+   "note": ""
+  },
+  {
+   "check": "C10_anchor_gate[move_an_ester]",
+   "measures": "make_reference.py exit code, read from returncode",
+   "unit": "exit code",
+   "clean": 0,
+   "seeded": 1,
+   "seed": "move_an_ester",
+   "moved": true,
+   "credited": true,
+   "note": "move_an_ester has the IDENTICAL molecular formula and the identical exact mass to every decimal place, so it proves the gate tests connectivity and not mass."
+  },
+  {
+   "check": "C10_anchor_gate[drop_an_arm]",
+   "measures": "make_reference.py exit code, read from returncode",
+   "unit": "exit code",
+   "clean": 0,
+   "seeded": 1,
+   "seed": "drop_an_arm",
+   "moved": true,
+   "credited": true,
+   "note": ""
+  }
+ ]
+}

@@ -39,6 +39,15 @@ confound/
 │   ├── audit.py                  INDEPENDENT audit (C1-C14), not a rerun of the builder
 │   ├── check_docs.py             C15: numbers CLAUDE.md asserts, vs the corpus
 │   ├── fetch_esummary.py         refreshes the NCBI cross-check cache (F-023)
+│   ├── PIPELINE_V2.md            ← HOW TO CURATE A PAPER (§3). Read before
+│   │                               starting one; what changed 2026-11-09 and why.
+│   ├── MODEL_EVAL.md             ← which model for which review role, measured
+│   ├── BROWSER_ACQUISITION.md    ← measured publisher behaviour: which need a
+│   │                               browser, which need a login, which refuse both
+│   ├── test_lib.py               seeded-mutation suite for curation/lib (47 tests)
+│   ├── new_curation.py           scaffolds a curation folder + the intake gate
+│   ├── check_reagent_crosscheck.py  C17: one reagent name, one structure
+│   ├── check_anchor_coverage.py  C18: C10 anchor coverage + copy posture
 │   ├── dataset_validation.json / audit_findings.json
 │   └── superseded/               pre-2026-10-28 corpus files + the official LNPDB download
 ├── curation/                 ← one folder per paper curated BY US
@@ -611,6 +620,23 @@ of being rediscovered.
 - **Verification is a stage, not a courtesy** (§6): Tier 1 automated every build, Tier 2 one briefed adversarial reviewer per paper, Tier 3 only if Tier 2 found something structural.
 - **Every bug found becomes a permanent check** in `provenance/ERROR_CLASSES.md`. That file only grows.
 - **A corpus-wide review runs every 3-5 merged papers** (§6 Tier 4, procedure in `provenance/review/REVIEW_PROGRAM.md`). Per-paper review cannot see cross-paper drift. Reviewers are read-only; a validation agent checks every repair before it is applied.
+- **Use `curation/lib/` for anything geometric or structural; do not write a
+  fourth copy.** Per-paper extraction code was rewritten from scratch in every
+  folder — 50 scripts, 9,606 lines — and the same geometric defect (error class
+  20) recurred in four independently written files, once in a sibling of a
+  folder where it had already been fixed (F-033). That is **error class 49**.
+  `curation/lib/` now holds one audited implementation per hazard (`axis`,
+  `bars`, `heatmap`, `chains`, `assemble`, `reagents`, `emit`), each refusing
+  rather than returning a plausible number, with 24 seeded mutations and 2
+  historical replays in `provenance/test_lib.py`. Scaffold a new paper with
+  `python3 -I provenance/new_curation.py <folder> <pdf> [si...]`, and fill
+  `00_value_sources.json` BEFORE writing any digitiser: the two curations that
+  took values from a publisher Source Data file and an author repository have
+  zero digitisation defects between them, against eight for the four that
+  digitised. How to curate a paper now: `provenance/PIPELINE_V2.md` §3.
+- **Do not retro-fit a merged curation onto `curation/lib/`.** It changes
+  nothing in `data/` and destroys the audit trail its findings were adjudicated
+  against. Migrate only when a finding sends you into that file anyway.
 - Inclusion/exclusion criteria are meant to be **a priori, frozen, metric-blind** — document them in Methods when curation is finalized.
 
 ---

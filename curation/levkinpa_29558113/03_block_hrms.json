@@ -1,0 +1,63 @@
+{
+ "_what": "Each enumerated BLOCK structure against the SI's own printed calcd [M+H]+. Mass cannot see connectivity -- this tests composition only.",
+ "electron_mass_subtracted": true,
+ "worst_abs_delta_mDa": 0.77,
+ "checks": [
+  {
+   "block": "T14",
+   "formula": "C18H33NO2S",
+   "our_MplusH": 328.2305,
+   "printed_calcd": 328.2312,
+   "delta_mDa": -0.72
+  },
+  {
+   "block": "T16",
+   "formula": "C20H37NO2S",
+   "our_MplusH": 356.2618,
+   "printed_calcd": 356.2625,
+   "delta_mDa": -0.72
+  },
+  {
+   "block": "T18",
+   "formula": "C22H41NO2S",
+   "our_MplusH": 384.2931,
+   "printed_calcd": 384.2938,
+   "delta_mDa": -0.72
+  },
+  {
+   "block": "T18U",
+   "formula": "C22H39NO2S",
+   "our_MplusH": 382.2774,
+   "printed_calcd": 382.2782,
+   "delta_mDa": -0.77
+  },
+  {
+   "block": "PY12",
+   "formula": "C17H29NS2",
+   "our_MplusH": 312.1814,
+   "printed_calcd": 312.1821,
+   "delta_mDa": -0.68
+  },
+  {
+   "block": "PY14",
+   "formula": "C19H33NS2",
+   "our_MplusH": 340.2127,
+   "printed_calcd": 340.2134,
+   "delta_mDa": -0.68
+  },
+  {
+   "block": "PY16",
+   "formula": "C21H37NS2",
+   "our_MplusH": 368.244,
+   "printed_calcd": 368.2447,
+   "delta_mDa": -0.68
+  },
+  {
+   "block": "PY18",
+   "formula": "C23H41NS2",
+   "our_MplusH": 396.2753,
+   "printed_calcd": 396.276,
+   "delta_mDa": -0.68
+  }
+ ]
+}

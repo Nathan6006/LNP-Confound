@@ -1,0 +1,13 @@
+{
+ "bars_digitised_total": 118,
+ "bars_read": 109,
+ "bars_refused": 9,
+ "values_rows_in_05": 131,
+ "values_from_panels": 118,
+ "non_delivery_panels_listed": 13,
+ "corpus_admissible_yes": 75,
+ "corpus_admissible_no": 56,
+ "rows_in_06": 75,
+ "rows_with_a_caveat": 75,
+ "sums": true
+}

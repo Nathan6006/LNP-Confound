@@ -1,0 +1,124 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser was written.",
+ "_why": "The two curations that took their values from a publisher Source Data file (NG_2025) and from the authors' own repository (WT_2026) have ZERO digitisation defects between them. The four that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+
+ "tier_1_to_4_sweep": {
+  "_what": "What was actually looked at, and what it contained. Recorded so a reviewer can re-run the same four checks instead of taking the 5_pixels verdict on trust.",
+  "1_publisher_source_data": {
+   "result": "NONE EXISTS",
+   "evidence": "The PMC JATS record lists exactly ONE supplementary-material element for this article: <media xlink:href=\"SMLL-21-2405618-s001.docx\"/>, which is the SI Word file already held. Wiley's article landing page lists the same single supplement. There is no Source Data file, no xlsx, no csv."
+  },
+  "2_si_tables": {
+   "result": "EXHAUSTED -- three tables, NONE of which carries a delivery value",
+   "evidence": "word/document.xml holds exactly three <w:tbl> elements, all read in full: Table S1 = substructure fingerprint dictionary (19 rows: FP bit, description, SMARTS); Table S2 = composition of LNP types 1-6 (N/P ratio, mass ratio, molar ratios); Table S3 = zeta potential in mV for the 36 selected LNPs plus a positive control. Zeta potential is a physicochemical property, not a delivery measurement, and the corpus's own in-vivo definition explicitly excludes diameter/zeta/uptake (CLAUDE.md s9, 2026-07-23). So the SI tables supply formulation metadata and nothing else.",
+   "used_for": "Table S2 supplies every formulation column emitted (N/P, mass ratio, molar ratios, phospholipid identity). Table S3 is held but NOT emitted as a value row."
+  },
+  "3_author_repository": {
+   "result": "NONE EXISTS",
+   "evidence": "provenance tooling find_repo.py run on 2026-11-10 with --doi 10.1002/smll.202405618 --pmid 39264000 --title 'Rational Design Lipid Nanoparticles' --author Nam: six GitHub queries (DOI code search, PMID code search, four repo searches). Zero candidate repository mentions this DOI or PMID; the surviving candidates (nahisaho/aira_experiments, 9000git/KAN-LNP, Noora68/PLiCat, SeongminHA/...exosome-mimetic...) are unrelated projects matched on the generic phrase 'rational design lipid'. The paper's own Data Availability Statement reads, verbatim: 'The data that support the findings of this study are available from the corresponding author upon reasonable request.' -- i.e. the authors state there is no deposit.",
+   "artifact": "find_repo output reproduced in 07_qc.json under checks.repo_sweep"
+  },
+  "4_pdf_text_table": {
+   "result": "NONE EXISTS",
+   "evidence": "The PMC article PDF (9 pages) has no tables at all: the article's three tables are the SI's, and every figure in the PDF is an embedded raster (each page carries at most 9 drawing paths, at most 7 of them stroked, so there is no vector text table and nothing for chains.vector_bonds to read either)."
+  }
+ },
+
+ "panels": [
+  {
+   "panel": "Fig S2c -- 'Relative expression of LNP type 1', 6 FH x 6 (T,EB) heatmap",
+   "supplies": "36 I.D. (intradermal) Renilla-luciferase relative expression values, fold change vs the Nil group, for the 36 selected ionizable lipids formulated as LNP type 1 (N/P 12, mass 1, IL 0.5 / DSPC 0.1 / chol 0.385 / DMG-PEG 0.015).",
+   "tier": "5_pixels",
+   "locator": "source/si_media/figS2_ID_RLuc.tif, 1380x1530 px, 220 dpi, lossless TIFF; panel c occupies x 815-1158, y 586-924; its colourbar x 1186-1215, same y extent.",
+   "why_tiers_1_to_4_failed": "Tiers 1, 3 and 4 do not exist for this paper (see tier_1_to_4_sweep: no Source Data element in the JATS, no repository found by a six-query GitHub sweep, Data Availability says 'upon reasonable request', and the PDF contains no text tables). Tier 2 was exhausted: the SI's only three tables are the fingerprint dictionary, the LNP composition table and a zeta-potential table -- none of them holds a delivery value. The per-lipid I.D. expression exists in this paper ONLY as a drawn heatmap.",
+   "verified_against": "(a) the colourbar's own undrawn zero: the fit through the four detected tick notches puts value 0 at y=923.50 px and the drawn bar bottom is at y=923.5 -- 0.2 px, i.e. 2.7 fold-change units; (b) Fig 4c, an INDEPENDENT encoding of the same quantity as ln(I.D. expression) on a scatter x-axis; (c) the asterisk annotations drawn on the cells themselves, which must be monotone in the read value within an FH column."
+  },
+  {
+   "panel": "Fig S2e -- 'Relative expression of LNP type 4', 6 FH x 6 (T,EB) heatmap",
+   "supplies": "36 I.D. Renilla-luciferase relative expression values (fold change vs Nil) for the same 36 lipids formulated as LNP type 4 (N/P 6, mass 1, IL 0.25 / DOPE 0.25 / chol 0.485 / DMG-PEG 0.015) -- the composition the paper adopts for all later experiments.",
+   "tier": "5_pixels",
+   "locator": "source/si_media/figS2_ID_RLuc.tif; panel e x 811-1154, y 1124-1464; colourbar x 1182-1211.",
+   "why_tiers_1_to_4_failed": "identical to Fig S2c above.",
+   "verified_against": "same three checks as Fig S2c; the zero prediction is y=1463.30 against a drawn bar bottom of 1463.5."
+  },
+  {
+   "panel": "Fig 4b -- 'Relative human EPO expression', 6 FH x 6 (T,EB) heatmap",
+   "supplies": "36 I.M. (intramuscular) serum human-EPO relative expression values, fold change vs the Nil group, 6 h post-injection, 10 ug hEPO mRNA per mouse, LNP type 4 composition.",
+   "tier": "5_pixels",
+   "locator": "source/pdfimg/fig4_part1_1947x2228.png -- the article PDF's own embedded figure stream, LOSSLESS PNG at 1947 px wide (the Wiley -m.jpg of the same figure is 1367 px and lossy, and PMC's bin/ route served an HTML error page).",
+   "why_tiers_1_to_4_failed": "identical to Fig S2c above. This is a main-text panel; there is no table of it anywhere in the article or SI.",
+   "verified_against": "(a) its colourbar's own undrawn zero; (b) Fig 4c, which plots ln(I.M. expression) against ln(I.D. expression) for these same 36 LNPs and prints r = 0.7580 -- so the pair of heatmaps must reproduce that correlation coefficient without ever having been fitted to it."
+  },
+  {
+   "panel": "Fig 4c -- 'Correlation graph between I.D. and I.M. expression levels'",
+   "supplies": "NO ROWS. Used only as a CHECK: it is an independent encoding of the two heatmaps above, as ln(I.D.) on x and ln(I.M.) on y, with r and p printed. Its points carry no lipid labels, so nothing is assignable from it.",
+   "tier": "5_pixels",
+   "locator": "source/pdfimg/fig4_part1_1947x2228.png, panel c.",
+   "why_tiers_1_to_4_failed": "n/a -- supplies no emitted value.",
+   "verified_against": "n/a -- it IS the verification."
+  },
+  {
+   "panel": "Fig 2a-l -- statistics over all 213 LNPs",
+   "supplies": "NO ROWS. Twelve panels of box plots and scatter over the full 213-LNP screen, with group sizes printed on every panel. Used ONLY as a check on the library's size and composition breakdown.",
+   "tier": "5_pixels",
+   "locator": "source/pdfimg/fig2_1574x2377.jpeg",
+   "why_tiers_1_to_4_failed": "n/a -- supplies no emitted value. The individual points in 2d-2f are the 213 LNPs' Log(I.D. expression), but they are unlabelled, so no point can be attached to a lipid.",
+   "verified_against": "The nine printed group-size sets each sum to 213 and are mutually consistent with Table S2's six LNP types; reproduced in 07_qc.json."
+  },
+  {
+   "panel": "Table S2 -- composition of various lipid nanoparticles",
+   "supplies": "Formulation metadata for every emitted row: N/P ratio, mass ratio, and the molar ratios of ionizable lipid, phospholipid (DSPC or DOPE), cholesterol and DMG-PEG2000, for LNP types 1-6.",
+   "tier": "2_si_tables",
+   "locator": "the 2nd <w:tbl> in word/document.xml of the SI .docx; 8 rows incl. two header rows.",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "Fig 2g-2l's printed group sizes, which partition 213 by exactly these six compositions and reconcile to the row: type1 n=76, type2 n=25, type3 n=26, type4 n=76, type5 n=3, type6 n=7, sum 213."
+  },
+  {
+   "panel": "Fig 3a -- 'Schematic diagram of the 36 ionizable lipids'",
+   "supplies": "NO VALUES. The drawn structures of the six functional heads FH-1..FH-6, the three ester bridges EB-5..EB-7 and the two tails T-1, T-2. This is the ONLY place in the paper where FH-1, FH-2, FH-4 and FH-6 are drawn at all.",
+   "tier": "5_pixels",
+   "locator": "source/pdfimg/fig3_1590x2450.png -- lossless PNG, the article PDF's own embedded stream.",
+   "why_tiers_1_to_4_failed": "n/a for values. For the structures: the SI's synthetic procedures name the reagents for FH-5 (3,5-dihydroxybenzoic acid), FH-3 (no head; the free primary alcohol), EB-5/6/7 (glutaric/adipic/pimelic anhydride) and T-1/T-2 (2-hexyl-1-decanol / 2-octyl-1-dodecanol), so those blocks come from NAMED REAGENTS and not from pixels. FH-1, FH-2, FH-4 and FH-6 appear in no procedure, no reagent list, no HRMS and no NMR assignment, so the drawing is the only evidence that exists.",
+   "verified_against": "Fig 3c, Fig 4d and Fig 4f each redraw the same six heads as panel insets -- three further renderings; and FP3 (tertiary carbons) = 3 on exactly 36 of 213 LNPs in Fig 2b, which is the count of FH-1 LNPs and independently confirms that FH-1 is branched at the alpha carbon while FH-2..FH-6 are not."
+  },
+  {
+   "panel": "Fig 3c -- Encapsulation Efficiency (EE %)",
+   "supplies": "NO ROWS. EE is a formulation property, not a delivery measurement; the corpus excludes it on the same grounds as zeta potential.",
+   "tier": "5_pixels",
+   "locator": "source/pdfimg/fig3_1590x2450.png, panel c.",
+   "why_tiers_1_to_4_failed": "n/a -- supplies no emitted value.",
+   "verified_against": ""
+  },
+  {
+   "panel": "Fig 4f / 4g and Fig S4 -- total IgG, IFN-gamma ELISpot, IgG1/IgG2a, TNF-alpha, IL-2",
+   "supplies": "NO ROWS AS CURATED. These are the VACCINE readouts (antibody titre and T-cell response) and they are a different experiment from the expression screen -- different mRNA (HPV E6/E7 rather than RLuc or hEPO), different schedule (prime/boost one week apart, read one week after the boost, rather than a single injection read at 6 h), different route and different units. They are recorded here so the distinction is on the record, not because they were skipped by accident.",
+   "tier": "5_pixels",
+   "locator": "source/pdfimg/fig4_part2_1883x2450.jpeg; source/si_media/figS4_immune.tif",
+   "why_tiers_1_to_4_failed": "n/a -- not emitted. See DECISIONS.md D-3: these panels cover a SUBSET of the 36 (the figure groups them), the y-axis units are printed per panel and must not be converted, and whether an antibody titre belongs in a delivery corpus at all is not this curation's call.",
+   "verified_against": ""
+  },
+  {
+   "panel": "Fig S2 panels b and d -- pie charts of the LNP type 1 and type 4 molar ratios",
+   "supplies": "NO ROWS. Printed percentages only.",
+   "tier": "5_pixels",
+   "locator": "source/si_media/figS2_ID_RLuc.tif",
+   "why_tiers_1_to_4_failed": "n/a",
+   "verified_against": "The printed percentages (50.00/10.00/38.50/1.50 and 25.00/25.00/48.50/1.50) must equal Table S2's type 1 and type 4 molar ratios exactly. They do; see 07_qc.json check `pie_vs_tableS2`. This is what PINS which LNP type each Fig S2 heatmap belongs to."
+  }
+ ],
+
+ "summary": {
+  "every_emitted_value_is_tier": "5_pixels",
+  "every_emitted_formulation_field_is_tier": "2_si_tables",
+  "rows_this_makes_available": 108,
+  "note": "108 = 36 lipids x (Fig S2c + Fig S2e + Fig 4b). The paper's headline screen is 213 LNPs; only these 108 measurements are published per-member anywhere. See 08_contradictions.csv row 1 and DECISIONS.md D-1 for the 213-vs-36 reconciliation."
+ }
+}

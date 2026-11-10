@@ -1,0 +1,766 @@
+{
+ "qc": {
+  "S22C": {
+   "image": "figs/p34_x281.jpeg",
+   "image_px": [
+    1428,
+    539
+   ],
+   "axis_col": 1119,
+   "baseline_row": 380,
+   "calibration": {
+    "ticks_px": [
+     103.933,
+     172.845,
+     241.856,
+     310.887,
+     379.932
+    ],
+    "tick_values": [
+     100000000.0,
+     10000000.0,
+     1000000.0,
+     100000.0,
+     10000.0
+    ],
+    "tick_spacing_px": [
+     68.912,
+     69.012,
+     69.03,
+     69.045
+    ],
+    "loo_residuals_px": [
+     0.126,
+     0.0596,
+     0.0428,
+     0.0112,
+     0.0836
+    ],
+    "loo_worst_px": 0.126,
+    "loo_tol_px": 1.5,
+    "kind": "log10",
+    "px_per_unit": 69.004,
+    "origin_px": 103.882,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.0504,
+    "tick_residual_tol_px": 2.5
+   },
+   "bar_windows": [
+    [
+     1146,
+     1182
+    ],
+    [
+     1208,
+     1244
+    ],
+    [
+     1271,
+     1306
+    ],
+    [
+     1333,
+     1369
+    ]
+   ],
+   "bars": [
+    {
+     "IL_name": "A5-CE-C10",
+     "value": 4472484.85743,
+     "row": 197,
+     "coverage": 0.9815,
+     "left_row": 197,
+     "right_row": 197,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 36
+    },
+    {
+     "IL_name": "A5-C10",
+     "value": 271161.81497,
+     "row": 281,
+     "coverage": 1.0,
+     "left_row": 281,
+     "right_row": 281,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 36
+    },
+    {
+     "IL_name": "A5-CE-C7-6",
+     "value": 1487016.8355,
+     "row": 230,
+     "coverage": 0.9619,
+     "left_row": 230,
+     "right_row": 230,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 35
+    },
+    {
+     "IL_name": "A5-C7-6",
+     "value": 1487016.8355,
+     "row": 230,
+     "coverage": 0.963,
+     "left_row": 230,
+     "right_row": 230,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 36
+    }
+   ]
+  },
+  "S24_left": {
+   "image": "figs/p36_x285.jpeg",
+   "axis_col": 82,
+   "baseline_row": 350,
+   "calibration": {
+    "ticks_px": [
+     55.88,
+     129.095,
+     202.909,
+     276.229,
+     350.0
+    ],
+    "tick_values": [
+     100000000.0,
+     10000000.0,
+     1000000.0,
+     100000.0,
+     10000.0
+    ],
+    "tick_spacing_px": [
+     73.214,
+     73.814,
+     73.32,
+     73.771
+    ],
+    "loo_residuals_px": [
+     0.3311,
+     0.2723,
+     0.1082,
+     0.1874,
+     0.2568
+    ],
+    "loo_worst_px": 0.3311,
+    "loo_tol_px": 1.5,
+    "kind": "log10",
+    "px_per_unit": 73.5374,
+    "origin_px": 55.748,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.1906,
+    "tick_residual_tol_px": 2.5
+   },
+   "bar_windows": [
+    [
+     117,
+     164
+    ],
+    [
+     198,
+     244
+    ]
+   ],
+   "bars": [
+    {
+     "IL_name": "A5-CE-C7-6",
+     "value": 56467329.63563,
+     "row": 74,
+     "coverage": 0.9929,
+     "left_row": 74,
+     "right_row": 74,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 47
+    },
+    {
+     "IL_name": "A5-C7-6",
+     "value": 22071982.78573,
+     "row": 104,
+     "coverage": 0.9928,
+     "left_row": 104,
+     "right_row": 104,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 46
+    }
+   ]
+  },
+  "S24_right": {
+   "image": "figs/p36_x285.jpeg",
+   "axis_col": 424,
+   "baseline_row": 352,
+   "calibration": {
+    "ticks_px": [
+     58.593,
+     131.73,
+     205.0,
+     278.814,
+     352.0
+    ],
+    "tick_values": [
+     100000000.0,
+     10000000.0,
+     1000000.0,
+     100000.0,
+     10000.0
+    ],
+    "tick_spacing_px": [
+     73.137,
+     73.27,
+     73.814,
+     73.186
+    ],
+    "loo_residuals_px": [
+     0.3632,
+     0.1539,
+     0.2843,
+     0.2814,
+     0.0177
+    ],
+    "loo_worst_px": 0.3632,
+    "loo_tol_px": 1.5,
+    "kind": "log10",
+    "px_per_unit": 73.3898,
+    "origin_px": 58.448,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.2275,
+    "tick_residual_tol_px": 2.5
+   },
+   "bar_windows": [
+    [
+     459,
+     506
+    ],
+    [
+     540,
+     586
+    ]
+   ],
+   "bars": [
+    {
+     "IL_name": "A5-CE-C10",
+     "value": 22493674.43134,
+     "row": 106,
+     "coverage": 1.0,
+     "left_row": 106,
+     "right_row": 106,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 47
+    },
+    {
+     "IL_name": "A5-C10",
+     "value": 158187.84851,
+     "row": 264,
+     "coverage": 0.9928,
+     "left_row": 264,
+     "right_row": 264,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 46
+    }
+   ]
+  },
+  "S5": {
+   "image": "figs/p17_x247.jpeg",
+   "axis_col": 162,
+   "baseline_row": 435,
+   "calibration": {
+    "ticks_px": [
+     29.429,
+     164.821,
+     300.451,
+     435.235
+    ],
+    "tick_values": [
+     1000.0,
+     100.0,
+     10.0,
+     1.0
+    ],
+    "tick_spacing_px": [
+     135.393,
+     135.63,
+     134.784
+    ],
+    "loo_residuals_px": [
+     0.3269,
+     0.0147,
+     0.4496,
+     0.688
+    ],
+    "loo_worst_px": 0.688,
+    "loo_tol_px": 1.5,
+    "kind": "log10",
+    "px_per_unit": 135.3049,
+    "origin_px": 29.527,
+    "origin_value": 1000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.3147,
+    "tick_residual_tol_px": 2.5
+   },
+   "marker_windows": [
+    [
+     200,
+     216
+    ],
+    [
+     264,
+     279
+    ],
+    [
+     328,
+     343
+    ],
+    [
+     391,
+     407
+    ],
+    [
+     455,
+     471
+    ],
+    [
+     519,
+     535
+    ],
+    [
+     582,
+     598
+    ],
+    [
+     646,
+     662
+    ],
+    [
+     710,
+     726
+    ],
+    [
+     774,
+     790
+    ],
+    [
+     838,
+     853
+    ]
+   ],
+   "centroid_vs_bbox_worst_px": 0.685,
+   "points": [
+    {
+     "IL_name": "A5-CE-C6",
+     "value": 8.19287,
+     "centroid_row": 311.849,
+     "bbox_mid_row": 311.5,
+     "centroid_minus_bboxmid_px": 0.349,
+     "marker_h_px": 16,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C8",
+     "value": 6.20446,
+     "centroid_row": 328.185,
+     "bbox_mid_row": 327.5,
+     "centroid_minus_bboxmid_px": 0.685,
+     "marker_h_px": 16,
+     "marker_w_px": 15
+    },
+    {
+     "IL_name": "A5-CE-C9",
+     "value": 19.85017,
+     "centroid_row": 259.848,
+     "bbox_mid_row": 260.0,
+     "centroid_minus_bboxmid_px": -0.152,
+     "marker_h_px": 17,
+     "marker_w_px": 15
+    },
+    {
+     "IL_name": "A5-CE-C10",
+     "value": 5.59542,
+     "centroid_row": 334.256,
+     "bbox_mid_row": 334.0,
+     "centroid_minus_bboxmid_px": 0.256,
+     "marker_h_px": 17,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C5-4",
+     "value": 78.42763,
+     "centroid_row": 179.11,
+     "bbox_mid_row": 179.0,
+     "centroid_minus_bboxmid_px": 0.11,
+     "marker_h_px": 17,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C6-5",
+     "value": 43.90137,
+     "centroid_row": 213.206,
+     "bbox_mid_row": 213.0,
+     "centroid_minus_bboxmid_px": 0.206,
+     "marker_h_px": 17,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C7-6",
+     "value": 16.27701,
+     "centroid_row": 271.509,
+     "bbox_mid_row": 271.5,
+     "centroid_minus_bboxmid_px": 0.009,
+     "marker_h_px": 16,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C7-7",
+     "value": 7.76266,
+     "centroid_row": 315.019,
+     "bbox_mid_row": 315.0,
+     "centroid_minus_bboxmid_px": 0.019,
+     "marker_h_px": 17,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C8-7",
+     "value": 2.48686,
+     "centroid_row": 381.908,
+     "bbox_mid_row": 382.0,
+     "centroid_minus_bboxmid_px": -0.092,
+     "marker_h_px": 17,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C8-8",
+     "value": 1.6022,
+     "centroid_row": 407.742,
+     "bbox_mid_row": 407.5,
+     "centroid_minus_bboxmid_px": 0.242,
+     "marker_h_px": 16,
+     "marker_w_px": 16
+    },
+    {
+     "IL_name": "A5-CE-C10-6",
+     "value": 7.69224,
+     "centroid_row": 315.554,
+     "bbox_mid_row": 316.0,
+     "centroid_minus_bboxmid_px": -0.446,
+     "marker_h_px": 17,
+     "marker_w_px": 15
+    }
+   ]
+  },
+  "S23A": {
+   "image": "figs/p35_x283.jpeg",
+   "axis_col": 157,
+   "baseline_row": 337,
+   "calibration": {
+    "ticks_px": [
+     75.553,
+     127.828,
+     180.125,
+     232.319,
+     284.993,
+     336.909
+    ],
+    "tick_values": [
+     25.0,
+     20.0,
+     15.0,
+     10.0,
+     5.0,
+     0.0
+    ],
+    "tick_spacing_px": [
+     52.275,
+     52.297,
+     52.194,
+     52.674,
+     51.916
+    ],
+    "loo_residuals_px": [
+     0.0271,
+     0.0156,
+     0.0165,
+     0.1444,
+     0.3641,
+     0.2661
+    ],
+    "loo_worst_px": 0.3641,
+    "loo_tol_px": 1.5,
+    "kind": "linear",
+    "px_per_unit": 10.4598,
+    "origin_px": 75.54,
+    "origin_value": 25.0,
+    "tick_step_units": -5.0,
+    "n_ticks": 6,
+    "tick_fit_residual_px": 0.2566,
+    "tick_residual_tol_px": 2.5
+   },
+   "bar_windows": [
+    [
+     182,
+     216
+    ],
+    [
+     241,
+     275
+    ],
+    [
+     299,
+     334
+    ],
+    [
+     358,
+     392
+    ]
+   ],
+   "bars": [
+    {
+     "IL_name": "A5-C10",
+     "value": 11.5715,
+     "row": 216,
+     "coverage": 1.0,
+     "left_row": 216,
+     "right_row": 216,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 34
+    },
+    {
+     "IL_name": "A5-CE-C10",
+     "value": 11.95392,
+     "row": 212,
+     "coverage": 0.9902,
+     "left_row": 212,
+     "right_row": 212,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 34
+    },
+    {
+     "IL_name": "A5-C7-6",
+     "value": 7.17372,
+     "row": 262,
+     "coverage": 0.9905,
+     "left_row": 261,
+     "right_row": 262,
+     "flank_delta_px": 1.0,
+     "frac_used": 0.9,
+     "width_px": 35
+    },
+    {
+     "IL_name": "A5-CE-C7-6",
+     "value": 11.18908,
+     "row": 220,
+     "coverage": 0.9804,
+     "left_row": 220,
+     "right_row": 220,
+     "flank_delta_px": 0.0,
+     "frac_used": 0.9,
+     "width_px": 34
+    }
+   ]
+  },
+  "panel_disagreement_S5_vs_S23A": {
+   "quantity": "spleen/liver average radiance efficiency ratio",
+   "shared_lipids": [
+    "A5-CE-C10",
+    "A5-CE-C7-6"
+   ],
+   "per_lipid": {
+    "A5-CE-C10": {
+     "S5": 5.5954,
+     "S23A": 11.9539,
+     "ratio_S23A_over_S5": 2.1364
+    },
+    "A5-CE-C7-6": {
+     "S5": 16.277,
+     "S23A": 11.1891,
+     "ratio_S23A_over_S5": 0.6874
+    }
+   },
+   "S5_orders": "A5-CE-C7-6 above A5-CE-C10",
+   "S23A_orders": "A5-CE-C10 above A5-CE-C7-6",
+   "rank_inverted": true,
+   "note": "NOT POOLED. Recorded in 08_contradictions.csv."
+  },
+  "S24_two_panel_scale_check": {
+   "left_px_per_decade": 73.5374,
+   "right_px_per_decade": 73.3898,
+   "relative_difference": 0.002009,
+   "left_origin_px": 55.748,
+   "right_origin_px": 58.448,
+   "note": "The two panels share NO lipid, so no per-lipid ratio between them can be measured. Their scales agree but their origins differ, so they are calibrated and reported separately and never pooled into one block."
+  }
+ },
+ "rows": [
+  {
+   "panel": "S22C",
+   "page": 34,
+   "IL_name": "A5-CE-C10",
+   "value": 4472484.8574319,
+   "unit": "RLU"
+  },
+  {
+   "panel": "S22C",
+   "page": 34,
+   "IL_name": "A5-C10",
+   "value": 271161.8149670248,
+   "unit": "RLU"
+  },
+  {
+   "panel": "S22C",
+   "page": 34,
+   "IL_name": "A5-CE-C7-6",
+   "value": 1487016.835497998,
+   "unit": "RLU"
+  },
+  {
+   "panel": "S22C",
+   "page": 34,
+   "IL_name": "A5-C7-6",
+   "value": 1487016.835497998,
+   "unit": "RLU"
+  },
+  {
+   "panel": "S24_left",
+   "page": 36,
+   "IL_name": "A5-CE-C7-6",
+   "value": 56467329.63563001,
+   "unit": "p/sec/cm2/sr"
+  },
+  {
+   "panel": "S24_left",
+   "page": 36,
+   "IL_name": "A5-C7-6",
+   "value": 22071982.785730533,
+   "unit": "p/sec/cm2/sr"
+  },
+  {
+   "panel": "S24_right",
+   "page": 36,
+   "IL_name": "A5-CE-C10",
+   "value": 22493674.43134348,
+   "unit": "p/sec/cm2/sr"
+  },
+  {
+   "panel": "S24_right",
+   "page": 36,
+   "IL_name": "A5-C10",
+   "value": 158187.8485073019,
+   "unit": "p/sec/cm2/sr"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C6",
+   "value": 8.19286868493216,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C8",
+   "value": 6.204457925965188,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C9",
+   "value": 19.850165028813844,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C10",
+   "value": 5.5954247440328055,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C5-4",
+   "value": 78.42762905060364,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C6-5",
+   "value": 43.90136896654816,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C7-6",
+   "value": 16.277007586506812,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C7-7",
+   "value": 7.762659928136531,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C8-7",
+   "value": 2.486855977670315,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C8-8",
+   "value": 1.6021985195032942,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S5",
+   "page": 17,
+   "IL_name": "A5-CE-C10-6",
+   "value": 7.69223928010817,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S23A",
+   "page": 35,
+   "IL_name": "A5-C10",
+   "value": 11.571500050654734,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S23A",
+   "page": 35,
+   "IL_name": "A5-CE-C10",
+   "value": 11.953915803498598,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S23A",
+   "page": 35,
+   "IL_name": "A5-C7-6",
+   "value": 7.173718892950298,
+   "unit": "ratio_spleen_over_liver"
+  },
+  {
+   "panel": "S23A",
+   "page": 35,
+   "IL_name": "A5-CE-C7-6",
+   "value": 11.18908429781087,
+   "unit": "ratio_spleen_over_liver"
+  }
+ ]
+}

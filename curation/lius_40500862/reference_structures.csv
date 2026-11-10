@@ -1,0 +1,10 @@
+lipid_name,reference_SMILES,source_figure,read_on,read_by,expected_mismatch,note
+A5-CE-C10,CCCCCCCCCCOC(=O)OCCN(CCO)CCN(CCOC(=O)OCCCCCCCCCC)CCOC(=O)OCCCCCCCCCC,"Figure S18 (SI p.30), upper left",2026-11-10,"curation agent, Figure S18 at 200 dpi",,"Three n-decyl carbonate tails (2 + 1 across the two nitrogens) and one free 2-hydroxyethyl arm, exactly as drawn."
+A5-C10,CCCCCCCCCCC(=O)OCCN(CCO)CCN(CCOC(=O)CCCCCCCCCC)CCOC(=O)CCCCCCCCCC,"Figure S18 (SI p.30), upper right",2026-11-10,"curation agent, Figure S18 at 200 dpi",,"The carboxylate analog: undecanoyl esters, one oxygen at the linker instead of two. Drawn beside A5-CE-C10 for that contrast."
+A5-CE-C7-6,CCCCCCC(CCCCCC)OC(=O)OCCN(CCO)CCN(CCO)CCOC(=O)OC(CCCCCC)CCCCCC,"Figure S18 (SI p.30), lower left",2026-11-10,"curation agent, Figure S18 at 200 dpi",,"Two tridecan-7-yl carbonate tails, ONE PER NITROGEN, two free hydroxyethyl arms. Confirms the regiochemistry Figure S12 asserts from its two 13C peaks at 52.93 and 52.67 ppm."
+A5-C7-6,CCCCCCC(CCCCCC)C(=O)OCCN(CCO)CCN(CCO)CCOC(=O)C(CCCCCC)CCCCCC,"Figure S18 (SI p.30), lower right",2026-11-10,"curation agent, Figure S18 at 200 dpi",,"The carboxylate analog, 2-hexyloctanoyl esters. Its acid is named in the SI text (p.5), which independently pins the two hexyl arms."
+A5-CE-C6,,,2026-11-10,"curation agent, Figure S18 at 200 dpi",,"NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI"
+A5-CE-C6-5,,,2026-11-10,"curation agent, Figure S18 at 200 dpi",,"NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI"
+A5-CE-C8-7,,,2026-11-10,"curation agent, Figure S18 at 200 dpi",,"NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI"
+A5-CE-C8-8,,,2026-11-10,"curation agent, Figure S18 at 200 dpi",,"NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI"
+A5-CE-C10-6,,,2026-11-10,"curation agent, Figure S18 at 200 dpi",,"NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI"

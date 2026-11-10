@@ -1,0 +1,205 @@
+{
+ "_panel": "Figure 3b",
+ "figure_px": [
+  546,
+  483
+ ],
+ "rules": {
+  "x_rule_px": 407,
+  "y_rule_px": 153
+ },
+ "seed": null,
+ "x_axis": {
+  "decade_ticks_px": [
+   409.0,
+   428.0,
+   446.0,
+   465.0,
+   483.0,
+   501.5,
+   520.0,
+   538.0
+  ],
+  "recovered_from_a_double_gap": 1,
+  "px_per_decade": 18.4226,
+  "residual_px": 0.3988,
+  "loo_residuals_px": [
+   0.571,
+   0.336,
+   0.217,
+   0.459,
+   0.027,
+   0.065,
+   0.18,
+   0.5
+  ]
+ },
+ "y_axis_tick_lengths": [
+  [
+   19.0,
+   4
+  ],
+  [
+   27.0,
+   3
+  ],
+  [
+   43.9,
+   4
+  ],
+  [
+   51.0,
+   3
+  ],
+  [
+   68.0,
+   4
+  ],
+  [
+   75.0,
+   3
+  ],
+  [
+   92.0,
+   4
+  ],
+  [
+   99.0,
+   3
+  ],
+  [
+   116.3,
+   4
+  ],
+  [
+   124.0,
+   3
+  ],
+  [
+   140.8,
+   4
+  ],
+  [
+   148.0,
+   3
+  ]
+ ],
+ "y_axis": {
+  "decade_ticks_px": [
+   19.04,
+   43.85,
+   68.0,
+   92.0,
+   116.3,
+   140.83
+  ],
+  "px_per_decade": 24.2943,
+  "residual_px": 0.2895,
+  "loo_residuals_px": [
+   0.48,
+   0.411,
+   0.175,
+   0.184,
+   0.202,
+   0.188
+  ]
+ },
+ "precision": {
+  "px_per_decade_liver_x": 18.4226,
+  "px_per_decade_spleen_y": 24.2943,
+  "value_factor_per_px_x": 1.1331,
+  "library_tick_gate_px": 2.5,
+  "value_factor_that_gate_permits_x": 1.367,
+  "why_this_matters": "axis.TICK_RESIDUAL_PX = 2.5 px was set for 600 dpi renders, where it is ~0.1 pt. A decade on this x axis is 18.42 px, so the SAME gate would pass a factor-1.37 error in a reported value. The gate is not wrong; it is being asked to protect a panel it was not scaled for, which is why the printed 18.1x is the real gate here."
+ },
+ "legend_columns_px_detected": [
+  456,
+  497
+ ],
+ "blobs_inside_another_marker": [
+  {
+   "series": "SM-102",
+   "x": 504.0,
+   "y": 57.5,
+   "n_px": 6,
+   "inside": "LNP 97",
+   "centre_sep_px": 1.63
+  }
+ ],
+ "markers": {
+  "LNP 9": {
+   "x_px": 462.0,
+   "y_px": 71.0,
+   "n_px": 9,
+   "w": 3,
+   "h": 3,
+   "liver_p_per_s": 72244455.7069519,
+   "spleen_p_per_s": 7423603.1130383825
+  },
+  "LNP 37": {
+   "x_px": 460.8,
+   "y_px": 62.0,
+   "n_px": 10,
+   "w": 4,
+   "h": 3,
+   "liver_p_per_s": 62182360.6329766,
+   "spleen_p_per_s": 17420971.015874736
+  },
+  "LNP 94": {
+   "x_px": 492.71,
+   "y_px": 34.5,
+   "n_px": 14,
+   "w": 4,
+   "h": 4,
+   "liver_p_per_s": 3357451076.812634,
+   "spleen_p_per_s": 236062050.74128425
+  },
+  "LNP 96": {
+   "x_px": 464.25,
+   "y_px": 49.67,
+   "n_px": 12,
+   "w": 4,
+   "h": 4,
+   "liver_p_per_s": 95705521.73748997,
+   "spleen_p_per_s": 56070766.68934486
+  },
+  "LNP 97": {
+   "x_px": 504.88,
+   "y_px": 56.12,
+   "n_px": 8,
+   "w": 3,
+   "h": 3,
+   "liver_p_per_s": 15349937926.849657,
+   "spleen_p_per_s": 30401769.05245459
+  },
+  "LNP 112": {
+   "x_px": 505.0,
+   "y_px": 22.5,
+   "n_px": 8,
+   "w": 3,
+   "h": 4,
+   "liver_p_per_s": 15591638644.139847,
+   "spleen_p_per_s": 736155666.9177433
+  },
+  "SM-102": {
+   "x_px": 528.18,
+   "y_px": 23.18,
+   "n_px": 11,
+   "w": 4,
+   "h": 4,
+   "liver_p_per_s": 282635245068.6045,
+   "spleen_p_per_s": 690088339.1877518
+  }
+ },
+ "markers_refused": {},
+ "PBS": "not detected: neutral grey is the colour of the panel's anti-aliased black text at 546 px; all 30 candidate blobs have saturation 0. PBS carries no ionizable lipid and is never a corpus row.",
+ "printed_check_18.1x": {
+  "printed": 18.1,
+  "separation_px": 23.18,
+  "px_predicted_by_18.1x": 23.17,
+  "px_error": 0.01,
+  "measured_ratio": 18.123,
+  "ratio_of_ratios": 1.0013,
+  "PASS": true
+ }
+}

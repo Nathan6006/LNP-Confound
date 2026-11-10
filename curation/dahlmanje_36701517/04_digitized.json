@@ -1,0 +1,2644 @@
+{
+ "native_dpi_measured": {
+  "S13ab": 220.15,
+  "S13c": 220.07,
+  "S15": 219.77
+ },
+ "panels": {
+  "S13a": {
+   "lnp": "Cat-LNP",
+   "organs": {
+    "heart": {
+     "axis": {
+      "baseline_row": 729.05,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 491.701,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3735,
+       "tick_fit_residual_px": 0.1644,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 81.46,
+      "category_ticks_px": [
+       632.05,
+       713.51
+      ],
+      "loo_max_px": 0.253,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3735,
+      "spine_top_residual_px": 0.299,
+      "ticks_px": [
+       491.76,
+       539.16,
+       586.57,
+       634.17,
+       681.41,
+       729.17
+      ]
+     },
+     "diagnostics": {
+      "ECs": {
+       "category_tick_px": 632.05,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 669,
+        "value_pct": 25.3,
+        "width_px": 21,
+        "x0": 638,
+        "x1": 659
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 614 -- the bar is below the width-measurement floor",
+        "want_centre_px": 614.1
+       },
+       "pitch_px": 81.46
+      },
+      "Immune cells": {
+       "category_tick_px": 713.51,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 724,
+        "value_pct": 2.127,
+        "width_px": 21,
+        "x0": 719,
+        "x1": 740
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 696 -- the bar is below the width-measurement floor",
+        "want_centre_px": 695.6
+       },
+       "pitch_px": 81.46
+      }
+     },
+     "spine_x": 597,
+     "spine_y": [
+      492,
+      730
+     ],
+     "values_pct": {
+      "ECs": {
+       "lnp": 25.3,
+       "pbs": null
+      },
+      "Immune cells": {
+       "lnp": 2.127,
+       "pbs": null
+      }
+     }
+    },
+    "kidney": {
+     "axis": {
+      "baseline_row": 336.96,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 99.381,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3758,
+       "tick_fit_residual_px": 0.1472,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 79.5,
+      "category_ticks_px": [
+       1130.0,
+       1209.42,
+       1289.0,
+       1368.38,
+       1448.0
+      ],
+      "loo_max_px": 0.252,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3758,
+      "spine_top_residual_px": 0.381,
+      "ticks_px": [
+       99.44,
+       146.94,
+       194.27,
+       241.97,
+       289.33,
+       337.08
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 1448.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1465 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1465.5
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1431 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1430.5
+       },
+       "pitch_px": 79.5
+      },
+      "DCs": {
+       "category_tick_px": 1289.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1306 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1306.5
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1272 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1271.5
+       },
+       "pitch_px": 79.5
+      },
+      "ECs": {
+       "category_tick_px": 1130.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 318,
+        "value_pct": 7.982,
+        "width_px": 21,
+        "x0": 1135,
+        "x1": 1156
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1113 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1112.5
+       },
+       "pitch_px": 79.5
+      },
+      "Monocytes": {
+       "category_tick_px": 1209.42,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 330,
+        "value_pct": 2.931,
+        "width_px": 20,
+        "x0": 1215,
+        "x1": 1235
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1192 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1191.9
+       },
+       "pitch_px": 79.5
+      },
+      "T cells": {
+       "category_tick_px": 1368.38,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1386 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1385.9
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1351 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1350.9
+       },
+       "pitch_px": 79.5
+      }
+     },
+     "spine_x": 1095,
+     "spine_y": [
+      99,
+      338
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 7.982,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 2.931,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "liver": {
+     "axis": {
+      "baseline_row": 337.01,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 99.225,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3779,
+       "tick_fit_residual_px": 0.1256,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 66.16,
+      "category_ticks_px": [
+       625.26,
+       691.56,
+       757.86,
+       824.0,
+       890.0,
+       956.16
+      ],
+      "loo_max_px": 0.178,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3779,
+      "spine_top_residual_px": 0.225,
+      "ticks_px": [
+       99.2,
+       146.86,
+       194.27,
+       241.97,
+       289.33,
+       337.09
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 890.0,
+       "lnp": {
+        "coverage": 0.9804,
+        "flank_delta_px": 1.0,
+        "row": 323,
+        "value_pct": 5.894,
+        "width_px": 17,
+        "x0": 895,
+        "x1": 912
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 875 -- the bar is below the width-measurement floor",
+        "want_centre_px": 875.4
+       },
+       "pitch_px": 66.16
+      },
+      "DCs": {
+       "category_tick_px": 757.86,
+       "lnp": {
+        "coverage": 0.9815,
+        "flank_delta_px": 1.0,
+        "row": 298,
+        "value_pct": 16.407,
+        "width_px": 18,
+        "x0": 762,
+        "x1": 780
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 332,
+        "value_pct": 2.109,
+        "width_px": 11,
+        "x0": 741,
+        "x1": 752
+       },
+       "pitch_px": 66.16
+      },
+      "ECs": {
+       "category_tick_px": 625.26,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 290,
+        "value_pct": 19.772,
+        "width_px": 17,
+        "x0": 630,
+        "x1": 647
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 330,
+        "value_pct": 2.95,
+        "width_px": 18,
+        "x0": 605,
+        "x1": 623
+       },
+       "pitch_px": 66.16
+      },
+      "Hepatocytes": {
+       "category_tick_px": 956.16,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 328,
+        "value_pct": 3.791,
+        "width_px": 17,
+        "x0": 961,
+        "x1": 978
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 942 -- the bar is below the width-measurement floor",
+        "want_centre_px": 941.6
+       },
+       "pitch_px": 66.16
+      },
+      "Kupffer Cells": {
+       "category_tick_px": 691.56,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 238,
+        "value_pct": 41.64,
+        "width_px": 18,
+        "x0": 696,
+        "x1": 714
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 327,
+        "value_pct": 4.212,
+        "width_px": 18,
+        "x0": 671,
+        "x1": 689
+       },
+       "pitch_px": 66.16
+      },
+      "T cells": {
+       "category_tick_px": 824.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 330,
+        "value_pct": 2.95,
+        "width_px": 17,
+        "x0": 829,
+        "x1": 846
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 809 -- the bar is below the width-measurement floor",
+        "want_centre_px": 809.4
+       },
+       "pitch_px": 66.16
+      }
+     },
+     "spine_x": 597,
+     "spine_y": [
+      99,
+      338
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 5.894,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 16.407,
+       "pbs": 2.109
+      },
+      "ECs": {
+       "lnp": 19.772,
+       "pbs": 2.95
+      },
+      "Hepatocytes": {
+       "lnp": 3.791,
+       "pbs": null
+      },
+      "Kupffer Cells": {
+       "lnp": 41.64,
+       "pbs": 4.212
+      },
+      "T cells": {
+       "lnp": 2.95,
+       "pbs": null
+      }
+     }
+    },
+    "lung": {
+     "axis": {
+      "baseline_row": 336.95,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 99.626,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3732,
+       "tick_fit_residual_px": 0.15,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 79.5,
+      "category_ticks_px": [
+       134.0,
+       213.42,
+       293.0,
+       372.09,
+       452.0
+      ],
+      "loo_max_px": 0.282,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3732,
+      "spine_top_residual_px": 0.374,
+      "ticks_px": [
+       99.73,
+       147.03,
+       194.5,
+       242.05,
+       289.33,
+       337.08
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 452.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 331,
+        "value_pct": 2.505,
+        "width_px": 20,
+        "x0": 457,
+        "x1": 477
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 435 -- the bar is below the width-measurement floor",
+        "want_centre_px": 434.5
+       },
+       "pitch_px": 79.5
+      },
+      "DCs": {
+       "category_tick_px": 293.0,
+       "lnp": {
+        "coverage": 0.9683,
+        "flank_delta_px": 0.0,
+        "row": 314,
+        "value_pct": 9.668,
+        "width_px": 21,
+        "x0": 298,
+        "x1": 319
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 276 -- the bar is below the width-measurement floor",
+        "want_centre_px": 275.5
+       },
+       "pitch_px": 79.5
+      },
+      "ECs": {
+       "category_tick_px": 134.0,
+       "lnp": {
+        "coverage": 0.9841,
+        "flank_delta_px": 1.0,
+        "row": 123,
+        "value_pct": 90.151,
+        "width_px": 21,
+        "x0": 139,
+        "x1": 160
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 117 -- the bar is below the width-measurement floor",
+        "want_centre_px": 116.5
+       },
+       "pitch_px": 79.5
+      },
+      "Monocytes": {
+       "category_tick_px": 213.42,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 300,
+        "value_pct": 15.568,
+        "width_px": 20,
+        "x0": 219,
+        "x1": 239
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 332,
+        "value_pct": 2.084,
+        "width_px": 20,
+        "x0": 189,
+        "x1": 209
+       },
+       "pitch_px": 79.5
+      },
+      "T cells": {
+       "category_tick_px": 372.09,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 331,
+        "value_pct": 2.505,
+        "width_px": 20,
+        "x0": 378,
+        "x1": 398
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 355 -- the bar is below the width-measurement floor",
+        "want_centre_px": 354.6
+       },
+       "pitch_px": 79.5
+      }
+     },
+     "spine_x": 99,
+     "spine_y": [
+      100,
+      338
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 2.505,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 9.668,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 90.151,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 15.568,
+       "pbs": 2.084
+      },
+      "T cells": {
+       "lnp": 2.505,
+       "pbs": null
+      }
+     }
+    },
+    "spleen": {
+     "axis": {
+      "baseline_row": 729.08,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 491.549,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3753,
+       "tick_fit_residual_px": 0.1597,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 91.45,
+      "category_ticks_px": [
+       138.1,
+       229.49,
+       321.0
+      ],
+      "loo_max_px": 0.227,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3753,
+      "spine_top_residual_px": 0.549,
+      "ticks_px": [
+       491.52,
+       539.1,
+       586.58,
+       634.11,
+       681.42,
+       729.17
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 229.49,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 250 -- the bar is below the width-measurement floor",
+        "want_centre_px": 249.6
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 209 -- the bar is below the width-measurement floor",
+        "want_centre_px": 209.4
+       },
+       "pitch_px": 91.45
+      },
+      "DCs": {
+       "category_tick_px": 138.1,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 722,
+        "value_pct": 2.982,
+        "width_px": 23,
+        "x0": 145,
+        "x1": 168
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 118 -- the bar is below the width-measurement floor",
+        "want_centre_px": 118.0
+       },
+       "pitch_px": 91.45
+      },
+      "T cells": {
+       "category_tick_px": 321.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 341 -- the bar is below the width-measurement floor",
+        "want_centre_px": 341.1
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 301 -- the bar is below the width-measurement floor",
+        "want_centre_px": 300.9
+       },
+       "pitch_px": 91.45
+      }
+     },
+     "spine_x": 98,
+     "spine_y": [
+      491,
+      730
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 2.982,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    }
+   }
+  },
+  "S13b": {
+   "lnp": "Neu-LNP",
+   "organs": {
+    "heart": {
+     "axis": {
+      "baseline_row": 1607.33,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 1370.23,
+       "origin_value": 100.0,
+       "px_per_unit": 2.371,
+       "tick_fit_residual_px": 0.0642,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 81.0,
+      "category_ticks_px": [
+       630.0,
+       711.0
+      ],
+      "loo_max_px": 0.078,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.371,
+      "spine_top_residual_px": 0.23,
+      "ticks_px": [
+       1370.25,
+       1417.66,
+       1465.01,
+       1512.49,
+       1559.96,
+       1607.32
+      ]
+     },
+     "diagnostics": {
+      "ECs": {
+       "category_tick_px": 630.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1601,
+        "value_pct": 2.671,
+        "width_px": 21,
+        "x0": 636,
+        "x1": 657
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 612 -- the bar is below the width-measurement floor",
+        "want_centre_px": 612.2
+       },
+       "pitch_px": 81.0
+      },
+      "Immune cells": {
+       "category_tick_px": 711.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1602,
+        "value_pct": 2.249,
+        "width_px": 13,
+        "x0": 721,
+        "x1": 734
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 693 -- the bar is below the width-measurement floor",
+        "want_centre_px": 693.2
+       },
+       "pitch_px": 81.0
+      }
+     },
+     "spine_x": 595,
+     "spine_y": [
+      1370,
+      1608
+     ],
+     "values_pct": {
+      "ECs": {
+       "lnp": 2.671,
+       "pbs": null
+      },
+      "Immune cells": {
+       "lnp": 2.249,
+       "pbs": null
+      }
+     }
+    },
+    "kidney": {
+     "axis": {
+      "baseline_row": 1181.44,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 943.91,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3753,
+       "tick_fit_residual_px": 0.1296,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 79.53,
+      "category_ticks_px": [
+       1129.62,
+       1209.0,
+       1288.33,
+       1368.0,
+       1448.0
+      ],
+      "loo_max_px": 0.184,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3753,
+      "spine_top_residual_px": 0.09,
+      "ticks_px": [
+       943.86,
+       991.46,
+       1038.98,
+       1086.44,
+       1133.8,
+       1181.5
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 1448.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1465 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1465.5
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1431 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1430.5
+       },
+       "pitch_px": 79.53
+      },
+      "DCs": {
+       "category_tick_px": 1288.33,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1171,
+        "value_pct": 4.393,
+        "width_px": 21,
+        "x0": 1294,
+        "x1": 1315
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1271 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1270.8
+       },
+       "pitch_px": 79.53
+      },
+      "ECs": {
+       "category_tick_px": 1129.62,
+       "lnp": {
+        "coverage": 0.9697,
+        "flank_delta_px": 0.0,
+        "row": 1160,
+        "value_pct": 9.024,
+        "width_px": 22,
+        "x0": 1134,
+        "x1": 1156
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1112 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1112.1
+       },
+       "pitch_px": 79.53
+      },
+      "Monocytes": {
+       "category_tick_px": 1209.0,
+       "lnp": {
+        "coverage": 0.9841,
+        "flank_delta_px": 1.0,
+        "row": 1115,
+        "value_pct": 27.97,
+        "width_px": 21,
+        "x0": 1214,
+        "x1": 1235
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1192 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1191.5
+       },
+       "pitch_px": 79.53
+      },
+      "T cells": {
+       "category_tick_px": 1368.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1385 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1385.5
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1351 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1350.5
+       },
+       "pitch_px": 79.53
+      }
+     },
+     "spine_x": 1095,
+     "spine_y": [
+      944,
+      1183
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 4.393,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 9.024,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 27.97,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "liver": {
+     "axis": {
+      "baseline_row": 1181.51,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 944.26,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3725,
+       "tick_fit_residual_px": 0.0658,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 65.95,
+      "category_ticks_px": [
+       625.15,
+       691.1,
+       757.39,
+       823.49,
+       889.44,
+       955.29
+      ],
+      "loo_max_px": 0.08,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3725,
+      "spine_top_residual_px": 0.26,
+      "ticks_px": [
+       944.24,
+       991.7,
+       1039.23,
+       1086.59,
+       1134.06,
+       1181.5
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 889.44,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1071,
+        "value_pct": 46.58,
+        "width_px": 17,
+        "x0": 894,
+        "x1": 911
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 875 -- the bar is below the width-measurement floor",
+        "want_centre_px": 874.9
+       },
+       "pitch_px": 65.95
+      },
+      "DCs": {
+       "category_tick_px": 757.39,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1048,
+        "value_pct": 56.274,
+        "width_px": 17,
+        "x0": 762,
+        "x1": 779
+       },
+       "pbs": {
+        "refused": "bar_top: left flank first-covered row 1177, right flank 1024, delta 153.0 px > 2.0 px tolerance.",
+        "x0": 740,
+        "x1": 751
+       },
+       "pitch_px": 65.95
+      },
+      "ECs": {
+       "category_tick_px": 625.15,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 955,
+        "value_pct": 95.473,
+        "width_px": 17,
+        "x0": 630,
+        "x1": 647
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1175,
+        "value_pct": 2.744,
+        "width_px": 18,
+        "x0": 605,
+        "x1": 623
+       },
+       "pitch_px": 65.95
+      },
+      "Hepatocytes": {
+       "category_tick_px": 955.29,
+       "lnp": {
+        "coverage": 0.9815,
+        "flank_delta_px": 1.0,
+        "row": 1067,
+        "value_pct": 48.266,
+        "width_px": 18,
+        "x0": 960,
+        "x1": 978
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 941 -- the bar is below the width-measurement floor",
+        "want_centre_px": 940.8
+       },
+       "pitch_px": 65.95
+      },
+      "Kupffer Cells": {
+       "category_tick_px": 691.1,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 972,
+        "value_pct": 88.308,
+        "width_px": 17,
+        "x0": 696,
+        "x1": 713
+       },
+       "pbs": {
+        "coverage": 0.9815,
+        "flank_delta_px": 1.0,
+        "row": 1171,
+        "value_pct": 4.43,
+        "width_px": 18,
+        "x0": 671,
+        "x1": 689
+       },
+       "pitch_px": 65.95
+      },
+      "T cells": {
+       "category_tick_px": 823.49,
+       "lnp": {
+        "coverage": 0.9815,
+        "flank_delta_px": 1.0,
+        "row": 1077,
+        "value_pct": 44.051,
+        "width_px": 18,
+        "x0": 828,
+        "x1": 846
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 809 -- the bar is below the width-measurement floor",
+        "want_centre_px": 809.0
+       },
+       "pitch_px": 65.95
+      }
+     },
+     "spine_x": 597,
+     "spine_y": [
+      944,
+      1183
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 46.58,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 56.274,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 95.473,
+       "pbs": 2.744
+      },
+      "Hepatocytes": {
+       "lnp": 48.266,
+       "pbs": null
+      },
+      "Kupffer Cells": {
+       "lnp": 88.308,
+       "pbs": 4.43
+      },
+      "T cells": {
+       "lnp": 44.051,
+       "pbs": null
+      }
+     }
+    },
+    "lung": {
+     "axis": {
+      "baseline_row": 1181.49,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 944.097,
+       "origin_value": 100.0,
+       "px_per_unit": 2.3739,
+       "tick_fit_residual_px": 0.0768,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 79.63,
+      "category_ticks_px": [
+       133.13,
+       212.9,
+       292.0,
+       371.57,
+       451.26
+      ],
+      "loo_max_px": 0.161,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.3739,
+      "spine_top_residual_px": 0.097,
+      "ticks_px": [
+       944.17,
+       991.53,
+       1038.98,
+       1086.51,
+       1134.06,
+       1181.5
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 451.26,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 469 -- the bar is below the width-measurement floor",
+        "want_centre_px": 468.8
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 434 -- the bar is below the width-measurement floor",
+        "want_centre_px": 433.7
+       },
+       "pitch_px": 79.63
+      },
+      "DCs": {
+       "category_tick_px": 292.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 310 -- the bar is below the width-measurement floor",
+        "want_centre_px": 309.5
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 274 -- the bar is below the width-measurement floor",
+        "want_centre_px": 274.5
+       },
+       "pitch_px": 79.63
+      },
+      "ECs": {
+       "category_tick_px": 133.13,
+       "lnp": {
+        "coverage": 0.9683,
+        "flank_delta_px": 0.0,
+        "row": 1166,
+        "value_pct": 6.525,
+        "width_px": 21,
+        "x0": 138,
+        "x1": 159
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 116 -- the bar is below the width-measurement floor",
+        "want_centre_px": 115.6
+       },
+       "pitch_px": 79.63
+      },
+      "Monocytes": {
+       "category_tick_px": 212.9,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1139,
+        "value_pct": 17.899,
+        "width_px": 21,
+        "x0": 218,
+        "x1": 239
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 195 -- the bar is below the width-measurement floor",
+        "want_centre_px": 195.4
+       },
+       "pitch_px": 79.63
+      },
+      "T cells": {
+       "category_tick_px": 371.57,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 389 -- the bar is below the width-measurement floor",
+        "want_centre_px": 389.1
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 354 -- the bar is below the width-measurement floor",
+        "want_centre_px": 354.1
+       },
+       "pitch_px": 79.63
+      }
+     },
+     "spine_x": 98,
+     "spine_y": [
+      944,
+      1183
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 6.525,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 17.899,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "spleen": {
+     "axis": {
+      "baseline_row": 1604.04,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 5,
+       "origin_px": 1413.845,
+       "origin_value": 80.0,
+       "px_per_unit": 2.3774,
+       "tick_fit_residual_px": 0.1302,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 91.5,
+      "category_ticks_px": [
+       140.0,
+       231.44,
+       323.0
+      ],
+      "loo_max_px": 0.201,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 5,
+      "px_per_percent": 2.3774,
+      "spine_top_residual_px": 0.703,
+      "ticks_px": [
+       1413.91,
+       1461.3,
+       1509.02,
+       1556.36,
+       1604.12
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 231.44,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1597,
+        "value_pct": 2.961,
+        "width_px": 13,
+        "x0": 243,
+        "x1": 256
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 211 -- the bar is below the width-measurement floor",
+        "want_centre_px": 211.3
+       },
+       "pitch_px": 91.5
+      },
+      "DCs": {
+       "category_tick_px": 140.0,
+       "lnp": {
+        "coverage": 0.9722,
+        "flank_delta_px": 0.0,
+        "row": 1514,
+        "value_pct": 37.872,
+        "width_px": 24,
+        "x0": 146,
+        "x1": 170
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 120 -- the bar is below the width-measurement floor",
+        "want_centre_px": 119.9
+       },
+       "pitch_px": 91.5
+      },
+      "T cells": {
+       "category_tick_px": 323.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 343 -- the bar is below the width-measurement floor",
+        "want_centre_px": 343.1
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 27 px of 303 -- the bar is below the width-measurement floor",
+        "want_centre_px": 302.9
+       },
+       "pitch_px": 91.5
+      }
+     },
+     "spine_x": 100,
+     "spine_y": [
+      1367,
+      1605
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 2.961,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 37.872,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    }
+   }
+  },
+  "S13c": {
+   "lnp": "An-LNP",
+   "organs": {
+    "heart": {
+     "axis": {
+      "baseline_row": 789.93,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 548.15,
+       "origin_value": 100.0,
+       "px_per_unit": 2.4178,
+       "tick_fit_residual_px": 0.1922,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 83.33,
+      "category_ticks_px": [
+       630.41,
+       713.74
+      ],
+      "loo_max_px": 0.235,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.4178,
+      "spine_top_residual_px": 0.15,
+      "ticks_px": [
+       548.11,
+       596.53,
+       644.76,
+       693.41,
+       741.6,
+       789.83
+      ]
+     },
+     "diagnostics": {
+      "ECs": {
+       "category_tick_px": 630.41,
+       "lnp": {
+        "coverage": 0.9697,
+        "flank_delta_px": 0.0,
+        "row": 784,
+        "value_pct": 2.452,
+        "width_px": 22,
+        "x0": 636,
+        "x1": 658
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 25 px of 612 -- the bar is below the width-measurement floor",
+        "want_centre_px": 612.1
+       },
+       "pitch_px": 83.33
+      },
+      "Immune cells": {
+       "category_tick_px": 713.74,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 25 px of 732 -- the bar is below the width-measurement floor",
+        "want_centre_px": 732.1
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 25 px of 695 -- the bar is below the width-measurement floor",
+        "want_centre_px": 695.4
+       },
+       "pitch_px": 83.33
+      }
+     },
+     "spine_x": 594,
+     "spine_y": [
+      548,
+      791
+     ],
+     "values_pct": {
+      "ECs": {
+       "lnp": 2.452,
+       "pbs": null
+      },
+      "Immune cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "kidney": {
+     "axis": {
+      "baseline_row": 341.91,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 99.827,
+       "origin_value": 100.0,
+       "px_per_unit": 2.4208,
+       "tick_fit_residual_px": 0.1573,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 81.38,
+      "category_ticks_px": [
+       1142.01,
+       1223.31,
+       1304.77,
+       1386.0,
+       1467.86
+      ],
+      "loo_max_px": 0.192,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.4208,
+      "spine_top_residual_px": 0.173,
+      "ticks_px": [
+       99.77,
+       148.31,
+       196.73,
+       244.92,
+       293.62,
+       341.86
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 1467.86,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1486 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1485.8
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1450 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1450.0
+       },
+       "pitch_px": 81.38
+      },
+      "DCs": {
+       "category_tick_px": 1304.77,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1323 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1322.7
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1287 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1286.9
+       },
+       "pitch_px": 81.38
+      },
+      "ECs": {
+       "category_tick_px": 1142.01,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1160 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1159.9
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1124 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1124.1
+       },
+       "pitch_px": 81.38
+      },
+      "Monocytes": {
+       "category_tick_px": 1223.31,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 337,
+        "value_pct": 2.027,
+        "width_px": 11,
+        "x0": 1234,
+        "x1": 1245
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1205 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1205.4
+       },
+       "pitch_px": 81.38
+      },
+      "T cells": {
+       "category_tick_px": 1386.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1404 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1403.9
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 1368 -- the bar is below the width-measurement floor",
+        "want_centre_px": 1368.1
+       },
+       "pitch_px": 81.38
+      }
+     },
+     "spine_x": 1107,
+     "spine_y": [
+      100,
+      343
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 2.027,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "liver": {
+     "axis": {
+      "baseline_row": 341.81,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 99.7,
+       "origin_value": 100.0,
+       "px_per_unit": 2.4211,
+       "tick_fit_residual_px": 0.1189,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 67.66,
+      "category_ticks_px": [
+       626.0,
+       694.0,
+       761.39,
+       829.05,
+       897.0,
+       964.0
+      ],
+      "loo_max_px": 0.166,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.4211,
+      "spine_top_residual_px": 0.3,
+      "ticks_px": [
+       99.74,
+       148.01,
+       196.66,
+       244.92,
+       293.41,
+       341.8
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 897.0,
+       "lnp": {
+        "coverage": 0.9804,
+        "flank_delta_px": 1.0,
+        "row": 204,
+        "value_pct": 56.92,
+        "width_px": 17,
+        "x0": 902,
+        "x1": 919
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 882 -- the bar is below the width-measurement floor",
+        "want_centre_px": 882.1
+       },
+       "pitch_px": 67.66
+      },
+      "DCs": {
+       "category_tick_px": 761.39,
+       "lnp": {
+        "refused": "bar_top: left flank first-covered row 169, right flank 236, delta 67.0 px > 2.0 px tolerance.",
+        "x0": 766,
+        "x1": 784
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 336,
+        "value_pct": 2.399,
+        "width_px": 11,
+        "x0": 744,
+        "x1": 755
+       },
+       "pitch_px": 67.66
+      },
+      "ECs": {
+       "category_tick_px": 626.0,
+       "lnp": {
+        "refused": "bar_top: left flank first-covered row 108, right flank 334, delta 226.0 px > 2.0 px tolerance.",
+        "x0": 631,
+        "x1": 649
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 335,
+        "value_pct": 2.812,
+        "width_px": 19,
+        "x0": 605,
+        "x1": 624
+       },
+       "pitch_px": 67.66
+      },
+      "Hepatocytes": {
+       "category_tick_px": 964.0,
+       "lnp": {
+        "refused": "bar_top: left flank first-covered row 229, right flank 239, delta 10.0 px > 2.0 px tolerance.",
+        "x0": 969,
+        "x1": 987
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 949 -- the bar is below the width-measurement floor",
+        "want_centre_px": 949.1
+       },
+       "pitch_px": 67.66
+      },
+      "Kupffer Cells": {
+       "category_tick_px": 694.0,
+       "lnp": {
+        "refused": "bar_top: left flank first-covered row 146, right flank 194, delta 48.0 px > 2.0 px tolerance.",
+        "x0": 699,
+        "x1": 716
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 331,
+        "value_pct": 4.465,
+        "width_px": 18,
+        "x0": 673,
+        "x1": 691
+       },
+       "pitch_px": 67.66
+      },
+      "T cells": {
+       "category_tick_px": 829.05,
+       "lnp": {
+        "refused": "bar_top: left flank first-covered row 208, right flank 307, delta 99.0 px > 2.0 px tolerance.",
+        "x0": 834,
+        "x1": 852
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 20 px of 814 -- the bar is below the width-measurement floor",
+        "want_centre_px": 814.2
+       },
+       "pitch_px": 67.66
+      }
+     },
+     "spine_x": 596,
+     "spine_y": [
+      100,
+      343
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 56.92,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": 2.399
+      },
+      "ECs": {
+       "lnp": null,
+       "pbs": 2.812
+      },
+      "Hepatocytes": {
+       "lnp": null,
+       "pbs": null
+      },
+      "Kupffer Cells": {
+       "lnp": null,
+       "pbs": 4.465
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "lung": {
+     "axis": {
+      "baseline_row": 341.91,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 100.146,
+       "origin_value": 100.0,
+       "px_per_unit": 2.4177,
+       "tick_fit_residual_px": 0.0623,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 81.31,
+      "category_ticks_px": [
+       122.0,
+       203.0,
+       284.42,
+       365.61,
+       447.06
+      ],
+      "loo_max_px": 0.114,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.4177,
+      "spine_top_residual_px": 0.146,
+      "ticks_px": [
+       100.16,
+       148.49,
+       196.79,
+       245.27,
+       293.62,
+       341.86
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 447.06,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 465 -- the bar is below the width-measurement floor",
+        "want_centre_px": 464.9
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 429 -- the bar is below the width-measurement floor",
+        "want_centre_px": 429.2
+       },
+       "pitch_px": 81.31
+      },
+      "DCs": {
+       "category_tick_px": 284.42,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 302 -- the bar is below the width-measurement floor",
+        "want_centre_px": 302.3
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 267 -- the bar is below the width-measurement floor",
+        "want_centre_px": 266.5
+       },
+       "pitch_px": 81.31
+      },
+      "ECs": {
+       "category_tick_px": 122.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 329,
+        "value_pct": 5.341,
+        "width_px": 21,
+        "x0": 127,
+        "x1": 148
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 104 -- the bar is below the width-measurement floor",
+        "want_centre_px": 104.1
+       },
+       "pitch_px": 81.31
+      },
+      "Monocytes": {
+       "category_tick_px": 203.0,
+       "lnp": {
+        "coverage": 0.9841,
+        "flank_delta_px": 1.0,
+        "row": 295,
+        "value_pct": 19.404,
+        "width_px": 21,
+        "x0": 209,
+        "x1": 230
+       },
+       "pbs": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 337,
+        "value_pct": 2.032,
+        "width_px": 21,
+        "x0": 178,
+        "x1": 199
+       },
+       "pitch_px": 81.31
+      },
+      "T cells": {
+       "category_tick_px": 365.61,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 383 -- the bar is below the width-measurement floor",
+        "want_centre_px": 383.5
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 24 px of 348 -- the bar is below the width-measurement floor",
+        "want_centre_px": 347.7
+       },
+       "pitch_px": 81.31
+      }
+     },
+     "spine_x": 86,
+     "spine_y": [
+      100,
+      343
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 5.341,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 19.404,
+       "pbs": 2.032
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    },
+    "spleen": {
+     "axis": {
+      "baseline_row": 791.82,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 549.842,
+       "origin_value": 100.0,
+       "px_per_unit": 2.4198,
+       "tick_fit_residual_px": 0.1413,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 93.5,
+      "category_ticks_px": [
+       127.0,
+       220.2,
+       314.0
+      ],
+      "loo_max_px": 0.229,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.4198,
+      "spine_top_residual_px": 0.158,
+      "ticks_px": [
+       549.73,
+       598.38,
+       646.57,
+       695.11,
+       743.45,
+       791.76
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 220.2,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 28 px of 241 -- the bar is below the width-measurement floor",
+        "want_centre_px": 240.8
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 28 px of 200 -- the bar is below the width-measurement floor",
+        "want_centre_px": 199.6
+       },
+       "pitch_px": 93.5
+      },
+      "DCs": {
+       "category_tick_px": 127.0,
+       "lnp": {
+        "coverage": 0.9861,
+        "flank_delta_px": 1.0,
+        "row": 764,
+        "value_pct": 11.498,
+        "width_px": 24,
+        "x0": 133,
+        "x1": 157
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 28 px of 106 -- the bar is below the width-measurement floor",
+        "want_centre_px": 106.4
+       },
+       "pitch_px": 93.5
+      },
+      "T cells": {
+       "category_tick_px": 314.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 28 px of 335 -- the bar is below the width-measurement floor",
+        "want_centre_px": 334.6
+       },
+       "pbs": {
+        "refused": "no bar at least 4 px tall centred within 28 px of 293 -- the bar is below the width-measurement floor",
+        "want_centre_px": 293.4
+       },
+       "pitch_px": 93.5
+      }
+     },
+     "spine_x": 86,
+     "spine_y": [
+      550,
+      793
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 11.498,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    }
+   }
+  },
+  "S15b": {
+   "lnp": "Neu-LNP",
+   "organs": {
+    "heart": {
+     "axis": {
+      "baseline_row": 609.61,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 352.785,
+       "origin_value": 100.0,
+       "px_per_unit": 2.5682,
+       "tick_fit_residual_px": 0.0995,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 50.2,
+      "category_ticks_px": [
+       971.21,
+       1021.41
+      ],
+      "loo_max_px": 0.17,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.5682,
+      "spine_top_residual_px": 0.215,
+      "ticks_px": [
+       352.7,
+       404.25,
+       455.46,
+       506.94,
+       558.28,
+       609.54
+      ]
+     },
+     "diagnostics": {
+      "ECs": {
+       "category_tick_px": 971.21,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 603,
+        "value_pct": 2.573,
+        "width_px": 36,
+        "x0": 954,
+        "x1": 990
+       },
+       "pitch_px": 50.2
+      },
+      "Immune cells": {
+       "category_tick_px": 1021.41,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 605,
+        "value_pct": 1.794,
+        "width_px": 35,
+        "x0": 1005,
+        "x1": 1040
+       },
+       "pitch_px": 50.2
+      }
+     },
+     "spine_x": 938,
+     "spine_y": [
+      353,
+      611
+     ],
+     "values_pct": {
+      "ECs": {
+       "lnp": 2.573,
+       "pbs": null
+      },
+      "Immune cells": {
+       "lnp": 1.794,
+       "pbs": null
+      }
+     }
+    },
+    "liver": {
+     "axis": {
+      "baseline_row": 609.81,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 353.137,
+       "origin_value": 100.0,
+       "px_per_unit": 2.5668,
+       "tick_fit_residual_px": 0.0891,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 47.0,
+      "category_ticks_px": [
+       558.07,
+       605.08,
+       652.0,
+       699.0,
+       746.0,
+       793.0
+      ],
+      "loo_max_px": 0.126,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.5668,
+      "spine_top_residual_px": 0.137,
+      "ticks_px": [
+       353.16,
+       404.49,
+       455.74,
+       507.1,
+       558.57,
+       609.79
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 699.0,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 490,
+        "value_pct": 46.679,
+        "width_px": 34,
+        "x0": 682,
+        "x1": 716
+       },
+       "pitch_px": 47.0
+      },
+      "DCs": {
+       "category_tick_px": 605.08,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 467,
+        "value_pct": 55.639,
+        "width_px": 34,
+        "x0": 588,
+        "x1": 622
+       },
+       "pitch_px": 47.0
+      },
+      "ECs": {
+       "category_tick_px": 558.07,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 371,
+        "value_pct": 93.041,
+        "width_px": 34,
+        "x0": 542,
+        "x1": 576
+       },
+       "pitch_px": 47.0
+      },
+      "Hepatocytes": {
+       "category_tick_px": 793.0,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 485,
+        "value_pct": 48.627,
+        "width_px": 34,
+        "x0": 776,
+        "x1": 810
+       },
+       "pitch_px": 47.0
+      },
+      "Kupffer Cells": {
+       "category_tick_px": 746.0,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 393,
+        "value_pct": 84.469,
+        "width_px": 34,
+        "x0": 729,
+        "x1": 763
+       },
+       "pitch_px": 47.0
+      },
+      "T cells": {
+       "category_tick_px": 652.0,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 498,
+        "value_pct": 43.562,
+        "width_px": 34,
+        "x0": 635,
+        "x1": 669
+       },
+       "pitch_px": 47.0
+      }
+     },
+     "spine_x": 527,
+     "spine_y": [
+      353,
+      611
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 46.679,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 55.639,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 93.041,
+       "pbs": null
+      },
+      "Hepatocytes": {
+       "lnp": 48.627,
+       "pbs": null
+      },
+      "Kupffer Cells": {
+       "lnp": 84.469,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": 43.562,
+       "pbs": null
+      }
+     }
+    },
+    "lung": {
+     "axis": {
+      "baseline_row": 609.82,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 352.349,
+       "origin_value": 100.0,
+       "px_per_unit": 2.5747,
+       "tick_fit_residual_px": 0.1145,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 47.36,
+      "category_ticks_px": [
+       203.98,
+       251.09,
+       298.69,
+       346.0,
+       393.4
+      ],
+      "loo_max_px": 0.14,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.5747,
+      "spine_top_residual_px": 0.651,
+      "ticks_px": [
+       352.36,
+       403.86,
+       455.22,
+       506.94,
+       558.34,
+       609.79
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 346.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 14 px of 346 -- the bar is below the width-measurement floor",
+        "want_centre_px": 346.0
+       },
+       "pitch_px": 47.36
+      },
+      "DCs": {
+       "category_tick_px": 251.09,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 14 px of 251 -- the bar is below the width-measurement floor",
+        "want_centre_px": 251.1
+       },
+       "pitch_px": 47.36
+      },
+      "ECs": {
+       "category_tick_px": 203.98,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 595,
+        "value_pct": 5.757,
+        "width_px": 34,
+        "x0": 188,
+        "x1": 222
+       },
+       "pitch_px": 47.36
+      },
+      "Monocytes": {
+       "category_tick_px": 393.4,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 568,
+        "value_pct": 16.243,
+        "width_px": 34,
+        "x0": 377,
+        "x1": 411
+       },
+       "pitch_px": 47.36
+      },
+      "T cells": {
+       "category_tick_px": 298.69,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 14 px of 299 -- the bar is below the width-measurement floor",
+        "want_centre_px": 298.7
+       },
+       "pitch_px": 47.36
+      }
+     },
+     "spine_x": 173,
+     "spine_y": [
+      353,
+      611
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 5.757,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 16.243,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    }
+   }
+  },
+  "S15d": {
+   "lnp": "An-LNP",
+   "organs": {
+    "heart": {
+     "axis": {
+      "baseline_row": 1372.66,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 1116.845,
+       "origin_value": 100.0,
+       "px_per_unit": 2.5581,
+       "tick_fit_residual_px": 0.101,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 50.0,
+      "category_ticks_px": [
+       971.0,
+       1021.0
+      ],
+      "loo_max_px": 0.143,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.5581,
+      "spine_top_residual_px": 0.155,
+      "ticks_px": [
+       1116.79,
+       1168.1,
+       1219.13,
+       1270.4,
+       1321.4,
+       1372.7
+      ]
+     },
+     "diagnostics": {
+      "ECs": {
+       "category_tick_px": 971.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1368,
+        "value_pct": 1.821,
+        "width_px": 36,
+        "x0": 954,
+        "x1": 990
+       },
+       "pitch_px": 50.0
+      },
+      "Immune cells": {
+       "category_tick_px": 1021.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1368,
+        "value_pct": 1.821,
+        "width_px": 18,
+        "x0": 1013,
+        "x1": 1031
+       },
+       "pitch_px": 50.0
+      }
+     },
+     "spine_x": 938,
+     "spine_y": [
+      1117,
+      1374
+     ],
+     "values_pct": {
+      "ECs": {
+       "lnp": 1.821,
+       "pbs": null
+      },
+      "Immune cells": {
+       "lnp": 1.821,
+       "pbs": null
+      }
+     }
+    },
+    "liver": {
+     "axis": {
+      "baseline_row": 1372.71,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 1115.975,
+       "origin_value": 100.0,
+       "px_per_unit": 2.5673,
+       "tick_fit_residual_px": 0.0658,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 47.0,
+      "category_ticks_px": [
+       558.0,
+       605.0,
+       652.0,
+       699.0,
+       746.0,
+       793.0
+      ],
+      "loo_max_px": 0.08,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.5673,
+      "spine_top_residual_px": 0.025,
+      "ticks_px": [
+       1115.96,
+       1167.28,
+       1218.73,
+       1270.03,
+       1321.33,
+       1372.7
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 699.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1229,
+        "value_pct": 55.975,
+        "width_px": 34,
+        "x0": 682,
+        "x1": 716
+       },
+       "pitch_px": 47.0
+      },
+      "DCs": {
+       "category_tick_px": 605.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1193,
+        "value_pct": 69.998,
+        "width_px": 33,
+        "x0": 589,
+        "x1": 622
+       },
+       "pitch_px": 47.0
+      },
+      "ECs": {
+       "category_tick_px": 558.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1131,
+        "value_pct": 94.148,
+        "width_px": 33,
+        "x0": 542,
+        "x1": 575
+       },
+       "pitch_px": 47.0
+      },
+      "Hepatocytes": {
+       "category_tick_px": 793.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1254,
+        "value_pct": 46.238,
+        "width_px": 34,
+        "x0": 776,
+        "x1": 810
+       },
+       "pitch_px": 47.0
+      },
+      "Kupffer Cells": {
+       "category_tick_px": 746.0,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1176,
+        "value_pct": 76.62,
+        "width_px": 33,
+        "x0": 730,
+        "x1": 763
+       },
+       "pitch_px": 47.0
+      },
+      "T cells": {
+       "category_tick_px": 652.0,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 1233,
+        "value_pct": 54.417,
+        "width_px": 34,
+        "x0": 635,
+        "x1": 669
+       },
+       "pitch_px": 47.0
+      }
+     },
+     "spine_x": 527,
+     "spine_y": [
+      1116,
+      1374
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": 55.975,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": 69.998,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 94.148,
+       "pbs": null
+      },
+      "Hepatocytes": {
+       "lnp": 46.238,
+       "pbs": null
+      },
+      "Kupffer Cells": {
+       "lnp": 76.62,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": 54.417,
+       "pbs": null
+      }
+     }
+    },
+    "lung": {
+     "axis": {
+      "baseline_row": 1372.67,
+      "calibration": {
+       "kind": "linear",
+       "n_ticks": 6,
+       "origin_px": 1115.108,
+       "origin_value": 100.0,
+       "px_per_unit": 2.5756,
+       "tick_fit_residual_px": 0.1065,
+       "tick_residual_tol_px": 2.5,
+       "tick_step_units": -20.0
+      },
+      "category_pitch_px": 47.46,
+      "category_ticks_px": [
+       203.18,
+       250.77,
+       298.0,
+       345.42,
+       392.92
+      ],
+      "loo_max_px": 0.151,
+      "loo_tol_px": 4.091,
+      "loo_tol_px_unrescaled": 1.5,
+      "n_y_ticks": 6,
+      "px_per_percent": 2.5756,
+      "spine_top_residual_px": 0.108,
+      "ticks_px": [
+       1115.11,
+       1166.61,
+       1218.16,
+       1269.55,
+       1321.26,
+       1372.63
+      ]
+     },
+     "diagnostics": {
+      "B cells": {
+       "category_tick_px": 345.42,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 14 px of 345 -- the bar is below the width-measurement floor",
+        "want_centre_px": 345.4
+       },
+       "pitch_px": 47.46
+      },
+      "DCs": {
+       "category_tick_px": 250.77,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 14 px of 251 -- the bar is below the width-measurement floor",
+        "want_centre_px": 250.8
+       },
+       "pitch_px": 47.46
+      },
+      "ECs": {
+       "category_tick_px": 203.18,
+       "lnp": {
+        "coverage": 1.0,
+        "flank_delta_px": 0.0,
+        "row": 1360,
+        "value_pct": 4.92,
+        "width_px": 34,
+        "x0": 187,
+        "x1": 221
+       },
+       "pitch_px": 47.46
+      },
+      "Monocytes": {
+       "category_tick_px": 392.92,
+       "lnp": {
+        "coverage": 0.9902,
+        "flank_delta_px": 0.0,
+        "row": 1326,
+        "value_pct": 18.12,
+        "width_px": 34,
+        "x0": 377,
+        "x1": 411
+       },
+       "pitch_px": 47.46
+      },
+      "T cells": {
+       "category_tick_px": 298.0,
+       "lnp": {
+        "refused": "no bar at least 4 px tall centred within 14 px of 298 -- the bar is below the width-measurement floor",
+        "want_centre_px": 298.0
+       },
+       "pitch_px": 47.46
+      }
+     },
+     "spine_x": 172,
+     "spine_y": [
+      1115,
+      1374
+     ],
+     "values_pct": {
+      "B cells": {
+       "lnp": null,
+       "pbs": null
+      },
+      "DCs": {
+       "lnp": null,
+       "pbs": null
+      },
+      "ECs": {
+       "lnp": 4.92,
+       "pbs": null
+      },
+      "Monocytes": {
+       "lnp": 18.12,
+       "pbs": null
+      },
+      "T cells": {
+       "lnp": null,
+       "pbs": null
+      }
+     }
+    }
+   }
+  }
+ }
+}

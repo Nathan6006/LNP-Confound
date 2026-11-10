@@ -1,0 +1,12 @@
+{
+ "corpus_rows_scanned": 30998,
+ "corpus_unique_full_inchikeys": 19919,
+ "corpus_unique_skeletons": 19763,
+ "corpus_unparseable_IL_SMILES_skipped": 0,
+ "our_lipids": 14,
+ "matches_on_full_inchikey": 0,
+ "matches_on_skeleton_block": 0,
+ "matches_on_IL_name": 0,
+ "free_external_check_available": false,
+ "interpretation": "0 / 0 / 0 means this paper contributes 14 structures none of which the corpus has ever seen, and -- the part that costs something -- that NO free external check is available from overlap. A sibling got 21/21 independent confirmation of its head/tail assignment because corpus lipidoid names encode chain length; there is no such gift here. The ESI-MS anchors and the 1H NMR integrals are the only external checks this paper has, and 07_qc.json leans on them accordingly."
+}

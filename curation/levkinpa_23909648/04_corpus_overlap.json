@@ -1,0 +1,298 @@
+{
+ "_what": "Stage 04. Corpus-overlap report. READ-ONLY; nothing is acted on here.",
+ "corpus_files": {
+  "vitro": {
+   "file": "data_vitro.csv",
+   "rows": 29195,
+   "cols": 79,
+   "experiments": 43
+  },
+  "vivo": {
+   "file": "data_vivo.csv",
+   "rows": 1803,
+   "cols": 79,
+   "experiments": 20
+  },
+  "unique_IL_SMILES_indexed": 19919
+ },
+ "our_structures": [
+  {
+   "IL_name": "1C12-D",
+   "IL_SMILES": "CCCCCCCCCCCCN(CCCCCCCCCCCC)CCN1CCCC1",
+   "inchikey_full": "JRMOGNFMWXJRPA-UHFFFAOYSA-N",
+   "inchikey_skeleton": "JRMOGNFMWXJRPA",
+   "full_key_hits": [],
+   "n_full_key_hits": 0,
+   "skeleton_only_hits": [],
+   "verdict": "NOT IN CORPUS"
+  },
+  {
+   "IL_name": "1C16-S",
+   "IL_SMILES": "CCCCCCCCCCCCCCCCNCCN1CCCC1",
+   "inchikey_full": "MGFAWVNIUHAINZ-UHFFFAOYSA-N",
+   "inchikey_skeleton": "MGFAWVNIUHAINZ",
+   "full_key_hits": [],
+   "n_full_key_hits": 0,
+   "skeleton_only_hits": [],
+   "verdict": "NOT IN CORPUS"
+  },
+  {
+   "IL_name": "1C16-D",
+   "IL_SMILES": "CCCCCCCCCCCCCCCCN(CCCCCCCCCCCCCCCC)CCN1CCCC1",
+   "inchikey_full": "YXEYSZSMDVRCPG-UHFFFAOYSA-N",
+   "inchikey_skeleton": "YXEYSZSMDVRCPG",
+   "full_key_hits": [],
+   "n_full_key_hits": 0,
+   "skeleton_only_hits": [],
+   "verdict": "NOT IN CORPUS"
+  }
+ ],
+ "name_collisions": [],
+ "head_substructure_sweep": {
+  "smarts": "[NX3;!R]CC[NX3;R]1CCCC1",
+  "what": "an N-alkylated 2-(pyrrolidin-1-yl)ethylamine, i.e. this paper's amine-1 head after alkylation. A hit would mean the same chemistry is in the corpus under a different label.",
+  "n_hits": 638,
+  "hits": [
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C5",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCC/C=C\\CCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C5",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCC/C=C\\CCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C1",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C1",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C2",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C2",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C3",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C3",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C4",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B7_C4",
+    "IL_SMILES": "C#CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2026_SDL",
+    "IL_name": "A12+B5+C16+D21",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)N(CCN1CCCC1)C(CCCCCCC/C=C\\C/C=C\\CCCCC)C(=O)NCC(=O)OCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C5",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCC/C=C\\CCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C5",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCC/C=C\\CCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C1",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C1",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C2",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C2",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C3",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C3",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C4",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YX_2024",
+    "IL_name": "A10_B8_C4",
+    "IL_SMILES": "C=CCCCCCCCCC(=O)OCCCCCC(NCCN1CCCC1)C(=O)NCCCCCCCCCCCCCCCCCC"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YR_2024",
+    "IL_name": "A76_C8B4",
+    "IL_SMILES": "CC(C)=CCCC(C)CCOC(=O)CCCCCCCN(CCCCCCCC(=O)OCCC(C)CCC=C(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YR_2024",
+    "IL_name": "A76_C6B4",
+    "IL_SMILES": "CC(C)=CCCC(C)CCOC(=O)CCCCCN(CCCCCC(=O)OCCC(C)CCC=C(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YR_2024",
+    "IL_name": "A76_C8B1",
+    "IL_SMILES": "CC(C)CCCC(C)CCOC(=O)CCCCCCCN(CCCCCCCC(=O)OCCC(C)CCCC(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YR_2024",
+    "IL_name": "A76_C6B1",
+    "IL_SMILES": "CC(C)CCCC(C)CCOC(=O)CCCCCN(CCCCCC(=O)OCCC(C)CCCC(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YR_2024",
+    "IL_name": "A76_C8B3",
+    "IL_SMILES": "CC(C)CCCCCCCOC(=O)CCCCCCCN(CCCCCCCC(=O)OCCCCCCCC(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "YR_2024",
+    "IL_name": "A76_C6B3",
+    "IL_SMILES": "CC(C)CCCCCCCOC(=O)CCCCCN(CCCCCC(=O)OCCCCCCCC(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "XH_2025",
+    "IL_name": "Han_plug_play_A36_D8i",
+    "IL_SMILES": "CC(C)CCCCCOC(=O)CC(C(=O)OCCCCCC(C)C)N(C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "XH_2025",
+    "IL_name": "Han_plug_play_A35_D8i",
+    "IL_SMILES": "CC(C)CCCCCOC(=O)CC(NCCN1CCCC1)C(=O)OCCCCCC(C)C"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SC2",
+    "IL_SMILES": "CC(C)CCSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SC1",
+    "IL_SMILES": "CC(C)CSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SC3",
+    "IL_SMILES": "CC(CSCC(C)(C)C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SO5",
+    "IL_SMILES": "CC(CSCC(O)CO)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(O)CO)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SO1",
+    "IL_SMILES": "CC(CSCCC(=O)O)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(=O)O)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SN10",
+    "IL_SMILES": "CC(CSCCCC(=O)N(C)CCCN(C)C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCCN(C)C)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SN11",
+    "IL_SMILES": "CC(CSCCCC(=O)N(C)CCN1CCCCC1)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCN1CCCCC1)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SN9",
+    "IL_SMILES": "CC(CSCCCC(=O)N1CCN(CCO)CC1)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N1CCN(CCO)CC1)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SO2",
+    "IL_SMILES": "CC(CSCCCCCC(=O)O)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCC(=O)O)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SO3",
+    "IL_SMILES": "CC(CSCCCCCCCCCCC(=O)O)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC(=O)O)CCN1CCCC1"
+   },
+   {
+    "pool": "vitro",
+    "experiment": "KZ_2016",
+    "IL_name": "2A5-SO9",
+    "IL_SMILES": "CC(CSCCCCCCCCCCCO)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCO)CCN1CCCC1"
+   }
+  ]
+ }
+}

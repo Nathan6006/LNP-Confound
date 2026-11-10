@@ -1,0 +1,159 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "paper": {
+  "title": "Rational Design of Lipid Nanoparticles for Enhanced mRNA Vaccine Delivery via Machine Learning",
+  "journal": "Small",
+  "year": 2025,
+  "volume": 21,
+  "article": 2405618,
+  "doi": "10.1002/smll.202405618",
+  "pmid": "39264000",
+  "pmcid": "PMC11855220",
+  "corresponding": "Jae-Hwan Nam",
+  "first_author": "Seo-Hyeon Bae",
+  "pmid_checked": "PMID 39264000 was supplied with the task and is carried in the PMC record's own <notes> self-citation string ('...10.1002/smll.202405618 PMC1185522039264000'). This paper is indexed; no unindexed claim is made, so no esummary_cache entry is required (CLAUDE.md s3, F-027)."
+ },
+ "recorded_utc": "2026-11-10T06:40:00Z",
+ "files": [
+  {
+   "path": "curation/namjh_39264000/source/smll202405618-sup-0001-SuppMat.docx",
+   "sha256": "f7f4ce807ab38cbaf4fa8e24fb88bc558ffe6e540de14d196e0417f3109abb8f",
+   "bytes": 2645817,
+   "retrieved_from": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fsmll.202405618&file=smll202405618-sup-0001-SuppMat.docx",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "supplied with the task; the Wiley supplement URL above is the same file PMC lists as SMLL-21-2405618-s001.docx",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "The SI is a .docx, not a PDF. Unzipped; word/document.xml is 514,063 bytes and holds EXACTLY THREE <w:tbl> elements (S1 fingerprint dictionary 19 rows, S2 composition 8 rows, S3 zeta potential 20 rows) and 29 files in word/media/. Figures S1-S4 are RASTER IMAGES (image9-12.tif), not tables -- the sibling-paper hazard named in the brief is real here."
+  },
+  {
+   "path": "curation/namjh_39264000/source/PMC11855220.jats.xml",
+   "sha256": "41a637409b03892103e9cc4bdf456057d9fe834497590f36d98c6aaa83a65adc",
+   "bytes": 147667,
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11855220/ (E-utilities/PMC full-text XML)",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "provenance tooling: scratchpad/tools/pmc_fetch.py PMC11855220",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Full text, Methods, every figure caption, and the Data Availability Statement."
+  },
+  {
+   "path": "curation/namjh_39264000/source/SMLL-21-2405618.pdf",
+   "sha256": "7657abe483cc2c0d863cdfe8ccfa91305c543140e8cbe96fd85a08ebb6fb6c46",
+   "bytes": 8360924,
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11855220/pdf/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "fetched from the PMC article's own PDF link",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "9 pages, version 1.6. The main-text figures are EMBEDDED RASTERS, not vector art: every page has <=9 drawing paths and <=7 stroked ones, so chains.vector_bonds has nothing to read. Recorded because it rules out the vector path for chain counting."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig1_1626x2450.jpeg",
+   "sha256": "8e0a35ee926064f6672467ee48c649034c7372fe9fd3c25b158e3ad4fc2f8dde",
+   "bytes": 1691962,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 1 (ML performance / feature importance). PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig2_1574x2377.jpeg",
+   "sha256": "dbf2f704e22033b63060f271cd3e65f8e5527658ce7f19d8edb8760281d620ae",
+   "bytes": 1330731,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 2 (statistics over all 213 LNPs). PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig3_1590x2450.png",
+   "sha256": "147e1d6b94c904d7d0ee3d58ccd1f67096167a8a5cd358d44a2330b05e5bd95c",
+   "bytes": 1241613,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 3 (a: FH/EB/T blocks; c: EE bars) -- LOSSLESS PNG. PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig4_part1_1947x2228.png",
+   "sha256": "7b84cd056b8c7321a7ee988b99c9eda0a5148431e4e1523aea0d4e4921006c22",
+   "bytes": 1180684,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 4a-d (b: I.M. hEPO heatmap; c: ID-vs-IM scatter) -- LOSSLESS PNG. PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig4_part2_1883x2450.jpeg",
+   "sha256": "193b9b6d06a33469dd065838f2e78e11453cf2040c40f09555eab5957be1ddc7",
+   "bytes": 1062169,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 4e-g (IgG, IFN-gamma). PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig5_1639x2376.png",
+   "sha256": "d7fd76263b161b98474eca0f3c7a193d8d27f8844f760b8b4ebc73593b60f91a",
+   "bytes": 582906,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 5 -- LOSSLESS PNG. PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/pdfimg/fig6_1266x2324.png",
+   "sha256": "9e91d222e129938fd0ad6f76b9f271420e7ce52098cc811d1062aa149bbd3ab6",
+   "bytes": 1460369,
+   "retrieved_from": "embedded image object inside source/SMLL-21-2405618.pdf",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "pymupdf Document.extract_image(xref), raw stream written byte-for-byte; no re-encode",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure 6 -- LOSSLESS PNG. PMC's own https://pmc.ncbi.nlm.nih.gov/articles/instance/11855220/bin/SMLL-21-2405618-gNNN.jpg route returned a 21 kB text/html error page for all 8 names on 2026-11-10 (HTTP 200, Content-Type text/html), so the article PDF's own embedded streams are the figure rasters actually held. Four of the seven are PNG, i.e. LOSSLESS, which matters for a flat-fill heatmap read."
+  },
+  {
+   "path": "curation/namjh_39264000/source/si_media/figS1_structures.tif",
+   "sha256": "cddaaa35e148b337597e37b8e29d8ae8faef9258c57b2971b26b7d23a2f608cc",
+   "bytes": 292770,
+   "retrieved_from": "word/media/image9-12.tif inside the SI .docx",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "zipfile extraction of the .docx, raw member written byte-for-byte",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure S1: generic scaffold with R1/R2. Does NOT draw FH-1..FH-6. TIFF, 220 dpi, lossless."
+  },
+  {
+   "path": "curation/namjh_39264000/source/si_media/figS2_ID_RLuc.tif",
+   "sha256": "0e561e8a6eb7197896e578aa5bd87fc7f500be2972ccde137d91f377a89a5b9e",
+   "bytes": 522244,
+   "retrieved_from": "word/media/image9-12.tif inside the SI .docx",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "zipfile extraction of the .docx, raw member written byte-for-byte",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure S2: I.D. RLuc relative expression, LNP type 1 (panel c) and LNP type 4 (panel e). TIFF, 220 dpi, lossless."
+  },
+  {
+   "path": "curation/namjh_39264000/source/si_media/figS3_size_pdi.tif",
+   "sha256": "5859334ce5a06beb678375aebfdc8d2f488bcb7b0437a081646cb3a1b03293a7",
+   "bytes": 453640,
+   "retrieved_from": "word/media/image9-12.tif inside the SI .docx",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "zipfile extraction of the .docx, raw member written byte-for-byte",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure S3: size / PDI. TIFF, 220 dpi, lossless."
+  },
+  {
+   "path": "curation/namjh_39264000/source/si_media/figS4_immune.tif",
+   "sha256": "8aee5695f28a397795761d3caef1e939dc2969ef780ecf54054228d636c68e60",
+   "bytes": 680520,
+   "retrieved_from": "word/media/image9-12.tif inside the SI .docx",
+   "retrieved_utc": "2026-11-10T06:40:00Z",
+   "how": "zipfile extraction of the .docx, raw member written byte-for-byte",
+   "licence": "CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/), as stated in the <permissions> block of the PMC JATS record. NOTE FOR CLAUDE.md s8: ND is NOT CC0/CC-BY-compatible. This source is a release blocker until that is adjudicated; see DECISIONS.md D-5.",
+   "note": "Figure S4: IgG1/IgG2a, TNF-alpha, IL-2. TIFF, 220 dpi, lossless."
+  }
+ ]
+}

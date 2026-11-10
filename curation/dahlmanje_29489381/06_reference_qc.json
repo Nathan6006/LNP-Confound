@@ -1,0 +1,78 @@
+{
+ "n_anchor_rows": 15,
+ "n_with_a_reference_SMILES": 0,
+ "why_empty": "the paper draws only a generic Markush for every lipomer; see this file's docstring",
+ "block_independent_rederivation": {
+  "n_blocks_checked": 8,
+  "n_inchikey_matches": 8,
+  "n_mismatches": 0,
+  "mismatched": [],
+  "n_byte_identical_strings": 8,
+  "detail": [
+   {
+    "block": "1,4,8,12-Tetraazacyclopentadecane",
+    "generated_from_the_name": "N1CCNCCCNCCCNCCC1",
+    "generated_inchikey": "KUFDRRWNPNXBRF-UHFFFAOYSA-N",
+    "enumerator_inchikey": "KUFDRRWNPNXBRF-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "C12 Epoxy",
+    "generated_from_the_name": "CCCCCCCCCCC1CO1",
+    "generated_inchikey": "MPGABYXKKCLIRW-UHFFFAOYSA-N",
+    "enumerator_inchikey": "MPGABYXKKCLIRW-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "C15 Epoxy",
+    "generated_from_the_name": "CCCCCCCCCCCCCC1CO1",
+    "generated_inchikey": "QMIBIXKZPBEGTE-UHFFFAOYSA-N",
+    "enumerator_inchikey": "QMIBIXKZPBEGTE-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "Lauryl Acrylate",
+    "generated_from_the_name": "C=CC(=O)OCCCCCCCCCCCC",
+    "generated_inchikey": "PBOSTUDLECTMNL-UHFFFAOYSA-N",
+    "enumerator_inchikey": "PBOSTUDLECTMNL-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "Spermidine",
+    "generated_from_the_name": "NCCCNCCCCN",
+    "generated_inchikey": "ATHGHQPFGPMSJY-UHFFFAOYSA-N",
+    "enumerator_inchikey": "ATHGHQPFGPMSJY-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "Spermine Free Base",
+    "generated_from_the_name": "NCCCNCCCCNCCCN",
+    "generated_inchikey": "PFNFFQXMRSDOHW-UHFFFAOYSA-N",
+    "enumerator_inchikey": "PFNFFQXMRSDOHW-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "Stearyl Methacrylate",
+    "generated_from_the_name": "CC(=C)C(=O)OCCCCCCCCCCCCCCCCCC",
+    "generated_inchikey": "HMZGPNHSPWNGEP-UHFFFAOYSA-N",
+    "enumerator_inchikey": "HMZGPNHSPWNGEP-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   },
+   {
+    "block": "Triethylenetetramine",
+    "generated_from_the_name": "NCCNCCNCCN",
+    "generated_inchikey": "VILCJCGEZXAXTO-UHFFFAOYSA-N",
+    "enumerator_inchikey": "VILCJCGEZXAXTO-UHFFFAOYSA-N",
+    "match": true,
+    "byte_identical_to_enumerator_string": true
+   }
+  ]
+ }
+}

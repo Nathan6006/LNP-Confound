@@ -1,0 +1,1617 @@
+{
+ "_what": "Overlap of this paper's 11 enumerated 306-family lipidoids with data/data_vitro.csv + data/data_vivo.csv, by FULL InChIKey, SKELETON InChIKey block and IL_name. Reported, not acted on.",
+ "corpus_rows_scanned": 30998,
+ "corpus_distinct_full_keys": 19919,
+ "per_lipid": [
+  {
+   "IL_name": "A306_O6",
+   "paper_name": "306O6",
+   "full_inchikey": "QIYMRFHTSUZVSS-UHFFFAOYSA-N",
+   "skeleton_block": "QIYMRFHTSUZVSS",
+   "corpus_full_key_match": [],
+   "corpus_skeleton_match": [],
+   "corpus_name_match": [],
+   "corpus_smiles_canonically_identical": false,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O8",
+   "paper_name": "306O8",
+   "full_inchikey": "KGPDNEDYPAMAGG-UHFFFAOYSA-N",
+   "skeleton_block": "KGPDNEDYPAMAGG",
+   "corpus_full_key_match": [],
+   "corpus_skeleton_match": [],
+   "corpus_name_match": [],
+   "corpus_smiles_canonically_identical": false,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O9",
+   "paper_name": "306O9",
+   "full_inchikey": "FADOUOCMTOIWGB-UHFFFAOYSA-N",
+   "skeleton_block": "FADOUOCMTOIWGB",
+   "corpus_full_key_match": [],
+   "corpus_skeleton_match": [],
+   "corpus_name_match": [],
+   "corpus_smiles_canonically_identical": false,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_Oi10",
+   "paper_name": "306Oi10",
+   "full_inchikey": "BPPZRZOKGADTQE-UHFFFAOYSA-N",
+   "skeleton_block": "BPPZRZOKGADTQE",
+   "corpus_full_key_match": [
+    "NC_2024"
+   ],
+   "corpus_skeleton_match": [
+    "NC_2024"
+   ],
+   "corpus_name_match": [
+    "NC_2024"
+   ],
+   "corpus_smiles_canonically_identical": true,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O10",
+   "paper_name": "306O10",
+   "full_inchikey": "PGKBCAOUJZLRIS-UHFFFAOYSA-N",
+   "skeleton_block": "PGKBCAOUJZLRIS",
+   "corpus_full_key_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_skeleton_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_name_match": [
+    "NC_2024"
+   ],
+   "corpus_smiles_canonically_identical": true,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O11",
+   "paper_name": "306O11",
+   "full_inchikey": "WYYPKZMMNDPYQD-UHFFFAOYSA-N",
+   "skeleton_block": "WYYPKZMMNDPYQD",
+   "corpus_full_key_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_skeleton_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_name_match": [
+    "NC_2024"
+   ],
+   "corpus_smiles_canonically_identical": true,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O12",
+   "paper_name": "306O12",
+   "full_inchikey": "ZBKHKDUXOVRTRE-UHFFFAOYSA-N",
+   "skeleton_block": "ZBKHKDUXOVRTRE",
+   "corpus_full_key_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_skeleton_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_name_match": [
+    "NC_2024"
+   ],
+   "corpus_smiles_canonically_identical": true,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O13",
+   "paper_name": "306O13",
+   "full_inchikey": "MSCOHYYLRYFQHL-UHFFFAOYSA-N",
+   "skeleton_block": "MSCOHYYLRYFQHL",
+   "corpus_full_key_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_skeleton_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_name_match": [
+    "NC_2024"
+   ],
+   "corpus_smiles_canonically_identical": true,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O14",
+   "paper_name": "306O14",
+   "full_inchikey": "LRQXEZVLSSESNB-UHFFFAOYSA-N",
+   "skeleton_block": "LRQXEZVLSSESNB",
+   "corpus_full_key_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_skeleton_match": [
+    "KW_2014",
+    "NC_2024"
+   ],
+   "corpus_name_match": [
+    "NC_2024"
+   ],
+   "corpus_smiles_canonically_identical": true,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O16",
+   "paper_name": "306O16",
+   "full_inchikey": "RIYSLMHQAZEFEP-UHFFFAOYSA-N",
+   "skeleton_block": "RIYSLMHQAZEFEP",
+   "corpus_full_key_match": [],
+   "corpus_skeleton_match": [],
+   "corpus_name_match": [],
+   "corpus_smiles_canonically_identical": false,
+   "name_matched_but_structure_did_not": false
+  },
+  {
+   "IL_name": "A306_O18",
+   "paper_name": "306O18",
+   "full_inchikey": "BMILXSKFNQZSAS-UHFFFAOYSA-N",
+   "skeleton_block": "BMILXSKFNQZSAS",
+   "corpus_full_key_match": [],
+   "corpus_skeleton_match": [],
+   "corpus_name_match": [],
+   "corpus_smiles_canonically_identical": false,
+   "name_matched_but_structure_did_not": false
+  }
+ ],
+ "summary": {
+  "enumerated": 11,
+  "already_in_corpus_by_full_inchikey": 6,
+  "already_in_corpus_by_skeleton_block": 6,
+  "already_in_corpus_by_IL_name": 6,
+  "novel_to_the_corpus": 5,
+  "name_match_with_structure_mismatch": 0
+ },
+ "near_miss_tierA_exact_306_core": {
+  "_what": "Every corpus lipid CONTAINING the tetra-substituted 306 core as a SUBSTRUCTURE (N-methyl-3,3'-dipropyl, four N-CH2CH2-C(=O)O-alkyl arms). A substructure match is a SUPERSET: a larger polyamine lipidoid that embeds this motif matches too, which is why the decisive figure here is n_identical_to_one_of_ours and not n. This is the paper's only external structure anchor: KW_2014 stores these same structures under 'C<n>' names and NC_2024 under 'O<n>' names, so the token's meaning is attested twice, independently, instead of assumed from the label.",
+  "n": 128,
+  "n_identical_to_one_of_ours": 16,
+  "rows": [
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T1",
+    "IL_SMILES": "CCCCCCCCCCCCCCCCCCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCCCCCCCCCCCC)CCCCCC",
+    "full_inchikey": "ABGDEHKZCOTBKE-MHECGQLPSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "1.386241035"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T10",
+    "IL_SMILES": "CCCCCCC#CCCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCC#CCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCC#CCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCC#CCCCCCC)CCCCCC",
+    "full_inchikey": "AULZDWDLWMREFR-SLRCRCNVSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "1.425641641"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T2",
+    "IL_SMILES": "CCCCCCCC/C=C\\CCCCCCCCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCC/C=C\\CCCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCC/C=C\\CCCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCC/C=C\\CCCCCCCC)CCCCCC",
+    "full_inchikey": "IKCSGKRSTCBLNX-FEMAINQXSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.961891938"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T3",
+    "IL_SMILES": "CCCCC/C=C\\C/C=C\\CCCCCCCCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCC/C=C\\C/C=C\\CCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCC/C=C\\C/C=C\\CCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCCCCCCC/C=C\\C/C=C\\CCCCC)CCCCCC",
+    "full_inchikey": "HLRFSTPGYXGLPX-UIPPFHCHSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.584521631"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T4",
+    "IL_SMILES": "CCC#CCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCC)CCCCCC",
+    "full_inchikey": "YGSNHJMCZCWHSS-COEPGKKDSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.518508081"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T5",
+    "IL_SMILES": "CCCC#CCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCC)CCCCCC",
+    "full_inchikey": "KIMSPMOHYYFVJE-HNBZTWOZSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.0106288"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T6",
+    "IL_SMILES": "CCCCC#CCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCC)CCCCCC",
+    "full_inchikey": "BIINGXKTLWFZHG-YIUQYIAISA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.449016616"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T7",
+    "IL_SMILES": "CCCCCC#CCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCCC)CCCCCC",
+    "full_inchikey": "CRJGKVUMTMSERG-ZLSBMTDASA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850627614"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T8",
+    "IL_SMILES": "CCCCCCC#CCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCC#CCCCCCC)CCCCCC",
+    "full_inchikey": "UGAOIWRMJTUHFH-VDMYNXLNSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.091948567"
+   },
+   {
+    "Experiment_ID": "BL_2023",
+    "pool": "vitro",
+    "IL_name": "A15-T9",
+    "IL_SMILES": "CCCCC#CCCOC(=O)OC(C/C=C\\CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCC#CCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCC#CCCCC)CCC(=O)OCCCCCCCC/C=C\\CC(CCCCCC)OC(=O)OCCC#CCCCC)CCCCCC",
+    "full_inchikey": "FHOAQNNPFKTJDH-ZLSBMTDASA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.943161197"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vitro",
+    "IL_name": "A306_C10",
+    "IL_SMILES": "CCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC",
+    "full_inchikey": "PGKBCAOUJZLRIS-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.891100547"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vivo",
+    "IL_name": "A306_C10",
+    "IL_SMILES": "CCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC",
+    "full_inchikey": "PGKBCAOUJZLRIS-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "1.336820573"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vitro",
+    "IL_name": "A306_C11",
+    "IL_SMILES": "CCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC",
+    "full_inchikey": "WYYPKZMMNDPYQD-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.877054095"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vivo",
+    "IL_name": "A306_C11",
+    "IL_SMILES": "CCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC",
+    "full_inchikey": "WYYPKZMMNDPYQD-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "1.295543433"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vitro",
+    "IL_name": "A306_C12",
+    "IL_SMILES": "CCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC",
+    "full_inchikey": "ZBKHKDUXOVRTRE-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "4.148872257"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vivo",
+    "IL_name": "A306_C12",
+    "IL_SMILES": "CCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC",
+    "full_inchikey": "ZBKHKDUXOVRTRE-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "1.329192915"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vitro",
+    "IL_name": "A306_C13",
+    "IL_SMILES": "CCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC",
+    "full_inchikey": "MSCOHYYLRYFQHL-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "4.064084644"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vivo",
+    "IL_name": "A306_C13",
+    "IL_SMILES": "CCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC",
+    "full_inchikey": "MSCOHYYLRYFQHL-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "1.345598915"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vitro",
+    "IL_name": "A306_C14",
+    "IL_SMILES": "CCCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC",
+    "full_inchikey": "LRQXEZVLSSESNB-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "4.181623819"
+   },
+   {
+    "Experiment_ID": "KW_2014",
+    "pool": "vivo",
+    "IL_name": "A306_C14",
+    "IL_SMILES": "CCCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC",
+    "full_inchikey": "LRQXEZVLSSESNB-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.406472128"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC1",
+    "IL_SMILES": "CC(C)CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)C",
+    "full_inchikey": "ASNVBYYGXOUOCM-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "2.185099711"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC10",
+    "IL_SMILES": "CCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC",
+    "full_inchikey": "ZWVUGJXUQZRPGD-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "2.185099711"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC11",
+    "IL_SMILES": "CCCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC",
+    "full_inchikey": "BGLBJYAYMOJDQL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC12",
+    "IL_SMILES": "CCCCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCC",
+    "full_inchikey": "CKUPSSRNFPXGCA-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vivo",
+    "IL_name": "4A3-SC12",
+    "IL_SMILES": "CCCCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCC",
+    "full_inchikey": "CKUPSSRNFPXGCA-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.441750048"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC14",
+    "IL_SMILES": "CCCCCCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCC",
+    "full_inchikey": "GSSAKTSYHNOYTL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.768345525"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC16",
+    "IL_SMILES": "CCCCCCCCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCCCC",
+    "full_inchikey": "BZQZMFLQFXRNKY-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC18",
+    "IL_SMILES": "CCCCCCCCCCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCCCCCCCC",
+    "full_inchikey": "DSMJAQGSZVNISX-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC19",
+    "IL_SMILES": "CC(CSCCc1ccccc1)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCc1ccccc1)CCC(=O)OCCOC(=O)C(C)CSCCc1ccccc1)CCC(=O)OCCOC(=O)C(C)CSCCc1ccccc1",
+    "full_inchikey": "RZTTVBMCWNTDSS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.768345525"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC2",
+    "IL_SMILES": "CC(C)CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C",
+    "full_inchikey": "RMSKXHJGEDFEBU-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC3",
+    "IL_SMILES": "CC(CSCC(C)(C)C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C",
+    "full_inchikey": "RSFZBTBJFVASMP-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.768345525"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC4",
+    "IL_SMILES": "CCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCC",
+    "full_inchikey": "DOVLKIYBDWCVLB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "2.185099711"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC5",
+    "IL_SMILES": "CCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCC",
+    "full_inchikey": "BNYIUBSAAOYDRD-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC6",
+    "IL_SMILES": "CCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCC",
+    "full_inchikey": "SGOOGYKYQPPMJO-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC7",
+    "IL_SMILES": "CCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCC",
+    "full_inchikey": "YDQQWAUZFPFEIH-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC8",
+    "IL_SMILES": "CCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC",
+    "full_inchikey": "HMIDEMNFLBUNTB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vivo",
+    "IL_name": "4A3-SC8",
+    "IL_SMILES": "CCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC",
+    "full_inchikey": "HMIDEMNFLBUNTB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "siRNA",
+    "Experiment_value": "1.207450131"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SC9",
+    "IL_SMILES": "CCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCC",
+    "full_inchikey": "CRGMITINTOIOGG-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "3.601853898"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN1",
+    "IL_SMILES": "CC(CSCCN(C)C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN(C)C)CCC(=O)OCCOC(=O)C(C)CSCCN(C)C)CCC(=O)OCCOC(=O)C(C)CSCCN(C)C",
+    "full_inchikey": "YCCOCAYCVAKHCK-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN10",
+    "IL_SMILES": "CC(CSCCCC(=O)N(C)CCCN(C)C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCCN(C)C)CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCCN(C)C)CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCCN(C)C",
+    "full_inchikey": "JSABZGKVNBPODS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN11",
+    "IL_SMILES": "CC(CSCCCC(=O)N(C)CCN1CCCCC1)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCN1CCCCC1)CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCN1CCCCC1)CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N(C)CCN1CCCCC1",
+    "full_inchikey": "GQOBTPPVLXHMDD-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN2",
+    "IL_SMILES": "CCCCNCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCNCCCC)CCC(=O)OCCOC(=O)C(C)CSCCNCCCC)CCC(=O)OCCOC(=O)C(C)CSCCNCCCC",
+    "full_inchikey": "OACJIVQZDFYJAM-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN3",
+    "IL_SMILES": "CCN(CC)CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN(CC)CC)CCC(=O)OCCOC(=O)C(C)CSCCN(CC)CC)CCC(=O)OCCOC(=O)C(C)CSCCN(CC)CC",
+    "full_inchikey": "JOHWBCSUKOSYJD-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN4",
+    "IL_SMILES": "CC(CSCCN1CCCC1)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN1CCCC1)CCC(=O)OCCOC(=O)C(C)CSCCN1CCCC1)CCC(=O)OCCOC(=O)C(C)CSCCN1CCCC1",
+    "full_inchikey": "BWSSBSYCZODFHL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN5",
+    "IL_SMILES": "CC(CSCCN1CCCCC1)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN1CCCCC1)CCC(=O)OCCOC(=O)C(C)CSCCN1CCCCC1)CCC(=O)OCCOC(=O)C(C)CSCCN1CCCCC1",
+    "full_inchikey": "BEGQKGNFALSAPH-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN6",
+    "IL_SMILES": "CC(CSCCN1CCCCCC1)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN1CCCCCC1)CCC(=O)OCCOC(=O)C(C)CSCCN1CCCCCC1)CCC(=O)OCCOC(=O)C(C)CSCCN1CCCCCC1",
+    "full_inchikey": "QCPKRXZZENSIAO-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.768345525"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN7",
+    "IL_SMILES": "CCCN(CCC)CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN(CCC)CCC)CCC(=O)OCCOC(=O)C(C)CSCCN(CCC)CCC)CCC(=O)OCCOC(=O)C(C)CSCCN(CCC)CCC",
+    "full_inchikey": "BYNBHSXJTUTPAU-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN8",
+    "IL_SMILES": "CCCCN(CCCC)CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCN(CCCC)CCCC)CCC(=O)OCCOC(=O)C(C)CSCCN(CCCC)CCCC)CCC(=O)OCCOC(=O)C(C)CSCCN(CCCC)CCCC",
+    "full_inchikey": "VBRKBSCHAYVYEB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.768345525"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SN9",
+    "IL_SMILES": "CC(CSCCCC(=O)N1CCN(CCO)CC1)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N1CCN(CCO)CC1)CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N1CCN(CCO)CC1)CCC(=O)OCCOC(=O)C(C)CSCCCC(=O)N1CCN(CCO)CC1",
+    "full_inchikey": "XWKKURXVBVFLHG-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO1",
+    "IL_SMILES": "CC(CSCCC(=O)O)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCC(=O)O)CCC(=O)OCCOC(=O)C(C)CSCCC(=O)O)CCC(=O)OCCOC(=O)C(C)CSCCC(=O)O",
+    "full_inchikey": "RJLLZCLYBVWXCL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO2",
+    "IL_SMILES": "CC(CSCCCCCC(=O)O)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCC(=O)O)CCC(=O)OCCOC(=O)C(C)CSCCCCCC(=O)O)CCC(=O)OCCOC(=O)C(C)CSCCCCCC(=O)O",
+    "full_inchikey": "SEFRKFHJDFAJGV-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO3",
+    "IL_SMILES": "CC(CSCCCCCCCCCCC(=O)O)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC(=O)O)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC(=O)O)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCC(=O)O",
+    "full_inchikey": "QCOLLPMUQAAFCU-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO4",
+    "IL_SMILES": "CC(CSCCO)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCO)CCC(=O)OCCOC(=O)C(C)CSCCO)CCC(=O)OCCOC(=O)C(C)CSCCO",
+    "full_inchikey": "SDUCANPWOUQJQY-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO5",
+    "IL_SMILES": "CC(CSCC(O)CO)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC(O)CO)CCC(=O)OCCOC(=O)C(C)CSCC(O)CO)CCC(=O)OCCOC(=O)C(C)CSCC(O)CO",
+    "full_inchikey": "WKNKWWGLYFPMED-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO6",
+    "IL_SMILES": "CC(CSCCCO)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCO",
+    "full_inchikey": "PSZZOIXQAXPWCI-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "0.768345525"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO7",
+    "IL_SMILES": "CC(CSCCCCO)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCCO",
+    "full_inchikey": "YCRVETFOCSMVJS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO8",
+    "IL_SMILES": "CC(CSCCCCCCO)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCCCCO",
+    "full_inchikey": "FCAXFNYJNJZJGY-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "-0.648408662"
+   },
+   {
+    "Experiment_ID": "KZ_2016",
+    "pool": "vitro",
+    "IL_name": "4A3-SO9",
+    "IL_SMILES": "CC(CSCCCCCCCCCCCO)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCO)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCCCO",
+    "full_inchikey": "JQDULYKGBQJKTH-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "siRNA",
+    "Experiment_value": "2.185099711"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-10",
+    "IL_SMILES": "CCCCCCCCCCC(=O)OCC(CC)(COC(=O)CCCCCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCCCCCCC)COC(=O)CCCCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCCCC)COC(=O)CCCCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCCCC)COC(=O)CCCCCCCCCC",
+    "full_inchikey": "NDSIASODIAJKSL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.302888814"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-11",
+    "IL_SMILES": "CCCCCCCCCCCC(=O)OCC(CC)(COC(=O)CCCCCCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCCCCCCCC)COC(=O)CCCCCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCCCCC)COC(=O)CCCCCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCCCCC)COC(=O)CCCCCCCCCCC",
+    "full_inchikey": "CWIIBALQIJTVTL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.142309074"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-5",
+    "IL_SMILES": "CCCCCC(=O)OCC(CC)(COC(=O)CCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCC)COC(=O)CCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCC)COC(=O)CCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCC)COC(=O)CCCCC",
+    "full_inchikey": "DWXDHFCSJBDMRT-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.913240758"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-6",
+    "IL_SMILES": "CCCCCCC(=O)OCC(CC)(COC(=O)CCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCCC)COC(=O)CCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCC)COC(=O)CCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCC)COC(=O)CCCCCC",
+    "full_inchikey": "GDUIXHHXBCAWAU-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.300282518"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-6b",
+    "IL_SMILES": "CCCCC(C)C(=O)OCC(CC)(COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)C(C)CCCC)COC(=O)C(C)CCCC)CCC(=O)OCC(CC)(COC(=O)C(C)CCCC)COC(=O)C(C)CCCC)CCC(=O)OCC(CC)(COC(=O)C(C)CCCC)COC(=O)C(C)CCCC)COC(=O)C(C)CCCC",
+    "full_inchikey": "DPSBUQDFBZSBJK-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.539848981"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-7",
+    "IL_SMILES": "CCCCCCCC(=O)OCC(CC)(COC(=O)CCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCCCC)COC(=O)CCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCC)COC(=O)CCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCC)COC(=O)CCCCCCC",
+    "full_inchikey": "WCAQUGYHFJWFDI-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "1.075788518"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-7b",
+    "IL_SMILES": "CCCCCC(C)C(=O)OCC(CC)(COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)C(C)CCCCC)COC(=O)C(C)CCCCC)CCC(=O)OCC(CC)(COC(=O)C(C)CCCCC)COC(=O)C(C)CCCCC)CCC(=O)OCC(CC)(COC(=O)C(C)CCCCC)COC(=O)C(C)CCCCC)COC(=O)C(C)CCCCC",
+    "full_inchikey": "YBIQQZZMCKKZAV-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.145699573"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-7b2",
+    "IL_SMILES": "CCCCC(CC)C(=O)OCC(CC)(COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)C(CC)CCCC)COC(=O)C(CC)CCCC)CCC(=O)OCC(CC)(COC(=O)C(CC)CCCC)COC(=O)C(CC)CCCC)CCC(=O)OCC(CC)(COC(=O)C(CC)CCCC)COC(=O)C(CC)CCCC)COC(=O)C(CC)CCCC",
+    "full_inchikey": "GJKHNKNFPLRESZ-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.285921297"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-8",
+    "IL_SMILES": "CCCCCCCCC(=O)OCC(CC)(COC(=O)CCCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCCCCC)COC(=O)CCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCC)COC(=O)CCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCC)COC(=O)CCCCCCCC",
+    "full_inchikey": "CBYPPXARQATBRK-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.099225408"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-8b",
+    "IL_SMILES": "CCCCC(C)CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCC)COC(=O)CCC(C)CCCC)CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCC)COC(=O)CCC(C)CCCC)CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCC)COC(=O)CCC(C)CCCC",
+    "full_inchikey": "CLKBNHBYDLAHLB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.939356907"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-9",
+    "IL_SMILES": "CCCCCCCCCC(=O)OCC(CC)(COC(=O)CCCCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCCCCCCCC)COC(=O)CCCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCCC)COC(=O)CCCCCCCCC)CCC(=O)OCC(CC)(COC(=O)CCCCCCCCC)COC(=O)CCCCCCCCC",
+    "full_inchikey": "BSXNRLOSLZDNAK-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.82446713"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-9b",
+    "IL_SMILES": "CCCCCC(C)CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCCC)COC(=O)CCC(C)CCCCC)CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCCC)COC(=O)CCC(C)CCCCC)CCC(=O)OCC(CC)(COC(=O)CCC(C)CCCCC)COC(=O)CCC(C)CCCCC",
+    "full_inchikey": "QJNFMJPNXHNAPH-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.476007685"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-9b2",
+    "IL_SMILES": "CCCCC(CC)CCC(=O)OCC(CC)(COC(=O)CCC(CC)CCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CCC(CC)CCCC)COC(=O)CCC(CC)CCCC)CCC(=O)OCC(CC)(COC(=O)CCC(CC)CCCC)COC(=O)CCC(CC)CCCC)CCC(=O)OCC(CC)(COC(=O)CCC(CC)CCCC)COC(=O)CCC(CC)CCCC",
+    "full_inchikey": "MIGTVHHKMSVVIV-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.924995685"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-9b3",
+    "IL_SMILES": "CCCCCC(CCC)C(=O)OCC(CC)(COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)C(CCC)CCCCC)COC(=O)C(CCC)CCCCC)CCC(=O)OCC(CC)(COC(=O)C(CCC)CCCCC)COC(=O)C(CCC)CCCCC)CCC(=O)OCC(CC)(COC(=O)C(CCC)CCCCC)COC(=O)C(CCC)CCCCC)COC(=O)C(CCC)CCCCC",
+    "full_inchikey": "XZPJXHAXPDJTDC-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.202360259"
+   },
+   {
+    "Experiment_ID": "LX_2024_2",
+    "pool": "vitro",
+    "IL_name": "Xue_multiarm_A15_A-D-9v",
+    "IL_SMILES": "CCCCC/C=C/CCC(=O)OCC(CC)(COC(=O)CC/C=C/CCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CC)(COC(=O)CC/C=C/CCCCC)COC(=O)CC/C=C/CCCCC)CCC(=O)OCC(CC)(COC(=O)CC/C=C/CCCCC)COC(=O)CC/C=C/CCCCC)CCC(=O)OCC(CC)(COC(=O)CC/C=C/CCCCC)COC(=O)CC/C=C/CCCCC",
+    "full_inchikey": "XEQIDBBUZVRLIO-VSMUNBPSSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.547813795"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O1,1,8",
+    "IL_SMILES": "CC(C)CCCC(C)CCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCC(C)CCCC(C)C)CCC(=O)OCCC(C)CCCC(C)C)CCC(=O)OCCC(C)CCCC(C)C",
+    "full_inchikey": "HWGLVCOGYODCHK-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.989684354"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O10",
+    "IL_SMILES": "CCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC",
+    "full_inchikey": "PGKBCAOUJZLRIS-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.278062298"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O11",
+    "IL_SMILES": "CCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC",
+    "full_inchikey": "WYYPKZMMNDPYQD-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.265613738"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O12",
+    "IL_SMILES": "CCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC",
+    "full_inchikey": "ZBKHKDUXOVRTRE-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.004194007"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O13",
+    "IL_SMILES": "CCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC",
+    "full_inchikey": "MSCOHYYLRYFQHL-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.224050117"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O14",
+    "IL_SMILES": "CCCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC",
+    "full_inchikey": "LRQXEZVLSSESNB-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.18670444"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O4,8",
+    "IL_SMILES": "CCCCCCC(CCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CCCC)CCCCCC)CCC(=O)OCC(CCCC)CCCCCC)CCC(=O)OCC(CCCC)CCCCCC",
+    "full_inchikey": "BHKPUIUWEDGRQC-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.971011516"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O6,10",
+    "IL_SMILES": "CCCCCCCCC(CCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CCCCCC)CCCCCCCC)CCC(=O)OCC(CCCCCC)CCCCCCCC)CCC(=O)OCC(CCCCCC)CCCCCCCC",
+    "full_inchikey": "BCBIYQXQHIEFFI-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.379704979"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_O8,12",
+    "IL_SMILES": "CCCCCCCCCCC(CCCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC",
+    "full_inchikey": "UUTDUVIIQAJQSV-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.404602096"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_Oi10",
+    "IL_SMILES": "CC(C)CCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC(C)C)CCC(=O)OCCCCCCCC(C)C)CCC(=O)OCCCCCCCC(C)C",
+    "full_inchikey": "BPPZRZOKGADTQE-UHFFFAOYSA-N",
+    "is_one_of_ours": true,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "1.419111749"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_X3",
+    "IL_SMILES": "CCCCCCCC/C=C\\COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OC/C=C\\CCCCCCCC)CCC(=O)OC/C=C\\CCCCCCCC)CCC(=O)OC/C=C\\CCCCCCCC",
+    "full_inchikey": "SAZILZLREFBOJI-QWWGNAQQSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.024921057"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_X5",
+    "IL_SMILES": "CC(C)=CCC/C(C)=C/COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCC(=O)OC/C=C(\\C)CCC=C(C)C",
+    "full_inchikey": "OMZLLOGIXBAISI-XJLKXYKTSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-1.276001203"
+   },
+   {
+    "Experiment_ID": "NC_2024",
+    "pool": "vitro",
+    "IL_name": "A306_X7",
+    "IL_SMILES": "CCCCCC/C=C\\C=C/CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC)CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC)CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC",
+    "full_inchikey": "CKHXULCZTXVGEJ-YTRRHZELSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-1.238655527"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-2C",
+    "IL_SMILES": "CCC/C=C\\CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSC/C=C\\CCC)CCC(=O)OCCOC(=O)C(C)CSC/C=C\\CCC)CCC(=O)OCCOC(=O)C(C)CSC/C=C\\CCC",
+    "full_inchikey": "DCDUINZCMPGBAT-DZKLMYQDSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-2T",
+    "IL_SMILES": "CCC/C=C/CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSC/C=C/CCC)CCC(=O)OCCOC(=O)C(C)CSC/C=C/CCC)CCC(=O)OCCOC(=O)C(C)CSC/C=C/CCC",
+    "full_inchikey": "DCDUINZCMPGBAT-MOBSCGTJSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-3C",
+    "IL_SMILES": "CC/C=C\\CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC/C=C\\CC)CCC(=O)OCCOC(=O)C(C)CSCC/C=C\\CC)CCC(=O)OCCOC(=O)C(C)CSCC/C=C\\CC",
+    "full_inchikey": "STKFEUQCGLXQTG-NPICLQRASA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-3T",
+    "IL_SMILES": "CC/C=C/CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC/C=C/CC)CCC(=O)OCCOC(=O)C(C)CSCC/C=C/CC)CCC(=O)OCCOC(=O)C(C)CSCC/C=C/CC",
+    "full_inchikey": "STKFEUQCGLXQTG-FUPFHJOOSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-4C",
+    "IL_SMILES": "C/C=C\\CCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCC/C=C\\C)CCC(=O)OCCOC(=O)C(C)CSCCC/C=C\\C)CCC(=O)OCCOC(=O)C(C)CSCCC/C=C\\C",
+    "full_inchikey": "AOSAWBXJJDVKHZ-YZZYENSQSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.360192224"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-4T",
+    "IL_SMILES": "C/C=C/CCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCC/C=C/C)CCC(=O)OCCOC(=O)C(C)CSCCC/C=C/C)CCC(=O)OCCOC(=O)C(C)CSCCC/C=C/C",
+    "full_inchikey": "AOSAWBXJJDVKHZ-MKELXVRNSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-5N",
+    "IL_SMILES": "C=CCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCC=C)CCC(=O)OCCOC(=O)C(C)CSCCCCC=C)CCC(=O)OCCOC(=O)C(C)CSCCCCC=C",
+    "full_inchikey": "OECAFHONVDXBMS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-Cit-SH",
+    "IL_SMILES": "CC(C)=CCCC(C)CCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)CCC=C(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)CCC=C(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)CCC=C(C)C",
+    "full_inchikey": "XXANPQWCWMNBPY-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "1.246070396"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-Far-SH",
+    "IL_SMILES": "CC(C)=CCC/C(C)=C/CC/C(C)=C/CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSC/C=C(\\C)CC/C=C(\\C)CCC=C(C)C)CCC(=O)OCCOC(=O)C(C)CSC/C=C(\\C)CC/C=C(\\C)CCC=C(C)C)CCC(=O)OCCOC(=O)C(C)CSC/C=C(\\C)CC/C=C(\\C)CCC=C(C)C",
+    "full_inchikey": "QDRGHMHDSPNYJZ-TUBHUSIRSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-1.411564121"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-Ne-SH",
+    "IL_SMILES": "CC(C)=CCC/C(C)=C\\CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSC/C=C(/C)CCC=C(C)C)CCC(=O)OCCOC(=O)C(C)CSC/C=C(/C)CCC=C(C)C)CCC(=O)OCCOC(=O)C(C)CSC/C=C(/C)CCC=C(C)C",
+    "full_inchikey": "YYWOWLJQAUVDLJ-KADCNNKISA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.525685949"
+   },
+   {
+    "Experiment_ID": "SL_2020",
+    "pool": "vitro",
+    "IL_name": "4A3-SC8/2",
+    "IL_SMILES": "CC/C=C\\C/C=C\\CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSC/C=C\\C/C=C\\CC)CCC(=O)OCCOC(=O)C(C)CSC/C=C\\C/C=C\\CC)CCC(=O)OCCOC(=O)C(C)CSC/C=C\\C/C=C\\CC",
+    "full_inchikey": "FFYSIKFXIXJVNH-SCZXTJFUSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.131948569"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_2C10",
+    "IL_SMILES": "CCCCCCCCCCN(CCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(CCCCCCCCCC)CCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCCCCCCCC)CCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCCCCCCCC)CCCCCCCCCC",
+    "full_inchikey": "SPSAMYDKLXMWJT-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.044010363"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_2C4",
+    "IL_SMILES": "CCCCN(CCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(CCCC)CCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCC)CCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCC)CCCC",
+    "full_inchikey": "QMBZDTXJBBQKSJ-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.792186525"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_2C6",
+    "IL_SMILES": "CCCCCCN(CCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(CCCCCC)CCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCCCC)CCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCCCC)CCCCCC",
+    "full_inchikey": "HZERMXAAAGSQQS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.044010363"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_2C8",
+    "IL_SMILES": "CCCCCCCCN(CCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(CCCCCCCC)CCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCCCCCC)CCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(CCCCCCCC)CCCCCCCC",
+    "full_inchikey": "OMVBSZJJUSCGDG-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.948694289"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_C12",
+    "IL_SMILES": "CCCCCCCCCCCCN(C)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCCCCCC",
+    "full_inchikey": "YHOUOVUWJQBKRQ-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "2.948694289"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_C18",
+    "IL_SMILES": "CCCCCCCCCCCCCCCCCCN(C)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCCCCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCCCCCCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCCCCCCCCCCCC",
+    "full_inchikey": "IHTJQPQDTSLSHK-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.792186525"
+   },
+   {
+    "Experiment_ID": "YY_2023",
+    "pool": "vitro",
+    "IL_name": "4A2_C8",
+    "IL_SMILES": "CCCCCCCCN(C)CCC(=O)OCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCC)CCC(=O)OCCCCCCOC(=O)CCN(C)CCCCCCCC",
+    "full_inchikey": "IIVFEEMKCMAWKC-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.792186525"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SC-10",
+    "IL_SMILES": "CCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC",
+    "full_inchikey": "ZWVUGJXUQZRPGD-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SC-10",
+    "IL_SMILES": "CCCCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCCCC",
+    "full_inchikey": "ZWVUGJXUQZRPGD-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.125536073"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SC-PH",
+    "IL_SMILES": "CCCCCC(CCC)CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCOC(=O)C(C)CSCC(CCC)CCCCC",
+    "full_inchikey": "JOXSEFWPJJJOHS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SC-PH",
+    "IL_SMILES": "CCCCCC(CCC)CSCC(C)C(=O)OCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCOC(=O)C(C)CSCC(CCC)CCCCC",
+    "full_inchikey": "JOXSEFWPJJJOHS-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.235338255"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-10",
+    "IL_SMILES": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+    "full_inchikey": "KTIRKMBPBLQRPY-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-10",
+    "IL_SMILES": "CCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCC",
+    "full_inchikey": "KTIRKMBPBLQRPY-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.944644174"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-12",
+    "IL_SMILES": "CCCCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCC",
+    "full_inchikey": "OFSUIZSHLFQFEN-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-12",
+    "IL_SMILES": "CCCCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCC",
+    "full_inchikey": "OFSUIZSHLFQFEN-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.544126671"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-14",
+    "IL_SMILES": "CCCCCCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCCCC",
+    "full_inchikey": "MXWCFBLIOPXPLB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-14",
+    "IL_SMILES": "CCCCCCCCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCCCCCCCC",
+    "full_inchikey": "MXWCFBLIOPXPLB-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.16813001"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-4",
+    "IL_SMILES": "CCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCC",
+    "full_inchikey": "TZCBABYBXJBEFE-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-4",
+    "IL_SMILES": "CCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCC",
+    "full_inchikey": "TZCBABYBXJBEFE-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.125536073"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-8",
+    "IL_SMILES": "CCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCC",
+    "full_inchikey": "YSKHZLFPEBPMKJ-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-8",
+    "IL_SMILES": "CCCCCCCCSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCCCCCCCC",
+    "full_inchikey": "YSKHZLFPEBPMKJ-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.742072279"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-BO",
+    "IL_SMILES": "CCCCCCC(CCCC)CSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCCC)CCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCCC)CCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCCC)CCCCCC",
+    "full_inchikey": "QDAXTIVHWJNBHU-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-BO",
+    "IL_SMILES": "CCCCCCC(CCCC)CSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCCC)CCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCCC)CCCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCCC)CCCCCC",
+    "full_inchikey": "QDAXTIVHWJNBHU-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.962717268"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-EH",
+    "IL_SMILES": "CCCCC(CC)CSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CC)CCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CC)CCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CC)CCCC",
+    "full_inchikey": "UCRVYQBVBCAMNN-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-EH",
+    "IL_SMILES": "CCCCC(CC)CSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CC)CCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CC)CCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CC)CCCC",
+    "full_inchikey": "UCRVYQBVBCAMNN-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.962717268"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SCC-PH",
+    "IL_SMILES": "CCCCCC(CCC)CSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCC)CCCCC",
+    "full_inchikey": "DHCHNVHYAHEVOX-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SCC-PH",
+    "IL_SMILES": "CCCCCC(CCC)CSCC(C)C(=O)OCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCC)CCCCC)CCC(=O)OCCSSCCOC(=O)C(C)CSCC(CCC)CCCCC",
+    "full_inchikey": "DHCHNVHYAHEVOX-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "1.105676091"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SSC-10",
+    "IL_SMILES": "CCCCCCCCCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCCCCCCCCC)CCC(=O)OCCSSCCCCCCCCCC)CCC(=O)OCCSSCCCCCCCCCC",
+    "full_inchikey": "KWKIYHSRTCUKGP-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SSC-10",
+    "IL_SMILES": "CCCCCCCCCCSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCCCCCCCCCC)CCC(=O)OCCSSCCCCCCCCCC)CCC(=O)OCCSSCCCCCCCCCC",
+    "full_inchikey": "KWKIYHSRTCUKGP-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "-0.08852764"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vitro",
+    "IL_name": "4A3-SSC-PH",
+    "IL_SMILES": "CCCCCC(CCC)CSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCC(CCC)CCCCC)CCC(=O)OCCSSCC(CCC)CCCCC)CCC(=O)OCCSSCC(CCC)CCCCC",
+    "full_inchikey": "DXINSZCLCFKZIL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "in_vitro",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.850962943"
+   },
+   {
+    "Experiment_ID": "ZC_2023",
+    "pool": "vivo",
+    "IL_name": "4A3-SSC-PH",
+    "IL_SMILES": "CCCCCC(CCC)CSSCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCSSCC(CCC)CCCCC)CCC(=O)OCCSSCC(CCC)CCCCC)CCC(=O)OCCSSCC(CCC)CCCCC",
+    "full_inchikey": "DXINSZCLCFKZIL-UHFFFAOYSA-N",
+    "is_one_of_ours": false,
+    "Model_target": "liver",
+    "Cargo": "mRNA",
+    "Experiment_value": "0.510695471"
+   }
+  ]
+ },
+ "near_miss_tierB_same_chemistry_other_amine_core": {
+  "_what": "Count per experiment of corpus lipids with >=4 acrylate-ester Michael arms but NOT the 306 core -- the same lipidoid chemistry built on a different amine. Context only: it bounds how much of the corpus is the same chemical neighbourhood. Reported, not acted on.",
+  "per_experiment": {
+   "AA_2008": 17,
+   "BL_2023": 70,
+   "JM_2016": 6,
+   "KS_2024": 40,
+   "KW_2014": 367,
+   "KZ_2016": 374,
+   "LL_2026": 320,
+   "LX_2024_2": 60,
+   "LX_2024_3": 40,
+   "NC_2024": 195,
+   "SL_2020": 22,
+   "YY_2023": 112,
+   "ZC_2023": 43,
+   "ZT_2026": 19
+  },
+  "total": 1685
+ }
+}

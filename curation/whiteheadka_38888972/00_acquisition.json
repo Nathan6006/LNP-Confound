@@ -1,0 +1,92 @@
+{
+ "_what": "Acquisition record for every file in source/. Written 2026-11-10.",
+ "paper": "Strelkova Petersen DM, Weiss RM, Hajj KA, Yerneni SS, Chaudhary N, Newby AN, Arral ML, Whitehead KA. 'Branched-Tail Lipid Nanoparticles for Intravenous mRNA Delivery to Lung Immune, Endothelial, and Alveolar Cells in Mice.' Adv Healthc Mater 2024.",
+ "doi": "10.1002/adhm.202400225",
+ "pmid": "38888972",
+ "pmcid": "PMC11368637",
+ "nihms_id": "nihms-2006250",
+ "proposed_Experiment_ID": "KW_2024",
+ "licence": "NOT CC. The PMC record's <permissions> block reads verbatim: 'This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.' That is the NIH Author Manuscript Collection statement, NOT a Creative Commons licence. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release, so this paper is a release blocker until a licence is confirmed off the Wiley landing page. RECORDED, NOT RESOLVED -- see DECISIONS.md D-6.",
+ "data_availability_statement": "NONE. The JATS full text contains no data-availability section, no Zenodo/Dryad/figshare/GitHub accession and no deposited-dataset statement. The only pointer to further material is the <fn-group> sentence 'Supporting Information is available from the Wiley Online Library or from the author.' Searched for: data-availability, Zenodo, Dryad, GitHub, figshare, Mendeley, deposit, accession, repository. Zero hits other than that sentence.",
+
+ "files": [
+  {
+   "path": "source/adhm202400225-sup-0001-suppmat.docx",
+   "sha256": "79eabe9da55afcfe0ce890b5d16f993b26e289aa305293538eaa468538914ff1",
+   "bytes": 1474935,
+   "label": "Wiley publisher Supporting Information (Tables S1-S3, Figures S1-S3)",
+   "url": "NOT RECORDED -- this file was already present in source/ when this curation began. Its Wiley download route is https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadhm.202400225&file=adhm202400225-sup-0001-suppmat.docx , by analogy with the recorded route for whiteheadka_30637934 in curation/_received.jsonl, but THIS IS A RECONSTRUCTION AND WAS NOT EXECUTED. The sha256 above is the file as received.",
+   "retrieved_utc": "UNKNOWN -- predates this session"
+  },
+  {
+   "path": "source/PMC11368637.jats.xml",
+   "sha256": "7d55dc5dc322e89164871580996f53c1f74478bb8efa2cabc2cf7ef009153fb5",
+   "bytes": 126117,
+   "label": "PMC JATS full text (Methods, figure captions, references)",
+   "url": "NOT RECORDED -- already present in source/ when this curation began.",
+   "retrieved_utc": "UNKNOWN -- predates this session"
+  },
+  {
+   "path": "source/nihms-2006250-f0001.jpg",
+   "sha256": "240a22a438f11c6715aba2175e913ca877222c9e231006eaec220014037d2f06",
+   "bytes": 519647,
+   "pixels": "1663 x 2100 @ 300 dpi",
+   "label": "Figure 1 -- A) the 306 + 4 Oi10 reaction and the drawn product 306Oi10; B) all 29 amine heads drawn; C) all 20 acrylate tails drawn",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11368637/bin/nihms-2006250-f0001.jpg",
+   "retrieved_utc": "2026-11-10T05:03Z"
+  },
+  {
+   "path": "source/nihms-2006250-f0002.jpg",
+   "sha256": "1918ea394ab40e0ba6c11b2f57ce0f1feca39528f29fb19a0819c933b2e2e757",
+   "bytes": 913466,
+   "pixels": "2100 x 1983 @ 300 dpi",
+   "label": "Figure 2 -- A) 29 x 20 TNS-fluorescence heatmap over the whole 580 library; B) total in-vivo luminescent flux for the 49 selected LNPs; C) two correlation scatters",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11368637/bin/nihms-2006250-f0002.jpg",
+   "retrieved_utc": "2026-11-10T05:03Z"
+  },
+  {
+   "path": "source/nihms-2006250-f0003.jpg",
+   "sha256": "da366d115f3ee78e4b8aae7ce345077a2b1a41fe4f0b1841e8bdcc438f6e8a1d",
+   "bytes": 756575,
+   "pixels": "2100 x 1976 @ 300 dpi",
+   "label": "Figure 3 -- A) stacked liver/lung/spleen flux in the same lipidoid order as Fig 2B; B,C) six pie charts",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11368637/bin/nihms-2006250-f0003.jpg",
+   "retrieved_utc": "2026-11-10T05:03Z"
+  },
+  {
+   "path": "source/nihms-2006250-f0004.jpg",
+   "sha256": "1e5ffb36d5dcd85b032799f31a002e88a422d3739fde3558f37fb9024af81b29",
+   "bytes": 2158043,
+   "pixels": "1719 x 2100 @ 300 dpi",
+   "label": "Figure 4 -- 514O6,10 helper-lipid series (one lipidoid only; not a library screen)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11368637/bin/nihms-2006250-f0004.jpg",
+   "retrieved_utc": "2026-11-10T05:03Z"
+  },
+  {
+   "path": "source/nihms-2006250-f0005.jpg",
+   "sha256": "c997a707bfb34a6eeed5f65542b3149692924609fea3e2bce805af0e0e952fa9",
+   "bytes": 631864,
+   "pixels": "2100 x 1563 @ 300 dpi",
+   "label": "Figure 5 -- flow-cytometry cell-type breakdown for 514O6,10 (one lipidoid only)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11368637/bin/nihms-2006250-f0005.jpg",
+   "retrieved_utc": "2026-11-10T05:03Z"
+  },
+  {
+   "path": "source/nihms-2006250-f0006.jpg",
+   "sha256": "17a738a6c2c94a680fb4732f485c81fd7c97af5430817a97dbb26e72fb0a3988",
+   "bytes": 45529,
+   "pixels": "640 x 150 @ 150 dpi",
+   "label": "the journal's anchor graphic, not a data figure",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11368637/bin/nihms-2006250-f0006.jpg",
+   "retrieved_utc": "2026-11-10T05:03Z"
+  }
+ ],
+
+ "how_the_figures_were_obtained": "PIPELINE_V2 section 3 says to check for publisher figure rasters before rendering anything. The main-article figures were NOT in source/ and the per-lipidoid values live only in them, so they had to be acquired. Three URL patterns were tried with a plain client and no user-agent spoofing: europepmc.org/api/fulltextRepo (403), /pmc/articles/PMC11368637/bin/<f>.jpg (404), and /articles/instance/11368637/bin/<f>.jpg (200). The third is the PMC author-manuscript asset route and serves 300 dpi JPEGs to an ordinary request, no browser and no session. The PMC OA service (oa.fcgi) 404s for this PMCID, which is expected: an NIH author manuscript is not in the standard OA subset. The article's own PDF at /articles/instance/11368637/pdf/nihms-2006250.pdf returns an HTML interstitial, not a PDF, so the JPEGs are the highest-fidelity form of the figures reachable without a browser.",
+
+ "what_was_NOT_obtained": [
+  "The Wiley version-of-record PDF and its figure assets. The Wiley figures would be the publisher's own rasters; the PMC ones are the NIH author-manuscript deposit of the same figures. PIPELINE_V2 says Wiley needs a browser; no browser was used here because the PMC route already gave 300 dpi.",
+  "NIHMS2006250-supplement-1.pdf, the PMC-side copy of the Supporting Information. The Wiley .docx in source/ is the same material in its original form, and the .docx is strictly better (Tables S1-S3 are live Word tables, not pixels).",
+  "Any raw per-animal or per-well data. None exists in any reachable artifact; see data_availability_statement."
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "table_s1_rows": 7,
+ "screening1_rows": 30,
+ "cross_table_agreement": [
+  {
+   "LNP": "LNP1",
+   "page21_vs_page2": "exact",
+   "page2": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "30",
+    "30",
+    "2.5",
+    "37.5"
+   ],
+   "page21": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "30",
+    "30",
+    "2.5",
+    "37.5"
+   ]
+  },
+  {
+   "LNP": "LNP2",
+   "page21_vs_page2": "exact",
+   "page2": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "35",
+    "18",
+    "2.5",
+    "44.5"
+   ],
+   "page21": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "35",
+    "18",
+    "2.5",
+    "44.5"
+   ]
+  },
+  {
+   "LNP": "LNP3",
+   "page21_vs_page2": "exact",
+   "page2": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "45",
+    "42",
+    "2.5",
+    "10.5"
+   ],
+   "page21": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "45",
+    "42",
+    "2.5",
+    "10.5"
+   ]
+  },
+  {
+   "LNP": "LNP4",
+   "page21_vs_page2": "exact",
+   "page2": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "50",
+    "35",
+    "2.5",
+    "12.5"
+   ],
+   "page21": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DSPC",
+    "50",
+    "35",
+    "2.5",
+    "12.5"
+   ]
+  },
+  {
+   "LNP": "LNP7",
+   "page21_vs_page2": "exact",
+   "page2": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DOPE",
+    "30",
+    "30",
+    "2.5",
+    "37.5"
+   ],
+   "page21": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DOPE",
+    "30",
+    "30",
+    "2.5",
+    "37.5"
+   ]
+  },
+  {
+   "LNP": "LNP11",
+   "page21_vs_page2": "exact",
+   "page2": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DOPE",
+    "52.5",
+    "15",
+    "2.5",
+    "30"
+   ],
+   "page21": [
+    "cKK-E12",
+    "Cholesterol",
+    "C14PEG2K",
+    "DOPE",
+    "52.5",
+    "15",
+    "2.5",
+    "30"
+   ]
+  },
+  {
+   "LNP": "MC3",
+   "page21_vs_page2": "not_in_screening1_table",
+   "why": "MC3 is the benchmark, not a library member"
+  }
+ ],
+ "molpct_sums": [
+  {
+   "LNP": "LNP1",
+   "sum": 100.0
+  },
+  {
+   "LNP": "LNP2",
+   "sum": 100.0
+  },
+  {
+   "LNP": "LNP3",
+   "sum": 100.0
+  },
+  {
+   "LNP": "LNP4",
+   "sum": 100.0
+  },
+  {
+   "LNP": "LNP7",
+   "sum": 100.0
+  },
+  {
+   "LNP": "LNP11",
+   "sum": 100.0
+  },
+  {
+   "LNP": "MC3",
+   "sum": 100.0
+  }
+ ],
+ "distinct_ionizable_structures": {
+  "all_individually_measured": 2,
+  "excluding_the_MC3_benchmark": 1,
+  "inchikeys": [
+   "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "ZISVTYVLWSZJAL-UHFFFAOYSA-N"
+  ],
+  "statement": "The six lead LNPs are ONE ionizable lipid (cKK-E12) in six different formulations. The only second structure among individually-administered LNPs is the MC3 benchmark."
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "_what": "C16-style evidence, computed here because this run may not execute provenance/check_anchor_independence.py (it writes tracked files other agents are using). The test is on the GENERATOR'S COMPOSED TEMPLATE, not on the emitted anchor: a correct re-derivation is byte-identical to a correct enumeration once canonicalised, which is why C10's own `anchor_may_be_a_copy` missed F-037.",
+ "n_anchors": 11,
+ "n_byte_identical_templates": 0,
+ "worst_shared_literal_run_chars": 18,
+ "n_exact_inchikey_matches": 11,
+ "anchors": [
+  {
+   "lipidoid": "75-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 104,
+   "inchikey_anchor": "WSZOYDRWFJGICF-UHFFFAOYSA-N",
+   "inchikey_enumeration": "WSZOYDRWFJGICF-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "76-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 104,
+   "inchikey_anchor": "RMZSGCUXIYLCOE-UHFFFAOYSA-N",
+   "inchikey_enumeration": "RMZSGCUXIYLCOE-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "77-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 105,
+   "inchikey_anchor": "MKODPXIYOAPYKM-UHFFFAOYSA-N",
+   "inchikey_enumeration": "MKODPXIYOAPYKM-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "78-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 102,
+   "inchikey_anchor": "AAYDXUIQYPVVHK-UHFFFAOYSA-N",
+   "inchikey_enumeration": "AAYDXUIQYPVVHK-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "80-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 103,
+   "inchikey_anchor": "DCHGAHGDUATDEI-UHFFFAOYSA-N",
+   "inchikey_enumeration": "DCHGAHGDUATDEI-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "81-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 105,
+   "inchikey_anchor": "JRDBWEJYUYRTDZ-UHFFFAOYSA-N",
+   "inchikey_enumeration": "JRDBWEJYUYRTDZ-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "82-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 105,
+   "inchikey_anchor": "ZKXMQFVWURUAFG-UHFFFAOYSA-N",
+   "inchikey_enumeration": "ZKXMQFVWURUAFG-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "93-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 105,
+   "inchikey_anchor": "RCBQJDQSGGDAOA-UHFFFAOYSA-N",
+   "inchikey_enumeration": "RCBQJDQSGGDAOA-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "113-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 149,
+   "inchikey_anchor": "UADGBEBTTDIGDS-UHFFFAOYSA-N",
+   "inchikey_enumeration": "UADGBEBTTDIGDS-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "306-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 151,
+   "inchikey_anchor": "LNEWDYQYDLBMAL-UHFFFAOYSA-N",
+   "inchikey_enumeration": "LNEWDYQYDLBMAL-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  },
+  {
+   "lipidoid": "400-O16CBA",
+   "template_is_byte_identical_to_the_enumeration": false,
+   "longest_shared_literal_run_chars": 18,
+   "template_length_chars": 154,
+   "inchikey_anchor": "HKARBGOUBZLDKK-UHFFFAOYSA-N",
+   "inchikey_enumeration": "HKARBGOUBZLDKK-UHFFFAOYSA-N",
+   "exact_match": true,
+   "skeleton_match": true
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "scaffolded": "2026-11-10",
+ "paper": {
+  "authors": "Qiang Guo, Yuxuan Zhang, Xujia Yang, Qiang Liu, Junlin Sun, Tianyu Luo, Yubo Wang, Zilin Meng, Zijian Pan, Shunhao Wang, Yiran Yang, Yirong Sun, Xuefeng Huang, Ningqiang Gong, Jinghong Li",
+  "title": "β-Hydroxy Thioether-Derived Ionizable Lipids for Spleen-Tropic mRNA Delivery and In Vivo Chimeric Antigen Receptor T Cell Engineering",
+  "journal": "ACS Nano",
+  "year": 2026,
+  "volume_issue_pages": "20(20): 14602-14614",
+  "doi": "10.1021/acsnano.6c00706",
+  "pmid": "42130331",
+  "pmid_verified": "Supplied by the caller; NOT re-verified here against provenance/esummary_cache.json. CLAUDE.md s3 forbids recording a paper as unindexed without a dated query result; this paper IS indexed, so the weaker obligation applies, but the PMID should be confirmed by fetch_esummary.py before merge.",
+  "article_landing_page": "https://pubs.acs.org/ancac3/article/20/20/14602/5105918/Hydroxy-Thioether-Derived-Ionizable-Lipids-for",
+  "landing_page_fetched_utc": "2026-11-10T04:54Z",
+  "landing_page_http": "403 on the first navigation (Cloudflare 'Just a moment...'), 200 on the second. BROWSER_ACQUISITION.md: ACS resolves on the 2nd navigation; a first 403 is evidence about the request, not the site.",
+  "entitlement": "UNENTITLED. The page resolves to /article-abstract/... and is labelled 'Available to Purchase'. Abstract, author list and the Supporting Information link are served; the full text, the figures and their captions are not. 'Figures & tables' is a javascript:; link that yields no caption text to an unentitled session (tested: document.body.innerText stayed 7,470 chars and contains no 'Figure 1')."
+ },
+ "files": [
+  {
+   "path": "curation/lij_42130331/source/nn6c00706_si_001.pdf",
+   "sha256": "7f609287568aa736c26c4063c6b1535253b0b6538d346531302fa8a7f4157bf1",
+   "bytes": 4238261,
+   "pages": 41,
+   "retrieved_from": "https://pubs.acs.org/ancac3/article-supplement/5105918/pdf/nn6c00706_si_001/ -- the single supplementary asset enumerated off the article page (see supplementary_assets_enumerated below)",
+   "retrieved_utc": "downloaded by the caller before this session; hash recorded 2026-11-10T04:48Z",
+   "licence": "© 2026 American Chemical Society. The article is marked 'Available to Purchase' on the landing page and Europe PMC reports isOpenAccess=N. NO Creative Commons licence is offered. This is NOT CC0/CC-BY-compatible, which CLAUDE.md s8 requires of every constituent source before corpus release. See DECISIONS.md D-5.",
+   "watermark": "Every page carries a downloader watermark naming the subscribing institution. It is an artefact of the download, not of the paper."
+  }
+ ],
+ "supplementary_assets_enumerated": {
+  "method": "document.querySelectorAll('a') on the loaded article page, filtered for suppl_file / supporting / si_<n> / .xlsx / .zip / .csv / .xls",
+  "when_utc": "2026-11-10T04:50Z",
+  "result": [
+   "PDF -> /ancac3/article-supplement/5105918/pdf/nn6c00706_si_001/",
+   "sifile1 -> /ancac3/article-supplement/5105918/pdf/nn6c00706_si_001/"
+  ],
+  "conclusion": "Exactly one supplementary asset exists, and it is a PDF. There is no Source Data workbook, no .xlsx, no .csv, no .zip."
+ },
+ "repository_search": {
+  "method": "Europe PMC REST, resultType=core, query DOI:\"10.1021/acsnano.6c00706\"",
+  "when_utc": "2026-11-10T04:52Z",
+  "result": {
+   "pmid": "42130331",
+   "pmcid": null,
+   "isOpenAccess": "N",
+   "inEPMC": "N",
+   "inPMC": "N",
+   "hasSuppl": "N",
+   "fullTextUrlList": "one entry, availability 'Subscription required', site DOI"
+  },
+  "conclusion": "No PMC deposit, no supplementary deposit, no accession, no repository link. Tier 3 is empty."
+ }
+}

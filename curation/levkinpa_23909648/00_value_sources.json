@@ -1,0 +1,119 @@
+{
+ "_what": "THE INTAKE GATE (PIPELINE_V2.md section 3, Stage 00b). Every panel or table that supplies a VALUE, with the tier it came from. Anything at 5_pixels must carry a reason tiers 1-4 failed that a reviewer can check by running a command. Written BEFORE any digitiser, per the standing instruction.",
+ "_tiers": "1 publisher Source Data | 2 SI tables (xlsx/csv/docx) | 3 author repo / Zenodo / Dryad | 4 pdfplumber text table | 5 pixels",
+ "_headline": "THIS PAPER NEEDS NO PIXELS FOR ANY VALUE. All 87 emittable-or-skipped delivery values are PRINTED DECIMAL NUMBERS recovered as PDF text objects by pdfplumber -- tier 4 on all four value tables. ZERO values are digitised. Pixels are used only for STRUCTURE verification (VS-9), where they confirm a formula and an exact mass that four other witnesses already pin.",
+ "_the_two_things_verified_before_anything_else": {
+  "full_published_title": "Combinatorial synthesis and high-throughput screening of alkyl amines for nonviral gene delivery. Bioconjugate Chemistry 2013, 24(9). Europe PMC EXT_ID:23909648, queried 2026-11-10. The truncated tracker title ('...alkylated...') hid nothing: the endpoint is gene delivery, NOT antimicrobial.",
+  "the_endpoint": "AVERAGE TRANSFECTION EFFICIENCY, PRINTED AS 'the percentage of transfected cells', with an SD. Cargo is PLASMID DNA (Tables S2/S5 index doses as 'DNA 75 ng / 150 ng / 200 ng'; Figures S1/S2 captions read 'after mixing liposomes with plasmid DNA'). This is NOT luminescence, NOT RLU, NOT siRNA knockdown. Grep evidence over the whole SI text layer: 'luciferase' 0 hits, 'luminesc' 0, 'RLU' 0, 'GFP' 0, 'siRNA' 0, 'knockdown' 0, 'transfect' 4 (the four table captions). Stored as printed; NOT converted, NOT logged, NOT z-scored by this curation."
+ },
+ "_tier_1_to_4_sweep": {
+  "tier_1_publisher_source_data": "NONE. ACS Bioconjugate Chemistry 2013 published a single supplementary item, bc400158w_si_001.pdf (the filename's _si_001 has no sibling). ACS did not offer Source Data workbooks for this title in 2013. No .xlsx/.csv exists to fetch.",
+  "tier_2_si_tables": "NONE as a separate file -- the SI is one PDF. The tables inside it are handled at tier 4, where they succeed.",
+  "tier_3_author_repository": "NONE. provenance/tools/find_repo.py, run 2026-11-10 with --doi 10.1021/bc400158w --pmid 23909648 --author Levkin: repo_hits: []. All five queries completed (err:null), none rate-limited, so this is a COMPLETED negative. The tool's filter rejected 18 candidate repos; the code-search matches are the bare digits 23909648 inside unrelated bulk CSVs. See 00_acquisition.json.",
+  "tier_4_pdfplumber_text_table": "SUCCEEDS, and is the source of every value below. All 19 pages carry a text layer. NOTE FOR THE NEXT READER: pdfplumber's find_tables() returns 0 on pages 4, 5, 18 and 19 -- but that is NOT because the tables are images. Every cell IS a text object; the table rules are drawn as filled rects 0.36-0.48 pt tall rather than as `line` objects, so the default 'lines' table strategy finds no edges. The fix is to pass the rect runs as explicit column edges (stage05_values.py does this), NOT to reach for pixels. A reviewer can confirm in one command: `python3 -I -c \"import pdfplumber; d=pdfplumber.open('source/bc400158w_si_001.pdf'); p=d.pages[17]; print(len(p.find_tables()), len(p.rects), len(p.extract_words()))\"` -> 0 tables, 80 rects, and ~200 words, i.e. the text is all there."
+ },
+ "value_sources": [
+  {
+   "id": "VS-1",
+   "locus": "Table S3, SI p.18 (text table; caption 'The average transfection efficiency (the percentage of transfected cells) corresponds to Figure 2A')",
+   "quantity": "Average transfection efficiency +/- SD for 12 named lipidoids plus the L2K (Lipofectamine 2000) positive control",
+   "unit": "percent of transfected cells, AS PRINTED (one decimal, range 2.7-31.7). NOT converted.",
+   "n_values": 13,
+   "tier": "4_pdf_text_table",
+   "role": "PRIMARY for the library screen. These are the 12 lipidoids of main-article Figure 2A.",
+   "caveat": "Every one of the 12 is a CRUDE one-pot reaction product, not a purified single compound -- see _the_structure_blocker. Only the three amine-1 members have a determinable head group, and even those are mono/di-alkylated mixtures."
+  },
+  {
+   "id": "VS-2",
+   "locus": "Table S4, SI p.18 (text table; 'corresponds to Figure 3')",
+   "quantity": "Average transfection efficiency +/- SD for the same 12 lipidoids at THREE lipidoid:DOPE molar ratios (2:1, 1:1, 1:2), plus L2K",
+   "unit": "percent of transfected cells, as printed",
+   "n_values": 37,
+   "tier": "4_pdf_text_table",
+   "role": "PRIMARY for the formulation sweep.",
+   "geometry_note": "The ruled header on p.18 at top=330.24 segments into NINE column bands, i.e. FOUR (efficiency, SD) pairs, while only THREE DOPE ratios are labelled and only three carry data. The stray fourth pair is what makes the raw text layer read '... Average SD / efficienc y (%)'. Resolved by measurement, not by assumption -- see 08_contradictions.csv C-1."
+  },
+  {
+   "id": "VS-3",
+   "locus": "Table S5, SI pp.18-19 (text table spanning a page break; 'corresponds to Figure 6')",
+   "quantity": "Average transfection efficiency +/- SD for the THREE PURIFIED hits (1C16-D, 1C16-S, 1C12-D) at three lipidoid:DOPE ratios x three plasmid-DNA doses (75 / 150 / 200 ng), plus an L2K row per dose",
+   "unit": "percent of transfected cells, as printed",
+   "n_values": 30,
+   "tier": "4_pdf_text_table",
+   "role": "THE ONLY FULLY STRUCTURE-DETERMINED VALUES IN THE PAPER, and therefore the primary emission candidate. 1C16-D, 1C16-S and 1C12-D are column-purified single compounds whose full IUPAC names, 1H NMR, 13C NMR and HRMS are printed on SI pp.7-15.",
+   "page_break": "The 75 ng block's last two rows and all of the 150/200 ng blocks are on p.19. Read as one table across both pages; row-count reconciliation is in 07_qc.json."
+  },
+  {
+   "id": "VS-4",
+   "locus": "Table S6, SI p.19 (text table; 'corresponds to Figure 8')",
+   "quantity": "Average transfection efficiency +/- SD for 1C16-S, 1C16-D and four BINARY BLENDS of the two (2:1, 1:1, 1:2, 1:3), plus L2K",
+   "unit": "percent of transfected cells, as printed",
+   "n_values": 7,
+   "tier": "4_pdf_text_table",
+   "role": "PRIMARY for the two single compounds; the four blends are two-ionizable-lipid formulations and are recorded but not emittable as one IL_SMILES (DECISIONS.md D-3).",
+   "cross_panel": "1C16-S and 1C16-D also carry values in VS-3. Their ratio across the two panels is MEASURED and reported in 07_qc.json, per the standing instruction that panels sharing lipids have disagreed by 0.55x-2405x in this run."
+  },
+  {
+   "id": "VS-5",
+   "locus": "Table S1, SI pp.4-5 (text table)",
+   "quantity": "STRUCTURE evidence, not a delivery value: ESI-MS calculated and observed m/z for 'typical lipidoids chosen from the library', indexed by amine number 1-20 and alkyl halide chain length, resolved by number of alkyl tails (1 to 6)",
+   "n_values": "68 (calc, observed) pairs over 25 (amine, alkyl) combinations",
+   "tier": "4_pdf_text_table",
+   "role": "VERIFICATION ONLY -- never emitted. This is the paper's strongest internal check and it does four jobs: (a) it pins the library's SHAPE at 20 amines x 10 alkyl halides = 200; (b) it proves the crude products are MULTIPLY ALKYLATED MIXTURES, because one (amine, alkyl) pair carries up to five different tail counts; (c) its calc-column spacing between consecutive tail counts is a quantity the authors never printed and must equal exactly one CnH2n increment; (d) for amine 1 it cross-checks our independently computed exact masses.",
+   "not_a_value_source": "m/z is not a delivery endpoint."
+  },
+  {
+   "id": "VS-6",
+   "locus": "Table S2, SI p.6 (text table)",
+   "quantity": "zeta potential, zeta deviation, mean hydrodynamic diameter, polydispersity index for liposomes and lipoplexes of the three purified hits at 3 DOPE ratios x 4 DNA loadings",
+   "n_values": "~144",
+   "tier": "4_pdf_text_table",
+   "status": "NOT EXTRACTED AS VALUES, deliberately. Formulation characterisation, not a delivery endpoint; the LNPDB in-vitro corpus excludes diameter/zeta rows by its own definition (CLAUDE.md section 9, 2026-07-23 entry). Recorded so the omission is visible rather than silent. Its row LABELS are used, as tier-4 text, to confirm the dose and ratio vocabulary of VS-3."
+  },
+  {
+   "id": "VS-7",
+   "locus": "Figures S1 and S2, SI pp.16-17 (vector charts; axis labels are text, the series are drawing objects)",
+   "quantity": "time-dependent lipoplex hydrodynamic size (nm) and zeta potential (mV) over the first 30 min, 7 panels each",
+   "tier": "5_pixels",
+   "status": "NOT DIGITISED. Same reason as VS-6: size and zeta are not a delivery endpoint, so digitising them would add no emittable row. This is the ONLY place in this curation where tier 5 would have been needed, and it is not needed.",
+   "why_tiers_1_to_4_failed_here": "no Source Data, no repo, and the series are vector paths rather than text -- but it does not matter, because the quantity is out of scope."
+  },
+  {
+   "id": "VS-8",
+   "locus": "SI p.3 (synthesis of lipidoid 1C12) and SI pp.7-15 (NMR and HRMS of purified hits)",
+   "quantity": "STRUCTURE evidence, not values: the one named amine reagent (1-(2-aminoethyl)pyrrolidine), three full IUPAC product names, three 1H NMR integral sets, three 13C NMR peak lists, and three HRMS observed/calculated m/z at 4-5 decimal places",
+   "tier": "4_pdf_text_table",
+   "role": "THIS IS WHAT PINS THE CHEMISTRY, and it is the whole reason this folder emits anything at all."
+  },
+  {
+   "id": "VS-9",
+   "locus": "SI pp.7, 10 and 13 -- the structure drawing for each purified compound, and the 'Chemical Formula / Exact Mass / Molecular Weight' block printed beneath it",
+   "quantity": "STRUCTURE evidence, not a delivery value: the drawn connectivity of 1C12-D, 1C16-S and 1C16-D, plus each compound's molecular formula, neutral monoisotopic exact mass and average molecular weight",
+   "tier": "5_pixels",
+   "subtype": "PRINTED NUMERALS and a VECTOR DRAWING. The bonds are vector (filled outlines, counted exactly in stage02_drawn.py); only the TEXT under them is raster.",
+   "why_tiers_1_to_4_failed": "These three pages render their compound label and the whole Chemical Formula / Exact Mass / Molecular Weight block as bitmap IMAGES rather than text, so the PDF text layer does not contain them. Checkable in one command: `python3 -I -c \"import pdfplumber; d=pdfplumber.open('source/bc400158w_si_001.pdf'); print([l for l in (d.pages[6].extract_text() or '').split(chr(10)) if 'Formula' in l])\"` -> [] (empty), while a 400 dpi render shows 'Chemical Formula: C30H62N2 / Exact Mass: 450,49130 / Molecular Weight: 450,82668' plainly. There is no Source Data, no repo and no other copy of these numbers.",
+   "how_read": "pymupdf render at 400 dpi, read visually. The comma in '450,49130' is a decimal separator.",
+   "status": "NO EMITTED VALUE DEPENDS ON THIS. It is used only as structure verification (gates Q-5f, Q-5g, Q-5h) and as the C10 anchor source. The value tier of this curation is unaffected and remains 4 on all 87 values.",
+   "note": "This is a FOURTH and independent mass witness, and crucially a NEUTRAL one: the HRMS section's number is [M+H]+, so this leg can fail without that one. All three match our computed neutral exact masses to <=0.0005 mDa and all three formulae match exactly."
+  }
+ ],
+ "_the_structure_blocker": {
+  "summary": "VALUES ARE PLENTIFUL AND CHEAP; STRUCTURES ARE THE BINDING CONSTRAINT. The 20 amine head groups are referenced in the SI only by the integers 1-20 (Table S1's 'Amine' column) and in the lipidoid names (e.g. '4C18' = amine 4 + 1-iodooctadecane). THE SI DRAWS NO AMINE PANEL AND NAMES ONLY AMINE 1.",
+  "checked_how": "Grep over the full 19-page text layer: 'Scheme' 0 hits, 'structure' 0 hits. The only three images that are molecular drawings (pp. 7, 10, 13, 76-77 image strips each) sit directly under the three purified hits' IUPAC names and depict those three compounds. There is no figure enumerating amines 2-20.",
+  "amine_1_is_known_three_ways": "(1) SI p.3 names the reagent for lipidoid 1C12 as 1-(2-aminoethyl)pyrrolidine; (2) the three purified hits' IUPAC names all contain '(2-(pyrrolidin-1-yl)ethyl)'; (3) our independently computed exact masses for amine 1 + n alkyl match the authors' calculated m/z (07_qc.json).",
+  "consequence": "Of the 12 lipidoids carrying a Table S3 value, 3 use amine 1 (1C12, 1C14, 1C16) and 9 use amines 3, 4, 5, 10, 11, 12, 14 and 16, whose structures ARE NOT IN THIS SI. Those 9 cannot be given a structure from the material held, and this curation does not guess one. See DECISIONS.md D-1.",
+  "main_article_not_held": "Bioconjugate Chem. 2013, 24, 9, 1543-1551. Europe PMC 2026-11-10: isOpenAccess=N, inEPMC=N, inPMC=N, pmcid=null, fullTextUrlList = [{availability: 'Subscription required', site: 'DOI'}]. Not fetched by this curation (the shared browser is out of scope for this task and no paywall bypass was attempted)."
+ },
+ "readout_recorded_verbatim": {
+  "printed_column_header": "Average efficiency (%)",
+  "printed_caption_S3": "Table S3. The average transfection efficiency (the percentage of transfected cells) corresponds to Figure 2A.",
+  "printed_caption_S5": "Table S5. The average transfection efficiency (the percentage of transfected cells) corresponds to Figure 6.",
+  "cargo": "plasmid DNA (Figures S1/S2 captions: 'after mixing liposomes with plasmid DNA'). The reporter gene is NOT named anywhere in the SI.",
+  "cell_line": "NOT STATED ANYWHERE IN THE SI. Grep: 'HEK' 0, 'HeLa' 0, '293' 0 (the four '293' hits are mirrored NMR peak digits). The cell line is in the main article's methods only. Left BLANK; not inferred. DECISIONS.md D-2.",
+  "route": "in vitro, lipoplex, DOPE co-lipid",
+  "dose": "75 / 150 / 200 ng plasmid DNA per well for Table S5. For Tables S3, S4 and S6 the dose is NOT PRINTED -- but it is pinned at 150 ng by the L2K control, see 07_qc.json check Q-7 and DECISIONS.md D-4.",
+  "timepoint": "NOT STATED in the SI for the transfection assay. Figures S1/S2's 30 min refers to lipoplex formation, not to the transfection readout. Left BLANK.",
+  "helper_lipid": "DOPE, at printed lipidoid:DOPE molar ratios 2:1, 1:1, 1:2",
+  "comparator": "L2K = Lipofectamine 2000"
+ }
+}

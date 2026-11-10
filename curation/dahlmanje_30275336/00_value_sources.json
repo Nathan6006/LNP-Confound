@@ -1,0 +1,76 @@
+{
+  "_what_this_is": "The intake gate (PIPELINE_V2 Stage 00b). Every panel or table that supplies a value, with the tier it came from. Written BEFORE any digitiser was written. Tier 5 (pixels) must say why tiers 1-4 failed, in a sentence a reviewer can check.",
+  "_tiers": "1 publisher Source Data | 2 SI tables | 3 author repo/Zenodo/Dryad | 4 pdfplumber text table | 5 pixels (last resort)",
+  "tier_1_source_data": {
+    "available": false,
+    "checked": "PNAS 2018 articles of this vintage publish an 'SI Appendix' PDF only. The PMC JATS <supplementary-material> block declares exactly one file, pnas.1811276115.sapp.pdf. No .xlsx, .csv or Source Data file exists for this article."
+  },
+  "tier_3_author_repo": {
+    "available": false,
+    "checked": "find_repo.py on PMID 30275336 and on Dahlman repo-name queries: 0 relevant hits. The Methods say sequencing was processed with 'a custom Python-based tool' and 'an R script' but deposit neither, and name no accession. No GEO/SRA accession appears in the article, the Methods, or the data-availability statement."
+  },
+  "VALUES_ACTUALLY_USED": [
+    {
+      "id": "V-S4a",
+      "tier": "2_SI_table",
+      "locus": "SI Appendix, Supplementary Figure 4a, p.18 of source/pnas.1811276115.sapp.pdf",
+      "what": "Printed table of composition AND efficacy of the two lead LNPs 7C2 and 7C3: siRNA-induced protein silencing (%) in lung/spleen/kidney; sgRNA indel rate (%, 2 loci) in lung/spleen/kidney; mRNA %tdTom+ splenic ECs.",
+      "how_read": "pdfplumber find_tables() on page 18 returned a real 3x11 grid with filled numeric cells; every number is a PRINTED NUMERAL, not a pixel measurement. Cross-read against pdfplumber extract_text() of the same page, which reproduces the same digits in reading order.",
+      "n_values": 14,
+      "why_not_tier_1": "no Source Data file exists for this article (see tier_1_source_data)"
+    },
+    {
+      "id": "V-text",
+      "tier": "2_SI_table_equivalent_printed_prose",
+      "locus": "main article body, PMC6196543 JATS, Results paragraphs on 7C2/7C3",
+      "what": "Printed numerals in prose that restate or extend the Fig S4a values (60% lung siICAM-2 silencing; 90/75/59% sgRNA MFI decrease; 135/95/123% indels; 43% splenic EC and 20% hepatocyte tdTomato+ over 34 mice; ~20% editing at 1:1 Cas9:e-sgRNA).",
+      "how_read": "verbatim from the JATS body text, no digitisation",
+      "n_values": 11
+    },
+    {
+      "id": "F-formulations",
+      "tier": "4_pdfplumber_text_table",
+      "locus": "SI Appendix pp. 4 (54-LNP in vitro library), 7 (Screen 1, 112 LNPs), 10 (Screen 2, 102 LNPs), 11 (Screen 3, 157 LNPs)",
+      "what": "FORMULATIONS ONLY - compound identity, PEG type, lipid:nucleic-acid mass ratio, and the four mol% columns. NOT delivery values.",
+      "how_read": "pdfplumber find_tables() native grids (shapes 55x7, 112x8, 99x8, 145x9). Page 11's grid packs two LNPs per visual row, so cells are split on newline and re-flowed; the re-flow is verified by the mol%-sums-to-100 check and by LNP-number continuity 1..157.",
+      "why_not_tier_5": "no pixels involved; these are the PDF's own text cells"
+    }
+  ],
+  "VALUES_DELIBERATELY_NOT_EXTRACTED": [
+    {
+      "id": "X-screens",
+      "locus": "Fig 2E (normalized DNA delivery scatter), Fig 2F (Euclidean-clustering heat map), SI Fig S2 G/H, S2K, S6 a-c",
+      "what_it_would_have_been": "per-LNP normalized delivery for the 71 + 78 + (<=157) pooled LNPs of Screens 1-3",
+      "refused_because": [
+        "NOT ATTRIBUTABLE: every one of these panels plots normalized delivery as UNLABELLED points or as an unlabelled clustered heat map. No panel in the article or SI carries a per-LNP axis label, a per-LNP legend, or a numeric scale that maps a mark back to an LNP number. SI Fig S6 a-c plot the whole pool against 'Bioreplicate' 1-4 on the x-axis, so the x-coordinate encodes the MOUSE, not the particle.",
+        "COLUMNS UNATTRIBUTABLE, NOT 'no scale': Fig 2F DOES carry a numeric colour scale (Log2 Normalized Delivery (%), 0 to 3) - measured by reading the panel, correcting an earlier draft of this file that claimed it had none. The refusal is that its columns bear no LNP labels and their order is the Euclidean clustering's, which is unrecoverable.",
+        "SCOPE: even if attributable, these are POOLED COMPETITIVE values - see DECISIONS.md D-1."
+      ],
+      "n_values_forgone": "309 per-LNP values the design supports (71x4 + 78x2 + 106x2 in vivo, plus 54 in vitro), of which the publication attributes 0 to an identifiable LNP."
+    },
+    {
+      "id": "X-figS1b",
+      "locus": "SI Appendix p.2, native table 6x9 'Raw Counts Lung/Kidney Endothelial Cells'",
+      "refused_because": "It is a WORKED EXAMPLE, not data. SI Fig S1b's own caption calls it a 'Normalized delivery example calculation'. The counts are round teaching numbers (100, 80, 200, 300, 250, 120, 110...) and the column totals are 270/230/560/550/350/430. Extracting it would have put invented numbers in the corpus. Flagged here because find_tables() reports it as a clean numeric grid indistinguishable from real data."
+    },
+    {
+      "id": "X-viability",
+      "locus": "SI Fig S3 L-N, R, S; Fig S5 c, e",
+      "refused_because": "body-weight / organ-weight tolerability panels. Not a delivery endpoint; the corpus vocabulary has no slot for them."
+    },
+    {
+      "id": "X-biodist",
+      "locus": "Fig 3C, SI Fig S3I - Cy5.5 ex vivo fluorescence normalized to tissue weight",
+      "refused_because": "BIODISTRIBUTION, not delivery. The paper's own thesis (Fig 1A) is that biodistribution is necessary but not sufficient for functional delivery; it measures where a labelled DNA barcode went, not what was translated. Admitting it would contradict the article's central distinction and the corpus's delivery-only Experiment_method vocabulary."
+    },
+    {
+      "id": "X-dls",
+      "locus": "Fig 2D, SI Fig S3 c/d, S2K",
+      "refused_because": "diameter / DLS. Not a delivery endpoint."
+    }
+  ],
+  "tier_5_pixels": {
+    "used": false,
+    "note": "No digitiser was written for this paper. Every number that reached 05_values.csv is a printed numeral from a PDF text cell or from body prose. This is the posture PIPELINE_V2 section 3 asks for and it is the reason this folder contains no geometry code."
+  }
+}

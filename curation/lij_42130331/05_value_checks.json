@@ -1,0 +1,26 @@
+{
+ "n_values": 300,
+ "n_library_1": 50,
+ "n_library_2": 250,
+ "duplicate_names": 0,
+ "values_with_no_enumerated_structure": [],
+ "enumerated_structures_with_no_value": [],
+ "lead_compound_named_by_the_paper": "113-AA-C8C14",
+ "library_2_maximum": {
+  "name": "113-AA-C8C14",
+  "value": 98000.0,
+  "cell": "row 19 (Cl14) x col 6 (113-AA-C8)",
+  "is_unique": true
+ },
+ "lead_is_the_maximum": true,
+ "library_1_range": [
+  17.0,
+  1980.0
+ ],
+ "library_2_range": [
+  150.0,
+  98000.0
+ ],
+ "library_1_median": 380.0,
+ "library_2_median": 1100.0
+}

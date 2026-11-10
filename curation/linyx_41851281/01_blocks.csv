@@ -1,0 +1,53 @@
+block,kind,smiles,formula,exact_mass,n_NH_sites,geometry,hrms_check,note
+H1,head,OCCCC[NH2:1],C4H11NO,89.08406,2,4,,"4-aminobutan-1-ol; one primary amine, the OH does not undergo aza-Michael and is retained (mass confirms)."
+H2,head,CN(C)CCC[NH2:1],C5H14N2,102.11570,2,3,,"N,N-dimethylpropane-1,3-diamine."
+H3,head,OCC[NH:1]CC[NH2:1],C4H12N2O,104.09496,3,2;2,,2-[(2-aminoethyl)amino]ethan-1-ol.
+H4,head,[NH2:1]CCN(C)CC[NH2:1],C5H15N3,117.12660,4,2;2,,"N,N-bis(2-aminoethyl)methylamine."
+H5,head,[NH2:1]CCN(CC)CC[NH2:1],C6H17N3,131.14225,4,2;2,,"N,N-bis(2-aminoethyl)ethylamine."
+H6,head,C[NH:1]CCN(C)CC[NH:1]C,C7H19N3,145.15790,2,2;2,,"N,N',N''-trimethyldiethylenetriamine; two secondary N-H."
+H7,head,CN(C)CC[NH:1]CC[NH2:1],C6H17N3,131.14225,3,2;2,,"N,N-dimethyldiethylenetriamine."
+H8,head,CN(C)CCC[NH:1]CCC[NH2:1],C8H21N3,159.17355,3,3;3,,"N,N-dimethyldipropylenetriamine."
+H9,head,[NH2:1]CCCN(C)CCC[NH2:1],C7H19N3,145.15790,4,3;3,,"N,N-bis(3-aminopropyl)methylamine."
+H10,head,[NH2:1]CCN1CC[NH:1]CC1,C6H15N3,129.12660,3,2,,1-(2-aminoethyl)piperazine.
+H11,head,[NH2:1]CCN(CCCO)CC[NH2:1],C7H19N3O,161.15281,4,2;2;3,,"3-{bis(2-aminoethyl)amino}propan-1-ol. The SI names it '2,2'-(hydroxyazanediyl)bis(ethan-1-amine)', an N-hydroxylamine, which contradicts both its own synthesis (trimethylene bromohydrin alkylates the central N) and the drawn structure; HRMS C7H19N3O settles it -- 08_contradictions.csv C-04."
+H12,head,CC(C)(C)OC(=O)N1CCN(CC[NH2:1])CC1,C11H23N3O2,229.17903,2,2,,tert-butyl 4-(2-aminoethyl)piperazine-1-carboxylate (Boc).
+H13,head,[NH2:1]CCN(CC[NH2:1])CCCN1CCCCCC1,C13H30N4,242.24705,4,2;2;3,,"N,N-bis(2-aminoethyl)-3-(azepan-1-yl)propan-1-amine."
+H14,head,[NH2:1]CCN(CC[NH2:1])CCCN1CCN(C)CC1,C12H29N5,243.24230,4,2;2;3,,"N,N-bis(2-aminoethyl)-3-(4-methylpiperazin-1-yl)propan-1-amine."
+OT1,tail_monomer,[CH2:2]CC(=O)O,C21H36O2,320.27153,,R=18C (trace),"R=18C from 17 lipids, spread 0.0000 Da, dev +0.00000 Da","linoleyl, (9Z,12Z)-octadeca-9,12-dien-1-yl; the two horizontal bonds in the trace sit at C9-C10 and C12-C13 and both flanking vertices lie on the same side, so both alkenes are Z."
+NT1,tail_monomer,[CH2:2]CC(=O)N,C21H37N1O1,319.28751,,R=18C (trace),"R=18C from 15 lipids, spread 0.0000 Da, dev -0.00000 Da","linoleyl, (9Z,12Z)-octadeca-9,12-dien-1-yl; the two horizontal bonds in the trace sit at C9-C10 and C12-C13 and both flanking vertices lie on the same side, so both alkenes are Z."
+OT2,tail_monomer,[CH2:2]CC(=O)O,C21H38O2,322.28718,,R=18C (trace),"R=18C from 6 lipids, spread 0.0000 Da, dev -0.00000 Da","oleyl, (9Z)-octadec-9-en-1-yl; one horizontal bond at C9-C10, Z."
+NT2,tail_monomer,[CH2:2]CC(=O)N,C21H39N1O1,321.30316,,R=18C (trace),"R=18C from 6 lipids, spread 0.0000 Da, dev +0.00000 Da","oleyl, (9Z)-octadec-9-en-1-yl; one horizontal bond at C9-C10, Z."
+OT3,tail_monomer,[CH2:2]CC(=O)O,C21H40O2,324.30283,,R=18C (trace),"R=18C from 8 lipids, spread 0.0000 Da, dev +0.00001 Da",n-octadecyl (stearyl).
+NT3,tail_monomer,[CH2:2]CC(=O)N,C21H41N1O1,323.31881,,R=18C (trace),"R=18C from 4 lipids, spread 0.0000 Da, dev -0.00000 Da",n-octadecyl (stearyl).
+OT4,tail_monomer,[CH2:2]CC(=O)O,C19H36O2,296.27153,,R=16C (trace),"R=16C from 2 lipids, spread 0.0000 Da, dev -0.00000 Da",n-hexadecyl (cetyl).
+OT5,tail_monomer,[CH2:2]CC(=O)O,C17H32O2,268.24023,,R=14C (trace),"R=14C from 6 lipids, spread 0.0000 Da, dev +0.00001 Da",n-tetradecyl.
+NT5,tail_monomer,[CH2:2]CC(=O)N,C17H33N1O1,267.25621,,R=14C (trace),"R=14C from 4 lipids, spread 0.0000 Da, dev -0.00000 Da",n-tetradecyl.
+OT6,tail_monomer,[CH2:2]CC(=O)O,C15H28O2,240.20893,,R=12C (trace),"R=12C from 2 lipids, spread 0.0000 Da, dev -0.00000 Da",n-dodecyl.
+OT7,tail_monomer,[CH2:2]CC(=O)O,C13H24O2,212.17763,,R=10C (trace),"R=10C from 5 lipids, spread 0.0000 Da, dev +0.00001 Da",n-decyl.
+NT7,tail_monomer,[CH2:2]CC(=O)N,C13H25N1O1,211.19361,,R=10C (trace),"R=10C from 4 lipids, spread 0.0000 Da, dev -0.00000 Da",n-decyl.
+OT8,tail_monomer,[CH2:2]CC(=O)O,C11H20O2,184.14633,,R=8C (trace),"R=8C from 2 lipids, spread 0.0000 Da, dev +0.00000 Da",n-octyl.
+OT9,tail_monomer,[CH2:2]CC(=O)O,C9H16O2,156.11503,,R=6C (trace),"R=6C from 2 lipids, spread 0.0000 Da, dev +0.00000 Da",n-hexyl.
+OT10,tail_monomer,[CH2:2]CC(=O)O,C14H26O2,226.19328,,R=11C (trace),"R=11C from 6 lipids, spread 0.0000 Da, dev -0.00000 Da","undecan-3-yl; the trace gives 2 carbons on one arm of the branch point and 8 on the other, +1 for the branch carbon. SECONDARY ester -- the 1H NMR O-CH of every OT10 lipid is at 4.8 ppm, not the 4.05 ppm triplet of the primary esters."
+OT11,tail_monomer,[CH2:2]CC(=O)O,C18H34O2,282.25588,,R=15C (trace),"R=15C from 2 lipids, spread 0.0000 Da, dev -0.00001 Da",pentadecan-7-yl; trace 6 and 8 either side of the branch.
+OT12,tail_monomer,[CH2:2]CC(=O)O,C20H38O2,310.28718,,R=17C (trace),"R=17C from 4 lipids, spread 0.0000 Da, dev +0.00000 Da","heptadecan-9-yl; trace 8 and 8, symmetric."
+NT12,tail_monomer,[CH2:2]CC(=O)N,C20H39N1O1,309.30316,,R=17C (trace),"R=17C from 5 lipids, spread 0.0000 Da, dev -0.00000 Da","heptadecan-9-yl; trace 8 and 8, symmetric."
+OT13,tail_monomer,[CH2:2]CC(=O)O,C19H36O2,296.27153,,R=16C (trace),"R=16C from 5 lipids, spread 0.0000 Da, dev +0.00000 Da",hexadecan-3-yl; trace 2 and 13.
+OT14,tail_monomer,[CH2:2]CC(=O)O,C19H36O2S2,360.21567,,R=16C (trace),"R=16C from 2 lipids, spread 0.0000 Da, dev -0.00000 Da","2-(tetradecyldisulfanyl)ethyl. Confirmed in words by the SI's own synthesis: tetradecane-1-thiol + 2-mercaptoethanol + acryloyl chloride, 'Synthesis of 2-(tetradecyldisulfaneyl)ethyl acrylate'."
+OT15,tail_monomer,[CH2:2]CC(=O)O,C20H38O2S1,342.25925,,R=17C (trace),"R=17C from 1 lipids, spread 0.0000 Da, dev -0.00000 Da","2-(pentadecylsulfanyl)ethyl. The alkyl is C15, ONE carbon longer than T14's and T16's C14 -- the trace says 15 long bonds and the HRMS monomer 342.2593 Da says C20H38O2S, independently."
+OT16,tail_monomer,[CH2:2]CC(=O)O,C19H36O3,312.26645,,R=16C (trace),"R=16C from 1 lipids, spread 0.0000 Da, dev +0.00001 Da",2-(tetradecyloxy)ethyl.
+T1,tail_R,[CH3:3]CCCCCCC/C=C\C/C=C\CCCCC,C18H33,,,18C,,"linoleyl, (9Z,12Z)-octadeca-9,12-dien-1-yl; the two horizontal bonds in the trace sit at C9-C10 and C12-C13 and both flanking vertices lie on the same side, so both alkenes are Z."
+T2,tail_R,[CH3:3]CCCCCCC/C=C\CCCCCCCC,C18H35,,,18C,,"oleyl, (9Z)-octadec-9-en-1-yl; one horizontal bond at C9-C10, Z."
+T3,tail_R,[CH3:3]CCCCCCCCCCCCCCCCC,C18H37,,,18C,,n-octadecyl (stearyl).
+T4,tail_R,[CH3:3]CCCCCCCCCCCCCCC,C16H33,,,16C,,n-hexadecyl (cetyl).
+T5,tail_R,[CH3:3]CCCCCCCCCCCCC,C14H29,,,14C,,n-tetradecyl.
+T6,tail_R,[CH3:3]CCCCCCCCCCC,C12H25,,,12C,,n-dodecyl.
+T7,tail_R,[CH3:3]CCCCCCCCC,C10H21,,,10C,,n-decyl.
+T8,tail_R,[CH3:3]CCCCCCC,C8H17,,,8C,,n-octyl.
+T9,tail_R,[CH3:3]CCCCC,C6H13,,,6C,,n-hexyl.
+T10,tail_R,CC[CH2:3]CCCCCCCC,C11H23,,,11C,,"undecan-3-yl; the trace gives 2 carbons on one arm of the branch point and 8 on the other, +1 for the branch carbon. SECONDARY ester -- the 1H NMR O-CH of every OT10 lipid is at 4.8 ppm, not the 4.05 ppm triplet of the primary esters."
+T11,tail_R,CCCCCC[CH2:3]CCCCCCCC,C15H31,,,15C,,pentadecan-7-yl; trace 6 and 8 either side of the branch.
+T12,tail_R,CCCCCCCC[CH2:3]CCCCCCCC,C17H35,,,17C,,"heptadecan-9-yl; trace 8 and 8, symmetric."
+T13,tail_R,CC[CH2:3]CCCCCCCCCCCCC,C16H33,,,16C,,hexadecan-3-yl; trace 2 and 13.
+T14,tail_R,[CH3:3]CSSCCCCCCCCCCCCCC,C16H33S2,,,16C,,"2-(tetradecyldisulfanyl)ethyl. Confirmed in words by the SI's own synthesis: tetradecane-1-thiol + 2-mercaptoethanol + acryloyl chloride, 'Synthesis of 2-(tetradecyldisulfaneyl)ethyl acrylate'."
+T15,tail_R,[CH3:3]CSCCCCCCCCCCCCCCC,C17H35S,,,17C,,"2-(pentadecylsulfanyl)ethyl. The alkyl is C15, ONE carbon longer than T14's and T16's C14 -- the trace says 15 long bonds and the HRMS monomer 342.2593 Da says C20H38O2S, independently."
+T16,tail_R,[CH3:3]COCCCCCCCCCCCCCC,C16H33O,,,16C,,2-(tetradecyloxy)ethyl.

@@ -1,0 +1,90 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser or any chemistry was written.",
+ "_why": "The two curations that took their values from a publisher Source Data file (NG_2025) and from the authors' own repository (WT_2026) have ZERO digitisation defects between them. The four that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+ "_headline": "EVERY VALUE IN THIS PAPER IS AVAILABLE AS TEXT. Nothing was digitised. The 104-member screen is a printed numeral grid (SI Table S3); the 27-member MIC and therapeutic-index tables are structured <table> markup in the PMC JATS record; HC50 is recoverable in closed form as TI x MIC. The two figure panels that carry the same values (Fig 1C, Fig 4A) are therefore used to VERIFY, never to extract.",
+ "_tier_1_and_3_checked": {
+  "1_publisher_source_data": "ACS Applied Materials & Interfaces publishes no Source Data files; the article's only deposited supplement is <supplementary-material id='sifile1'> = am3c05481_si_001.pdf, which is the single href PMC lists. There is no second supplement to look for.",
+  "3_author_repository": "find_repo.py --doi 10.1021/acsami.3c05481 --pmid 37602460 --title 'Combinatorial Screening Cationic Lipidoids' --author Pabst returned repo_hits: [] on 2026-11-10. The paper's own Data Availability wording carries no repository, DOI or accession. So tier 3 does not exist for this paper -- checked, not assumed."
+ },
+ "panels": [
+  {
+   "panel": "SI Table S3 -- 'Scores awarded to each lipidoid based on initial antimicrobial screen'",
+   "supplies": "THE PRIMARY VALUE SOURCE. All 104 antimicrobial point-scores, as an 8 (headgroup) x 13 (tail) grid of printed integers 0-6, plus a printed Head total row and a printed Tail total column.",
+   "tier": "4_pdf_text_table",
+   "locator": "source/am3c05481_si_001.pdf page 10 (labelled S10). pdfplumber extract_words puts the 104 cells on exactly 8 x-columns (x0 = 194, 219, 245, 272, 298, 329, 363, 395 pt) and 13 rows; no cell was inferred, merged or interpolated.",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "Read a second, independent way: the page was rendered at 600 dpi (00_pages/si_p10_tableS3_600dpi.png) and every one of the 104 cells read off the image by eye. The two reads agree on 104/104 cells. Also cross-checked against the table's OWN printed marginals -- 7 of 8 Head totals reconcile exactly; the 4N' Head total and 13 of 13 Tail totals do not, which is recorded in 08_contradictions.csv, NOT silently fixed. Figure 1C draws the same 104 values as a colour-graded dot grid and is used only to confirm grid orientation and the direction of the colour scale."
+  },
+  {
+   "panel": "Main-text Table 1 -- MIC against B. subtilis for the 27 selected lipidoids",
+   "supplies": "27 MIC values in micromolar (9 tails x 3 headgroups: 4N', 3NB', 4NC). Printed numerals.",
+   "tier": "4_pdf_text_table",
+   "locator": "source/PMC10472336.jats.xml, <table-wrap> with <label>Table 1</label>. These are publisher-authored <table><tr><td> cells in the JATS record -- structured markup, NOT a text layer recovered from a PDF and NOT pixels. There is no higher tier for a main-text table; this is strictly better evidence than pdfplumber over the article PDF, which is why the article PDF was not needed.",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "Six MIC values are also stated in the running prose ('MIC assays revealed 7 different lipidoids with MICs at 2 uM'; '4N'12 ... the MIC was 50 uM'; '4N'8, which showed no evidence of structure but possessed a low MIC at 2 uM'; 'most 4NC-based lipidoids showed MIC < 6 uM, apart from the species with linear tails 8-9 atoms long'; '4NC8 ... despite MIC values at 50 or 100 uM'). Each prose claim is re-derived from the table cells in 07_qc.json, counted, not eyeballed."
+  },
+  {
+   "panel": "Main-text Table 2 -- therapeutic index (HC50/MIC) for the same 27 lipidoids",
+   "supplies": "27 TI values, 8 of them as lower bounds written with a 'greater-than-or-equal' sign.",
+   "tier": "4_pdf_text_table",
+   "locator": "source/PMC10472336.jats.xml, <table-wrap> with <label>Table 2</label>.",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "TI x MIC recovers HC50 in closed form and lands on the paper's own discrete hemolysis ladder (12.5 / 25 / 50 / 100 / 200 / >200 uM, the ladder named in the Figure 4 discussion) for 27 of 27 compounds. All 8 bounded entries equal exactly 400/MIC, which identifies the authors' convention for the '>200 uM' category and is reported in 07_qc.json. This makes Figure 4A's colour-coded HC50 dot plot redundant: it was NOT digitised."
+  },
+  {
+   "panel": "SI Table S4 / Table S5 -- tail and headgroup descriptors (MW, c log P, charge density)",
+   "supplies": "Not corpus values. Used as an INDEPENDENT CHECK on the enumerated building blocks: the 13 printed tail molecular weights are compared against the formula weight of each acrylate read from Figure 1A, and the 8 printed headgroup charge densities against (number of nitrogens)/(amine MW).",
+   "tier": "4_pdf_text_table",
+   "locator": "source/am3c05481_si_001.pdf page 11 (labelled S11).",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "See 07_qc.json checks P3 and P4. 13/13 tail MWs agree to <= 0.05 Da. 6/8 headgroup charge densities agree to <= 0.0001; the 2 that do not are 3NB and 4NC, whose printed values are each other's -- see 08_contradictions.csv."
+  },
+  {
+   "panel": "Figure 1A -- the building-block scheme",
+   "supplies": "STRUCTURES, not values. The 8 polyamine headgroups drawn in full, the 13 acrylate R groups drawn in full, and the fully methylated hexa-substituted product that fixes the degree of quaternisation.",
+   "tier": "5_pixels",
+   "locator": "source/figs/am3c05481_0002.jpg, 4183 x 1847 px, fetched from PMC's own figure store. Crops in 00_pages/fig1A_*.png.",
+   "why_tiers_1_to_4_failed": "A structure is not a value and no tier 1-4 artefact of this paper contains one: there is no SMILES, InChI, MOL block, CAS number or chemical name for any building block anywhere in the article, the SI or PubChem's record of it. The drawing is the only statement of connectivity the authors made, so it has to be read. Reading it is NOT a digitisation in the sense this gate is about -- no pixel is converted to a number. Each structure read off it is then checked against an independent printed quantity (the tail MW in Table S4, the headgroup N/MW in Table S5) that was never used to produce it.",
+   "verified_against": "07_qc.json P3/P4; and the three pairs of constitutional isomers the naming scheme predicts (6B/8 at 128.2 Da, 10B'/12 at 184.3 Da, 13B/14 at 212.3 Da) each appear in Table S4 as an exact MW tie, which no wrong assignment would produce."
+  },
+  {
+   "panel": "SI Figure S1 (panels A-N) -- fourteen named members drawn in full with NMR assignments",
+   "supplies": "STRUCTURES, not values. A second, independent drawing of fourteen specific library members, on SI pages S3-S8.",
+   "tier": "5_pixels",
+   "locator": "source/am3c05481_si_001.pdf pages S3-S8. These pages have NO TEXT LAYER -- pdfplumber returns 147 characters each, all of it the ACS download watermark -- so the structures are reachable only by rendering and looking. Crops in 00_pages/figS1*.png.",
+   "why_tiers_1_to_4_failed": "Same reason as Figure 1A: a structure is not a value, and this paper states no structure in any machine-readable form anywhere. Nothing is converted from a pixel to a number here either. It is read because it is the only second opinion on connectivity the paper contains.",
+   "verified_against": "Used as corroboration, and it earned its place twice. Panel (E) 4NC9 draws the cyclam ring with its spacers labelled d/b'/d (three carbons) and d/d (two), which settles the cyclam-versus-cyclen question that SI Table S5 muddies, and is now the source of the third C10 anchor. Panel (F) 3N'9C draws the 9C tail as a cyclopentane-fused bridged cage, confirming the tricyclodecanyl reading. Panel (A) 3N6B, by contrast, draws the 3N core as a nine-membered triaza RING carrying five arms, which is impossible -- see 08_contradictions.csv C-9."
+  },
+  {
+   "panel": "Figure 1C -- combinatorial screening dot grid",
+   "supplies": "Nothing. It draws the same 104 scores as Table S3, colour-graded.",
+   "tier": "4_pdf_text_table",
+   "locator": "superseded by SI Table S3; see that entry.",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "Used for orientation only (which axis is headgroup, which is tail, and that the colour runs dark = active at the lowest concentration). No value taken."
+  },
+  {
+   "panel": "Figure 4A -- HC50 dot plot for the 27 selected lipidoids",
+   "supplies": "Nothing. HC50 is recovered exactly as TI x MIC from Tables 1 and 2.",
+   "tier": "4_pdf_text_table",
+   "locator": "superseded by main-text Tables 1 and 2; see those entries.",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "The closed-form recovery lands on the paper's discrete hemolysis ladder for 27/27 compounds, so there is nothing a pixel read could add. NOTE: hemolysis is in any case outside the corpus -- CLAUDE.md records 90 hemolysis_percent rows trimmed out of the in-vitro pool in the 2026-07-23 entry."
+  },
+  {
+   "panel": "Figures 2, 3, 5, S2, S5-S10",
+   "supplies": "Nothing emittable. SAXS traces, PI permeabilisation kinetics, DLS distributions and schematics.",
+   "tier": "5_pixels",
+   "locator": "source/figs/am3c05481_0003.jpg (750x335), _0004.jpg (697x171), _0006.jpg; SI pages 12-20.",
+   "why_tiers_1_to_4_failed": "Not read at all. These panels carry no per-lipidoid scalar that the corpus has a column for, and PMC serves figures 2-4 only at 697-814 px wide, which would not support a read even if one were wanted. Recorded so that the DECISION not to read them is visible rather than absent."
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+  "paper": {
+    "title_as_published": "High-throughput in vivo screen of functional mRNA delivery identifies nanoparticles for endothelial cell gene editing.",
+    "title_verified_from": "Europe PMC REST core record, query EXT_ID:30275336 AND SRC:MED, resultType=core, fetched 2026-11-10 UTC",
+    "authors_first_last": "Sago CD ... Dahlman JE",
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 2018,
+    "volume": "115",
+    "issue": "42",
+    "pmid": "30275336",
+    "pmcid": "PMC6196543",
+    "doi": "10.1073/pnas.1811276115"
+  },
+  "no_original_data_discriminator": {
+    "rule": "abstractText length 0 PLUS no Methods/Results identifies a no-original-data record; pubType does not.",
+    "abstractText_length": 957,
+    "has_methods_section": true,
+    "has_results_section": true,
+    "verdict": "ORIGINAL RESEARCH ARTICLE - carries original data."
+  },
+  "licence": {
+    "article": "CC BY-NC-ND 4.0",
+    "source": "PMC JATS <permissions> block of PMC6196543, verbatim: 'This open access article is distributed under Creative Commons Attribution-NonCommercial-NoDerivatives License 4.0 (CC BY-NC-ND)'",
+    "europepmc_license_field": "cc by-nc-nd",
+    "cc0_or_ccby_compatible": false,
+    "note": "NC and ND clauses. CLAUDE.md section 8 requires constituent-source licences to be CC0/CC-BY-compatible before corpus release. This paper is NOT compatible. Recorded here so the question is visible even though zero rows are proposed for merge."
+  },
+  "repository": {
+    "searched": true,
+    "tool": "provenance/tools/find_repo.py --pmid 30275336 --author Dahlman",
+    "result": "NO author repository found. GitHub code search on the PMID returned 0 relevant hits; repo-name queries returned only unrelated lipidomics projects (rbouf/lipid-maps-harvester, mt93git/Lipidomic-Explorer-Suite). No Zenodo/Dryad deposit referenced anywhere in the article or SI.",
+    "commit_hash": null
+  },
+  "files": [
+    {
+      "path": "source/pnas.1811276115.sapp.pdf",
+      "what": "SI Appendix (Supplementary Figures 1-8 + supplementary tables)",
+      "bytes": 27953612,
+      "sha256": "32d3e9a6e9693d8ec83c9443c6b8cc96122912dbaf146f5a1f0748374dd4e9e8",
+      "pages": 26,
+      "pre_existing_in_folder": true
+    },
+    {
+      "path": "source/PMC6196543.jats.xml",
+      "what": "PMC JATS full text (main article body, captions, Methods)",
+      "acquired_via": "provenance/tools/pmc_fetch.py PMC6196543, after NCBI elink confirmed a real pubmed_pmc SELF-link (linkname pubmed_pmc -> 6196543), not merely pubmed_pmc_refs",
+      "bytes": 109317,
+      "sha256": "38aa02d87d631c2b8e6cecce152838a49d628d5d653a4cd812c2f3a02011d11b"
+    }
+  ],
+  "assets_not_obtained": {
+    "pnas.201811276.pdf": "main-article PDF: PMC /bin/ route returned an HTML error page. Not needed - the JATS XML carries the full body text and every figure caption verbatim.",
+    "figures": "Fig 1 via PMC /bin/; Figs 2-4 via Europe PMC api/fulltextRepo with mimeType=image/jpeg. Used for scope confirmation only, not as a value source."
+  }
+}

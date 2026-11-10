@@ -1,0 +1,1364 @@
+{
+ "_what": "Every check with numbers, each one run a second time with its own defect seeded so that the METRIC is shown to move.",
+ "_rule": "A clean line from a check that cannot fail is worth nothing (F-012, F-038, and two versions of C16 that reported 'all derived' while examining nothing).",
+ "checks": {
+  "P1_library_size": {
+   "headgroups": 8,
+   "tails": 13,
+   "product": 104,
+   "enumerated": 104,
+   "claimed_in_abstract": 104,
+   "cells_in_tableS3": 104,
+   "agree": 1
+  },
+  "P2_tails_per_headgroup": {
+   "agree": 8,
+   "of": 8,
+   "per_head": {
+    "2N": [
+     4,
+     4
+    ],
+    "3N": [
+     5,
+     5
+    ],
+    "3N'": [
+     5,
+     5
+    ],
+    "4N": [
+     6,
+     6
+    ],
+    "4N'": [
+     6,
+     6
+    ],
+    "3NB": [
+     6,
+     6
+    ],
+    "3NB'": [
+     6,
+     6
+    ],
+    "4NC": [
+     4,
+     4
+    ]
+   }
+  },
+  "P3_tail_mw_vs_tableS4": {
+   "agree": 13,
+   "of": 13,
+   "max_abs_diff_Da": 0.048,
+   "isomer_MW_ties": {
+    "128.2": [
+     "6B",
+     "8"
+    ],
+    "184.3": [
+     "10B'",
+     "12"
+    ],
+    "212.3": [
+     "13B",
+     "14"
+    ]
+   },
+   "n_ties": 3
+  },
+  "P4_head_charge_density_vs_tableS5": {
+   "agree": 6,
+   "of": 8,
+   "mismatches": {
+    "3NB": {
+     "computed": 0.027353,
+     "printed": 0.02
+    },
+    "4NC": {
+     "computed": 0.019967,
+     "printed": 0.0274
+    }
+   },
+   "each_mismatch_is_the_others_value": true
+  },
+  "P5_name_token_vs_measured": {
+   "agree": 13,
+   "of": 13,
+   "measured": {
+    "6B": 6,
+    "8": 8,
+    "8CB": 8,
+    "9": 9,
+    "9C": 9,
+    "10": 10,
+    "10B": 10,
+    "10B'": 10,
+    "11": 11,
+    "12": 12,
+    "13B": 13,
+    "14": 14,
+    "16": 16
+   }
+  },
+  "P6_tableS3_marginals": {
+   "head_totals_agree": 7,
+   "of_heads": 8,
+   "tail_totals_agree": 2,
+   "of_tails": 13,
+   "grand_total_from_cells": 439,
+   "grand_total_from_printed_head_totals": 440,
+   "grand_total_from_printed_tail_totals": 500,
+   "head_total_residuals": {
+    "2N": 0,
+    "3N": 0,
+    "3N'": 0,
+    "4N": 0,
+    "4N'": 1,
+    "3NB": 0,
+    "3NB'": 0,
+    "4NC": 0
+   },
+   "tail_total_residuals": {
+    "6B": 0,
+    "8": 0,
+    "8CB": 6,
+    "9": 5,
+    "9C": 5,
+    "10": 6,
+    "10B": 5,
+    "10B'": 6,
+    "11": 6,
+    "12": 7,
+    "13B": 6,
+    "14": 3,
+    "16": 6
+   }
+  },
+  "P7_score6_iff_MIC_le_25": {
+   "agree": 27,
+   "of": 27,
+   "disagreements": [],
+   "n_score6_in_subset": 21
+  },
+  "P8_TI_bound_convention_and_HC50_ladder": {
+   "bounded_entries": 8,
+   "bounded_equal_400_over_MIC": 8,
+   "unprinted_constant": 400.0,
+   "unbounded_on_hemolysis_ladder": 19,
+   "of_unbounded": 19,
+   "unbounded_but_above_the_200uM_ceiling": [
+    {
+     "name": "4NC8",
+     "TI": "4",
+     "MIC": 100.0,
+     "HC50_implied": 400.0,
+     "why": "lands on 400, which is the encoding the eight BOUNDED entries use for '>200 uM', but this entry carries no '>=' sign -- 08_contradictions.csv C-5"
+    }
+   ],
+   "off_ladder": []
+  },
+  "P9_printed_statistics": [
+   {
+    "claim": "'MIC assays revealed 7 different lipidoids with MICs at 2 uM'",
+    "expected": 7,
+    "measured": 7,
+    "which": [
+     "3NB'8",
+     "3NB'9",
+     "4N'8",
+     "4N'9",
+     "4NC10B'",
+     "4NC8CB",
+     "4NC9C"
+    ],
+    "ok": 1
+   },
+   {
+    "claim": "'two of the most active lipidoids 4N'8 and 4NC8CB (MIC = 2 uM) recorded the highest therapeutic index of 50'",
+    "expected": [
+     50.0,
+     [
+      "4N'8",
+      "4NC8CB"
+     ]
+    ],
+    "measured": [
+     50.0,
+     [
+      "4N'8",
+      "4NC8CB"
+     ]
+    ],
+    "ok": 1
+   },
+   {
+    "claim": "'4N'12 ... the MIC was 50 uM'",
+    "expected": 50.0,
+    "measured": 50.0,
+    "ok": 1
+   },
+   {
+    "claim": "'4N'8, which showed no evidence of structure but possessed a low MIC at 2 uM'",
+    "expected": 2.0,
+    "measured": 2.0,
+    "ok": 1
+   },
+   {
+    "claim": "'the main exceptions were 4N'12 and 4NC8 ... despite MIC values at 50 or 100 uM'",
+    "expected": [
+     50.0,
+     100.0
+    ],
+    "measured": [
+     50.0,
+     100.0
+    ],
+    "ok": 1
+   },
+   {
+    "claim": "'most 4NC-based lipidoids showed MIC < 6 uM, apart from the species with linear tails 8-9 atoms long'",
+    "expected": "7 of 9 below 6 uM; the two at or above are tails 8 and 9",
+    "measured": {
+     "below_6": [
+      "10",
+      "10B",
+      "10B'",
+      "11",
+      "12",
+      "8CB",
+      "9C"
+     ],
+     "at_or_above_6": [
+      "8",
+      "9"
+     ]
+    },
+    "ok": 1
+   },
+   {
+    "claim": "'lipidoids with the most potent antimicrobial properties (down to 2 uM)'",
+    "expected": 2.0,
+    "measured": 2.0,
+    "ok": 1
+   },
+   {
+    "claim": "'despite having the lowest charge density, the diamine 2N performed the worst of all headgroups'",
+    "expected": [
+     "2N",
+     "2N"
+    ],
+    "measured": [
+     "2N",
+     "2N"
+    ],
+    "ok": 1
+   },
+   {
+    "claim": "'intermediate c log P values (ca. 3-4) and tail lengths (9-11) showing the highest antimicrobial activity'",
+    "expected": "the three best tail totals are tails 9, 10, 11",
+    "measured": [
+     "9",
+     "10",
+     "11"
+    ],
+    "ok": 1
+   }
+  ],
+  "P10_prose_count_of_twenty": {
+   "prose_says": 20,
+   "tableS3_score6_within_the_27": 21,
+   "table1_MIC_le_25_within_the_27": 21,
+   "the_two_tables_agree_with_each_other": 1,
+   "prose_agrees": 0
+  },
+  "P11_charge_density_trend_sign": {
+   "paper_states": "lower charge densities ... achieving the highest scores, i.e. a NEGATIVE correlation",
+   "spearman_with_printed_tableS5": 0.259,
+   "spearman_with_computed_from_the_drawn_amine": -0.247,
+   "printed_has_the_stated_sign": 0,
+   "computed_has_the_stated_sign": 1
+  },
+  "P12_corpus_overlap": {
+   "vitro": {
+    "members_already_in_corpus_by_FULL_InChIKey": 11,
+    "of": 104,
+    "which": {
+     "2N14": [
+      [
+       "KW_2014",
+       "A157_C10"
+      ]
+     ],
+     "2N16": [
+      [
+       "KW_2014",
+       "A157_C12"
+      ]
+     ],
+     "3N13B": [
+      [
+       "NC_2024",
+       "A113_Oi10"
+      ]
+     ],
+     "3N14": [
+      [
+       "KW_2014",
+       "A114_C10"
+      ],
+      [
+       "NC_2024",
+       "A113_O10"
+      ]
+     ],
+     "3N16": [
+      [
+       "KW_2014",
+       "A114_C12"
+      ],
+      [
+       "NC_2024",
+       "A113_O12"
+      ]
+     ],
+     "3NB14": [
+      [
+       "KW_2014",
+       "A110_C10"
+      ]
+     ],
+     "3NB16": [
+      [
+       "KW_2014",
+       "A110_C12"
+      ]
+     ],
+     "4N14": [
+      [
+       "AA_2008",
+       "98_O10"
+      ],
+      [
+       "KW_2014",
+       "A98_C10"
+      ]
+     ],
+     "4N16": [
+      [
+       "AA_2008",
+       "98_O12"
+      ],
+      [
+       "KW_2014",
+       "A98_C12"
+      ]
+     ],
+     "4NC14": [
+      [
+       "KW_2014",
+       "A138_C10"
+      ]
+     ],
+     "4NC16": [
+      [
+       "KW_2014",
+       "A138_C12"
+      ]
+     ]
+    },
+    "methylated_cation_matches": 0,
+    "IL_name_collisions": {}
+   },
+   "vivo": {
+    "members_already_in_corpus_by_FULL_InChIKey": 1,
+    "of": 104,
+    "which": {
+     "3NB14": [
+      [
+       "KW_2014",
+       "A110_C10"
+      ]
+     ]
+    },
+    "methylated_cation_matches": 0,
+    "IL_name_collisions": {}
+   }
+  },
+  "P13_C10_anchor": {
+   "anchors": {
+    "3NB8": {
+     "formula": "C52H102N4O12+4",
+     "heavy_atoms": 68,
+     "matches_enumeration_full_InChIKey": 1
+    },
+    "4NC6B": {
+     "formula": "C42H84N4O8+4",
+     "heavy_atoms": 54,
+     "matches_enumeration_full_InChIKey": 1
+    },
+    "4NC9": {
+     "formula": "C46H92N4O8+4",
+     "heavy_atoms": 58,
+     "matches_enumeration_full_InChIKey": 1
+    }
+   },
+   "seeded_connectivity_defect": {
+    "what": "cyclam ring spacers walked 2,2,3,3 instead of 3,2,3,2",
+    "formula_unchanged": 1,
+    "exact_mass_unchanged": 1,
+    "good_matches_enumeration": 1,
+    "bad_matches_enumeration": 0,
+    "anchor_has_teeth": 1
+   },
+   "generator_contains_no_SMILES_literal": 1
+  },
+  "P15_figureS1A_3N_core": {
+   "printed_3N_charge_density": 0.0291,
+   "computed": {
+    "diethylenetriamine_linear": 0.029079,
+    "triazacyclononane_ring": 0.023219
+   },
+   "linear_matches_printed": 1,
+   "ring_matches_printed": 0,
+   "max_arms_on_a_ring_core": 3,
+   "max_arms_on_the_linear_core": 5,
+   "arms_stated_by_the_article_for_3N": 5,
+   "arms_drawn_in_figureS1A": 5
+  },
+  "P14_emit_refuses_a_literal": {
+   "literal_confidence_refused": 1,
+   "caveat_without_a_note_refused": 1,
+   "clean_call_succeeds": 1
+  }
+ },
+ "seeded_mutation_tests": {
+  "P1_library_size": {
+   "seeded_defect": "dropped tail 16 from the block table",
+   "metric_moved": 1,
+   "clean": {
+    "headgroups": 8,
+    "tails": 13,
+    "product": 104,
+    "enumerated": 104,
+    "claimed_in_abstract": 104,
+    "cells_in_tableS3": 104,
+    "agree": 1
+   },
+   "seeded": {
+    "headgroups": 8,
+    "tails": 12,
+    "product": 96,
+    "enumerated": 104,
+    "claimed_in_abstract": 104,
+    "cells_in_tableS3": 104,
+    "agree": 0
+   }
+  },
+  "P2_tails_per_headgroup": {
+   "seeded_defect": "marked 4NC's tail count as disagreeing",
+   "metric_moved": 1,
+   "clean": {
+    "agree": 8,
+    "of": 8,
+    "per_head": {
+     "2N": [
+      4,
+      4
+     ],
+     "3N": [
+      5,
+      5
+     ],
+     "3N'": [
+      5,
+      5
+     ],
+     "4N": [
+      6,
+      6
+     ],
+     "4N'": [
+      6,
+      6
+     ],
+     "3NB": [
+      6,
+      6
+     ],
+     "3NB'": [
+      6,
+      6
+     ],
+     "4NC": [
+      4,
+      4
+     ]
+    }
+   },
+   "seeded": {
+    "agree": 7,
+    "of": 8,
+    "per_head": {
+     "2N": [
+      4,
+      4
+     ],
+     "3N": [
+      5,
+      5
+     ],
+     "3N'": [
+      5,
+      5
+     ],
+     "4N": [
+      6,
+      6
+     ],
+     "4N'": [
+      6,
+      6
+     ],
+     "3NB": [
+      6,
+      6
+     ],
+     "3NB'": [
+      6,
+      6
+     ],
+     "4NC": [
+      4,
+      4
+     ]
+    }
+   }
+  },
+  "P3_tail_mw_vs_tableS4": {
+   "seeded_defect": "moved tail 9C's printed MW by 1 Da (also breaks no tie)",
+   "metric_moved": 1,
+   "clean": {
+    "agree": 13,
+    "of": 13,
+    "max_abs_diff_Da": 0.048,
+    "isomer_MW_ties": {
+     "128.2": [
+      "6B",
+      "8"
+     ],
+     "184.3": [
+      "10B'",
+      "12"
+     ],
+     "212.3": [
+      "13B",
+      "14"
+     ]
+    },
+    "n_ties": 3
+   },
+   "seeded": {
+    "agree": 12,
+    "of": 13,
+    "max_abs_diff_Da": 1.0,
+    "isomer_MW_ties": {
+     "128.2": [
+      "6B",
+      "8"
+     ],
+     "184.3": [
+      "10B'",
+      "12"
+     ],
+     "212.3": [
+      "13B",
+      "14"
+     ]
+    },
+    "n_ties": 3
+   }
+  },
+  "P4_head_charge_density_vs_tableS5": {
+   "seeded_defect": "corrupted 4N''s computed charge density",
+   "metric_moved": 1,
+   "clean": {
+    "agree": 6,
+    "of": 8,
+    "mismatches": {
+     "3NB": {
+      "computed": 0.027353,
+      "printed": 0.02
+     },
+     "4NC": {
+      "computed": 0.019967,
+      "printed": 0.0274
+     }
+    },
+    "each_mismatch_is_the_others_value": true
+   },
+   "seeded": {
+    "agree": 5,
+    "of": 8,
+    "mismatches": {
+     "4N'": {
+      "computed": 0.03,
+      "printed": 0.0198
+     },
+     "3NB": {
+      "computed": 0.027353,
+      "printed": 0.02
+     },
+     "4NC": {
+      "computed": 0.019967,
+      "printed": 0.0274
+     }
+    },
+    "each_mismatch_is_the_others_value": null
+   }
+  },
+  "P5_name_token_vs_measured": {
+   "seeded_defect": "marked tail 8CB's name token as not matching",
+   "metric_moved": 1,
+   "clean": {
+    "agree": 13,
+    "of": 13,
+    "measured": {
+     "6B": 6,
+     "8": 8,
+     "8CB": 8,
+     "9": 9,
+     "9C": 9,
+     "10": 10,
+     "10B": 10,
+     "10B'": 10,
+     "11": 11,
+     "12": 12,
+     "13B": 13,
+     "14": 14,
+     "16": 16
+    }
+   },
+   "seeded": {
+    "agree": 12,
+    "of": 13,
+    "measured": {
+     "6B": 6,
+     "8": 8,
+     "8CB": 8,
+     "9": 9,
+     "9C": 9,
+     "10": 10,
+     "10B": 10,
+     "10B'": 10,
+     "11": 11,
+     "12": 12,
+     "13B": 13,
+     "14": 14,
+     "16": 16
+    }
+   }
+  },
+  "P6_tableS3_marginals": {
+   "seeded_defect": "changed one Table S3 cell (tail 9, head 4N') from 6 to 1",
+   "metric_moved": 1,
+   "clean": {
+    "head_totals_agree": 7,
+    "of_heads": 8,
+    "tail_totals_agree": 2,
+    "of_tails": 13,
+    "grand_total_from_cells": 439,
+    "grand_total_from_printed_head_totals": 440,
+    "grand_total_from_printed_tail_totals": 500,
+    "head_total_residuals": {
+     "2N": 0,
+     "3N": 0,
+     "3N'": 0,
+     "4N": 0,
+     "4N'": 1,
+     "3NB": 0,
+     "3NB'": 0,
+     "4NC": 0
+    },
+    "tail_total_residuals": {
+     "6B": 0,
+     "8": 0,
+     "8CB": 6,
+     "9": 5,
+     "9C": 5,
+     "10": 6,
+     "10B": 5,
+     "10B'": 6,
+     "11": 6,
+     "12": 7,
+     "13B": 6,
+     "14": 3,
+     "16": 6
+    }
+   },
+   "seeded": {
+    "head_totals_agree": 7,
+    "of_heads": 8,
+    "tail_totals_agree": 2,
+    "of_tails": 13,
+    "grand_total_from_cells": 434,
+    "grand_total_from_printed_head_totals": 440,
+    "grand_total_from_printed_tail_totals": 500,
+    "head_total_residuals": {
+     "2N": 0,
+     "3N": 0,
+     "3N'": 0,
+     "4N": 0,
+     "4N'": 6,
+     "3NB": 0,
+     "3NB'": 0,
+     "4NC": 0
+    },
+    "tail_total_residuals": {
+     "6B": 0,
+     "8": 0,
+     "8CB": 6,
+     "9": 10,
+     "9C": 5,
+     "10": 6,
+     "10B": 5,
+     "10B'": 6,
+     "11": 6,
+     "12": 7,
+     "13B": 6,
+     "14": 3,
+     "16": 6
+    }
+   }
+  },
+  "P7_score6_iff_MIC_le_25": {
+   "seeded_defect": "changed 4NC12's MIC from 3 to 50 while its score stays 6",
+   "metric_moved": 1,
+   "clean": {
+    "agree": 27,
+    "of": 27,
+    "disagreements": [],
+    "n_score6_in_subset": 21
+   },
+   "seeded": {
+    "agree": 26,
+    "of": 27,
+    "disagreements": [
+     {
+      "name": "4NC12",
+      "score": 6,
+      "MIC_uM": "50"
+     }
+    ],
+    "n_score6_in_subset": 21
+   }
+  },
+  "P8_TI_bound_convention_and_HC50_ladder": {
+   "seeded_defect": "moved one bounded TI off 400/MIC and one unbounded TI off the ladder",
+   "metric_moved": 1,
+   "clean": {
+    "bounded_entries": 8,
+    "bounded_equal_400_over_MIC": 8,
+    "unprinted_constant": 400.0,
+    "unbounded_on_hemolysis_ladder": 19,
+    "of_unbounded": 19,
+    "unbounded_but_above_the_200uM_ceiling": [
+     {
+      "name": "4NC8",
+      "TI": "4",
+      "MIC": 100.0,
+      "HC50_implied": 400.0,
+      "why": "lands on 400, which is the encoding the eight BOUNDED entries use for '>200 uM', but this entry carries no '>=' sign -- 08_contradictions.csv C-5"
+     }
+    ],
+    "off_ladder": []
+   },
+   "seeded": {
+    "bounded_entries": 8,
+    "bounded_equal_400_over_MIC": 7,
+    "unprinted_constant": 400.0,
+    "unbounded_on_hemolysis_ladder": 18,
+    "of_unbounded": 19,
+    "unbounded_but_above_the_200uM_ceiling": [
+     {
+      "name": "4NC8",
+      "TI": "4",
+      "MIC": 100.0,
+      "HC50_implied": 400.0,
+      "why": "lands on 400, which is the encoding the eight BOUNDED entries use for '>200 uM', but this entry carries no '>=' sign -- 08_contradictions.csv C-5"
+     }
+    ],
+    "off_ladder": [
+     {
+      "name": "4NC10",
+      "TI": "19",
+      "MIC": 3.0,
+      "HC50_implied": 57.0
+     }
+    ]
+   }
+  },
+  "P9_printed_statistics": {
+   "seeded_defect": "changed 4N'9's MIC from 2 to 4",
+   "metric_moved": 1,
+   "clean": [
+    {
+     "claim": "'MIC assays revealed 7 different lipidoids with MICs at 2 uM'",
+     "expected": 7,
+     "measured": 7,
+     "which": [
+      "3NB'8",
+      "3NB'9",
+      "4N'8",
+      "4N'9",
+      "4NC10B'",
+      "4NC8CB",
+      "4NC9C"
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'two of the most active lipidoids 4N'8 and 4NC8CB (MIC = 2 uM) recorded the highest therapeutic index of 50'",
+     "expected": [
+      50.0,
+      [
+       "4N'8",
+       "4NC8CB"
+      ]
+     ],
+     "measured": [
+      50.0,
+      [
+       "4N'8",
+       "4NC8CB"
+      ]
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'4N'12 ... the MIC was 50 uM'",
+     "expected": 50.0,
+     "measured": 50.0,
+     "ok": 1
+    },
+    {
+     "claim": "'4N'8, which showed no evidence of structure but possessed a low MIC at 2 uM'",
+     "expected": 2.0,
+     "measured": 2.0,
+     "ok": 1
+    },
+    {
+     "claim": "'the main exceptions were 4N'12 and 4NC8 ... despite MIC values at 50 or 100 uM'",
+     "expected": [
+      50.0,
+      100.0
+     ],
+     "measured": [
+      50.0,
+      100.0
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'most 4NC-based lipidoids showed MIC < 6 uM, apart from the species with linear tails 8-9 atoms long'",
+     "expected": "7 of 9 below 6 uM; the two at or above are tails 8 and 9",
+     "measured": {
+      "below_6": [
+       "10",
+       "10B",
+       "10B'",
+       "11",
+       "12",
+       "8CB",
+       "9C"
+      ],
+      "at_or_above_6": [
+       "8",
+       "9"
+      ]
+     },
+     "ok": 1
+    },
+    {
+     "claim": "'lipidoids with the most potent antimicrobial properties (down to 2 uM)'",
+     "expected": 2.0,
+     "measured": 2.0,
+     "ok": 1
+    },
+    {
+     "claim": "'despite having the lowest charge density, the diamine 2N performed the worst of all headgroups'",
+     "expected": [
+      "2N",
+      "2N"
+     ],
+     "measured": [
+      "2N",
+      "2N"
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'intermediate c log P values (ca. 3-4) and tail lengths (9-11) showing the highest antimicrobial activity'",
+     "expected": "the three best tail totals are tails 9, 10, 11",
+     "measured": [
+      "9",
+      "10",
+      "11"
+     ],
+     "ok": 1
+    }
+   ],
+   "seeded": [
+    {
+     "claim": "'MIC assays revealed 7 different lipidoids with MICs at 2 uM'",
+     "expected": 7,
+     "measured": 6,
+     "which": [
+      "3NB'8",
+      "3NB'9",
+      "4N'8",
+      "4NC10B'",
+      "4NC8CB",
+      "4NC9C"
+     ],
+     "ok": 0
+    },
+    {
+     "claim": "'two of the most active lipidoids 4N'8 and 4NC8CB (MIC = 2 uM) recorded the highest therapeutic index of 50'",
+     "expected": [
+      50.0,
+      [
+       "4N'8",
+       "4NC8CB"
+      ]
+     ],
+     "measured": [
+      50.0,
+      [
+       "4N'8",
+       "4NC8CB"
+      ]
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'4N'12 ... the MIC was 50 uM'",
+     "expected": 50.0,
+     "measured": 50.0,
+     "ok": 1
+    },
+    {
+     "claim": "'4N'8, which showed no evidence of structure but possessed a low MIC at 2 uM'",
+     "expected": 2.0,
+     "measured": 2.0,
+     "ok": 1
+    },
+    {
+     "claim": "'the main exceptions were 4N'12 and 4NC8 ... despite MIC values at 50 or 100 uM'",
+     "expected": [
+      50.0,
+      100.0
+     ],
+     "measured": [
+      50.0,
+      100.0
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'most 4NC-based lipidoids showed MIC < 6 uM, apart from the species with linear tails 8-9 atoms long'",
+     "expected": "7 of 9 below 6 uM; the two at or above are tails 8 and 9",
+     "measured": {
+      "below_6": [
+       "10",
+       "10B",
+       "10B'",
+       "11",
+       "12",
+       "8CB",
+       "9C"
+      ],
+      "at_or_above_6": [
+       "8",
+       "9"
+      ]
+     },
+     "ok": 1
+    },
+    {
+     "claim": "'lipidoids with the most potent antimicrobial properties (down to 2 uM)'",
+     "expected": 2.0,
+     "measured": 2.0,
+     "ok": 1
+    },
+    {
+     "claim": "'despite having the lowest charge density, the diamine 2N performed the worst of all headgroups'",
+     "expected": [
+      "2N",
+      "2N"
+     ],
+     "measured": [
+      "2N",
+      "2N"
+     ],
+     "ok": 1
+    },
+    {
+     "claim": "'intermediate c log P values (ca. 3-4) and tail lengths (9-11) showing the highest antimicrobial activity'",
+     "expected": "the three best tail totals are tails 9, 10, 11",
+     "measured": [
+      "9",
+      "10",
+      "11"
+     ],
+     "ok": 1
+    }
+   ]
+  },
+  "P10_prose_count_of_twenty": {
+   "seeded_defect": "changed 4NC11's MIC from 3 to 50, breaking the table-to-table tie",
+   "metric_moved": 1,
+   "clean": {
+    "prose_says": 20,
+    "tableS3_score6_within_the_27": 21,
+    "table1_MIC_le_25_within_the_27": 21,
+    "the_two_tables_agree_with_each_other": 1,
+    "prose_agrees": 0
+   },
+   "seeded": {
+    "prose_says": 20,
+    "tableS3_score6_within_the_27": 21,
+    "table1_MIC_le_25_within_the_27": 20,
+    "the_two_tables_agree_with_each_other": 0,
+    "prose_agrees": 0
+   }
+  },
+  "P11_charge_density_trend_sign": {
+   "seeded_defect": "swapped the COMPUTED 3NB / 4NC charge densities back to the printed assignment",
+   "metric_moved": 1,
+   "clean": {
+    "paper_states": "lower charge densities ... achieving the highest scores, i.e. a NEGATIVE correlation",
+    "spearman_with_printed_tableS5": 0.259,
+    "spearman_with_computed_from_the_drawn_amine": -0.247,
+    "printed_has_the_stated_sign": 0,
+    "computed_has_the_stated_sign": 1
+   },
+   "seeded": {
+    "paper_states": "lower charge densities ... achieving the highest scores, i.e. a NEGATIVE correlation",
+    "spearman_with_printed_tableS5": 0.259,
+    "spearman_with_computed_from_the_drawn_amine": 0.259,
+    "printed_has_the_stated_sign": 0,
+    "computed_has_the_stated_sign": 0
+   }
+  },
+  "P12_corpus_overlap": {
+   "seeded_defect": "corrupted 4N14's parent InChIKey so its corpus hit cannot be found",
+   "metric_moved": 1,
+   "clean": {
+    "vitro": {
+     "members_already_in_corpus_by_FULL_InChIKey": 11,
+     "of": 104,
+     "which": {
+      "2N14": [
+       [
+        "KW_2014",
+        "A157_C10"
+       ]
+      ],
+      "2N16": [
+       [
+        "KW_2014",
+        "A157_C12"
+       ]
+      ],
+      "3N13B": [
+       [
+        "NC_2024",
+        "A113_Oi10"
+       ]
+      ],
+      "3N14": [
+       [
+        "KW_2014",
+        "A114_C10"
+       ],
+       [
+        "NC_2024",
+        "A113_O10"
+       ]
+      ],
+      "3N16": [
+       [
+        "KW_2014",
+        "A114_C12"
+       ],
+       [
+        "NC_2024",
+        "A113_O12"
+       ]
+      ],
+      "3NB14": [
+       [
+        "KW_2014",
+        "A110_C10"
+       ]
+      ],
+      "3NB16": [
+       [
+        "KW_2014",
+        "A110_C12"
+       ]
+      ],
+      "4N14": [
+       [
+        "AA_2008",
+        "98_O10"
+       ],
+       [
+        "KW_2014",
+        "A98_C10"
+       ]
+      ],
+      "4N16": [
+       [
+        "AA_2008",
+        "98_O12"
+       ],
+       [
+        "KW_2014",
+        "A98_C12"
+       ]
+      ],
+      "4NC14": [
+       [
+        "KW_2014",
+        "A138_C10"
+       ]
+      ],
+      "4NC16": [
+       [
+        "KW_2014",
+        "A138_C12"
+       ]
+      ]
+     },
+     "methylated_cation_matches": 0,
+     "IL_name_collisions": {}
+    },
+    "vivo": {
+     "members_already_in_corpus_by_FULL_InChIKey": 1,
+     "of": 104,
+     "which": {
+      "3NB14": [
+       [
+        "KW_2014",
+        "A110_C10"
+       ]
+      ]
+     },
+     "methylated_cation_matches": 0,
+     "IL_name_collisions": {}
+    }
+   },
+   "seeded": {
+    "vitro": {
+     "members_already_in_corpus_by_FULL_InChIKey": 10,
+     "of": 104,
+     "which": {
+      "2N14": [
+       [
+        "KW_2014",
+        "A157_C10"
+       ]
+      ],
+      "2N16": [
+       [
+        "KW_2014",
+        "A157_C12"
+       ]
+      ],
+      "3N13B": [
+       [
+        "NC_2024",
+        "A113_Oi10"
+       ]
+      ],
+      "3N14": [
+       [
+        "KW_2014",
+        "A114_C10"
+       ],
+       [
+        "NC_2024",
+        "A113_O10"
+       ]
+      ],
+      "3N16": [
+       [
+        "KW_2014",
+        "A114_C12"
+       ],
+       [
+        "NC_2024",
+        "A113_O12"
+       ]
+      ],
+      "3NB14": [
+       [
+        "KW_2014",
+        "A110_C10"
+       ]
+      ],
+      "3NB16": [
+       [
+        "KW_2014",
+        "A110_C12"
+       ]
+      ],
+      "4N16": [
+       [
+        "AA_2008",
+        "98_O12"
+       ],
+       [
+        "KW_2014",
+        "A98_C12"
+       ]
+      ],
+      "4NC14": [
+       [
+        "KW_2014",
+        "A138_C10"
+       ]
+      ],
+      "4NC16": [
+       [
+        "KW_2014",
+        "A138_C12"
+       ]
+      ]
+     },
+     "methylated_cation_matches": 0,
+     "IL_name_collisions": {}
+    },
+    "vivo": {
+     "members_already_in_corpus_by_FULL_InChIKey": 1,
+     "of": 104,
+     "which": {
+      "3NB14": [
+       [
+        "KW_2014",
+        "A110_C10"
+       ]
+      ]
+     },
+     "methylated_cation_matches": 0,
+     "IL_name_collisions": {}
+    }
+   }
+  },
+  "P13_C10_anchor": {
+   "seeded_defect": "pointed 4NC6B's enumerated IL_SMILES at the UNMETHYLATED parent, so the anchor should stop matching",
+   "metric_moved": 1,
+   "clean": {
+    "anchors": {
+     "3NB8": {
+      "formula": "C52H102N4O12+4",
+      "heavy_atoms": 68,
+      "matches_enumeration_full_InChIKey": 1
+     },
+     "4NC6B": {
+      "formula": "C42H84N4O8+4",
+      "heavy_atoms": 54,
+      "matches_enumeration_full_InChIKey": 1
+     },
+     "4NC9": {
+      "formula": "C46H92N4O8+4",
+      "heavy_atoms": 58,
+      "matches_enumeration_full_InChIKey": 1
+     }
+    },
+    "seeded_connectivity_defect": {
+     "what": "cyclam ring spacers walked 2,2,3,3 instead of 3,2,3,2",
+     "formula_unchanged": 1,
+     "exact_mass_unchanged": 1,
+     "good_matches_enumeration": 1,
+     "bad_matches_enumeration": 0,
+     "anchor_has_teeth": 1
+    },
+    "generator_contains_no_SMILES_literal": 1
+   },
+   "seeded": {
+    "anchors": {
+     "3NB8": {
+      "formula": "C52H102N4O12+4",
+      "heavy_atoms": 68,
+      "matches_enumeration_full_InChIKey": 1
+     },
+     "4NC6B": {
+      "formula": "C42H84N4O8+4",
+      "heavy_atoms": 54,
+      "matches_enumeration_full_InChIKey": 0
+     },
+     "4NC9": {
+      "formula": "C46H92N4O8+4",
+      "heavy_atoms": 58,
+      "matches_enumeration_full_InChIKey": 1
+     }
+    },
+    "seeded_connectivity_defect": {
+     "what": "cyclam ring spacers walked 2,2,3,3 instead of 3,2,3,2",
+     "formula_unchanged": 1,
+     "exact_mass_unchanged": 1,
+     "good_matches_enumeration": 0,
+     "bad_matches_enumeration": 0,
+     "anchor_has_teeth": 0
+    },
+    "generator_contains_no_SMILES_literal": 1
+   }
+  },
+  "P15_figureS1A_3N_core": {
+   "seeded_defect": "set 3N's printed charge density to the triazacyclononane value, so the ring reading would become the one that matches",
+   "metric_moved": 1,
+   "clean": {
+    "printed_3N_charge_density": 0.0291,
+    "computed": {
+     "diethylenetriamine_linear": 0.029079,
+     "triazacyclononane_ring": 0.023219
+    },
+    "linear_matches_printed": 1,
+    "ring_matches_printed": 0,
+    "max_arms_on_a_ring_core": 3,
+    "max_arms_on_the_linear_core": 5,
+    "arms_stated_by_the_article_for_3N": 5,
+    "arms_drawn_in_figureS1A": 5
+   },
+   "seeded": {
+    "printed_3N_charge_density": 0.0232,
+    "computed": {
+     "diethylenetriamine_linear": 0.029079,
+     "triazacyclononane_ring": 0.023219
+    },
+    "linear_matches_printed": 0,
+    "ring_matches_printed": 1,
+    "max_arms_on_a_ring_core": 3,
+    "max_arms_on_the_linear_core": 5,
+    "arms_stated_by_the_article_for_3N": 5,
+    "arms_drawn_in_figureS1A": 5
+   }
+  },
+  "P14_emit_refuses_a_literal": {
+   "seeded_defect": "carried inside the check itself",
+   "metric_moved": 1,
+   "clean": {
+    "literal_confidence_refused": 1,
+    "caveat_without_a_note_refused": 1,
+    "clean_call_succeeds": 1
+   },
+   "seeded": "n/a -- the check IS the seeded run"
+  }
+ },
+ "checks_with_no_teeth": []
+}

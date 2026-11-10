@@ -1,0 +1,45 @@
+{
+  "_what": "Stage 00. What was acquired, from where, and under what licence. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release, so the licence string is captured here at acquisition time rather than reconstructed later.",
+  "paper": {
+    "title": "One-Pot Parallel Synthesis of Lipid Library via Thiolactone Ring Opening and Screening for Gene Delivery",
+    "authors": "Mijanur R. Molla, Alexander Boeser, Akshita Rana, Karina Schwarz, Pavel A. Levkin",
+    "journal": "Bioconjugate Chemistry",
+    "year": 2018,
+    "doi": "10.1021/acs.bioconjchem.8b00007",
+    "pmid": "29558113",
+    "proposed_Experiment_ID": "PL_2018",
+    "affiliation": "Institute of Toxicology and Genetics, Karlsruhe Institute of Technology"
+  },
+  "files_held": [
+    {
+      "path": "source/bc8b00007_si_001.pdf",
+      "what": "Supporting Information, 23 pages",
+      "sha256": "b4d61619dc8fa7ce8c0581858090f5c1d1f1d90f852c9e6ab7e7736b1caeee76",
+      "bytes": 2832309,
+      "pdf_creationDate": "D:20180312190729-05'00'",
+      "acquired_utc": "2026-11-10",
+      "acquired_by": "supplied in the curation folder at task start; not fetched by this curation",
+      "watermark": "every page carries 'Downloaded from pubs.acs.org/bcches/article-supplement/1229106/pdf/bc8b00007_si_001/ by PHILLIPS EXETER ACADEMY user on 10 November 2026' -- i.e. an institutionally authenticated download"
+    }
+  ],
+  "files_NOT_held": [
+    {
+      "what": "the main article PDF (Bioconjugate Chem. 2018, 29, 4, 992-999)",
+      "why_it_matters": "THE BLOCKER FOR THIS CURATION. The 18 amine head groups A1-A18 are enumerated in the main text (the SI only names or draws A1, A5 and A10 and gives a molecular formula for A8). Without that panel, 40 of the 45 lipidoids that carry a value cannot be given a structure.",
+      "availability_checked": "Europe PMC REST, 2026-11-10: isOpenAccess=N, inEPMC=N, pmcid=null, fullTextUrlList = [{availability: 'Subscription required', site: 'DOI'}]. Not in PMC; no author repository (see github_search below).",
+      "action": "DECISIONS.md D-1. Acquire the main article before any merge."
+    }
+  ],
+  "github_search": {
+    "tool": "scratchpad/tools/find_repo.py",
+    "run_utc": "2026-11-10",
+    "queries": ["\"10.1021/acs.bioconjchem.8b00007\"", "\"29558113\"", "Levkin lipid nanoparticle", "Levkin LNP", "Thiolactone lipid library"],
+    "result": "0 repo hits; the two code-search queries returned HTTP 429 (rate limited) and were not retried, so the code search is INCOMPLETE and is recorded as such rather than as a negative. The repo searches did complete and found nothing.",
+    "conclusion": "no tier-3 source"
+  },
+  "licence": {
+    "string_on_landing_page": "NOT CAPTURED -- the article landing page was not visited by this curation (only the SI PDF was supplied).",
+    "known_from_the_record": "ACS Bioconjugate Chemistry 2018 research article, Europe PMC isOpenAccess=N. ACS SI for a subscription article is 'Copyright (c) 2018 American Chemical Society' and is NOT CC0/CC-BY.",
+    "status": "BLOCKS RELEASE under CLAUDE.md section 8 unless the project's position is that extracted numeric values are facts rather than a derivative of the copyrighted PDF. Queued as DECISIONS.md D-6, not resolved here."
+  }
+}

@@ -1,0 +1,578 @@
+{
+ "onehot_inversion": {
+  "rows": 1080,
+  "group": "helper lipid, 6 columns: 18PG, 14PA, DOPE, DSPC, DOTAP, DDAB",
+  "rows_whose_group_sums_to_exactly_1": 1080,
+  "rows_with_two_or_zero_ones": 0,
+  "offending_rows": [],
+  "rows_where_inversion_equals_the_file's_Helper_lipid_column": 1080,
+  "disagreements": [],
+  "lossless": true,
+  "levels_recovered": [
+   "14PA",
+   "18PG",
+   "DDAB",
+   "DOPE",
+   "DOTAP",
+   "DSPC"
+  ],
+  "note": "Lossless in BOTH directions: Helper_lipid -> one-hot is total and one-hot -> Helper_lipid is total, so the six columns carry no information the categorical column does not. CLAUDE.md section 3 forbids storing one-hot columns in the corpus; this is the proof that dropping them loses nothing."
+ },
+ "what_a_row_is": {
+  "distinct_Ionizable_Lipid_values": 1,
+  "Ionizable_Lipid_values": [
+   "Dlin-MC3-DMA"
+  ],
+  "distinct_Helper_lipid_values": 6,
+  "Helper_lipid_values": [
+   "14PA",
+   "18PG",
+   "DDAB",
+   "DOPE",
+   "DOTAP",
+   "DSPC"
+  ],
+  "verdict": "FORMULATIONS. All 1080 rows carry the SAME single ionizable lipid, Dlin-MC3-DMA. The library varies the helper lipid identity and four compositional parameters. There is exactly ONE distinct ionizable-lipid structure in this paper."
+ },
+ "factorial": {
+  "n_levels": {
+   "Helper_lipid": 6,
+   "HL_(IL+HL)": 5,
+   "(IL+HL)": 4,
+   "PEG_(Chol+PEG)": 3,
+   "NP_ratio": 3
+  },
+  "product_of_level_counts": 1080,
+  "rows_in_file": 1080,
+  "product_equals_rows": true,
+  "distinct_factor_combinations": 1080,
+  "combinations_appearing_exactly_once": 1080,
+  "combinations_appearing_more_than_once": 0,
+  "complete_and_unreplicated": true,
+  "note": "6 helper lipids x 5 HL/(IL+HL) x 4 (IL+HL) x 3 PEG/(Chol+PEG) x 3 N/P = 1080. The stated library size equals the product of its level counts exactly, and every cell is occupied exactly once -- a complete, unreplicated full factorial."
+ },
+ "si_table1_levels": {
+  "HL_(IL+HL)": {
+   "printed_in_SI_Table_1": [
+    0.5,
+    0.99,
+    1.96,
+    9.09,
+    50
+   ],
+   "in_file": [
+    0.497512,
+    0.990099,
+    1.960784,
+    9.090909,
+    50.0
+   ],
+   "n_levels_in_file": 5,
+   "n_levels_printed": 5,
+   "agrees": true
+  },
+  "(IL+HL)": {
+   "printed_in_SI_Table_1": [
+    20,
+    40,
+    60,
+    80
+   ],
+   "in_file": [
+    20.0,
+    40.0,
+    60.0,
+    80.0
+   ],
+   "n_levels_in_file": 4,
+   "n_levels_printed": 4,
+   "agrees": true
+  },
+  "PEG_(Chol+PEG)": {
+   "printed_in_SI_Table_1": [
+    0.2,
+    0.99,
+    9.09
+   ],
+   "in_file": [
+    0.199601,
+    0.990099,
+    9.090909
+   ],
+   "n_levels_in_file": 3,
+   "n_levels_printed": 3,
+   "agrees": true
+  },
+  "NP_ratio": {
+   "printed_in_SI_Table_1": [
+    4,
+    8,
+    12
+   ],
+   "in_file": [
+    4.0,
+    8.0,
+    12.0
+   ],
+   "n_levels_in_file": 3,
+   "n_levels_printed": 3,
+   "agrees": true
+  }
+ },
+ "si_table1_all_agree": true,
+ "error_class_40_two_parameterisations": {
+  "HL_(IL+HL)": {
+   "derived_from": "Dlin-MC3_Helper lipid_ratio",
+   "relation": "pct = 100/(1+ratio)",
+   "rows_checked": 1080,
+   "rows_violating_at_1e-6": 0,
+   "max_abs_residual_pct": 2.745099703105325e-10,
+   "worst_row": {
+    "csv_row": 26,
+    "ratio": 50.0,
+    "pct_in_file": 1.960784314,
+    "pct_derived": 1.9607843137254901
+   },
+   "ratio_levels": [
+    1.0,
+    10.0,
+    50.0,
+    100.0,
+    200.0
+   ],
+   "ratio_levels_are_exact_integers": true,
+   "note": "ROUND NUMBER THE AUTHORS NEVER PRINTED: the SI prints only the percentages (0.50, 0.99, 1.96, 9.09, 50 and 0.20, 0.99, 9.09), which look arbitrary. They are the exact images 100/(1+r) of the round integer ratios [1.0, 10.0, 50.0, 100.0, 200.0]. Agreement to 1e-6 on every row is an external, cheap check that the two columns were not shuffled relative to each other -- the F-004 failure mode."
+  },
+  "PEG_(Chol+PEG)": {
+   "derived_from": "Chol_DMG-PEG_ratio",
+   "relation": "pct = 100/(1+ratio)",
+   "rows_checked": 1080,
+   "rows_violating_at_1e-6": 0,
+   "max_abs_residual_pct": 4.031936173820583e-10,
+   "worst_row": {
+    "csv_row": 2,
+    "ratio": 500.0,
+    "pct_in_file": 0.199600798,
+    "pct_derived": 0.1996007984031936
+   },
+   "ratio_levels": [
+    10.0,
+    100.0,
+    500.0
+   ],
+   "ratio_levels_are_exact_integers": true,
+   "note": "ROUND NUMBER THE AUTHORS NEVER PRINTED: the SI prints only the percentages (0.50, 0.99, 1.96, 9.09, 50 and 0.20, 0.99, 9.09), which look arbitrary. They are the exact images 100/(1+r) of the round integer ratios [10.0, 100.0, 500.0]. Agreement to 1e-6 on every row is an external, cheap check that the two columns were not shuffled relative to each other -- the F-004 failure mode."
+  }
+ },
+ "helper_descriptor_block": {
+  "constant_within_helper_lipid": true,
+  "non_constant": [],
+  "vs_si_table3": {
+   "14PA": {
+    "file": [
+     0.0,
+     1.0,
+     11.8502,
+     8.0,
+     2.0,
+     28.0,
+     0.0
+    ],
+    "si_table3": [
+     0,
+     1,
+     11.9,
+     8,
+     2,
+     28,
+     0
+    ],
+    "agrees": true,
+    "n_rows": 180
+   },
+   "18PG": {
+    "file": [
+     0.0,
+     1.0,
+     8.8188,
+     10.0,
+     3.0,
+     36.0,
+     2.0
+    ],
+    "si_table3": [
+     0,
+     1,
+     8.82,
+     10,
+     3,
+     36,
+     2
+    ],
+    "agrees": true,
+    "n_rows": 180
+   },
+   "DDAB": {
+    "file": [
+     1.0,
+     0.0,
+     12.73,
+     0.0,
+     0.0,
+     36.0,
+     0.0
+    ],
+    "si_table3": [
+     1,
+     0,
+     12.7,
+     0,
+     0,
+     36,
+     0
+    ],
+    "agrees": true,
+    "n_rows": 180
+   },
+   "DOPE": {
+    "file": [
+     1.0,
+     1.0,
+     9.784,
+     9.0,
+     2.0,
+     36.0,
+     2.0
+    ],
+    "si_table3": [
+     1,
+     1,
+     9.8,
+     9,
+     2,
+     36,
+     2
+    ],
+    "agrees": true,
+    "n_rows": 180
+   },
+   "DOTAP": {
+    "file": [
+     1.0,
+     0.0,
+     12.515,
+     4.0,
+     0.0,
+     36.0,
+     2.0
+    ],
+    "si_table3": [
+     1,
+     0,
+     12.5,
+     4,
+     0,
+     36,
+     2
+    ],
+    "agrees": true,
+    "n_rows": 180
+   },
+   "DSPC": {
+    "file": [
+     1.0,
+     1.0,
+     6.12,
+     8.0,
+     0.0,
+     36.0,
+     0.0
+    ],
+    "si_table3": [
+     1,
+     1,
+     6.1,
+     8,
+     0,
+     36,
+     0
+    ],
+    "agrees": true,
+    "n_rows": 180
+   }
+  },
+  "all_agree_with_si_table3": true,
+  "rows_per_helper_lipid": {
+   "14PA": 180,
+   "18PG": 180,
+   "DDAB": 180,
+   "DOPE": 180,
+   "DOTAP": 180,
+   "DSPC": 180
+  }
+ },
+ "measurement_coverage": {
+  "per_cell": {
+   "RLU_HepG2": {
+    "measured": 1080,
+    "blank": 0,
+    "helper_lipids_entirely_absent": []
+   },
+   "RLU_N2a": {
+    "measured": 720,
+    "blank": 360,
+    "helper_lipids_entirely_absent": [
+     "14PA",
+     "DDAB"
+    ]
+   },
+   "RLU_ARPE19": {
+    "measured": 720,
+    "blank": 360,
+    "helper_lipids_entirely_absent": [
+     "14PA",
+     "DDAB"
+    ]
+   },
+   "RLU_HEK293": {
+    "measured": 1080,
+    "blank": 0,
+    "helper_lipids_entirely_absent": []
+   },
+   "RLU_B16": {
+    "measured": 1080,
+    "blank": 0,
+    "helper_lipids_entirely_absent": []
+   },
+   "RLU_PC3": {
+    "measured": 1080,
+    "blank": 0,
+    "helper_lipids_entirely_absent": []
+   }
+  },
+  "total_cells_possible": 6480,
+  "total_measured": 5760,
+  "total_blank": 720,
+  "partially_measured_helper_lipid_in_a_cell_line": [],
+  "blank_pattern_is_all_or_nothing": true,
+  "note": "The blanks are not scattered: RLU_N2a and RLU_ARPE19 are blank on exactly the 14PA and DDAB rows. The authors' own utilities.py::select_input_params drops the 14PA and DDAB one-hot columns for cells 'ARPE19' and 'N2a', which is the same fact stated in code: those two helper lipids were never run in those two cell lines."
+ },
+ "scale_is_ln_not_minmax": {
+  "per_cell": {
+   "RLU_HepG2": {
+    "n": 1080,
+    "min": 0.0,
+    "max": 9.233,
+    "n_below_RLU_floor_1.5": 544,
+    "n_outside_unit_interval": 810
+   },
+   "RLU_N2a": {
+    "n": 720,
+    "min": 0.693,
+    "max": 10.438,
+    "n_below_RLU_floor_1.5": 27,
+    "n_outside_unit_interval": 718
+   },
+   "RLU_ARPE19": {
+    "n": 720,
+    "min": 0.693,
+    "max": 8.1,
+    "n_below_RLU_floor_1.5": 68,
+    "n_outside_unit_interval": 716
+   },
+   "RLU_HEK293": {
+    "n": 1080,
+    "min": 1.253,
+    "max": 12.772,
+    "n_below_RLU_floor_1.5": 2,
+    "n_outside_unit_interval": 1080
+   },
+   "RLU_B16": {
+    "n": 1080,
+    "min": 0.405,
+    "max": 11.172,
+    "n_below_RLU_floor_1.5": 200,
+    "n_outside_unit_interval": 1026
+   },
+   "RLU_PC3": {
+    "n": 1080,
+    "min": 0.405,
+    "max": 10.583,
+    "n_below_RLU_floor_1.5": 441,
+    "n_outside_unit_interval": 972
+   }
+  },
+  "cells_whose_values_all_fit_[0,1]": [],
+  "min_over_all_cells": 0.0,
+  "max_over_all_cells": 12.772,
+  "floor_applied_in_file": false,
+  "minmax_applied_in_file": false,
+  "smallest_RLU_HepG2_values": [
+   0.0,
+   0.405,
+   0.693,
+   0.916,
+   1.099,
+   1.253,
+   1.386,
+   1.504
+  ],
+  "exp_of_those": [
+   1.0,
+   1.4993,
+   1.9997,
+   2.4993,
+   3.0012,
+   3.5008,
+   3.9988,
+   4.4997
+  ],
+  "evidence": "Values run from 0.000 to 12.772, so they are neither floored at the paper's RLU_floor = 1.5 nor rescaled to [0,1]. exp() of the smallest distinct values lands on half-integers (1, 1.5, 2, 2.5, 3 ...), the fingerprint of ln(mean of replicate raw RLU). The authors' utilities.py::extract_training_data applies BOTH the floor and MinMaxScaler at load time, in code, to this same file -- so the file is upstream of both. Read from the repo, never executed."
+ },
+ "authors_own_filters": {
+  "source": "utilities.py::extract_training_data, with the cutoffs in the run directory name Final_HL_Features_PDI1_RLU1.5_SIZE10000",
+  "Size_eq_0": 0,
+  "Size_gt_10000": 0,
+  "PDI_gt_1": 0,
+  "Zeta_eq_0": 0,
+  "rows_surviving_all_four": 1080,
+  "note": "These filters are the AUTHORS' modelling choices, not data quality verdicts on the transfection measurement. They are reported, not applied: a row whose zeta reads exactly 0 still has a real luciferase reading."
+ },
+ "validation_workbook": {
+  "rows": 72,
+  "Ionizable_Lipid_values": [
+   "Dlin-MC3-DMA"
+  ],
+  "Helper_lipid_values": [
+   "14PA",
+   "18PG",
+   "DDAB",
+   "DOPE",
+   "DOTAP",
+   "DSPC"
+  ],
+  "levels_vs_training": {
+   "HL_(IL+HL)": {
+    "training": [
+     0.4975,
+     0.9901,
+     1.9608,
+     9.0909,
+     50.0
+    ],
+    "validation": [
+     1.5,
+     20.0,
+     40.0
+    ],
+    "intersection": []
+   },
+   "(IL+HL)": {
+    "training": [
+     20.0,
+     40.0,
+     60.0,
+     80.0
+    ],
+    "validation": [
+     30.0,
+     70.0
+    ],
+    "intersection": []
+   },
+   "PEG_(Chol+PEG)": {
+    "training": [
+     0.1996,
+     0.9901,
+     9.0909
+    ],
+    "validation": [
+     0.5,
+     7.0
+    ],
+    "intersection": []
+   },
+   "NP_ratio": {
+    "training": [
+     4.0,
+     8.0,
+     12.0
+    ],
+    "validation": [
+     10.0
+    ],
+    "intersection": []
+   }
+  },
+  "all_four_levels_disjoint_from_training": true,
+  "helper_descriptor_mismatches_vs_training": [],
+  "coverage": {
+   "RLU_HepG2": {
+    "measured": 72,
+    "min": 1.059351276782649,
+    "max": 8.632652164989004
+   },
+   "RLU_N2a": {
+    "measured": 72,
+    "min": 2.903979089402917,
+    "max": 10.71779132416935
+   },
+   "RLU_ARPE19": {
+    "measured": 72,
+    "min": 0.5972531564093516,
+    "max": 8.579211563821291
+   },
+   "RLU_HEK293": {
+    "measured": 72,
+    "min": 3.320081962118246,
+    "max": 11.66468693185468
+   },
+   "RLU_B16": {
+    "measured": 72,
+    "min": 3.361936369776694,
+    "max": 11.59684140805912
+   },
+   "RLU_PC3": {
+    "measured": 72,
+    "min": 1.290400336969297,
+    "max": 9.572665656642199
+   }
+  },
+  "note": "The de-novo validation library. Same ONE ionizable lipid, same six helper lipids, composition levels chosen to be absent from the training library -- which the README states and which is confirmed here as an empty intersection on all four compositional factors. Values are full-precision floats, not the training file's 3 decimals."
+ },
+ "shared_formulations_between_files": {
+  "n": 0,
+  "ratio_measurable": false,
+  "note": "No formulation appears in both files, by construction, so there is no shared-formulation ratio to measure between them. The two files are therefore never averaged, rescaled or tied to each other; they are emitted as what they are."
+ },
+ "sum_to_100_is_tautological": {
+  "credited_as_a_check": false,
+  "why": "HL+IL+PEG+CHL = a + (100-a) = 100 identically for any (a,h,p). It cannot fail, so it is not evidence. Recorded so its absence is not read as an oversight."
+ },
+ "derived_molpct_examples": [
+  {
+   "Formula label": "1",
+   "Helper_lipid_from_onehot": "18PG",
+   "IL_molpct": 19.9004975124,
+   "HL_molpct": 0.09950248760000001,
+   "CHL_molpct": 79.8403193616,
+   "PEG_molpct": 0.1596806384
+  },
+  {
+   "Formula label": "2",
+   "Helper_lipid_from_onehot": "18PG",
+   "IL_molpct": 19.9004975124,
+   "HL_molpct": 0.09950248760000001,
+   "CHL_molpct": 79.8403193616,
+   "PEG_molpct": 0.1596806384
+  },
+  {
+   "Formula label": "3",
+   "Helper_lipid_from_onehot": "18PG",
+   "IL_molpct": 19.9004975124,
+   "HL_molpct": 0.09950248760000001,
+   "CHL_molpct": 79.8403193616,
+   "PEG_molpct": 0.1596806384
+  }
+ ]
+}

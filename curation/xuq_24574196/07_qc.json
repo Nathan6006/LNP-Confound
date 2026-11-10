@@ -1,0 +1,352 @@
+{
+ "_what": "stage 07 QC for curation/xuq_24574196. Every check carries its agreement count AND the count it scores on a seeded defect; a check is credited only where the two differ.",
+ "rows_emitted_to_corpus": 0,
+ "reason_zero_rows": "the SI contains no delivery measurement and the main article is not acquirable; see 00_value_sources.json",
+ "checks": {
+  "P1_formula": {
+   "agree": 2,
+   "of": 2,
+   "detail": [
+    {
+     "lipid": "1-O16B",
+     "built": "C39H78N2O4S4",
+     "printed": "C39H78N2O4S4",
+     "match": true
+    },
+    {
+     "lipid": "1-O16",
+     "built": "C43H86N2O4",
+     "printed": "C43H86N2O4",
+     "match": true
+    }
+   ],
+   "seeded_agree": 1,
+   "check_has_teeth": true
+  },
+  "P2_proton_closure": {
+   "agree": 2,
+   "of": 2,
+   "detail": [
+    {
+     "lipid": "1-O16B",
+     "sum_of_printed_integrals": 78,
+     "H_in_built_formula": 78,
+     "match": true,
+     "n_integrals_summed": 10
+    },
+    {
+     "lipid": "1-O16",
+     "sum_of_printed_integrals": 86,
+     "H_in_built_formula": 86,
+     "match": true,
+     "n_integrals_summed": 8
+    }
+   ],
+   "seeded_agree": 1,
+   "check_has_teeth": true
+  },
+  "P3_bulk_integral": {
+   "agree": 2,
+   "of": 2,
+   "detail": [
+    {
+     "lipid": "1-O16B",
+     "predicted_bulk_CH2_H": 40,
+     "printed": 40,
+     "match": true
+    },
+    {
+     "lipid": "1-O16",
+     "predicted_bulk_CH2_H": 56,
+     "printed": 56,
+     "match": true
+    }
+   ],
+   "seeded_agree": 1,
+   "check_has_teeth": true
+  },
+  "P4_ms_convention": {
+   "agree": 2,
+   "of": 2,
+   "detail": [
+    {
+     "lipid": "1-O16B",
+     "printed_Calcd": 767.3,
+     "printed_Found": 767.7,
+     "residual_Da": {
+      "neutral_average": 0.031,
+      "neutral_monoisotopic": 0.8156,
+      "MH+_average": 1.0383,
+      "MH+_monoisotopic": 0.1917,
+      "MNa+_monoisotopic": 22.1737
+     },
+     "best": "neutral_average",
+     "best_residual": 0.031,
+     "margin_over_next_best": 0.1607,
+     "found_minus_best_candidate": 0.369
+    },
+    {
+     "lipid": "1-O16",
+     "printed_Calcd": 695.2,
+     "printed_Found": 695.7,
+     "residual_Da": {
+      "neutral_average": 0.029,
+      "neutral_monoisotopic": 0.5412,
+      "MH+_average": 0.9783,
+      "MH+_monoisotopic": 0.466,
+      "MNa+_monoisotopic": 22.448
+     },
+     "best": "neutral_average",
+     "best_residual": 0.029,
+     "margin_over_next_best": 0.437,
+     "found_minus_best_candidate": 0.529
+    }
+   ],
+   "seeded_agree": 0,
+   "check_has_teeth": true
+  },
+  "P5_name_convention": {
+   "agree": 4,
+   "of": 4,
+   "detail": [
+    {
+     "acrylate": "O14B",
+     "name_token": 14,
+     "chain_heavy_atoms_from_O": 14,
+     "match": true,
+     "carbons_in_whole_alcohol_NOT_the_S_alkyl": 12
+    },
+    {
+     "acrylate": "O16B",
+     "name_token": 16,
+     "chain_heavy_atoms_from_O": 16,
+     "match": true,
+     "carbons_in_whole_alcohol_NOT_the_S_alkyl": 14
+    },
+    {
+     "acrylate": "O18B",
+     "name_token": 18,
+     "chain_heavy_atoms_from_O": 18,
+     "match": true,
+     "carbons_in_whole_alcohol_NOT_the_S_alkyl": 16
+    },
+    {
+     "acrylate": "O16",
+     "name_token": 16,
+     "chain_heavy_atoms_from_O": 16,
+     "match": true,
+     "carbons_in_whole_alcohol_NOT_the_S_alkyl": 16
+    }
+   ],
+   "seeded_agree": 3,
+   "check_has_teeth": true
+  },
+  "P6_corpus_head": {
+   "agree": 4,
+   "of": 4,
+   "detail": [
+    {
+     "corpus_lipid": "1_O15",
+     "experiment": "AA_2008",
+     "corpus_head": "COCCCN(CCC(=O)OC)CCC(=O)OC",
+     "our_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "head_inchikey_identical": false,
+     "expected_identical": false,
+     "as_expected": true,
+     "corpus_formula": "C40H79NO5"
+    },
+    {
+     "corpus_lipid": "80_O10",
+     "experiment": "AA_2008",
+     "corpus_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "our_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "head_inchikey_identical": true,
+     "expected_identical": true,
+     "as_expected": true,
+     "corpus_formula": "C31H62N2O4"
+    },
+    {
+     "corpus_lipid": "80_O15",
+     "experiment": "AA_2008",
+     "corpus_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "our_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "head_inchikey_identical": true,
+     "expected_identical": true,
+     "as_expected": true,
+     "corpus_formula": "C41H82N2O4"
+    },
+    {
+     "corpus_lipid": "80_O18",
+     "experiment": "AA_2008",
+     "corpus_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "our_head": "COC(=O)CCN(CCCN(C)C)CCC(=O)OC",
+     "head_inchikey_identical": true,
+     "expected_identical": true,
+     "as_expected": true,
+     "corpus_formula": "C47H94N2O4"
+    }
+   ],
+   "seeded_agree": 2,
+   "check_has_teeth": true
+  },
+  "P7_name_token_trap": {
+   "agree": 1,
+   "of": 1,
+   "detail": [
+    {
+     "corpus_amine1_lipid": "1_O15",
+     "experiment": "AA_2008",
+     "its_formula": "C40H79NO5",
+     "its_head": "3-methoxypropylamine (1 N, ether O)",
+     "SI_printed_formula_for_1-O16": "C43H86N2O4",
+     "excluded_by_nitrogen_count": true,
+     "excluded_by_oxygen_count": true
+    }
+   ],
+   "seeded_agree": 0,
+   "check_has_teeth": true
+  },
+  "P8_series_steps": {
+   "agree": 4,
+   "of": 4,
+   "detail": [
+    {
+     "from": "80_O10",
+     "to": "80_O12",
+     "dC": 4,
+     "dH": 8,
+     "expected_dC": 4,
+     "expected_dH": 8,
+     "match": true
+    },
+    {
+     "from": "80_O12",
+     "to": "80_O13",
+     "dC": 2,
+     "dH": 4,
+     "expected_dC": 2,
+     "expected_dH": 4,
+     "match": true
+    },
+    {
+     "from": "80_O13",
+     "to": "80_O15",
+     "dC": 4,
+     "dH": 8,
+     "expected_dC": 4,
+     "expected_dH": 8,
+     "match": true
+    },
+    {
+     "from": "80_O15",
+     "to": "80_O18",
+     "dC": 6,
+     "dH": 12,
+     "expected_dC": 6,
+     "expected_dH": 12,
+     "match": true
+    }
+   ],
+   "seeded_agree": 1,
+   "check_has_teeth": true
+  },
+  "P10_anchor": {
+   "agree": 2,
+   "of": 2,
+   "detail": [
+    {
+     "lipid": "1-O14B",
+     "anchor": "(none stored)",
+     "status": "absent_on_purpose",
+     "match": null
+    },
+    {
+     "lipid": "1-O16B",
+     "anchor_inchikey": "KEEDANUIQHUIOP-UHFFFAOYSA-N",
+     "enumeration_inchikey": "KEEDANUIQHUIOP-UHFFFAOYSA-N",
+     "inchikey_identical": true,
+     "canonical_smiles_identical": true,
+     "anchor_module_imports_no_assembler_or_enumerator": true,
+     "anchor_module_imports": [
+      "Chem",
+      "RDLogger",
+      "csv",
+      "inchi",
+      "os",
+      "rdMolDescriptors",
+      "rdkit",
+      "sys"
+     ],
+     "match": true
+    },
+    {
+     "lipid": "1-O18B",
+     "anchor": "(none stored)",
+     "status": "absent_on_purpose",
+     "match": null
+    },
+    {
+     "lipid": "1-O16",
+     "anchor_inchikey": "ULZCWFRFMLJWOX-UHFFFAOYSA-N",
+     "enumeration_inchikey": "ULZCWFRFMLJWOX-UHFFFAOYSA-N",
+     "inchikey_identical": true,
+     "canonical_smiles_identical": true,
+     "anchor_module_imports_no_assembler_or_enumerator": true,
+     "anchor_module_imports": [
+      "Chem",
+      "RDLogger",
+      "csv",
+      "inchi",
+      "os",
+      "rdMolDescriptors",
+      "rdkit",
+      "sys"
+     ],
+     "match": true
+    }
+   ],
+   "seeded_agree": 0,
+   "anchor_gate_exit_clean": 0,
+   "anchor_gate_exit_seeded": 1,
+   "anchor_gate_seeded_stderr": "ANCHOR GATE FAILED: 1-O16B: anchor formula C47H94N2O4S4 != printed C39H78N2O4S4",
+   "check_has_teeth": true
+  },
+  "P9_structural_sanity": {
+   "agree": 4,
+   "of": 4,
+   "detail": [
+    {
+     "lipid": "1-O14B",
+     "canonical_roundtrip": true,
+     "radical_electrons": 0,
+     "stereocentres": 0,
+     "match": true
+    },
+    {
+     "lipid": "1-O16B",
+     "canonical_roundtrip": true,
+     "radical_electrons": 0,
+     "stereocentres": 0,
+     "match": true
+    },
+    {
+     "lipid": "1-O18B",
+     "canonical_roundtrip": true,
+     "radical_electrons": 0,
+     "stereocentres": 0,
+     "match": true
+    },
+    {
+     "lipid": "1-O16",
+     "canonical_roundtrip": true,
+     "radical_electrons": 0,
+     "stereocentres": 0,
+     "match": true
+    }
+   ],
+   "seeded_agree": null,
+   "check_has_teeth": "n/a -- P9 is a parse/radical/stereo assertion on the library's own output; curation/lib already refuses a radical at build time and did so on this paper's first run (check_no_radicals fired with \"1 radical atom(s): [(0, 'C', 1)]\"), which is the seeded failure."
+  }
+ },
+ "toothless_checks": []
+}

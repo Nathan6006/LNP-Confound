@@ -1,0 +1,17 @@
+{
+ "full_inchikey_matches": 0,
+ "il_name_matches": 0,
+ "skeleton_only_matches": 0,
+ "rows_scanned": {
+  "vitro": 29195,
+  "vivo": 1803
+ },
+ "matched_detail": [],
+ "_what": "Every corpus row compared against all 15 enumerated structures by FULL InChIKey, by skeleton block, and by IL_name (case-folded). Report, do not act.",
+ "_corpus_files": [
+  "data/data_vitro.csv",
+  "data/data_vivo.csv"
+ ],
+ "_corpus_state": "29,195 x 79 vitro / 1,803 x 79 vivo",
+ "_result": "ZERO overlap on all three keys. All 15 structures are new to the corpus. The paper does USE DLin-MC3-DMA and SM-102, both of which are in the corpus, but neither appears in any SI panel that carries a per-lipid delivery value, so neither is enumerated here."
+}

@@ -1,0 +1,61 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2.md section 3, Stage 00b). Every panel or table that supplies a value names the tier it came from. Filled BEFORE any digitiser was written. Nothing in this folder digitises a value, and this file is why.",
+  "_tiers": [
+    "1_publisher_source_data", "2_si_tables", "3_author_repository",
+    "4_pdf_text_table", "5_pixels"
+  ],
+  "headline": "ZERO transfection values are extractable from the material held. 05_values.csv has a header and no data rows. This is not a digitisation failure; it is an acquisition gap, and it is checkable in one command (see verify_claim below).",
+
+  "value_bearing_panels": [
+    {
+      "panel": "main-article Figure 2 (in vitro luciferase screening of the 275-member crude PILL library, HeLa)",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why_not_1": "No Source Data file: Europe PMC reports isOpenAccess=N / inPMC=N / hasPDF=N for PMID 42690843; ACS does not publish a Source Data product for JACS, and the landing page could not be read (403, Cloudflare interstitial) to enumerate supplementary assets.",
+      "why_not_2": "The SI we hold (ja6c13674_si_001.pdf, sha256 4889dba5...) is the ONLY supplementary file we have, and it contains no screening table. Its own Contents page lists sections 1 General Information, 2 Materials, 3-1 Synthetic Procedures, 3-2 Biological Evaluation Protocols, 3-3 Supporting Figures S3-S9, 4 References, NMR/MS spectra. Figures S3-S9 are: formulation optimisation (S3), replicate IVIS images (S4, S5), DLS stability (S6), uptake-inhibitor flow cytometry (S7), MD trajectories (S8), blood chemistry (S9). None is a per-lipid transfection readout.",
+      "why_not_3": "No author repository. provenance find_repo.py returned 0 candidates on repo search; its two GitHub CODE searches were rate-limited (HTTP 429) and so did not answer -- recorded as unanswered, not as negative. The paper names no data-availability repository in the SI.",
+      "why_not_4": "pdfplumber/pymupdf text extraction over all 49 SI pages yields 43,539 characters and no value table: the only numeric runs are NMR shifts, coupling constants, reagent masses, yields and HRMS m/z. Verified by script.",
+      "why_not_5": "There are no pixels to digitise. The panel is not in any file we hold."
+    },
+    {
+      "panel": "main-article Figure 3 (in vivo ex vivo organ luminescence, crude PILL sub-libraries)",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why": "Same acquisition gap. SI Figure S4 shows the per-mouse IVIS IMAGES that back Figure 3 (n=3) but prints no radiance numbers and carries no colour scale bar with labelled ticks in the text layer; the quantification is in the main article."
+    },
+    {
+      "panel": "main-article Figure 4 (purified PILL lipids, in vivo validation)",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why": "Same. SI Figure S5 is the matching per-mouse image set (n=3 for a, n=4 for b), again images only."
+    }
+  ],
+
+  "non_value_sources_actually_used": [
+    {
+      "what": "the 48 building blocks A1-A26, B1-B8, C1-C14",
+      "where": "SI page S5, section 2-1, a fully VECTOR ChemDraw figure",
+      "tier": "4_pdf_text_table_equivalent",
+      "method": "the PDF's own stroked bond coordinates (curation/lib chains.vector_bonds), NOT pixels. 483 stroked line segments on the page; 2 are the dashed group dividers; the remaining 481 partition exactly into 48 connected clusters, one per block.",
+      "note": "This is strictly better than a raster read: the drawing's geometry IS the answer, with no estimation step."
+    },
+    {
+      "what": "9 purified lipid structures and their HRMS",
+      "where": "SI pages S12-S19 (names, procedures, NMR, HRMS) and S40-S49 (spectra)",
+      "tier": "4_pdf_text_table",
+      "method": "text layer, read with pymupdf; structures cross-checked against the drawn bond-line count on each page."
+    },
+    {
+      "what": "reagent identities for A2, A18, B1, B3, B8, C1, C8, C9, C14",
+      "where": "SI pages S12-S19, the per-compound 'Following the general procedure' sentences",
+      "tier": "4_pdf_text_table",
+      "method": "the printed mass or volume at a printed molar amount pins the reagent's molecular weight independently of the drawing. See 07_qc.json check reagent_amount_pins_MW."
+    }
+  ],
+
+  "verify_claim": {
+    "claim": "the SI contains no per-lipid transfection value",
+    "command": "python3 -I stage00_scan_for_values.py",
+    "what_it_does": "greps every page's text layer for luminescence/RLU/fold/normalised-expression vocabulary and for any numeric token in a transfection-plausible range outside the NMR/HRMS/reagent contexts, and reports per page. A reviewer can re-run it."
+  }
+}

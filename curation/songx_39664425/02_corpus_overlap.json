@@ -1,0 +1,42 @@
+{
+  "note": "This article contributes no structures, so there is nothing of its own to compare. The overlap that matters is at the PAPER level: the work it describes is already curated. Everything here is REPORT-ONLY; nothing in data/ or any other curation folder was touched.",
+  "paper_level_overlap": {
+    "this_pmid": "39664425",
+    "relationship": "Highlight commentary on PMID 38740955",
+    "primary_paper_pmid": "38740955",
+    "primary_paper_experiment_id_in_corpus": "BL_2024",
+    "corpus_rows": {"data_vitro.csv": 560, "data_vivo.csv": 51},
+    "conclusion": "Curating this article would duplicate BL_2024 under a second, fabricated Experiment_ID."
+  },
+  "structure_level_overlap": {
+    "structures_enumerated_by_this_curation": 0,
+    "full_inchikey_comparison": "not run - no structures",
+    "skeleton_inchikey_comparison": "not run - no structures",
+    "il_name_comparison": "not run - no structures",
+    "substructure_near_miss_search": "not run - no structures",
+    "reason": "No chemistry was performed. The article draws no structure of its own; every structure visible in Figure 1 is part of a raster reprinted from PMID 38740955 under licence."
+  },
+  "free_external_cross_check_on_BL_2024": {
+    "status": "RESOLVED - BL_2024's count is correct and the tracker's is not",
+    "what_the_commentary_states": "'a chemically diverse library of 584 ILs was rapidly created'; Figure 1 panel 2 labels a '384 LNP screen in vitro', a '200 LNP screen in vitro' and a '384 LNP screen in vivo'.",
+    "what_the_corpus_holds": "BL_2024 = 560 vitro rows, 560 unique IL_name, 560 unique IL_SMILES, 0 duplicated SMILES.",
+    "resolution": {
+      "il_name_grammar": "<3-digit prefix>-<member index>",
+      "distinct_prefixes": 128,
+      "library_A": "all 128 prefixes carry member set exactly {9, 22, 23}  ->  128 x 3 = 384",
+      "library_B": "8 prefixes (111, 241, 244, 611, 613, 621, 622, 624) carry member set exactly {1..25}  ->  8 x 25 = 200",
+      "verified": "all 120 non-B prefixes have member set == {9,22,23} (True); all 8 B prefixes have member set == {1..25} (True); {9,22,23} is a subset of every B prefix (True)",
+      "arithmetic": "384 + 200 = 584, but the 8 B prefixes already contain members 9, 22 and 23, so 8 x 3 = 24 lipids are counted twice. 584 - 24 = 560.",
+      "conclusion": "584 is a count of SCREEN MEMBERSHIPS across two overlapping screens; 560 is the count of DISTINCT LIPIDS. BL_2024's 560 is right. This is trap 1 (distinct vs formulations vs individually measured) resolved exactly, with no residual."
+    },
+    "action": "REPORT ONLY. No file outside this folder was read for writing or modified."
+  },
+  "gap_noted_in_BL_2024": {
+    "lead_lipid_119_23": "The ML-designed lead compound of PMID 38740955, named 119-23, is ABSENT from the corpus: zero IL_name beginning '119' exists in data_vitro.csv or data_vivo.csv. Its prefix 119 is outside BL_2024's 128-prefix grammar, consistent with it being drawn from the 40,000-member VIRTUAL library rather than either synthesised screen. Whether it should be in BL_2024 is a question for that curation, not this one.",
+    "action": "REPORT ONLY - open question handed to the caller, see DECISIONS.md D-3"
+  },
+  "vivo_subset_check": {
+    "statement": "Every BL_2024 vivo IL_name is also a BL_2024 vitro IL_name (51 of 51).",
+    "verified": true
+  }
+}

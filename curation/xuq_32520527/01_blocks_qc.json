@@ -1,0 +1,228 @@
+{
+ "_what": "stage 01 QC for XQ_2020: the eleven amine heads and the O16CBA tail, each checked against evidence outside the drawing it was read from.",
+ "heads": [
+  {
+   "id": "75",
+   "name": "N,N-diethylethylenediamine",
+   "formula": "C6H16N2",
+   "exact_mass": 116.1313,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "76",
+   "name": "1-(2-aminoethyl)pyrrolidine",
+   "formula": "C6H14N2",
+   "exact_mass": 114.1157,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "77",
+   "name": "2-(2-aminoethyl)-1-methylpyrrolidine",
+   "formula": "C7H16N2",
+   "exact_mass": 128.1313,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {
+    "5": "?"
+   },
+   "stereo_new_perception": [
+    {
+     "atom": 5,
+     "type": "Atom_Tetrahedral",
+     "specified": "Unspecified"
+    }
+   ]
+  },
+  {
+   "id": "78",
+   "name": "N,N-dimethylethylenediamine",
+   "formula": "C4H12N2",
+   "exact_mass": 88.1,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "80",
+   "name": "N,N-dimethyl-1,3-propanediamine",
+   "formula": "C5H14N2",
+   "exact_mass": 102.1157,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "81",
+   "name": "N,N-diethyl-1,3-propanediamine",
+   "formula": "C7H18N2",
+   "exact_mass": 130.147,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "82",
+   "name": "1-(2-aminoethyl)piperidine",
+   "formula": "C7H16N2",
+   "exact_mass": 128.1313,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "93",
+   "name": "1-(3-aminopropyl)imidazole",
+   "formula": "C6H11N3",
+   "exact_mass": 125.0953,
+   "n_NH_nitrogens": 1,
+   "n_michael_slots": 2,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "113",
+   "name": "2,2'-(methylimino)bis(ethylamine)  [N-methyl-N,N-bis(2-aminoethyl)amine]",
+   "formula": "C5H15N3",
+   "exact_mass": 117.1266,
+   "n_NH_nitrogens": 2,
+   "n_michael_slots": 4,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "306",
+   "name": "3,3'-diamino-N-methyldipropylamine",
+   "formula": "C7H19N3",
+   "exact_mass": 145.1579,
+   "n_NH_nitrogens": 2,
+   "n_michael_slots": 4,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  },
+  {
+   "id": "400",
+   "name": "N,N-dimethyldipropylenetriamine",
+   "formula": "C8H21N3",
+   "exact_mass": 159.1735,
+   "n_NH_nitrogens": 2,
+   "n_michael_slots": 3,
+   "stereocentres_legacy": {},
+   "stereo_new_perception": []
+  }
+ ],
+ "named_reagent_mw_crosscheck": {
+  "_what": "The Experimental Section prints a gram and a millimole figure for every reagent. g/mmol recovers the MW the AUTHORS were working with. Comparing it to the MW of the structure WE assign tests the identity of each block without using any drawing at all. This is the check that pins the hexyl chain length without counting a single pixel.",
+  "n_checked": 9,
+  "worst_deviation_pct": 1.63,
+  "tolerance_pct": 2.5,
+  "why_that_tolerance": "the grams are printed to 2 significant figures ('2.2 g', '6.8 g'), so a 1-2% rounding spread is expected and is not evidence of a wrong structure.",
+  "pass": true,
+  "rows": [
+   {
+    "reagent": "4-hydroxy-2,6-dimethoxybenzaldehyde",
+    "grams": 5.1,
+    "mmol": 28.0,
+    "MW_implied_by_their_own_g_per_mmol": 182.14,
+    "MW_of_the_structure_we_assign": 182.17,
+    "deviation_pct": 0.02
+   },
+   {
+    "reagent": "potassium carbonate",
+    "grams": 4.6,
+    "mmol": 33.3,
+    "MW_implied_by_their_own_g_per_mmol": 138.14,
+    "MW_of_the_structure_we_assign": 138.21,
+    "deviation_pct": 0.05
+   },
+   {
+    "reagent": "1-bromohexane",
+    "grams": 6.8,
+    "mmol": 41.2,
+    "MW_implied_by_their_own_g_per_mmol": 165.05,
+    "MW_of_the_structure_we_assign": 165.07,
+    "deviation_pct": 0.02
+   },
+   {
+    "reagent": "HexDMBA (isolated)",
+    "grams": 5.2,
+    "mmol": 19.5,
+    "MW_implied_by_their_own_g_per_mmol": 266.67,
+    "MW_of_the_structure_we_assign": 266.34,
+    "deviation_pct": 0.12
+   },
+   {
+    "reagent": "1,1,1-tris(hydroxymethyl)ethane",
+    "grams": 6.7,
+    "mmol": 55.9,
+    "MW_implied_by_their_own_g_per_mmol": 119.86,
+    "MW_of_the_structure_we_assign": 120.15,
+    "deviation_pct": 0.24
+   },
+   {
+    "reagent": "p-toluenesulfonic acid",
+    "grams": 0.44,
+    "mmol": 2.56,
+    "MW_implied_by_their_own_g_per_mmol": 171.88,
+    "MW_of_the_structure_we_assign": 172.2,
+    "deviation_pct": 0.19
+   },
+   {
+    "reagent": "HexDMBAH (isolated)",
+    "grams": 5.4,
+    "mmol": 14.7,
+    "MW_implied_by_their_own_g_per_mmol": 367.35,
+    "MW_of_the_structure_we_assign": 368.47,
+    "deviation_pct": 0.3
+   },
+   {
+    "reagent": "triethylamine",
+    "grams": 2.2,
+    "mmol": 22.1,
+    "MW_implied_by_their_own_g_per_mmol": 99.55,
+    "MW_of_the_structure_we_assign": 101.19,
+    "deviation_pct": 1.63
+   },
+   {
+    "reagent": "acryloyl chloride",
+    "grams": 2.0,
+    "mmol": 22.1,
+    "MW_implied_by_their_own_g_per_mmol": 90.5,
+    "MW_of_the_structure_we_assign": 90.51,
+    "deviation_pct": 0.01
+   },
+   {
+    "reagent": "O16CBA (isolated)",
+    "note": "yield only, no mmol printed"
+   }
+  ]
+ },
+ "tail": {
+  "SMILES": "C=CC(=O)OCC1(C)COC(c2c(OC)cc(OCCCCCC)cc2OC)OC1",
+  "formula": "C23H34O7",
+  "exact_mass": 422.2305,
+  "stereocentres_seen_by_assemble_stereocentres": {},
+  "stereocentres_seen_by_FindPotentialStereo": [
+   {
+    "atom": 6,
+    "type": "Atom_Tetrahedral",
+    "specified": "Unspecified"
+   },
+   {
+    "atom": 10,
+    "type": "Atom_Tetrahedral",
+    "specified": "Unspecified"
+   }
+  ],
+  "THE_STEREO_FINDING": "The two perceptions DISAGREE, and the disagreement is the point. assemble.stereocentres() -- which is what assemble.attach's check_stereo_preserved relies on -- returns {} for this tail. Chem.FindPotentialStereo returns TWO unspecified tetrahedral centres: the acetal carbon C2 and the quaternary ring carbon C5. They are para-stereocentres: neither is a CIP centre alone, because each sees two constitutionally identical ring branches, but TOGETHER they define the cis/trans relationship between the C2-aryl group and the C5 substituents. The legacy flagPossibleStereoCenters perception does not see that pair. So curation/lib's stereo guard is BLIND to the one stereochemical feature this paper's chemistry turns on, and the guard passing is not evidence here. Recorded rather than worked around; see DECISIONS.md D-2."
+ }
+}

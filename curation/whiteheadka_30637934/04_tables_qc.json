@@ -1,0 +1,152 @@
+{
+ "_what": "Tier-4 PDF-text tables and the checks they make possible.",
+ "table_s1_rows": 11,
+ "table_s2_rows": 10,
+ "table_s2_missing_vs_s1": [
+  "306O18"
+ ],
+ "fig_s7_printed_pka_count": 8,
+ "check_figS7_vs_tableS1_pKa": {
+  "n": 8,
+  "exact_matches": 8,
+  "max_abs_delta": 0.0,
+  "per_lipid": [
+   {
+    "lipidoid": "306O6",
+    "fig_s7": 7.96,
+    "table_s1": 7.96,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O9",
+    "fig_s7": 8.7,
+    "table_s1": 8.7,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O11",
+    "fig_s7": 7.26,
+    "table_s1": 7.26,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O14",
+    "fig_s7": 6.3,
+    "table_s1": 6.3,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O8",
+    "fig_s7": 7.82,
+    "table_s1": 7.82,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O10",
+    "fig_s7": 6.96,
+    "table_s1": 6.96,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O13",
+    "fig_s7": 7.52,
+    "table_s1": 7.52,
+    "delta": 0.0,
+    "match": true
+   },
+   {
+    "lipidoid": "306O18",
+    "fig_s7": 9.18,
+    "table_s1": 9.18,
+    "delta": 0.0,
+    "match": true
+   }
+  ]
+ },
+ "check_two_pKa_conventions_DO_NOT_POOL": {
+  "_what": "Table S2 is the LIPIDOID pKa in ethanol; Table S1 is the LNP SURFACE pKa in aqueous buffer by TNS. Different material, different solvent, different method. This is reported as a SPREAD, not as a disagreement to fix.",
+  "n": 10,
+  "max_abs_delta_pH": 1.14,
+  "mean_delta_pH": 0.268,
+  "n_with_delta_above_0.3_pH": 7,
+  "per_lipid": [
+   {
+    "lipidoid": "306O6",
+    "lipidoid_pKa_ethanol": 7.54,
+    "LNP_surface_pKa_TNS": 7.96,
+    "delta": -0.42
+   },
+   {
+    "lipidoid": "306O8",
+    "lipidoid_pKa_ethanol": 7.66,
+    "LNP_surface_pKa_TNS": 7.82,
+    "delta": -0.16
+   },
+   {
+    "lipidoid": "306O9",
+    "lipidoid_pKa_ethanol": 7.71,
+    "LNP_surface_pKa_TNS": 8.7,
+    "delta": -0.99
+   },
+   {
+    "lipidoid": "306Oi10",
+    "lipidoid_pKa_ethanol": 7.3,
+    "LNP_surface_pKa_TNS": 6.4,
+    "delta": 0.9
+   },
+   {
+    "lipidoid": "306O10",
+    "lipidoid_pKa_ethanol": 7.35,
+    "LNP_surface_pKa_TNS": 6.96,
+    "delta": 0.39
+   },
+   {
+    "lipidoid": "306O11",
+    "lipidoid_pKa_ethanol": 7.33,
+    "LNP_surface_pKa_TNS": 7.26,
+    "delta": 0.07
+   },
+   {
+    "lipidoid": "306O12",
+    "lipidoid_pKa_ethanol": 7.19,
+    "LNP_surface_pKa_TNS": 6.43,
+    "delta": 0.76
+   },
+   {
+    "lipidoid": "306O13",
+    "lipidoid_pKa_ethanol": 7.8,
+    "LNP_surface_pKa_TNS": 7.52,
+    "delta": 0.28
+   },
+   {
+    "lipidoid": "306O14",
+    "lipidoid_pKa_ethanol": 7.44,
+    "LNP_surface_pKa_TNS": 6.3,
+    "delta": 1.14
+   },
+   {
+    "lipidoid": "306O16",
+    "lipidoid_pKa_ethanol": 7.59,
+    "LNP_surface_pKa_TNS": 6.88,
+    "delta": 0.71
+   }
+  ]
+ },
+ "check_mole_percents_sum_to_100": {
+  "_what": "The SI prints 'a molar ratio of 35 : 16 : 46.5 : 2.5' for four components. The sum is a round number the authors never printed, and it confirms these are mol% with no fifth component unaccounted for. WHICH component takes 16 and which takes 46.5 is a separate question and is DECISIONS.md D-1.",
+  "values": {
+   "lipidoid": 35.0,
+   "second_listed": 16.0,
+   "third_listed": 46.5,
+   "C14-PEG2000": 2.5
+  },
+  "sum": 100.0,
+  "equals_100_exactly": true
+ }
+}

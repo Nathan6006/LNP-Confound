@@ -1,0 +1,2 @@
+lipid_name,reference_SMILES,source_figure,read_on,read_by,expected_mismatch,note
+(none),,Fig. 1 (reprint of PMID 38740955),2026-11-10,curation agent,no_anchor_possible,"This article draws no structure of its own. Every structure in Fig. 1 is part of a raster reprinted from PMID 38740955 under licence (caption xref -> bib1). A C10 anchor built from this figure would anchor BL_2024, not this paper. Empty reference_SMILES recorded so the ABSENCE of an anchor is visible rather than silent, per CLAUDE.md section 6."

@@ -1,0 +1,82 @@
+{
+ "_what": "Stage 00. What was acquired, from where, and under what licence. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release, so the licence string is captured at acquisition time rather than reconstructed later.",
+ "paper": {
+  "title_as_published": "Combinatorial synthesis and high-throughput screening of alkyl amines for nonviral gene delivery",
+  "title_on_the_SI_cover_page": "Combinatorial synthesis and high throughput screening of alkyl amines for non-viral gene delivery",
+  "title_in_the_tracker": "Combinatorial Synthesis and High-Throughput Screening of Alkylated... (TRUNCATED). Verified against Europe PMC before any extraction work: the hidden tail is 'alkyl amines for nonviral gene delivery', so the endpoint is gene delivery. No antimicrobial endpoint.",
+  "authors": "Linxian Li, Fengjian Wang, Yihang Wu, Gary Davidson, Pavel A. Levkin",
+  "journal": "Bioconjugate Chemistry",
+  "volume_issue_pages": "24(9), 1543-1551",
+  "year": 2013,
+  "doi": "10.1021/bc400158w",
+  "pmid": "23909648",
+  "first_publication_date": "2013-08-19",
+  "proposed_Experiment_ID": "LL_2013",
+  "proposed_Experiment_ID_note": "Initials of first author Linxian Li + year. COLLISION CHECK RUN: the corpus already holds LL_2026 and LL_2026_2 (Lin, JACS 2026) -- different year, so LL_2013 is free. Confirmed against the 43 vitro + 20 vivo Experiment_IDs in data/ on 2026-11-10.",
+  "affiliation": "Institute of Toxicology and Genetics, Karlsruhe Institute of Technology; University of Heidelberg",
+  "corresponding": "levkin@kit.edu (P. A. Levkin), gary.davidson@kit.edu (G. Davidson)"
+ },
+ "files_held": [
+  {
+   "path": "source/bc400158w_si_001.pdf",
+   "what": "Supporting Information, 19 pages",
+   "sha256": "9d12ae7e78e9805bdb97deaebd5e38af0161c48f287a98d274f4004970149887",
+   "bytes": 376094,
+   "pdf_CreationDate": "D:20130605041928-05'00'",
+   "pdf_Title_metadata": "Microsoft Word - 1371954_File000001_20295005.docx",
+   "pdf_Producer": "activePDF DocConverter; modified using iTextSharp.LGPLv2.Core 3.7.4.0",
+   "acquired_utc": "2026-11-10",
+   "acquired_by": "supplied in the curation folder at task start; not fetched by this curation",
+   "watermark": "every page carries 'Downloaded from pubs.acs.org/bcches/article-supplement/771773/pdf/bc400158w_si_001/ by PHILLIPS EXETER ACADEMY user on 10 November 2026' -- an institutionally authenticated download",
+   "text_layer": "present on all 19 pages; this is what every value in this curation is read from"
+  }
+ ],
+ "files_NOT_held": [
+  {
+   "what": "the main article PDF (Bioconjugate Chem. 2013, 24, 9, 1543-1551)",
+   "why_it_matters": "THE BLOCKER FOR THIS CURATION. The 20 amine head groups are referenced in the SI only as the integers 1-20; the SI names only amine 1 and draws no amine panel. Without the main article's amine figure, 9 of the 12 valued lipidoids in Table S3 have a measured value and no structure. The main article also holds the cell line, the reporter gene and the assay timepoint, none of which appear in the SI.",
+   "availability_checked": "Europe PMC REST, EXT_ID:23909648, queried 2026-11-10: isOpenAccess=N, inEPMC=N, inPMC=N, pmcid=null, fullTextUrlList=[{availability:'Subscription required', availabilityCode:'S', site:'DOI'}].",
+   "action_taken": "NONE. The task scope forbids the shared browser, and no paywall or bot-check bypass was attempted. Recorded as a gap, queued as DECISIONS.md D-1 and D-2."
+  }
+ ],
+ "github_search": {
+  "tool": "provenance/tools/find_repo.py (in the repo as of 2026-11-10; it had previously lived in a session scratchpad, which CLAUDE.md section 7 forbids)",
+  "command": "python3 -I provenance/tools/find_repo.py --doi 10.1021/bc400158w --pmid 23909648 --title \"combinatorial alkylated screening\" --author Levkin",
+  "run_utc": "2026-11-10",
+  "result": "repo_hits: []  -- a CLEAN NEGATIVE. Every query returned err:null, so none was rate-limited and this is a completed negative rather than an untried one.",
+  "queries": [
+   {
+    "kind": "code",
+    "q": "\"10.1021/bc400158w\"",
+    "n": 1
+   },
+   {
+    "kind": "code",
+    "q": "\"23909648\"",
+    "n": 20
+   },
+   {
+    "kind": "repo",
+    "q": "Levkin lipid nanoparticle",
+    "n": 0
+   },
+   {
+    "kind": "repo",
+    "q": "Levkin LNP",
+    "n": 0
+   },
+   {
+    "kind": "repo",
+    "q": "combinatorial alkylated screening",
+    "n": 0
+   }
+  ],
+  "why_the_code_hits_are_not_hits": "The tool's own filter rejected all 18 candidate repos. The code-search matches are the bare digit string 23909648 appearing inside unrelated bulk CSVs (stock-price history, particle-physics studies); the DOI hit is a paper-downloader tool's reference list. None is an author repository.",
+  "conclusion": "no tier-3 source. A 2013 paper predates the practice of depositing screening data."
+ },
+ "licence": {
+  "string_on_landing_page": "NOT CAPTURED -- the article landing page was not visited by this curation (only the SI PDF was supplied, and the browser is out of scope for this task).",
+  "known_from_the_record": "ACS Bioconjugate Chemistry 2013 research article; Europe PMC isOpenAccess=N. ACS SI for a subscription article carries 'Copyright (c) 2013 American Chemical Society' and is NOT CC0/CC-BY.",
+  "status": "BLOCKS RELEASE under CLAUDE.md section 8 on the same footing as the sibling PL_2018 folder, unless the project's settled position is that extracted numeric facts are not a derivative of the copyrighted PDF. Not resolved here; this is a corpus-level decision, not a per-paper one."
+ }
+}

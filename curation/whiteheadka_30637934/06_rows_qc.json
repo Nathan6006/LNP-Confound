@@ -1,0 +1,21 @@
+{
+ "experiment_id": "KW_2019",
+ "enumerated": 11,
+ "emitted": 11,
+ "skipped": [],
+ "counts_sum": true,
+ "zscore_mean": 0.0,
+ "zscore_sd_ddof0": 1.0,
+ "rows_with_a_caveat": 11,
+ "confidence_counts": {
+  "high": 10,
+  "medium": 1,
+  "low": 0
+ },
+ "excipients_resolved_by_lib_reagents": {
+  "DOPE": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[...",
+  "Cholesterol": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H]...",
+  "C14-PEG2000": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCC..."
+ },
+ "dialysis_buffer_blank_because": "SI Methods p.2 dialyses only the in-vivo LNPs ('For in vivo experiments, the LNPs were dialyzed against PBS'); the in-vitro LNPs were diluted into PBS and used. Blank is 'not stated to have happened', not 'clean'."
+}

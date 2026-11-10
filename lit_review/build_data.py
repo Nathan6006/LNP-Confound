@@ -383,9 +383,20 @@ M2 = {
    readout="plasmid DNA LNP, ML-derived design features",
    note="ML on plasmid-DNA LNP design features (ACS Nano 2024). pDNA cargo; Mao-lab formulation-space style. ML-trained so a table should exist."),
  # Promoted to P1 2026-10-26: full text confirms 584 experimentally made ILs.
- "39664425": dict(kind="ivl", status="new", prio=1, lib=None, lab="Xiangrong Song (Sichuan Univ.)",
-   readout="mRNA expression",
-   note="'Pioneering integration of combinatorial chemistry and machine learning' (Acta Pharm Sin B 2024) - the predecessor to PMID 42592089, whose LipidAI dataset IS public on GitHub. Check whether this earlier paper's data is in the same repo."),
+ "39664425": dict(kind="ivl", status="dup", prio=9, lib=None, lab="Xiangrong Song (Sichuan Univ.)",
+   readout="n/a - no original measurements",
+   note="RESOLVED 2026-11-10, status new->dup: this is a RESEARCH-HIGHLIGHT COMMENTARY, not a "
+        "screen. Europe PMC: pubType 'letter', PMC subject heading 'Highlight', abstractText "
+        "length 0, hasSuppl=N, no Methods/Results/Data-availability section, author "
+        "contributions are writing + conceptualization only. Its single quantitative figure is "
+        "a licensed REPRINT ('Reprinted with the permission from Ref.' pointing at <xref "
+        "rid=bib1>, pmid 38740955) at ~4x downsample. Those values belong to Li B et al., Nat "
+        "Mater 23:1002-1008 (2024), PMID 38740955, ALREADY IN THE CORPUS as BL_2024. Digitising "
+        "the reprint would give one lab's measurements a second Experiment_ID and fabricate a "
+        "source - the same refusal CLAUDE.md §9 records for the XD_2026 LipidDB. The old note "
+        "here mis-attributed the commented-on paper's library to the commentary and promoted it "
+        "to prio 1 on that basis; it also called it the predecessor to LipidAI (42592089), "
+        "which it is not."),
 }
 
 # ------------------------------------------------- access / data-availability grade
@@ -547,9 +558,18 @@ SIZES = {
     "38583366": (1000, "formulations ('over 1000'), few distinct ILs", "abstract"),
     "41453807": (96, "formulations actually characterised (1000/hr is throughput)", "abstract"),
     # --- resolved from Europe PMC full text
-    "39664425": (584, "ionizable lipids built on the 4CR platform (the 40,000-lipid "
-                      "library in the same paper is VIRTUAL, screened in silico only)",
-                 "fulltext"),
+    # 584 was never a distinct-lipid count AND never this paper's. Resolved
+    # against the corpus 2026-11-10: BL_2024's 560 unique IL_names decompose
+    # exactly as <3-digit prefix>-<member> over 128 prefixes, with 120 prefixes
+    # carrying member set {9,22,23} (library A = 128x3 = 384) and 8 carrying
+    # 1..25 (library B = 8x25 = 200). {9,22,23} is a subset of every B prefix,
+    # so 8x3 = 24 lipids sit in both screens: 384+200-24 = 560, matching the
+    # corpus exactly, with 0 duplicated SMILES and 0 names fitting neither
+    # pattern. So 584 counts SCREEN MEMBERSHIPS, 560 counts LIPIDS, and BL_2024
+    # is right. Verified by re-deriving it from data/, not from a report.
+    "39664425": (0, "COMMENTARY - no original measurements. The 584/560 library "
+                    "belongs to PMID 38740955 = BL_2024, already merged.",
+                 "resolved_2026-11-10"),
     "37376020": (78, "nsSS IAJD molecules across two libraries", "fulltext"),
     "37092557": (24, "ionizable lipids (approximate - the text numbers them to 23 and "
                      "excludes 2 before in vivo; confirm in the SI)", "fulltext"),

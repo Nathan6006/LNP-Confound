@@ -1,0 +1,104 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "scaffolded": "2026-11-10",
+ "paper": {
+  "title": "Structure-Activity Relationship of Ionizable Lipids for siRNA and mRNA Lipid Nanoparticle Design",
+  "title_note": "The task brief and several indexes give the last word as 'Delivery'. The PDF title page, the SI title page and the PubMed/Europe PMC record all say 'Design'. Recorded in 08_contradictions.csv.",
+  "authors": "Sang M. Lee, Yehui Sun, Sumanta Chatterjee, Hu Xiong, Qiang Cheng, Xu Wang, Daniel J. Siegwart",
+  "journal": "ACS Biomater. Sci. Eng. 2025, 11, 4844-4852",
+  "doi": "10.1021/acsbiomaterials.5c00463",
+  "pmid": "40644303",
+  "pmcid": "PMC12869450",
+  "nihmsid": "NIHMS2133731",
+  "proposed_Experiment_ID": "SL_2025",
+  "experiment_id_note": "First author Sang M. Lee -> SL; issue date 2025. SL_2020 and SL_2021 already exist in the corpus from other first authors; SL_2025 is free. NOT merged - this curation emits only, per the task brief."
+ },
+ "licence": {
+  "state": "NOT CC0/CC-BY-compatible as far as we can establish.",
+  "evidence": "Europe PMC REST record for PMID 40644303 (fetched 2026-11-10) returns isOpenAccess=N, license=null, and the Europe PMC supplementaryFiles endpoint returns errMsg 'Article with id PMC12869450 is not open access one'. The PMC record is an NIH Public Access AUTHOR MANUSCRIPT (NIHMSID NIHMS2133731), which is free to read but carries no CC licence statement. The publisher's version at pubs.acs.org is subscription-only.",
+  "consequence": "CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release. This paper is not, on the evidence above. Queued as D-7 in DECISIONS.md; not resolved here."
+ },
+ "files": [
+  {
+   "path": "curation/siegwart_40644303/source/ab5c00463_si_001.pdf",
+   "sha256": "783a89a1cdc739cae021446ad0ac079ce05d8e35049b5f488767f0faeabd1626",
+   "bytes": 3880216,
+   "retrieved_from": "supplied with the task; the PDF's own per-page footer records 'Downloaded from pubs.acs.org/abseba/article-supplement/3599506/pdf/ab5c00463_si_001/ ... on 10 November 2026'",
+   "retrieved_utc": "2026-11-10 (per the PDF's own download stamp)",
+   "contents": "28 pages: p1 title/TOC, p2 Figures S1-S2 (cell viability, raster), p3 physical-characterisation table (REAL TEXT) + 1 raster, pp4-6 1H NMR peak lists (REAL TEXT), pp7-28 NMR spectra (raster)."
+  },
+  {
+   "path": "curation/siegwart_40644303/source/PMC12869450.jats.xml",
+   "sha256": "f14492bf7b92966d1e1ed0ea79d8f1fa5ef2f3b11ad11f645e3e5d381e07ade2",
+   "bytes": 78475,
+   "retrieved_from": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml&id=12869450",
+   "retrieved_utc": "2026-11-10T05:5x UTC",
+   "contents": "JATS for the author manuscript. table-wrap count = 0: the article contains NO marked-up tables, which is the fact that forces the value tiers in 00_value_sources.json."
+  },
+  {
+   "path": "curation/siegwart_40644303/source/PMC12869450.fulltext.txt",
+   "sha256": "4dd7562b083c58f3e3a1c3817745a8425306efa06fa855c0fcde02d4d427c698",
+   "bytes": 43260,
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12869450/ , tags stripped",
+   "retrieved_utc": "2026-11-10",
+   "contents": "Main text, Methods, every figure caption. This is the only copy of the MAIN TEXT we hold; the task brief supplied the SI alone."
+  },
+  {
+   "path": "curation/siegwart_40644303/source/figures/fig1.jpg",
+   "sha256": "5ab2e192cff3bc3ec1683341de13eb56bef89e5f2ea9232d57763a0d99a8d5b5",
+   "bytes": 388261,
+   "px": "1500x943",
+   "retrieved_from": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7e57/12869450/44579a333e74/nihms-2133731-f0002.jpg",
+   "retrieved_utc": "2026-11-10",
+   "is": "Figure 1 (a heatmap 465 lipids x 2 cargoes, b the chemical library, c the Venn diagram)",
+   "note": "EXIF description field reads 'ACS Biomater. Sci. Eng. 2025.11:4844-4852', i.e. this raster is the published figure, not a re-render."
+  },
+  {
+   "path": "curation/siegwart_40644303/source/figures/fig2.jpg",
+   "sha256": "477faef33477fef264fc7a77081ddec940e762b33ce091954e7d5049770574b6",
+   "bytes": 411537, "px": "1500x1303",
+   "retrieved_from": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7e57/12869450/84347259f756/nihms-2133731-f0003.jpg",
+   "retrieved_utc": "2026-11-10",
+   "is": "Figure 2 (a IVIS images, b quantified liver radiance, 3A4 / 3A4V / 3A4V2 x SC5-SC10 = 18 bars)"
+  },
+  {
+   "path": "curation/siegwart_40644303/source/figures/fig3.jpg",
+   "sha256": "285d1211896c79ed5a80ce1f0be2c6c7484eda53e59aa5f1a8d1043e49ec099e",
+   "bytes": 413900, "px": "1500x1167",
+   "retrieved_from": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7e57/12869450/e55b3ad8ee1b/nihms-2133731-f0004.jpg",
+   "retrieved_utc": "2026-11-10",
+   "is": "Figure 3 (a cores + IVIS, b quantified liver radiance, 4A3 / 4A5 / 5A4 / 5A5 x SC5-SC10 = 24 bars)"
+  },
+  {
+   "path": "curation/siegwart_40644303/source/figures/fig4.jpg",
+   "sha256": "9efbde9c9abfd75e8b953e1a34be8091430cc9394e198488af3c1c89ee93161a",
+   "bytes": 242408, "px": "1500x838",
+   "retrieved_from": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7e57/12869450/5b72aaf3b4ec/nihms-2133731-f0005.jpg",
+   "retrieved_utc": "2026-11-10",
+   "is": "Figure 4 (a size/PDI bars, b radiance vs size, c radiance vs encapsulation efficiency). Used as a SECOND, INDEPENDENT reading of the same 42 radiance values."
+  },
+  {
+   "path": "curation/siegwart_40644303/source/figures/fig5.jpg",
+   "sha256": "01aefe60908421ebfb4df368295a140445edfa1b679facccbcb869ed2060341b",
+   "bytes": 237364, "px": "1500x1051",
+   "retrieved_from": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7e57/12869450/7a30d745f210/nihms-2133731-f0006.jpg",
+   "retrieved_utc": "2026-11-10",
+   "is": "Figure 5 (a radiance vs pKa, b radiance vs TNS@pH5 with 7 PRINTED regression equations and R-squared). A THIRD independent reading of the same 42 radiance values, and the only external anchor on their ABSOLUTE scale."
+  },
+  {
+   "path": "curation/siegwart_40644303/source/figures/scheme1.jpg",
+   "sha256": "b7dd519133461932a188be21dd071daed650a52a806439c5dacc4db61b8312ca",
+   "bytes": 163491, "px": "1500x768",
+   "retrieved_from": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7e57/12869450/e061b85a45f8/nihms-2133731-f0007.jpg",
+   "retrieved_utc": "2026-11-10",
+   "is": "Scheme 1, the aza-Michael / sulfa-Michael synthesis. This is what pins the arm connectivity; HRMS and formula cannot."
+  }
+ ],
+ "not_available": {
+  "publisher_pdf": "pubs.acs.org is subscription-only for this article; no attempt made to bypass.",
+  "pmc_pdf": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12869450/pdf/nihms-2133731.pdf is served behind a proof-of-work challenge and was NOT retrieved. Consequence: we have no VECTOR copy of any main-text figure, so chains.vector_chain_length (the primary, PDF-coordinate path) is unavailable for Figure 1b and the raster path is the only one. Stated here because it is the reason 02_blocks records raster-only chain counts.",
+  "source_data": "none. The JATS has table-wrap count 0 and the article has no Source Data file.",
+  "author_repository": "searched by DOI, PMID, title and author (find_repo.py, 2026-11-10): 0 candidate repositories. The three GitHub hits are unrelated projects.",
+  "europe_pmc_supplementary": "endpoint returns 'not open access'; the only supplementary item is the same SI PDF we already hold."
+ }
+}

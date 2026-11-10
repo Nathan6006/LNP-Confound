@@ -1,0 +1,407 @@
+{
+ "vector_chain_lengths": {
+  "Dod": {
+   "stroked_segments": 12,
+   "merged_vertices": 13,
+   "carbons": 12
+  },
+  "Ehx": {
+   "stroked_segments": 8,
+   "merged_vertices": 9,
+   "carbons": 8
+  }
+ },
+ "name_token_reports": [
+  {
+   "label": "Hex",
+   "name_token_length": 6,
+   "measured_length": 6,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "Oct",
+   "name_token_length": 8,
+   "measured_length": 8,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "Dec",
+   "name_token_length": 10,
+   "measured_length": 10,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "Dod",
+   "name_token_length": 12,
+   "measured_length": 12,
+   "matches": true,
+   "note": ""
+  }
+ ],
+ "carbon_arithmetic_agree": "34/34",
+ "carbon_arithmetic_rows": [
+  {
+   "peptoid": 226,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 48,
+   "paper_lipid_carbons": 48,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 234,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 40,
+   "paper_lipid_carbons": 40,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 235,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 64,
+   "paper_lipid_carbons": 64,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 236,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 4,
+   "paper_branched_unsat": 4,
+   "agree": true
+  },
+  {
+   "peptoid": 237,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 238,
+   "ours_lipid_monomers": 3,
+   "paper_lipid_monomers": 3,
+   "ours_lipid_carbons": 42,
+   "paper_lipid_carbons": 42,
+   "ours_branched_unsat": 1,
+   "paper_branched_unsat": 1,
+   "agree": true
+  },
+  {
+   "peptoid": 239,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 240,
+   "ours_lipid_monomers": 3,
+   "paper_lipid_monomers": 3,
+   "ours_lipid_carbons": 46,
+   "paper_lipid_carbons": 46,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 241,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 76,
+   "paper_lipid_carbons": 76,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 242,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 72,
+   "paper_lipid_carbons": 72,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 243,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 52,
+   "paper_lipid_carbons": 52,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 244,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 64,
+   "paper_lipid_carbons": 64,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 245,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 44,
+   "paper_lipid_carbons": 44,
+   "ours_branched_unsat": 4,
+   "paper_branched_unsat": 4,
+   "agree": true
+  },
+  {
+   "peptoid": 246,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 4,
+   "paper_branched_unsat": 4,
+   "agree": true
+  },
+  {
+   "peptoid": 247,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 48,
+   "paper_lipid_carbons": 48,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 248,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 64,
+   "paper_lipid_carbons": 64,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 249,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 72,
+   "paper_lipid_carbons": 72,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 250,
+   "ours_lipid_monomers": 8,
+   "paper_lipid_monomers": 8,
+   "ours_lipid_carbons": 76,
+   "paper_lipid_carbons": 76,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 251,
+   "ours_lipid_monomers": 3,
+   "paper_lipid_monomers": 3,
+   "ours_lipid_carbons": 44,
+   "paper_lipid_carbons": 44,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 252,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 44,
+   "paper_lipid_carbons": 44,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 253,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 40,
+   "paper_lipid_carbons": 40,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 254,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 32,
+   "paper_lipid_carbons": 32,
+   "ours_branched_unsat": 4,
+   "paper_branched_unsat": 4,
+   "agree": true
+  },
+  {
+   "peptoid": 255,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 44,
+   "paper_lipid_carbons": 44,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 256,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 52,
+   "paper_lipid_carbons": 52,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 257,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 64,
+   "paper_lipid_carbons": 64,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 258,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 52,
+   "paper_lipid_carbons": 52,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 259,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 260,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 64,
+   "paper_lipid_carbons": 64,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 261,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 48,
+   "paper_lipid_carbons": 48,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 262,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 64,
+   "paper_lipid_carbons": 64,
+   "ours_branched_unsat": 0,
+   "paper_branched_unsat": 0,
+   "agree": true
+  },
+  {
+   "peptoid": 263,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 52,
+   "paper_lipid_carbons": 52,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 264,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 265,
+   "ours_lipid_monomers": 4,
+   "paper_lipid_monomers": 4,
+   "ours_lipid_carbons": 52,
+   "paper_lipid_carbons": 52,
+   "ours_branched_unsat": 2,
+   "paper_branched_unsat": 2,
+   "agree": true
+  },
+  {
+   "peptoid": 266,
+   "ours_lipid_monomers": 6,
+   "paper_lipid_monomers": 6,
+   "ours_lipid_carbons": 56,
+   "paper_lipid_carbons": 56,
+   "ours_branched_unsat": 4,
+   "paper_branched_unsat": 4,
+   "agree": true
+  }
+ ],
+ "monomers_used_in_222_266": [
+  "Aet",
+  "Apd",
+  "Apr",
+  "Dea",
+  "Dec",
+  "Dme",
+  "Dod",
+  "Eae",
+  "Ehx",
+  "Hex",
+  "Mip",
+  "Mop",
+  "Nhe",
+  "Nhp",
+  "Nme",
+  "Nmp",
+  "Oct",
+  "Ole"
+ ]
+}

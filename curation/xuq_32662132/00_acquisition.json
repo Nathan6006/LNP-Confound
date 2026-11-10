@@ -1,0 +1,51 @@
+{
+ "_what": "What was fetched, from where, when, and what could not be fetched and why.",
+ "paper": {
+  "title": "Imidazole-Based Synthetic Lipidoids for In Vivo mRNA Delivery into Primary T Lymphocytes.",
+  "authors": "Zhao X, Chen J, Qiu M, Li Y, Glass Z, Xu Q.",
+  "journal": "Angewandte Chemie (International ed. in English)",
+  "year": 2020,
+  "pmid": 32662132,
+  "pmcid": null,
+  "doi": "10.1002/anie.202008082",
+  "pubTypes": ["Journal Article", "Research Support, N.I.H., Extramural"],
+  "abstractText_length": 953,
+  "endpoint": "mRNA delivery into primary T lymphocytes (FLuc luminescence, EGFP flow cytometry, in vivo Cre/tdTomato recombination)",
+  "step_1_verdict": "ORIGINAL RESEARCH, IN SCOPE. The run brief's commentary discriminator is abstractText length 0 plus no Methods/Results and a letter/Highlight pubType. This record has a 953-character abstract reporting its own measurements, pubTypes 'Journal Article' + 'Research Support, N.I.H., Extramural', and an 11-page Supporting Information with its own Experimental Procedures. Checked in one Europe PMC resultType=core call before any chemistry."
+ },
+ "held": [
+  {
+   "path": "source/anie202008082-sup-0001-misc_information.pdf",
+   "bytes": 4103279,
+   "sha256": "a48c7f5b9f7e9b5c1f0ab165668db0a6bd28963015eb9785d1b7870180aaca8a",
+   "magic": "%PDF-1.6",
+   "url": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fanie.202008082&file=anie202008082-sup-0001-misc_information.pdf",
+   "note": "already present in source/ at the start of this run; recorded from curation/_received.jsonl, not re-fetched."
+  }
+ ],
+ "derived_in_this_run": [
+  "source/figS1_page4_xref95.png  (1558 x 810)",
+  "source/figS2_page5_xref101.png (1532 x 1562)",
+  "source/figS3_page6_xref106.png (1534 x 1279)",
+  "source/figS4_page7_xref111.png (1534 x 1648)",
+  "source/figS5_page8_xref116.png (1489 x 1854)"
+ ],
+ "_derived_note": "These are the EMBEDDED rasters, extracted by xref with pymupdf.Pixmap. They are the publisher's own bitmaps at native resolution - rendering the page at 600 dpi would only upsample them. Each figure page carries exactly one content raster plus the recurring 404x102 journal banner.",
+ "could_not_fetch": [
+  {
+   "what": "the main article (Figures 1-4), which carries every library delivery value",
+   "attempts": [
+    "https://onlinelibrary.wiley.com/doi/pdf/10.1002/anie.202008082 -> HTTP 403",
+    "https://onlinelibrary.wiley.com/doi/epdf/10.1002/anie.202008082 -> HTTP 403",
+    "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/anie.202008082 -> HTTP 403",
+    "Europe PMC /MED/32662132/fullTextXML -> HTTP 404; core record inEPMC=N, pmcid=null",
+    "NCBI esearch db=pmc for the DOI -> count 0; for the quoted title in [TITLE] -> count 0",
+    "NCBI elink pubmed->pmc -> only pubmed_pmc_refs (65 citing PMCIDs), no author manuscript",
+    "OpenAlex -> open_access.is_oa false, oa_status 'closed', any_repository_has_fulltext false",
+    "Unpaywall -> is_oa false, zero oa_locations"
+   ],
+   "posture": "HARD STOP, not a retryable failure. The article is subscription-only with no deposited author manuscript. No bot check was encountered and none was bypassed; no login was attempted; the shared browser was not used (run brief)."
+  }
+ ],
+ "licence": "NOT RECORDED. The Wiley landing page could not be read without the browser this run is forbidden to use, so the licence string for the SI is unknown. CLAUDE.md section 8 requires a CC0/CC-BY-compatible licence before corpus release, and that is OPEN (DECISIONS.md D-9)."
+}

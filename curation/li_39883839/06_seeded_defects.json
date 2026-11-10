@@ -1,0 +1,22 @@
+{
+ "cases": [
+  {
+   "seeded": "class 20: Fig 3I origin anchored one tick out (+5e7 on every value)",
+   "check": "V1_fig3H_printed_ROI_containment",
+   "metric": "n_inside",
+   "clean_run": 3,
+   "with_defect": 0,
+   "metric_moved": true
+  },
+  {
+   "seeded": "read panel K's LOG-styled minor ticks as the scale (x22 on a mid bar)",
+   "check": "V2_H2A4B4_two_panels",
+   "metric": "ratio",
+   "clean_run": 1.0392,
+   "with_defect": 22.8613,
+   "metric_moved": true
+  }
+ ],
+ "control_reproduces": true,
+ "all_moved": true
+}

@@ -1,0 +1,240 @@
+{
+ "_what": "Rollup for whiteheadka_30637934 -> Experiment_ID KW_2019. Every entry is a measured number. Each check was run clean AND with a defect seeded; 07_seeded_checks.json holds both readings and a check is credited only where the AGREEMENT COUNT MOVED.",
+ "paper": {
+  "pmid": "30637934",
+  "doi": "10.1002/smll.201805097",
+  "title": "Branched-Tail Lipid Nanoparticles Potently Deliver mRNA In Vivo due to Enhanced Ionization at Endosomal pH.",
+  "title_and_endpoint_verified_from": "Europe PMC REST core record, SRC:MED EXT_ID:30637934, 2026-11-10",
+  "endpoint": "mRNA delivery / transfection. Emitted endpoint: in vitro firefly-luciferase activity in HeLa, RLU, 100 ng mRNA per well, 24 h, n=4.",
+  "experiment_id": "KW_2019",
+  "id_collision_check": "KW_2014 exists in the corpus (Whitehead 2014); KW_2019 does not. The staged sibling whiteheadka_38888972 uses KW_2024, so the lab key is consistent."
+ },
+ "extraction_tier": {
+  "value_source": "4b_pdf_vector_geometry",
+  "pages_rendered_to_raster": 0,
+  "pixels_read": 0,
+  "why_not_tier_1_2_3": "No Source Data file (Wiley, isOpenAccess=N, hasSuppl=N, availabilityCode S); no SI numeric table carries a delivery value; find_repo.py returned 0 relevant hits and NCBI esearch db=pmc on the DOI returns Count=0."
+ },
+ "three_counts_that_differ": {
+  "_what": "Distinct structures, formulations, and individually measured values are three different numbers and this paper separates them cleanly.",
+  "distinct_structures_in_the_306_family": 11,
+  "distinct_structures_in_the_whole_library": "NOT DETERMINABLE from what we hold. The SI Methods name THREE amines (200, 304, 306) and the abstract names 'a small library' plus 'a secondary lipidoid library', but every value-bearing table and figure in the SI is 306-family only and the main text is behind a subscription. So the library is larger than 11 by an unknown factor and no value for a 200- or 304-amine lipidoid is recoverable.",
+  "formulations": 1,
+  "formulation_detail": "One formulation for the whole screen: 35 : 16 : 46.5 : 2.5 mol%, 10:1 w/w lipidoid:mRNA. No formulation variable is screened anywhere in this paper.",
+  "individually_measured_in_vitro_delivery_values": 11,
+  "individually_measured_counting_the_second_plate": 23,
+  "individually_measured_physicochemical_only": {
+   "Table_S1_LNP_characterisation": 11,
+   "Table_S2_lipidoid_pKa_and_buffering": 10,
+   "Figure_S7_printed_pKa": 8
+  },
+  "in_vivo_values_resolved_per_lipidoid": "Figure S3D: 3 lipidoids x a time course. Figure S4: 2 lipidoids x 3 doses, as a six-organ STACKED total. Figure S5: 2 lipidoids x 3 timepoints, EPO protein not luciferase. None digitised; see DECISIONS.md D-2."
+ },
+ "structures": {
+  "enumerated": 11,
+  "michael_arms_per_structure": 4,
+  "all_structures_parse": true,
+  "radical_atoms": 0,
+  "built_via": "curation/lib assemble.esterify for the ester bond and assemble.attach on atom-mapped attachment atoms for all four N-C bonds; no RemoveAtom anywhere near a stereocentre, no string surgery.",
+  "stereocentres": 0,
+  "stereocentres_note": "The 306 core is achiral and 8-methylnonyl's branch carbon bears two identical methyls, so no structure here has a stereocentre and assemble's stereo assertions are vacuous rather than passing. Stated so the clean line is not read as evidence."
+ },
+ "check_mass_ladder": {
+  "_what": "Each consecutive linear-tail step must add exactly 4 x dC x CH2, because the lipidoid has four arms. A relation among the authors' name tokens and our masses that the paper never prints.",
+  "agreements": 9,
+  "of": 9,
+  "seeded": 7,
+  "CH2_Da": 14.0156500642,
+  "one_tail_carbon_adds_Da": 56.0626002568
+ },
+ "check_abstract_mass_identity": {
+  "claim": "abstract: 306O10 and 306Oi10 have ten-carbon tails and identical molecular weights",
+  "O10_formula": "C59H115N3O8",
+  "Oi10_formula": "C59H115N3O8",
+  "formulae_identical": true,
+  "O10_exact_mass": 993.868418,
+  "Oi10_exact_mass": 993.868418,
+  "exact_mass_delta_Da": 0.0,
+  "O10_tail_carbons": 10,
+  "Oi10_tail_carbons": 10,
+  "both_ten_carbon": true,
+  "isomers_not_identical": true
+ },
+ "check_figS7_printed_pKa_vs_tableS1": {
+  "n": 8,
+  "exact_matches": 8,
+  "max_abs_delta": 0.0
+ },
+ "check_two_pKa_conventions_DO_NOT_POOL": {
+  "_what": "Table S2 is the LIPIDOID pKa in ethanol; Table S1 is the LNP SURFACE pKa in aqueous buffer by TNS. Different material, different solvent, different method. This is reported as a SPREAD, not as a disagreement to fix.",
+  "n": 10,
+  "max_abs_delta_pH": 1.14,
+  "mean_delta_pH": 0.268,
+  "n_with_delta_above_0.3_pH": 7
+ },
+ "check_mole_percents_sum_to_100": {
+  "_what": "The SI prints 'a molar ratio of 35 : 16 : 46.5 : 2.5' for four components. The sum is a round number the authors never printed, and it confirms these are mol% with no fifth component unaccounted for. WHICH component takes 16 and which takes 46.5 is a separate question and is DECISIONS.md D-1.",
+  "values": {
+   "lipidoid": 35.0,
+   "second_listed": 16.0,
+   "third_listed": 46.5,
+   "C14-PEG2000": 2.5
+  },
+  "sum": 100.0,
+  "equals_100_exactly": true
+ },
+ "geometry_panelA": {
+  "y_ticks_detected": 6,
+  "y_tick_fit_residual_pt": 0.0008,
+  "y_tick_residual_tolerance_pt": 2.5,
+  "y_loo_worst_residual_pt": 0.0015,
+  "y_loo_tolerance_pt": 1.5,
+  "px_per_5e5_RLU": 24.4405,
+  "RLU_per_pt": 20457.83,
+  "x_ticks_detected": 14,
+  "x_categories": 14,
+  "x_tick_pitch_spread_pt": 0.061,
+  "bar_centre_vs_x_tick_worst_pt": 0.0588,
+  "label_right_edge_minus_tick_mean_pt": 2.9938,
+  "label_right_edge_minus_tick_spread_pt": 0.002,
+  "label_offset_n": 11,
+  "label_offset_spread_is_shift_invariant": true,
+  "label_offset_spread_caveat": "0.002 pt across 11 labels is the striking number but it does NOT pin the assignment: rotating the category list leaves it unchanged. The absolute nearest-tick test does pin it and scores 11/11 clean, 0/11 seeded. See 08_contradictions.csv X-8.",
+  "bars_drawn": 12,
+  "bar_outline_width_pt": 8.51,
+  "errorbar_cap_width_pt": 4.19,
+  "pattern_tile_width_pt": 2.8,
+  "width_discriminator_note": "Bar, whisker cap and marker separate by EXACT width, not by a coverage threshold, so error class 32 (F-018, F-020: a replicate marker read as a bar top) is closed by construction. curation/lib bars.py is not called because it takes an ink array and no raster exists.",
+  "fill_vs_stroke_frame_offset_pt": 0.057,
+  "fill_vs_stroke_frame_offset_RLU": 1166.1,
+  "frame_choice": "bar OUTLINE, whose legs start exactly on the y=0 tick at 220.45 pt, so bar tops and ticks share one coordinate system and no origin is supplied separately (error class 20 / F-033)."
+ },
+ "geometry_panelB": {
+  "y_ticks_detected": 5,
+  "y_tick_fit_residual_pt": 0.0008,
+  "y_loo_worst_residual_pt": 0.0015,
+  "px_per_5e5_RLU": 26.0804,
+  "markers_found": 12,
+  "markers_expected": 12,
+  "dose_monotonicity": "4/4",
+  "dose_monotonicity_note": "4/4 lipidoids increase across 10 < 50 < 100 ng. This also validates the legend colour -> dose mapping: the seeded swap of two legend swatches drops it to 0/4."
+ },
+ "CROSS_PANEL_DISAGREEMENT": {
+  "_what": "Both panels are HeLa / firefly-luciferase / RLU / 24 h, and S6A's single dose IS 100 ng, so S6B's 100 ng series must reproduce S6A on these four lipidoids. It does not: see 08_contradictions.csv. Neither panel is averaged into the other and neither is adjusted by the other.",
+  "shared": [
+   {
+    "lipid": "Oi10",
+    "S6A_100ng": 1176187,
+    "S6B_100ng": 1506876,
+    "ratio_B_over_A": 1.2812
+   },
+   {
+    "lipid": "O10",
+    "S6A_100ng": 1741649,
+    "S6B_100ng": 1004583,
+    "ratio_B_over_A": 0.5768
+   },
+   {
+    "lipid": "O11",
+    "S6A_100ng": 1511900,
+    "S6B_100ng": 784111,
+    "ratio_B_over_A": 0.5186
+   },
+   {
+    "lipid": "O12",
+    "S6A_100ng": 1333312,
+    "S6B_100ng": 665247,
+    "ratio_B_over_A": 0.4989
+   }
+  ],
+  "ratio_min": 0.4989,
+  "ratio_max": 1.2812,
+  "rank_S6A_desc": [
+   "O10",
+   "O11",
+   "O12",
+   "Oi10"
+  ],
+  "rank_S6B_desc": [
+   "Oi10",
+   "O10",
+   "O11",
+   "O12"
+  ],
+  "spearman_rho": -0.2
+ },
+ "corpus_overlap": {
+  "enumerated": 11,
+  "already_in_corpus_by_full_inchikey": 6,
+  "already_in_corpus_by_skeleton_block": 6,
+  "already_in_corpus_by_IL_name": 6,
+  "novel_to_the_corpus": 5,
+  "name_match_with_structure_mismatch": 0,
+  "tierA_substructure_rows": 128,
+  "tierA_rows_identical_to_ours": 16,
+  "attestation": "KW_2014 stores five of these structures under 'A306_C<n>' names and NC_2024 stores six under 'A306_O<n>' names; all six of ours that match do so by FULL InChIKey with canonically identical SMILES, and zero of the eleven have a name match with a structure mismatch. Since this paper prints no HRMS, no formula, no MW and draws no structure, this is its ONLY external structure anchor besides the reagent names themselves.",
+  "tierB_same_chemistry_other_core_total": 1685
+ },
+ "emitted_rows": {
+  "experiment_id": "KW_2019",
+  "enumerated": 11,
+  "emitted": 11,
+  "skipped": [],
+  "counts_sum": true,
+  "zscore_mean": 0.0,
+  "zscore_sd_ddof0": 1.0,
+  "rows_with_a_caveat": 11,
+  "confidence_counts": {
+   "high": 10,
+   "medium": 1,
+   "low": 0
+  },
+  "dialysis_buffer_blank_because": "SI Methods p.2 dialyses only the in-vivo LNPs ('For in vivo experiments, the LNPs were dialyzed against PBS'); the in-vitro LNPs were diluted into PBS and used. Blank is 'not stated to have happened', not 'clean'.",
+  "excipients_resolved_by": "curation/lib reagents.smi, which RAISED on DMPE-PEG2000 (two structures in the corpus) and resolved DOPE, Cholesterol and C14-PEG2000 uniquely. See 08_contradictions.csv X-10."
+ },
+ "C10_anchor": {
+  "anchors": 3,
+  "anchor_names": [
+   "306O10",
+   "306Oi10",
+   "306O18"
+  ],
+  "paper_draws_a_structure": false,
+  "derived_from": "the SI Methods reagent NAMES (p.2), typed as source string literals, head-first traversal",
+  "independence_established_by": "PROVENANCE, not byte difference (F-037). make_reference.py's assert_no_assembler() walks its own AST at run time and confirms it imports no assembler module and calls none of RWMol, AddBond, RemoveAtom, CombineMols, EditableMol, ReactionFromSmarts, RunReactants, esterify, attach.",
+  "full_inchikey_matches": "3/3",
+  "gate_exit_clean": 0,
+  "gate_exit_seeded": {
+   "swap_tail_length": 1,
+   "move_an_ester": 1,
+   "drop_an_arm": 1
+  },
+  "move_an_ester_note": "identical molecular formula and identical exact mass to every decimal place, so the gate demonstrably tests connectivity and not mass.",
+  "first_version_of_assert_no_assembler_could_not_pass": "it substring-scanned a file that contains its own blocklist and reported all eight forbidden tokens on a clean run. Replaced with AST inspection. A check that cannot pass is as useless as one that cannot fail.",
+  "NOT_RUN_BY_INSTRUCTION": [
+   "provenance/structure_check.py",
+   "provenance/check_anchor_independence.py",
+   "provenance/check_anchor_coverage.py"
+  ]
+ },
+ "seeded_checks": {
+  "n_checks": 14,
+  "n_credited": 14,
+  "not_credited": [],
+  "rule": "credited only where the agreement count MOVED; a seed that merely raises proves the code has an exception, not that the check discriminates."
+ },
+ "contradictions": {
+  "rows": 10,
+  "confirmed": 2,
+  "retired_by_measurement": 7,
+  "my_own_errors_retired": 2
+ },
+ "open_decisions": [
+  "D-1 excipient 16 vs 46.5",
+  "D-2 in-vivo panels",
+  "D-3 Figure S6B as a separate experiment",
+  "D-4 the isodecyl branch",
+  "D-5 crude-product flag policy"
+ ],
+ "NOT_MERGED": "Nothing was written to data/. 06_rows.csv is not registered in build_dataset.py's MERGE list and five DECISIONS.md entries are OPEN, which blocks the merge by design."
+}

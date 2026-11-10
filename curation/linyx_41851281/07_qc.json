@@ -1,0 +1,891 @@
+{
+ "paper": "Lin et al., Nat Biomed Eng 2026, PMID 41851281",
+ "written_utc": "2026-11-10",
+ "library": {
+  "ml_ids": 121,
+  "H_T_library_lipids": 116,
+  "commercial_benchmarks": 3,
+  "external_ML_test_lipids": 2,
+  "distinct_structures_enumerated": 116,
+  "formulations_in_the_screen": 116,
+  "note": "One formulation per lipid in the screen (Supplementary Table 3), so formulations do not exceed structures. The separate 18-formulation sweep in Supplementary Fig. 26 is ONE lipid (P1) and is not part of the screen."
+ },
+ "checks": [
+  {
+   "id": "P1",
+   "what": "enumerated exact mass vs the paper's printed HRMS",
+   "agreements_clean": 115,
+   "total": 116,
+   "agreements_with_seed": 114,
+   "delta": 1,
+   "credited": true,
+   "seed": "add one CH2 (14.0157 Da) to lipid 1",
+   "unprinted_invariant": false,
+   "detail": {
+    "failures": [
+     [
+      "47",
+      "H8-OT1(3)",
+      0.007
+     ]
+    ]
+   }
+  },
+  {
+   "id": "P2",
+   "what": "HRMS-solved monomer mass per (linker, tail): spread and deviation from the formula",
+   "agreements_clean": 22,
+   "total": 22,
+   "agreements_with_seed": 0,
+   "delta": 22,
+   "credited": true,
+   "seed": "add one CH2 to head H4's mass",
+   "unprinted_invariant": true,
+   "detail": {
+    "groups": [
+     {
+      "group": "NT1",
+      "n_lipids": 15,
+      "spread_Da": 4e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "NT12",
+      "n_lipids": 5,
+      "spread_Da": 3e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "NT2",
+      "n_lipids": 6,
+      "spread_Da": 3e-05,
+      "dev_Da": 0.0,
+      "ok": true
+     },
+     {
+      "group": "NT3",
+      "n_lipids": 4,
+      "spread_Da": 2e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "NT5",
+      "n_lipids": 4,
+      "spread_Da": 2e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "NT7",
+      "n_lipids": 4,
+      "spread_Da": 2e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT1",
+      "n_lipids": 17,
+      "spread_Da": 3e-05,
+      "dev_Da": 0.0,
+      "ok": true
+     },
+     {
+      "group": "OT10",
+      "n_lipids": 6,
+      "spread_Da": 3e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT11",
+      "n_lipids": 2,
+      "spread_Da": 1e-05,
+      "dev_Da": -1e-05,
+      "ok": true
+     },
+     {
+      "group": "OT12",
+      "n_lipids": 4,
+      "spread_Da": 3e-05,
+      "dev_Da": 0.0,
+      "ok": true
+     },
+     {
+      "group": "OT13",
+      "n_lipids": 5,
+      "spread_Da": 2e-05,
+      "dev_Da": 0.0,
+      "ok": true
+     },
+     {
+      "group": "OT14",
+      "n_lipids": 2,
+      "spread_Da": 1e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT15",
+      "n_lipids": 1,
+      "spread_Da": 0.0,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT16",
+      "n_lipids": 1,
+      "spread_Da": 0.0,
+      "dev_Da": 1e-05,
+      "ok": true
+     },
+     {
+      "group": "OT2",
+      "n_lipids": 6,
+      "spread_Da": 3e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT3",
+      "n_lipids": 8,
+      "spread_Da": 3e-05,
+      "dev_Da": 1e-05,
+      "ok": true
+     },
+     {
+      "group": "OT4",
+      "n_lipids": 2,
+      "spread_Da": 1e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT5",
+      "n_lipids": 6,
+      "spread_Da": 3e-05,
+      "dev_Da": 1e-05,
+      "ok": true
+     },
+     {
+      "group": "OT6",
+      "n_lipids": 2,
+      "spread_Da": 1e-05,
+      "dev_Da": -0.0,
+      "ok": true
+     },
+     {
+      "group": "OT7",
+      "n_lipids": 5,
+      "spread_Da": 3e-05,
+      "dev_Da": 1e-05,
+      "ok": true
+     },
+     {
+      "group": "OT8",
+      "n_lipids": 2,
+      "spread_Da": 1e-05,
+      "dev_Da": 0.0,
+      "ok": true
+     },
+     {
+      "group": "OT9",
+      "n_lipids": 2,
+      "spread_Da": 1e-05,
+      "dev_Da": 0.0,
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "P3",
+   "what": "raster trace carbon count vs the HRMS formula's, per tail",
+   "agreements_clean": 32,
+   "total": 32,
+   "agreements_with_seed": 31,
+   "delta": 1,
+   "credited": true,
+   "seed": "add one carbon to the OT7 trace",
+   "unprinted_invariant": false,
+   "detail": {
+    "tails": [
+     {
+      "tail": "OT1",
+      "trace_C": 18,
+      "hrms_C": 18,
+      "ok": true
+     },
+     {
+      "tail": "NT1",
+      "trace_C": 18,
+      "hrms_C": 18,
+      "ok": true
+     },
+     {
+      "tail": "OT2",
+      "trace_C": 18,
+      "hrms_C": 18,
+      "ok": true
+     },
+     {
+      "tail": "NT2",
+      "trace_C": 18,
+      "hrms_C": 18,
+      "ok": true
+     },
+     {
+      "tail": "OT3",
+      "trace_C": 18,
+      "hrms_C": 18,
+      "ok": true
+     },
+     {
+      "tail": "NT3",
+      "trace_C": 18,
+      "hrms_C": 18,
+      "ok": true
+     },
+     {
+      "tail": "OT4",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "NT4",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "OT5",
+      "trace_C": 14,
+      "hrms_C": 14,
+      "ok": true
+     },
+     {
+      "tail": "NT5",
+      "trace_C": 14,
+      "hrms_C": 14,
+      "ok": true
+     },
+     {
+      "tail": "OT6",
+      "trace_C": 12,
+      "hrms_C": 12,
+      "ok": true
+     },
+     {
+      "tail": "NT6",
+      "trace_C": 12,
+      "hrms_C": 12,
+      "ok": true
+     },
+     {
+      "tail": "OT7",
+      "trace_C": 10,
+      "hrms_C": 10,
+      "ok": true
+     },
+     {
+      "tail": "NT7",
+      "trace_C": 10,
+      "hrms_C": 10,
+      "ok": true
+     },
+     {
+      "tail": "OT8",
+      "trace_C": 8,
+      "hrms_C": 8,
+      "ok": true
+     },
+     {
+      "tail": "NT8",
+      "trace_C": 8,
+      "hrms_C": 8,
+      "ok": true
+     },
+     {
+      "tail": "OT9",
+      "trace_C": 6,
+      "hrms_C": 6,
+      "ok": true
+     },
+     {
+      "tail": "NT9",
+      "trace_C": 6,
+      "hrms_C": 6,
+      "ok": true
+     },
+     {
+      "tail": "OT10",
+      "trace_C": 11,
+      "hrms_C": 11,
+      "ok": true
+     },
+     {
+      "tail": "NT10",
+      "trace_C": 11,
+      "hrms_C": 11,
+      "ok": true
+     },
+     {
+      "tail": "OT11",
+      "trace_C": 15,
+      "hrms_C": 15,
+      "ok": true
+     },
+     {
+      "tail": "NT11",
+      "trace_C": 15,
+      "hrms_C": 15,
+      "ok": true
+     },
+     {
+      "tail": "OT12",
+      "trace_C": 17,
+      "hrms_C": 17,
+      "ok": true
+     },
+     {
+      "tail": "NT12",
+      "trace_C": 17,
+      "hrms_C": 17,
+      "ok": true
+     },
+     {
+      "tail": "OT13",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "NT13",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "OT14",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "NT14",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "OT15",
+      "trace_C": 17,
+      "hrms_C": 17,
+      "ok": true
+     },
+     {
+      "tail": "NT15",
+      "trace_C": 17,
+      "hrms_C": 17,
+      "ok": true
+     },
+     {
+      "tail": "OT16",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     },
+     {
+      "tail": "NT16",
+      "trace_C": 16,
+      "hrms_C": 16,
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "P4",
+   "what": "Fig. 3c log10 values vs Supplementary Fig. 10 raw RLU",
+   "agreements_clean": 336,
+   "total": 339,
+   "agreements_with_seed": 334,
+   "delta": 2,
+   "credited": true,
+   "seed": "scale lipid 1's smallest replicate by 1.3",
+   "unprinted_invariant": false,
+   "detail": {
+    "value_mismatches": [
+     [
+      "8",
+      3466884,
+      1645.82
+     ],
+     [
+      "8",
+      3918150,
+      1887.206
+     ],
+     [
+      "8",
+      4493434,
+      1917.928
+     ]
+    ],
+    "same_values_different_order": [
+     "1",
+     "6",
+     "19",
+     "40",
+     "48",
+     "59",
+     "62",
+     "107",
+     "108",
+     "109",
+     "110",
+     "ALC-0315"
+    ]
+   }
+  },
+  {
+   "id": "P5",
+   "what": "Extended Data Fig. 2c Lipid T3-T12 vs the screen",
+   "agreements_clean": 30,
+   "total": 30,
+   "agreements_with_seed": 29,
+   "delta": 1,
+   "credited": true,
+   "seed": "add 1.0 RLU to Lipid T7's first replicate",
+   "unprinted_invariant": true,
+   "detail": {
+    "mismatches": []
+   }
+  },
+  {
+   "id": "P6",
+   "what": "label.txt (ML target) vs the mean of the three replicates",
+   "agreements_clean": 105,
+   "total": 110,
+   "agreements_with_seed": 104,
+   "delta": 1,
+   "credited": true,
+   "seed": "double lipid 1's first replicate",
+   "unprinted_invariant": false,
+   "detail": {
+    "equals_replicate_1": [
+     "8",
+     "107",
+     "108",
+     "109",
+     "110"
+    ],
+    "neither": []
+   }
+  },
+  {
+   "id": "P7",
+   "what": "the same triplicate re-used across independent panels",
+   "agreements_clean": 15,
+   "total": 15,
+   "agreements_with_seed": 14,
+   "delta": 1,
+   "credited": true,
+   "seed": "scale MC3's first replicate by 1.01 in Supp Fig 10",
+   "unprinted_invariant": true,
+   "detail": {
+    "mismatches": []
+   }
+  },
+  {
+   "id": "P8",
+   "what": "every Supplementary Table 3 formulation sums to 100 mol%",
+   "agreements_clean": 8,
+   "total": 8,
+   "agreements_with_seed": 7,
+   "delta": 1,
+   "credited": true,
+   "seed": "change Lipid P1/mOVA's 40 to 41",
+   "unprinted_invariant": true,
+   "detail": {
+    "failures": []
+   }
+  },
+  {
+   "id": "P9",
+   "what": "distinct InChIKeys among the enumerated lipids",
+   "agreements_clean": 116,
+   "total": 116,
+   "agreements_with_seed": 115,
+   "delta": 1,
+   "credited": true,
+   "seed": "duplicate one InChIKey",
+   "unprinted_invariant": false,
+   "detail": {}
+  },
+  {
+   "id": "P10",
+   "what": "the corpus's own AA_2008/KW_2014 names for the 15 shared lipids vs our head/tail assignment",
+   "agreements_clean": 21,
+   "total": 21,
+   "agreements_with_seed": 0,
+   "delta": 21,
+   "credited": true,
+   "seed": "add one carbon to every derived tail length",
+   "unprinted_invariant": true,
+   "detail": {
+    "mismatches": [],
+    "bijection_head_to_amine_code": true,
+    "pairs": {
+     "H1": [
+      "28"
+     ],
+     "H2": [
+      "80"
+     ],
+     "H3": [
+      "109"
+     ],
+     "H4": [
+      "113"
+     ],
+     "H9": [
+      "306"
+     ],
+     "amine:109": [
+      "H3"
+     ],
+     "amine:113": [
+      "H4"
+     ],
+     "amine:28": [
+      "H1"
+     ],
+     "amine:306": [
+      "H9"
+     ],
+     "amine:80": [
+      "H2"
+     ]
+    }
+   }
+  }
+ ],
+ "corpus_overlap": {
+  "vitro": {
+   "corpus_rows": 29195,
+   "matches": 15,
+   "detail": [
+    {
+     "ml_id": "8",
+     "lipid_name": "H2-OT7(2)",
+     "inchikey": "DEGZKZQHROPBLO-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "80_O10"
+       ]
+      },
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A80_C10"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "20",
+     "lipid_name": "H4-OT5(4)",
+     "inchikey": "GPQCDUXAUCIAHP-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A113_C14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "22",
+     "lipid_name": "H4-OT6(4)",
+     "inchikey": "ZKURLUHVSGHTAE-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A113_C12"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "24",
+     "lipid_name": "H4-OT7(4)",
+     "inchikey": "YDGXKCWVUGEOBQ-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A113_C10"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "61",
+     "lipid_name": "H3-OT3(3)",
+     "inchikey": "KSLFMYIEIFRPOW-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "109_O18"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "62",
+     "lipid_name": "H3-OT5(3)",
+     "inchikey": "FRIGNJQUCHAHND-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "109_O14"
+       ]
+      },
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A109_C14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "68",
+     "lipid_name": "H9-OT5(4)",
+     "inchikey": "LRQXEZVLSSESNB-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A306_C14"
+       ]
+      },
+      {
+       "experiment": "NC_2024",
+       "il_names": [
+        "A306_O14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "69",
+     "lipid_name": "H3-OT7(3)",
+     "inchikey": "KBYJQPDSSPTOQS-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "109_O10"
+       ]
+      },
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A109_C10"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "73",
+     "lipid_name": "H3-NT3(3)",
+     "inchikey": "VMFOOGAWVOZPRR-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "109_N18"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "74",
+     "lipid_name": "H3-NT5(3)",
+     "inchikey": "STOYEIWQBDEBSO-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "109_N14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "109",
+     "lipid_name": "H2-OT3(2)",
+     "inchikey": "LWTRCSOOEXKOHW-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "80_O18"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "110",
+     "lipid_name": "H1-OT3(2)",
+     "inchikey": "XZANSXSJDGGGAY-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "28_O18"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "119",
+     "lipid_name": "H9-OT7(4)",
+     "inchikey": "PGKBCAOUJZLRIS-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A306_C10"
+       ]
+      },
+      {
+       "experiment": "NC_2024",
+       "il_names": [
+        "A306_O10"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "120",
+     "lipid_name": "H2-OT5(2)",
+     "inchikey": "CUDYPOATVKJZPG-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A80_C14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "121",
+     "lipid_name": "H1-OT7(2)",
+     "inchikey": "NHBJHABPVFIWJC-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "AA_2008",
+       "il_names": [
+        "28_O10"
+       ]
+      },
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A28_C10"
+       ]
+      }
+     ]
+    }
+   ],
+   "il_name_collisions": []
+  },
+  "vivo": {
+   "corpus_rows": 1803,
+   "matches": 5,
+   "detail": [
+    {
+     "ml_id": "20",
+     "lipid_name": "H4-OT5(4)",
+     "inchikey": "GPQCDUXAUCIAHP-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A113_C14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "22",
+     "lipid_name": "H4-OT6(4)",
+     "inchikey": "ZKURLUHVSGHTAE-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A113_C12"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "24",
+     "lipid_name": "H4-OT7(4)",
+     "inchikey": "YDGXKCWVUGEOBQ-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A113_C10"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "68",
+     "lipid_name": "H9-OT5(4)",
+     "inchikey": "LRQXEZVLSSESNB-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A306_C14"
+       ]
+      }
+     ]
+    },
+    {
+     "ml_id": "119",
+     "lipid_name": "H9-OT7(4)",
+     "inchikey": "PGKBCAOUJZLRIS-UHFFFAOYSA-N",
+     "corpus": [
+      {
+       "experiment": "KW_2014",
+       "il_names": [
+        "A306_C10"
+       ]
+      }
+     ]
+    }
+   ],
+   "il_name_collisions": []
+  }
+ },
+ "credited": 10,
+ "not_credited": []
+}

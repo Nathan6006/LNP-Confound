@@ -1,0 +1,758 @@
+{
+ "inputs": {
+  "VE_AC": {
+   "smiles": "CC1=C(C)C2=C(CCC(C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)O2)C(C)=C1OC(=O)C=C",
+   "formula": "C32H52O3",
+   "calc_M_plus_Na": 507.3809,
+   "paper_calc": 507.3809,
+   "paper_found": 507.3804,
+   "delta_mDa_vs_paper_calc": -0.03
+  },
+  "n_drawn_entries": 35,
+  "n_distinct_cas": 34,
+  "duplicate_cas": {
+   "7209-38-3": 2
+  }
+ },
+ "amines": [
+  {
+   "cas": "7209-38-3",
+   "smiles": "NCCCN1CCN(CCCN)CC1",
+   "name": "1,4-bis(3-aminopropyl)piperazine",
+   "formula": "C10H24N4",
+   "exact_mass": 200.2001,
+   "n_nitrogens": 4,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    0,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 1 col 1"
+  },
+  {
+   "cas": "109-55-7",
+   "smiles": "CN(C)CCCN",
+   "name": "N,N-dimethyl-1,3-propanediamine",
+   "formula": "C5H14N2",
+   "exact_mass": 102.1157,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 1 col 2"
+  },
+  {
+   "cas": "109-85-3",
+   "smiles": "COCCN",
+   "name": "2-methoxyethylamine",
+   "formula": "C3H9NO",
+   "exact_mass": 75.0684,
+   "n_nitrogens": 1,
+   "nh_per_nitrogen": [
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 1 col 3"
+  },
+  {
+   "cas": "5036-48-6",
+   "smiles": "NCCCn1ccnc1",
+   "name": "1-(3-aminopropyl)imidazole",
+   "formula": "C6H11N3",
+   "exact_mass": 125.0953,
+   "n_nitrogens": 3,
+   "nh_per_nitrogen": [
+    2,
+    0,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 1 col 4"
+  },
+  {
+   "cas": "100-36-7",
+   "smiles": "CCN(CC)CCN",
+   "name": "N,N-diethylethylenediamine",
+   "formula": "C6H16N2",
+   "exact_mass": 116.1313,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 1 col 5"
+  },
+  {
+   "cas": "4439-20-7",
+   "smiles": "OCCNCCNCCO",
+   "name": "N,N'-bis(2-hydroxyethyl)ethylenediamine",
+   "formula": "C6H16N2O2",
+   "exact_mass": 148.1212,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    1,
+    1
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 1 col 6"
+  },
+  {
+   "cas": "10563-29-8",
+   "smiles": "CN(C)CCCNCCCN",
+   "name": "N-(3-aminopropyl)-N',N'-dimethyl-1,3-propanediamine",
+   "formula": "C8H21N3",
+   "exact_mass": 159.1735,
+   "n_nitrogens": 3,
+   "nh_per_nitrogen": [
+    2,
+    1,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 2 col 1"
+  },
+  {
+   "cas": "65604-89-9",
+   "smiles": "CNCCN(CCNC)CCNC",
+   "name": "tris(2-(methylamino)ethyl)amine",
+   "formula": "C9H24N4",
+   "exact_mass": 188.2001,
+   "n_nitrogens": 4,
+   "nh_per_nitrogen": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 2 col 2"
+  },
+  {
+   "cas": "7154-73-6",
+   "smiles": "NCCN1CCCC1",
+   "name": "1-(2-aminoethyl)pyrrolidine",
+   "formula": "C6H14N2",
+   "exact_mass": 114.1157,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 2 col 3"
+  },
+  {
+   "cas": "51387-90-7",
+   "smiles": "CN1CCCC1CCN",
+   "name": "2-(1-methylpyrrolidin-2-yl)ethylamine",
+   "formula": "C7H16N2",
+   "exact_mass": 128.1313,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 2 col 4"
+  },
+  {
+   "cas": "123-00-2",
+   "smiles": "NCCCN1CCOCC1",
+   "name": "4-(3-aminopropyl)morpholine",
+   "formula": "C7H16N2O",
+   "exact_mass": 144.1263,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 2 col 5"
+  },
+  {
+   "cas": "3197-06-6",
+   "smiles": "OCCN(CCO)CCN",
+   "name": "N,N-bis(2-hydroxyethyl)ethylenediamine",
+   "formula": "C6H16N2O2",
+   "exact_mass": 148.1212,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 2 col 6"
+  },
+  {
+   "cas": "24426-16-2",
+   "smiles": "CCN(CC)CCNCCN",
+   "name": "N-(2-aminoethyl)-N',N'-diethylethylenediamine",
+   "formula": "C8H21N3",
+   "exact_mass": 159.1735,
+   "n_nitrogens": 3,
+   "nh_per_nitrogen": [
+    2,
+    1,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 3 col 1"
+  },
+  {
+   "cas": "105-83-9",
+   "smiles": "NCCCN(C)CCCN",
+   "name": "bis(3-aminopropyl)methylamine",
+   "formula": "C7H19N3",
+   "exact_mass": 145.1579,
+   "n_nitrogens": 3,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 3 col 2"
+  },
+  {
+   "cas": "152829-22-6",
+   "smiles": "NCCN(C)CCCN(C)CCN",
+   "name": "N,N'-bis(2-aminoethyl)-N,N'-dimethyl-1,3-propanediamine",
+   "formula": "C9H24N4",
+   "exact_mass": 188.2001,
+   "n_nitrogens": 4,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    0,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 3 col 3"
+  },
+  {
+   "cas": "115-69-5",
+   "smiles": "OCC(C)(N)CO",
+   "name": "2-amino-2-methyl-1,3-propanediol",
+   "formula": "C4H11NO2",
+   "exact_mass": 105.079,
+   "n_nitrogens": 1,
+   "nh_per_nitrogen": [
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 3 col 4"
+  },
+  {
+   "cas": "140-31-8",
+   "smiles": "NCCN1CCNCC1",
+   "name": "1-(2-aminoethyl)piperazine",
+   "formula": "C6H15N3",
+   "exact_mass": 129.1266,
+   "n_nitrogens": 3,
+   "nh_per_nitrogen": [
+    2,
+    1,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 3 col 5"
+  },
+  {
+   "cas": "694-83-7",
+   "smiles": "N[C@H]1CCCC[C@@H]1N",
+   "name": "trans-1,2-diaminocyclohexane",
+   "formula": "C6H14N2",
+   "exact_mass": 114.1157,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 3 col 6"
+  },
+  {
+   "cas": "104-78-9",
+   "smiles": "CCN(CC)CCCN",
+   "name": "N,N-diethyl-1,3-propanediamine",
+   "formula": "C7H18N2",
+   "exact_mass": 130.147,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 4 col 1"
+  },
+  {
+   "cas": "107-15-3",
+   "smiles": "NCCN",
+   "name": "ethylenediamine",
+   "formula": "C2H8N2",
+   "exact_mass": 60.0687,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 4 col 2"
+  },
+  {
+   "cas": "57734-57-3",
+   "smiles": "NCC1CCCN1",
+   "name": "2-(aminomethyl)pyrrolidine",
+   "formula": "C5H12N2",
+   "exact_mass": 100.1,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    1
+   ],
+   "drawing_agrees_with_cas": false,
+   "drawn_at": "row 4 col 3"
+  },
+  {
+   "cas": "4067-16-7",
+   "smiles": "NCCNCCNCCNCCNCCN",
+   "name": "pentaethylenehexamine",
+   "formula": "C10H28N6",
+   "exact_mass": 232.2375,
+   "n_nitrogens": 6,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 4 col 4"
+  },
+  {
+   "cas": "4246-51-9",
+   "smiles": "NCCCOCCOCCOCCCN",
+   "name": "4,7,10-trioxa-1,13-tridecanediamine",
+   "formula": "C10H24N2O3",
+   "exact_mass": 220.1787,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 4 col 5"
+  },
+  {
+   "cas": "929-06-6",
+   "smiles": "NCCOCCO",
+   "name": "2-(2-aminoethoxy)ethanol",
+   "formula": "C4H11NO2",
+   "exact_mass": 105.079,
+   "n_nitrogens": 1,
+   "nh_per_nitrogen": [
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 5 col 1"
+  },
+  {
+   "cas": "502-32-9",
+   "smiles": "CC(C)C[C@@H](N)CO",
+   "name": "L-leucinol",
+   "formula": "C6H15NO",
+   "exact_mass": 117.1154,
+   "n_nitrogens": 1,
+   "nh_per_nitrogen": [
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 5 col 2"
+  },
+  {
+   "cas": "31295-54-2",
+   "smiles": "NCCN1CCN(CCNCCN)CC1",
+   "name": "1-(2-aminoethyl)-4-(2-((2-aminoethyl)amino)ethyl)piperazine",
+   "formula": "C10H25N5",
+   "exact_mass": 215.211,
+   "n_nitrogens": 5,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    1,
+    0,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 5 col 3"
+  },
+  {
+   "cas": "1477-55-0",
+   "smiles": "NCc1cccc(CN)c1",
+   "name": "m-xylylenediamine",
+   "formula": "C8H12N2",
+   "exact_mass": 136.1,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 5 col 4"
+  },
+  {
+   "cas": "4097-89-6",
+   "smiles": "NCCN(CCN)CCN",
+   "name": "tris(2-aminoethyl)amine",
+   "formula": "C6H18N4",
+   "exact_mass": 146.1531,
+   "n_nitrogens": 4,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    2,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 5 col 5"
+  },
+  {
+   "cas": "7209-38-3",
+   "smiles": "NCCCN1CCN(CCCN)CC1",
+   "name": "1,4-bis(3-aminopropyl)piperazine (DRAWN TWICE)",
+   "formula": "C10H24N4",
+   "exact_mass": 200.2001,
+   "n_nitrogens": 4,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    0,
+    0
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 6 col 1"
+  },
+  {
+   "cas": "120-20-7",
+   "smiles": "COc1ccc(CCN)cc1OC",
+   "name": "3,4-dimethoxyphenethylamine",
+   "formula": "C10H15NO2",
+   "exact_mass": 181.1103,
+   "n_nitrogens": 1,
+   "nh_per_nitrogen": [
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 6 col 2"
+  },
+  {
+   "cas": "7356-00-5",
+   "smiles": "CC(N)CNCC(C)N",
+   "name": "bis(2-aminopropyl)amine",
+   "formula": "C6H17N3",
+   "exact_mass": 131.1422,
+   "n_nitrogens": 3,
+   "nh_per_nitrogen": [
+    2,
+    2,
+    1
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 6 col 3"
+  },
+  {
+   "cas": "111-41-1",
+   "smiles": "NCCNCCO",
+   "name": "N-(2-aminoethyl)ethanolamine",
+   "formula": "C4H12N2O",
+   "exact_mass": 104.095,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    2,
+    1
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 6 col 4"
+  },
+  {
+   "cas": "10061-68-4",
+   "smiles": "CCNCCCNCC",
+   "name": "N,N'-diethyl-1,3-propanediamine",
+   "formula": "C7H18N2",
+   "exact_mass": 130.147,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    1,
+    1
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 6 col 5"
+  },
+  {
+   "cas": "2620-27-1",
+   "smiles": "CNCCOCCNC",
+   "name": "2,2'-oxybis(N-methylethylamine)",
+   "formula": "C6H16N2O",
+   "exact_mass": 132.1263,
+   "n_nitrogens": 2,
+   "nh_per_nitrogen": [
+    1,
+    1
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 7 col 1"
+  },
+  {
+   "cas": "2508-29-4",
+   "smiles": "NCCCCCO",
+   "name": "5-amino-1-pentanol",
+   "formula": "C5H13NO",
+   "exact_mass": 103.0997,
+   "n_nitrogens": 1,
+   "nh_per_nitrogen": [
+    2
+   ],
+   "drawing_agrees_with_cas": true,
+   "drawn_at": "row 7 col 2"
+  }
+ ],
+ "hrms": [
+  {
+   "panel": "a",
+   "label_as_printed": "VE-AC",
+   "formula": "C32H52O3Na",
+   "adduct": "[M+Na]+",
+   "calc": 507.3809,
+   "found": 507.3804,
+   "core_formula": null,
+   "note": "intermediate"
+  },
+  {
+   "panel": "b",
+   "label_as_printed": "VN3C2O",
+   "formula": "C71H123N2O8",
+   "adduct": "[M+H]+",
+   "calc": 1131.9274,
+   "found": 1131.9349,
+   "calc_recomputed": 1131.9274,
+   "calc_minus_paper_mDa": -0.0,
+   "found_minus_calc_mDa": 7.5,
+   "core_formula": "C7H18N2O2",
+   "core_impossible": false
+  },
+  {
+   "panel": "c",
+   "label_as_printed": "VN2C4",
+   "formula": "C70H119N2O6",
+   "adduct": "[M+H]+",
+   "calc": 1083.9063,
+   "found": 1083.9053,
+   "calc_recomputed": 1083.9063,
+   "calc_minus_paper_mDa": -0.03,
+   "found_minus_calc_mDa": -1.0,
+   "core_formula": "C6H14N2",
+   "core_impossible": false
+  },
+  {
+   "panel": "d",
+   "label_as_printed": "VN2C2",
+   "formula": "C70H121N2O6",
+   "adduct": "[M+H]+",
+   "calc": 1085.922,
+   "found": 1085.9316,
+   "calc_recomputed": 1085.9219,
+   "calc_minus_paper_mDa": -0.08,
+   "found_minus_calc_mDa": 9.6,
+   "core_formula": "C6H16N2",
+   "core_impossible": false
+  },
+  {
+   "panel": "e",
+   "label_as_printed": "VN3C2",
+   "formula": "C71H123N2O6",
+   "adduct": "[M+H]+",
+   "calc": 1099.9376,
+   "found": 1099.9362,
+   "calc_recomputed": 1099.9376,
+   "calc_minus_paper_mDa": -0.03,
+   "found_minus_calc_mDa": -1.4,
+   "core_formula": "C7H18N2",
+   "core_impossible": false
+  },
+  {
+   "panel": "f",
+   "label_as_printed": "VN3C1",
+   "formula": "C69H119N2O6",
+   "adduct": "[M+H]+",
+   "calc": 1071.9063,
+   "found": 1071.9062,
+   "calc_recomputed": 1071.9063,
+   "calc_minus_paper_mDa": -0.03,
+   "found_minus_calc_mDa": -0.1,
+   "core_formula": "C5H14N2",
+   "core_impossible": false
+  },
+  {
+   "panel": "g",
+   "label_as_printed": "VN3C2",
+   "formula": "C71H121N2O6",
+   "adduct": "[M+H]+",
+   "calc": 1097.922,
+   "found": 1097.9215,
+   "calc_recomputed": 1097.9219,
+   "calc_minus_paper_mDa": -0.08,
+   "found_minus_calc_mDa": -0.5,
+   "core_formula": "C7H16N2",
+   "core_impossible": false
+  },
+  {
+   "panel": "h",
+   "label_as_printed": "VN2C1",
+   "formula": "C68H117N2O6",
+   "adduct": "[M+H]+",
+   "calc": 1057.8907,
+   "found": 1057.8902,
+   "calc_recomputed": 1057.8906,
+   "calc_minus_paper_mDa": -0.08,
+   "found_minus_calc_mDa": -0.5,
+   "core_formula": "C4H12N2",
+   "core_impossible": false
+  }
+ ],
+ "core_matches": {
+  "b:VN3C2O": {
+   "core_formula": "C7H18N2O2",
+   "n_candidates_in_FigS1a": 0,
+   "candidates": [],
+   "pinned": false
+  },
+  "c:VN2C4": {
+   "core_formula": "C6H14N2",
+   "n_candidates_in_FigS1a": 2,
+   "candidates": [
+    {
+     "cas": "7154-73-6",
+     "name": "1-(2-aminoethyl)pyrrolidine",
+     "smiles": "NCCN1CCCC1",
+     "two_arm_sites": 1,
+     "other_NH_sites": 0,
+     "connectivity_determinate": true
+    },
+    {
+     "cas": "694-83-7",
+     "name": "trans-1,2-diaminocyclohexane",
+     "smiles": "N[C@H]1CCCC[C@@H]1N",
+     "two_arm_sites": 2,
+     "other_NH_sites": 0,
+     "connectivity_determinate": false
+    }
+   ],
+   "pinned": false
+  },
+  "d:VN2C2": {
+   "core_formula": "C6H16N2",
+   "n_candidates_in_FigS1a": 1,
+   "candidates": [
+    {
+     "cas": "100-36-7",
+     "name": "N,N-diethylethylenediamine",
+     "smiles": "CCN(CC)CCN",
+     "two_arm_sites": 1,
+     "other_NH_sites": 0,
+     "connectivity_determinate": true
+    }
+   ],
+   "pinned": true
+  },
+  "e:VN3C2": {
+   "core_formula": "C7H18N2",
+   "n_candidates_in_FigS1a": 2,
+   "candidates": [
+    {
+     "cas": "104-78-9",
+     "name": "N,N-diethyl-1,3-propanediamine",
+     "smiles": "CCN(CC)CCCN",
+     "two_arm_sites": 1,
+     "other_NH_sites": 0,
+     "connectivity_determinate": true
+    },
+    {
+     "cas": "10061-68-4",
+     "name": "N,N'-diethyl-1,3-propanediamine",
+     "smiles": "CCNCCCNCC",
+     "two_arm_sites": 0,
+     "other_NH_sites": 2,
+     "connectivity_determinate": false
+    }
+   ],
+   "pinned": false
+  },
+  "f:VN3C1": {
+   "core_formula": "C5H14N2",
+   "n_candidates_in_FigS1a": 1,
+   "candidates": [
+    {
+     "cas": "109-55-7",
+     "name": "N,N-dimethyl-1,3-propanediamine",
+     "smiles": "CN(C)CCCN",
+     "two_arm_sites": 1,
+     "other_NH_sites": 0,
+     "connectivity_determinate": true
+    }
+   ],
+   "pinned": true
+  },
+  "g:VN3C2": {
+   "core_formula": "C7H16N2",
+   "n_candidates_in_FigS1a": 1,
+   "candidates": [
+    {
+     "cas": "51387-90-7",
+     "name": "2-(1-methylpyrrolidin-2-yl)ethylamine",
+     "smiles": "CN1CCCC1CCN",
+     "two_arm_sites": 1,
+     "other_NH_sites": 0,
+     "connectivity_determinate": true
+    }
+   ],
+   "pinned": true
+  },
+  "h:VN2C1": {
+   "core_formula": "C4H12N2",
+   "n_candidates_in_FigS1a": 0,
+   "candidates": [],
+   "pinned": false
+  }
+ },
+ "findings": [
+  "Figure S1a caption says '35 common commercial amino small molecules'. 35 entries ARE drawn, but CAS 7209-38-3 is drawn twice (row 1 col 1 and row 6 col 1), so only 34 are DISTINCT.",
+  "Figure S2 prints the label 'VN3C2' on 2 different panels, with DIFFERENT formulas ['C71H123N2O6', 'C71H121N2O6']. They differ by H2, so at most one of the two labels can be right."
+ ],
+ "ch2_ladder": [
+  {
+   "low": "VN2C1 (panel h)",
+   "high": "VN3C1 (panel f)",
+   "delta": 14.0156,
+   "minus_CH2_mDa": -0.05
+  },
+  {
+   "low": "VN2C2 (panel d)",
+   "high": "VN3C2 (panel e)",
+   "delta": 14.0156,
+   "minus_CH2_mDa": -0.05
+  },
+  {
+   "low": "VN2C4 (panel c)",
+   "high": "VN3C2 (panel g)",
+   "delta": 14.0157,
+   "minus_CH2_mDa": 0.05
+  }
+ ]
+}

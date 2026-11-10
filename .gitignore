@@ -39,3 +39,56 @@ provenance/superseded/*
 # --- Regenerable caches ------------------------------------------------------
 cache/
 *.bak_*
+
+# --- Playwright MCP scratch (snapshots/console logs written to the cwd) ------
+# The MCP server drops these into whatever directory it is launched from, which
+# is the repo root. They are session artifacts, never inputs to anything.
+.playwright-mcp/
+
+# --- Publisher source ASSETS, not just PDFs (copyright) ----------------------
+# The *.pdf rule above was added for copyright. The same reasoning covers every
+# other asset a publisher serves: figure rasters, supplementary archives, JATS
+# XML, TIFFs. Measured 2026-11-10 while preparing a push: a plain `git add -A`
+# would have added **60.2 MB in 101 files** from `curation/*/source/` --
+# 53 jpg, 16 xml, 14 png, 7 jpeg, 4 tif, 3 zip -- to a repo that is **PUBLIC**.
+# Several of those papers are subscription-only or CC BY-NC-ND, where ND alone
+# forbids redistribution. Publishing them would be republication, not fair use,
+# and CLAUDE.md §8 requires CC0/CC-BY compatibility before any corpus release.
+#
+# What we DO track is our own derived work: the extraction scripts, the measured
+# values, the QC JSONs and the decision logs. Those are ours and they are what a
+# cloud session needs. A curation that must re-read a figure re-acquires it with
+# provenance/tools/ (pmc_fetch.py, fetch_paper.py) -- see BROWSER_ACQUISITION.md
+# for which publishers need a browser and therefore cannot be re-acquired
+# headlessly.
+curation/*/source/
+curation/*/source_epmc/
+curation/*/00_pages/
+curation/*/renders/
+curation/*/figs/
+# `source_epmc/` is the Europe PMC fetch directory -- a `source/` rule does not
+# cover it, and it held 6 publisher JPEGs. Name every acquisition directory.
+
+# Page RENDERS and annotated OVERLAYS are reproductions of the publisher's page
+# or figure, so they carry the same restriction as the asset they came from --
+# an overlay is the figure plus our annotation, not a new work. Each is
+# regenerable from the local source by that curation's own render step, so
+# nothing is lost by excluding them. (Measured: 37.7 MB staged before this rule,
+# led by 1.8 MB / 1.7 MB SI page renders.)
+# A pattern containing ** did NOT match here; a SLASHLESS pattern matches at
+# any depth, which is why the *.pdf rule above has always worked. Use that form.
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+
+# Slashless so they match at any depth, exactly like the *.pdf rule above.
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+curation/*/source_epmc/
+curation/*/renders/
+curation/*/figs/

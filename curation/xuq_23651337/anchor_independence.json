@@ -1,0 +1,104 @@
+{
+  "paper_draws_any_structure": false,
+  "independence_proof": {
+    "ast_nodes_walked": 1500,
+    "forbidden_imports_found": 0,
+    "forbidden_calls_found": 0,
+    "forbidden_import_list": [
+      "assemble",
+      "axis",
+      "bars",
+      "chains",
+      "emit",
+      "heatmap",
+      "lib",
+      "reagents"
+    ],
+    "forbidden_call_list": [
+      "AddBond",
+      "CombineMols",
+      "RWMol",
+      "RemoveAtom",
+      "ReplaceCore",
+      "ReplaceSidechains",
+      "attach",
+      "calibrate",
+      "emit_rows",
+      "esterify"
+    ]
+  },
+  "traversal": "this file writes the chain METHYL END FIRST (C18 -> C1) then the amide then the vinyl; stage03_enumerate.py starts at the acryloyl nitrogen and attaches a fragment whose first atom is C1. Opposite directions.",
+  "generator_chain_length_scaling": [
+    {
+      "n": 12,
+      "saturated": "C15H29NO",
+      "expected": "C15H29NO",
+      "unsaturated": "C15H27NO",
+      "expected_unsat": "C15H27NO",
+      "ok": true
+    },
+    {
+      "n": 14,
+      "saturated": "C17H33NO",
+      "expected": "C17H33NO",
+      "unsaturated": "C17H31NO",
+      "expected_unsat": "C17H31NO",
+      "ok": true
+    },
+    {
+      "n": 16,
+      "saturated": "C19H37NO",
+      "expected": "C19H37NO",
+      "unsaturated": "C19H35NO",
+      "expected_unsat": "C19H35NO",
+      "ok": true
+    },
+    {
+      "n": 18,
+      "saturated": "C21H41NO",
+      "expected": "C21H41NO",
+      "unsaturated": "C21H39NO",
+      "expected_unsat": "C21H39NO",
+      "ok": true
+    }
+  ],
+  "comparisons": [
+    {
+      "anchor": "oleyl_acrylamide",
+      "reference_inchikey": "JROSKIFCGJOXDY-QXMHVHEDSA-N",
+      "enumerated_inchikey": "JROSKIFCGJOXDY-QXMHVHEDSA-N",
+      "full_inchikey_identical": true,
+      "reference_formula": "C21H39NO",
+      "enumerated_formula": "C21H39NO",
+      "formula_identical": true,
+      "reference_exact_mass": 321.3032,
+      "enumerated_exact_mass": 321.3032,
+      "exact_mass_identical": true,
+      "reference_canonical_smiles": "C=CC(=O)NCCCCCCCC/C=C\\CCCCCCCC",
+      "enumerated_smiles": "C=CC(=O)NCCCCCCCC/C=C\\CCCCCCCC",
+      "byte_identical_canonical": true
+    },
+    {
+      "anchor": "octadecyl_acrylamide",
+      "reference_inchikey": "CNWVYEGPPMQTKA-UHFFFAOYSA-N",
+      "enumerated_inchikey": "CNWVYEGPPMQTKA-UHFFFAOYSA-N",
+      "full_inchikey_identical": true,
+      "reference_formula": "C21H41NO",
+      "enumerated_formula": "C21H41NO",
+      "formula_identical": true,
+      "reference_exact_mass": 323.3188,
+      "enumerated_exact_mass": 323.3188,
+      "exact_mass_identical": true,
+      "reference_canonical_smiles": "C=CC(=O)NCCCCCCCCCCCCCCCCCC",
+      "enumerated_smiles": "C=CC(=O)NCCCCCCCCCCCCCCCCCC",
+      "byte_identical_canonical": true
+    }
+  ],
+  "n_agree": 2,
+  "n_total": 2,
+  "seed": null,
+  "what_the_seed_proves": "`--seed reverse` writes the chain in the other direction, putting the alkene at C10 from nitrogen. Formula C21H39NO and exact mass 321.3032 are IDENTICAL either way, and both SMILES parse and canonicalise, so only the InChIKey separates them. If this gate passed under the seed it would not be testing connectivity.",
+  "byte_identity_is_not_the_signal": "F-037. `byte_identical_canonical` is RECORDED above and is NOT used as a pass criterion; a correct re-derivation SHOULD be byte-identical once canonicalised. The pass criterion is the full InChIKey, and independence is established by the AST walk, not by a diff.",
+  "chain_length_coverage": "both of this paper's tails are C18, so an anchor at a different chain length cannot be taken from it. The off-by-one-that-scales-with-n hazard is covered instead by exercising the GENERATOR at n = 12, 14, 16, 18 (above) and by stage03's seed_chain_length. No shorter product is claimed to be in the paper.",
+  "checks_failed": []
+}

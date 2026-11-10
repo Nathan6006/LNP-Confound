@@ -1,0 +1,41 @@
+{
+ "_what": "What stage07 emitted, and the z-score it applied.",
+ "n_rows": 108,
+ "experiments": {
+  "SB_2025": {
+   "n": 72,
+   "mean_log10": 2.59139,
+   "population_sd_log10": 0.606579,
+   "panels": [
+    "Fig S2c",
+    "Fig S2e"
+   ]
+  },
+  "SB_2025_2": {
+   "n": 36,
+   "mean_log10": 0.402769,
+   "population_sd_log10": 0.304173,
+   "panels": [
+    "Fig 4b"
+   ]
+  }
+ },
+ "rows_with_a_caveat": 96,
+ "rows_carrying_any_flag": 108,
+ "confidence_breakdown": {
+  "high": 12,
+  "medium": 96,
+  "low": 0
+ },
+ "value_is_bound_breakdown": {
+  "upper": 12,
+  "lower": 0,
+  "": 96
+ },
+ "NOT_EMITTED": {
+  "the other 177 of the paper's 213 LNPs": "no structure is recoverable -- the 14 functional heads and 14 EB-T chains of the full screen are drawn nowhere in the paper or its SI",
+  "total IgG, IgG1/IgG2a, IFN-gamma, TNF-alpha, IL-2": "the vaccine readouts; a third experiment with different cargo, schedule, strain and units (DECISIONS.md D-3)",
+  "Table S3 zeta potential, Fig 3c encapsulation efficiency, Fig S3 size and PDI": "physicochemical properties, not delivery measurements; the corpus's in-vivo definition excludes diameter, zeta and uptake",
+  "Fig 6 expression-score ranks and multi-compartmental ratios": "derived scores over a subset, not measurements"
+ }
+}

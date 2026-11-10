@@ -1,0 +1,140 @@
+{
+ "_what": "Stage 00b intake gate. For every panel or table that could supply a value, the tier it came from, and for anything at tier 5 WHY tiers 1-4 failed. Written BEFORE any digitiser, per provenance/PIPELINE_V2.md section 3.",
+ "paper": {
+  "pmid": "24574196",
+  "doi": "10.1002/adhm.201400039",
+  "title_full_verified": "Enhanced Intracellular siRNA Delivery Using Bioreducible Lipid-Like Nanoparticles",
+  "title_source": "Europe PMC REST core record, EXT_ID:24574196 AND SRC:MED, fetched 2026-11-10",
+  "journal": "Advanced Healthcare Materials",
+  "year": 2014,
+  "authors": "Wang M, Alberti K, Varone A, Pouli D, Georgakoudi I, Xu Q.",
+  "endpoint": "siRNA-mediated gene knockdown (GFP knockdown by flow cytometry; Plk-1 knockdown by Western blot) -- a nucleic-acid delivery endpoint, corpus-admissible IN KIND",
+  "commentary_discriminator": {
+   "_why": "A sibling spent a full run on a research-highlight commentary. The working discriminator is abstractText length 0 plus no Methods/Results.",
+   "abstractText_chars": 493,
+   "has_methods_section": true,
+   "methods_locus": "SI pp. 2-6, 'Materials and Methods' with cell densities, siRNA doses, N/P ratios and incubation times",
+   "verdict": "ORIGINAL RESEARCH, not a commentary"
+  }
+ },
+ "acquisition": {
+  "held": [
+   {
+    "file": "source/adhm201400039-sup-0001-S1.pdf",
+    "what": "Supporting Information, 9 pages",
+    "sha256": "4ac0eb6156871ac114a446d18c1868922cb77662f274a4c7bad2036d72054868",
+    "bytes": 368331,
+    "magic": "%PDF-1.5",
+    "pages": 9,
+    "text_layer_pages": 8
+   }
+  ],
+  "missing": "the MAIN ARTICLE, which is where every delivery figure lives (Fig 1 library screen, Fig 3 N/P optimisation, Fig 4 siRNA dose response, Fig 5 Plk-1 knockdown). NOT ACQUIRED.",
+  "tier_attempts": [
+   {
+    "tier": "1_publisher_source_data",
+    "result": "none exists. Wiley 2014 Adv Healthc Mater published no Source Data files; the only ESM is the single SI PDF held above."
+   },
+   {
+    "tier": "2_si_numeric_table",
+    "result": "the SI contains ZERO tables. pdfplumber find_tables() returns 0 on all 9 pages, and the filled-thin-rect recovery path (horizontal_strategy='explicit' seeded with rect runs 0.2-0.6 pt tall) also finds 0, because there are no thin rects on any page. Verified by hand page by page, not from triage.py's text heuristic, which has been wrong in both directions."
+   },
+   {
+    "tier": "3_author_repo",
+    "result": "none. provenance/tools/find_repo.py on DOI 10.1002/adhm.201400039 + PMID 24574196 + 'Xu' returned 0 relevant repositories (2 irrelevant name-collision hits, 12 filtered out). A 2014 paper predates the lab's data-deposit practice."
+   },
+   {
+    "tier": "4_pdf_text",
+    "result": "USED, for structures and formulation metadata only -- the SI's text layer carries the full 1H NMR and ESI-MS of 1-O16B and 1-O16 and the complete Methods. It carries NO measured delivery value."
+   },
+   {
+    "tier": "4b_pdf_vector_geometry",
+    "result": "NOT APPLICABLE, and checkably so. Measured per page: line objects 0/0/0/0/0/0/0/0/0 and curve objects 0/0/0/0/0/0/0/0/0 across all 9 pages. Every figure page carries its content as a raster image (p.7 Fig S1: one 418x251 pt FlateDecode; p.8 Fig S2: one 306x118 pt DCTDecode; p.9 Fig S3: ten 212x18 pt DCTDecode strips), and the only rect objects anywhere are text-page furniture (18 on p.3 and 24 on p.4, 0-2 elsewhere). There are no bond or bar coordinates to read."
+   },
+   {
+    "tier": "5_pixels",
+    "result": "NOT REACHED. There is nothing to digitise: the only quantitative SI panel is Fig S3, a VIABILITY assay, which is not a delivery endpoint (see admissibility below). Digitising it would produce rows the corpus cannot accept."
+   }
+  ],
+  "main_article_routes_exhausted": [
+   {
+    "route": "NCBI elink pubmed->pmc",
+    "result": "pubmed_pmc_refs only (31 citing papers). NO pubmed_pmc SELF-link, so no PMC deposit exists and there is no PMCID to take."
+   },
+   {
+    "route": "Europe PMC",
+    "result": "inEPMC=N, isOpenAccess=N, hasSuppl=N. fullTextXML 404, supplementaryFiles 404, fullTextRepo 404."
+   },
+   {
+    "route": "OpenAlex OA locations",
+    "result": "is_oa=false, oa_status='closed', any_repository_has_fulltext=false, oa_url=null. Both known locations are the Wiley landing page and the PubMed record."
+   },
+   {
+    "route": "Wiley landing page, plain curl via provenance/tools/fetch_paper.py",
+    "result": "HTTP 200 serving a Cloudflare interstitial (title 'Just a moment...'), 0 assets enumerable."
+   },
+   {
+    "route": "browser",
+    "result": "FORBIDDEN BY THIS RUN'S BRIEF (shared Playwright browser off limits). Not attempted."
+   },
+   {
+    "route": "paywall or bot-check bypass",
+    "result": "FORBIDDEN AND NOT ATTEMPTED."
+   }
+  ],
+  "conclusion": "This is a D_si_only curation whose SI contains no delivery measurement. ZERO rows are emittable. The structural work below is still delivered because it is externally anchored and reusable the day the main article becomes available."
+ },
+ "panels": [
+  {
+   "id": "SI_text_p2-p3",
+   "what": "1H NMR + ESI-MS of lipidoids 1-O16B and 1-O16",
+   "tier": "4_pdf_text",
+   "supplies": "STRUCTURES and the mass/integral anchors, not values",
+   "corpus_admissible": "n/a -- not a measurement"
+  },
+  {
+   "id": "SI_text_p2-p6",
+   "what": "Materials and Methods",
+   "tier": "4_pdf_text",
+   "supplies": "formulation (lipidoid:cholesterol:DOPE 16:4:1 w/w), N/P ratios, cargo, cell lines, siRNA doses, timepoints",
+   "corpus_admissible": "n/a -- metadata, no measured endpoint"
+  },
+  {
+   "id": "Fig_S1",
+   "what": "1H NMR spectra of 1-O16B (A) and 1-O16 (B)",
+   "tier": "n/a",
+   "supplies": "spectra as rasters; the integrals are already in the text layer",
+   "corpus_admissible": "no -- not a delivery measurement"
+  },
+  {
+   "id": "Fig_S2",
+   "what": "TEM images of siRNA/1-O16 complex at N/P=5 before and after GSH",
+   "tier": "n/a",
+   "supplies": "micrographs, no numeric scale, no quantity",
+   "corpus_admissible": "no -- morphology, not a delivery measurement"
+  },
+  {
+   "id": "Fig_S3",
+   "what": "AlamarBlue viability of MDA-MB-231 vs 1-O16B/siGFP siRNA concentration at N/P 5:1",
+   "tier": "5_pixels_if_wanted",
+   "supplies": "cell viability percentages",
+   "corpus_admissible": "NO -- VIABILITY IS NOT A DELIVERY ENDPOINT. data/'s Experiment_method vocabulary is delivery-only (luminescence / protein abundance / editing efficiency / knockdown). Deliberately NOT digitised."
+  },
+  {
+   "id": "MAIN_Fig1",
+   "what": "lipidoid library GFP-knockdown screen",
+   "tier": "UNAVAILABLE",
+   "supplies": "the only corpus-admissible values in the paper",
+   "corpus_admissible": "would be yes -- but the panel is not acquirable (see acquisition)"
+  },
+  {
+   "id": "MAIN_Fig3_Fig4_Fig5",
+   "what": "N/P optimisation, siRNA dose response, Plk-1 knockdown",
+   "tier": "UNAVAILABLE",
+   "supplies": "dose-response and knockdown values",
+   "corpus_admissible": "would be yes -- not acquirable"
+  }
+ ],
+ "value_tier_used": "none -- zero values extracted",
+ "rows_emittable": 0
+}

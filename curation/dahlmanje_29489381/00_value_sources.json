@@ -1,0 +1,94 @@
+{
+ "_gate": "THE INTAKE GATE (PIPELINE_V2 section 3, Stage 00b). Filled BEFORE any digitiser was written. Nothing in this curation reads a pixel.",
+ "paper": {
+  "title": "A direct comparison of in vitro and in vivo nucleic acid delivery mediated by hundreds of nanoparticles reveals a weak correlation",
+  "journal": "Nano Letters 18(3):2148-2157 (2018)",
+  "pmid": "29489381",
+  "pmcid": "PMC6054134",
+  "doi": "10.1021/acs.nanolett.8b00432",
+  "first_author": "Kalina Paunovska",
+  "corresponding": "James E. Dahlman",
+  "tracker_states": 281
+ },
+
+ "held_sources": [
+  {
+   "path": "source/nl8b00432_si_001.pdf",
+   "what": "Supporting Information, 26 pages, full text layer",
+   "bytes": 26239282
+  },
+  {
+   "path": "source/PMC6054134.jats.xml",
+   "what": "PMC open-access full text: Introduction, Results, Discussion, Materials and Methods, all six main-figure CAPTIONS, data-availability statement. Fetched 2026-11-10 with provenance tooling (pmc_fetch.py).",
+   "bytes": 126758,
+   "n_tables_in_jats": 0,
+   "figure_rasters_downloaded": 0,
+   "figure_raster_failure": "All 8 declared supplementary/figure assets (nihms981252f1-f6.jpg, nihms981252.pdf, NIHMS981252-supplement-Supp_Files.pdf) returned an HTML error page rather than the asset. The JATS text itself was served normally. No bypass was attempted."
+  }
+ ],
+
+ "HEADLINE": "The per-LNP delivery VALUES of this paper are not in any source we hold, and are not in a form that could be attached to a particle even if we held it. The SI contains no delivery number anywhere. The main-text figures carry the values, and in Figs 3B-G they are an UNLABELLED scatter: a point gives (in vitro %, in vivo %) for some LNP, with nothing identifying which. Only Fig 2C (a heatmap of 112 LNPs x 18 samples, main text, not held) is per-particle addressable. The one per-LNP-identified readout anywhere in the SI is a set of RANKS, not delivery values, over a top-10%-in-vivo subset.",
+
+ "value_sources": [
+  {
+   "id": "VS-1",
+   "what": "Normalized delivery (%) per LNP per sample -- the paper's actual readout",
+   "locus": "Fig 2C (heatmap, 112 LNPs x 18 cell/tissue samples), Fig 2D, Fig 2E, Fig 3B-G, Fig 5B-G, Fig 6B-C; SI Fig S2b-d, Fig S3j-uu",
+   "tier": "UNOBTAINABLE",
+   "obtainable": false,
+   "why": [
+    "tier 1 (publisher source data): ACS Nano Letters 2018 published no Source Data file; the SI is the only supplementary asset and it contains no delivery number.",
+    "tier 2 (SI tables): checked every one of the 26 SI pages with pdfplumber. The SI's five tables are the four LIBRARY DESIGN tables (Fig S2a, S3d, S3f, S5a: composition only) and the Fig S4e/f/g RANK tables. No normalized-delivery value is printed anywhere in the SI.",
+    "tier 3 (author repo / Zenodo / Dryad): the paper's Data Access section reads verbatim 'The data, analyses, and scripts used to generate all figures in the paper are available upon request to J.E.D. or dahlmanlab.org.' Request-only is not a repository. find_repo.py --doi 10.1021/acs.nanolett.8b00432 --pmid 29489381 --author Dahlman returned repo_hits: [] -- 0 candidate repositories.",
+    "tier 4 (pdfplumber text table): not applicable, the values are drawn, not typeset.",
+    "tier 5 (pixels): would be ILLEGITIMATE here even if the figures were held, and this is the decisive point. Figs 3B-G and S3j-uu are unlabelled log-log scatters: digitising them recovers an (x, y) pair with no particle identity, so no row could be keyed to a composition. Fig 2C is per-particle addressable but is a main-text figure we do not hold, PMC served none of the six figure rasters, and the row order of its 112 columns is not stated."
+   ]
+  },
+  {
+   "id": "VS-2",
+   "what": "LNP library DESIGN tables: lipomer id, amine, tail lipid, helper lipid, mass ratio, PEG chain, PEG MW, and the four mole percents, per LNP",
+   "locus": "SI Fig S2a (p7, library 1, 144 rows); Fig S3d (p12, library 2, 120); Fig S3f (p13, library 3, 156); Fig S5a (p23, library 4, 144)",
+   "tier": "4_pdfplumber_text_table",
+   "obtainable": true,
+   "extracted_by": "stage01_design_tables.py",
+   "n_rows": 564,
+   "note": "Composition only. Carries NO readout of any kind. 564/564 rows extracted with LNP numbers contiguous 1..n in every library and all four mole percents summing to exactly 100.000."
+  },
+  {
+   "id": "VS-3",
+   "what": "RANKS -- the only per-LNP-identified readout in the whole SI",
+   "locus": "SI Fig S4e (p20, library 1), Fig S4f (p20, library 2), Fig S4g (p21, library 3); six sub-tables, each composition + diameter + one in vitro rank column + three in vivo rank columns",
+   "tier": "4_pdfplumber_text_table",
+   "obtainable": true,
+   "extracted_by": "stage02_rank_tables.py",
+   "n_rows": 87,
+   "IS_NOT_A_DELIVERY_VALUE": true,
+   "what_the_numbers_mean": {
+    "in_vitro_column": "iMAEC or RAWs: that LNP's rank within its own library's stable pool. Observed range 1-95 (library 1, 112 stable).",
+    "in_vivo_columns": "Heart/Lung/Marrow EC or Mac: rank WITHIN THE TOP 10% of that bed only. Measured 1..10 for library 1 and 1..6 for libraries 2 and 3, with nothing above 10 anywhere. A blank is 'not in the top 10%', NOT 'not measured'.",
+    "selection": "Fig S4's own caption: '(e-g) The compositions and diameters of the COLOURED LNPs in Fig. S4D are listed'. Fig S4d colours the top-10%-in-vivo particles. So every one of the 87 rows is selected on the in vivo outcome, and the subset is not a random sample of the library."
+   }
+  },
+  {
+   "id": "VS-4",
+   "what": "LNP hydrodynamic diameter (nm) per listed LNP",
+   "locus": "the same Fig S4e/f/g tables",
+   "tier": "4_pdfplumber_text_table",
+   "obtainable": true,
+   "note": "A physical property, not a delivery readout. Not an Experiment_value."
+  }
+ ],
+
+ "repo_check": {
+  "command": "python3 -I curation/lib/find_repo.py --doi 10.1021/acs.nanolett.8b00432 --pmid 29489381 --title \"Direct Comparison Nanoparticles\" --author Dahlman",
+  "run_on": "2026-11-10",
+  "repo_hits": 0,
+  "data_availability_statement_verbatim": "The data, analyses, and scripts used to generate all figures in the paper are available upon request to J.E.D. or dahlmanlab.org."
+ },
+
+ "pixels_used": false,
+ "pixels_justification": "None needed and none taken. Every number in this curation came from the PDF text layer. The two page renders made (SI pp. 7, 12, 13, 23) were LOOKED AT to read the drawn reaction schemes; no quantity was measured from them.",
+
+ "rows_emittable_to_corpus": 0,
+ "rows_emittable_reason": "Two independent blockers, either one sufficient. See 07_qc.json and DECISIONS.md. (1) VALUES: no per-LNP delivery value exists in anything we hold or could obtain; the 87 rank rows are censored ranks over an outcome-selected subset, not a delivery readout. (2) STRUCTURES: not one of the 15 lipomers has a determinable single SMILES -- 7 of 15 are built on PEI 600 or PEI 1200, which are polydisperse branched polymers, and for the other 8 the amine is defined but the DEGREE OF SUBSTITUTION is never stated, which leaves the molecular formula open by up to a factor of 6 in mass. The SI draws a generic Markush (R-epoxide + 'PEI_600' abstracted as diethylamine) and no single lipomer structure anywhere."
+}

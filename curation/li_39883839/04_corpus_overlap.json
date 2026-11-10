@@ -1,0 +1,30 @@
+{
+ "n_enumerated": 148,
+ "n_distinct_full_InChIKey": 147,
+ "pools": {
+  "vitro": {
+   "corpus_rows_scanned": 29195,
+   "n_our_structures_present_by_FULL_InChIKey": 0,
+   "by_full_InChIKey": {},
+   "n_our_structures_present_by_SKELETON": 0,
+   "by_skeleton": {},
+   "n_our_names_present": 0,
+   "by_name": {}
+  },
+  "vivo": {
+   "corpus_rows_scanned": 1803,
+   "n_our_structures_present_by_FULL_InChIKey": 0,
+   "by_full_InChIKey": {},
+   "n_our_structures_present_by_SKELETON": 0,
+   "by_skeleton": {},
+   "n_our_names_present": 0,
+   "by_name": {}
+  }
+ },
+ "same_lab_experiments_already_in_corpus": {
+  "BL_2023": "PMID 36997680 (Li lab, A*-T* amino-lipid library)",
+  "BL_2023_3CR": "PMID 37679571 (Li lab, Ugi 3CR, A*_I*_T* names)",
+  "BL_2024": "PMID 38740955 (Li lab, numeric names)",
+  "note": "Three Bowen Li experiments are already in the corpus. None is PMID 39883839. The Ugi 3CR paper is this paper's own ref 1 and is the closest relative: a different multicomponent reaction giving an alpha-AMINO amide, not an alpha-ACYLOXY amide."
+ }
+}

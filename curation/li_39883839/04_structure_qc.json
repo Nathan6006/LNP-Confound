@@ -1,0 +1,529 @@
+{
+ "P1_tableS1_formula": {
+  "n_compared": 144,
+  "n_exact": 138,
+  "n_mismatch": 6,
+  "mismatches": [
+   [
+    "H6A2B4",
+    "C46H88N2O5",
+    "C42H80N2O5"
+   ],
+   [
+    "H7A2B2",
+    "C36H64N2O3",
+    "C40H70N2O3"
+   ],
+   [
+    "H7A2B3",
+    "C40H70N2O3",
+    "C40H70N2O5"
+   ],
+   [
+    "H7A3B1",
+    "C44H78N2O3",
+    "C36H64N2O3"
+   ],
+   [
+    "H7A3B2",
+    "C44H78N2O5",
+    "C44H78N2O3"
+   ],
+   [
+    "H7A3B3",
+    "C40H70N2O5",
+    "C44H78N2O5"
+   ]
+  ],
+  "what": "Each of the 144 enumerated library structures vs the molecular formula Table S1 prints for that name. External to the enumeration: the formula is the authors', the structure ours."
+ },
+ "P1b_tableS1_self_consistency": {
+  "n_rows": 144,
+  "n_formula_disagrees_with_own_MW": 1,
+  "rows": [
+   [
+    "H6A2B4",
+    "C46H88N2O5",
+    693.11,
+    749.22
+   ]
+  ],
+  "what": "A check on the PAPER alone -- it uses no structure of ours. It separates 'our structure is wrong' from 'their table is wrong' for every P1 mismatch."
+ },
+ "P1c_mismatch_diagnosis": {
+  "names": [
+   "H6A2B4",
+   "H7A2B2",
+   "H7A2B3",
+   "H7A3B1",
+   "H7A3B2",
+   "H7A3B3"
+  ],
+  "n_where_printed_MW_equals_OUR_formula_weight": 1,
+  "which": [
+   "H6A2B4"
+  ],
+  "our_MW_multiset": [
+   572.92,
+   627.01,
+   659.01,
+   683.12,
+   693.11,
+   715.12
+  ],
+  "printed_MW_multiset": [
+   572.92,
+   627.01,
+   659.01,
+   683.12,
+   693.11,
+   715.12
+  ],
+  "multisets_identical": true,
+  "what": "If the two multisets are identical the printed cells are the RIGHT values on the WRONG names -- a row-alignment slip in the table, not a missing or extra composition."
+ },
+ "P2_tableS1_MW": {
+  "n_compared": 144,
+  "max_abs_delta_Da": 110.2,
+  "worst": {
+   "name": "H7A3B1",
+   "printed": 683.12,
+   "ours": 572.92
+  },
+  "n_within_0.05_Da": 139,
+  "mean_abs_delta_Da": 1.9754
+ },
+ "P3_grid": {
+  "n_library": 144,
+  "n_heads": 9,
+  "n_tailA": 4,
+  "n_tailB": 4,
+  "product": 144,
+  "complete": true
+ },
+ "P4_reagent_stoichiometry": {
+  "n_reagents": 18,
+  "n_within_0.5_pct": 16,
+  "n_lipids": 6,
+  "n_lipids_matching_as_printed": 5,
+  "n_lipids_matching_as_a_multiset": 6,
+  "max_abs_rel_err_pct": 27.77,
+  "worst": {
+   "lipid": "A4B4-S3",
+   "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+   "block": "A4",
+   "implied_MW": 354.57,
+   "block_MW": 277.5,
+   "rel_err_pct": 27.77
+  },
+  "per_lipid": [
+   {
+    "lipid": "H2A4B3",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     298.45
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     298.47
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "H2A4B4",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     354.56
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     354.58
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     266.47
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     266.47
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     117.15,
+     277.48,
+     298.45
+    ],
+    "claimed_block_MWs": [
+     117.15,
+     277.5,
+     298.47
+    ],
+    "mass_order_vs_name_order": null
+   },
+   {
+    "lipid": "A4B4-S3",
+    "matches_as_printed": false,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     131.18,
+     354.57,
+     278.27
+    ],
+    "claimed_block_MWs": [
+     131.18,
+     277.5,
+     354.58
+    ],
+    "mass_order_vs_name_order": [
+     "S3",
+     "B4",
+     "A4"
+    ]
+   },
+   {
+    "lipid": "A4B4-S4",
+    "matches_as_printed": true,
+    "matches_as_a_multiset": true,
+    "implied_MWs": [
+     145.21,
+     277.49,
+     354.6
+    ],
+    "claimed_block_MWs": [
+     145.2,
+     277.5,
+     354.58
+    ],
+    "mass_order_vs_name_order": null
+   }
+  ],
+  "rows": [
+   {
+    "lipid": "H2A4B3",
+    "printed_name": "3-(dimethylamino)propanoic acid",
+    "block": "H2",
+    "implied_MW": 117.15,
+    "block_MW": 117.15,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "H2A4B3",
+    "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+    "block": "A4",
+    "implied_MW": 277.48,
+    "block_MW": 277.5,
+    "rel_err_pct": -0.01
+   },
+   {
+    "lipid": "H2A4B3",
+    "printed_name": "6-oxohexyl dodecanoate",
+    "block": "B3",
+    "implied_MW": 298.45,
+    "block_MW": 298.47,
+    "rel_err_pct": -0.01
+   },
+   {
+    "lipid": "H2A4B4",
+    "printed_name": "3-(dimethylamine) propanoic acid",
+    "block": "H2",
+    "implied_MW": 117.15,
+    "block_MW": 117.15,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "H2A4B4",
+    "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+    "block": "A4",
+    "implied_MW": 277.48,
+    "block_MW": 277.5,
+    "rel_err_pct": -0.01
+   },
+   {
+    "lipid": "H2A4B4",
+    "printed_name": "6-oxohexyl 2-hexyl decanoate",
+    "block": "B4",
+    "implied_MW": 354.56,
+    "block_MW": 354.58,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "printed_name": "3-(dimethylamine) propanoic acid",
+    "block": "H2",
+    "implied_MW": 117.15,
+    "block_MW": 117.15,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+    "block": "A4",
+    "implied_MW": 277.48,
+    "block_MW": 277.5,
+    "rel_err_pct": -0.01
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "printed_name": "olealdehyde",
+    "block": "B2",
+    "implied_MW": 266.47,
+    "block_MW": 266.47,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "printed_name": "3-(dimethylamine) propanoic acid",
+    "block": "H2",
+    "implied_MW": 117.15,
+    "block_MW": 117.15,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+    "block": "A4",
+    "implied_MW": 277.48,
+    "block_MW": 277.5,
+    "rel_err_pct": -0.01
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "printed_name": "6-oxohexyl 2-butyl octanoate",
+    "block": "Bbu",
+    "implied_MW": 298.45,
+    "block_MW": 298.47,
+    "rel_err_pct": -0.01
+   },
+   {
+    "lipid": "A4B4-S3",
+    "printed_name": "4-(dimethylamino)butanoic acid",
+    "block": "S3",
+    "implied_MW": 131.18,
+    "block_MW": 131.18,
+    "rel_err_pct": 0.0
+   },
+   {
+    "lipid": "A4B4-S3",
+    "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+    "block": "A4",
+    "implied_MW": 354.57,
+    "block_MW": 277.5,
+    "rel_err_pct": 27.77
+   },
+   {
+    "lipid": "A4B4-S3",
+    "printed_name": "6-oxohexyl dodecanoate",
+    "block": "B4",
+    "implied_MW": 278.27,
+    "block_MW": 354.58,
+    "rel_err_pct": -21.52
+   },
+   {
+    "lipid": "A4B4-S4",
+    "printed_name": "5-(dimethylamino)pentanoic acid",
+    "block": "S4",
+    "implied_MW": 145.21,
+    "block_MW": 145.2,
+    "rel_err_pct": 0.0
+   },
+   {
+    "lipid": "A4B4-S4",
+    "printed_name": "(Z)-1-isocyanooctadec-9-ene",
+    "block": "A4",
+    "implied_MW": 277.49,
+    "block_MW": 277.5,
+    "rel_err_pct": -0.0
+   },
+   {
+    "lipid": "A4B4-S4",
+    "printed_name": "6-oxohexyl dodecanoate",
+    "block": "B4",
+    "implied_MW": 354.6,
+    "block_MW": 354.58,
+    "rel_err_pct": 0.01
+   }
+  ],
+  "what": "mg / umol is the authors' own number pair and is independent of the reagent NAME printed beside it. This is what settles the A4B4-S3/S4 aldehyde against a wrong printed name."
+ },
+ "P5_block_MS": {
+  "n": 9,
+  "n_matching_neutral_monoisotopic_within_0.02": 8,
+  "n_matching_MH_plus_within_0.02": 0,
+  "rows": [
+   {
+    "block": "A1",
+    "printed_formula": "C12H23N",
+    "printed_calc": 181.18,
+    "our_neutral_monoisotopic": 181.183,
+    "delta_vs_neutral_mono": -0.003,
+    "delta_vs_MH_plus": -1.01
+   },
+   {
+    "block": "A2",
+    "printed_formula": "C13H25N",
+    "printed_calc": 195.2,
+    "our_neutral_monoisotopic": 195.199,
+    "delta_vs_neutral_mono": 0.001,
+    "delta_vs_MH_plus": -1.006
+   },
+   {
+    "block": "A3",
+    "printed_formula": "C17H33N",
+    "printed_calc": 251.26,
+    "our_neutral_monoisotopic": 251.261,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.009
+   },
+   {
+    "block": "A4",
+    "printed_formula": "C19H35N",
+    "printed_calc": 277.28,
+    "our_neutral_monoisotopic": 277.277,
+    "delta_vs_neutral_mono": 0.003,
+    "delta_vs_MH_plus": -1.004
+   },
+   {
+    "block": "B1",
+    "printed_formula": "C10H20O",
+    "printed_calc": 156.15,
+    "our_neutral_monoisotopic": 156.151,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.009
+   },
+   {
+    "block": "B2",
+    "printed_formula": "C18H34O",
+    "printed_calc": 266.26,
+    "our_neutral_monoisotopic": 266.261,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.008
+   },
+   {
+    "block": "B3",
+    "printed_formula": "C18H34O3",
+    "printed_calc": 298.25,
+    "our_neutral_monoisotopic": 298.251,
+    "delta_vs_neutral_mono": -0.001,
+    "delta_vs_MH_plus": -1.008
+   },
+   {
+    "block": "B4",
+    "printed_formula": "C22H42O3",
+    "printed_calc": 354.31,
+    "our_neutral_monoisotopic": 354.313,
+    "delta_vs_neutral_mono": -0.003,
+    "delta_vs_MH_plus": -1.011
+   },
+   {
+    "block": "Bbu",
+    "printed_formula": "C18H34O3",
+    "printed_calc": 299.47,
+    "our_neutral_monoisotopic": 298.251,
+    "delta_vs_neutral_mono": 1.219,
+    "delta_vs_MH_plus": 0.212
+   }
+  ],
+  "what": "The SI labels these '(M + H+)' but the numbers are the NEUTRAL monoisotopic masses. Testing both readings is the point: one of them fits 8/9 and the other fits none."
+ },
+ "P6_lipid_MS": {
+  "n": 6,
+  "n_fit_average_MH_within_0.05": 4,
+  "n_fit_monoisotopic_MH_within_0.05": 2,
+  "n_fit_either": 6,
+  "rows": [
+   {
+    "lipid": "H2A4B3",
+    "printed_cation_formula": "C42H81N2O5+",
+    "printed_calc": 694.11,
+    "printed_found": 694.8,
+    "avg_MH": 694.12,
+    "mono_MH": 693.61,
+    "d_avg": -0.01,
+    "d_mono": 0.5
+   },
+   {
+    "lipid": "H2A4B4",
+    "printed_cation_formula": "C46H88N2O5+",
+    "printed_calc": 750.22,
+    "printed_found": 750.55,
+    "avg_MH": 750.23,
+    "mono_MH": 749.68,
+    "d_avg": -0.01,
+    "d_mono": 0.54
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "printed_cation_formula": "C42H81N2O3+",
+    "printed_calc": 662.11,
+    "printed_found": 662.34,
+    "avg_MH": 662.12,
+    "mono_MH": 661.62,
+    "d_avg": -0.01,
+    "d_mono": 0.49
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "printed_cation_formula": "C42H81N2O5+",
+    "printed_calc": 694.11,
+    "printed_found": 694.15,
+    "avg_MH": 694.12,
+    "mono_MH": 693.61,
+    "d_avg": -0.01,
+    "d_mono": 0.5
+   },
+   {
+    "lipid": "A4B4-S3",
+    "printed_cation_formula": "C47H90N2O5+",
+    "printed_calc": 763.68,
+    "printed_found": 763.49,
+    "avg_MH": 764.25,
+    "mono_MH": 763.69,
+    "d_avg": -0.57,
+    "d_mono": -0.01
+   },
+   {
+    "lipid": "A4B4-S4",
+    "printed_cation_formula": "C48H92N2O5+",
+    "printed_calc": 777.7,
+    "printed_found": 777.82,
+    "avg_MH": 778.28,
+    "mono_MH": 777.71,
+    "d_avg": -0.58,
+    "d_mono": -0.01
+   }
+  ],
+  "what": "The SI uses TWO mass conventions without saying so: average [M+H]+ for the four H2A4* lipids, monoisotopic [M+H]+ for A4B4-S3/S4. Checked against only one, four or two of six would look wrong."
+ },
+ "P7_distinct_structures": {
+  "n_names": 148,
+  "n_distinct_full_InChIKeys": 147,
+  "duplicate_groups": {
+   "WNUMPPMZXDNLCE-WRBBJXAJSA-N": [
+    "H2A4-Ole",
+    "H2A4B2"
+   ]
+  },
+  "what": "Trap 1 of the brief. The paper's own count of what it made is 144 + 4; two of those names are ONE molecule."
+ }
+}

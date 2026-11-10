@@ -1,0 +1,163 @@
+{
+ "n_values_total": 44,
+ "n_emitted": 13,
+ "n_skipped": 31,
+ "sums": true,
+ "skipped": [
+  {
+   "value_id": "S3-93-O17S-5",
+   "lipidoid": "93-O17S",
+   "reason": "dose-response of ONE lipid (5/15/30/60 ug/mL). Four rows would carry the same (Experiment_ID, IL_name) key with no chemical difference between them. OPEN decision D-2."
+  },
+  {
+   "value_id": "S3-93-O17S-15",
+   "lipidoid": "93-O17S",
+   "reason": "dose-response of ONE lipid (5/15/30/60 ug/mL). Four rows would carry the same (Experiment_ID, IL_name) key with no chemical difference between them. OPEN decision D-2."
+  },
+  {
+   "value_id": "S3-93-O17S-30",
+   "lipidoid": "93-O17S",
+   "reason": "dose-response of ONE lipid (5/15/30/60 ug/mL). Four rows would carry the same (Experiment_ID, IL_name) key with no chemical difference between them. OPEN decision D-2."
+  },
+  {
+   "value_id": "S3-93-O17S-60",
+   "lipidoid": "93-O17S",
+   "reason": "dose-response of ONE lipid (5/15/30/60 ug/mL). Four rows would carry the same (Experiment_ID, IL_name) key with no chemical difference between them. OPEN decision D-2."
+  },
+  {
+   "value_id": "S3-9322-O17S-5",
+   "lipidoid": "9322-O17S",
+   "reason": "dose-response of one lipid, same as D-2. NOTE: the reason changed on 2026-11-10. It used to read 'no structure' - head 9322 is now recovered (corpus-attested as 1-(3-aminopropyl)-2-methylimidazole and confirmed against Figure S1 at 0.20 px), so these four values DO have a molecule and are blocked only by the dose-response shape. See 08_retracted_suspicions.csv R-06."
+  },
+  {
+   "value_id": "S3-9322-O17S-15",
+   "lipidoid": "9322-O17S",
+   "reason": "dose-response of one lipid, same as D-2. NOTE: the reason changed on 2026-11-10. It used to read 'no structure' - head 9322 is now recovered (corpus-attested as 1-(3-aminopropyl)-2-methylimidazole and confirmed against Figure S1 at 0.20 px), so these four values DO have a molecule and are blocked only by the dose-response shape. See 08_retracted_suspicions.csv R-06."
+  },
+  {
+   "value_id": "S3-9322-O17S-30",
+   "lipidoid": "9322-O17S",
+   "reason": "dose-response of one lipid, same as D-2. NOTE: the reason changed on 2026-11-10. It used to read 'no structure' - head 9322 is now recovered (corpus-attested as 1-(3-aminopropyl)-2-methylimidazole and confirmed against Figure S1 at 0.20 px), so these four values DO have a molecule and are blocked only by the dose-response shape. See 08_retracted_suspicions.csv R-06."
+  },
+  {
+   "value_id": "S3-9322-O17S-60",
+   "lipidoid": "9322-O17S",
+   "reason": "dose-response of one lipid, same as D-2. NOTE: the reason changed on 2026-11-10. It used to read 'no structure' - head 9322 is now recovered (corpus-attested as 1-(3-aminopropyl)-2-methylimidazole and confirmed against Figure S1 at 0.20 px), so these four values DO have a molecule and are blocked only by the dose-response shape. See 08_retracted_suspicions.csv R-06."
+  },
+  {
+   "value_id": "S3-Lipofectamine 2000-5",
+   "lipidoid": "Lipofectamine 2000",
+   "reason": "commercial transfection reagent control, not a library member."
+  },
+  {
+   "value_id": "S3-untreated-None",
+   "lipidoid": "untreated",
+   "reason": "untreated control, not a library member."
+  },
+  {
+   "value_id": "S2a-UT",
+   "lipidoid": "untreated",
+   "reason": "untreated control, not a library member."
+  },
+  {
+   "value_id": "S2b-6",
+   "lipidoid": "93-O17S",
+   "reason": "cell viability (CCK-8). Not a delivery endpoint; the corpus excludes viability and hemolysis readouts."
+  },
+  {
+   "value_id": "S2b-15",
+   "lipidoid": "93-O17S",
+   "reason": "cell viability (CCK-8). Not a delivery endpoint; the corpus excludes viability and hemolysis readouts."
+  },
+  {
+   "value_id": "S2b-30",
+   "lipidoid": "93-O17S",
+   "reason": "cell viability (CCK-8). Not a delivery endpoint; the corpus excludes viability and hemolysis readouts."
+  },
+  {
+   "value_id": "S2b-45",
+   "lipidoid": "93-O17S",
+   "reason": "cell viability (CCK-8). Not a delivery endpoint; the corpus excludes viability and hemolysis readouts."
+  },
+  {
+   "value_id": "S2b-60",
+   "lipidoid": "93-O17S",
+   "reason": "cell viability (CCK-8). Not a delivery endpoint; the corpus excludes viability and hemolysis readouts."
+  },
+  {
+   "value_id": "S2b-UT",
+   "lipidoid": "untreated",
+   "reason": "cell viability (CCK-8). Not a delivery endpoint; the corpus excludes viability and hemolysis readouts."
+  },
+  {
+   "value_id": "S2c-0.5",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-1",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-2",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-5",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-7",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-18",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-26",
+   "lipidoid": "93-O17S",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2c-UT",
+   "lipidoid": "untreated",
+   "reason": "time course of ONE lipid at ONE formulation. Same key collision as D-2, and the corpus has no time axis within an experiment."
+  },
+  {
+   "value_id": "S2d-6",
+   "lipidoid": "93-O17S",
+   "reason": "dose response of ONE lipid at ONE formulation. Same as S2c."
+  },
+  {
+   "value_id": "S2d-15",
+   "lipidoid": "93-O17S",
+   "reason": "dose response of ONE lipid at ONE formulation. Same as S2c."
+  },
+  {
+   "value_id": "S2d-30",
+   "lipidoid": "93-O17S",
+   "reason": "dose response of ONE lipid at ONE formulation. Same as S2c."
+  },
+  {
+   "value_id": "S2d-60",
+   "lipidoid": "93-O17S",
+   "reason": "dose response of ONE lipid at ONE formulation. Same as S2c."
+  },
+  {
+   "value_id": "S2d-120",
+   "lipidoid": "93-O17S",
+   "reason": "dose response of ONE lipid at ONE formulation. Same as S2c."
+  },
+  {
+   "value_id": "ABSTRACT-cre-recombination",
+   "lipidoid": "the lead lipidoid - NOT NAMED in the abstract",
+   "reason": "the abstract does not say WHICH lipidoid achieved 8.2 % recombination, so the value has no molecule to attach to."
+  }
+ ]
+}

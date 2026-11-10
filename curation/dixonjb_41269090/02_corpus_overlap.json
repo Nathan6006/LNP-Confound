@@ -1,0 +1,473 @@
+{
+ "_what": "overlap of this paper's individually-administered ionizable lipids against the live corpus (29,195 vitro + 1,803 vivo rows as held on 2026-11-10)",
+ "corpus_rows": 30998,
+ "corpus_distinct_IL_structures": 19919,
+ "per_lipid": [
+  {
+   "formulation": "LNP1",
+   "IL_name": "cKK-E12",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "CKK-E12",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "MD-1",
+     "rows": 6
+    },
+    {
+     "experiment": "JW_2024",
+     "IL_name": "other",
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "formulation": "LNP2",
+   "IL_name": "cKK-E12",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "CKK-E12",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "MD-1",
+     "rows": 6
+    },
+    {
+     "experiment": "JW_2024",
+     "IL_name": "other",
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "formulation": "LNP3",
+   "IL_name": "cKK-E12",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "CKK-E12",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "MD-1",
+     "rows": 6
+    },
+    {
+     "experiment": "JW_2024",
+     "IL_name": "other",
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "formulation": "LNP4",
+   "IL_name": "cKK-E12",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "CKK-E12",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "MD-1",
+     "rows": 6
+    },
+    {
+     "experiment": "JW_2024",
+     "IL_name": "other",
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "formulation": "LNP7",
+   "IL_name": "cKK-E12",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "CKK-E12",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "MD-1",
+     "rows": 6
+    },
+    {
+     "experiment": "JW_2024",
+     "IL_name": "other",
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "formulation": "LNP11",
+   "IL_name": "cKK-E12",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "CKK-E12",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "MD-1",
+     "rows": 6
+    },
+    {
+     "experiment": "JW_2024",
+     "IL_name": "other",
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "formulation": "MC3",
+   "IL_name": "DLin-MC3-DMA",
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "exact_full_inchikey_hit": [
+    "AC_2025",
+    "BL_2023",
+    "NG_2025_2",
+    "SB_2024",
+    "SP_2020",
+    "WT_2026",
+    "XD_2026",
+    "YZ_2022",
+    "YZ_2024",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "skeleton_only_hit": [],
+   "IL_name_hit": [
+    "AC_2025",
+    "BL_2023",
+    "NG_2025_2",
+    "SB_2024",
+    "SP_2020",
+    "WT_2026",
+    "XD_2026",
+    "YZ_2022",
+    "YZ_2024",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "names_the_corpus_gives_this_structure": [
+    {
+     "experiment": "AC_2025",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 216
+    },
+    {
+     "experiment": "BL_2023",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 2
+    },
+    {
+     "experiment": "NG_2025_2",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 1
+    },
+    {
+     "experiment": "SB_2024",
+     "IL_name": "Dlin-MC3-DMA",
+     "rows": 11
+    },
+    {
+     "experiment": "SP_2020",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 30
+    },
+    {
+     "experiment": "WT_2026",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 675
+    },
+    {
+     "experiment": "XD_2026",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 1
+    },
+    {
+     "experiment": "YZ_2022",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 1080
+    },
+    {
+     "experiment": "YZ_2024",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 1080
+    },
+    {
+     "experiment": "ZC_2023",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 1
+    },
+    {
+     "experiment": "ZH_2023",
+     "IL_name": "DLin-MC3-DMA",
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "near_miss_superset": {
+  "smarts": "[NX3;!$(N=*)](CC(O)[CH2])",
+  "what_it_is": "A SUPERSET, deliberately loose. Any corpus lipid bearing a 2-hydroxyalkyl arm on a non-amide nitrogen matches, which is a whole chemotype, not a near-miss of cKK-E12. It is reported so the exact-match answer can be seen not to rest on a silent zero.",
+  "distinct_structures_matching": 1584,
+  "experiments_touched": [
+   "AA_2008",
+   "AC_2025",
+   "BL_2023",
+   "JL_2024",
+   "JM_2016",
+   "JW_2024",
+   "KL_2010",
+   "KW_2014",
+   "LL_2025",
+   "LL_2026",
+   "LL_2026_2",
+   "LX_2024_2",
+   "LX_2024_3",
+   "RG_2023",
+   "SW_2024",
+   "SX_2025",
+   "XD_2026",
+   "XH_2024",
+   "ZT_2026"
+  ],
+  "of_these_are_exact_matches_to_ours": 1
+ },
+ "already_merged_arm_test": {
+  "why": "AC_2025 (COMET) holds cKK-E12 rows that vary the SAME four formulation parameters. Re-emitting a formulation the corpus already measures, under a new Experiment_ID, would manufacture source separability.",
+  "corpus_experiments_holding_cKK-E12": [
+   "AC_2025",
+   "BL_2023",
+   "JW_2024"
+  ],
+  "corpus_cKK-E12_rows": 216,
+  "corpus_distinct_cKK-E12_formulations": 26,
+  "our_cKK-E12_formulations": 6,
+  "formulation_collisions": [],
+  "verdict": "NO formulation collision",
+  "endpoint_is_different_anyway": {
+   "corpus_arm": [
+    [
+     "AC_2025",
+     "in_vitro",
+     "DC2.4",
+     "luminescence_normalized"
+    ]
+   ],
+   "ours": "in_vivo / Mouse_B6 / fraction of lymph-node LECs expressing the delivered aVHH protein",
+   "note": "Different organism-level model and a different readout, so no value could be a re-publication of a corpus value. The formulation test is the stronger one and it is clean."
+  }
+ },
+ "token_pattern_test": {
+  "tokens": [
+   "LNP1",
+   "LNP2",
+   "LNP3",
+   "LNP4",
+   "LNP7",
+   "LNP11"
+  ],
+  "library_numbering": "LNP1..LNP30 contiguous over Screening 1 (30 members, min 1, max 30, gaps [])",
+  "verdict": "CONTIGUOUS LOCAL INDICES. A contiguous 1..N numbering is the AC_2025 failure mode: the shared lipidoid amine catalogue is sparse and non-contiguous, so a corpus name lookup on 'LNP7' would return a plausible wrong molecule. NO corpus name lookup is performed on these tokens. They are carried in Formulation_ID only, never in IL_name.",
+  "structural_attestation_instead": "Both ionizable lipids are named catalogue reagents with a supplier and catalogue number printed in the Methods (BroadPharm BP-29590; MedKoo 555308), and their structures come from the registry / the guarded corpus lookup, not from a number."
+ },
+ "one_structure_many_names": {
+  "_what": "C17 pins one NAME to one structure. The reverse is not checked, and it matters here: our cKK-E12 is already in the corpus under names that do not look like each other.",
+  "detail": [
+   {
+    "IL_name": "cKK-E12",
+    "names": [
+     {
+      "experiment": "AC_2025",
+      "IL_name": "CKK-E12",
+      "rows": 216
+     },
+     {
+      "experiment": "BL_2023",
+      "IL_name": "MD-1",
+      "rows": 6
+     },
+     {
+      "experiment": "JW_2024",
+      "IL_name": "other",
+      "rows": 19
+     }
+    ]
+   },
+   {
+    "IL_name": "cKK-E12",
+    "names": [
+     {
+      "experiment": "AC_2025",
+      "IL_name": "CKK-E12",
+      "rows": 216
+     },
+     {
+      "experiment": "BL_2023",
+      "IL_name": "MD-1",
+      "rows": 6
+     },
+     {
+      "experiment": "JW_2024",
+      "IL_name": "other",
+      "rows": 19
+     }
+    ]
+   },
+   {
+    "IL_name": "cKK-E12",
+    "names": [
+     {
+      "experiment": "AC_2025",
+      "IL_name": "CKK-E12",
+      "rows": 216
+     },
+     {
+      "experiment": "BL_2023",
+      "IL_name": "MD-1",
+      "rows": 6
+     },
+     {
+      "experiment": "JW_2024",
+      "IL_name": "other",
+      "rows": 19
+     }
+    ]
+   },
+   {
+    "IL_name": "cKK-E12",
+    "names": [
+     {
+      "experiment": "AC_2025",
+      "IL_name": "CKK-E12",
+      "rows": 216
+     },
+     {
+      "experiment": "BL_2023",
+      "IL_name": "MD-1",
+      "rows": 6
+     },
+     {
+      "experiment": "JW_2024",
+      "IL_name": "other",
+      "rows": 19
+     }
+    ]
+   },
+   {
+    "IL_name": "cKK-E12",
+    "names": [
+     {
+      "experiment": "AC_2025",
+      "IL_name": "CKK-E12",
+      "rows": 216
+     },
+     {
+      "experiment": "BL_2023",
+      "IL_name": "MD-1",
+      "rows": 6
+     },
+     {
+      "experiment": "JW_2024",
+      "IL_name": "other",
+      "rows": 19
+     }
+    ]
+   },
+   {
+    "IL_name": "cKK-E12",
+    "names": [
+     {
+      "experiment": "AC_2025",
+      "IL_name": "CKK-E12",
+      "rows": 216
+     },
+     {
+      "experiment": "BL_2023",
+      "IL_name": "MD-1",
+      "rows": 6
+     },
+     {
+      "experiment": "JW_2024",
+      "IL_name": "other",
+      "rows": 19
+     }
+    ]
+   }
+  ],
+  "consequence": "Keying on IL_name across experiments would miss this lipid in two of the three experiments that already hold it. Our rows must carry the SMILES the corpus already uses, not a fresh one."
+ }
+}

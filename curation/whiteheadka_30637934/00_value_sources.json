@@ -1,0 +1,95 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2.md stage 00b). One entry per panel or table that could supply a value, naming the tier it came from and -- where the tier is 5_pixels or a value is unavailable -- a sentence a reviewer can check about why the better tiers failed.",
+  "paper": {
+    "pmid": "30637934",
+    "doi": "10.1002/smll.201805097",
+    "title_verified_from": "Europe PMC REST core record, SRC:MED EXT_ID:30637934, fetched 2026-11-10",
+    "title": "Branched-Tail Lipid Nanoparticles Potently Deliver mRNA In Vivo due to Enhanced Ionization at Endosomal pH.",
+    "journal": "Small 15(6), 2019",
+    "authors": "Hajj KA, Ball RL, Deluty SB, Singh SR, Strelkova D, Knapp CM, Whitehead KA.",
+    "endpoint_verified": "mRNA DELIVERY / TRANSFECTION. Primary readouts: (a) in vitro firefly-luciferase activity in HeLa cells, relative light units, 100 ng mRNA per well, 24 h; (b) in vivo whole-animal and organ bioluminescence (total luminescent flux, photons/s) after tail-vein luciferase mRNA, 0.75 mg/kg; (c) in vivo serum erythropoietin by ELISA. Secondary, NOT a delivery endpoint: Cy5-mRNA biodistribution (total radiant efficiency) and LNP/lipidoid pKa, size, PDI, mRNA entrapment. No antimicrobial, hemolysis or cytotoxicity endpoint anywhere in the record.",
+    "corresponding_lab": "Whitehead (Carnegie Mellon). The abstract names 306O10 and 306Oi10 as the two most potent materials."
+  },
+  "tier_1_publisher_source_data": {
+    "available": false,
+    "why": "Wiley Small. Europe PMC core record reports isOpenAccess=N, license=null, hasSuppl=N, and a single fullTextUrl with availabilityCode 'S' (Subscription required). The only supplementary asset Wiley publishes for this DOI is the one Supporting Information PDF already in source/ (smll201805097-sup-0001-S1.pdf, named -sup-0001-S1, i.e. the first and only numbered supplement). There is no Source Data workbook for this article."
+  },
+  "tier_2_si_numeric_table": {
+    "available": true,
+    "tables": [
+      "Table S1 (SI p.6) -- LNP characterization for the 306 family: z-average diameter (nm), PDI, mRNA entrapment (%), LNP surface pKa, for 11 LNPs. Pure PDF text, extracted verbatim. NOT a delivery value.",
+      "Table S2 (SI p.15) -- lipidoid average pKa and buffering capacity (pH 7.4 to 4) with SDs, for 10 lipidoids. Pure PDF text, extracted verbatim. NOT a delivery value."
+    ],
+    "note": "Both tables were read by enumerating all 17 SI pages myself, not from a List of Contents -- this SI has no contents page at all, and a sibling measured today that an SI contents page omitted all four of its value tables (false zero). Neither table carries a transfection value, so neither can source 05_values.csv."
+  },
+  "tier_3_author_repo": {
+    "available": false,
+    "why": "provenance/tools/find_repo.py run on --pmid 30637934 --title 'branched tail lipid' --author Whitehead: 0 relevant hits across the DOI/PMID code searches and all short repo-name queries (14 hits returned, all filtered as irrelevant: unrelated user repos). NCBI esearch db=pmc on the DOI returns Count=0, and Europe PMC /MED/30637934/supplementaryFiles returns HTTP 404, so there is no PMC deposit to mine either."
+  },
+  "tier_4_pdf_text": {
+    "available": true,
+    "used_for": [
+      "Table S1 and Table S2 (above) -- physicochemical metadata only.",
+      "All formulation, dose, cell-line, cargo, route and timepoint metadata, from the SI Materials and Methods text (pp.2-5), verbatim.",
+      "Printed pKa values inside the Figure S7 panels (pKa= 7.96, 8.70, 7.26, 6.30, 7.82, 6.96, 7.52, 9.18), used only as a cross-check against Table S1."
+    ]
+  },
+  "4b_pdf_vector_geometry": {
+    "available": true,
+    "why_this_tier_and_not_5": "Every figure page in this SI is VECTOR, not raster. page.get_drawings() on SI p.12 returns 133 path groups containing 70 're' and 209 'l' items, and the Figure S6A bars are FILLED RECTANGLES whose corner coordinates are in the PDF content stream to 0.01 pt. The y-axis tick marks are likewise explicit stroked line segments at x 111.71->114.43. So no pixel is read anywhere in this curation: no page is rendered, and no raster mask is built. Checked on SI pp. 7, 9, 10, 11, 12, 13, 14 before assuming anything.",
+    "panels": [
+      {
+        "panel": "Figure S6A (SI p.12)",
+        "is_the_delivery_screen": true,
+        "what": "In vitro firefly-luciferase RLU in HeLa, 100 ng mRNA per well, 24 h, for 11 x 306-family lipidoids plus 3 controls (untreated Crl, naked mRNA Nkd, Lipofectamine MessengerMax).",
+        "geometry": "11 filled bars of width exactly 8.51 pt on a 12.80 pt category pitch, common baseline y=220.39; error-bar caps are a separate stroked width of 4.19 pt and replicate/marker squares are 2.80 pt, so bar / whisker / marker separate by EXACT WIDTH rather than by a coverage threshold. 6 detected y-axis ticks at 0 .. 2.5e6 in 5e5 steps.",
+        "tier": "4b_pdf_vector_geometry"
+      },
+      {
+        "panel": "Figure S6B (SI p.12)",
+        "what": "Dose response, 306Oi10 / 306O10 / 306O11 / 306O12 at 10, 50, 100 ng mRNA per well in HeLa, RLU.",
+        "geometry": "Plotted as 2.80 pt square symbols, 3 per lipidoid (one per dose), colour-keyed to the legend swatches; 12 symbols total. 5 detected y-axis ticks.",
+        "tier": "4b_pdf_vector_geometry",
+        "role": "CROSS-CHECK on Figure S6A: its 100 ng series shares 4 lipidoids and the same dose with S6A, so the two panels must agree. Measured, reported, never averaged."
+      },
+      {
+        "panel": "Figure S4 (SI p.10)",
+        "what": "In vivo dose response, 306Oi10 and 306O10 at 0.25 / 0.75 / 1.5 mg/kg, organ bioluminescence 3 h post-injection.",
+        "tier": "4b_pdf_vector_geometry",
+        "status": "extracted for the contradiction/cross-check file only; see DECISIONS.md D-2 for why these rows are not emitted."
+      },
+      {
+        "panel": "Figure S3D (SI p.9)",
+        "what": "In vivo luciferase kinetics 1-48 h for 306O10 / 306O11 / 306O12, total luminescent flux, log y axis.",
+        "tier": "4b_pdf_vector_geometry",
+        "status": "time course, not a screen; see DECISIONS.md D-2."
+      },
+      {
+        "panel": "Figure S5 (SI p.11)",
+        "what": "Serum EPO (ng/mL) at 3/6/24 h for 306Oi10 and 306O10. Two panels on DIFFERENT y scales (0-2000 vs 0-200).",
+        "tier": "4b_pdf_vector_geometry",
+        "status": "different cargo (EPO mRNA) and a protein-concentration readout; see DECISIONS.md D-2."
+      },
+      {
+        "panel": "Figure S1 (SI p.7)",
+        "what": "Cy5-mRNA biodistribution, total radiant efficiency, 6 organs x 11 lipidoids.",
+        "tier": "4b_pdf_vector_geometry",
+        "status": "NOT A DELIVERY ENDPOINT -- this is label biodistribution/uptake, which the corpus excludes by definition (CLAUDE.md 2026-07-23: in-vivo pool is 'delivery-only ... excl. diameter/zeta/uptake'). Not extracted."
+      },
+      {
+        "panel": "Figures S7, S8",
+        "what": "TNS fluorescence vs pH curves and lipidoid acid-titration curves.",
+        "status": "physicochemical, no delivery value. Printed pKa labels used as a tier-4 cross-check only."
+      }
+    ]
+  },
+  "tier_5_pixels": {
+    "used": false,
+    "why": "Not needed anywhere. See 4b above: the SI is vector throughout and no page was rendered to a raster at any point in this curation."
+  },
+  "UNAVAILABLE_AND_WHY": {
+    "main_text_figures": "The main article PDF is NOT in source/ and is NOT obtainable without a subscription (Wiley, availabilityCode 'S'; no PMC record; no author deposit). No paywall or bot check was approached. The SI's own captions name what is therefore missing: Figure 2B (whole-organ biodistribution, of which Fig S1 is the quantification), the main-text TNS panels (Fig S7 is captioned 'the LNPs not shown in the main text'), and the Figure 4A/4H correlations whose fitted constants the SI prints (y=aX^b with a=3956, b=0.64; y=ae^bx with a=299220, b=0.00025).",
+    "the_200_and_304_amine_lipidoids": "The SI Methods name three amines -- 200, 304 and 306 -- and the abstract names 'a small library' plus 'a secondary lipidoid library'. EVERY value-bearing figure and table in the SI is 306-family only. So the 200- and 304-amine members of the library exist but no value for them is recoverable from what we hold. This is the distinct-vs-individually-measured gap quantified in 07_qc.json.",
+    "the_main_in_vivo_screen": "The abstract's headline (a tenfold 306Oi10 advantage at 0.75 mg/kg) is a main-text figure. The SI gives in vivo numbers only for the dose series (S4), the kinetics (S3) and EPO (S5)."
+  }
+}

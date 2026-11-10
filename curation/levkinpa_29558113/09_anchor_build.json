@@ -1,0 +1,17 @@
+{
+ "built_string_before_canonicalisation": "CCN(CC)CCNC(=O)C(CCSSCCCCCCCCCCCCCCCC)NC(=O)CCCCCCC/C=C\\CCCCCCCC",
+ "canonical": "CCCCCCCC/C=C\\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC",
+ "inchikey": "WOFVCSMBTGALCP-LNVKXUELSA-N",
+ "enumerated_smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC",
+ "enumerated_inchikey": "WOFVCSMBTGALCP-LNVKXUELSA-N",
+ "inchikey_match": true,
+ "skeleton_match": true,
+ "built_string_is_byte_identical_to_enumeration": false,
+ "chain_lengths_taken_from": "02_chain_counts.json (measured), not typed into this file",
+ "n_arm": 16,
+ "n_tail": 18,
+ "double_bond": [
+  9,
+  10
+ ]
+}

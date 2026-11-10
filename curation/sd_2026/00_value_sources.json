@@ -1,0 +1,139 @@
+{
+ "_what": "THE INTAKE GATE for SD_2026, filled before any digitiser was written (PIPELINE_V2.md section 3, stage 00b). One entry per panel that could supply a value. `tier_5_pixels` entries must carry a CHECKABLE reason tiers 1-4 failed; 'not available' is not such a reason.",
+ "_tier_ladder": [
+  "1_publisher_source_data",
+  "2_si_tables",
+  "3_author_repo",
+  "4_pdfplumber_text_table",
+  "5_pixels"
+ ],
+ "_subtier_note": "Several panels here are recorded as 5_pixels / 5a_pdf_vector_geometry. That is NOT raster digitisation: the marker centres, mean rules, tick marks and category labels are read as the PDF's OWN vector coordinates and text spans, with no estimation step anywhere. It sits inside tier 5 because it is still the figure rather than a table, and it is called out separately because it is strictly stronger than pixels -- the same argument curation/lib/chains.py makes for its vector route. Where a panel is a flattened raster the subtier says 5b_raster and the extra hazard is recorded with it.",
+ "why_tier_1_fails": {
+  "verdict": "NO publisher Source Data workbook exists for this article.",
+  "evidence_1_enumeration": "static-content.springer.com was enumerated over n = 1..16 x {xlsx, xls, zip, csv, docx, pdf, txt} on 2026-11-10. n = 1-4 return HTTP 200 for .pdf only and nothing else; n >= 5 return 403 for every extension. Every 200 was re-fetched and its first four bytes read: all are 25504446 ('%PDF'). NO response anywhere in that space carried a 'PK' magic. Full matrix in 00_acquisition.json -> springer_source_data_probe.",
+  "evidence_2_the_publishers_own_list": "The article landing page lists exactly four assets and names each: Supplementary Information (PDF, 'Supplementary Figs. 1-101 and Tables 1-5'), Reporting Summary (PDF), Source Data Fig. 1 (PDF, 'Sanger sequencing results'), Source Data Extended Data Fig. 1 (PDF, 'Uncropped gel image'). The enumeration and the page agree.",
+  "the_trap_here": "There IS an asset called 'Source Data Fig. 1'. Its NAME promises the 384-lipid screen that Fig. 1c-l reports; its CONTENT is six pages of Sanger chromatograms, one per cell line, for the editing panels Fig. 1q,r. A source-data sheet is not necessarily a screen -- check what the rows ARE. It carries no per-lipid value of any kind."
+ },
+ "why_tier_2_fails": {
+  "verdict": "The SI has Tables 1-5 and none of them is a screening table.",
+  "evidence": "Supplementary Table 1 = DNA template sequences; Table 2 = sgRNA sequences; Table 3 = Sanger primers; Table 4 = SAXS phase percentages (12 rows, LNP x pH x mRNA); Table 5 = the five-step synthesis of LC-1. All 85 SI pages were enumerated and their first 230 characters printed; no page holds a per-lipid value table. Table 5 is nonetheless the single most valuable thing in the SI for this curation -- it pins four of the 22 building blocks by CAS number and MW (see 01_blocks.csv)."
+ },
+ "why_tier_3_fails": {
+  "verdict": "No author repository.",
+  "evidence": "find_repo.py over the DOI and the PMID returned only third-party literature-scraper repositories; repo-name searches for the group returned 0. The paper's Data availability statement names no repository, accession or DOI: 'All other data supporting the findings of this study are available within the paper and its Supplementary Information or upon reasonable request.'"
+ },
+ "why_tier_4_fails": {
+  "verdict": "Partially succeeds, and is used where it does.",
+  "evidence": "The main-article figure pages carry a real text layer. Every axis tick VALUE (10^7 ... 10^11), every category label (ALC-0315, LP-01, SC-1..5, LC-1..5) and every printed P value is a PDF text span and is read as text, not as pixels. What the text layer does NOT carry is the data itself -- there is no tabulated number behind any marker -- so the marker POSITIONS come from the vector layer and the LABELS from the text layer."
+ },
+ "panels": [
+  {
+   "panel": "Fig. 1c / Fig. 1h  (circos: 12 H sectors x 4 Ta rings x 8 columns)",
+   "what_it_would_give": "the 384-lipid screen itself, for both cargoes -- the only place per-member values exist",
+   "tier": "refused",
+   "extracted": false,
+   "n_values_available_in_principle": 768,
+   "n_values_extracted": 0,
+   "refusal_reasons": [
+    "NO NUMERIC SCALE ANYWHERE. The heat-map colour legend is a continuous ramp annotated 'Max' at one end and 'Min' at the other, with no number, no tick and no units. The inner bar ring has no axis, no scale rule and no tick. CLAUDE.md section 5: the scale that converts pixels to units must come from axis furniture ONLY. This panel has none, so there is nothing to fit and no fit to refuse -- axis.calibrate would raise on fewer than 3 ticks and it would be right to.",
+    "NO CELL -> LIPID MAP. The figure legend states the inner rings are 'hierarchical clusters of linkers (L1-L4), tails (Ta1-Ta4) and subtail (Tb1-Tb2) categories'. The within-sector ORDER is therefore the leaf order of a clustering, and that leaf order is published nowhere -- not in the legend, not in the Methods, not in the SI. The dendrogram drawn at the top of the circle is a legend for the nesting, not a key naming which leaf is which (H, Ta, Tb, L). Assigning the 8 columns to (Tb1:L1..L4, Tb2:L1..L4) would be a guess, and a guess here silently permutes 384 values across 384 structures."
+   ],
+   "what_would_unblock_it": "the authors' screening table, or a figure-source file with the leaf order. Neither exists; see DECISIONS.md D-1."
+  },
+  {
+   "panel": "Fig. 1d / Fig. 1i  (Sankey / parallel coordinates, one line per lipid)",
+   "what_it_would_give": "the same 384 values, as line colour and left-edge height",
+   "tier": "refused",
+   "extracted": false,
+   "n_values_extracted": 0,
+   "refusal_reasons": [
+    "The y axis is labelled 'RLU (log2) of Ionizable lipid' and is drawn as a bare arrow: zero ticks, zero numbers. Only a dashed ALC-0315 reference line. One anchor cannot fit a scale.",
+    "The panel is a FLATTENED RASTER embedded at 1363 x 278 px (xref 425) carrying 384 mutually overlapping curves. Individual lines are not separable at that density, and there is no label on any line."
+   ]
+  },
+  {
+   "panel": "Fig. 1e,f / Fig. 1j,k  (radar plots of motif percentages)",
+   "what_it_would_give": "marginal composition of the hit set, not per-lipid values",
+   "tier": "4_pdfplumber_text_table",
+   "extracted": "as a CHECK, not as a value",
+   "note": "the percentages are printed as PDF text (11%, 12%, 46% ...). They are used in 07_qc.json as a reproducible printed statistic and never emitted as a row."
+  },
+  {
+   "panel": "Fig. 1n  (IV radiance, 12 LNPs, ABE-NanoLuc mRNA 0.5 mg/kg, 6 h)",
+   "what_it_would_give": "12 ionizable lipids x 1 in-vivo readout -- 10 of them library members, 2 benchmarks",
+   "tier": "5_pixels",
+   "subtier": "5a_pdf_vector_geometry",
+   "extracted": true,
+   "n_values_extracted": 12,
+   "how": "y-axis: five tick marks read as stroked segments at x 150.80-152.43 and their values read as PDF text ('10' + superscript '7'..'11'); fitted with curation/lib/axis.calibrate (scale AND origin together, no API to supply an origin). Group means: the wide (7.46 pt) horizontal rule the figure DRAWS for each group, taken directly -- not a recomputed average of the dots. s.d. caps (3.73 pt rules) and the five individual mouse markers (1.61 pt white-filled circles) are read too and used as checks.",
+   "why_not_a_higher_tier": "there is no table of these numbers anywhere; see why_tier_1/2/3_fails above."
+  },
+  {
+   "panel": "Fig. 1o  (intrathecal radiance, 3 LNPs, 0.05 mg/kg, 6 h)",
+   "tier": "5_pixels",
+   "subtier": "5a_pdf_vector_geometry",
+   "extracted": true,
+   "n_values_extracted": 3,
+   "how": "as Fig. 1n; ticks 10^6..10^10."
+  },
+  {
+   "panel": "Fig. 1p  (intratracheal radiance, 3 LNPs, 0.25 mg/kg, 6 h)",
+   "tier": "5_pixels",
+   "subtier": "5a_pdf_vector_geometry",
+   "extracted": true,
+   "n_values_extracted": 3,
+   "how": "as Fig. 1n; ticks 10^5..10^9.",
+   "caveat": "this panel's own y-axis label text reads 'Radiance Intrathecal injection' while the legend and the panel heading say intratracheal instillation. Recorded in 08_contradictions.csv; the route emitted follows the legend and the panel heading."
+  },
+  {
+   "panel": "Fig. 1q / Fig. 1r  (in vitro: 6 cell lines x 3 cargoes x {Untreated, LP-01, ALC-0315, LC-1})",
+   "tier": "5_pixels",
+   "subtier": "5a_pdf_vector_geometry",
+   "extracted": false,
+   "n_values_available_in_principle": 72,
+   "n_values_extracted": 0,
+   "why_not_extracted_this_pass": "AVAILABLE, not refused. The axes, bars and labels are all vector/text and this panel could be extracted the same way Fig. 1n was. It is left for a second pass because it contains exactly ONE ionizable lipid the corpus does not already hold (LC-1; LP-01 and ALC-0315 are benchmarks), while costing six new Experiment_IDs -- one per cell line -- plus a three-way cargo split. Recorded so the omission is visible rather than silent."
+  },
+  {
+   "panel": "Supplementary Fig. 53a-d  (IV radiance in spleen, heart, lung, kidney; same 12 LNPs, n = 5)",
+   "tier": "5_pixels",
+   "subtier": "5b_raster",
+   "extracted": false,
+   "n_values_available_in_principle": 48,
+   "n_values_extracted": 0,
+   "why_not_extracted_this_pass": "AVAILABLE, not refused. Axes carry labelled decade ticks (1x10^5 ... 1x10^9), so unlike Fig. 1c-l it is calibratable. But the SI page holds ONE flattened raster at 1430 x 862 px for all four panels, so this is genuine raster digitisation at ~150 px per decade, a different and weaker evidence class than Fig. 1n's vector read. Deferred rather than mixed into the same emission; see DECISIONS.md D-3."
+  },
+  {
+   "panel": "Fig. 2b-i  (18-formulation DOE on LC-1 + original formulation)",
+   "tier": "5_pixels",
+   "subtier": "5a_pdf_vector_geometry",
+   "extracted": false,
+   "n_values_available_in_principle": 57,
+   "why_not_extracted_this_pass": "AVAILABLE, not refused. It is a FORMULATION design-of-experiments on a single ionizable lipid, so it varies helper-lipid identity, molar ratios and N/P rather than chemistry -- the ZT_2026 situation. It would be its own Experiment_ID and does not bear on the 384-lipid question."
+  },
+  {
+   "panel": "Supplementary Fig. 68c-j  (a SECOND, conventionally synthesised lipid library: heat maps + in vivo for N-SC-1..3, N-LC-1..3 and two analogues)",
+   "tier": "5_pixels",
+   "subtier": "5b_raster",
+   "extracted": false,
+   "why_not_extracted_this_pass": "AVAILABLE in part. The in-vivo panels (e-g, i-j) have axes. The heat maps (c, d) have the same defect as Fig. 1c/h -- no numeric scale and no published member order. The SI gives formulas and MWs for 8 named members of this library, so its structures are partly recoverable. Out of scope for this pass; recorded so it is not lost. DECISIONS.md D-4."
+  },
+  {
+   "panel": "Supplementary Table 4  (SAXS lamellar / inverse-hexagonal %)",
+   "tier": "2_si_tables",
+   "extracted": false,
+   "note": "a real tier-2 table, read as text, but it is a structural phase fraction and not a delivery endpoint, so it is not a corpus value. Used as a printed statistic in 07_qc.json."
+  },
+  {
+   "panel": "Supplementary Table 5  (five-step synthesis of LC-1, with CAS and MW)",
+   "tier": "2_si_tables",
+   "extracted": "as BLOCK IDENTITY, not as a value",
+   "note": "THE most load-bearing tier-2 asset here. Pins H4, L4, Ta1 and Tb1 by CAS number and molecular weight, each of which is re-derived from our own SMILES and asserted in stage01_blocks.py. It is the only external, non-drawn evidence for any building block."
+  }
+ ],
+ "summary": {
+  "the_384_screen": "NOT EXTRACTABLE. Both panels that carry it lack a numeric scale entirely, and the member order within each sector is an unpublished clustering leaf order.",
+  "what_is_extractable": "the named lipids the paper carried forward -- 12 in Fig. 1n, 3 in Fig. 1o, 3 in Fig. 1p -- plus, deferred, 48 in Supplementary Fig. 53 and 72 in Fig. 1q,r.",
+  "structures_vs_values": "the STRUCTURES of all 384 are recoverable (the blocks are drawn and the reaction is named); the VALUES of 384 are not. 03_enumerated.csv therefore has 384 rows and 05_values.csv has 18."
+ }
+}

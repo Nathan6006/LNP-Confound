@@ -1,0 +1,172 @@
+{
+ "_what": "Every check in this folder, seeded with the exact defect it exists to catch. A check that has not been made to fail is not a check (CLAUDE.md section 6).",
+ "mutations": [
+  {
+   "id": "M1-chain-length",
+   "stage": "stage01_chains.py",
+   "mutate_in": "stage01_chains.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "geometry and HRMS disagree",
+   "message_head": "stage01: geometry and HRMS disagree on ['PY12']. A chain length is an integer and two independent methods differing means one is wrong, not that the answer is between them (curation/lib/chains.count_carbons' contract). R"
+  },
+  {
+   "id": "M2-oleoyl-position",
+   "stage": "make_reference.py",
+   "mutate_in": "stage01_chains.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "this builder writes 9Z",
+   "message_head": "make_reference: oleoyl unsaturation measured at C8=C9; this builder writes 9Z."
+  },
+  {
+   "id": "M3-A1-branches",
+   "stage": "stage02_amines.py",
+   "mutate_in": "stage02_amines.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "bonds in the drawing",
+   "message_head": "stage02: A1's amine N has 1 bonds in the drawing, not 3. Refusing to proceed on a tertiary-amine assumption."
+  },
+  {
+   "id": "M4-block-composition",
+   "stage": "stage03_enumerate.py",
+   "mutate_in": "stage03_enumerate.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "mDa from the SI's own printed calcd",
+   "message_head": "stage03: a block structure is 14016.37 mDa from the SI's own printed calcd [M+H]+. That is a composition error, not rounding. Refusing to emit."
+  },
+  {
+   "id": "M5-lost-cis",
+   "stage": "stage03_enumerate.py",
+   "mutate_in": "stage03_enumerate.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "stereo-defined double bonds",
+   "message_head": "errors.StructureError: T18U-PY12-A1: 0 stereo-defined double bonds in the product, expected exactly 1 (the oleoyl 9Z). Assembly lost or duplicated the configuration."
+  },
+  {
+   "id": "M6-tick-set",
+   "stage": "stage04_figS3.py",
+   "mutate_in": "stage04_figS3.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "major y ticks, expected",
+   "message_head": "stage04: detected 10 major y ticks, expected 5 ([1.2, 0.9, 0.6, 0.3, 0.0]). Refusing to calibrate on a tick set that does not match the printed labels."
+  },
+  {
+   "id": "M7-bar-count",
+   "stage": "stage04_figS3.py",
+   "mutate_in": "stage04_figS3.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "bar columns, expected",
+   "message_head": "stage04: found 47 bar columns, expected 46 (45 lipidoids + SFA + L2K). Refusing to guess which is which."
+  },
+  {
+   "id": "M8-class27",
+   "stage": "stage04_figS3.py",
+   "mutate_in": "stage04_figS3.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "the fit input IS the validation target",
+   "message_head": "REFUSED: calibrate: the fit input IS the validation target. A scale fitted onto the quantity it will be checked against absorbs any uniform error in the read and reports a clean comparison -- that is error class 27, and "
+  },
+  {
+   "id": "M9-value-order",
+   "stage": "stage05_values.py",
+   "mutate_in": "stage05_values.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "not non-increasing",
+   "message_head": "stage05: %TE is not non-increasing down the table, but Figure S3's caption says the list starts from the top performer. A break here is a transcription error, not a finding."
+  },
+  {
+   "id": "M10-unknown-label",
+   "stage": "stage05_values.py",
+   "mutate_in": "stage05_values.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "not one of the 288 enumerated labels",
+   "message_head": "stage05: 'T18-PY12-A99' is not one of the 288 enumerated labels. A value whose lipidoid is not in the library grid is a transcription error on one side or the other."
+  },
+  {
+   "id": "M11-literal-confidence",
+   "stage": "stage06_emit.py",
+   "mutate_in": "stage06_emit.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "is a LITERAL",
+   "message_head": "Pass a callable (item_id, record) -> value, or a dict keyed on item id, so the value is traceable to the item's own enumeration record."
+  },
+  {
+   "id": "M12-caveat-no-note",
+   "stage": "stage06_emit.py",
+   "mutate_in": "stage06_emit.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "curation_note is empty",
+   "message_head": "A flag that cannot say what it means gets ignored. audit.py C13's confidence_without_a_note was added for exactly this and found 6 rows on its first run; writing the note here is cheaper than rediscovering the reason lat"
+  },
+  {
+   "id": "M13-anchor-is-a-copy",
+   "stage": "make_reference.py",
+   "mutate_in": "make_reference.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "byte-identical to the enumeration",
+   "message_head": "make_reference: the string this file BUILDS is byte-identical to the enumeration's canonical SMILES. That is the F-037 signature -- the anchor would be comparing a value to itself."
+  },
+  {
+   "id": "M14-wrong-anchor",
+   "stage": "make_reference.py",
+   "mutate_in": "make_reference.py",
+   "FIRED": true,
+   "exit_code": 1,
+   "expected_fragment": "DIFFERENT molecules",
+   "message_head": "That is what C10 exists to find. Do not edit the anchor to agree -- find out which half is wrong."
+  }
+ ],
+ "n_mutations": 14,
+ "n_fired": 14,
+ "all_fired": true,
+ "control_run_unmutated": [
+  {
+   "stage": "stage01_chains.py",
+   "exit_code": 0,
+   "tail": "T18U   geometry= 18  HRMS= 18  agree=True"
+  },
+  {
+   "stage": "stage02_amines.py",
+   "exit_code": 0,
+   "tail": "}"
+  },
+  {
+   "stage": "stage03_enumerate.py",
+   "exit_code": 0,
+   "tail": "}"
+  },
+  {
+   "stage": "stage05_values.py",
+   "exit_code": 0,
+   "tail": "}"
+  },
+  {
+   "stage": "stage04_figS3.py",
+   "exit_code": 0,
+   "tail": "row_shift_test = {\"-2\": {\"n\": 41, \"cv_pct\": 4.444, \"pearson\": 0.984833}, \"-1\": {\"n\": 42, \"cv_pct\": 3.463, \"pearson\": 0.9921}, \"0\": {\"n\": 42, \"cv_pct\": 2.304, \"p"
+  },
+  {
+   "stage": "stage06_emit.py",
+   "exit_code": 0,
+   "tail": "}"
+  },
+  {
+   "stage": "make_reference.py",
+   "exit_code": 0,
+   "tail": "enum  : CCCCCCCC/C=C\\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC"
+  }
+ ],
+ "control_clean": true
+}

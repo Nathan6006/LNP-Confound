@@ -1,0 +1,176 @@
+{
+ "control": {
+  "returncode": 0,
+  "passes": true
+ },
+ "seeds": [
+  {
+   "seed": "onehot_two_ones",
+   "defect_seeded": "a row with two 1s in the helper-lipid group",
+   "metric": "onehot_inversion.rows_whose_group_sums_to_exactly_1",
+   "baseline_value": 1080,
+   "seeded_value": 1079,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "onehot_disagrees_with_categorical",
+   "defect_seeded": "one-hot and the categorical column name different lipids",
+   "metric": "onehot_inversion.rows_where_inversion_equals_the_file's_Helper_lipid_column",
+   "baseline_value": 1080,
+   "seeded_value": 1079,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "factorial_duplicate_cell",
+   "defect_seeded": "two rows occupy one factorial cell",
+   "metric": "factorial.combinations_appearing_exactly_once",
+   "baseline_value": 1080,
+   "seeded_value": 1078,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "level_not_in_SI_Table_1",
+   "defect_seeded": "a composition level the SI never prints",
+   "metric": "si_table1_levels.(IL+HL).n_levels_in_file",
+   "baseline_value": 4,
+   "seeded_value": 5,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "class40_rowwise_disagreement",
+   "defect_seeded": "percent column disagrees with its own ratio column on one row",
+   "metric": "error_class_40_two_parameterisations.HL_(IL+HL).rows_violating_at_1e-6",
+   "baseline_value": 0,
+   "seeded_value": 1,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "class40_ratio_not_integer",
+   "defect_seeded": "the ratio is no longer a round integer, with the row-wise relation left EXACT -- isolates integrality from the derivation",
+   "metric": "error_class_40_two_parameterisations.PEG_(Chol+PEG).ratio_levels_are_exact_integers",
+   "baseline_value": true,
+   "seeded_value": false,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "descriptor_varies_within_lipid",
+   "defect_seeded": "one 18PG row carries a different cLogP from its siblings",
+   "metric": "helper_descriptor_block.non_constant",
+   "baseline_value": [],
+   "seeded_value": [
+    [
+     "18PG",
+     "cLogP",
+     [
+      "7.7",
+      "8.8188"
+     ]
+    ]
+   ],
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "descriptor_contradicts_SI_Table_3",
+   "defect_seeded": "every 18PG row says 1 double bond where SI Table 3 prints 2",
+   "metric": "helper_descriptor_block.vs_si_table3.18PG.agrees",
+   "baseline_value": true,
+   "seeded_value": false,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "measurement_blanked",
+   "defect_seeded": "one luciferase reading removed",
+   "metric": "measurement_coverage.blank_pattern_is_all_or_nothing",
+   "baseline_value": true,
+   "seeded_value": false,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "values_already_minmaxed",
+   "defect_seeded": "a target column arrives already rescaled to [0,1]",
+   "metric": "scale_is_ln_not_minmax.cells_whose_values_all_fit_[0,1]",
+   "baseline_value": [],
+   "seeded_value": [
+    "RLU_HEK293"
+   ],
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "validation_level_overlaps_training",
+   "defect_seeded": "a validation level that the training library also used",
+   "metric": "validation_workbook.levels_vs_training.NP_ratio.intersection",
+   "baseline_value": [],
+   "seeded_value": [
+    12.0
+   ],
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "validation_descriptor_mismatch",
+   "defect_seeded": "the two files disagree on one helper lipid's cLogP",
+   "metric": "validation_workbook.helper_descriptor_mismatches_vs_training",
+   "baseline_value": [],
+   "seeded_value": [
+    [
+     "DOTAP",
+     "cLogP",
+     9.9,
+     12.515
+    ]
+   ],
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  },
+  {
+   "seed": "shared_formulation_appears",
+   "defect_seeded": "a formulation present in both files, which would make a ratio measurable and must not go unnoticed",
+   "metric": "shared_formulations_between_files.n",
+   "baseline_value": 0,
+   "seeded_value": 1,
+   "AGREEMENT_COUNT_MOVED": true,
+   "returncode": 1,
+   "gate_fired": true,
+   "CREDITED": true
+  }
+ ],
+ "n_seeds": 13,
+ "n_credited": 13,
+ "n_moved_but_gate_silent": 0,
+ "n_gate_fired_but_no_movement": 0,
+ "_rule": "A seed is credited only when the named metric's value DIFFERS from baseline AND the gate exits non-zero. A gate that fires without the metric moving is a no-op seed, which is the failure mode this harness exists to catch."
+}

@@ -1,0 +1,206 @@
+{
+ "S24C": {
+  "what": "(-30)GFP-Cre protein delivery to HeLa-DsRed",
+  "n_bars": 36,
+  "n_groups": 12,
+  "major_ticks_px": [
+   249.75,
+   279.889,
+   310.092,
+   340.231
+  ],
+  "major_tick_values": [
+   90,
+   60,
+   30,
+   0
+  ],
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 1.0055,
+   "origin_px": 249.744,
+   "origin_value": 90.0,
+   "tick_step_units": -30.0,
+   "n_ticks": 4,
+   "tick_fit_residual_px": 0.0192,
+   "tick_residual_tol_px": 2.5
+  },
+  "leave_one_out_residuals_px": [
+   0.0213,
+   0.0274,
+   0.0274,
+   0.0213
+  ],
+  "max_leave_one_out_residual_px": 0.0274,
+  "held_out_minor_ticks_px": [
+   234.617,
+   264.82,
+   294.959,
+   325.162
+  ],
+  "held_out_minor_predicted": [
+   105.044,
+   75.006,
+   45.031,
+   14.993
+  ],
+  "held_out_minor_expected": [
+   105.0,
+   75.0,
+   45.0,
+   15.0
+  ],
+  "held_out_minor_are_odd_half_steps": true,
+  "held_out_minor_max_abs_error": 0.0441,
+  "labels": [
+   "75-OCholB",
+   "76-OCholB",
+   "77-OCholB",
+   "78-OCholB",
+   "80-OCholB",
+   "81-OCholB",
+   "87-OCholB",
+   "90-OCholB",
+   "304-OCholB",
+   "Lpf2k",
+   "GFP-Cre",
+   "Control"
+  ]
+ },
+ "S24E": {
+  "what": "mean green fluorescence intensity, HeLa-DsRed",
+  "n_bars": 12,
+  "n_groups": 12,
+  "major_ticks_px": [
+   410.649,
+   435.658,
+   460.604,
+   485.612,
+   510.621
+  ],
+  "major_tick_values": [
+   800,
+   600,
+   400,
+   200,
+   0
+  ],
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 0.1249,
+   "origin_px": 410.649,
+   "origin_value": 800.0,
+   "tick_step_units": -200.0,
+   "n_ticks": 5,
+   "tick_fit_residual_px": 0.0248,
+   "tick_residual_tol_px": 2.5
+  },
+  "leave_one_out_residuals_px": [
+   0.0005,
+   0.0271,
+   0.031,
+   0.0094,
+   0.0315
+  ],
+  "max_leave_one_out_residual_px": 0.0315,
+  "held_out_minor_ticks_px": [
+   423.154,
+   448.098,
+   473.108,
+   498.117
+  ],
+  "held_out_minor_predicted": [
+   699.921,
+   500.287,
+   300.126,
+   99.972
+  ],
+  "held_out_minor_expected": [
+   700.0,
+   500.0,
+   300.0,
+   100.0
+  ],
+  "held_out_minor_are_odd_half_steps": true,
+  "held_out_minor_max_abs_error": 0.2873,
+  "labels": [
+   "75-OCholB",
+   "76-OCholB",
+   "77-OCholB",
+   "78-OCholB",
+   "80-OCholB",
+   "81-OCholB",
+   "87-OCholB",
+   "90-OCholB",
+   "304-OCholB",
+   "Lpf2k",
+   "GFP-Cre",
+   "Control"
+  ]
+ },
+ "S24F": {
+  "what": "Cre-mediated gene recombination, HeLa-DsRed",
+  "n_bars": 36,
+  "n_groups": 12,
+  "major_ticks_px": [
+   411.234,
+   444.388,
+   477.605,
+   510.758
+  ],
+  "major_tick_values": [
+   90,
+   60,
+   30,
+   0
+  ],
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 1.106,
+   "origin_px": 411.228,
+   "origin_value": 90.0,
+   "tick_step_units": -30.0,
+   "n_ticks": 4,
+   "tick_fit_residual_px": 0.0193,
+   "tick_residual_tol_px": 2.5
+  },
+  "leave_one_out_residuals_px": [
+   0.0203,
+   0.0269,
+   0.0276,
+   0.022
+  ],
+  "max_leave_one_out_residual_px": 0.0276,
+  "held_out_minor_ticks_px": [
+   427.78,
+   460.997,
+   494.149
+  ],
+  "held_out_minor_predicted": [
+   75.034,
+   44.999,
+   15.024
+  ],
+  "held_out_minor_expected": [
+   75.0,
+   45.0,
+   15.0
+  ],
+  "held_out_minor_are_odd_half_steps": true,
+  "held_out_minor_max_abs_error": 0.0338,
+  "labels": [
+   "75-OCholB",
+   "76-OCholB",
+   "77-OCholB",
+   "78-OCholB",
+   "80-OCholB",
+   "81-OCholB",
+   "87-OCholB",
+   "90-OCholB",
+   "304-OCholB",
+   "Lpf2k",
+   "GFP-Cre",
+   "Control"
+  ]
+ }
+}

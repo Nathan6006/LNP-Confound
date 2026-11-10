@@ -1,0 +1,126 @@
+{
+ "_what": "THE INTAKE GATE for XQ_2020, filled BEFORE any digitiser or enumerator was written (PIPELINE_V2.md section 3, stage 00b). One entry per panel that could supply a per-member value.",
+ "_tier_ladder": ["1_publisher_source_data","2_si_tables","3_author_repo","4_pdfplumber_text_table","5_pixels"],
+
+ "verdict": "A USABLE PER-MEMBER VALUE SOURCE EXISTS: Figure 5. It is tier 5 (pixels), but it is the good case of tier 5 -- a grouped bar chart with a labelled linear y axis carrying four round ticks (0, 30, 60, 90), solid single-colour bars, and eleven printed category labels. 33 library values + 3 control values are readable.",
+
+ "why_tier_1_fails": {
+  "verdict": "No publisher Source Data file exists.",
+  "evidence": "ACS Bioconjugate Chemistry 2020 publishes supporting information as a single named asset. The PMC JATS record declares exactly ONE <supplementary-material>, 'Supporting Info'. The ACS SI we hold (bc0c00295_si_001.pdf) is that asset. ACS had no Source Data programme for this journal in 2020 and the article has no data-availability statement at all (searched the JATS for 'data availability': absent)."
+ },
+ "why_tier_2_fails": {
+  "verdict": "The SI contains no value table of any kind. It is 8 pages and every one was read as text.",
+  "page_by_page": {
+   "S1": "title page / author list",
+   "S2": "Figure S1, synthetic route to O16CBA (vector structures, no numbers)",
+   "S3": "Figure S2, 1H NMR of HexDMBA (integrals only)",
+   "S4": "Figure S3, 1H NMR of HexDMBAH (integrals only)",
+   "S5": "Figure S4, ESI-MS of 77-, 78-, 80-O16CBA (three m/z labels)",
+   "S6": "Figure S5, ESI-MS of 76-O16CBA at four pH (three m/z labels)",
+   "S7": "Figure S6, ESI-MS of 77-O16CBA at four pH (four m/z labels)",
+   "S8": "Figure S7, TEM images (no numbers)"
+  },
+  "what_the_SI_IS_good_for": "It is worthless as a value source and valuable as a STRUCTURE source: every m/z label on S5-S7 is a PDF text span, not pixels, so the arm-count anchors in 07_qc.json are read at tier 4 even though the delivery values are not."
+ },
+ "why_tier_3_fails": {
+  "verdict": "No author repository.",
+  "evidence": "find_repo.py run 2026-11-10 over --doi 10.1021/acs.bioconjchem.0c00295 --pmid 32520527 --title 'benzylidene acetal lipidoid' --author Xu returned zero candidate repositories; every hit was a third-party paper-scraper or an unrelated name collision ('Anythink-Market-lnp8p3xu', 'xlvb.lnpd'), all filtered. The paper names no repository, accession or deposition anywhere in its text."
+ },
+ "why_tier_4_is_PARTIAL": {
+  "verdict": "The RESULTS prose prints six individual numbers and several bounds. That is 6 of 33 values -- not an extraction, so it is used as a CHECK on the tier-5 read, never as the read itself.",
+  "printed_point_values": {
+   "Lpf2k (positive control)": "~91% GFP+",
+   "113-O16CBA (no helper lipid)": "29%",
+   "306-O16CBA (no helper lipid)": "44%",
+   "400-O16CBA (no helper lipid)": "68%",
+   "81-O16CBA-F1": "~93% (stated as the library maximum)",
+   "93-O16CBA-F1": "~2%",
+   "81-O16CBA-F2": "~78% (stated as the F2 maximum)"
+  },
+  "printed_bounds_and_counts": {
+   "untreated and naked mRNA": "<1% GFP+ each",
+   "R-O16CBA without helper lipids": "'eight of the LNP formulations ... had efficiencies below 15%' -- the eight two-tailed members",
+   "R-O16CBA-F1": "'Nine of the R-O16CBA-F1 formulations had >50% delivery efficiency'",
+   "R-O16CBA-F1 named band": "76-, 77-, 113-, 306-, 400-O16CBA-F1 induced 78-83%",
+   "R-O16CBA-F2 named band": "113-, 306-, 400-O16CBA-F2 were 57-73%",
+   "monotonicity_1": "'all LNPs, except for 93-O16CBA-F1, showed higher efficacies than their corresponding R-O16CBA formulations'",
+   "monotonicity_2": "'except for the 93-O16CBA-F2 and 400-O16CBA-F2, all other LNPs had higher efficacies than R-O16CBA'",
+   "monotonicity_3": "'Compared to the R-O16CBA-F1 LNPs, the delivery efficacies of R-O16CBA-F2 were slightly lower (except for 75- and 78-O16CBA-F2)'"
+  },
+  "why_this_matters": "Taken together these are 7 point values, 2 maxima, 2 bands, 1 count-above-threshold, 1 count-below-threshold and 3 pairwise sign statements covering all 33 cells. That is an unusually dense printed-statistic suite for a figure-only paper, and 07_qc.json tests the tier-5 read against every one of them."
+ },
+
+ "panels": [
+  {
+   "panel": "Figure 5 -- grouped bar chart, 'Delivery efficiency / %', 11 amine groups x 3 formulations, plus Untreated / mRNA / Lpf2k",
+   "source_file": "source/nihms-1799810-f0005.jpg (1050 x 439 px, 150 dpi)",
+   "tier": "5_pixels",
+   "subtier": "5b_raster",
+   "extracted": true,
+   "n_values_available_in_principle": 36,
+   "n_values_emittable_as_corpus_rows": 33,
+   "n_control_values_measured_but_not_emitted": 3,
+   "why_not_a_higher_tier": "tiers 1-4 fail as recorded above; the numbers behind this chart are published nowhere.",
+   "what_makes_it_calibratable": "a linear y axis with FOUR labelled tick marks at 0, 30, 60 and 90 and a drawn axis spine. axis.calibrate fits scale AND origin from the detected tick positions together; axis.loo_residuals is reported in 07_qc.json because calibrate's max-residual test is weak against a single bad tick.",
+   "hazards_specific_to_this_panel": [
+    "Every bar carries a symmetric s.d. error bar with a cap. bars.bar_top's left/right flank agreement is the defence (F-018, error class 32): a centred cap is in NEITHER flank, so a cap read would fail the flank test rather than pass silently.",
+    "The axis break '//' before the control group means the control bars sit in a separate x region. They are measured against the SAME y axis (the axis is continuous in y; only x is broken) but are not corpus rows.",
+    "JPEG, so colour is not exact. Bars are assigned to series by hue clustering with a reported margin, not by a nearest-literal."
+   ]
+  },
+  {
+   "panel": "Figure 6 -- cytotoxicity, MTT, 4 lipidoids + Lpf2k + untreated",
+   "tier": "5_pixels",
+   "extracted": false,
+   "why_not": "cell VIABILITY is not a delivery endpoint. The corpus endpoint set is delivery; viability would be a different Model_type on 4 members only. Printed values (Lpf2k ~53%, 306- and 400-O16CBA ~70%, 81- and 113-O16CBA >90%) are used as a CHECK that our Figure-5 member ordering is right, nothing more."
+  },
+  {
+   "panel": "Figure 4B -- hydrodynamic diameter at pH 7.2 vs 5.0",
+   "tier": "5_pixels",
+   "extracted": false,
+   "why_not": "a physical property, not delivery. Two printed anchors (382 nm -> 150 nm for 75-O16CBA) are used as checks only."
+  },
+  {
+   "panel": "Figure 3B -- acetal degradation % vs time at pH 4.5 / 7.2",
+   "tier": "4_pdfplumber_text_table",
+   "extracted": "as a printed statistic, not as a row",
+   "note": "the prose prints 25/60/88/99% at 1/4/8/24 h (pH 4.5) and 1.9/3.3% at 8/24 h (pH 7.2). A degradation kinetic, not a delivery value."
+  },
+  {
+   "panel": "Figure 2F -- 'Summary of chemical formulas and calculated and observed molecular weights'",
+   "tier": "5_pixels",
+   "extracted": "as STRUCTURE EVIDENCE, not as a value",
+   "note": "THE single most load-bearing asset in this curation. An 11-row table giving, per lipidoid, the molecular FORMULA of [M+H]+ and both the calculated and the observed m/z. It pins the arm count of every member independently of any pixel measurement, and it supports the three-way mass split the run brief asks for (ours vs their formula / their formula vs their m/z / ours vs their m/z). Read off the raster by eye at 4x and transcribed; every one of the 33 numbers is then re-derived from our own SMILES in 07_qc.json, so a transcription slip shows up as a mass disagreement rather than as silence."
+  },
+  {
+   "panel": "Figure 1C -- 'Chemical structures of amine head groups'",
+   "tier": "5_pixels",
+   "extracted": "as STRUCTURE EVIDENCE",
+   "note": "all 11 amine heads drawn in full. This is the C10 anchor source."
+  },
+  {
+   "panel": "Figure 1B / Figure S1 -- O16CBA tail and its synthetic route",
+   "tier": "5_pixels (Fig 1B) + 2_si_vector (Fig S1)",
+   "extracted": "as STRUCTURE EVIDENCE",
+   "note": "Figure S1 in the SI PDF is VECTOR, not raster. The tail is additionally pinned without any drawing at all by the Experimental Section, which names every reagent and gives a gram/millimole pair for each, so each reagent's molecular weight is recoverable to ~1% and checked in 07_qc.json."
+  },
+  {
+   "panel": "Table 1 (JATS markup)",
+   "tier": "2_si_tables",
+   "extracted": true,
+   "note": "the three formulations, as markup rather than pixels: R-O16CBA = lipidoid only; -F1 = lipidoid/cholesterol/DOPE 4/1/1 by weight; -F2 = 4/1/4 by weight. This is the formulation metadata for all 33 rows and it required no digitisation."
+  }
+ ],
+
+ "resolution_caveat": {
+  "what": "Figure 5 is only available at 1050 x 439 px. The author-manuscript PDF, which might carry it larger, is behind a reCAPTCHA that this run may not bypass; the ACS version is paywalled.",
+  "is_it_enough": "Yes, and it is measured rather than asserted: the plot area spans about 350 px for 0-100%, i.e. ~3.4 px per percentage point. The quantisation floor is therefore about 0.3 percentage points, an order of magnitude below the s.d. the authors themselves draw on every bar. The limiting error here is the authors' replicate scatter, not our pixel grid.",
+  "what_would_still_be_better": "the numbers. They do not exist outside this figure."
+ },
+
+ "structures_vs_values": {
+  "distinct_ionizable_structures": 11,
+  "formulations": 33,
+  "trap_1_check": "The run brief warns that 'N lipids' often means N FORMULATIONS. Here the paper never states a library size at all, and the two counts genuinely differ: 11 distinct ionizable lipidoid STRUCTURES (one per amine head), each fabricated in 3 formulations (R-O16CBA, -F1, -F2) that differ only in cholesterol and DOPE content. 03_enumerated.csv therefore has 11 rows and 05_values.csv has 33."
+ }
+}

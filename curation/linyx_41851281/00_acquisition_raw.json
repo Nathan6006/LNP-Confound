@@ -1,0 +1,130 @@
+{
+ "requested": "https://doi.org/10.1038/s41551-026-01640-8",
+ "final_url": "https://www.nature.com/articles/s41551-026-01640-8?error=cookies_not_supported&code=7a277949-07c0-47fd-bbdb-0f7aea9b1094",
+ "title": "Artificial intelligence-guided design of LNPs for in vivo targeted mRNA delivery via analysis of the spatial conformation of ionizable lipids | Nature Biomedical Engineering",
+ "n_assets": 17,
+ "assets": [
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM1_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM2_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM3_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM4_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM5_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM6_ESM.zip",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM7_ESM.zip",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM8_ESM.zip",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM9_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM10_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM11_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM12_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM13_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM14_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM15_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM16_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM17_ESM.xlsx"
+ ],
+ "downloaded": [
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM1_ESM.pdf",
+   "file": "41551_2026_1640_MOESM1_ESM.pdf",
+   "bytes": 23324377,
+   "sha256": "f2d2781e41e24485e9ebbe8f4aa7c155ea6f80765e628f65cbd74f064ab8e0c5"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM2_ESM.pdf",
+   "file": "41551_2026_1640_MOESM2_ESM.pdf",
+   "bytes": 3416386,
+   "sha256": "1a13b999f738b961fb9ade261968fb766570cc5fdd0d8f7ee60db9b633fa0b5d"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM3_ESM.pdf",
+   "file": "41551_2026_1640_MOESM3_ESM.pdf",
+   "bytes": 9224857,
+   "sha256": "872ccf8ccfdb248775d92f02d012c1faec0e60a9bf72234c71342ae75bfc21b7"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM4_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM4_ESM.xlsx",
+   "bytes": 153130,
+   "sha256": "98666ffa3e21ebf26d2a7e36485f3580454217adfb2fc0b79950ed800af25fd7"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM5_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM5_ESM.xlsx",
+   "bytes": 8891016,
+   "sha256": "e71bf1880e5765c44e7dbcbe345ec37725eb48495367591184f80fc4b9125e22"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM6_ESM.zip",
+   "file": "41551_2026_1640_MOESM6_ESM.zip",
+   "bytes": 9764657,
+   "sha256": "4f067a413322878e990a5a72d843305946e72f0625a611b8254556704d8facfe"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM7_ESM.zip",
+   "file": "41551_2026_1640_MOESM7_ESM.zip",
+   "bytes": 7425398,
+   "sha256": "9b71b7eb9f02f4660ae2745123ed69c1b6c029e55c24ec59f6486797b4acae69"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM8_ESM.zip",
+   "file": "41551_2026_1640_MOESM8_ESM.zip",
+   "bytes": 3476,
+   "sha256": "d8bede59b83d98f15451d9db6da17d62619f9d4897106449ce6cc11b68a3d1e9"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM9_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM9_ESM.xlsx",
+   "bytes": 27526,
+   "sha256": "f6a1e921c837a36a0ba3b32392c8e1931d7f2b129041a8a247c61f24a870fa37"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM10_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM10_ESM.xlsx",
+   "bytes": 12433,
+   "sha256": "7f61f08e455befc2a48e922869c993ec4b6192b2fa863794d08b6085e67289d2"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM11_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM11_ESM.xlsx",
+   "bytes": 77853,
+   "sha256": "460c4b547827d2d671c534c274e43684f87df85494186f9fb8fe109a89028f89"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM12_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM12_ESM.xlsx",
+   "bytes": 9517,
+   "sha256": "7f197ce540d9c6fb5a8046db1f8f60a9d293842227408a0acac81aae6a7e0796"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM13_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM13_ESM.xlsx",
+   "bytes": 11877,
+   "sha256": "d52fa08e1f56ac3807fc34c1b3f64c78c785a0329e15de33ee13f54552731bf0"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM14_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM14_ESM.xlsx",
+   "bytes": 17220,
+   "sha256": "2a0013631cd6eafac0de8b63110a6d06392ec243e1911934a808f449aec7e970"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM15_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM15_ESM.xlsx",
+   "bytes": 16775,
+   "sha256": "d51821b4ca3fc8eb51f03dc86ade015a75ceb9ce4646c1d000e500e86456edb8"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM16_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM16_ESM.xlsx",
+   "bytes": 10299,
+   "sha256": "fe8d1652661b0a940931db00ea0f409c79fef6fad9c13fa2b601c2c05a833d10"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41551-026-01640-8/MediaObjects/41551_2026_1640_MOESM17_ESM.xlsx",
+   "file": "41551_2026_1640_MOESM17_ESM.xlsx",
+   "bytes": 48179,
+   "sha256": "c13e3d54a64ec80cdd661fcf4a40df62a5af29c21cd78ec6f6baefc87756fe3e"
+  }
+ ],
+ "retrieved_utc": "2026-11-10T04:20:34Z"
+}

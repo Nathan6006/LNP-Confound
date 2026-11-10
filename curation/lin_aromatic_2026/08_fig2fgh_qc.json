@@ -20,6 +20,10 @@
    "tick_fit_max_residual_px": 1.3,
    "percent_per_tick": 20.0,
    "px_per_percent": 5.095,
+   "axis_intervals_baseline_to_top_tick": 4.98,
+   "axis_intervals_implied_by_TICK_PCT": 5.0,
+   "light_min_area_largest_rejected": 2216,
+   "light_min_area_smallest_kept": 13408,
    "scale_source": "y-axis tick centres only; NOT fitted to the Fig 2e rates being validated (F-006)",
    "measured": {
     "1B": [
@@ -133,6 +137,10 @@
    "tick_fit_max_residual_px": 0.9,
    "percent_per_tick": 20.0,
    "px_per_percent": 5.135,
+   "axis_intervals_baseline_to_top_tick": 4.961,
+   "axis_intervals_implied_by_TICK_PCT": 5.0,
+   "light_min_area_largest_rejected": 1348,
+   "light_min_area_smallest_kept": 18012,
    "scale_source": "y-axis tick centres only; NOT fitted to the Fig 2e rates being validated (F-006)",
    "measured": {
     "8A": [
@@ -229,6 +237,10 @@
    "tick_fit_max_residual_px": 2.09,
    "percent_per_tick": 20.0,
    "px_per_percent": 5.347,
+   "axis_intervals_baseline_to_top_tick": 4.97,
+   "axis_intervals_implied_by_TICK_PCT": 5.0,
+   "light_min_area_largest_rejected": 2260,
+   "light_min_area_smallest_kept": 7720,
    "scale_source": "y-axis tick centres only; NOT fitted to the Fig 2e rates being validated (F-006)",
    "measured": {
     "EP6": [

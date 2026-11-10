@@ -1,0 +1,241 @@
+{
+ "_what": "Overlap of this paper's 133 formulations with data/ (29,195 vitro + 1,803 vivo rows), by name, full InChIKey and skeleton InChIKey. Structure keys are reported only for the 13 catalogue reagents; the 120 nDm library members have no determinable structure (DECISIONS D-2), so for them the ONLY key available is the name.",
+ "our_library": {
+  "total": 133,
+  "nDm_members": 120,
+  "catalogue_reagents": 13
+ },
+ "name_identity": {
+  "n_hits": 4,
+  "hits": {
+   "C12-200": [
+    "AC_2025"
+   ],
+   "DLin-MC3-DMA": [
+    "AC_2025",
+    "BL_2023",
+    "NG_2025_2",
+    "SP_2020",
+    "WT_2026",
+    "XD_2026",
+    "YZ_2022",
+    "YZ_2024",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "SM-102": [
+    "AC_2025",
+    "SB_2024",
+    "SS_2018",
+    "SY_2025",
+    "WT_2026",
+    "XD_2026"
+   ],
+   "ALC-0315": [
+    "AC_2025",
+    "LZ_2025",
+    "XD_2026"
+   ]
+  },
+  "nDm_members_matching_a_corpus_IL_name": []
+ },
+ "token_pattern_test": {
+  "amine_tokens": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "contiguous_1_to_N": true,
+  "verdict": "LOCAL INDICES. The amine tokens are the contiguous run 1..20 with no gaps, which is the signature of a per-paper index, not of the sparse shared amine catalogue.",
+  "corpus_bare_numeric_IL_names_in_1_20": [],
+  "naive_substring_join_damage": {
+   "1": {
+    "rows": 20837,
+    "distinct_structures": 14437,
+    "experiments": 50
+   },
+   "2": {
+    "rows": 15633,
+    "distinct_structures": 10573,
+    "experiments": 50
+   },
+   "3": {
+    "rows": 13422,
+    "distinct_structures": 8585,
+    "experiments": 52
+   },
+   "4": {
+    "rows": 8724,
+    "distinct_structures": 7638,
+    "experiments": 45
+   },
+   "5": {
+    "rows": 5866,
+    "distinct_structures": 4780,
+    "experiments": 46
+   },
+   "6": {
+    "rows": 7906,
+    "distinct_structures": 6700,
+    "experiments": 46
+   },
+   "7": {
+    "rows": 4005,
+    "distinct_structures": 3359,
+    "experiments": 38
+   },
+   "8": {
+    "rows": 5410,
+    "distinct_structures": 4632,
+    "experiments": 43
+   },
+   "9": {
+    "rows": 5590,
+    "distinct_structures": 4817,
+    "experiments": 38
+   },
+   "10": {
+    "rows": 5651,
+    "distinct_structures": 2817,
+    "experiments": 47
+   },
+   "11": {
+    "rows": 2669,
+    "distinct_structures": 2165,
+    "experiments": 33
+   },
+   "12": {
+    "rows": 3206,
+    "distinct_structures": 2162,
+    "experiments": 38
+   },
+   "13": {
+    "rows": 1397,
+    "distinct_structures": 1076,
+    "experiments": 22
+   },
+   "14": {
+    "rows": 1870,
+    "distinct_structures": 1394,
+    "experiments": 31
+   },
+   "15": {
+    "rows": 1347,
+    "distinct_structures": 863,
+    "experiments": 23
+   },
+   "16": {
+    "rows": 1103,
+    "distinct_structures": 1010,
+    "experiments": 27
+   },
+   "17": {
+    "rows": 671,
+    "distinct_structures": 484,
+    "experiments": 18
+   },
+   "18": {
+    "rows": 1500,
+    "distinct_structures": 1244,
+    "experiments": 26
+   },
+   "19": {
+    "rows": 736,
+    "distinct_structures": 434,
+    "experiments": 17
+   },
+   "20": {
+    "rows": 1199,
+    "distinct_structures": 487,
+    "experiments": 18
+   }
+  },
+  "conclusion": "No name join on an amine token is performed anywhere in this curation."
+ },
+ "catalogue_reagent_structures": {
+  "C12-200": {
+   "corpus_SMILES": "CCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC",
+   "ambiguous": false
+  },
+  "cKK-E12": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('cKK-E12'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "DLin-MC3-DMA": {
+   "corpus_SMILES": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+   "ambiguous": false
+  },
+  "306Oi10": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('306Oi10'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "SM-102": {
+   "corpus_SMILES": "CCCCCCCCCCCOC(=O)CCCCCN(CCO)CCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC",
+   "ambiguous": false
+  },
+  "ALC-0315": {
+   "corpus_SMILES": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC",
+   "ambiguous": false
+  },
+  "C14-482": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C14-482'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C14-488": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C14-488'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C16-488": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C16-488'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C12-494": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C12-494'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C14-494": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C14-494'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C16-494": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C16-494'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C14-c494": {
+   "corpus_SMILES": null,
+   "ambiguous": false,
+   "why": "corpus_components.smi('C14-c494'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  }
+ },
+ "already_merged_arm_check": {
+  "sibling_folder": "curation/mitchellmj_38982196 (same lab, staged, 100 rows, Wang et al. Nat Chem 2024)",
+  "its_grammar": "<amine>T-O<tail>  (T = 2-iminothiolane/thioether)",
+  "our_grammar": "<amine>D<maleate> (D = dialkyl maleate, aza-Michael)",
+  "shared_name_tokens": "none - the two grammars share no member name"
+ }
+}

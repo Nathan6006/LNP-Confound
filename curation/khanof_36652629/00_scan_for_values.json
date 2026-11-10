@@ -1,0 +1,134 @@
+{
+ "pdf": "source/ja2c10670_si_001.pdf",
+ "questions": {
+  "Q1_printed_flux_values_in_text_layer": {
+   "n_pages": 39,
+   "total_text_chars": 43853,
+   "n_lines_with_flux_vocab_AND_a_big_number": 0,
+   "hits": [],
+   "verdict": "NONE -- no luminescent flux value is typeset anywhere in the SI text layer"
+  },
+  "Q2_figure_panels_are_pdf_vector": {
+   "pages_checked": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "per_page": [
+    {
+     "page": 2,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 1,
+     "image_pixels": 2180654
+    },
+    {
+     "page": 3,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 2,
+     "image_pixels": 2122883
+    },
+    {
+     "page": 4,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 1,
+     "image_pixels": 1087268
+    },
+    {
+     "page": 5,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 1,
+     "image_pixels": 598430
+    },
+    {
+     "page": 6,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 1,
+     "image_pixels": 2042037
+    },
+    {
+     "page": 7,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 3,
+     "image_pixels": 1237081
+    },
+    {
+     "page": 8,
+     "n_drawings": 0,
+     "n_rect_items": 0,
+     "n_filled_paths": 0,
+     "n_images": 3,
+     "image_pixels": 1979172
+    }
+   ],
+   "total_filled_paths_on_figure_pages": 0,
+   "verdict": "FLATTENED RASTER -- 0 filled paths and 0 rectangle items on every figure page, each page carrying one to three embedded images instead. Tier 4b_pdf_vector_geometry does NOT apply to this paper."
+  },
+  "Q3_what_the_text_layer_gives": {
+   "table_S2_pages": [
+    36,
+    37
+   ],
+   "table_S2_formulation_ids_found": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    36,
+    37
+   ],
+   "table_S2_carries": [
+    "Formulation ID",
+    "Ionizable Lipid",
+    "RNA Type",
+    "N/P",
+    "Total Lipids/RNA (wt/wt)",
+    "Z Average (nm)",
+    "PDI",
+    "EE (%)",
+    "pKa"
+   ],
+   "table_S2_carries_a_delivery_value": false,
+   "verdict": "Table S2 is PHYSICOCHEMICAL characterisation only. It is the paper's formulation registry and it is what lets each figure panel be tied to a named batch -- but it prints no flux."
+  }
+ }
+}

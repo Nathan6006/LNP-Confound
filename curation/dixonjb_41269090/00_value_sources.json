@@ -1,0 +1,110 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2.md section 3, Stage 00b). Written BEFORE any extraction code in this folder. Every panel or table that could supply a value names the tier it came from, and anything at tier 5 says why tiers 1-4 failed in a sentence a reviewer can check.",
+  "_tiers": ["1_publisher_source_data", "2_si_tables", "3_author_repository", "4_pdf_text_table", "5_pixels"],
+
+  "endpoint_headline": "The screen's own readout is a POOLED DNA-BARCODE assay (SANDS): 99 QC-passing LNPs co-injected, LECs with high aVHH protein sorted by FACS, barcodes sequenced, value = normalised barcode count. The per-LNP SANDS numbers are NOT published in any table or text and are therefore not extractable at any tier. The paper's ADMISSIBLE values are the single-LNP validation studies, where each formulation was administered on its own and the readout is the percentage of lymphatic endothelial cells expressing the delivered aVHH protein, measured by flow cytometry. That is a cargo-expression measurement, not particle accumulation.",
+
+  "value_bearing_panels": [
+
+    {
+      "panel": "SANDS pooled screen, 99 LNPs, 'total LN LEC delivery' (main Figure 3, SI Figure S3a histogram, S3b UMAP)",
+      "quantity": "product of normalised PLN, ALN and BLN barcode read-outs",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why_not_1": "ACS publishes no Source Data product for ACS Nano; no such file exists for this article.",
+      "why_not_2": "The SI we hold contains no SANDS value table. Its only tables are S1 (lead formulations), S2 (LEC and aVHH+ counts for the six leads), S3 and S4 (cell counts and aVHH+ counts by cell type). Verified by enumerating every table on all 24 pages.",
+      "why_not_3": "No author repository (see 00_acquisition.json repository_search). The Methods name a 'custom-built Python script for SANDS analysis' with no URL and the article carries no Data Availability statement.",
+      "why_not_4": "No page's text layer carries per-LNP barcode values; the only numeric text on the SANDS pages is the figure captions.",
+      "why_not_5": "Figure S3a is a HISTOGRAM of the delivery distribution, not a per-LNP plot: bin heights give counts of LNPs, not a value per LNP, so even a perfect pixel read recovers no per-member number. Figure 3B is a SHAP beeswarm over model features, not over the label. Figure S3b is a UMAP of COMPOSITION, whose axes are embedding coordinates with no units.",
+      "admissibility_if_it_had_been_available": "see DECISIONS.md D-1. Pooled barcode counts are relative and competitive and would need that argued before extraction."
+    },
+
+    {
+      "panel": "main Figure 2B, 2C, 2D -- percentage of aVHH+ LECs in ALN, BLN and PLN after INDIVIDUAL intradermal administration of saline, LNP1, LNP2, LNP3, LNP4, LNP7, LNP11",
+      "quantity": "% of CD45-/CD31+/PDPN+ LECs positive for aVHH protein, 12-16 h after ID injection in both paws",
+      "tier": "5_pixels_printed_numerals",
+      "held": true,
+      "source_actually_used": "SI Table S2 (page 22), 'Average LEC count and LEC/aVHH+ cell count for lead LEC-specific LNP candidates'. The percentage is computed as aVHH+ cell count / LEC count. NOTHING IS DIGITISED FROM THE FIGURE: the numerals in Table S2 are read directly.",
+      "why_not_1": "no Source Data product (see above).",
+      "why_not_2": "Table S2 IS the SI table, but it is PASTED INTO THE PDF AS A BITMAP. Its page carries only 285 characters of text -- the caption and the ACS download watermark -- and pdfplumber.find_tables() finds nothing on it. So it cannot be read at tier 2 or tier 4 even though it is an SI table.",
+      "why_not_3": "no repository.",
+      "why_not_4": "no text layer for the table body, as above. Measured: page 22 text length 285 chars, 1 embedded PNG of 1128x1359 px at a measured native 198.5 dpi.",
+      "why_tier_5_is_mild_here": "These are PRINTED NUMERALS in a table bitmap, not a plotted quantity. There is no axis, no scale, no origin and no colour ramp, so error classes 20, 23, 27, 28, 32 and 43 cannot arise -- nothing is measured, only read. The read is verified by a second independent read at a different crop and magnification (21/21 agreement, see 07_qc.json check table_s2_double_read).",
+      "known_limitation": "RATIO OF MEANS, NOT MEAN OF RATIOS. Table S2 reports the AVERAGE counts; the figure plots one point per independent experiment and its mean. The two statistics are not equal and differ by up to 2.5x on one cell. Recorded in 08_contradictions.csv and on every emitted row's curation_note."
+    },
+
+    {
+      "panel": "main Figure 4A -- percentage of aVHH+ LECs in PLN (injected) and PLV after individual administration of saline, free aVHH mRNA, MC3 and LNP7",
+      "quantity": "same readout; one hindlimb injected only, so ALN/BLN/PLN-contralateral are off-target controls",
+      "tier": "5_pixels_printed_numerals",
+      "held": true,
+      "source_actually_used": "SI Table S3 (page 23, 'Average cell count ... ') and Table S4 (page 24, 'Average aVHH+ cell count ...'), LECs column. Percentage = S4 LECs / S3 LECs.",
+      "why_not_1234": "identical to Table S2: both pages are single embedded PNGs (1623x1343 and 1624x1342 px, measured native 249.7 and 249.8 dpi) with 336 and 343 characters of page text, all caption and watermark.",
+      "cross_check_available": "the main text prints the resulting percentages for all four PLN-injected and all four PLV groups; 7 of those 8 reproduce within 2.5 percentage points from our read. See 07_qc.json."
+    },
+
+    {
+      "panel": "main Figure 4B and SI Figure S6 -- percentage of aVHH+ cells by cell type (LECs, BECs, VECs, macrophages, monocytes, cDC2, cDC1, DNs, FRCs)",
+      "quantity": "same readout in NON-lymphatic cell populations",
+      "tier": "5_pixels_printed_numerals",
+      "held": true,
+      "source_actually_used": "Tables S3 and S4, all nine cell-type columns. Read in full and recorded in 05_values.csv so the non-LEC panels are visibly classified rather than silently dropped."
+    },
+
+    {
+      "panel": "SI Figure S1 / SI Table S1 -- the LNP library compositions",
+      "quantity": "component identities and mole percentages; metadata, not a value",
+      "tier": "4_pdf_text_table",
+      "held": true,
+      "source_actually_used": "pdfplumber native table on SI page 2 (Screening 1, 30 LNPs + header) and on SI page 21 (Table S1, the 6 leads + MC3). Both extract cleanly from the text layer.",
+      "gap": "Screening 2 and Screening 3 of Figure S1 are BITMAPS (SI pages 3, 4 and 6, measured native 122.7, 108.6 and 99.2 dpi) and are not transcribed, because no value in this curation depends on them: every formulation we emit is a Screening-1 member and appears in BOTH the page-2 native table and the page-21 native table."
+    },
+
+    {
+      "panel": "main Figure 1D/1E, SI Figure S4a, SI Figure S9 -- hydrodynamic diameter, PDI, zeta potential, encapsulation efficiency",
+      "tier": "N/A",
+      "classification": "NOT A DELIVERY ENDPOINT. Particle physicochemistry. Excluded by the endpoint vocabulary."
+    },
+    {
+      "panel": "main Figure 5 -- Cy3-miRNA average radiant efficiency in PLNI/PLNC/BLN/ALN/spleen/liver by IVIS at 1, 4, 24 h",
+      "tier": "N/A",
+      "classification": "NOT A DELIVERY ENDPOINT. This is PARTICLE / CARGO-LABEL BIODISTRIBUTION -- fluorescence of a dye-conjugated miRNA, with no expression step. This is exactly the 'lymphatic targeting measured as accumulation' case the brief warns about, and it is present in this paper ALONGSIDE, not instead of, the expression measurement."
+    },
+    {
+      "panel": "main Figures 6, 8, 9 -- PDPN+/DAPI+ lymphatic area, EdU+/PROX1+ LEC proliferation, NIR lymphatic pump function, tail oedema",
+      "tier": "N/A",
+      "classification": "NOT A DELIVERY ENDPOINT. Therapeutic phenotype."
+    },
+    {
+      "panel": "main Figure 7 -- VEGFC concentration by ELISA in popliteal downstream fluid and paw skin",
+      "tier": "N/A_BUT_ARGUABLE",
+      "classification": "This measures the PROTEIN PRODUCT OF THE DELIVERED mRNA, so it is cargo expression in kind. Excluded anyway, on three grounds stated here so the exclusion is checkable: (i) the values are plotted only, never printed, and the panels are not held; (ii) the quantity is 'optical density normalised to the LNP7-aVHH mRNA group', a ratio to a different-cargo control, not an absolute or per-formulation delivery value; (iii) it compares two formulations (LNP7, MC3) already emitted from Figure 4, so it adds no new formulation. Recorded in 05_values.csv as inadmissible with this reason."
+    },
+    {
+      "panel": "SI Figure S2 -- LEC count and aVHH+ LEC count per SCREEN",
+      "tier": "5_pixels",
+      "classification": "Per-screen aggregate over the whole pooled library, not per LNP. Not a per-formulation value. Not extracted."
+    },
+    {
+      "panel": "SI Figure S7 -- Alamar Blue metabolic activity and Live/Dead on human LECs",
+      "tier": "N/A",
+      "classification": "NOT A DELIVERY ENDPOINT. Viability."
+    },
+    {
+      "panel": "SI Figure S10 -- % aVHH+ in PLN after intravenous vs intradermal injection during screening",
+      "tier": "5_pixels",
+      "classification": "Route comparison during the POOLED screen: the administered article is the pool, not a single LNP, so no value attaches to a formulation. Not extracted."
+    },
+    {
+      "panel": "main Figure 3A -- model MSE and R-squared; Figure 3B and S5 -- SHAP / coefficients / feature importances",
+      "tier": "N/A",
+      "classification": "Model outputs, not measurements."
+    }
+  ],
+
+  "verify_claim": {
+    "claim": "no page of the SI PDF carries a text layer for the bodies of Tables S2, S3 or S4, and no page carries per-LNP SANDS values",
+    "command": "python3 -I stage00_scan_for_values.py",
+    "what_it_does": "prints, per SI page, the character count of the text layer, the number of embedded images with their pixel size and MEASURED native dpi, and every numeric token found outside a caption. A reviewer can re-run it and see that pages 22-24 carry caption text only."
+  }
+}

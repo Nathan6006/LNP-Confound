@@ -1,0 +1,67 @@
+{
+  "_what": "Stage 00 acquisition record. PIPELINE_V2.md S3.",
+  "paper": {
+    "title": "A human cardiomyocyte screen identifies optimized lipid nanoparticles for in vivo cardiac gene editing",
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 2026,
+    "volume": "123",
+    "issue": "21",
+    "elocation": "e2528477123",
+    "doi": "10.1073/pnas.2528477123",
+    "pmid": "42150080",
+    "pmcid": "PMC13214034",
+    "first_author": "Sun, Yehui",
+    "corresponding": ["Daniel.Siegwart@UTSouthwestern.edu", "Eric.Olson@UTSouthwestern.edu"],
+    "lab": "Siegwart (UT Southwestern) / Olson (UT Southwestern)",
+    "published_electronic": "2026-05-18"
+  },
+  "licence": {
+    "string": "CC BY-NC-ND 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "read_from": [
+      "PMC13214034.jats.xml <ali:license_ref content-type=\"ccbyncndlicense\">",
+      "api.crossref.org/works/10.1073/pnas.2528477123 -> license[0].URL, content-version vor, delay-in-days 0"
+    ],
+    "WARNING": "NC-ND is NOT CC0/CC-BY-compatible. CLAUDE.md S8 requires every constituent source licence to be CC0/CC-BY-compatible before corpus release. Raised as D-5.",
+    "read_on": "2026-11-10"
+  },
+  "files_held": [
+    {
+      "name": "pnas.2528477123.sapp.pdf",
+      "what": "SI Appendix: Methods, Table S1 (primers), Figures S1-S11. 15 pages.",
+      "bytes": 15009424,
+      "sha256": "c4416999b9525f52f480df71d13e9d67156fb9d40c8c90f0c6232d0d4386b9e7",
+      "provenance": "supplied in the folder at task start; byte-identical twin also present at ~/LNP/Papers/'Sun, 2026, ... (SI).pdf'",
+      "url_recorded": null,
+      "url_note": "No landing-page URL was captured at acquisition and www.pnas.org returns 403 to every plain client tried on 2026-11-10, so the URL cannot be back-filled without a browser. Recorded as absent rather than reconstructed."
+    },
+    {
+      "name": "PMC13214034.jats.xml",
+      "what": "PMC front matter ONLY. Carries the comment '<!--The publisher of this article does not allow downloading of the full text in XML form.-->' and pmc-status-live=no, pmc-status-embargo=yes, pmc-release date 2026-11-18. No <body>, n_tables 0.",
+      "bytes": 20395,
+      "sha256": "3f29188b0368013d336e84f4078a93606834715e6c7d986605a0d533fb7b9ae6",
+      "url": "https://eutils.ncbi.nlm.nih.gov/ (efetch, via provenance scratchpad tool pmc_fetch.py)",
+      "fetched_utc": "2026-11-10"
+    }
+  ],
+  "files_NOT_held": [
+    {
+      "name": "main article PDF (11 pages, 7,949 words; Figures 1-6)",
+      "why": "www.pnas.org/doi/10.1073/pnas.2528477123 -> HTTP 403 (Cloudflare 'Just a moment...') to curl with a browser UA and to WebFetch. pmc.ncbi.nlm.nih.gov/articles/PMC13214034/ -> HTTP 403; the PMC record itself says live=no, embargo=yes, release 2026-11-18. The shared Playwright browser is owned by the main session and was not used, per the task brief. No paywall or bot-check bypass was attempted.",
+      "consequence": "This is where the hiPSC-CM screen values live. See 00_value_sources.json."
+    },
+    {
+      "name": "pnas.2528477123.sm01.ts and any further sm*",
+      "why": "could not enumerate - the article page is 403 to plain clients and Crossref registers no components (relation {} , no components field).",
+      "what_is_known": "The JATS badge subj-group is <compound-subject-part content-type=\"code\">video</compound-subject-part>, i.e. the extra supplements are MOVIES (light-sheet whole-heart imaging, Fig S4/S5 context), and PMC declares exactly 1 supplementary item (the sapp.pdf). No dataset supplement is declared anywhere we can read."
+    }
+  ],
+  "tier3_repo_search": {
+    "tool": "find_repo.py --doi 10.1073/pnas.2528477123 --pmid 42150080 --title 'human cardiomyocyte lipid nanoparticles' --author Siegwart",
+    "code_search_doi_hits": 7,
+    "code_search_pmid_hits": 20,
+    "repo_search_hits": 0,
+    "candidates_after_filter": 0,
+    "verdict": "no author repository, no Zenodo/Dryad pointer reachable"
+  }
+}

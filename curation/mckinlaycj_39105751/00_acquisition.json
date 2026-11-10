@@ -1,0 +1,45 @@
+{
+ "_what": "Where each input file came from, with sha256, so a reviewer can confirm they are reading what this curation read.",
+ "paper": {
+  "pmid": "39105751",
+  "pmcid": "PMC11342374",
+  "doi": "10.1021/acsnano.4c05513",
+  "journal": "ACS Nano",
+  "year": 2024,
+  "title": "Discovery of a Peptoid-Based Nanoparticle Platform for Therapeutic mRNA Delivery via Diverse Library Clustering and Structural Parametrization",
+  "corresponding_author_lastname_in_folder_name": "McKinlay",
+  "first_author": "Elizabeth R. Webster",
+  "last_author": "Colin J. McKinlay",
+  "note_on_authors": "18 authors; Ronald N. Zuckermann (peptoid submonomer synthesis) is second-to-last. Affiliation is Nutcracker Therapeutics, whose proprietary microfluidic system is named in the Methods."
+ },
+ "files": [
+  {
+   "name": "source/nn4c05513_si_001.pdf",
+   "bytes": 1662797,
+   "sha256": "5d80256aa250e76b95fb052165d619e179f86788b7536fe2231537f330b4286c",
+   "pages": 46,
+   "origin": "ACS supplementary file, already present in this folder when the curation began (acquired 2026-11-09). Its own page footer records the download path pubs.acs.org/ancac3/article-supplement/151086/pdf/nn4c05513_si_001/.",
+   "licence": "NOT CAPTURED. The ACS landing page could not be read to transcribe the licence string. The PMC record is open access (see below) but the SI PDF's own terms were not verified. CLAUDE.md section 8 requires a CC0/CC-BY-compatible licence on every constituent source before corpus release, so THIS IS AN OPEN GAP -- see DECISIONS.md D-4."
+  },
+  {
+   "name": "source/PMC11342374.jats.xml",
+   "bytes": 178203,
+   "sha256": "7482f3406e9db3ddb547228cfd92c05e2fc8203a3ae74cf9fa1c538f68140b36",
+   "origin": "PubMed Central JATS full text, fetched 2026-11-10 UTC via provenance/../scratchpad tools/pmc_fetch.py PMC11342374.",
+   "contains": "complete main-article body, Experimental Methods, and Table 1 as structured <table-wrap> markup. THIS IS THE ONLY SOURCE OF THE FIVE EMITTED VALUES.",
+   "licence": "open access in PMC. The exact licence line was not transcribed from the PMC landing page; see DECISIONS.md D-4."
+  }
+ ],
+ "not_acquired": [
+  {
+   "name": "main-article figure rasters nn4c05513_0002..0008.jpg",
+   "where": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11342374/bin/",
+   "outcome": "one plain request each returned a ~21 kB HTML interstitial (a bot check). nn4c05513_0001.jpg (Figure 1) WAS served, 4183x2463 px at 600 dpi, and is the source of the monomer pool.",
+   "posture": "NOT retried. CLAUDE.md non-negotiables: do not attempt to bypass a paywall or bot check. A retry-with-backoff loop was attempted once, refused by the harness, and not repeated. This is the reason 93 + 12 + 34 + 4 per-member values are unavailable; it is an acquisition gap, not a digitisation failure."
+  },
+  {
+   "name": "main-article PDF nn4c05513.pdf",
+   "outcome": "same interstitial. Not required: the PMC JATS carries the full body text and Table 1."
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+block,panels,what,n_distinct_structures,n_formulations,n_individually_measured,cargo,cell,readout,formulation_source
+R1_formulation_DoE,FigS4b,"60-prescription orthogonal formulation design on ONE ionizable lipid (VN2C2), siLuc knockdown in 4T1-Luc",1,60,60,siLuc,4T1-Luc,Luciferase expression (%),"Supplementary Table 2 (PDF text layer, tier 2)"
+R2_structure_x_PEG_4T1,FigS5a,"6 ionizable-lipid structures x 3 DMG-PEG levels, siLuc knockdown in 4T1-Luc",6,18,18,siLuc,4T1-Luc,Luciferase expression (%),NOT RECOVERABLE - the three PEG levels are labelled PEG-0.5 / PEG-1 / PEG-2 and no mol% for any component is given for this figure
+R3_structure_x_PEG_MC38,FigS5b,"the same 6 structures x 3 DMG-PEG levels, siLuc knockdown in MC38-Luc",6,18,18,siLuc,MC38-Luc,Relative luciferase expression (%),"NOT RECOVERABLE, as R2"
+R4_lipid_to_pDNA_ratio,FigS7,pGFP transfection vs lipid:pDNA mass ratio,0,5,7,pGFP,,Percentage of GFP+ cells (%),NOT RECOVERABLE - the caption names no lipid and no component mol%
+R5_VE_TPGS_substitution,FigS8a;FigS8b,"mFLuc delivery when VN2C1 is replaced by, or SM-102 is supplemented with, free vitamin E or TPGS",2,8,10,mFLuc,,Luciferase intensity (RLU),NOT RECOVERABLE - no mol% stated
+R6_storage,FigS13b,mGFP delivery by the VN2C1 LNP before and after 7 days storage,1,1,3,mGFP,RAW264.7,GFP+ cells (%),NOT RECOVERABLE

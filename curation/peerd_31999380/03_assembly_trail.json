@@ -1,0 +1,198 @@
+{
+ "L1": [
+  [
+   "N-monoalkylhydrazine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCNN"
+  ],
+  [
+   "N,N-dialkylhydrazine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(N)CCCCCCCC/C=C\\C/C=C\\CCCCC"
+  ],
+  [
+   "acylhydrazide",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCCCCCCC/C=C\\C/C=C\\CCCCC)NC(=O)CCCN(C)C"
+  ]
+ ],
+ "L2": [
+  [
+   "N-monoalkylhydrazine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCNN"
+  ],
+  [
+   "N,N-dialkylhydrazine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(N)CCCCCCCC/C=C\\C/C=C\\CCCCC"
+  ],
+  [
+   "acylhydrazide",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCCCCCCC/C=C\\C/C=C\\CCCCC)NC(=O)CCN1CCN(C)CC1"
+  ]
+ ],
+ "L3": [
+  [
+   "N-monoalkylhydrazine",
+   "CCCCCCCCCC(=O)OCCCCCCCNN"
+  ],
+  [
+   "N,N-dialkylhydrazine (1,1-diyl)",
+   "CCCCCCCCCC(=O)OCCCCCCCN(N)CCCCCCCOC(=O)CCCCCCCCC"
+  ],
+  [
+   "N'-(dimethylaminoethyl)",
+   "CCCCCCCCCC(=O)OCCCCCCCN(CCCCCCCOC(=O)CCCCCCCCC)NCCN(C)C"
+  ]
+ ],
+ "L4": [
+  [
+   "N-monoalkylhydrazine",
+   "CCCCCC/C=C\\COC(=O)CCCCCNN"
+  ],
+  [
+   "N,N-dialkylhydrazine",
+   "CCCCCC/C=C\\COC(=O)CCCCCN(N)CCCCCC(=O)OC/C=C\\CCCCCC"
+  ],
+  [
+   "acylhydrazide",
+   "CCCCCC/C=C\\COC(=O)CCCCCN(CCCCCC(=O)OC/C=C\\CCCCCC)NC(=O)CCCN(C)C"
+  ]
+ ],
+ "L5": [
+  [
+   "(dimethylaminoethyl)hydrazine",
+   "CN(C)CCNN"
+  ],
+  [
+   "arm on N1 (bearing DMAE)",
+   "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(N)CCN(C)C"
+  ],
+  [
+   "arm on N2",
+   "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCNN(CCCCCCOC(=O)C(CCCCCC)CCCCCCCC)CCN(C)C"
+  ]
+ ],
+ "L6": [
+  [
+   "N-monoalkylhydroxylamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCNO"
+  ],
+  [
+   "N,N-dialkylhydroxylamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(O)CCCCCCCC/C=C\\C/C=C\\CCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C"
+  ]
+ ],
+ "L7": [
+  [
+   "N-monoalkylhydroxylamine",
+   "CCCCCCC(CCCCCC)OC(=O)CCCCCCCCCNO"
+  ],
+  [
+   "N,N-dialkylhydroxylamine",
+   "CCCCCCC(CCCCCC)OC(=O)CCCCCCCCCN(O)CCCCCCCCCC(=O)OC(CCCCCC)CCCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCCCC(CCCCCC)OC(=O)CCCCCCCCCN(CCCCCCCCCC(=O)OC(CCCCCC)CCCCCC)OC(=O)CCCN(C)C"
+  ]
+ ],
+ "L8": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCNCCO"
+  ],
+  [
+   "N,N-dialkylethanolamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCO)CCCCCCCC/C=C\\C/C=C\\CCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCCCCCCC/C=C\\C/C=C\\CCCCC)CCOC(=O)CCCN(C)C"
+  ]
+ ],
+ "L9": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCNCCO"
+  ],
+  [
+   "EA-1 (N,N-dilinoleyl aminoethanol)",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCO)CCCCCCCC/C=C\\C/C=C\\CCCCC"
+  ],
+  [
+   "ether (via mesylate)",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCCCCCCC/C=C\\C/C=C\\CCCCC)CCOCCCCN(C)C"
+  ]
+ ],
+ "L10": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCNCCO"
+  ],
+  [
+   "N,N-dialkylethanolamine",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCO)CCCCCCCC/C=C\\C/C=C\\CCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCN(CCCCCCCC/C=C\\C/C=C\\CCCCC)CCOC(=O)CCN1CCN(C)CC1"
+  ]
+ ],
+ "L11": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCCCCCCC(=O)OCCCCCCCNCCO"
+  ],
+  [
+   "N,N-dialkylethanolamine",
+   "CCCCCCCCCC(=O)OCCCCCCCN(CCO)CCCCCCCOC(=O)CCCCCCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCCCCCCC(=O)OCCCCCCCN(CCCCCCCOC(=O)CCCCCCCCC)CCOC(=O)CCCN(C)C"
+  ]
+ ],
+ "L12": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCC/C=C\\CCOC(=O)CCCCCNCCO"
+  ],
+  [
+   "N,N-dialkylethanolamine",
+   "CCCCC/C=C\\CCOC(=O)CCCCCN(CCO)CCCCCC(=O)OCC/C=C\\CCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCC/C=C\\CCOC(=O)CCCCCN(CCCCCC(=O)OCC/C=C\\CCCCC)CCOC(=O)CCCN(C)C"
+  ]
+ ],
+ "L13": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCCCC(CCCCCC)OC(=O)CCCCCCCCCNCCO"
+  ],
+  [
+   "N,N-dialkylethanolamine",
+   "CCCCCCC(CCCCCC)OC(=O)CCCCCCCCCN(CCO)CCCCCCCCCC(=O)OC(CCCCCC)CCCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCCCC(CCCCCC)OC(=O)CCCCCCCCCN(CCCCCCCCCC(=O)OC(CCCCCC)CCCCCC)CCOC(=O)CCCN(C)C"
+  ]
+ ],
+ "L14": [
+  [
+   "N-monoalkylethanolamine",
+   "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCNCCO"
+  ],
+  [
+   "N,N-dialkylethanolamine",
+   "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCN(CCO)CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC"
+  ],
+  [
+   "O-acyl (ester)",
+   "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCN(CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC)CCOC(=O)CCCN(C)C"
+  ]
+ ]
+}

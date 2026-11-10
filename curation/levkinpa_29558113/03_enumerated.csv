@@ -1,0 +1,289 @@
+lipidoid,thiolactone,disulfide,amine,IL_SMILES,formula,exact_mass,MolWt,structure_determined,confidence,why
+T14-PY12-A1,T14,PY12,A1,CCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C36H73N3O2S2,643.5144,644.133,True,high,
+T14-PY12-A2,T14,PY12,A2,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A3,T14,PY12,A3,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A4,T14,PY12,A4,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A5,T14,PY12,A5,CCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C37H75N3O2S2,657.5301,658.16,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T14-PY12-A6,T14,PY12,A6,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A7,T14,PY12,A7,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A8,T14,PY12,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T14-PY12-A9,T14,PY12,A9,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A10,T14,PY12,A10,,,,,False,,ring size measurement inconclusive
+T14-PY12-A11,T14,PY12,A11,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A12,T14,PY12,A12,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A13,T14,PY12,A13,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A14,T14,PY12,A14,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A15,T14,PY12,A15,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A16,T14,PY12,A16,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A17,T14,PY12,A17,,,,,False,,amine not defined anywhere in the SI
+T14-PY12-A18,T14,PY12,A18,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A1,T14,PY14,A1,CCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C38H77N3O2S2,671.5457,672.187,True,high,
+T14-PY14-A2,T14,PY14,A2,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A3,T14,PY14,A3,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A4,T14,PY14,A4,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A5,T14,PY14,A5,CCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C39H79N3O2S2,685.5614,686.214,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T14-PY14-A6,T14,PY14,A6,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A7,T14,PY14,A7,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A8,T14,PY14,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T14-PY14-A9,T14,PY14,A9,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A10,T14,PY14,A10,,,,,False,,ring size measurement inconclusive
+T14-PY14-A11,T14,PY14,A11,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A12,T14,PY14,A12,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A13,T14,PY14,A13,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A14,T14,PY14,A14,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A15,T14,PY14,A15,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A16,T14,PY14,A16,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A17,T14,PY14,A17,,,,,False,,amine not defined anywhere in the SI
+T14-PY14-A18,T14,PY14,A18,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A1,T14,PY16,A1,CCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C40H81N3O2S2,699.577,700.241,True,high,
+T14-PY16-A2,T14,PY16,A2,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A3,T14,PY16,A3,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A4,T14,PY16,A4,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A5,T14,PY16,A5,CCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C41H83N3O2S2,713.5927,714.268,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T14-PY16-A6,T14,PY16,A6,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A7,T14,PY16,A7,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A8,T14,PY16,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T14-PY16-A9,T14,PY16,A9,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A10,T14,PY16,A10,,,,,False,,ring size measurement inconclusive
+T14-PY16-A11,T14,PY16,A11,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A12,T14,PY16,A12,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A13,T14,PY16,A13,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A14,T14,PY16,A14,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A15,T14,PY16,A15,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A16,T14,PY16,A16,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A17,T14,PY16,A17,,,,,False,,amine not defined anywhere in the SI
+T14-PY16-A18,T14,PY16,A18,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A1,T14,PY18,A1,CCCCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C42H85N3O2S2,727.6083,728.295,True,high,
+T14-PY18-A2,T14,PY18,A2,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A3,T14,PY18,A3,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A4,T14,PY18,A4,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A5,T14,PY18,A5,CCCCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C43H87N3O2S2,741.624,742.322,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T14-PY18-A6,T14,PY18,A6,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A7,T14,PY18,A7,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A8,T14,PY18,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T14-PY18-A9,T14,PY18,A9,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A10,T14,PY18,A10,,,,,False,,ring size measurement inconclusive
+T14-PY18-A11,T14,PY18,A11,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A12,T14,PY18,A12,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A13,T14,PY18,A13,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A14,T14,PY18,A14,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A15,T14,PY18,A15,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A16,T14,PY18,A16,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A17,T14,PY18,A17,,,,,False,,amine not defined anywhere in the SI
+T14-PY18-A18,T14,PY18,A18,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A1,T16,PY12,A1,CCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C38H77N3O2S2,671.5457,672.187,True,high,
+T16-PY12-A2,T16,PY12,A2,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A3,T16,PY12,A3,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A4,T16,PY12,A4,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A5,T16,PY12,A5,CCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C39H79N3O2S2,685.5614,686.214,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T16-PY12-A6,T16,PY12,A6,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A7,T16,PY12,A7,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A8,T16,PY12,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T16-PY12-A9,T16,PY12,A9,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A10,T16,PY12,A10,,,,,False,,ring size measurement inconclusive
+T16-PY12-A11,T16,PY12,A11,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A12,T16,PY12,A12,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A13,T16,PY12,A13,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A14,T16,PY12,A14,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A15,T16,PY12,A15,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A16,T16,PY12,A16,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A17,T16,PY12,A17,,,,,False,,amine not defined anywhere in the SI
+T16-PY12-A18,T16,PY12,A18,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A1,T16,PY14,A1,CCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C40H81N3O2S2,699.577,700.241,True,high,
+T16-PY14-A2,T16,PY14,A2,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A3,T16,PY14,A3,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A4,T16,PY14,A4,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A5,T16,PY14,A5,CCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C41H83N3O2S2,713.5927,714.268,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T16-PY14-A6,T16,PY14,A6,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A7,T16,PY14,A7,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A8,T16,PY14,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T16-PY14-A9,T16,PY14,A9,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A10,T16,PY14,A10,,,,,False,,ring size measurement inconclusive
+T16-PY14-A11,T16,PY14,A11,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A12,T16,PY14,A12,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A13,T16,PY14,A13,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A14,T16,PY14,A14,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A15,T16,PY14,A15,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A16,T16,PY14,A16,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A17,T16,PY14,A17,,,,,False,,amine not defined anywhere in the SI
+T16-PY14-A18,T16,PY14,A18,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A1,T16,PY16,A1,CCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C42H85N3O2S2,727.6083,728.295,True,high,
+T16-PY16-A2,T16,PY16,A2,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A3,T16,PY16,A3,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A4,T16,PY16,A4,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A5,T16,PY16,A5,CCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C43H87N3O2S2,741.624,742.322,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T16-PY16-A6,T16,PY16,A6,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A7,T16,PY16,A7,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A8,T16,PY16,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T16-PY16-A9,T16,PY16,A9,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A10,T16,PY16,A10,,,,,False,,ring size measurement inconclusive
+T16-PY16-A11,T16,PY16,A11,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A12,T16,PY16,A12,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A13,T16,PY16,A13,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A14,T16,PY16,A14,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A15,T16,PY16,A15,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A16,T16,PY16,A16,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A17,T16,PY16,A17,,,,,False,,amine not defined anywhere in the SI
+T16-PY16-A18,T16,PY16,A18,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A1,T16,PY18,A1,CCCCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C44H89N3O2S2,755.6396,756.349,True,high,
+T16-PY18-A2,T16,PY18,A2,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A3,T16,PY18,A3,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A4,T16,PY18,A4,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A5,T16,PY18,A5,CCCCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C45H91N3O2S2,769.6553,770.376,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T16-PY18-A6,T16,PY18,A6,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A7,T16,PY18,A7,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A8,T16,PY18,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T16-PY18-A9,T16,PY18,A9,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A10,T16,PY18,A10,,,,,False,,ring size measurement inconclusive
+T16-PY18-A11,T16,PY18,A11,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A12,T16,PY18,A12,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A13,T16,PY18,A13,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A14,T16,PY18,A14,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A15,T16,PY18,A15,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A16,T16,PY18,A16,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A17,T16,PY18,A17,,,,,False,,amine not defined anywhere in the SI
+T16-PY18-A18,T16,PY18,A18,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A1,T18,PY12,A1,CCCCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C40H81N3O2S2,699.577,700.241,True,high,
+T18-PY12-A2,T18,PY12,A2,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A3,T18,PY12,A3,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A4,T18,PY12,A4,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A5,T18,PY12,A5,CCCCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C41H83N3O2S2,713.5927,714.268,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18-PY12-A6,T18,PY12,A6,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A7,T18,PY12,A7,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A8,T18,PY12,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18-PY12-A9,T18,PY12,A9,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A10,T18,PY12,A10,,,,,False,,ring size measurement inconclusive
+T18-PY12-A11,T18,PY12,A11,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A12,T18,PY12,A12,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A13,T18,PY12,A13,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A14,T18,PY12,A14,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A15,T18,PY12,A15,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A16,T18,PY12,A16,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A17,T18,PY12,A17,,,,,False,,amine not defined anywhere in the SI
+T18-PY12-A18,T18,PY12,A18,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A1,T18,PY14,A1,CCCCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C42H85N3O2S2,727.6083,728.295,True,high,
+T18-PY14-A2,T18,PY14,A2,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A3,T18,PY14,A3,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A4,T18,PY14,A4,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A5,T18,PY14,A5,CCCCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C43H87N3O2S2,741.624,742.322,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18-PY14-A6,T18,PY14,A6,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A7,T18,PY14,A7,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A8,T18,PY14,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18-PY14-A9,T18,PY14,A9,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A10,T18,PY14,A10,,,,,False,,ring size measurement inconclusive
+T18-PY14-A11,T18,PY14,A11,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A12,T18,PY14,A12,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A13,T18,PY14,A13,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A14,T18,PY14,A14,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A15,T18,PY14,A15,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A16,T18,PY14,A16,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A17,T18,PY14,A17,,,,,False,,amine not defined anywhere in the SI
+T18-PY14-A18,T18,PY14,A18,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A1,T18,PY16,A1,CCCCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C44H89N3O2S2,755.6396,756.349,True,high,
+T18-PY16-A2,T18,PY16,A2,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A3,T18,PY16,A3,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A4,T18,PY16,A4,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A5,T18,PY16,A5,CCCCCCCCCCCCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C45H91N3O2S2,769.6553,770.376,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18-PY16-A6,T18,PY16,A6,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A7,T18,PY16,A7,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A8,T18,PY16,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18-PY16-A9,T18,PY16,A9,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A10,T18,PY16,A10,,,,,False,,ring size measurement inconclusive
+T18-PY16-A11,T18,PY16,A11,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A12,T18,PY16,A12,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A13,T18,PY16,A13,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A14,T18,PY16,A14,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A15,T18,PY16,A15,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A16,T18,PY16,A16,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A17,T18,PY16,A17,,,,,False,,amine not defined anywhere in the SI
+T18-PY16-A18,T18,PY16,A18,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A1,T18,PY18,A1,CCCCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C46H93N3O2S2,783.6709,784.403,True,high,
+T18-PY18-A2,T18,PY18,A2,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A3,T18,PY18,A3,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A4,T18,PY18,A4,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A5,T18,PY18,A5,CCCCCCCCCCCCCCCCCCSSCCC(NC(=O)CCCCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C47H95N3O2S2,797.6866,798.43,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18-PY18-A6,T18,PY18,A6,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A7,T18,PY18,A7,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A8,T18,PY18,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18-PY18-A9,T18,PY18,A9,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A10,T18,PY18,A10,,,,,False,,ring size measurement inconclusive
+T18-PY18-A11,T18,PY18,A11,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A12,T18,PY18,A12,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A13,T18,PY18,A13,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A14,T18,PY18,A14,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A15,T18,PY18,A15,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A16,T18,PY18,A16,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A17,T18,PY18,A17,,,,,False,,amine not defined anywhere in the SI
+T18-PY18-A18,T18,PY18,A18,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A1,T18U,PY12,A1,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C40H79N3O2S2,697.5614,698.225,True,high,
+T18U-PY12-A2,T18U,PY12,A2,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A3,T18U,PY12,A3,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A4,T18U,PY12,A4,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A5,T18U,PY12,A5,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C41H81N3O2S2,711.577,712.252,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18U-PY12-A6,T18U,PY12,A6,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A7,T18U,PY12,A7,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A8,T18U,PY12,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18U-PY12-A9,T18U,PY12,A9,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A10,T18U,PY12,A10,,,,,False,,ring size measurement inconclusive
+T18U-PY12-A11,T18U,PY12,A11,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A12,T18U,PY12,A12,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A13,T18U,PY12,A13,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A14,T18U,PY12,A14,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A15,T18U,PY12,A15,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A16,T18U,PY12,A16,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A17,T18U,PY12,A17,,,,,False,,amine not defined anywhere in the SI
+T18U-PY12-A18,T18U,PY12,A18,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A1,T18U,PY14,A1,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C42H83N3O2S2,725.5927,726.279,True,high,
+T18U-PY14-A2,T18U,PY14,A2,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A3,T18U,PY14,A3,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A4,T18U,PY14,A4,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A5,T18U,PY14,A5,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C43H85N3O2S2,739.6083,740.306,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18U-PY14-A6,T18U,PY14,A6,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A7,T18U,PY14,A7,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A8,T18U,PY14,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18U-PY14-A9,T18U,PY14,A9,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A10,T18U,PY14,A10,,,,,False,,ring size measurement inconclusive
+T18U-PY14-A11,T18U,PY14,A11,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A12,T18U,PY14,A12,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A13,T18U,PY14,A13,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A14,T18U,PY14,A14,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A15,T18U,PY14,A15,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A16,T18U,PY14,A16,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A17,T18U,PY14,A17,,,,,False,,amine not defined anywhere in the SI
+T18U-PY14-A18,T18U,PY14,A18,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A1,T18U,PY16,A1,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C44H87N3O2S2,753.624,754.333,True,high,
+T18U-PY16-A2,T18U,PY16,A2,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A3,T18U,PY16,A3,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A4,T18U,PY16,A4,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A5,T18U,PY16,A5,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C45H89N3O2S2,767.6396,768.36,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18U-PY16-A6,T18U,PY16,A6,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A7,T18U,PY16,A7,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A8,T18U,PY16,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18U-PY16-A9,T18U,PY16,A9,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A10,T18U,PY16,A10,,,,,False,,ring size measurement inconclusive
+T18U-PY16-A11,T18U,PY16,A11,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A12,T18U,PY16,A12,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A13,T18U,PY16,A13,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A14,T18U,PY16,A14,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A15,T18U,PY16,A15,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A16,T18U,PY16,A16,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A17,T18U,PY16,A17,,,,,False,,amine not defined anywhere in the SI
+T18U-PY16-A18,T18U,PY16,A18,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A1,T18U,PY18,A1,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCCCC)C(=O)NCCN(CC)CC,C46H91N3O2S2,781.6553,782.387,True,high,
+T18U-PY18-A2,T18U,PY18,A2,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A3,T18U,PY18,A3,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A4,T18U,PY18,A4,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A5,T18U,PY18,A5,CCCCCCCC/C=C\CCCCCCCC(=O)NC(CCSSCCCCCCCCCCCCCCCCCC)C(=O)NCCCN(CC)CC,C47H93N3O2S2,795.6709,796.414,True,medium,"the two N-ethyl branches of A5 are read from a drawing, not measured (01_amines.json)"
+T18U-PY18-A6,T18U,PY18,A6,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A7,T18U,PY18,A7,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A8,T18U,PY18,A8,,,,,False,,"molecular formula C7H17N3 only, no structure"
+T18U-PY18-A9,T18U,PY18,A9,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A10,T18U,PY18,A10,,,,,False,,ring size measurement inconclusive
+T18U-PY18-A11,T18U,PY18,A11,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A12,T18U,PY18,A12,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A13,T18U,PY18,A13,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A14,T18U,PY18,A14,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A15,T18U,PY18,A15,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A16,T18U,PY18,A16,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A17,T18U,PY18,A17,,,,,False,,amine not defined anywhere in the SI
+T18U-PY18-A18,T18U,PY18,A18,,,,,False,,amine not defined anywhere in the SI

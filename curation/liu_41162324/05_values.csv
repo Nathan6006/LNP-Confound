@@ -1,0 +1,14 @@
+status,si_locus,panel,endpoint,n_lipids_covered,value,units,why
+rejected,"Figure S48, SI PDF p.90",particle size,hydrodynamic diameter (nm),74,,,"Corpus is delivery-only; diameter/zeta/uptake excluded (CLAUDE.md s9, 2026-07-23)."
+rejected,"Figure S49, SI PDF p.90",zeta potential,zeta potential (mV),74,,,Same exclusion.
+rejected,"Figure S50, SI PDF p.90",PDI,polydispersity index,74,,,Same exclusion.
+rejected,"Figure S51, SI PDF p.91",DC2.4 cell viability 24 h,cell viability (%),74,,,"Toxicity, not delivery; the corpus dropped 90 hemolysis_percent rows for the same reason. This panel WAS used, for its x-axis roster only (07_qc.json P4)."
+rejected,"Figure S52, SI PDF p.92",rabbit IVIS,luciferase (photons/sec/cm2),2,,,"2 arms, one of them the SM102 benchmark. A per-experiment z-score over 2 lipids is degenerate, and CLAUDE.md s8 flags benchmark-only pairs as the case that inflates cross-lab concordance for reasons unrelated to SAR."
+rejected,"Figure S53, SI PDF p.93",IM/SC administration route,luciferase (photons/sec/cm2),2,,,Same: SSC6F5 vs SM102 only.
+rejected,"Figure S54, SI PDF p.94",30-day 4 C storage stability,size / PDI / zeta,2,,,Excluded endpoint.
+rejected,"Figure S55, SI PDF p.95",serum biochemistry,serum chemistry panel,2,,,"Safety readout, not delivery."
+rejected,"Figure S57, SI PDF p.97",SORT comparison characterisation,size / zeta / encapsulation efficiency,2,,,Excluded endpoint.
+rejected,"Figure S58, SI PDF p.98",SM102/18PA vs SM102 vs SSC6F5,"luciferase, % of total organ signal",2,,,"3 arms, two of which are benchmark formulations of the SAME lipid (SM102 and SM102/18PA); one novel lipid."
+rejected,"Figure S59, SI PDF p.99",anti-Apod blockade,luciferase (photons/sec/cm2),1,,,Mechanism experiment on one lipid with an antibody pre-treatment; not a lipid screen.
+rejected,"Figure S60, SI PDF p.100",OVA-specific antibody ELISA,serum antibody titre,1,,,"Immunogenicity, not mRNA delivery."
+absent,main-text figures (NOT HELD),the 74-member transfection screen,DC2.4 eGFP transfection; Balb/c organ luciferase,74,,,"The article PDF was not supplied and the paper is not open access (Europe PMC: isOpenAccess N, inEPMC N, hasSuppl N; pubs.acs.org returns HTTP 403 behind a Cloudflare interstitial to a plain request). Every screen value this paper reports lives there. THIS IS WHY THIS FILE HAS NO EMITTED ROW."

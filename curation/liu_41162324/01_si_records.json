@@ -1,0 +1,427 @@
+{
+ "_what": "Verbatim SI section-3.2 records, one per numbered synthesis heading. Nothing here is reconciled; the contradictions are preserved on purpose.",
+ "source_pdf": "ja5c13982_si_001.pdf",
+ "n_records": 42,
+ "records": [
+  {
+   "section": "3.2.1.1",
+   "name_in_heading": "SSC3F1",
+   "si_pdf_page": 24,
+   "formula_stated": "C41H78FNO7",
+   "mz_calc_stated": "716.58",
+   "mz_found_stated": "716.89",
+   "material_sentence": null,
+   "block": "Heptadecan-9-yl 8-((2-hydroxyethyl)amino)octanoate (0.26 g, 0.60 mmol), 4-(4- fluorobutoxy)-4-oxobutyl 6-bromohexanoate (0.25 g, 0.72 mmol), K2CO3 (623 mg, 4.5 mmol), and KI (30 mg, 0.2 mmol) were added to a flask containing 15 mL of CH CN. 3 S24 The mixture solution was refluxed at 85 \u00b0C for 4 h and monitored by TLC. Upon completion, the solution was dried under decompression conditions, and the obtained residues were redissolved in 20 mL of DCM and washed with brine (3 x 40 mL). The combined organic layer was concentrated to give crude product, which was further purified by silica column chromatography (eluent: MeOH/DCM = 1:20, 12 g pre-packed column) to afford product as a light yellow oil (0.21 g, 3.6 mmol, 45.6% yield). MS (ESI, m/z) of [M + H]+calculated for C41H78FNO7, 716.58; Found, 716.89. 1H NMR (400 MHz, CDCl ) \u03b4 4.87 (dd, J = 12.4, 6.1 Hz, 1H), 4.48 (dt, J = 47.2, 5.6 Hz, 2H), 4.12 (dt, 3 J = 11.3, 6.3 Hz, 4H), 3.64 (d, J = 42.4 Hz, 2H), 2.78 \u2013 2.18 (m, 12H), 2.02 \u2013 1.88 (m, 2H), 1.87 \u2013 1.01 (m, 48H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.2",
+   "name_in_heading": "SSC4F1",
+   "si_pdf_page": 25,
+   "formula_stated": "C42H80FNO7",
+   "mz_calc_stated": "730.59",
+   "mz_found_stated": "730.90",
+   "material_sentence": "The 3-(4-((6- bromohexanoyl)oxy)butoxy)propanoic acid",
+   "block": "The synthesis method for SSC4F1 was similar to that of 3.2.1.1. The 3-(4-((6- bromohexanoyl)oxy)butoxy)propanoic acid was used. MS (ESI, m/z) of [M + H]+ calculated for C42H80FNO7, 730.59; Found, 730.90. 1H NMR (400 MHz, CDCl ) \u03b4 3 4.92 \u2013 4.81 (m, 1H), 4.48 (dt, J = 47.2, 5.6 Hz, 2H), 4.10 (dt, J = 17.8, 6.1 Hz, 4H), 3.58 (s, 2H), 2.59 (d, J = 48.4 Hz, 6H), 2.39 \u2013 2.21 (m, 6H), 1.87 \u2013 1.18 (m, 51H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.3",
+   "name_in_heading": "SSC5F1",
+   "si_pdf_page": 25,
+   "formula_stated": "C43H82FNO7",
+   "mz_calc_stated": "744.61, 766.61",
+   "mz_found_stated": "744.94, 766.63",
+   "material_sentence": "The 5-(4- fluorobutoxy)-5-oxopentyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC5F1 was similar to that of 3.2.1.1. The 5-(4- fluorobutoxy)-5-oxopentyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C43H82FNO7, 744.61, 766.61; Found, 744.94, 766.63. 1H NMR (400 MHz, CDCl ) \u03b4 4.91 \u2013 4.83 (m, 1H), 4.48 (dt, J = 47.2, 5.7 Hz, 2H), 4.09 (dt, J = 3 13.3, 6.4 Hz, 4H), 3.65 (s, 2H), 2.60 (s, 6H), 2.40 \u2013 2.17 (m, 6H), 1.91 \u2013 0.96 (m, 52H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.4",
+   "name_in_heading": "SSC6F1",
+   "si_pdf_page": 25,
+   "formula_stated": "C44H84FNO7",
+   "mz_calc_stated": "758.62, 780.62",
+   "mz_found_stated": "758.673, 780.652",
+   "material_sentence": "The 4-fluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "S25 The synthesis method for SSC6F1 was similar to that of 3.2.1.1. The 4-fluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate was used. MS (ESI, m/z) of [M + H]+ calculated for C44H84FNO7, 758.62, 780.62; Found, 758.673, 780.652. 1H NMR (400 MHz, CDCl ) \u03b4 4.90 \u2013 4.83 (m, 1H), 4.48 (dt, J = 47.2, 5.6 Hz, 2H), 4.09 (dt, J = 13.4, 6.4 Hz, 3 4H), 3.64 (d, J = 24.7 Hz, 2H), 2.56 (t, J = 45.3 Hz, 6H), 2.29 (dt, J = 11.7, 7.6 Hz, 6H), 1.90 \u2013 1.18 (m, 54H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.5",
+   "name_in_heading": "SSCB2F1",
+   "si_pdf_page": 26,
+   "formula_stated": "C44H84FNO7",
+   "mz_calc_stated": "758.62",
+   "mz_found_stated": "758.63",
+   "material_sentence": "The 4-fluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for SSCB2F1 was similar to that of 3.2.1.1. The 4-fluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate was used. MS (ESI, m/z) of [M + H]+ calculated for C44H84FNO7, 758.62; Found, 758.63. 1H NMR (400 MHz, CDCl ) \u03b4 4.89 \u2013 4.79 3 (m, 2H), 4.54 (t, J = 5.6 Hz, 1H), 4.42 (t, J = 5.6 Hz, 1H), 4.11 (t, J = 6.1 Hz, 2H), 3.67 (s, 2H), 2.59 (s, 6H), 2.38 \u2013 2.20 (m, 6H), 1.88 \u2013 0.98 (m, 53H), 0.88 (t, J = 7.1 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.6",
+   "name_in_heading": "SSCB4F1",
+   "si_pdf_page": 26,
+   "formula_stated": "C46H88FNO7",
+   "mz_calc_stated": "786.65",
+   "mz_found_stated": "786.66",
+   "material_sentence": "The 4-fluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate",
+   "block": "The synthesis method for SSCB4F1 was similar to that of 3.2.1.1. The 4-fluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate was used. MS (ESI, m/z) of [M + H]+ calculated for C46H88FNO7, 786.65; Found, 786.66. 1H NMR (400 MHz, CDCl ) \u03b4 4.87 (dq, J = 3 12.7, 6.4 Hz, 2H), 4.48 (dt, J = 47.2, 5.6 Hz, 2H), 4.19 \u2013 4.05 (m, 2H), 3.53 (t, J = 5.0 Hz, 2H), 2.61 \u2013 2.38 (m, 6H), 2.39 \u2013 2.17 (m, 6H), 1.86 \u2013 1.03 (m, 57H), 0.88 (td, J = 6.9, 3.7 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.7",
+   "name_in_heading": "SSCO4F1",
+   "si_pdf_page": 26,
+   "formula_stated": "C44H84FNO8",
+   "mz_calc_stated": "774.62",
+   "mz_found_stated": "774.63",
+   "material_sentence": "The 4-(3-(4- fluorobutoxy)-3-oxopropoxy)butyl 6-bromohexanoate",
+   "block": "S26 The synthesis method for SSCO4F1 was similar to that of 3.2.1.1. The 4-(3-(4- fluorobutoxy)-3-oxopropoxy)butyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C44H84FNO8, 774.62; Found, 774.63. 1H NMR (400 MHz, CDCl ) \u03b4 4.86 (dt, J = 12.7, 6.3 Hz, 1H), 4.54 (t, J = 5.6 Hz, 1H), 4.42 (t, J = 5.6 3 Hz, 1H), 4.11 (dt, J = 30.5, 6.3 Hz, 4H), 3.75 \u2013 3.40 (m, 6H), 2.60 (dd, J = 23.8, 17.5 Hz, 7H), 2.37 \u2013 2.22 (m, 4H), 1.91 \u2013 1.05 (m, 55H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.8",
+   "name_in_heading": "SSCPF1",
+   "si_pdf_page": 27,
+   "formula_stated": "C46H80FNO8",
+   "mz_calc_stated": "754.59",
+   "mz_found_stated": "754.59",
+   "material_sentence": "The 4-(3-(4- fluorobutoxy)-3-oxopropoxy)benzyl 6-bromohexanoate",
+   "block": "The synthesis method for SSCPF1 was similar to that of 3.2.1.1. The 4-(3-(4- fluorobutoxy)-3-oxopropoxy)benzyl 6-bromohexanoate was used. MS (ESI, m/z) of [M + H]+ calculated for C46H80FNO8, 754.59; Found, 754.59. 1H NMR (400 MHz, CDCl ) 3 \u03b4 7.28 (d, J = 8.3 Hz, 2H), 6.88 (d, J = 8.6 Hz, 2H), 5.09 \u2013 4.99 (m, 2H), 4.33 \u2013 4.15 (m, 4H), 3.96 (d, J = 5.7 Hz, 3H), 3.55 (d, J = 15.9 Hz, 3H), 2.72 \u2013 2.26 (m, 16H), 1.82 \u2013 1.17 (m, 56H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.9",
+   "name_in_heading": "SSC4F3",
+   "si_pdf_page": 27,
+   "formula_stated": "C41H76F3NO7",
+   "mz_calc_stated": "752.56",
+   "mz_found_stated": "752.562",
+   "material_sentence": "The 4-oxo-4-(4,4,4- trifluorobutoxy)butyl 6-bromohexanoate",
+   "block": "The synthesis method for SSCF3 was similar to that of 3.2.1.1. The 4-oxo-4-(4,4,4- trifluorobutoxy)butyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C41H76F3NO7, 752.56; Found, 752.562. 1H NMR (400 MHz, CDCl ) 3 \u03b4 4.90 \u2013 4.82 (m, 1H), 4.38 (t, J = 6.5 Hz, 2H), 4.12 (dt, J = 8.7, 6.7 Hz, 2H), 3.57 (s, 2H), 2.39 (dddd, J = 35.7, 30.5, 18.9, 15.0 Hz, 14H), 2.01 \u2013 1.94 (m, 2H), 1.83 \u2013 1.01 (m, 43H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.10",
+   "name_in_heading": "SSC4F3",
+   "si_pdf_page": 27,
+   "formula_stated": "C42H78F3NO7",
+   "mz_calc_stated": "766.57, 788.57",
+   "mz_found_stated": "766.554, 788.562",
+   "material_sentence": "The 5-oxo-5-(4,4,4- trifluorobutoxy)pentyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC4F3 was similar to that of 3.2.1.1. The 5-oxo-5-(4,4,4- trifluorobutoxy)pentyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + S27 H]+ calculated for C42H78F3NO7, 766.57, 788.57; Found, 766.554, 788.562. 1H NMR (400 MHz, CDCl ) \u03b4 4.86 (p, J = 6.3 Hz, 1H), 4.11 (dt, J = 21.5, 6.2 Hz, 4H), 3.70 3 \u2013 3.57 (m, 2H), 2.66 (d, J = 48.7 Hz, 6H), 2.33 (ddd, J = 13.6, 10.7, 6.7 Hz, 6H), 2.22 \u2013 2.10 (m, 2H), 1.96 \u2013 1.86 (m, 2H), 1.73 \u2013 1.21 (m, 48H), 0.88 (t, J = 6.9 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.11",
+   "name_in_heading": "SSC5F3",
+   "si_pdf_page": 28,
+   "formula_stated": "C43H80F3NO7",
+   "mz_calc_stated": "780.59, 802.59",
+   "mz_found_stated": "780.904, 802.588",
+   "material_sentence": "The 6-oxo-6-(4,4,4- trifluorobutoxy)hexyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC5F3 was similar to that of 3.2.1.1. The 6-oxo-6-(4,4,4- trifluorobutoxy)hexyl 6-bromohexanoate was used. MS (ESI, m/z) of [M + H]+ calculated for C43H80F3NO7, 780.59, 802.59; Found, 780.904, 802.588. 1H NMR (400 MHz, CDCl3) \u03b4 4.85 (dd, J = 12.5, 6.3 Hz, 1H), 4.10 (dt, J = 26.5, 6.5 Hz, 4H), 3.67 (s, 2H), 2.69 (d, J = 46.7 Hz, 6H), 2.30 (ddt, J = 19.0, 14.7, 7.3 Hz, 6H), 2.24 \u2013 2.11 (m, 2H), 1.91 (dt, J = 16.1, 6.3 Hz, 2H), 1.76 \u2013 1.13 (m, 50H), 0.88 (t, J = 6.9 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.12",
+   "name_in_heading": "SSC6F3",
+   "si_pdf_page": 28,
+   "formula_stated": "C44H82F3NO7",
+   "mz_calc_stated": "794.60, 816.60",
+   "mz_found_stated": "794.94, 816.63",
+   "material_sentence": "The 4,4,4- trifluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for SSC6F3 was similar to that of 3.2.1.1. The 4,4,4- trifluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C44H82F3NO7, 794.60, 816.60; Found, 794.94, 816.63. 1H NMR (400 MHz, CDCl3) \u03b4 4.85 (dd, J = 12.5, 6.4 Hz, 1H), 4.09 (dt, J = 13.4, 6.5 Hz, 4H), 3.64 (s, 2H), 2.65 (d, J = 47.3 Hz, 6H), 2.43 \u2013 2.07 (m, 8H), 1.91 (dt, J = 16.1, 6.3 Hz, 2H), 1.81 \u2013 0.99 (m, 51H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.13",
+   "name_in_heading": "SSCB2F3",
+   "si_pdf_page": 28,
+   "formula_stated": "C44H82F3NO7",
+   "mz_calc_stated": "794.60",
+   "mz_found_stated": "794.60",
+   "material_sentence": "The 4,4,4- trifluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for SSCB2F3 was similar to that of 3.2.1.1. The 4,4,4- trifluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C44H82F3NO7, 794.60; Found, 794.60. 1H NMR (400 S28 MHz, CDCl ) \u03b4 4.89 \u2013 4.80 (m, 2H), 4.13 (t, J = 6.3 Hz, 2H), 3.67 (s, 2H), 2.59 (s, 6H), 3 2.39 \u2013 2.13 (m, 8H), 1.96 \u2013 1.87 (m, 2H), 1.71 \u2013 1.17 (m, 50H), 0.88 (t, J = 6.8 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.14",
+   "name_in_heading": "SSCB4F3",
+   "si_pdf_page": 29,
+   "formula_stated": "C46H86F3NO7",
+   "mz_calc_stated": "822.64",
+   "mz_found_stated": "822.63",
+   "material_sentence": "The 4,4,4- trifluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate",
+   "block": "The synthesis method for SSCB4F3 was similar to that of 3.2.1.1. The 4,4,4- trifluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C46H86F3NO7, 822.64; Found, 822.63. 1H NMR (400 MHz, CDCl ) \u03b4 4.87 (dd, J = 12.4, 6.5 Hz, 2H), 4.13 (t, J = 6.3 Hz, 2H), 3.53 (t, J = 5.1 Hz, 3 2H), 2.64 \u2013 2.40 (m, 6H), 2.37 \u2013 2.08 (m, 8H), 1.91 (dd, J = 15.3, 6.8 Hz, 2H), 1.81 \u2013 1.09 (m, 52H), 0.88 (dt, J = 10.9, 5.6 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.15",
+   "name_in_heading": "SSCOF3",
+   "si_pdf_page": 29,
+   "formula_stated": "C44H82F3NO8",
+   "mz_calc_stated": "810.60",
+   "mz_found_stated": "810.61",
+   "material_sentence": "The 4-(3-oxo-3- (4,4,4-trifluorobutoxy)propoxy)butyl 6-bromohexanoate",
+   "block": "The synthesis method for SSCOF3 was similar to that of 3.2.1.1. The 4-(3-oxo-3- (4,4,4-trifluorobutoxy)propoxy)butyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C44H82F3NO8, 810.60; Found, 810.61. 1H NMR (400 MHz, CDCl ) \u03b4 4.90 \u2013 4.84 (m, 1H), 4.12 (ddd, J = 22.4, 12.6, 6.4 Hz, 4H), 3.69 (t, J = 3 6.3 Hz, 2H), 3.48 (dd, J = 25.0, 18.7 Hz, 4H), 2.67 \u2013 2.40 (m, 7H), 2.37 \u2013 2.12 (m, 6H), 1.95 \u2013 1.07 (m, 55H), 0.88 (t, J = 6.6 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.16",
+   "name_in_heading": "SSCPF3",
+   "si_pdf_page": 29,
+   "formula_stated": "C46H78F3NO8",
+   "mz_calc_stated": "830.57",
+   "mz_found_stated": "830.57",
+   "material_sentence": "The 4-(3-oxo-3- (4,4,4-trifluorobutoxy)propoxy)benzyl 6-bromohexanoate",
+   "block": "The synthesis method for SSCPF3 was similar to that of 3.2.1.1. The 4-(3-oxo-3- (4,4,4-trifluorobutoxy)propoxy)benzyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C46H78F3NO8, 830.57; Found, 830.57. 1H NMR (400 MHz, CDCl ) \u03b4 6.88 (d, J = 8.7 Hz, 2H), 5.04 (s, 2H), 4.23 (dt, J = 22.3, 6.3 Hz, 3 4H), 3.55 (s, 3H), 2.81 (t, J = 6.2 Hz, 2H), 2.60 (s, 2H), 2.47 (s, 4H), 2.37 \u2013 2.13 (m, S29 7H), 1.93 (dd, J = 16.1, 6.2 Hz, 2H), 1.75 \u2013 1.13 (m, 59H), 0.88 (t, J = 6.9 Hz, 7H)."
+  },
+  {
+   "section": "3.2.1.17",
+   "name_in_heading": "SSC3F5",
+   "si_pdf_page": 30,
+   "formula_stated": "C41H74F5NO7",
+   "mz_calc_stated": "788.54",
+   "mz_found_stated": "788.87",
+   "material_sentence": "The 4-oxo-4- (3,3,4,4,4-pentafluorobutoxy)butyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC3F5 was similar to that of 3.2.1.1. The 4-oxo-4- (3,3,4,4,4-pentafluorobutoxy)butyl 6-bromohexanoate was used as material. MS (ESI, m/z) of [M + H]+ calculated for C41H74F5NO7, 788.54; Found, 788.87. 1H NMR (400 MHz, CDCl ) \u03b4 4.87 (dd, J = 12.4, 6.1 Hz, 1H), 4.19 \u2013 4.02 (m, 4H), 3.64 (s, 2H), 2.90 3 \u2013 2.11 (m, 14H), 1.94 (qd, J = 13.5, 6.5 Hz, 4H), 1.80 \u2013 0.97 (m, 44H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.18",
+   "name_in_heading": "SSC4F5",
+   "si_pdf_page": 30,
+   "formula_stated": "C42H76F5NO7",
+   "mz_calc_stated": "802.55",
+   "mz_found_stated": "802.89",
+   "material_sentence": "Specifically, 5-oxo- 5-(3,3,4,4,4-pentafluorobutoxy)pentyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC4F5 was similar to that of 3.2.1.1. Specifically, 5-oxo- 5-(3,3,4,4,4-pentafluorobutoxy)pentyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C42H76F5NO7, 802.55; Found,802.89. 1H NMR (400 MHz, CDCl ) \u03b4 4.87 (dd, J = 12.4, 6.2 Hz, 1H), 4.37 (t, 3 J = 6.5 Hz, 2H), 4.12 \u2013 4.03 (m, 2H), 3.65 (d, J = 24.9 Hz, 2H), 2.85 \u2013 2.19 (m, 14H), 1.91 \u2013 1.10 (m, 47H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.19",
+   "name_in_heading": "SSC5F5",
+   "si_pdf_page": 30,
+   "formula_stated": "C43H78F5NO7",
+   "mz_calc_stated": "816.57, 838.57",
+   "mz_found_stated": "816.623, 838.602",
+   "material_sentence": "The 6-oxo-6- (3,3,4,4,4-pentafluorobutoxy)hexyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC5F5 was similar to that of 3.2.1.1. The 6-oxo-6- (3,3,4,4,4-pentafluorobutoxy)hexyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C43H78F5NO7, 816.57, 838.57; Found 816.623, 838.602. 1H NMR (400 MHz, CDCl ) \u03b4 4.85 (dd, J = 12.6, 6.3 Hz, 1H), 3 4.36 (t, J = 6.5 Hz, 2H), 4.13 \u2013 4.01 (m, 2H), 3.64 (s, 2H), 2.96 \u2013 2.15 (m, 13H), 1.90 \u2013 1.01 (m, 47H), 0.94 \u2013 0.81 (m, 6H). S30"
+  },
+  {
+   "section": "3.2.1.20",
+   "name_in_heading": "SSC6F5",
+   "si_pdf_page": 31,
+   "formula_stated": "C44H80F5NO7",
+   "mz_calc_stated": "830.59, 852.59",
+   "mz_found_stated": "830.641, 852.615",
+   "material_sentence": "The 3,3,4,4,4- pentafluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for SSC6F5 was similar to that of 3.2.1.1. The 3,3,4,4,4- pentafluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C44H80F5NO7, 830.59, 852.59; Found 830.641, 852.615. 1H NMR (400 MHz, CDCl3) \u03b4 4.90 \u2013 4.83 (m, 1H), 4.36 (t, J = 6.5 Hz, 2H), 4.13 \u2013 3.99 (m, 2H), 3.70 (s, 2H), 3.05 \u2013 2.15 (m, 14H), 1.95 \u2013 1.00 (m, 49H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.21",
+   "name_in_heading": "SSCB2F5",
+   "si_pdf_page": 31,
+   "formula_stated": "C44H80F5NO7",
+   "mz_calc_stated": "830.59",
+   "mz_found_stated": "830.59",
+   "material_sentence": "The 3,3,4,4,4- pentafluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for SSCB2F5 was similar to that of 3.2.1.1. The 3,3,4,4,4- pentafluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C44H80F5NO7, 830.59; Found 830.59. 1H NMR (400 MHz, CDCl ) \u03b4 4.91 \u2013 4.81 (m, 2H), 4.36 (t, J = 6.5 Hz, 2H), 3.64 3 (d, J = 25.2 Hz, 2H), 2.84 \u2013 2.22 (m, 14H), 1.77 \u2013 1.14 (m, 49H), 0.88 (t, J = 7.1 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.22",
+   "name_in_heading": "SSCB4F5",
+   "si_pdf_page": 31,
+   "formula_stated": "C46H84F5NO7",
+   "mz_calc_stated": "858.62",
+   "mz_found_stated": "858.63",
+   "material_sentence": "The 3,3,4,4,4- pentafluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate",
+   "block": "The synthesis method for SSCB4F5 was similar to that of 3.2.1.1. The 3,3,4,4,4- pentafluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C46H84F5NO7, 858.62; Found 858.63. 1H NMR (400 MHz, CDCl ) \u03b4 4.87 (dd, J = 12.2, 6.0 Hz, 2H), 4.36 (t, J = 6.4 3 Hz, 2H), 3.53 (s, 2H), 2.64 \u2013 2.40 (m, 6H), 2.31 (dt, J = 14.7, 11.5 Hz, 6H), 1.92 \u2013 1.02 (m, 53H), 0.88 (dt, J = 10.9, 5.5 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.23",
+   "name_in_heading": "SSCOF5",
+   "si_pdf_page": 31,
+   "formula_stated": "C44H80F5NO8",
+   "mz_calc_stated": "846.58",
+   "mz_found_stated": "846.58",
+   "material_sentence": "The 4-(3-oxo-3- (3,3,4,4,4-pentafluorobutoxy)propoxy)butyl 6-bromohexanoate",
+   "block": "S31 The synthesis method for SSCOF5 was similar to that of 3.2.1.1. The 4-(3-oxo-3- (3,3,4,4,4-pentafluorobutoxy)propoxy)butyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C44H80F5NO8, 846.58; Found 846.58. 1H NMR (400 MHz, CDCl ) \u03b4 4.90 \u2013 4.83 (m, 1H), 4.39 (t, J = 6.5 Hz, 3 2H), 4.07 (t, J = 6.4 Hz, 2H), 3.69 (t, J = 6.3 Hz, 2H), 3.50 (dt, J = 12.0, 5.6 Hz, 4H), 2.59 (dd, J = 8.1, 4.4 Hz, 4H), 2.52 \u2013 2.38 (m, 6H), 2.29 (dd, J = 14.6, 7.3 Hz, 4H), 1.76 \u2013 1.16 (m, 53H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.24",
+   "name_in_heading": "SSCPF5",
+   "si_pdf_page": 32,
+   "formula_stated": "C46H76F5NO8",
+   "mz_calc_stated": "866.55",
+   "mz_found_stated": "866.55",
+   "material_sentence": "The 4-(3-oxo-3- (3,3,4,4,4-pentafluorobutoxy)propoxy)benzyl 6-bromohexanoate",
+   "block": "The synthesis method for SSCPF5 was similar to that of 3.2.1.1. The 4-(3-oxo-3- (3,3,4,4,4-pentafluorobutoxy)propoxy)benzyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C46H76F5NO8, 866.55; Found 866.55. 1H NMR (400 MHz, CDCl ) \u03b4 7.29 (d, J = 6.8 Hz, 2H), 6.88 (d, J = 8.4 3 Hz, 2H), 5.04 (s, 2H), 4.42 (t, J = 6.5 Hz, 2H), 4.25 (t, J = 6.2 Hz, 2H), 3.97 (t, J = 5.8 Hz, 3H), 3.56 (d, J = 5.1 Hz, 2H), 2.82 (t, J = 6.2 Hz, 2H), 2.63 (s, 4H), 2.55 \u2013 2.20 (m, 13H), 1.83 \u2013 1.20 (m, 71H), 0.88 (t, J = 5.6 Hz, 7H)."
+  },
+  {
+   "section": "3.2.1.25",
+   "name_in_heading": "SSC3F7",
+   "si_pdf_page": 32,
+   "formula_stated": "C41H72F7NO7",
+   "mz_calc_stated": "824.52, 846.52.62",
+   "mz_found_stated": "824.575, 846.552",
+   "material_sentence": "The 4- (2,2,3,3,4,4,4-heptafluorobutoxy)-4-oxobutyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC3F7 was similar to that of 3.2.1.1. The 4- (2,2,3,3,4,4,4-heptafluorobutoxy)-4-oxobutyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C41H72F7NO7, 824.52, 846.52.62; Found 824.575, 846.552. 1H NMR (400 MHz, CDCl ) \u03b4 4.90 \u2013 4.83 (m, 1H), 3 4.60 (t, J = 13.6 Hz, 2H), 4.19 \u2013 4.05 (m, 2H), 3.65 (s, 2H), 2.96 \u2013 2.38 (m, 7H), 2.39 \u2013 2.22 (m, 4H), 2.10 \u2013 1.95 (m, 2H), 1.81 \u2013 1.01 (m, 41H), 0.88 (t, J = 6.8 Hz, 6H). S32"
+  },
+  {
+   "section": "3.2.1.26",
+   "name_in_heading": "SSC4F7",
+   "si_pdf_page": 33,
+   "formula_stated": "C42H74F7NO7",
+   "mz_calc_stated": "821.24",
+   "mz_found_stated": "821.27",
+   "material_sentence": "The 5- (2,2,3,3,4,4,4-heptafluorobutoxy)-5-oxopentyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC4F7 was similar to that of 3.2.1.1. The 5- (2,2,3,3,4,4,4-heptafluorobutoxy)-5-oxopentyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C42H74F7NO7, 821.24; Found 821.27. 1H NMR (400 MHz, CDCl ) \u03b4 4.90 \u2013 4.81 (m, 1H), 4.59 (t, J = 13.6 Hz, 3 2H), 4.09 (t, J = 6.1 Hz, 2H), 3.63 (s, 2H), 2.95 \u2013 2.08 (m, 11H), 1.83 \u2013 1.06 (m, 43H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.27",
+   "name_in_heading": "SSC5F7",
+   "si_pdf_page": 33,
+   "formula_stated": "C42H76F7NO7",
+   "mz_calc_stated": "852.55",
+   "mz_found_stated": "852.90",
+   "material_sentence": "The 6- (2,2,3,3,4,4,4-heptafluorobutoxy)-6-oxohexyl 6-bromohexanoate",
+   "block": "The synthesis method for SSC5F7 was similar to that of 3.2.1.1. The 6- (2,2,3,3,4,4,4-heptafluorobutoxy)-6-oxohexyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C42H76F7NO7, 852.55; Found 852.90. 1H NMR (400 MHz, CDCl3) \u03b4 4.90 \u2013 4.82 (m, 1H), 4.59 (t, J = 13.6 Hz, 2H), 4.07 (t, J = 6.6 Hz, 2H), 3.67 (s, 2H), 2.62 (s, 5H), 2.51 \u2013 2.20 (m, 6H), 1.94 \u2013 1.03 (m, 45H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.28",
+   "name_in_heading": "SSC6F7",
+   "si_pdf_page": 33,
+   "formula_stated": "C44H78F7NO7",
+   "mz_calc_stated": "866.57, 888.602",
+   "mz_found_stated": "866.62, 888.60",
+   "material_sentence": "The 2,2,3,3,4,4,4- heptafluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for SSC6F7 was similar to that of 3.2.1.1. The 2,2,3,3,4,4,4- heptafluorobutyl 7-((6-bromohexanoyl)oxy)heptanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C44H78F7NO7, 866.57, 888.602; Found 866.62, 888.60. 1H NMR (400 MHz, CDCl3) \u03b4 4.91 \u2013 4.83 (m, 1H), 4.58 (t, J = 13.6 Hz, 2H), 4.06 (t, J = 6.7 Hz, 2H), 3.60 (s, 2H), 2.82 \u2013 2.36 (m, 8H), 2.29 (dt, J = 10.8, 7.5 Hz, 4H), 1.78 \u2013 1.13 (m, 48H), 0.88 (t, J = 6.9 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.29",
+   "name_in_heading": "SSCB2F7",
+   "si_pdf_page": 33,
+   "formula_stated": "C44H78F7NO7",
+   "mz_calc_stated": "852.55",
+   "mz_found_stated": "852.59",
+   "material_sentence": "The 2,2,3,3,4,4,4- heptafluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate",
+   "block": "S33 The synthesis method for SSCB2F7 was similar to that of 3.2.1.1. The 2,2,3,3,4,4,4- heptafluorobutyl 5-((6-bromohexanoyl)oxy)heptanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C44H78F7NO7, 852.55; Found 852.59. 1H NMR (400 MHz, CDCl ) \u03b4 4.91 \u2013 4.81 (m, 2H), 4.36 (t, J = 6.5 Hz, 2H), 3.64 3 (d, J = 25.2 Hz, 2H), 2.84 \u2013 2.22 (m, 14H), 1.77 \u2013 1.14 (m, 49H), 0.88 (t, J = 7.1 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.30",
+   "name_in_heading": "SSCB4F7",
+   "si_pdf_page": 34,
+   "formula_stated": "C45H80F7NO7",
+   "mz_calc_stated": "880.59",
+   "mz_found_stated": "880.58",
+   "material_sentence": "2,2,3,3,4,4,4- Heptafluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate",
+   "block": "The synthesis method for SSCB4F7 was similar to that of 3.2.1.1. 2,2,3,3,4,4,4- Heptafluorobutyl 5-((6-bromohexanoyl)oxy)nonanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C45H80F7NO7, 880.59; Found 880.58. 1H NMR (400 MHz, CDCl ) \u03b4 4.86 (dd, J = 12.2, 6.0 Hz, 2H), 4.58 (t, J = 13.6 3 Hz, 2H), 3.57 (s, 2H), 2.73 \u2013 2.56 (m, 2H), 2.45 (dd, J = 21.8, 15.1 Hz, 4H), 2.40 \u2013 2.18 (m, 6H), 1.67 \u2013 1.20 (m, 54H), 0.88 (td, J = 6.7, 3.8 Hz, 9H)."
+  },
+  {
+   "section": "3.2.1.31",
+   "name_in_heading": "SSCOF7",
+   "si_pdf_page": 34,
+   "formula_stated": "C41H68F7NO7",
+   "mz_calc_stated": "882.62",
+   "mz_found_stated": "882.64",
+   "material_sentence": "4-(3-(2,2,3,3,4,4,4- Heptafluorobutoxy)-3-oxopropoxy)butyl 6-bromohexanoate",
+   "block": "The synthesis method for SSCOF7 was similar to that of 3.2.1.1. 4-(3-(2,2,3,3,4,4,4- Heptafluorobutoxy)-3-oxopropoxy)butyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C41H68F7NO7, 882.62; Found 882.64. 1H NMR (400 MHz, CDCl ) \u03b4 4.86 (dt, J = 12.6, 6.2 Hz, 1H), 4.61 (t, J = 13.6 3 Hz, 2H), 4.08 (dd, J = 16.4, 10.1 Hz, 2H), 3.71 (t, J = 6.2 Hz, 2H), 3.53 \u2013 3.40 (m, 3H), 2.62 (dt, J = 57.5, 13.5 Hz, 6H), 2.39 \u2013 2.23 (m, 4H), 1.88 \u2013 1.04 (m, 44H), 0.88 (t, J = 6.9 Hz, 6H)."
+  },
+  {
+   "section": "3.2.1.32",
+   "name_in_heading": "SSCPF7",
+   "si_pdf_page": 34,
+   "formula_stated": "C46H74F7NO8",
+   "mz_calc_stated": "902.53",
+   "mz_found_stated": "902.54",
+   "material_sentence": "The 4-(3- (2,2,3,3,4,4,4-heptafluorobutoxy)-3-oxopropoxy)benzyl 6-bromohexanoate",
+   "block": "S34 The synthesis method for SSCPF7 was similar to that of 3.2.1.1. The 4-(3- (2,2,3,3,4,4,4-heptafluorobutoxy)-3-oxopropoxy)benzyl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C46H74F7NO8, 902.53; Found 902.54. 1H NMR (400 MHz, CDCl ) \u03b4 7.14 (d, J = 8.3 Hz, 2H), 6.79 (d, 3 J = 8.3 Hz, 2H), 4.94 \u2013 4.83 (m, 2H), 3.56 (dd, J = 14.1, 8.5 Hz, 5H), 2.61 (dd, J = 15.9, 10.6 Hz, 3H), 2.35 (dt, J = 69.0, 7.4 Hz, 7H), 1.91 \u2013 1.02 (m, 58H), 0.88 (t, J = 6.8 Hz, 6H). 3.2.2 Synthesis of SP-series of FILs The synthesis steps for the SP-series of fluorinated ionizable lipids were similar to the steps for the SS-series. 2-Heptyldecan-1-ol was used as the starting material. 3.2.3 Synthesis of 10 additional SS/AL/AS-series FILs"
+  },
+  {
+   "section": "3.2.3.1",
+   "name_in_heading": "SSC7F5",
+   "si_pdf_page": 35,
+   "formula_stated": "C45H82F5NO",
+   "mz_calc_stated": "844.60",
+   "mz_found_stated": "844.63",
+   "material_sentence": "The 3,3,4,4,4- pentafluorobutyl 8-((6-bromohexanoyl)oxy)octanoate",
+   "block": "The synthesis method for SSC7F5 was similar to that of 3.2.1.1. The 3,3,4,4,4- pentafluorobutyl 8-((6-bromohexanoyl)oxy)octanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C45H82F5NO, 844.60; Found 844.63. 1H NMR (400 MHz, CDCl ) \u03b4 4.92 \u2013 4.81 (m, 1H), 4.36 (t, J = 6.5 Hz, 2H), 4.05 (t, J = 6.7 Hz, 3 2H), 3.52 (dd, J = 13.3, 8.0 Hz, 2H), 2.71 \u2013 2.16 (m, 12H), 1.95 \u2013 1.06 (m, 49H), 0.88 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.2",
+   "name_in_heading": "SSCB1F5",
+   "si_pdf_page": 35,
+   "formula_stated": "C43H78F5NO7",
+   "mz_calc_stated": "816.57",
+   "mz_found_stated": null,
+   "material_sentence": "6-Oxo-6- (3,3,4,4,4-pentafluorobutoxy)hexan-2-yl 6-bromohexanoate",
+   "block": "The synthesis method for SSCB1F5 was similar to that of 3.2.1.1. 6-Oxo-6- (3,3,4,4,4-pentafluorobutoxy)hexan-2-yl 6-bromohexanoate was used as the starting material. MS (ESI, m/z) of [M + H]+ calculated for C43H78F5NO7, 816.57; Found S35 816.60. 1H NMR (400 MHz, CDCl ) \u03b4 4.89 (dt, J = 21.7, 6.1 Hz, 2H), 4.36 (t, J = 6.5 3 Hz, 2H), 3.52 (dd, J = 12.0, 6.7 Hz, 2H), 2.67 \u2013 2.18 (m, 12H), 1.86 \u2013 1.07 (m, 62H), 0.88 (t, J = 6.8 Hz, 7H)."
+  },
+  {
+   "section": "3.2.3.3",
+   "name_in_heading": "ALC4F3",
+   "si_pdf_page": 36,
+   "formula_stated": "C41H76F3NO7",
+   "mz_calc_stated": "752.56",
+   "mz_found_stated": "752.58",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 5-oxo-5-(4,4,4-trifluorobutoxy)pentyl 6-bromohexanoate",
+   "block": "The synthesis method for ALC4F3 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 5-oxo-5-(4,4,4-trifluorobutoxy)pentyl 6-bromohexanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C41H76F3NO7, 752.56; Found 752.58. 1H NMR (400 MHz, CDCl ) \u03b4 3 4.25 \u2013 3.98 (m, 6H), 3.55 (s, 2H), 2.63 \u2013 2.06 (m, 13H), 1.92 (dd, J = 15.3, 6.2 Hz, 2H), 1.75 \u2013 1.22 (m, 47H), 0.87 (t, J = 6.7 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.4",
+   "name_in_heading": "ASC4F3",
+   "si_pdf_page": 36,
+   "formula_stated": "C41H76F3NO7",
+   "mz_calc_stated": "752.56",
+   "mz_found_stated": "752.58",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 5-oxo-5-(4,4,4-trifluorobutoxy) pentyl 6-bromohexanoate",
+   "block": "The synthesis method for ASC4F3 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 5-oxo-5-(4,4,4-trifluorobutoxy) pentyl 6-bromohexanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C41H76F3NO7, 752.56; Found 752.58. 1H NMR (400 MHz, CDCl ) 3 \u03b4 4.23 \u2013 3.97 (m, 6H), 3.55 (s, 2H), 2.52 \u2013 2.14 (m, 13H), 1.91 (dt, J = 13.2, 6.3 Hz, 2H), 1.69 \u2013 1.24 (m, 49H), 0.87 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.5",
+   "name_in_heading": "ALC6F5",
+   "si_pdf_page": 36,
+   "formula_stated": "C43H78F5NO7",
+   "mz_calc_stated": "816.57",
+   "mz_found_stated": "816.58",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 6-oxo-6-(3,3,4,4,4- S36 pentafluorobutoxy)hexyl 6-bromohexanoate",
+   "block": "The synthesis method for ALC6F5 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 6-oxo-6-(3,3,4,4,4- S36 pentafluorobutoxy)hexyl 6-bromohexanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C43H78F5NO7, 816.57; Found 816.58. 1H NMR (400 MHz, CDCl ) \u03b4 4.36 (t, J = 6.5 Hz, 2H), 4.05 (dd, J = 7.2, 6.2 Hz, 4H), 3.52 (d, J 3 = 22.1 Hz, 2H), 2.52 \u2013 2.22 (m, 11H), 1.72 \u2013 1.23 (m, 53H), 0.87 (t, J = 6.7 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.6",
+   "name_in_heading": "ASC6F5",
+   "si_pdf_page": 37,
+   "formula_stated": "C43H78F5NO7",
+   "mz_calc_stated": "816.57",
+   "mz_found_stated": "816.60",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 6-oxo-6-(3,3,4,4,4- pentafluorobutoxy)hexyl 6-bromohexanoate",
+   "block": "The synthesis method for ASC6F5 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 6-oxo-6-(3,3,4,4,4- pentafluorobutoxy)hexyl 6-bromohexanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C43H78F5NO7, 816.57; Found 816.60. 1H NMR (400 MHz, CDCl ) \u03b4 4.36 (t, J = 6.5 Hz, 2H), 4.16 \u2013 3.99 (m, 4H), 3.55 (s, 2H), 2.56 \u2013 3 2.24 (m, 11H), 1.78 \u2013 1.11 (m, 54H), 0.87 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.7",
+   "name_in_heading": "ALCB1F5",
+   "si_pdf_page": 37,
+   "formula_stated": "C42H76F5NO7",
+   "mz_calc_stated": "802.55",
+   "mz_found_stated": "802.58",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 6-oxo-6-(3,3,4,4,4- pentafluorobutoxy)hexan-2-yl 6-bromohexanoate",
+   "block": "The synthesis method for ALCB1F5 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 6-oxo-6-(3,3,4,4,4- pentafluorobutoxy)hexan-2-yl 6-bromohexanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C42H76F5NO7, 802.55; Found 802.58. 1H NMR (400 MHz, CDCl ) \u03b4 4.91 (dd, J = 12.1, 6.1 Hz, 1H), 4.36 (t, J = 6.5 Hz, 2H), 4.06 3 (t, J = 6.6 Hz, 2H), 3.56 (s, 2H), 2.62 \u2013 2.23 (m, 11H), 1.73 \u2013 1.22 (m, 53H), 0.87 (t, J = 6.7 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.8",
+   "name_in_heading": "ASCB1F5",
+   "si_pdf_page": 37,
+   "formula_stated": "C42H76F5NO7",
+   "mz_calc_stated": "802.55",
+   "mz_found_stated": "802.58",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 6-oxo-6-(3,3,4,4,4- pentafluorobutoxy)hexan-2-yl 6-bromohexanoate",
+   "block": "S37 The synthesis method for ASCB1F5 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 6-oxo-6-(3,3,4,4,4- pentafluorobutoxy)hexan-2-yl 6-bromohexanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C42H76F5NO7, 802.55; Found 802.58. 1H NMR (400 MHz, CDCl ) \u03b4 4.91 (dd, J = 11.8, 6.2 Hz, 1H), 4.36 (t, J = 6.5 Hz, 2H), 4.06 3 (t, J = 6.6 Hz, 2H), 3.53 (d, J = 25.2 Hz, 2H), 2.60 \u2013 2.22 (m, 11H), 1.65 \u2013 1.21 (m, 48H), 0.87 (t, J = 6.8 Hz, 6H)."
+  },
+  {
+   "section": "3.2.3.9",
+   "name_in_heading": "ALCB2F5",
+   "si_pdf_page": 38,
+   "formula_stated": "C43H78F5NO7",
+   "mz_calc_stated": "816.57",
+   "mz_found_stated": "816.60",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 3,3,4,4,4-pentafluorobutyl 5-((6- bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for ALCB2F5 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-hexyldecanoate and 3,3,4,4,4-pentafluorobutyl 5-((6- bromohexanoyl)oxy)heptanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C43H78F5NO7, 816.57; Found 816.60. 1H NMR (400 MHz, CDCl ) \u03b4 4.85 \u2013 4.78 (m, 1H), 4.36 (t, J = 6.5 Hz, 2H), 4.06 (t, J = 6.7 Hz, 2H), 3.55 (s, 3 2H), 2.54 \u2013 2.24 (m, 11H), 1.80 \u2013 1.08 (m, 47H), 0.88 (t, J = 7.3 Hz, 9H)."
+  },
+  {
+   "section": "3.2.3.10",
+   "name_in_heading": "ASCB2F5",
+   "si_pdf_page": 38,
+   "formula_stated": "C43H78F5NO7",
+   "mz_calc_stated": "816.57",
+   "mz_found_stated": "816.60",
+   "material_sentence": "6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 3,3,4,4,4-pentafluorobutyl 5-((6- bromohexanoyl)oxy)heptanoate",
+   "block": "The synthesis method for ASCB2F5 was similar to that of 3.2.1.1. 6-((4- Hydroxybutyl)amino)hexyl 2-heptylnonanoate and 3,3,4,4,4-pentafluorobutyl 5-((6- bromohexanoyl)oxy)heptanoate were used as the starting materials. MS (ESI, m/z) of [M + H]+ calculated for C43H78F5NO7, 816.57; Found 816.60. 1H NMR (400 MHz, CDCl ) \u03b4 4.88 \u2013 4.77 (m, 1H), 4.37 (dt, J = 13.1, 6.6 Hz, 2H), 4.13 \u2013 3.98 (m, 2H), 3.52 3 (d, J = 22.1 Hz, 2H), 2.58 \u2013 2.22 (m, 11H), 1.84 \u2013 1.18 (m, 47H), 0.97 \u2013 0.81 (m, 9H). S38"
+  }
+ ]
+}

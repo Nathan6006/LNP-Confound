@@ -1,0 +1,27 @@
+block_id,role,n_carbons,SMILES,measured_by,geometry_carbons,HRMS_carbons,agree,evidence,confidence,enumerated
+T14,thiolactone (amide tail donor),14,CCCCCCCCCCCCCC(=O)NC1CCSC1=O,vector bond coordinates + HRMS carbon count,14,14,True,SI p.2 Scheme S1a; HRMS [M+H]+ 328.2312,high,True
+T16,thiolactone (amide tail donor),16,CCCCCCCCCCCCCCCC(=O)NC1CCSC1=O,vector bond coordinates + HRMS carbon count,16,16,True,SI p.2 Scheme S1a; HRMS [M+H]+ 356.2625,high,True
+T18,thiolactone (amide tail donor),18,CCCCCCCCCCCCCCCCCC(=O)NC1CCSC1=O,vector bond coordinates + HRMS carbon count,18,18,True,SI p.2 Scheme S1a; HRMS [M+H]+ 384.2938,high,True
+T18U,thiolactone (amide tail donor),18,CCCCCCCC/C=C\CCCCCCCC(=O)NC1CCSC1=O,vector bond coordinates + HRMS carbon count,18,18,True,SI p.2 Scheme S1a; HRMS [M+H]+ 382.2782,high,True
+PY12,pyridyl disulfide (S-S-alkyl arm donor),12,CCCCCCCCCCCCSSc1ccccn1,vector bond coordinates + HRMS carbon count,12,12,True,SI p.2 Scheme S1b; HRMS [M+H]+ 312.1821,high,True
+PY14,pyridyl disulfide (S-S-alkyl arm donor),14,CCCCCCCCCCCCCCSSc1ccccn1,vector bond coordinates + HRMS carbon count,14,14,True,SI p.2 Scheme S1b; HRMS [M+H]+ 340.2134,high,True
+PY16,pyridyl disulfide (S-S-alkyl arm donor),16,CCCCCCCCCCCCCCCCSSc1ccccn1,vector bond coordinates + HRMS carbon count,16,16,True,SI p.2 Scheme S1b; HRMS [M+H]+ 368.2447,high,True
+PY18,pyridyl disulfide (S-S-alkyl arm donor),18,CCCCCCCCCCCCCCCCCCSSc1ccccn1,vector bond coordinates + HRMS carbon count,18,18,True,SI p.2 Scheme S1b; HRMS [M+H]+ 396.276,high,True
+A1,amine head group,,CCN(CC)CCN,"vector bond coordinates (curation/lib/chains.vector_bonds), SI p.2 Scheme S1c",,,,"N1,N1-diethyl ethylene diamine (Scheme S1c, SI p.2)",high,True
+A5,amine head group,,CCN(CC)CCCN,"raster: turning points of the linker's y(x) centreline, counted as sign changes of y(x+lag)-y(x) with the lag SWEPT from 3 to 10 px. No threshold is fitted to the expected answer (error class 27) and no single lag is trusted (error class 28): the count is the modal one and the sweep is reported so a reviewer sees the spread.",,,,"The linker is measured (3 carbons, so A5 is NOT A1). The two N-ethyls are read from the drawing and could not be measured at this raster's resolution, and the paper gives A5 no name, no formula and no mass, so there is no anchor orthogonal to the drawing at all. Mass cannot see connectivity -- and here there is no mass either.",medium,True
+A8,amine head group,,,"solved from two independent MALDI formulae -- T18U-PY12-A8 = C41H81N4O2S2 and T14-PY12-A8 = C37H75N4O2S2. Their difference, C4H6, is exactly T18U - T14, which is the cross-check that the solve is self-consistent.",,,,"A FORMULA IS NOT A STRUCTURE. C7H17N3 admits 1-(2-aminoethyl)-4-methylpiperazine, N-(3-aminopropyl)-N,N'-dimethylethylenediamine and many other triamines; nothing in the SI chooses between them, and A8 is the second-best and third-best lipidoid in the paper. DECISIONS.md D-2.",,False
+A10,amine head group,,,"raster polygon aspect ratio (width / vertical side), tolerance swept",,,,"NOT ENUMERATED. Drawn only, and the one geometric measurement available at this raster resolution is INCONCLUSIVE between a 5-, 6- and 7-membered ring once its tolerance is swept. 1-ethylpiperazine is recorded as a CANDIDATE, not as a structure. Nothing is lost: A10 appears in NO row of Table S2. DECISIONS.md D-3.",,False
+A2,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A3,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A4,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A6,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A7,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A9,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A11,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A12,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A13,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A14,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A15,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A16,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A17,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False
+A18,amine head group,,,,,,,"NOT IN THE SI. The amine panel is in the main article, which this curation does not hold.",,False

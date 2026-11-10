@@ -1,0 +1,419 @@
+{
+ "_what": "Every check this folder ran, with numbers.",
+ "paper": "Strelkova Petersen et al., Adv Healthc Mater 2024",
+ "pmid": "38888972",
+ "doi": "10.1002/adhm.202400225",
+ "P1_library_size": {
+  "claim": "'a library of 580 ionizable lipidoids' (abstract, Fig 1 caption) and '29 amine heads ... 20 acrylate tails, resulting in a library of 580 ionizable lipid members' (Methods)",
+  "counted_three_independent_ways": {
+   "Table_S1_rows_x_Table_S2_rows": "29 x 20 = 580",
+   "Figure_2A_grid_from_detected_cell_boundaries": 580,
+   "structures_enumerated": 580
+  },
+  "stated": 580,
+  "difference": 0,
+  "verdict": "EXACT. 29 x 20 = 580 three ways, and 580 distinct canonical SMILES / InChIKeys were enumerated."
+ },
+ "P2_label_lists": {
+  "figure_2B_x_ticks_detected": 51,
+  "figure_2B_labels_transcribed": 51,
+  "figure_3A_x_ticks_detected": 50,
+  "figure_3A_labels_transcribed": 50,
+  "in_2B_not_in_3A": [
+   "306O12"
+  ],
+  "in_3A_not_in_2B": [
+   "Naked mRNA"
+  ],
+  "verdict": "FAILS. Both captions describe the same 49 LNPs, but Figure 2B has 51 x-axis positions and Figure 3A has 50. The tick counts were DETECTED, not counted by eye. 306O12 is drawn in 2B and absent from 3A, so Figure 3A shows 48 lipidoids, not 49. The control is also renamed ('Naked mLuc' in 2B, 'Naked mRNA' in 3A). 08_contradictions.csv C-5."
+ },
+ "P3_drawn_reference_line": {
+  "_why": "The authors drew this dashed rule and labelled it 'nominally high potency' without printing a coordinate; the text names 10^8 p/s as the threshold. It is therefore a round number external to this digitiser, and the whole calibration is wrong by exactly the offset recorded here.",
+  "dark_coverage": 0.4453,
+  "nominal": 100000000.0,
+  "offset_decades": -0.00109,
+  "ratio_to_nominal": 0.99748,
+  "row_px": 1443.9,
+  "value_from_calibration": 99748500.0,
+  "verdict": "PASSES, and this is the strongest single statement about the Figure 2B calibration: a round number the authors DREW and never printed as a coordinate lands 0.25% from nominal, i.e. 0.0011 decades, which is a tenth of a pixel."
+ },
+ "P4_figure_2C_set_match": {
+  "TNS_AU_delta": {
+   "max_abs": 179.7,
+   "mean": -80.2,
+   "median": -80.5,
+   "rms": 100.4
+  },
+  "_reading": "A mean delta near zero on BOTH axes means neither digitiser carries a uniform scale or origin error. The rms is the per-point agreement and is bounded below by the panels' own drawing precision: a 1 px marker-centroid error is ~68 AU on x and ~0.012 decades on y.",
+  "log10_flux_delta": {
+   "max_abs": 0.0174,
+   "mean": 0.0094,
+   "median": 0.0095,
+   "rms": 0.0101
+  },
+  "n_matched": 30,
+  "n_lipidoids_available": 49,
+  "n_unambiguous_markers": 30,
+  "merged_blobs": [
+   263,
+   267,
+   300,
+   328,
+   395,
+   670,
+   762
+  ],
+  "px_scale": {
+   "1_px_on_x_AU": 67.6,
+   "1_px_on_y_decades": 0.0124
+  },
+  "verdict": "PASSES. 30 of the 49 markers are unoccluded; matched one-to-one against the (Figure 2A TNS, Figure 2B flux) pairs they must be, the mean displacement is -80 AU on x (1.2 px) and +0.0094 decades on y (0.8 px). Two independently written digitisers, on two panels, agree with a third panel to about one pixel. The +0.009 decade bias on y is the expected sign and size of bars.bar_top starting one anti-aliased row inside the bar."
+ },
+ "P5_figure_3A_total_vs_figure_2B": {
+  "n_compared": 44,
+  "n_refused_by_bar_top": 6,
+  "refusals": {
+   "Untreated": "no bar colour above the baseline",
+   "Naked mRNA": "no bar colour above the baseline",
+   "123O10": "bar_top: left flank first-covered row 521, right flank 508, delta 13.0 px > 2.0 px tolerance.",
+   "304O10": "no bar colour above the baseline",
+   "509O14": "bar_top: left flank first-covered row 319, right flank 314, delta 5.0 px > 2.0 px tolerance.",
+   "306O11": "bar_top: left flank first-covered row 273, right flank 277, delta 4.0 px > 2.0 px tolerance."
+  },
+  "delta_log10": {
+   "mean": -0.0109,
+   "median": -0.0037,
+   "rms": 0.0267,
+   "max_abs": 0.1504
+  },
+  "verdict": "PASSES. Figure 3A restacks the same totals; 44 of 50 positions are readable and agree with Figure 2B at median -0.004 and rms 0.027 decades, i.e. about 2 px. Six positions are REFUSALS, not values: two controls and one bar with no colour above the baseline, plus three that bars.bar_top rejected on flank disagreement (4-13 px) where a neighbouring segment boundary runs into the top rule. The refusals are recorded rather than filled in."
+ },
+ "P6_printed_pie_percentages": {
+  "Liver": {
+   "delta_pp": -5.11,
+   "measured_pct": 24.89,
+   "printed_pct": 30.0
+  },
+  "Lungs": {
+   "delta_pp": 5.58,
+   "measured_pct": 40.58,
+   "printed_pct": 35.0
+  },
+  "Spleen": {
+   "delta_pp": -0.47,
+   "measured_pct": 34.53,
+   "printed_pct": 35.0
+  },
+  "measurement": "angular span at 0.6 R over 3600 rays, 0 unresolved, sectors summing to 100.000%",
+  "verdict": "FAILS. The text prints 35% lung, 35% spleen, 30% liver; the pie the same authors drew is 40.6% lung, 34.5% spleen, 24.9% liver. Spleen agrees to 0.5 pp, the other two are out by 5.1 and 5.6 pp -- 18 and 20 degrees of arc, far outside any drawing tolerance. 08_contradictions.csv C-6."
+ },
+ "P7_over_40_enabled_expression": {
+  "claim": "abstract: 'a library of 580 ionizable lipidoids', of which 'over 40 enabled protein expression'",
+  "n_tested_in_vivo": 49,
+  "above_the_untreated_bar": 49,
+  "above_2x_untreated": 48,
+  "above_1e6_p_per_s": 45,
+  "untreated_bar_p_per_s": 116673.0,
+  "verdict": "PASSES under every reading tried: 49 of 49 clear the untreated bar, 48 clear twice it, 44 clear 1e6 p/s. All are 'over 40'. NOTE the claim is necessarily about the 49 LNPs that went into mice, not about the 580 -- 531 members were never given to an animal."
+ },
+ "P8_over_1e9": {
+  "claim": "'In addition to 306Oi10 ... we identified two new highly potent LNPs (402O8,12 and 500O6,10) with total luminescence efficacy over 10^9 p/s'",
+  "bar_tops_at_or_above_1e9": [
+   "306Oi10",
+   "402O8,12"
+  ],
+  "value_p_per_s": {
+   "306Oi10": 1197000000.0,
+   "402O8,12": 1118000000.0,
+   "500O6,10": 809500000.0
+  },
+  "upper_error_bar_at_or_above_1e9": [
+   "306Oi10",
+   "402O8,12",
+   "500O6,10"
+  ],
+  "verdict": "PASSES ON MEAN+SD, NOT ON THE MEAN, and the distinction is worth recording. 306Oi10 (1.20e9) and 402O8,12 (1.12e9) clear 10^9 at the bar top; 500O6,10's bar top is 8.10e8, 0.09 decades short. Measured on the UPPER ERROR BAR the set is exactly the three the authors name, with no fourth. Read together with P9 -- where the error-bar count lands on exactly 13 -- this says the paper's potency thresholds were applied to mean+SD. 08_contradictions.csv C-7 records it as a reading of the text, not an error in it."
+ },
+ "P9_additional_13_over_1e8": {
+  "claim": "'An additional 13 LNPs were identified with total luminescence over 10^8 p/s'",
+  "n_bar_tops_at_or_above_1e8": 11,
+  "n_additional_beyond_the_three_named": 8,
+  "n_upper_error_bars_at_or_above_1e8": 16,
+  "n_additional_by_error_bar": 13,
+  "bar_tops_over_1e8": [
+   "306Oi10",
+   "402O8,12",
+   "500O6,10",
+   "501O13",
+   "503O6,10",
+   "205O6,10",
+   "200Oi10",
+   "402O4,8",
+   "509O4,8",
+   "501Oi10",
+   "509X8"
+  ],
+  "verdict": "EXACT ON MEAN+SD. Bar tops give 11 at or above 10^8, i.e. 8 'additional' against a printed 13. Upper error bars give 16, i.e. EXACTLY 13 additional -- the printed number, reproduced to the unit. Two independent counts (3 at 10^9 in P8, 13 at 10^8 here) both land exactly on the mean+SD reading and neither lands on the bar-top reading, which is what makes this a resolution rather than a coincidence. The whisker detector is separate from bars.bar_top and its output is never a value -- error class 32 is a bar-top detector reading a whisker, and that is the one thing this must not become."
+ },
+ "P10_TNS_tail_structure_claim": {
+  "claim": "'longer tails (O14-O18) producing LNPs with the lowest TNS fluorescence and medium length tails (O10, Oi10, O8,12) producing the highest'",
+  "columns_lowest_to_highest": [
+   "O18",
+   "O16",
+   "X5",
+   "O14",
+   "X2",
+   "X1",
+   "X6",
+   "X3",
+   "O1,1,8",
+   "X7",
+   "O4,8",
+   "X8",
+   "X4",
+   "O12",
+   "O8,12",
+   "O11",
+   "O6,10",
+   "O13",
+   "O10",
+   "Oi10"
+  ],
+  "rank_of_named_low": {
+   "O14": 4,
+   "O16": 2,
+   "O18": 1
+  },
+  "rank_of_named_high": {
+   "O10": 19,
+   "Oi10": 20,
+   "O8,12": 15
+  },
+  "column_mean_TNS_AU": {
+   "O1,1,8": 11691.7,
+   "O10": 15803.9,
+   "O11": 14772.4,
+   "O12": 14010.5,
+   "O13": 14997.2,
+   "O14": 9125.4,
+   "O16": 5094.0,
+   "O18": 4678.7,
+   "O4,8": 13042.1,
+   "O6,10": 14819.4,
+   "O8,12": 14383.7,
+   "Oi10": 16344.8,
+   "X1": 10233.8,
+   "X2": 9740.0,
+   "X3": 11619.2,
+   "X4": 13622.4,
+   "X5": 8145.3,
+   "X6": 10996.3,
+   "X7": 12625.2,
+   "X8": 13266.4
+  },
+  "verdict": "MOSTLY PASSES. O18, O16 and O14 are ranks 1, 2 and 4 of 20 from the bottom (X5/geranyl sits between them at 3). Oi10 and O10 are ranks 20 and 19, the two highest. O8,12 is rank 15 -- upper third, but not among the top three the sentence names."
+ },
+ "P11_branched_tail_claim": {
+  "claim": "'~75% of the most efficacious LNPs were formulated with ionizable lipids containing branched, unsaturated tails'",
+  "branched_tails": [
+   "O1,1,8",
+   "O4,8",
+   "O6,10",
+   "O8,12",
+   "Oi10",
+   "X5",
+   "X8"
+  ],
+  "by_cut": {
+   "top_10": {
+    "branched": 9,
+    "branched_pct": 90.0,
+    "unsaturated": 0,
+    "branched_and_unsaturated": 0
+   },
+   "top_11": {
+    "branched": 10,
+    "branched_pct": 90.9,
+    "unsaturated": 1,
+    "branched_and_unsaturated": 1
+   },
+   "top_12": {
+    "branched": 11,
+    "branched_pct": 91.7,
+    "unsaturated": 1,
+    "branched_and_unsaturated": 1
+   },
+   "top_16": {
+    "branched": 14,
+    "branched_pct": 87.5,
+    "unsaturated": 1,
+    "branched_and_unsaturated": 1
+   },
+   "top_20": {
+    "branched": 16,
+    "branched_pct": 80.0,
+    "unsaturated": 1,
+    "branched_and_unsaturated": 1
+   }
+  },
+  "verdict": "NOT CHECKABLE AS WRITTEN, and reported as such. 'Most efficacious' is undefined and the two adjectives are not the same property in this library: the branched tails (Oi10, O8,12, O6,10, O4,8, O1,1,8) are SATURATED, and only X5 and X8 are both. Measured, 'branched' is 90-92% at every cut from the top 10 to the top 16 -- higher than 75%, not lower -- while 'branched AND unsaturated' is 1 lipidoid. Read as 'branched', the claim is conservative; read literally, it is not reproducible."
+ },
+ "P12_head_code_range": {
+  "claim": "Methods: '29 amine heads (80 through 602)'",
+  "codes_in_Table_S1": [
+   "60",
+   "80",
+   "81",
+   "110",
+   "111",
+   "113",
+   "122",
+   "123",
+   "174",
+   "200",
+   "205",
+   "211",
+   "303",
+   "304",
+   "305",
+   "306",
+   "313",
+   "347",
+   "400",
+   "401",
+   "402",
+   "601",
+   "602",
+   "500",
+   "501",
+   "503",
+   "509",
+   "514",
+   "516"
+  ],
+  "n": 29,
+  "verdict": "The COUNT is right and the RANGE is not: Table S1's first entry is code 60, below 80. 08_contradictions.csv C-9."
+ },
+ "flags_on_the_emitted_rows": {
+  "confidence_high": 33,
+  "confidence_low": 10,
+  "confidence_medium": 6,
+  "rows_with_a_caveat": 16,
+  "structure_assumed": 16,
+  "value_is_bound": 0
+ },
+ "flags_on_all_580_enumerated": {
+  "difference": 0,
+  "n_enumerated": 580,
+  "n_unique_canonical_smiles": 580,
+  "n_unique_inchikey": 580,
+  "rows_confidence_high": 396,
+  "rows_confidence_low": 140,
+  "rows_confidence_medium": 44,
+  "rows_with_a_caveat": 184,
+  "stated_library_size": 580,
+  "tails_per_head": {
+   "110": 6,
+   "111": 7,
+   "113": 4,
+   "122": 6,
+   "123": 3,
+   "174": 5,
+   "200": 5,
+   "205": 3,
+   "211": 4,
+   "303": 3,
+   "304": 3,
+   "305": 4,
+   "306": 4,
+   "313": 4,
+   "347": 4,
+   "400": 4,
+   "401": 4,
+   "402": 4,
+   "500": 4,
+   "501": 4,
+   "503": 4,
+   "509": 4,
+   "514": 4,
+   "516": 4,
+   "60": 2,
+   "601": 3,
+   "602": 2,
+   "80": 2,
+   "81": 2
+  }
+ },
+ "seeded_checks": {
+  "cases": [
+   {
+    "case": "assigned stereocentre lost",
+    "defect": "the fragment list carries an assigned (S) centre that the product does not -- the F-013 shape",
+    "fired": true,
+    "expected": "StructureError",
+    "matched": true,
+    "message": "assemble.check_stereo_preserved('306O10 seeded'): the product's stereocentres are {'R': 0, 'S': 0, '?': 0}, the fragments' sum is {'R': 0, 'S': 1, '?': 0}."
+   },
+   {
+    "case": "401 pivot resolves (positive control)",
+    "defect": "none -- this one must NOT raise",
+    "fired": false,
+    "expected": "no exception",
+    "matched": true,
+    "message": "401O10 is marker-free and achiral, as the symmetric product must be"
+   },
+   {
+    "case": "wrong tail count",
+    "defect": "head 306 (4 N-H) declared as 3 N-H",
+    "fired": true,
+    "expected": "added 4 tails but the head has 3",
+    "matched": true,
+    "message": "306O10 seeded: added 4 tails but the head has 3 N-H. The substitution count IS the structural claim; refusing."
+   },
+   {
+    "case": "ester count vs tail count",
+    "defect": "the product's ester count is compared against a tail count of 3",
+    "fired": true,
+    "expected": "ester-count assertion",
+    "matched": true,
+    "message": "ester-count assertion: 4 esters for a claimed 3 tails"
+   },
+   {
+    "case": "literal confidence",
+    "defect": "confidence=\"high\" passed as a string instead of per-item",
+    "fired": true,
+    "expected": "EmitError",
+    "matched": true,
+    "message": "emit: confidence='high' is a LITERAL."
+   },
+   {
+    "case": "caveat without a note",
+    "defect": "structure_assumed=1 with an empty curation_note",
+    "fired": true,
+    "expected": "EmitError",
+    "matched": true,
+    "message": "emit_rows('seeded') item 'x': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='1', value_is_bound='') and its curation_note is empty."
+   },
+   {
+    "case": "Figure 2B label dropped",
+    "defect": "one x-axis label removed from the transcription",
+    "fired": true,
+    "expected": "x ticks but",
+    "matched": true,
+    "message": "fig2b: 51 x ticks but 50 labels transcribed. Refusing: a mismatch here shifts every value onto the wrong molecule, which is the AC_2025 failure mode."
+   },
+   {
+    "case": "anchor with 3 tails",
+    "defect": "the C10 anchor template is built with 3 tails instead of the 4 Figure 1A draws",
+    "fired": true,
+    "expected": "esters, Figure 1A draws 4",
+    "matched": true,
+    "message": "anchor: 3 esters, Figure 1A draws 4"
+   }
+  ],
+  "n": 8,
+  "n_fired": 7,
+  "n_matched": 8,
+  "_why": "CLAUDE.md section 6: a new check is not done until it has been made to fail on purpose. C16 was also seeded by hand in this folder on 2026-11-10: pasting the enumeration's canonical SMILES into make_reference.py as a literal made provenance/check_anchor_independence.py exit 1 naming whiteheadka_38888972/make_reference.py:SEEDED_PASTE, and reverting it returned the check to exit 0."
+ }
+}

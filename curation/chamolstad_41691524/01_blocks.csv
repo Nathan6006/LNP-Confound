@@ -1,0 +1,10 @@
+block_role,block_id,name,SMILES,source,note
+head,H9,tris(2-aminoethyl)amine (TREN),NCCN(CCN)CCN,"SI p.5, named verbatim in the H9T6 preparation",the ONLY one of the library's 12 head amines disclosed anywhere on disk
+tail,T6,(S)-glycidyl decanoate,CCCCCCCCCC(=O)OC[C@@H]1CO1,SI p.4 epoxide-tail list + p.5 H9T6 NMR/LC-MS,"chain length C10 derived 3 ways (NMR integral, LC-MS ladder, R/S index pairing); see 07_qc.json"
+tail_unindexed,,T_(S)-glycidyl octanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk
+tail_unindexed,,T_(S)-glycidyl dodecanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk
+tail_unindexed,,T_(S)-glycidyl tetradecanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk
+tail_unindexed,,T_(R)-glycidyl octanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk
+tail_unindexed,,T_(R)-glycidyl decanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk
+tail_unindexed,,T_(R)-glycidyl dodecanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk
+tail_unindexed,,T_(R)-glycidyl tetradecanoate,,SI p.4,NMR-characterised in the SI but NEVER mapped to a T index; the T1..T8 numbering is not printed anywhere on disk

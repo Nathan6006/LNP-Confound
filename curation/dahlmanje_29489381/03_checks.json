@@ -1,0 +1,378 @@
+{
+ "A_library_row_counts": {
+  "extracted": {
+   "1": 144,
+   "2": 120,
+   "3": 156,
+   "4": 144
+  },
+  "stated": {
+   "1": 144,
+   "2": 120,
+   "3": 156,
+   "4": 144
+  },
+  "n_matching": 4,
+  "n_libraries": 4
+ },
+ "B_mole_percent_sums": {
+  "distribution": {
+   "100.0": 564
+  },
+  "n_rows": 564,
+  "n_exactly_100": 564
+ },
+ "B2_rank_table_mole_percent_sums": {
+  "distribution": {
+   "100.0": 86,
+   "101.0": 1
+  },
+  "n_rows": 87,
+  "n_exactly_100": 86,
+  "offenders": [
+   {
+    "subtable": "Library 2",
+    "si_page": "20",
+    "lipomer": "58",
+    "lipomer_mole_pct": "36",
+    "chol_mole_pct": "60",
+    "peg_mole_pct": "5",
+    "helper_mole_pct": "0",
+    "diameter_nm": "31.2",
+    "sum": 101.0
+   }
+  ]
+ },
+ "C_stable_pool": {
+  "formulated_libs_1_3": 420,
+  "stable_libs_1_3": 281,
+  "tracker_and_abstract_say": 281,
+  "matches_281": true,
+  "pct_included": 66.9,
+  "fig_S3i_prints_included_pct": 66.9,
+  "pct_removed": 33.1,
+  "fig_S3i_prints_removed_pct": 33.1
+ },
+ "D_distinct_lipomers_per_library": {
+  "1": 2,
+  "2": 15,
+  "3": 2,
+  "4": 3
+ },
+ "D_stated_per_library": {
+  "1": 2,
+  "2": 15,
+  "3": 2,
+  "4": 3
+ },
+ "D_distinct_lipomer_ids_all_libraries": [
+  "100",
+  "102",
+  "104",
+  "106",
+  "108",
+  "48",
+  "58",
+  "68",
+  "69",
+  "78",
+  "79",
+  "7C1",
+  "8",
+  "88",
+  "92"
+ ],
+ "D_n_distinct_lipomer_ids": 15,
+ "D_distinct_amines": 6,
+ "D_distinct_tails": 6,
+ "E_rank_rows_matched_to_a_design_row": {
+  "n_rank_rows": 87,
+  "matched": 86,
+  "unmatched": 1,
+  "example_misses": [
+   {
+    "subtable": "Library 2",
+    "Lipomer": "58",
+    "Amine": "Spermidine",
+    "Lipid": "Lauryl Acrylate",
+    "Amine Lipid": "",
+    "PEG Chain": "",
+    "PEG MW": "2000",
+    "Cholesterol Mole %": "60"
+   }
+  ]
+ },
+ "F_rank_column_integrity": {
+  "n_rank_columns": 24,
+  "repeated_ranks_total": 0,
+  "in_vivo_ranks_above_10": 0,
+  "per_column": {
+   "Library 1 p20 Heart Ecs": {
+    "n": 10,
+    "min": 1,
+    "max": 10,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 Heart Macs": {
+    "n": 10,
+    "min": 1,
+    "max": 10,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 Lung Ecs": {
+    "n": 10,
+    "min": 1,
+    "max": 10,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 Lung Macs": {
+    "n": 10,
+    "min": 1,
+    "max": 10,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 Marrow Ecs": {
+    "n": 10,
+    "min": 1,
+    "max": 10,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 Marrow Macs": {
+    "n": 10,
+    "min": 1,
+    "max": 10,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 RAWs": {
+    "n": 17,
+    "min": 1,
+    "max": 74,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 1 p20 iMAEC": {
+    "n": 19,
+    "min": 1,
+    "max": 95,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 Heart Ecs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 Heart Macs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 Lung Ecs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 Lung Macs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 Marrow Ecs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 Marrow Macs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 RAWs": {
+    "n": 11,
+    "min": 1,
+    "max": 51,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 2 p20 iMAEC": {
+    "n": 12,
+    "min": 1,
+    "max": 53,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 Heart Ecs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 Heart Macs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 Lung Ecs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 Lung Macs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 Marrow Ecs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 Marrow Macs": {
+    "n": 6,
+    "min": 1,
+    "max": 6,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 RAWs": {
+    "n": 12,
+    "min": 5,
+    "max": 53,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   },
+   "Library 3 p21 iMAEC": {
+    "n": 16,
+    "min": 5,
+    "max": 64,
+    "repeats": 0,
+    "gt_10_in_vivo": 0
+   }
+  }
+ },
+ "H_in_vitro_rank_vs_stable_pool": {
+  "per_column": {
+   "Library 1 iMAEC": {
+    "max_rank_listed": 95,
+    "stable_pool": 112,
+    "fits": true,
+    "equals_pool": false
+   },
+   "Library 1 RAWs": {
+    "max_rank_listed": 74,
+    "stable_pool": 112,
+    "fits": true,
+    "equals_pool": false
+   },
+   "Library 2 iMAEC": {
+    "max_rank_listed": 53,
+    "stable_pool": 105,
+    "fits": true,
+    "equals_pool": false
+   },
+   "Library 2 RAWs": {
+    "max_rank_listed": 51,
+    "stable_pool": 105,
+    "fits": true,
+    "equals_pool": false
+   },
+   "Library 3 iMAEC": {
+    "max_rank_listed": 64,
+    "stable_pool": 64,
+    "fits": true,
+    "equals_pool": true
+   },
+   "Library 3 RAWs": {
+    "max_rank_listed": 53,
+    "stable_pool": 64,
+    "fits": true,
+    "equals_pool": false
+   }
+  },
+  "n_columns": 6,
+  "n_fitting": 6,
+  "n_hitting_the_pool_exactly": 1
+ },
+ "I_complete_factorial": {
+  "per_library": {
+   "1": {
+    "factor_levels": {
+     "Lipomer": 2,
+     "PEG Chain": 3,
+     "PEG MW": 3
+    },
+    "distinct_mole_pct_sets": 8,
+    "product": 144,
+    "n_rows": 144,
+    "is_complete_factorial": true
+   },
+   "2": {
+    "factor_levels": {
+     "Lipomer": 15,
+     "PEG": 1,
+     "PEG MW": 1
+    },
+    "distinct_mole_pct_sets": 8,
+    "product": 120,
+    "n_rows": 120,
+    "is_complete_factorial": true
+   },
+   "3": {
+    "factor_levels": {
+     "Lipomer": 2,
+     "PEG Chain": 3,
+     "PEG MW": 2
+    },
+    "distinct_mole_pct_sets": 13,
+    "product": 156,
+    "n_rows": 156,
+    "is_complete_factorial": true
+   },
+   "4": {
+    "factor_levels": {
+     "Lipomer": 3,
+     "PEG Chain": 1,
+     "PEG MW": 1
+    },
+    "distinct_mole_pct_sets": 48,
+    "product": 144,
+    "n_rows": 144,
+    "is_complete_factorial": true
+   }
+  },
+  "n_libraries_complete": 4
+ },
+ "G_formulations_per_distinct_lipomer_chemistry": {
+  "n_distinct_lipomers": 15,
+  "n_formulations": 564,
+  "median_formulations_each": 8,
+  "max_formulations_on_one_chemistry": 206
+ }
+}

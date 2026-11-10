@@ -1,0 +1,43 @@
+{
+ "_what": "Overlap of this paper's 12 structures with the live corpus, measured three ways. Report, do not act.",
+ "corpus_rows_scanned": 30998,
+ "corpus_files": [
+  "data/data_vitro.csv",
+  "data/data_vivo.csv"
+ ],
+ "full_inchikey_matches": "NONE",
+ "skeleton_block_matches": "NONE",
+ "IL_name_collisions": "NONE",
+ "substructure_near_misses": {
+  "query": "the bis(8-((2-hexyldecanoyl)oxy)octyl)amine core shared by all 12 members",
+  "n_rows": 3,
+  "rows": [
+   {
+    "pool": "vivo",
+    "Experiment_ID": "ZT_2026",
+    "IL_name": "Lipid 14-CB1",
+    "Model_target": "brain",
+    "inchikey": "JNVRXHXPMDPHRH-VDUMKZAWSA-N",
+    "IL_SMILES": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCN(CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC)CCOC(=O)CCC[N+](C)(C)CCC(=O)O[C@H]1CC[C@@]2(C)C(=CC[C@H]3[C@@H]4CC[C@H]([C@H](C)CCCC(C)C)[C@@]4(C)CC[C@@H]32)C1"
+   },
+   {
+    "pool": "vivo",
+    "Experiment_ID": "ZT_2026",
+    "IL_name": "Lipid 14-CB2",
+    "Model_target": "brain",
+    "inchikey": "MDIGYIPABIHSKF-HDRJFHJRSA-N",
+    "IL_SMILES": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCN(CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC)CCOC(=O)CCC[N+](C)(C)CCCCC(=O)O[C@H]1CC[C@@]2(C)C(=CC[C@H]3[C@@H]4CC[C@H]([C@H](C)CCCC(C)C)[C@@]4(C)CC[C@@H]32)C1"
+   },
+   {
+    "pool": "vivo",
+    "Experiment_ID": "ZT_2026",
+    "IL_name": "Lipid 14-CB3",
+    "Model_target": "brain",
+    "inchikey": "FCBVXKUMQAKKBL-MJYCCFMGSA-N",
+    "IL_SMILES": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCN(CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC)CCOC(=O)CCC[N+](C)(C)CCCCCCC(=O)O[C@H]1CC[C@@]2(C)C(=CC[C@H]3[C@@H]4CC[C@H]([C@H](C)CCCC(C)C)[C@@]4(C)CC[C@@H]32)C1"
+   }
+  ],
+  "interpretation": "These are NOT overlap. They are quaternised cholesterol conjugates built on this paper's Lipid 14 by a different group (ZT_2026, Tian 2026). Their value is as an INDEPENDENT corroboration of Lipid 14's scaffold from outside this paper: their IL_SMILES carry ...CCOC(=O)CCC[N+](C)(C)..., three CH2 between the ester carbonyl and the head nitrogen, i.e. the 4-(dimethylamino)butyric acid arm. That is what retired our own first misreading of Lipid 14 (08_contradictions.csv row 1)."
+ },
+ "conclusion": "ZERO overlap on every identity test. All 12 lipids would be new to the corpus."
+}

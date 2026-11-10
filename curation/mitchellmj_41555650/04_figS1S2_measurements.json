@@ -1,0 +1,1920 @@
+{
+ "panels": {
+  "S2A": {
+   "locus": "SI Figure S2A (p. 14)",
+   "quantity": "Total flux (p/s)",
+   "native_dpi_measured": 355.7,
+   "native_dpi_method": "image px width / image bbox pt width * 72",
+   "LOO_TOL_PX_at_600dpi": 1.5,
+   "LOO_TOL_PX_rescaled_to_native": 2.5302,
+   "TICK_RESIDUAL_PX_at_600dpi": 2.5,
+   "TICK_RESIDUAL_PX_rescaled_to_native": 4.217,
+   "n_ticks_detected": 7,
+   "n_ticks_expected": 7,
+   "tick_px": [
+    104.0,
+    191.5,
+    278.5,
+    366.5,
+    453.5,
+    541.0,
+    628.5
+   ],
+   "tick_gaps_px": [
+    87.5,
+    87.0,
+    88.0,
+    87.0,
+    87.5,
+    87.5
+   ],
+   "loo_worst_px": 0.3696,
+   "loo_passes_at_STRICT_600dpi_tol": true,
+   "loo_passes_at_native_tol": true,
+   "calibration_px_per_decade": 87.4107,
+   "drawn_baseline_rows": [
+    628,
+    629
+   ],
+   "lowest_tick_px": 628.5,
+   "baseline_centre_px": 628.5,
+   "lowest_tick_minus_drawn_baseline_px": 0.0,
+   "n_bars_read": 48,
+   "n_refusals": 0,
+   "refusals": {},
+   "P9_effect_of_mask_closing": {
+    "n_readable_from_raw_mask": 43,
+    "n_moved": 36,
+    "n_moved_upward": 36,
+    "n_moved_downward": 0,
+    "max_move_px": 96,
+    "moved": [
+     [
+      "Brain/70",
+      420,
+      418
+     ],
+     [
+      "Brain/97",
+      443,
+      442
+     ],
+     [
+      "Brain/98",
+      426,
+      425
+     ],
+     [
+      "Heart/13",
+      549,
+      517
+     ],
+     [
+      "Heart/14",
+      511,
+      501
+     ],
+     [
+      "Heart/70",
+      468,
+      458
+     ],
+     [
+      "Heart/96",
+      497,
+      496
+     ],
+     [
+      "Heart/97",
+      486,
+      485
+     ],
+     [
+      "Heart/98",
+      483,
+      472
+     ],
+     [
+      "Heart/102",
+      416,
+      415
+     ],
+     [
+      "Lungs/13",
+      444,
+      433
+     ],
+     [
+      "Lungs/70",
+      431,
+      394
+     ],
+     [
+      "Lungs/96",
+      449,
+      426
+     ],
+     [
+      "Lungs/97",
+      425,
+      414
+     ],
+     [
+      "Lungs/98",
+      437,
+      400
+     ],
+     [
+      "Lungs/45",
+      447,
+      438
+     ],
+     [
+      "Liver/13",
+      334,
+      322
+     ],
+     [
+      "Liver/70",
+      239,
+      222
+     ],
+     [
+      "Liver/96",
+      274,
+      238
+     ],
+     [
+      "Liver/97",
+      247,
+      225
+     ],
+     [
+      "Liver/98",
+      220,
+      210
+     ],
+     [
+      "Liver/45",
+      283,
+      262
+     ],
+     [
+      "Liver/102",
+      155,
+      154
+     ],
+     [
+      "Kidneys/13",
+      514,
+      503
+     ],
+     [
+      "Kidneys/14",
+      509,
+      492
+     ],
+     [
+      "Kidneys/96",
+      458,
+      438
+     ],
+     [
+      "Kidneys/98",
+      425,
+      407
+     ],
+     [
+      "Kidneys/102",
+      341,
+      340
+     ],
+     [
+      "Spleen/13",
+      473,
+      377
+     ],
+     [
+      "Spleen/14",
+      378,
+      365
+     ],
+     [
+      "Spleen/70",
+      428,
+      416
+     ],
+     [
+      "Spleen/96",
+      473,
+      459
+     ],
+     [
+      "Spleen/97",
+      437,
+      430
+     ],
+     [
+      "Spleen/98",
+      425,
+      424
+     ],
+     [
+      "Spleen/45",
+      469,
+      459
+     ],
+     [
+      "Spleen/102",
+      327,
+      303
+     ]
+    ],
+    "what": "The raw colour mask is occluded by the error-bar STEM, which GraphPad draws down the centre of the bar. EVERY move must be UPWARD: an occlusion can only make a detector under-read, so a single downward move would mean the closing is filling something that is not a bar. The uniform sign is the evidence that this is a fix and not a nudge."
+   },
+   "organ_order_matches_colour_LUT": true
+  },
+  "S1A": {
+   "locus": "SI Figure S1A (p. 13)",
+   "quantity": "% of total luminescence",
+   "native_dpi_measured": 220.2,
+   "native_dpi_method": "image px width / image bbox pt width * 72",
+   "LOO_TOL_PX_at_600dpi": 1.5,
+   "LOO_TOL_PX_rescaled_to_native": 4.0872,
+   "TICK_RESIDUAL_PX_at_600dpi": 2.5,
+   "TICK_RESIDUAL_PX_rescaled_to_native": 6.812,
+   "n_ticks_detected": 5,
+   "n_ticks_expected": 5,
+   "tick_px": [
+    39.0,
+    120.0,
+    200.0,
+    281.0,
+    362.0
+   ],
+   "tick_gaps_px": [
+    81.0,
+    80.0,
+    81.0,
+    81.0
+   ],
+   "loo_worst_px": 0.5,
+   "loo_passes_at_STRICT_600dpi_tol": true,
+   "loo_passes_at_native_tol": true,
+   "calibration_px_per_decade": 80.7,
+   "drawn_baseline_rows": [
+    362,
+    362
+   ],
+   "lowest_tick_px": 362.0,
+   "baseline_centre_px": 362.0,
+   "lowest_tick_minus_drawn_baseline_px": 0.0,
+   "n_bars_read": 46,
+   "n_refusals": 2,
+   "refusals": {
+    "Spleen/97": "bar_top: left flank first-covered row 250, right flank 227, delta 23.0 px > 2.0 px tolerance.\nA real top rule is at the same row in both flanks. Disagreement this large means the detection is tracking something that is not a horizontal rule -- a sloped edge, an overlapping neighbour bar, or a marker. Refusing rather than returning the better-looking flank.",
+    "Spleen/45": "bar_top: left flank first-covered row 223, right flank 229, delta 6.0 px > 2.0 px tolerance.\nA real top rule is at the same row in both flanks. Disagreement this large means the detection is tracking something that is not a horizontal rule -- a sloped edge, an overlapping neighbour bar, or a marker. Refusing rather than returning the better-looking flank."
+   },
+   "P9_effect_of_mask_closing": {
+    "n_readable_from_raw_mask": 20,
+    "n_moved": 12,
+    "n_moved_upward": 12,
+    "n_moved_downward": 0,
+    "max_move_px": 108,
+    "moved": [
+     [
+      "Brain/13",
+      231,
+      213
+     ],
+     [
+      "Brain/14",
+      205,
+      193
+     ],
+     [
+      "Brain/96",
+      326,
+      218
+     ],
+     [
+      "Brain/45",
+      243,
+      227
+     ],
+     [
+      "Brain/102",
+      270,
+      261
+     ],
+     [
+      "Heart/98",
+      290,
+      284
+     ],
+     [
+      "Lungs/97",
+      237,
+      212
+     ],
+     [
+      "Liver/98",
+      43,
+      42
+     ],
+     [
+      "Kidneys/96",
+      242,
+      219
+     ],
+     [
+      "Kidneys/97",
+      247,
+      228
+     ],
+     [
+      "Kidneys/45",
+      245,
+      226
+     ],
+     [
+      "Spleen/98",
+      248,
+      239
+     ]
+    ],
+    "what": "The raw colour mask is occluded by the error-bar STEM, which GraphPad draws down the centre of the bar. EVERY move must be UPWARD: an occlusion can only make a detector under-read, so a single downward move would mean the closing is filling something that is not a bar. The uniform sign is the evidence that this is a fix and not a nudge."
+   }
+  }
+ },
+ "bars": [
+  {
+   "panel": "S2A",
+   "lnp": "13",
+   "organ": "Brain",
+   "x0": 219,
+   "x1": 233,
+   "top_px": 504.0,
+   "value": 265275.810836515,
+   "log10_value": 5.423697650663943,
+   "value_raw_mask": 265275.810836515,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "14",
+   "organ": "Brain",
+   "x0": 430,
+   "x1": 444,
+   "top_px": 499.0,
+   "value": 302620.87064239447,
+   "log10_value": 5.480898876404495,
+   "value_raw_mask": 302620.87064239447,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "70",
+   "organ": "Brain",
+   "x0": 640,
+   "x1": 654,
+   "top_px": 418.0,
+   "value": 2555987.546008214,
+   "log10_value": 6.40755873340143,
+   "value_raw_mask": 2424812.951889776,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "96",
+   "organ": "Brain",
+   "x0": 851,
+   "x1": 865,
+   "top_px": 450.0,
+   "value": 1100198.095078937,
+   "log10_value": 6.0414708886619,
+   "value_raw_mask": 1100198.095078937,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "97",
+   "organ": "Brain",
+   "x0": 1061,
+   "x1": 1075,
+   "top_px": 442.0,
+   "value": 1358291.0837211371,
+   "log10_value": 6.132992849846783,
+   "value_raw_mask": 1322977.9463836376,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "98",
+   "organ": "Brain",
+   "x0": 1272,
+   "x1": 1286,
+   "top_px": 425.0,
+   "value": 2125577.857779548,
+   "log10_value": 6.327477017364657,
+   "value_raw_mask": 2070316.6374764028,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "45",
+   "organ": "Brain",
+   "x0": 1482,
+   "x1": 1496,
+   "top_px": 466.0,
+   "value": 721816.7674555675,
+   "log10_value": 5.858426966292135,
+   "value_raw_mask": 721816.7674555675,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "102",
+   "organ": "Brain",
+   "x0": 1693,
+   "x1": 1707,
+   "top_px": 390.0,
+   "value": 5344235.622613525,
+   "log10_value": 6.727885597548519,
+   "value_raw_mask": 5344235.622613525,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "13",
+   "organ": "Heart",
+   "x0": 249,
+   "x1": 263,
+   "top_px": 517.0,
+   "value": 188353.8335281372,
+   "log10_value": 5.274974463738509,
+   "value_raw_mask": 81074.93683688155,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "14",
+   "organ": "Heart",
+   "x0": 460,
+   "x1": 474,
+   "top_px": 501.0,
+   "value": 287090.21207550145,
+   "log10_value": 5.458018386108274,
+   "value_raw_mask": 220605.29621876383,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "70",
+   "organ": "Heart",
+   "x0": 670,
+   "x1": 684,
+   "top_px": 458.0,
+   "value": 891146.1342286404,
+   "log10_value": 5.949948927477017,
+   "value_raw_mask": 684772.760082864,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "96",
+   "organ": "Heart",
+   "x0": 881,
+   "x1": 895,
+   "top_px": 496.0,
+   "value": 327506.2647334253,
+   "log10_value": 5.515219611848825,
+   "value_raw_mask": 318991.687965581,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "97",
+   "organ": "Heart",
+   "x0": 1092,
+   "x1": 1106,
+   "top_px": 485.0,
+   "value": 437584.8812083976,
+   "log10_value": 5.6410623084780385,
+   "value_raw_mask": 426208.45741226175,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "98",
+   "organ": "Heart",
+   "x0": 1302,
+   "x1": 1316,
+   "top_px": 472.0,
+   "value": 616290.5314853457,
+   "log10_value": 5.789785495403473,
+   "value_raw_mask": 461256.8181056927,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "45",
+   "organ": "Heart",
+   "x0": 1513,
+   "x1": 1527,
+   "top_px": 490.0,
+   "value": 383584.52913688816,
+   "log10_value": 5.583861082737488,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "102",
+   "organ": "Heart",
+   "x0": 1723,
+   "x1": 1737,
+   "top_px": 415.0,
+   "value": 2766173.8336861217,
+   "log10_value": 6.441879468845761,
+   "value_raw_mask": 2694258.26443955,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "13",
+   "organ": "Lungs",
+   "x0": 279,
+   "x1": 293,
+   "top_px": 433.0,
+   "value": 1721690.3932435345,
+   "log10_value": 6.235955056179775,
+   "value_raw_mask": 1288582.8874194454,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "14",
+   "organ": "Lungs",
+   "x0": 490,
+   "x1": 504,
+   "top_px": 429.0,
+   "value": 1913004.6988521034,
+   "log10_value": 6.281716036772217,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "70",
+   "organ": "Lungs",
+   "x0": 700,
+   "x1": 714,
+   "top_px": 394.0,
+   "value": 4809773.408400255,
+   "log10_value": 6.682124616956077,
+   "value_raw_mask": 1814828.3148120136,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "96",
+   "organ": "Lungs",
+   "x0": 911,
+   "x1": 925,
+   "top_px": 426.0,
+   "value": 2070316.6374764028,
+   "log10_value": 6.316036772216547,
+   "value_raw_mask": 1129564.75726418,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "97",
+   "organ": "Lungs",
+   "x0": 1121,
+   "x1": 1135,
+   "top_px": 414.0,
+   "value": 2840008.984721982,
+   "log10_value": 6.453319713993871,
+   "value_raw_mask": 2125577.857779548,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "98",
+   "organ": "Lungs",
+   "x0": 1332,
+   "x1": 1346,
+   "top_px": 400.0,
+   "value": 4106607.0280357446,
+   "log10_value": 6.6134831460674155,
+   "value_raw_mask": 1549508.9018682244,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "45",
+   "organ": "Lungs",
+   "x0": 1543,
+   "x1": 1557,
+   "top_px": 438.0,
+   "value": 1509224.4434681572,
+   "log10_value": 6.1787538304392235,
+   "value_raw_mask": 1190670.583364764,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "102",
+   "organ": "Lungs",
+   "x0": 1753,
+   "x1": 1767,
+   "top_px": 338.0,
+   "value": 21027049.89549577,
+   "log10_value": 7.322778345250255,
+   "value_raw_mask": 21027049.89549577,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "13",
+   "organ": "Liver",
+   "x0": 309,
+   "x1": 323,
+   "top_px": 322.0,
+   "value": 32049574.46708011,
+   "log10_value": 7.505822267620021,
+   "value_raw_mask": 23363576.523941956,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "14",
+   "organ": "Liver",
+   "x0": 520,
+   "x1": 534,
+   "top_px": 362.0,
+   "value": 11174097.633854274,
+   "log10_value": 7.0482124616956074,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "70",
+   "organ": "Liver",
+   "x0": 730,
+   "x1": 744,
+   "top_px": 222.0,
+   "value": 446526031.5424512,
+   "log10_value": 8.649846782431052,
+   "value_raw_mask": 285339972.4097032,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "96",
+   "organ": "Liver",
+   "x0": 941,
+   "x1": 955,
+   "top_px": 238.0,
+   "value": 292956312.2444864,
+   "log10_value": 8.466802860061286,
+   "value_raw_mask": 113489069.36795704,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "97",
+   "organ": "Liver",
+   "x0": 1151,
+   "x1": 1165,
+   "top_px": 225.0,
+   "value": 412596982.0450848,
+   "log10_value": 8.615526046986721,
+   "value_raw_mask": 231121662.9906734,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "98",
+   "organ": "Liver",
+   "x0": 1362,
+   "x1": 1376,
+   "top_px": 210.0,
+   "value": 612533328.7369027,
+   "log10_value": 8.787129724208375,
+   "value_raw_mask": 470681655.96092397,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "45",
+   "organ": "Liver",
+   "x0": 1573,
+   "x1": 1587,
+   "top_px": 262.0,
+   "value": 155681488.92703274,
+   "log10_value": 8.192236976506639,
+   "value_raw_mask": 89534791.8692258,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "102",
+   "organ": "Liver",
+   "x0": 1783,
+   "x1": 1797,
+   "top_px": 154.0,
+   "value": 2677832773.4754586,
+   "log10_value": 9.427783452502553,
+   "value_raw_mask": 2608213913.696502,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "13",
+   "organ": "Kidneys",
+   "x0": 339,
+   "x1": 353,
+   "top_px": 503.0,
+   "value": 272356.5948858579,
+   "log10_value": 5.435137895812053,
+   "value_raw_mask": 203842.71691530792,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "14",
+   "organ": "Kidneys",
+   "x0": 550,
+   "x1": 564,
+   "top_px": 492.0,
+   "value": 363898.7740172176,
+   "log10_value": 5.5609805924412665,
+   "value_raw_mask": 232539.33433470238,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "70",
+   "organ": "Kidneys",
+   "x0": 761,
+   "x1": 775,
+   "top_px": 423.0,
+   "value": 2240564.794212761,
+   "log10_value": 6.3503575076608785,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "96",
+   "organ": "Kidneys",
+   "x0": 971,
+   "x1": 985,
+   "top_px": 438.0,
+   "value": 1509224.4434681572,
+   "log10_value": 6.1787538304392235,
+   "value_raw_mask": 891146.1342286404,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "97",
+   "organ": "Kidneys",
+   "x0": 1182,
+   "x1": 1196,
+   "top_px": 432.0,
+   "value": 1767646.0264991377,
+   "log10_value": 6.247395301327885,
+   "value_raw_mask": 1767646.0264991377,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "98",
+   "organ": "Kidneys",
+   "x0": 1392,
+   "x1": 1406,
+   "top_px": 407.0,
+   "value": 3415084.3117475114,
+   "log10_value": 6.5334014300306436,
+   "value_raw_mask": 2125577.857779548,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "45",
+   "organ": "Kidneys",
+   "x0": 1603,
+   "x1": 1617,
+   "top_px": 461.0,
+   "value": 823432.856252022,
+   "log10_value": 5.9156281920326865,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "102",
+   "organ": "Kidneys",
+   "x0": 1813,
+   "x1": 1827,
+   "top_px": 340.0,
+   "value": 19947930.891235594,
+   "log10_value": 7.299897854954034,
+   "value_raw_mask": 19429320.387490492,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "13",
+   "organ": "Spleen",
+   "x0": 369,
+   "x1": 383,
+   "top_px": 377.0,
+   "value": 7526772.413041495,
+   "log10_value": 6.876608784473953,
+   "value_raw_mask": 600268.0805991048,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "14",
+   "organ": "Spleen",
+   "x0": 580,
+   "x1": 594,
+   "top_px": 365.0,
+   "value": 10325039.606043855,
+   "log10_value": 7.013891726251277,
+   "value_raw_mask": 7331089.80044444,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "70",
+   "organ": "Spleen",
+   "x0": 791,
+   "x1": 805,
+   "top_px": 416.0,
+   "value": 2694258.26443955,
+   "log10_value": 6.43043922369765,
+   "value_raw_mask": 1964066.9239198004,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "96",
+   "organ": "Spleen",
+   "x0": 1001,
+   "x1": 1015,
+   "top_px": 459.0,
+   "value": 867977.929561064,
+   "log10_value": 5.938508682328907,
+   "value_raw_mask": 600268.0805991048,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "97",
+   "organ": "Spleen",
+   "x0": 1212,
+   "x1": 1226,
+   "top_px": 430.0,
+   "value": 1863270.0002536473,
+   "log10_value": 6.2702757916241065,
+   "value_raw_mask": 1549508.9018682244,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "98",
+   "organ": "Spleen",
+   "x0": 1422,
+   "x1": 1436,
+   "top_px": 424.0,
+   "value": 2182314.119346485,
+   "log10_value": 6.338917262512767,
+   "value_raw_mask": 2125577.857779548,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "45",
+   "organ": "Spleen",
+   "x0": 1633,
+   "x1": 1647,
+   "top_px": 459.0,
+   "value": 867977.929561064,
+   "log10_value": 5.938508682328907,
+   "value_raw_mask": 666969.8938109763,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 14
+  },
+  {
+   "panel": "S2A",
+   "lnp": "102",
+   "organ": "Spleen",
+   "x0": 1844,
+   "x1": 1857,
+   "top_px": 303.0,
+   "value": 52867274.97593043,
+   "log10_value": 7.723186925434116,
+   "value_raw_mask": 28094482.828207407,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 13
+  },
+  {
+   "panel": "S1A",
+   "lnp": "13",
+   "organ": "Brain",
+   "x0": 132,
+   "x1": 139,
+   "top_px": 213.0,
+   "value": 0.6980172750582371,
+   "log10_value": -0.15613382899628325,
+   "value_raw_mask": 0.4176551528041667,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "14",
+   "organ": "Brain",
+   "x0": 261,
+   "x1": 269,
+   "top_px": 193.0,
+   "value": 1.2350872703365867,
+   "log10_value": 0.09169764560099056,
+   "value_raw_mask": 0.8769983188311969,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "70",
+   "organ": "Brain",
+   "x0": 391,
+   "x1": 399,
+   "top_px": 221.0,
+   "value": 0.5555633412491272,
+   "log10_value": -0.25526641883519247,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "96",
+   "organ": "Brain",
+   "x0": 521,
+   "x1": 528,
+   "top_px": 218.0,
+   "value": 0.605213075586145,
+   "log10_value": -0.21809169764560152,
+   "value_raw_mask": 0.027772715129362868,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "97",
+   "organ": "Brain",
+   "x0": 650,
+   "x1": 658,
+   "top_px": 237.0,
+   "value": 0.35193981506286404,
+   "log10_value": -0.4535315985130115,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "98",
+   "organ": "Brain",
+   "x0": 780,
+   "x1": 788,
+   "top_px": 239.0,
+   "value": 0.33241855248129537,
+   "log10_value": -0.47831474597273926,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "45",
+   "organ": "Brain",
+   "x0": 910,
+   "x1": 917,
+   "top_px": 227.0,
+   "value": 0.4681490417684458,
+   "log10_value": -0.3296158612143749,
+   "value_raw_mask": 0.29656436080069143,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "102",
+   "organ": "Brain",
+   "x0": 1039,
+   "x1": 1047,
+   "top_px": 261.0,
+   "value": 0.17744780516520708,
+   "log10_value": -0.7509293680297402,
+   "value_raw_mask": 0.13726078186851934,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "13",
+   "organ": "Heart",
+   "x0": 150,
+   "x1": 158,
+   "top_px": 233.0,
+   "value": 0.39448881709140043,
+   "log10_value": -0.40396530359355687,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "14",
+   "organ": "Heart",
+   "x0": 280,
+   "x1": 288,
+   "top_px": 194.0,
+   "value": 1.2003449560681205,
+   "log10_value": 0.07930607187112691,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "70",
+   "organ": "Heart",
+   "x0": 409,
+   "x1": 417,
+   "top_px": 258.0,
+   "value": 0.19330600841765805,
+   "log10_value": -0.7137546468401492,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "96",
+   "organ": "Heart",
+   "x0": 539,
+   "x1": 547,
+   "top_px": 260.0,
+   "value": 0.18258378493679978,
+   "log10_value": -0.7385377942998765,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "97",
+   "organ": "Heart",
+   "x0": 669,
+   "x1": 677,
+   "top_px": 277.0,
+   "value": 0.11241013057618157,
+   "log10_value": -0.9491945477075592,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "98",
+   "organ": "Heart",
+   "x0": 799,
+   "x1": 806,
+   "top_px": 284.0,
+   "value": 0.09205861487994514,
+   "log10_value": -1.0359355638166052,
+   "value_raw_mask": 0.07757378707831446,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "45",
+   "organ": "Heart",
+   "x0": 928,
+   "x1": 936,
+   "top_px": 257.0,
+   "value": 0.19890098181299584,
+   "log10_value": -0.7013630731102856,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "102",
+   "organ": "Heart",
+   "x0": 1058,
+   "x1": 1066,
+   "top_px": 286.0,
+   "value": 0.08695234296340772,
+   "log10_value": -1.0607187112763325,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "13",
+   "organ": "Lungs",
+   "x0": 169,
+   "x1": 177,
+   "top_px": 151.0,
+   "value": 4.093961387406015,
+   "log10_value": 0.6121437422552656,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "14",
+   "organ": "Lungs",
+   "x0": 298,
+   "x1": 306,
+   "top_px": 130.0,
+   "value": 7.453612152836539,
+   "log10_value": 0.8723667905824031,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "70",
+   "organ": "Lungs",
+   "x0": 428,
+   "x1": 436,
+   "top_px": 201.0,
+   "value": 0.9830261157722912,
+   "log10_value": -0.007434944237918923,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "96",
+   "organ": "Lungs",
+   "x0": 558,
+   "x1": 566,
+   "top_px": 210.0,
+   "value": 0.7603978709257925,
+   "log10_value": -0.11895910780669228,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 1.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "97",
+   "organ": "Lungs",
+   "x0": 687,
+   "x1": 695,
+   "top_px": 212.0,
+   "value": 0.7182204136745961,
+   "log10_value": -0.14374225526641962,
+   "value_raw_mask": 0.35193981506286404,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "98",
+   "organ": "Lungs",
+   "x0": 817,
+   "x1": 825,
+   "top_px": 220.0,
+   "value": 0.5716433490003497,
+   "log10_value": -0.24287484510532886,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "45",
+   "organ": "Lungs",
+   "x0": 947,
+   "x1": 955,
+   "top_px": 203.0,
+   "value": 0.9285000004843624,
+   "log10_value": -0.032218091697646195,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "102",
+   "organ": "Lungs",
+   "x0": 1076,
+   "x1": 1084,
+   "top_px": 213.0,
+   "value": 0.6980172750582371,
+   "log10_value": -0.15613382899628325,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "13",
+   "organ": "Liver",
+   "x0": 187,
+   "x1": 195,
+   "top_px": 55.0,
+   "value": 63.34827893279686,
+   "log10_value": 1.80173482032218,
+   "value_raw_mask": 63.34827893279686,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "14",
+   "organ": "Liver",
+   "x0": 317,
+   "x1": 325,
+   "top_px": 73.0,
+   "value": 37.904126535193285,
+   "log10_value": 1.5786864931846334,
+   "value_raw_mask": 37.904126535193285,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "70",
+   "organ": "Liver",
+   "x0": 447,
+   "x1": 454,
+   "top_px": 43.0,
+   "value": 89.21414240782416,
+   "log10_value": 1.950433705080544,
+   "value_raw_mask": 89.21414240782416,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "96",
+   "organ": "Liver",
+   "x0": 576,
+   "x1": 584,
+   "top_px": 43.0,
+   "value": 89.21414240782416,
+   "log10_value": 1.950433705080544,
+   "value_raw_mask": 89.21414240782416,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "97",
+   "organ": "Liver",
+   "x0": 706,
+   "x1": 714,
+   "top_px": 43.0,
+   "value": 89.21414240782416,
+   "log10_value": 1.950433705080544,
+   "value_raw_mask": 89.21414240782416,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "98",
+   "organ": "Liver",
+   "x0": 836,
+   "x1": 843,
+   "top_px": 42.0,
+   "value": 91.7963216031091,
+   "log10_value": 1.9628252788104077,
+   "value_raw_mask": 89.21414240782416,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "45",
+   "organ": "Liver",
+   "x0": 965,
+   "x1": 973,
+   "top_px": 43.0,
+   "value": 89.21414240782416,
+   "log10_value": 1.950433705080544,
+   "value_raw_mask": 89.21414240782416,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "102",
+   "organ": "Liver",
+   "x0": 1095,
+   "x1": 1103,
+   "top_px": 44.0,
+   "value": 86.7045984693787,
+   "log10_value": 1.9380421313506804,
+   "value_raw_mask": 86.7045984693787,
+   "coverage": 1.0,
+   "flank_delta_px": 1.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "13",
+   "organ": "Kidneys",
+   "x0": 206,
+   "x1": 213,
+   "top_px": 216.0,
+   "value": 0.64075418265772,
+   "log10_value": -0.1933085501858742,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "14",
+   "organ": "Kidneys",
+   "x0": 335,
+   "x1": 343,
+   "top_px": 189.0,
+   "value": 1.3844074907884396,
+   "log10_value": 0.14126394052044544,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "70",
+   "organ": "Kidneys",
+   "x0": 465,
+   "x1": 473,
+   "top_px": 229.0,
+   "value": 0.442181930403001,
+   "log10_value": -0.35439900867410223,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 1.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "96",
+   "organ": "Kidneys",
+   "x0": 595,
+   "x1": 602,
+   "top_px": 219.0,
+   "value": 0.5881887701978555,
+   "log10_value": -0.2304832713754652,
+   "value_raw_mask": 0.30514800350413085,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "97",
+   "organ": "Kidneys",
+   "x0": 725,
+   "x1": 732,
+   "top_px": 228.0,
+   "value": 0.4549802710068718,
+   "log10_value": -0.3420074349442386,
+   "value_raw_mask": 0.2645773511755831,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "98",
+   "organ": "Kidneys",
+   "x0": 854,
+   "x1": 862,
+   "top_px": 224.0,
+   "value": 0.5099867114420283,
+   "log10_value": -0.29244114002478394,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "45",
+   "organ": "Kidneys",
+   "x0": 984,
+   "x1": 991,
+   "top_px": 226.0,
+   "value": 0.48169896427312087,
+   "log10_value": -0.31722428748451126,
+   "value_raw_mask": 0.2801146426621195,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "102",
+   "organ": "Kidneys",
+   "x0": 1113,
+   "x1": 1121,
+   "top_px": 217.0,
+   "value": 0.6227301258016712,
+   "log10_value": -0.2057001239157379,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "13",
+   "organ": "Spleen",
+   "x0": 224,
+   "x1": 232,
+   "top_px": 105.0,
+   "value": 15.210942822209645,
+   "log10_value": 1.1821561338289954,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "14",
+   "organ": "Spleen",
+   "x0": 354,
+   "x1": 362,
+   "top_px": 75.0,
+   "value": 35.80167499277166,
+   "log10_value": 1.553903345724906,
+   "value_raw_mask": 35.80167499277166,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "70",
+   "organ": "Spleen",
+   "x0": 484,
+   "x1": 492,
+   "top_px": 217.0,
+   "value": 0.6227301258016712,
+   "log10_value": -0.2057001239157379,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "96",
+   "organ": "Spleen",
+   "x0": 613,
+   "x1": 621,
+   "top_px": 237.0,
+   "value": 0.35193981506286404,
+   "log10_value": -0.4535315985130115,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  },
+  {
+   "panel": "S1A",
+   "lnp": "98",
+   "organ": "Spleen",
+   "x0": 873,
+   "x1": 880,
+   "top_px": 239.0,
+   "value": 0.33241855248129537,
+   "log10_value": -0.47831474597273926,
+   "value_raw_mask": 0.25713493823551986,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 7
+  },
+  {
+   "panel": "S1A",
+   "lnp": "102",
+   "organ": "Spleen",
+   "x0": 1132,
+   "x1": 1140,
+   "top_px": 185.0,
+   "value": 1.551780304584335,
+   "log10_value": 0.1908302354399003,
+   "value_raw_mask": null,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "width_px": 8
+  }
+ ],
+ "cross_panel": {
+  "_what": "SI Fig S1A states '% of total signal = (organ signal)/(total organ signal)*100'. So S1A is a CLOSED-FORM function of S2A. Neither panel was used to calibrate the other; the two were digitised from separate rasters at different dpi with separately sampled colour LUTs.",
+  "S1A_bars_refused": [
+   "97/Spleen",
+   "45/Spleen"
+  ],
+  "P11_S1A_vs_100xS2A_over_sum": {
+   "13": {
+    "S1A_sum_over_organs": 84.386,
+    "predicted": {
+     "Brain": 0.6312,
+     "Heart": 0.4482,
+     "Lungs": 4.0969,
+     "Liver": 76.2649,
+     "Kidneys": 0.6481,
+     "Spleen": 17.9106
+    },
+    "observed": {
+     "Brain": 0.698,
+     "Heart": 0.3945,
+     "Lungs": 4.094,
+     "Liver": 63.3483,
+     "Kidneys": 0.6408,
+     "Spleen": 15.2109
+    },
+    "obs_over_pred": {
+     "Brain": 1.1058,
+     "Heart": 0.8802,
+     "Lungs": 0.9993,
+     "Liver": 0.8306,
+     "Kidneys": 0.9887,
+     "Spleen": 0.8493
+    },
+    "worst_abs_log10_dev": 0.0806
+   },
+   "14": {
+    "S1A_sum_over_organs": 84.979,
+    "predicted": {
+     "Brain": 1.242,
+     "Heart": 1.1783,
+     "Lungs": 7.8512,
+     "Liver": 45.8599,
+     "Kidneys": 1.4935,
+     "Spleen": 42.3752
+    },
+    "observed": {
+     "Brain": 1.2351,
+     "Heart": 1.2003,
+     "Lungs": 7.4536,
+     "Liver": 37.9041,
+     "Kidneys": 1.3844,
+     "Spleen": 35.8017
+    },
+    "obs_over_pred": {
+     "Brain": 0.9944,
+     "Heart": 1.0187,
+     "Lungs": 0.9494,
+     "Liver": 0.8265,
+     "Kidneys": 0.927,
+     "Spleen": 0.8449
+    },
+    "worst_abs_log10_dev": 0.0827
+   },
+   "70": {
+    "S1A_sum_over_organs": 92.011,
+    "predicted": {
+     "Brain": 0.556,
+     "Heart": 0.1938,
+     "Lungs": 1.0462,
+     "Liver": 97.1305,
+     "Kidneys": 0.4874,
+     "Spleen": 0.5861
+    },
+    "observed": {
+     "Brain": 0.5556,
+     "Heart": 0.1933,
+     "Lungs": 0.983,
+     "Liver": 89.2141,
+     "Kidneys": 0.4422,
+     "Spleen": 0.6227
+    },
+    "obs_over_pred": {
+     "Brain": 0.9992,
+     "Heart": 0.9972,
+     "Lungs": 0.9396,
+     "Liver": 0.9185,
+     "Kidneys": 0.9073,
+     "Spleen": 1.0626
+    },
+    "worst_abs_log10_dev": 0.0423
+   },
+   "96": {
+    "S1A_sum_over_organs": 91.702,
+    "predicted": {
+     "Brain": 0.3682,
+     "Heart": 0.1096,
+     "Lungs": 0.6928,
+     "Liver": 98.0339,
+     "Kidneys": 0.505,
+     "Spleen": 0.2905
+    },
+    "observed": {
+     "Brain": 0.6052,
+     "Heart": 0.1826,
+     "Lungs": 0.7604,
+     "Liver": 89.2141,
+     "Kidneys": 0.5882,
+     "Spleen": 0.3519
+    },
+    "obs_over_pred": {
+     "Brain": 1.6439,
+     "Heart": 1.666,
+     "Lungs": 1.0976,
+     "Liver": 0.91,
+     "Kidneys": 1.1646,
+     "Spleen": 1.2117
+    },
+    "worst_abs_log10_dev": 0.2217
+   },
+   "97": {
+    "INCOMPLETE": true,
+    "missing": [
+     "Spleen"
+    ],
+    "obs_over_pred": {
+     "Brain": 1.0905,
+     "Heart": 1.0811,
+     "Lungs": 1.0643,
+     "Liver": 0.91,
+     "Kidneys": 1.0833
+    }
+   },
+   "98": {
+    "S1A_sum_over_organs": 93.635,
+    "predicted": {
+     "Brain": 0.3401,
+     "Heart": 0.0986,
+     "Lungs": 0.6571,
+     "Liver": 98.0086,
+     "Kidneys": 0.5464,
+     "Spleen": 0.3492
+    },
+    "observed": {
+     "Brain": 0.3324,
+     "Heart": 0.0921,
+     "Lungs": 0.5716,
+     "Liver": 91.7963,
+     "Kidneys": 0.51,
+     "Spleen": 0.3324
+    },
+    "obs_over_pred": {
+     "Brain": 0.9774,
+     "Heart": 0.9336,
+     "Lungs": 0.87,
+     "Liver": 0.9366,
+     "Kidneys": 0.9333,
+     "Spleen": 0.952
+    },
+    "worst_abs_log10_dev": 0.0605
+   },
+   "45": {
+    "INCOMPLETE": true,
+    "missing": [
+     "Spleen"
+    ],
+    "obs_over_pred": {
+     "Brain": 1.0376,
+     "Heart": 0.8296,
+     "Lungs": 0.9843,
+     "Liver": 0.9168,
+     "Kidneys": 0.9359
+    }
+   },
+   "102": {
+    "S1A_sum_over_organs": 89.842,
+    "predicted": {
+     "Brain": 0.1923,
+     "Heart": 0.0995,
+     "Lungs": 0.7564,
+     "Liver": 96.3324,
+     "Kidneys": 0.7176,
+     "Spleen": 1.9018
+    },
+    "observed": {
+     "Brain": 0.1774,
+     "Heart": 0.087,
+     "Lungs": 0.698,
+     "Liver": 86.7046,
+     "Kidneys": 0.6227,
+     "Spleen": 1.5518
+    },
+    "obs_over_pred": {
+     "Brain": 0.923,
+     "Heart": 0.8738,
+     "Lungs": 0.9228,
+     "Liver": 0.9001,
+     "Kidneys": 0.8678,
+     "Spleen": 0.8159
+    },
+    "worst_abs_log10_dev": 0.0883
+   }
+  },
+  "P11_summary": {
+   "n": 46,
+   "median_obs_over_pred": 0.9381,
+   "worst_obs_over_pred": 1.666,
+   "n_within_1pct": 4,
+   "n_within_5pct": 10,
+   "n_within_10pct": 31,
+   "n_within_20pct": 43
+  },
+  "P10_S1A_percentages_sum_to_100": {
+   "per_lnp": {
+    "13": 84.386,
+    "14": 84.979,
+    "70": 92.011,
+    "96": 91.702,
+    "98": 93.635,
+    "102": 89.842
+   },
+   "n_lnps_complete": 6,
+   "worst_abs_dev_from_100": 15.614,
+   "what": "The authors never print this. It is implied by their own definition of the quantity, and it tests the S1A read WITHOUT reference to S2A."
+  },
+  "P12_closing_improves_agreement_with_S1A": {
+   "n": 29,
+   "lnps_compared": [
+    "13",
+    "96",
+    "97",
+    "98",
+    "102"
+   ],
+   "lnps_excluded": [
+    "14",
+    "70",
+    "45"
+   ],
+   "why_excluded": "the raw, un-closed mask REFUSED at least one of that LNP's six organs, so no organ total can be formed for it from the raw read",
+   "closed": {
+    "median_abs_log10_dev": 0.04094,
+    "n_within_10pct": 17,
+    "n_within_20pct": 26
+   },
+   "raw_unclosed": {
+    "median_abs_log10_dev": 0.10172,
+    "n_within_10pct": 4,
+    "n_within_20pct": 13
+   },
+   "what": "THE AGREEMENT COUNT MUST MOVE. This is the seed for the mask-closing repair: the un-closed read is the defect, and S1A -- a different raster, different dpi, different colour LUT, different calibration -- is the external judge. If the two columns were equal, the closing would be unproven."
+  }
+ }
+}

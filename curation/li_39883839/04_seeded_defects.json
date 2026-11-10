@@ -1,0 +1,38 @@
+{
+ "cases": [
+  {
+   "seeded": "swap the head groups of H1A1B1 and H2A1B1 in the enumeration",
+   "check": "P1_tableS1_formula",
+   "metric": "n_mismatch",
+   "clean_run": 6,
+   "with_defect": 8,
+   "metric_moved": true
+  },
+  {
+   "seeded": "set one enumerated MW to 999.99",
+   "check": "P2_tableS1_MW",
+   "metric": "max_abs_delta_Da",
+   "clean_run": 110.2,
+   "with_defect": 348.96,
+   "metric_moved": true
+  },
+  {
+   "seeded": "believe the printed reagent NAME for A4B4-S3 (B3 instead of B4)",
+   "check": "P4_reagent_stoichiometry",
+   "metric": "n_lipids_matching_as_a_multiset",
+   "clean_run": 6,
+   "with_defect": 5,
+   "metric_moved": true
+  },
+  {
+   "seeded": "corrupt B4's printed calc'd mass 354.31 -> 340.0",
+   "check": "P5_block_MS",
+   "metric": "n_matching_neutral_monoisotopic_within_0.02",
+   "clean_run": 8,
+   "with_defect": 7,
+   "metric_moved": true
+  }
+ ],
+ "control_reproduces": true,
+ "all_moved": true
+}

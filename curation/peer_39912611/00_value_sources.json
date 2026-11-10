@@ -1,0 +1,89 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser or any chemistry was written.",
+ "_why": "The two curations that took their values from a publisher Source Data file (NG_2025) and from the authors' own repository (WT_2026) have ZERO digitisation defects between them. The four that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+ "paper": {
+  "title": "Ionizable Lipids with Optimized Linkers Enable Lung-Specific, Lipid Nanoparticle-Mediated mRNA Delivery",
+  "journal": "ACS Nano 2025",
+  "pmid": "39912611",
+  "pmcid": "PMC11841047",
+  "doi": "10.1021/acsnano.4c18636",
+  "library_size_established": "12 DISTINCT ionizable lipid structures: lipid 14, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42. Established three independent ways, see 07_qc.json check L1-L3. ONE LNP formulation per lipid (40:48.5:10:1.5 IL:chol:DSPC:PEG-DMG), so 12 lipids = 12 formulations = 12 LNPs; the 'N lipids means N formulations' trap does not bite here, but the reverse does: there are 108 in-vitro VALUES because each lipid was dosed at 3 concentrations in 3 cell lines."
+ },
+ "tier_1_to_3_search": {
+  "1_publisher_source_data": "ABSENT. ACS Nano publishes no Source Data file; the article's only supplementary item declared in the JATS (<supplementary-material>) is nn4c18636_si_001.pdf. Checked in source/PMC11841047.jats.xml: `supplementary-material` count = 3 occurrences, 1 distinct file, a PDF.",
+  "2_si_tables": "ABSENT for values. The SI PDF has 42 pages and NO numeric data table of per-member measurements. Its only tabular content is the table of contents (p2) and the Pearson-r summary tables drawn INSIDE Supplementary Figures 4 and 5 (which carry statistics, not per-member values). The 4 <table-wrap> elements in the main article XML are Tables 1-4 and are ANTIBODY PANELS (antigen / fluorophore / producer / catalog #) -- dumped in full and confirmed to contain no measurement. This is the '<w:tbl> count lies' trap, in JATS form.",
+  "3_author_repository": "ABSENT. Re-run 2026-11-10 from the in-repo tool: `python3 -I provenance/tools/find_repo.py --doi 10.1021/acsnano.4c18636 --pmid 39912611 --title 'ionizable lipids optimized linkers lung' --author Peer`. The DOI code-search returns 2 hits and the PMID search 20, none in a repository attributable to these authors; the 12 surviving candidates are unrelated third-party LNP-ML projects (Martini-Force-Field-Initiative/M3_Ionizable_Lipids, modernatx/ionizable_amino_lipids_distribution, mingyang515/LipidFusionNet, gumdw23/LNP-TLC-Simulator, ...) plus noise (leotorrez/ZZ-Model-Importer-Assets, Ed13-coder/monero-lnp2pbot, which matched on the string 'LNP'). No Zenodo/Dryad/figshare accession is cited anywhere in the article or the SI."
+ },
+ "panels": [
+  {
+   "panel": "Supplementary Figure 2 legend (SI p4)",
+   "supplies": "apparent pKa of the mRNA-loaded LNP for all 12 lipids (12 values)",
+   "tier": "4_pdf_text_table",
+   "locator": "source/nn4c18636_si_001.pdf page 4, vector text inside the GraphPad legend; pdfplumber extract_text returns 'Lipid 14 pK =6.44' etc. for all 12",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "Used as the IDENTIFYING x-coordinate for Supp Fig 4C / 5C and as the independent variable of four printed Pearson r values (0.7358, 0.7226, 0.8417, -0.6978).",
+   "status": "EXTRACTED, exact"
+  },
+  {
+   "panel": "Figure 2A/B/C -- in vitro Luc, HeLa / RAW264.7 / HepG2",
+   "supplies": "108 luminescence values = 12 lipids x 3 cell lines x 3 doses (0.25, 0.15, 0.025 ug/mL)",
+   "tier": "5_pixels",
+   "locator": "source/figs/nn4c18636_0002.jpg, 700x922 px, the publisher's own raster served by Europe PMC fulltextRepo for PMC11841047",
+   "why_tiers_1_to_4_failed": "Tier 1: ACS Nano published no Source Data file for this article -- the JATS lists exactly one supplementary item and it is a PDF. Tier 2: the SI PDF contains no numeric table of transfection values; its 26 TOC entries are 14 figures plus 11 synthesis write-ups plus a TOC, and the synthesis pages carry NMR shifts and ESI-MS m/z only. Tier 3: find_repo.py found no author repository and the paper cites no data accession. Tier 4: pdfplumber on SI p1-42 returns no numeric luminescence anywhere; the main article text is available only as JATS, which carries figures as <graphic> references, not as data.",
+   "verified_against": "Printed Pearson r in Supp Fig 4 (HeLa vs pKa 0.7358 p=0.0064; HepG2 vs pKa 0.7226 p=0.0079) and in Supp Fig 5D/E/F (RAW vs spleen 0.7746; HeLa vs lungs 0.8843; HepG2 vs lungs 0.8428). pKa is a tier-4 exact vector, so these are external checks on our read.",
+   "status": "DIGITISE"
+  },
+  {
+   "panel": "Figure 3C/D/E -- in vivo average radiance, lungs / livers / spleens",
+   "supplies": "up to 36 radiance values = 12 lipids x 3 organs (plus an Untreated control bar per panel)",
+   "tier": "5_pixels",
+   "locator": "source/figs/nn4c18636_0003.jpg, 684x1049 px, publisher raster via Europe PMC fulltextRepo",
+   "why_tiers_1_to_4_failed": "Same as Figure 2: no Source Data, no SI numeric table, no repository, no PDF text table. Additionally the IVIS images in Figure 3B are colour-scale renderings with a stated Min/Max per panel and no per-organ numeral, so they are not an alternative numeric source.",
+   "verified_against": "(a) printed Pearson r, Supp Fig 5C lungs vs pKa = 0.8417 p=0.0006 R2=0.7084 and kidneys -0.6978; Supp Fig 5A liver vs size -0.6741. (b) INTERNAL: Figure 3F/G/H plot log10 of the lungs/liver, lungs/spleen and liver/spleen ratios of these same panels, so log10(C)-log10(D) must equal F bar-for-bar -- a redundancy the authors drew and never printed.",
+   "status": "DIGITISE"
+  },
+  {
+   "panel": "Supplementary Figure 6 -- heart (A) and kidney (B) radiance",
+   "supplies": "24 further in vivo values",
+   "tier": "5_pixels",
+   "locator": "source/si_figs/sf06.png, 1062x464 px embedded raster, SI p8",
+   "why_tiers_1_to_4_failed": "as above",
+   "verified_against": "Supp Fig 5C kidneys vs pKa r = -0.6978 p=0.0116",
+   "status": "NOT EXTRACTED -- out of scope. The paper states the heart and kidney signal was 'barely detectable compared to the background radiance', i.e. these are near-floor values the authors themselves decline to interpret; they are not delivery measurements of the kind the corpus pools."
+  },
+  {
+   "panel": "Figure 1E/F/G, Figure 7",
+   "supplies": "LNP size, PDI, zeta potential, encapsulation efficiency",
+   "tier": "5_pixels",
+   "locator": "source/figs/nn4c18636_0001.jpg / _0007.jpg",
+   "why_tiers_1_to_4_failed": "as above",
+   "verified_against": "",
+   "status": "NOT EXTRACTED -- formulation physical characterisation, not a delivery endpoint; the corpus has no column for it."
+  },
+  {
+   "panel": "Figures 5, 6; Supp Figs 10-12",
+   "supplies": "cytokines, liver enzymes, flow cytometry %, survival",
+   "tier": "5_pixels",
+   "locator": "source/figs/nn4c18636_0005.jpg, _0006.jpg",
+   "why_tiers_1_to_4_failed": "as above",
+   "verified_against": "",
+   "status": "NOT EXTRACTED -- toxicology and efficacy endpoints on a 1-3 lipid subset, not a library-wide delivery readout."
+  }
+ ],
+ "verdict": "USABLE. A per-member value source exists for all 12 library members in both pools: 108 in-vitro luminescence values (Fig 2) and 36 in-vivo radiance values (Fig 3C/D/E), all tier 5, every one backed by at least one printed statistic computed on a tier-4 exact vector (pKa) or by an internal ratio redundancy the authors drew. Proceeding.",
+ "spectroscopy_available": {
+  "_what": "What the SI actually contains, searched rather than assumed, because the linker is this paper's subject and the usual linker tests depend on it.",
+  "1H_NMR": "YES, 400 MHz in CDCl3, for lipids 32-42 and intermediates 2/3/4. Lipid 14 has none.",
+  "13C_NMR": "NO. '13C', 'C NMR', '100 MHz' and '125 MHz' occur ZERO times across all 42 SI pages. The dialkyl-carbonate-at-d155-with-nothing-at-168-180 test is therefore UNAVAILABLE for this paper and is not claimed.",
+  "HRMS": "NO. 'HRMS' occurs ZERO times. 'Mass spectra were recorded on an ESI-TOF mass spectrometer' and every printed m/z is given to ONE DECIMAL, so there is no ppm-level anchor either.",
+  "what_was_used_instead": "07_qc.json check S5: the 1H integral in the d 3.95-4.30 window counts the linker's ester-type O-CH2 groups directly (4 H from the two tail esters in every member, +2 H for an ester or reverse-ester, +4 H for a carbonate, +0 for amide/urea/reverse-amide). 11/11 agree; seeding lipid 33 with lipid 32's reverse-ester structure moves it to 10/11."
+ }
+}

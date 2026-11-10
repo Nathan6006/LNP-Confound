@@ -1,0 +1,40 @@
+{
+  "lipidoids_enumerated": 0,
+  "lipidoids_that_exist": 16,
+  "why_zero": "the amine heads are not disclosed; see 01_blocks_qc.json",
+  "tail_reagents_enumerated": 2,
+  "builds": {
+    "oleyl_acrylamide": {
+      "name": "oleyl_acrylamide",
+      "SMILES": "C=CC(=O)NCCCCCCCC/C=C\\CCCCCCCC",
+      "formula": "C21H39NO",
+      "exact_mass": 321.3032,
+      "inchikey": "JROSKIFCGJOXDY-QXMHVHEDSA-N",
+      "chain_C": 18,
+      "alkene_pos_from_N": 9,
+      "alkene_stereo": "STEREOZ",
+      "n_cip_centres": 0
+    },
+    "octadecyl_acrylamide": {
+      "name": "octadecyl_acrylamide",
+      "SMILES": "C=CC(=O)NCCCCCCCCCCCCCCCCCC",
+      "formula": "C21H41NO",
+      "exact_mass": 323.3188,
+      "inchikey": "CNWVYEGPPMQTKA-UHFFFAOYSA-N",
+      "chain_C": 18,
+      "alkene_pos_from_N": null,
+      "alkene_stereo": null,
+      "n_cip_centres": 0
+    }
+  },
+  "stereo_posture": {
+    "cip_centres_in_either_product": 0,
+    "assemble_check_stereo_preserved": "RUN AND PASSED, BUT VACUOUS. It compares CIP code counts and both sides are 0. A clean line here is evidence of nothing; it is recorded only so the absence is explicit rather than silent.",
+    "the_stereochemistry_that_does_exist": "the oleyl C9=C10 Z (cis) double bond, which CIP-centre counting cannot see. Asserted explicitly by double_bond_stereo(); seeded in 07_qc.json (seed_alkene_stereo).",
+    "assemble_parity_preserved": "NOT CALLED. It compares spatial parity of assigned stereoCENTRES, of which there are none."
+  },
+  "direction_posture": {
+    "what_mass_cannot_see": "the chain's direction. Writing the oleyl chain from the methyl end puts the alkene at C10 from nitrogen with formula C21H39NO and exact mass 321.3032 -- IDENTICAL on both counts. alkene_pos_from_N() measures the graph distance from nitrogen, which is the only quantity that separates them; seeded in 07_qc.json (seed_chain_direction)."
+  },
+  "checks_failed": []
+}

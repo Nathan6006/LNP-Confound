@@ -1,0 +1,254 @@
+{
+ "heads": {
+  "110": {
+   "formula": "C6H18N4",
+   "n_NH_bonds": 6,
+   "n_NH_sites": 3
+  },
+  "111": {
+   "formula": "C8H23N5",
+   "n_NH_bonds": 7,
+   "n_NH_sites": 5
+  },
+  "113": {
+   "formula": "C5H15N3",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "122": {
+   "formula": "C8H22N4",
+   "n_NH_bonds": 6,
+   "n_NH_sites": 4
+  },
+  "123": {
+   "formula": "C8H21N3",
+   "n_NH_bonds": 3,
+   "n_NH_sites": 2
+  },
+  "174": {
+   "formula": "C6H17N3",
+   "n_NH_bonds": 5,
+   "n_NH_sites": 3
+  },
+  "200": {
+   "formula": "C10H25N5",
+   "n_NH_bonds": 5,
+   "n_NH_sites": 3
+  },
+  "205": {
+   "formula": "C6H15N3",
+   "n_NH_bonds": 3,
+   "n_NH_sites": 2
+  },
+  "211": {
+   "formula": "C6H16N2",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "303": {
+   "formula": "C8H21N3",
+   "n_NH_bonds": 3,
+   "n_NH_sites": 2
+  },
+  "304": {
+   "formula": "C9H24N4",
+   "n_NH_bonds": 3,
+   "n_NH_sites": 3
+  },
+  "305": {
+   "formula": "C3H10N2",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "306": {
+   "formula": "C7H19N3",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "313": {
+   "formula": "C10H24N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "347": {
+   "formula": "C8H12N2",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "400": {
+   "formula": "C6H16N2",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "401": {
+   "formula": "C3H10N2O",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "402": {
+   "formula": "C10H22N2",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "500": {
+   "formula": "C8H22N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "501": {
+   "formula": "C10H26N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "503": {
+   "formula": "C9H24N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "509": {
+   "formula": "C14H34N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "514": {
+   "formula": "C11H28N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "516": {
+   "formula": "C12H28N4",
+   "n_NH_bonds": 4,
+   "n_NH_sites": 2
+  },
+  "60": {
+   "formula": "C4H12N2",
+   "n_NH_bonds": 2,
+   "n_NH_sites": 2
+  },
+  "601": {
+   "formula": "C15H36N4",
+   "n_NH_bonds": 3,
+   "n_NH_sites": 3
+  },
+  "602": {
+   "formula": "C5H13N3",
+   "n_NH_bonds": 2,
+   "n_NH_sites": 1
+  },
+  "80": {
+   "formula": "C5H14N2",
+   "n_NH_bonds": 2,
+   "n_NH_sites": 1
+  },
+  "81": {
+   "formula": "C7H18N2",
+   "n_NH_bonds": 2,
+   "n_NH_sites": 1
+  }
+ },
+ "n_heads": 29,
+ "n_tails": 20,
+ "product": 580,
+ "tails": {
+  "O1,1,8": {
+   "adduct": "CC(C)CCCC(C)CCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 10,
+   "formula": "C13H24O2"
+  },
+  "O10": {
+   "adduct": "CCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 10,
+   "formula": "C13H24O2"
+  },
+  "O11": {
+   "adduct": "CCCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 11,
+   "formula": "C14H26O2"
+  },
+  "O12": {
+   "adduct": "CCCCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 12,
+   "formula": "C15H28O2"
+  },
+  "O13": {
+   "adduct": "CCCCCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 13,
+   "formula": "C16H30O2"
+  },
+  "O14": {
+   "adduct": "CCCCCCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 14,
+   "formula": "C17H32O2"
+  },
+  "O16": {
+   "adduct": "CCCCCCCCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 16,
+   "formula": "C19H36O2"
+  },
+  "O18": {
+   "adduct": "CCCCCCCCCCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 18,
+   "formula": "C21H40O2"
+  },
+  "O4,8": {
+   "adduct": "CCCCCCC(CCCC)COC(=O)C[CH3:2]",
+   "alcohol_carbons": 12,
+   "formula": "C15H28O2"
+  },
+  "O6,10": {
+   "adduct": "CCCCCCCCC(CCCCCC)COC(=O)C[CH3:2]",
+   "alcohol_carbons": 16,
+   "formula": "C19H36O2"
+  },
+  "O8,12": {
+   "adduct": "CCCCCCCCCCC(CCCCCCCC)COC(=O)C[CH3:2]",
+   "alcohol_carbons": 20,
+   "formula": "C23H44O2"
+  },
+  "Oi10": {
+   "adduct": "CC(C)CCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 10,
+   "formula": "C13H24O2"
+  },
+  "X1": {
+   "adduct": "CCCCC/C=C\\CCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 10,
+   "formula": "C13H22O2"
+  },
+  "X2": {
+   "adduct": "CCCCCCCCCC/C=C/COC(=O)C[CH3:2]",
+   "alcohol_carbons": 13,
+   "formula": "C16H28O2"
+  },
+  "X3": {
+   "adduct": "CCCCCCCC/C=C/COC(=O)C[CH3:2]",
+   "alcohol_carbons": 11,
+   "formula": "C14H24O2"
+  },
+  "X4": {
+   "adduct": "C=CCCCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 11,
+   "formula": "C14H24O2"
+  },
+  "X5": {
+   "adduct": "CC(C)=CCC/C(C)=C/COC(=O)C[CH3:2]",
+   "alcohol_carbons": 10,
+   "formula": "C13H20O2"
+  },
+  "X6": {
+   "adduct": "CCCCCCCC/C=C\\CCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 18,
+   "formula": "C21H38O2"
+  },
+  "X7": {
+   "adduct": "CCCCC/C=C\\C/C=C\\CCCCCCCCOC(=O)C[CH3:2]",
+   "alcohol_carbons": 18,
+   "formula": "C21H36O2"
+  },
+  "X8": {
+   "adduct": "C/C(=C\\COC(=O)C[CH3:2])CCCC(C)CCCC(C)CCCC(C)C",
+   "alcohol_carbons": 20,
+   "formula": "C23H42O2"
+  }
+ }
+}

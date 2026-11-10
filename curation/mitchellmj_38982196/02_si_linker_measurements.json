@@ -1,0 +1,450 @@
+{
+ "_what": "Stage 02: the T-MCR linker, measured off the only product structure the paper draws in full (Supplementary Fig. 1a, 19T-O12).",
+ "figure": "si_fig1_p3_400dpi.png",
+ "dpi": 400,
+ "second_method": "NOT an arc-length ruler. On this page the only chains long enough to calibrate one are the three tails being measured, which would not be an independent check. The checks used instead are all external to the trace: the product's two arms are drawn separately and must agree atom for atom; the acrylate REACTANT's tail is a third independent drawing of the same chain; the same O12 tail is measured again in stage 01 off a different figure at a different scale; and both printed masses are reproduced in 07_qc.json.",
+ "printed_stoichiometry": "Supplementary Fig. 1a, verbatim: '19 (1 equiv.)  Traut's reagent (3 equiv.)  O12 (2.5 equiv.)'",
+ "both_primary_amines_substituted": true,
+ "both_primary_amines_basis": "The drawn product carries one amidine-thioether-ester arm on EACH of amine 19's two primary nitrogens, and none on its tertiary N-methyl. Confirmed numerically by the mass spectrum printed in the same figure, 401.129 [M+2H]2+ -- see 07_qc.json check P1b.",
+ "measurements": {
+  "upper_arm_amidine_to_S": {
+   "role": "upper arm: from the amidine carbon's HN label across to the S label. Vertices minus the two label positions is the amidine carbon plus the CH2 run",
+   "component": 20,
+   "vertices": 6,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 7,
+     "4.0": 6,
+     "5.0": 6,
+     "6.0": 6
+    },
+    "tolerance_4_to_7": {
+     "4.0": 6,
+     "5.0": 6,
+     "6.0": 6,
+     "7.0": 6
+    }
+   },
+   "dp_resolved_by": "a 3.0 px Douglas-Peucker tolerance adds one spurious vertex to every LINKER component on this 400 dpi render, and to none of the three tails, because the linker's steeper bonds leave a coarser skeleton staircase. The sweep is therefore run at 4.0-7.0 px for this page. That widening is a no-op on every measurement that had already converged -- asserted below -- and the value it leaves is confirmed externally by both printed masses (07_qc.json P1 and P1b).",
+   "endpoints_measured": [
+    [
+     "label",
+     6.0
+    ],
+    [
+     "label",
+     10.4
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms": 4,
+   "count_carbons": {
+    "n": 6,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "upper_arm_S_to_carbonylO": {
+   "role": "upper arm: from the S label through to the carbonyl oxygen. Three heavy atoms means CH2-CH2-C(=O) and nothing else, i.e. the thiol added to the acrylate's TERMINAL carbon. The carbonyl O is drawn as an outline letter and is not in the glyph map, so its end is checked by adjacent ink",
+   "component": 23,
+   "vertices": 5,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 6,
+     "4.0": 5,
+     "5.0": 5,
+     "6.0": 5
+    },
+    "tolerance_4_to_7": {
+     "4.0": 5,
+     "5.0": 5,
+     "6.0": 5,
+     "7.0": 5
+    }
+   },
+   "dp_resolved_by": "a 3.0 px Douglas-Peucker tolerance adds one spurious vertex to every LINKER component on this 400 dpi render, and to none of the three tails, because the linker's steeper bonds leave a coarser skeleton staircase. The sweep is therefore run at 4.0-7.0 px for this page. That widening is a no-op on every measurement that had already converged -- asserted below -- and the value it leaves is confirmed externally by both printed masses (07_qc.json P1 and P1b).",
+   "endpoints_measured": [
+    [
+     "label",
+     5.4
+    ],
+    [
+     "label_fused",
+     29.1
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms": 3,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "upper_arm_tail": {
+   "role": "upper arm: the ester O-alkyl tail of O12",
+   "component": 24,
+   "vertices": 13,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 13,
+     "4.0": 13,
+     "5.0": 13,
+     "6.0": 13
+    },
+    "tolerance_4_to_7": {
+     "4.0": 13,
+     "5.0": 13,
+     "6.0": 13,
+     "7.0": 13
+    }
+   },
+   "dp_resolved_by": null,
+   "endpoints_measured": [
+    [
+     "label",
+     5.8
+    ],
+    [
+     "methyl",
+     119.2
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms": 12,
+   "count_carbons": {
+    "n": 13,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "upper_arm_tail",
+    "name_token_length": 12,
+    "measured_length": 12,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "lower_arm_amidine_to_S": {
+   "role": "lower arm, amidine carbon to S",
+   "component": 123,
+   "vertices": 6,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 7,
+     "4.0": 6,
+     "5.0": 6,
+     "6.0": 6
+    },
+    "tolerance_4_to_7": {
+     "4.0": 6,
+     "5.0": 6,
+     "6.0": 6,
+     "7.0": 6
+    }
+   },
+   "dp_resolved_by": "a 3.0 px Douglas-Peucker tolerance adds one spurious vertex to every LINKER component on this 400 dpi render, and to none of the three tails, because the linker's steeper bonds leave a coarser skeleton staircase. The sweep is therefore run at 4.0-7.0 px for this page. That widening is a no-op on every measurement that had already converged -- asserted below -- and the value it leaves is confirmed externally by both printed masses (07_qc.json P1 and P1b).",
+   "endpoints_measured": [
+    [
+     "label",
+     5.0
+    ],
+    [
+     "label",
+     8.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms": 4,
+   "count_carbons": {
+    "n": 6,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "lower_arm_S_to_carbonylO": {
+   "role": "lower arm, S through to the carbonyl oxygen",
+   "component": 116,
+   "vertices": 5,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 6,
+     "4.0": 5,
+     "5.0": 5,
+     "6.0": 5
+    },
+    "tolerance_4_to_7": {
+     "4.0": 5,
+     "5.0": 5,
+     "6.0": 5,
+     "7.0": 5
+    }
+   },
+   "dp_resolved_by": "a 3.0 px Douglas-Peucker tolerance adds one spurious vertex to every LINKER component on this 400 dpi render, and to none of the three tails, because the linker's steeper bonds leave a coarser skeleton staircase. The sweep is therefore run at 4.0-7.0 px for this page. That widening is a no-op on every measurement that had already converged -- asserted below -- and the value it leaves is confirmed externally by both printed masses (07_qc.json P1 and P1b).",
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ],
+    [
+     "label",
+     12.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms": 3,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "lower_arm_tail": {
+   "role": "lower arm: the ester O-alkyl tail of O12",
+   "component": 124,
+   "vertices": 13,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 13,
+     "4.0": 13,
+     "5.0": 13,
+     "6.0": 13
+    },
+    "tolerance_4_to_7": {
+     "4.0": 13,
+     "5.0": 13,
+     "6.0": 13,
+     "7.0": 13
+    }
+   },
+   "dp_resolved_by": null,
+   "endpoints_measured": [
+    [
+     "label",
+     5.0
+    ],
+    [
+     "methyl",
+     127.9
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms": 12,
+   "count_carbons": {
+    "n": 13,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "lower_arm_tail",
+    "name_token_length": 12,
+    "measured_length": 12,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "core_upper_N_to_NH": {
+   "role": "the drawn product's own amine-19 core: tertiary N to the upper arm's amidine NH. Measured here, on the SI page, so the C10 anchor in make_reference.py can be built WITHOUT reusing any integer from stage 01's reading of the article figure",
+   "component": 39,
+   "vertices": 4,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 4,
+     "4.0": 4,
+     "5.0": 4,
+     "6.0": 4
+    },
+    "tolerance_4_to_7": {
+     "4.0": 4,
+     "5.0": 4,
+     "6.0": 4,
+     "7.0": 4
+    }
+   },
+   "dp_resolved_by": null,
+   "endpoints_measured": [
+    [
+     "label",
+     6.0
+    ],
+    [
+     "label",
+     6.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms": 2,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "core_lower_N_to_NH": {
+   "role": "the drawn product's core: tertiary N to the lower arm's amidine NH",
+   "component": 100,
+   "vertices": 4,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 4,
+     "4.0": 4,
+     "5.0": 4,
+     "6.0": 4
+    },
+    "tolerance_4_to_7": {
+     "4.0": 4,
+     "5.0": 4,
+     "6.0": 4,
+     "7.0": 4
+    }
+   },
+   "dp_resolved_by": null,
+   "endpoints_measured": [
+    [
+     "label",
+     6.0
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms": 2,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "core_N_methyl": {
+   "role": "the drawn product's core: the unlabelled bond on the tertiary N, i.e. its methyl",
+   "component": 82,
+   "vertices": 2,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 2,
+     "4.0": 2,
+     "5.0": 2,
+     "6.0": 2
+    },
+    "tolerance_4_to_7": {
+     "4.0": 2,
+     "5.0": 2,
+     "6.0": 2,
+     "7.0": 2
+    }
+   },
+   "dp_resolved_by": null,
+   "endpoints_measured": [
+    [
+     "methyl",
+     24.0
+    ],
+    [
+     "label",
+     8.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms": 1,
+   "count_carbons": {
+    "n": 2,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "reactant_O12_tail": {
+   "role": "the O12 acrylate REACTANT's tail, drawn separately on the same page -- an independent instance of the same chain",
+   "component": 64,
+   "vertices": 13,
+   "dp_sweep": {
+    "tolerance_3_to_6": {
+     "3.0": 13,
+     "4.0": 13,
+     "5.0": 13,
+     "6.0": 13
+    },
+    "tolerance_4_to_7": {
+     "4.0": 13,
+     "5.0": 13,
+     "6.0": 13,
+     "7.0": 13
+    }
+   },
+   "dp_resolved_by": null,
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ],
+    [
+     "methyl",
+     40.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms": 12,
+   "count_carbons": {
+    "n": 13,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "reactant_O12_tail",
+    "name_token_length": 12,
+    "measured_length": 12,
+    "matches": true,
+    "note": ""
+   }
+  }
+ },
+ "tail_agreement": {
+  "n_independent_drawings_on_this_page": 3,
+  "heavy_atoms_each": 12,
+  "note": "Two product arms plus the reactant acrylate, drawn separately, all give the same tail length; stage 01 measures the same O12 off the article figure at a different scale."
+ },
+ "core_from_this_drawing": {
+  "N_to_amidine_NH_carbons": 2,
+  "n_arms_on_the_tertiary_N": 2,
+  "methyl_carbons": 1,
+  "note": "Amine 19 re-measured from the PRODUCT drawing on the SI page, independently of stage 01's reading of Fig. 1a. make_reference.py builds the C10 anchor from these numbers and from the linker below, so the anchor shares neither the figure, the scale, the calibration nor the assembly code path with the enumerator."
+ },
+ "linker": {
+  "amidine_C_plus_CH2_run": 4,
+  "CH2_between_amidine_C_and_S": 3,
+  "S_to_carbonylO_heavy_atoms": 3,
+  "CH2_between_S_and_carbonyl": 2,
+  "note": "Traut's reagent is 2-iminothiolane, a five-membered ring: ring-opening by a primary amine gives an amidine carbon followed by three CH2 and a free thiol. The thiol then adds to the acrylate's terminal carbon, putting two CH2 between S and the ester carbonyl. Both counts are measured above."
+ }
+}

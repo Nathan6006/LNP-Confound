@@ -58,6 +58,7 @@ descriptors were computed from a superseded structure.
 import csv
 import json
 import math
+import io
 import os
 import statistics as st
 from collections import Counter, defaultdict
@@ -698,6 +699,60 @@ def apply_metadata_patches(rows):
     return n
 
 
+def open_decisions(path):
+    """OPEN entries in the curation folder's DECISIONS.md, if it has one.
+
+    THE MERGE REFUSES A FOLDER WITH AN OPEN DECISION. This is what makes a long
+    unattended curation run safe: the pipeline is good at detecting that a
+    source is silent, and it is not entitled to resolve it.
+
+    The case for the gate is `AC_2025`, where the first repair was confident,
+    internally consistent, and would have assigned **419 measured values to the
+    wrong molecules** -- the NAMES were wrong and the structures were right,
+    and nothing in the data said which half to fix. F-004 is the same shape:
+    three mutually inconsistent `N:P` candidates (7.199 / 16.766 / 6.0), a
+    reconstruction that was implemented, committed and then reverted, and a
+    final decision to blank the column that was the user's to make and not the
+    pipeline's.
+
+    A folder with no DECISIONS.md is not gated -- the five curations merged
+    before 2026-11-09 predate the convention, and retro-fitting a file to a
+    merged folder would gate history rather than new work.
+    """
+    folder = os.path.dirname(os.path.abspath(path))
+    dec = os.path.join(folder, "DECISIONS.md")
+    if not os.path.exists(dec):
+        return None
+    open_ids = []
+    current = None
+    in_fence = False
+    for line in io.open(dec, encoding="utf-8"):
+        t = line.strip()
+        # SKIP FENCED CODE BLOCKS. The scaffold's own DECISIONS.md documents
+        # the entry format inside a ``` fence, and that example registered as
+        # a real OPEN entry ("D-1  <one line>") -- so EVERY scaffolded folder
+        # was permanently blocked by a phantom. A gate that always fires
+        # trains people to ignore it, which is worse than no gate.
+        if t.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        # Strip markdown emphasis before matching. A folder wrote
+        # `**STATUS: OPEN**` and this gate -- which only matched a bare
+        # `STATUS:` -- reported ZERO open decisions for a folder with five.
+        # That is a FALSE NEGATIVE in the one check standing between an
+        # unresolved question and the corpus, and it is far worse than the
+        # phantom entry fixed alongside it. Found 2026-11-10.
+        bare = t.lstrip("*_# 	")
+        if t.startswith("### "):
+            current = t[4:].strip().lstrip("*_ ").rstrip("*_ ")
+        elif bare.upper().startswith("STATUS:") and current:
+            if "OPEN" in bare.upper().split("STATUS:", 1)[1]:
+                open_ids.append(current)
+            current = None
+    return open_ids
+
 def merge_curations(vitro, vivo, cols):
     """Append per-paper curations, routing each row by its Model column.
 
@@ -714,6 +769,18 @@ def merge_curations(vitro, vivo, cols):
         if not os.path.exists(path):
             out[os.path.basename(path)] = "NOT FOUND"
             continue
+        opened = open_decisions(path)
+        if opened:
+            raise SystemExit(
+                f"REFUSING TO MERGE {os.path.relpath(path)}: its folder's "
+                f"DECISIONS.md has {len(opened)} OPEN entry(ies):\n  "
+                + "\n  ".join(opened)
+                + "\n\nResolve each one -- set STATUS to 'RESOLVED <date> by "
+                  "<who>' and record the DECISION line -- before merging. The "
+                  "pipeline detects that a source is silent; it does not get "
+                  "to decide what the source meant. AC_2025's first repair was "
+                  "confident, internally consistent, and would have put 419 "
+                  "measured values on the wrong molecules.")
         added = Counter()
         for r in csv.DictReader(open(path)):
             row = {c: r.get(c, "") for c in cols}

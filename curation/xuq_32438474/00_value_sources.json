@@ -1,0 +1,77 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser or any chemistry was written.",
+ "_why": "NG_2025 (publisher Source Data) and WT_2026 (author repo) have ZERO digitisation defects between them. The four curations that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "4b_pdf_vector_geometry": "NOT one of the five canonical tiers. The value is carried by the PDF's OWN filled-rectangle coordinates (pymupdf page.get_drawings()), read in PDF user space. No raster is produced and no pixel is sampled; the axis is calibrated from the same vector tick-line coordinates. Strictly stronger than 5_pixels (no resampling, no JPEG, no antialiasing, no colour matching) and strictly weaker than 1-3 (the author still rounded the number into a drawing). Recorded as its own key rather than folded into 4 or 5 so a reviewer is not told it is a text table and is not told it is pixels.",
+  "5_pixels": "digitised from a raster figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+ "_library_first": {
+  "distinct_ionizable_structures": 18,
+  "breakdown": "9 OCholB (heads 75,76,77,78,80,81,87,90,304) + 3 O16B (75,76,77) + 3 OChol (75,76,77) + 3 single-tailed OCholB-1 (75,76,77). 'N lipids' in this paper is NOT N formulations: 75-OCholB-F etc. are the SAME structure as 75-OCholB formulated 1/1 w/w with DOPE, and are counted as formulations, not structures.",
+  "how_established": "SI Figure S13 and Figure S16 are TEXT tables giving the [M+H]+ molecular formula of every fully-substituted lipidoid. Nine OCholB formulas are listed; the main text independently says 'six out of the nine examined OCholB LNPs'. The library size was not stated anywhere in prose."
+ },
+ "panels": [
+  {
+   "panel": "Figure 3B (main text)",
+   "supplies": "GFP mRNA transfection efficacy, % GFP+ cells, 12 groups x 4 cell lines = 48 bars. 9 are library members (75,76,77,78,80,81,87,90,304-OCholB); 3 are controls (Lpf2k, naked mRNA, untreated). Cell lines HeLa / B16F10 / HEK293 / NIH 3T3.",
+   "tier": "5_pixels",
+   "locator": "source/pmc/nihms-1624779-f0004.jpg, 1800x1399 px, 300 dpi, sha256 5bd928308a98fc2bf9d37c0cf70a5216ef06b0ff7f6decd5fcaf8e5354896bd3",
+   "why_tiers_1_to_4_failed": "1: Angew. Chem. 2020 published no Source Data file for this article; the only supplementary deposit on the Wiley record is anie202004994-sup-0001-misc_information.pdf, a 58-page narrative PDF with no workbook. 2: that SI PDF contains exactly three text tables, extracted from the text layer of all 58 pages -- Figure S13 and Figure S16 (MS formulas) and Figure S35 (brain-region acronyms); none carries a transfection value. 3: find_repo.py --doi 10.1002/anie.202004994 --pmid 32438474 --author Xu returned no matching repository. 4: Figure 3 is a MAIN-TEXT figure, so it is not in the SI PDF at all and has no vector copy we can reach; PMC serves it only as a raster. The vector original lives in the Wiley article PDF, which is behind a bot check, and this task forbids bypassing bot checks and forbids using the shared browser.",
+   "verified_against": "two printed statistics in the Results text -- Lpf2k is stated as 98% GFP+ HeLa cells and naked GFP mRNA as 2% GFP+ HeLa cells. Both are bars in this panel, so they are an axis check external to our geometry. Also: the qualitative claim '75-, 77-, 78-, 80-, and 81-OCholB deliver to all cell types; 87- and 90-OCholB are consistently ineffective' is a 9x4 ordering claim the extracted matrix must satisfy."
+  },
+  {
+   "panel": "Figure S24C (SI p. S36)",
+   "supplies": "(-30)GFP-Cre PROTEIN delivery, % GFP+ cells in HeLa-DsRed, 12 groups x 3 protein concentrations (25 / 50 / 100 nM) = 36 bars. DIFFERENT CARGO from Figure 3B and therefore a different experiment.",
+   "tier": "4b_pdf_vector_geometry",
+   "locator": "anie202004994-sup-0001-misc_information.pdf page 37 (printed S36); 36 filled rectangles with baseline y1 = 340.23 pt",
+   "why_tiers_1_to_4_failed": "Tiers 1-3 fail for the whole paper for the reasons given under Figure 3B. Tier 4 fails because the panel is a drawing, not a text table. It does NOT fall to tier 5: the bars are native PDF vector rectangles, so their tops are exact numbers in PDF user space.",
+   "verified_against": "the Results text states 'Six out of the nine examined OCholB LNPs showed comparable or even higher transfection efficiency than Lpf2k' -- a 9-vs-1 count the extracted values must reproduce."
+  },
+  {
+   "panel": "Figure S24F (SI p. S36)",
+   "supplies": "gene-recombination efficiency, % DsRed+ cells in HeLa-DsRed, 12 groups x 3 protein concentrations = 36 bars. A DOWNSTREAM functional readout of the same protein delivery, not a second measurement of delivery.",
+   "tier": "4b_pdf_vector_geometry",
+   "locator": "same page; 36 filled rectangles with baseline y1 = 510.76 pt",
+   "why_tiers_1_to_4_failed": "as Figure S24C.",
+   "verified_against": "'Six of the nine examined OCholB LNPs were comparable or even more efficient than Lpf2k'; and the Results' separate claim that unformulated OCholB LNPs achieved 49-73% DsRed+ cells for Cre mRNA (a different panel, Figure S21B) must NOT be confused with this one."
+  },
+  {
+   "panel": "Figure S24E (SI p. S36)",
+   "supplies": "mean green fluorescence intensity, a.u., 12 single bars.",
+   "tier": "4b_pdf_vector_geometry",
+   "locator": "same page; 12 filled rectangles with baseline y1 = 510.62 pt",
+   "why_tiers_1_to_4_failed": "as Figure S24C.",
+   "verified_against": "NOT EMITTED. The panel carries no legend and the caption names no protein concentration, so the condition behind these 12 numbers is unstated. Recorded in 08_contradictions.csv; see DECISIONS.md D-3."
+  },
+  {
+   "panel": "Figure 3A / Figure S20C",
+   "supplies": "LNP/mRNA weight-ratio optimisation for 75-OCholB only (7 ratios + control).",
+   "tier": "5_pixels",
+   "locator": "source/pmc/nihms-1624779-f0004.jpg panel A",
+   "why_tiers_1_to_4_failed": "as Figure 3B.",
+   "verified_against": "NOT EMITTED -- a single-lipid dose-response, not a library screen. It does, however, pin the delivery condition used everywhere else (LNP/mRNA = 10/1 w/w)."
+  },
+  {
+   "panel": "Figure 1C / Figure 3C / Figure S25A",
+   "supplies": "cell viability (MTT), %",
+   "tier": "n/a",
+   "locator": "-",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "NOT EMITTED. Viability is not a delivery endpoint; the corpus's 90 hemolysis_percent rows were excluded from LNPDB for the same reason (CLAUDE.md changelog 2026-07-23)."
+  },
+  {
+   "panel": "Figures 5, 6, 7, S27-S45 (in vivo)",
+   "supplies": "nothing numeric per lipid. Fluorescence micrographs and IVIS images only; Figure 7B is a GFAP/NeuN colocalisation percentage of tdTomato+ cells, not a delivery measurement.",
+   "tier": "n/a",
+   "locator": "-",
+   "why_tiers_1_to_4_failed": "",
+   "verified_against": "NO IN VIVO VALUE IS EXTRACTABLE FROM THIS PAPER. Every in vivo result is reported as a presence/absence of tdTomato signal in an image. There is no axis, no scale bar of intensity, and no table. Stated plainly rather than estimated."
+  }
+ ],
+ "verdict": "USABLE. 36 library values from Figure 3B (mRNA, 4 cell lines, tier 5) and 27 + 27 from Figure S24C/S24F (protein, 3 doses, tier 4b vector). ZERO in vivo values."
+}

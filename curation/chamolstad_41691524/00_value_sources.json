@@ -1,0 +1,81 @@
+{
+  "paper": {
+    "pmid": "41691524",
+    "doi": "10.1021/acsnano.5c19036",
+    "journal": "ACS Nano",
+    "year": 2026,
+    "title_published": "Comprehensive Engineering of Ionizable Lipid Nanoparticles and mRNA Elements for Next-Generation Vaccines.",
+    "title_verified_against": "Europe PMC REST core record for EXT_ID:41691524, retrieved 2026-11-10 UTC",
+    "corresponding": ["Doo-Jin Kim", "Jeong Ho Hwang", "Michael J. Mitchell", "Hyunjoo Cha-Molstad"],
+    "open_access": "N (Europe PMC isOpenAccess=N; license=None). Main-text PDF is NOT on disk and was not acquired: ACS is paywalled and no paywall/bot-check bypass is permitted."
+  },
+
+  "ENDPOINT": {
+    "is_nucleic_acid_delivery": true,
+    "primary": "mRNA (firefly-luciferase and SARS-CoV-2 RBD) delivery by ionizable LNP; luciferase reporter transfection in vitro, bioluminescence in vivo, plus vaccine immunogenicity.",
+    "evidence": "Abstract (Europe PMC): '96-member biodegradable ionizable lipid library, stereodefined H9T6 emerged as the lead ionizable lipid... DoE identified an H9T6:DOPG:cholesterol:PEG composition (40:16:43.5:0.5 mol %) that achieved more than 3.5-fold higher dendritic-cell transfection than SM-102'. SI Figures S2-S5 are luciferase activity relative to SM102 in DC2.4 and C2C12.",
+    "second_experiment_in_same_paper": "UTR engineering (3'UTR half-life, 5'UTR ribosome loading). This varies the CARGO, not the lipid. MUST NOT be pooled with the lipid/formulation screen (trap 5)."
+  },
+
+  "WHERE_THE_VALUES_ARE": {
+    "headline": "The tier-1 publisher workbook is NOT a lipid screen. The 96-lipid screen is in main-text Fig 1B-G, which is not on disk and is paywalled. Every ionizable-lipid delivery value reachable from the files on disk is a FORMULATION DoE on ONE lipid (H9T6), in raster SI bar charts.",
+    "by_source": [
+      {
+        "id": "SI_001_xlsx",
+        "file": "source/nn5c19036_si_001.xlsx",
+        "tier": "1_publisher_source_data",
+        "sheets": 1,
+        "extent": "Sheet1, A1:U11 — 11 rows x 21 cols",
+        "content": "Nine SELECTED 3' UTRs: normalized counts (CPM) at 0/1/2/4/8 h, four k values, eleven half-life (min) replicates.",
+        "is_a_lipid_screen": false,
+        "find_screens_py_verdict": "no output (no sheet flagged SCREEN? or maybe) — correct: no compound-like label column, 11 rows",
+        "usable_for_this_corpus": false,
+        "why": "mRNA-element (3'UTR half-life) data. Not a delivery/transfection endpoint and not keyed to any lipid. Different experiment per trap 5."
+      },
+      {
+        "id": "SI_002_tableS1",
+        "file": "source/nn5c19036_si_002.pdf pp. 27-28",
+        "tier": "4_pdfplumber_text_table",
+        "content": "Table S1, List of LNP formulations: SM102, 1-F1..1-F16, 2-F1..2-F27, ALC-0315, H9T6 final. Columns: IL mol%, phospholipid identity, PL mol%, cholesterol mol%, PEG-lipid identity, PEG mol%, N/P.",
+        "is_a_lipid_screen": false,
+        "usable_for_this_corpus": "YES — as FORMULATION METADATA for every emitted row (text layer, exact, no pixels).",
+        "extracted_cleanly": true
+      },
+      {
+        "id": "SI_002_figS4",
+        "file": "source/nn5c19036_si_002.pdf p. 11, embedded image xref 170, 1378x1516 px native",
+        "tier": "5_pixels",
+        "why_tiers_1_to_4_failed": "Tier 1: the only publisher Source Data file is the 3'UTR workbook above, which contains no luciferase values. Tier 2: the SI has 11 tables (S1-S11); none carries per-formulation luciferase numbers — S1 is composition, S2/S3 are UTR sequences, S4-S10 are toxicology parameter lists, S11 is immunogenicity ratios for 4 named vaccine groups only. Tier 3: no author repository — find_repo.py over GitHub for DOI/PMID/title/author Cha returned no candidate authored by this group (two unrelated lipid-ML repos only). Tier 4: the figure has no text layer; pdfplumber returns only the caption, and the panel is a single flattened raster.",
+        "panels_used": [
+          {"panel": "S4A", "readout": "Luciferase activity relative to SM102", "cell": "DC2.4", "bars": 43, "labels": "SM102, 1-F1..1-F16, 2-F1..2-F27 — every bar individually labelled"},
+          {"panel": "S4C", "readout": "Luciferase activity relative to SM102", "cell": "C2C12", "bars": 43, "labels": "same 43"}
+        ],
+        "panels_deliberately_NOT_used": [
+          {"panel": "S4B, S4D", "why": "cell viability (WST), not a delivery endpoint"},
+          {"panel": "S3A, S3B", "why": "C2C12 luciferase relative to SM102 for the same 1-F/2-F formulations, but the values DISAGREE with S4C by up to ~10x. Two panels of the same formulations that disagree are two experiments, not one (trap 4). Recorded in 08_contradictions.csv; NOT pooled and NOT emitted pending a decision."},
+          {"panel": "S3C-S3H", "why": "box plots stratified by design VARIABLE (IL mol%, helper identity, PEG mol%, N/P). A box is an aggregate over formulations; no per-formulation value is recoverable."},
+          {"panel": "S2B, S2C", "why": "only 3 bars each (SM102, crude H9T2, crude H9T6) and BOTH y-axes are BROKEN (discontinuous, two segments with different scales). axis.calibrate cannot describe a broken axis with one affine/log map; a single calibration over a broken axis is exactly error class 20/27 territory. Not extracted."},
+          {"panel": "S5", "why": "cargo/benchmark comparisons (m1-psi vs U; ALC-0315 vs SM-102). Different cargo = different experiment (trap 4/5)."},
+          {"panel": "S7-S9", "why": "UTR protein-expression kinetics — mRNA-element experiment, not a lipid screen."}
+        ],
+        "independent_anchor_available": "YES — the authors DREW a dashed horizontal reference line at exactly 1.0 (SM102) on S4A and S4C and never printed its value. It is external to the digitiser: calibrate on the detected y-tick positions only, then predict the dashed line and check it lands on 1.000."
+      },
+      {
+        "id": "MAIN_fig1B-G",
+        "file": "NOT ON DISK",
+        "tier": "unavailable",
+        "content": "The 96-member ionizable lipid library screen itself (Table S1 pins its formulation: Lipids:DOPE:chol:DMG-PEG2k = 35:16:46.5:2.5).",
+        "usable_for_this_corpus": false,
+        "why": "Main-text PDF not supplied; article is closed access and no bypass is permitted. Even with the figure, only 1 of the 12 head amines is disclosed anywhere in the SI (H9 = tris(2-aminoethyl)amine, via the H9T6 synthesis), so 88 of the 96 members could not be given a structure."
+      }
+    ]
+  },
+
+  "intake_verdict": {
+    "lipid_library_values_emittable": 0,
+    "formulation_DoE_values_emittable": 86,
+    "distinct_ionizable_lipid_structures_behind_those_86_rows": 1,
+    "tier_of_emitted_values": "5_pixels",
+    "written_before": "any chemistry, any corpus comparison, any digitiser code"
+  }
+}

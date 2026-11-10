@@ -1,0 +1,41 @@
+{
+ "Experiment_ID": "KW_2024",
+ "PEG": {
+  "_why": "F-049. Two structures share the name in the corpus; the phosphoethanolamine one is what '14:0 PEG2000 PE' means, so that is used. F-049 is NOT repaired here.",
+  "corpus_structures_under_this_name": {
+   "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCO...": 1873,
+   "CCCCCCCCCCCCCC(=O)OCC(COP(=O)(O)OCCNCC(=O)OCCOCC...": 3611
+  },
+  "name_in_paper": "PEG2000 (14:0 PEG2000 PE), Avanti; the same Methods also calls it C14-PEG2000 in the TNS section",
+  "resolved_to": "DMPE-PEG2000",
+  "shared_guard_refused": "corpus_components.smi('DMPE-PEG2000'): AMBIGUOUS -- this name carries 2 different structures in the corpus:"
+ },
+ "all_49_are_members_of_the_580": true,
+ "flags": {
+  "confidence_high": 33,
+  "confidence_low": 10,
+  "confidence_medium": 6,
+  "rows_with_a_caveat": 16,
+  "structure_assumed": 16,
+  "value_is_bound": 0
+ },
+ "n_library_members_enumerated": 580,
+ "n_members_with_a_delivery_value": 49,
+ "n_rows": 49,
+ "raw_flux_p_per_s": {
+  "geometric_mean": 18176400.0,
+  "max": 1197460000.0,
+  "min": 207515.0
+ },
+ "unrecorded_metadata": {
+  "Dose_ug_nucleicacid": "BLANK. The dose is stated as 0.75 mg/kg and no body weight is given, so micrograms are not derivable. DECISIONS.md D-5.",
+  "IL_to_nucleicacid_chargeratio": "not stated",
+  "Model_target": "'whole_body' is the nearest corpus term. The measurement is the SUM over six EXCISED organs imaged ex vivo, not a whole-animal IVIS image."
+ },
+ "z": {
+  "max": 1.98316,
+  "mean": 0.0,
+  "min": -2.11804,
+  "sd_ddof0": 1.0
+ }
+}

@@ -1,0 +1,341 @@
+{
+ "_what": "Figure S3 digitised to VERIFY Table S2. Nothing here is emitted into 05_values.csv.",
+ "render_dpi": 600,
+ "calibration": {
+  "kind": "linear",
+  "px_per_unit": 1318.5348,
+  "origin_px": 1006.679,
+  "origin_value": 1.2,
+  "tick_step_units": -0.3,
+  "n_ticks": 5,
+  "tick_fit_residual_px": 1.3419,
+  "tick_residual_tol_px": 2.5
+ },
+ "n_bars_detected": 47,
+ "drawn_round_number_check": {
+  "what": "'Relative Transfection Efficiency' is relative to a positive control, so that control's own bar must be drawn at exactly 1.000. The axis is calibrated from tick marks alone, so where that bar lands is EXTERNAL to this pipeline. Two green 'Positive control' bars exist, SFA and L2K, and the figure never says which is the normaliser -- so both are measured and the data chooses.",
+  "SFA_measured": 1.0064,
+  "SFA_pct_from_1.000": 0.64,
+  "L2K_measured": 1.0291,
+  "L2K_pct_from_1.000": 2.91,
+  "normaliser_indicated": "SFA",
+  "corroboration": "Figure S6 (SI p.19) states 'T18U-PY16-A1 shows 35% higher transfection efficiency compared to positive control SFA', i.e. SFA is the normaliser there too.",
+  "residual_is_explained_by": "bars.bar_top returns the OUTER edge of the top rule, which sits ~5 px (0.004 units) above the plotted value at this line width.",
+  "the_authors_never_printed_this_number": true
+ },
+ "SFA_bar": 1.0064,
+ "bars_refused_by_bar_top": {
+  "5": "bar_top: left flank first-covered row 1908, right flank 1974, delta 66.0 px > 2.0 px tolerance.",
+  "27": "bar_top: left flank first-covered row 1742, right flank 1755, delta 13.0 px > 2.0 px tolerance.",
+  "44": "bar_top: left flank first-covered row 1185, right flank 1199, delta 14.0 px > 2.0 px tolerance."
+ },
+ "lipidoid_bars_unreadable": [
+  "L1",
+  "L18",
+  "L40"
+ ],
+ "lipidoid_bars_compared": 42,
+ "monotone_over_readable_bars": false,
+ "pearson_drawn_vs_printed": 0.996524,
+ "ratio_drawn_over_printedTE": {
+  "mean": 0.01151,
+  "sd": 0.000265,
+  "cv_pct": 2.304,
+  "implied_%TE_of_the_normaliser_SFA_mean": 86.93,
+  "implied_%TE_of_the_normaliser_SFA_sd": 1.94
+ },
+ "row_shift_test": {
+  "-2": {
+   "n": 41,
+   "cv_pct": 4.444,
+   "pearson": 0.984833
+  },
+  "-1": {
+   "n": 42,
+   "cv_pct": 3.463,
+   "pearson": 0.9921
+  },
+  "0": {
+   "n": 42,
+   "cv_pct": 2.304,
+   "pearson": 0.996524
+  },
+  "1": {
+   "n": 41,
+   "cv_pct": 2.743,
+   "pearson": 0.990696
+  },
+  "2": {
+   "n": 40,
+   "cv_pct": 3.599,
+   "pearson": 0.983044
+  }
+ },
+ "row_shift_test_caveat": "Table S2 is sorted by value, so the drawn vector is monotone and a one-row shift still correlates. The test is therefore SUGGESTIVE, not decisive: shift 0 is uniquely best on both CV and Pearson, but the margin over shift +1 is small by construction.",
+ "tie_groups_height_spread": {
+  "75.0": 0.0099,
+  "70.0": 0.0152,
+  "60.0": 0.025,
+  "57.0": 0.0182,
+  "52.0": 0.0554,
+  "50.0": 0.0402,
+  "48.0": 0.0326,
+  "44.0": 0.0023,
+  "40.0": 0.025
+ },
+ "max_tie_spread": 0.0554,
+ "per_bar": [
+  {
+   "lipidoid": "L2",
+   "printed_TE": 89.0,
+   "drawn_relative": 0.9965,
+   "ratio": 0.0112
+  },
+  {
+   "lipidoid": "L3",
+   "printed_TE": 87.0,
+   "drawn_relative": 0.9791,
+   "ratio": 0.01125
+  },
+  {
+   "lipidoid": "L4",
+   "printed_TE": 79.0,
+   "drawn_relative": 0.8888,
+   "ratio": 0.01125
+  },
+  {
+   "lipidoid": "L5",
+   "printed_TE": 75.0,
+   "drawn_relative": 0.8456,
+   "ratio": 0.01127
+  },
+  {
+   "lipidoid": "L6",
+   "printed_TE": 75.0,
+   "drawn_relative": 0.8433,
+   "ratio": 0.01124
+  },
+  {
+   "lipidoid": "L7",
+   "printed_TE": 75.0,
+   "drawn_relative": 0.8532,
+   "ratio": 0.01138
+  },
+  {
+   "lipidoid": "L8",
+   "printed_TE": 72.0,
+   "drawn_relative": 0.8304,
+   "ratio": 0.01153
+  },
+  {
+   "lipidoid": "L9",
+   "printed_TE": 70.0,
+   "drawn_relative": 0.7902,
+   "ratio": 0.01129
+  },
+  {
+   "lipidoid": "L10",
+   "printed_TE": 70.0,
+   "drawn_relative": 0.8054,
+   "ratio": 0.01151
+  },
+  {
+   "lipidoid": "L11",
+   "printed_TE": 68.0,
+   "drawn_relative": 0.7728,
+   "ratio": 0.01136
+  },
+  {
+   "lipidoid": "L12",
+   "printed_TE": 65.0,
+   "drawn_relative": 0.7356,
+   "ratio": 0.01132
+  },
+  {
+   "lipidoid": "L13",
+   "printed_TE": 60.0,
+   "drawn_relative": 0.7075,
+   "ratio": 0.01179
+  },
+  {
+   "lipidoid": "L14",
+   "printed_TE": 60.0,
+   "drawn_relative": 0.6825,
+   "ratio": 0.01138
+  },
+  {
+   "lipidoid": "L15",
+   "printed_TE": 58.0,
+   "drawn_relative": 0.6749,
+   "ratio": 0.01164
+  },
+  {
+   "lipidoid": "L16",
+   "printed_TE": 57.0,
+   "drawn_relative": 0.6628,
+   "ratio": 0.01163
+  },
+  {
+   "lipidoid": "L17",
+   "printed_TE": 57.0,
+   "drawn_relative": 0.6476,
+   "ratio": 0.01136
+  },
+  {
+   "lipidoid": "L19",
+   "printed_TE": 57.0,
+   "drawn_relative": 0.6446,
+   "ratio": 0.01131
+  },
+  {
+   "lipidoid": "L20",
+   "printed_TE": 57.0,
+   "drawn_relative": 0.6446,
+   "ratio": 0.01131
+  },
+  {
+   "lipidoid": "L21",
+   "printed_TE": 55.0,
+   "drawn_relative": 0.6325,
+   "ratio": 0.0115
+  },
+  {
+   "lipidoid": "L22",
+   "printed_TE": 52.0,
+   "drawn_relative": 0.64,
+   "ratio": 0.01231
+  },
+  {
+   "lipidoid": "L23",
+   "printed_TE": 52.0,
+   "drawn_relative": 0.5968,
+   "ratio": 0.01148
+  },
+  {
+   "lipidoid": "L24",
+   "printed_TE": 52.0,
+   "drawn_relative": 0.5847,
+   "ratio": 0.01124
+  },
+  {
+   "lipidoid": "L25",
+   "printed_TE": 52.0,
+   "drawn_relative": 0.5892,
+   "ratio": 0.01133
+  },
+  {
+   "lipidoid": "L26",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.5771,
+   "ratio": 0.01154
+  },
+  {
+   "lipidoid": "L27",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.5672,
+   "ratio": 0.01134
+  },
+  {
+   "lipidoid": "L28",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.5748,
+   "ratio": 0.0115
+  },
+  {
+   "lipidoid": "L29",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.6074,
+   "ratio": 0.01215
+  },
+  {
+   "lipidoid": "L30",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.5695,
+   "ratio": 0.01139
+  },
+  {
+   "lipidoid": "L31",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.5748,
+   "ratio": 0.0115
+  },
+  {
+   "lipidoid": "L32",
+   "printed_TE": 50.0,
+   "drawn_relative": 0.5695,
+   "ratio": 0.01139
+  },
+  {
+   "lipidoid": "L33",
+   "printed_TE": 48.0,
+   "drawn_relative": 0.5422,
+   "ratio": 0.0113
+  },
+  {
+   "lipidoid": "L34",
+   "printed_TE": 48.0,
+   "drawn_relative": 0.5748,
+   "ratio": 0.01198
+  },
+  {
+   "lipidoid": "L35",
+   "printed_TE": 47.0,
+   "drawn_relative": 0.5445,
+   "ratio": 0.01158
+  },
+  {
+   "lipidoid": "L36",
+   "printed_TE": 46.0,
+   "drawn_relative": 0.524,
+   "ratio": 0.01139
+  },
+  {
+   "lipidoid": "L37",
+   "printed_TE": 45.0,
+   "drawn_relative": 0.5195,
+   "ratio": 0.01154
+  },
+  {
+   "lipidoid": "L38",
+   "printed_TE": 44.0,
+   "drawn_relative": 0.5066,
+   "ratio": 0.01151
+  },
+  {
+   "lipidoid": "L39",
+   "printed_TE": 44.0,
+   "drawn_relative": 0.5043,
+   "ratio": 0.01146
+  },
+  {
+   "lipidoid": "L41",
+   "printed_TE": 40.0,
+   "drawn_relative": 0.4618,
+   "ratio": 0.01155
+  },
+  {
+   "lipidoid": "L42",
+   "printed_TE": 40.0,
+   "drawn_relative": 0.4868,
+   "ratio": 0.01217
+  },
+  {
+   "lipidoid": "L43",
+   "printed_TE": 40.0,
+   "drawn_relative": 0.4618,
+   "ratio": 0.01155
+  },
+  {
+   "lipidoid": "L44",
+   "printed_TE": 40.0,
+   "drawn_relative": 0.4717,
+   "ratio": 0.01179
+  },
+  {
+   "lipidoid": "L45",
+   "printed_TE": 40.0,
+   "drawn_relative": 0.4762,
+   "ratio": 0.01191
+  }
+ ]
+}

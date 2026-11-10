@@ -1,0 +1,17 @@
+{
+ "experiment_id": "QG_2026",
+ "rows": 300,
+ "columns": 79,
+ "pooled_z_across_both_libraries": true,
+ "normalisation": {
+  "": {
+   "n": 300,
+   "mean_log10": 3.0475810630353473,
+   "sd_log10_pop": 0.801603404875436
+  }
+ },
+ "rows_with_a_caveat": 300,
+ "z_mean": -2e-08,
+ "z_sd_pop": 1.000000011885,
+ "blank_Model_fields": "Model, Model_type, Model_target, Cargo and Experiment_method are blank because the SI never states the assay behind Fig. 1C/1E and the main text is paywalled (DECISIONS.md D-1). A blank is 'not stated', not 'clean'."
+}

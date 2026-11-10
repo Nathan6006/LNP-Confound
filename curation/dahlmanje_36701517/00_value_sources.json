@@ -1,0 +1,80 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). Written BEFORE any digitiser. For every panel or table that supplies a value, the tier it came from, and -- for anything at tier 5 -- a checkable sentence saying why tiers 1-4 failed.",
+  "paper": {
+    "pmid": "36701517",
+    "pmcid": "PMC9912332",
+    "doi": "10.1021/acs.nanolett.2c04479",
+    "title_verbatim_from_europepmc_core": "The Transcriptional Response to Lung-Targeting Lipid Nanoparticles <i>in Vivo</i>.",
+    "journal": "Nano Letters 23(3), Feb 2023",
+    "pubTypeList": ["Research Support, U.S. Gov't, Non-P.H.S.", "rapid-communication", "Journal Article", "Research Support, N.I.H., Extramural"],
+    "abstractText_length_chars": 961,
+    "has_methods_and_results": true,
+    "no_original_data_discriminator": "NOT a no-original-data paper: abstractText is 961 chars (not 0) and the SI carries a full Materials and Methods plus 23 supplementary figures. 'rapid-communication' in pubTypeList is a format, not a content claim.",
+    "isOpenAccess": "Y",
+    "license_from_europepmc_core": "cc by",
+    "license_note": "Europe PMC core record reports license 'cc by' and isOpenAccess 'Y' for the article; the SI PDF is distributed under the same article licence. CC-BY is compatible with CLAUDE.md section 8."
+  },
+  "tier_1_publisher_source_data": {
+    "status": "none exists",
+    "evidence": "The article's 'Supporting Information Available' section lists exactly one file: nl2c04479_si_001.pdf (PDF). The Europe PMC <supplementary-material> block and the EPMC supplementaryFiles zip (sha256 5fae9b5d..., 13 files) contain that same single PDF plus the six main-text figure rasters -- no .xlsx, .csv, .txt or Source Data of any kind."
+  },
+  "tier_2_SI_tables": {
+    "status": "none exists",
+    "evidence": "nl2c04479_si_001.pdf, 41 pages, has zero tables. Its only numeric tables are inside raster images (Supplementary Figure 1's molar-ratio table, and the Diam./PDI/pKa/Zeta/Encap. boxes in Fig 3a, S15a, S15c, S14a, S17a) -- pymupdf get_text() returns no numerals for any of those pages, and page.get_drawings() returns 0 vector paths on every figure page checked. There is no supplementary table of normalized delivery, of barcode-to-formulation mapping, or of per-LNP values."
+  },
+  "tier_3_author_repo": {
+    "status": "none exists",
+    "evidence": [
+      "provenance/tools/find_repo.py --pmid 36701517 --title 'transcriptional response lung-targeting lipid nanoparticles' --author Dahlman returned 0 relevant candidates (the only hits were a Google Hash Code dataset repo, matched on a text file, and two unrelated 'transcriptional response lung' repos).",
+      "The article contains NO data-availability statement and NO accession: grep for GSE[0-9]+, 'accession', 'deposit', 'github', 'zenodo', 'dryad' over the Europe PMC fullTextXML (98,120 B) and over the full SI text returns nothing. The single-cell RNA-seq data behind Figures 4 and 5 has no stated deposit.",
+      "SEPARATELY AND IMPORTANTLY: a GEO accession would not be a delivery value even if one existed. The scRNA-seq deposit would hold host-transcriptome count matrices (what lung cells do about the particle), not cargo-expression per LNP."
+    ]
+  },
+  "tier_4_pdfplumber_text_table": {
+    "status": "not applicable",
+    "evidence": "No page of the SI or of the article XML carries a text-layer table. Every numeral that matters is baked into a flattened raster."
+  },
+  "tier_5_pixels": {
+    "status": "THE ONLY ROUTE for every bar value in this paper",
+    "why_1_to_4_failed": "Tier 1: the publisher deposited one PDF and no data file (verified against the EPMC supplementaryFiles zip, which is the publisher's own deposit). Tier 2: that PDF contains no table object and no text-layer numerals inside any figure. Tier 3: no repository and no accession is named anywhere in the article or SI, and find_repo.py found none. Tier 4: there is no text table to parse.",
+    "native_dpi_measured": {
+      "method": "image_width_px / image_rect_width_pt * 72, per embedded raster",
+      "SI_p8_FigS1": 220.2,
+      "SI_p9_FigS2a": 220.2,
+      "SI_p10_FigS2b": 219.8,
+      "SI_p11_FigS2c": 220.0,
+      "SI_p24_FigS13a_b": 220.15,
+      "SI_p25_FigS13c": 220.1,
+      "SI_p26_FigS14": 220.0,
+      "SI_p27_FigS15": 219.8,
+      "SI_p30_FigS17": 220.2,
+      "vector_paths_on_those_pages": 0,
+      "consequence": "curation/lib/axis.py's LOO_TOL_PX = 1.5 px was written for a 600 dpi render and is ~0.55 of a real pixel here. Tolerances are rescaled with axis.native_tol(..., native_dpi=220) and BOTH figures plus a seeded displacement are recorded in 07_qc.json."
+    },
+    "main_text_figures": {
+      "status": "deliberately NOT used as a value source",
+      "why": "The only main-text figure rasters obtainable without a browser are the publisher's medium-resolution JPEGs served by PMC/Europe PMC (Fig 3 = nl2c04479_0003.jpg, 650 x 935 px). They are standalone JPEGs with no page rect, so their native dpi CANNOT be measured by the px/pt rule and axis.native_tol REFUSES a guessed dpi. Every value in main-text Figure 3b is also present, raw and with its PBS control, in Supplementary Figure 13a at a measured 220 dpi, so nothing is lost. The ACS article PDF would need a browser session, which this curation is not permitted to open.",
+      "used_for": "reading labels, printed physicochemical numerals and panel structure only -- never for a digitised value."
+    },
+    "panels_digitised": [
+      {"panel": "Fig S13a", "page": 24, "what": "Cat-LNP vs PBS, tdTom+ cells (%), 5 organs x (5,6,5,3,2) cell types"},
+      {"panel": "Fig S13b", "page": 24, "what": "Neu-LNP vs PBS, same layout"},
+      {"panel": "Fig S13c", "page": 25, "what": "An-LNP vs PBS, same layout"},
+      {"panel": "Fig S15b", "page": 27, "what": "Neu-LNP, tdTom+ above background, lung/liver/heart -- used as an INDEPENDENT CROSS-CHECK of S13b, not as a value source"},
+      {"panel": "Fig S15d", "page": 27, "what": "An-LNP, tdTom+ above background -- cross-check of S13c"}
+    ]
+  },
+  "printed_numerals_used_directly": {
+    "tier": "2-equivalent (printed in a raster, read by eye at 2x, each one cross-checked)",
+    "items": [
+      "Fig S1 molar-ratio table: four columns (60/26/2/12, 50/35/2.5/12.5, 35/18/2.5/44.5, 20/50/2.5/27.5)",
+      "Fig 3a Cat-LNP: Diam 106, PDI 0.20, pKa 7.7, Zeta 1.81, Encap Eff 94.7; pie labels 35 / 18 / 44.5",
+      "Fig S15a Neu-LNP: Diam 87, PDI 0.22, pKa 5.8, Zeta 0.04, Encap Eff 73.7; pie labels 20 / 50 / 27.5",
+      "Fig S15c An-LNP: Diam 150, PDI 0.30, pKa 5.9, Zeta -18.6, Encap Eff 53.1; pie labels 60 / 26 / 12",
+      "Fig S2 a/b/c: the 18 helper-lipid names, charges and IDs (C1-C3, N1-N8, A1-A7)"
+    ],
+    "note": "None of these is a delivery value. They fix the formulations and the particle characterisation."
+  },
+  "written_before_any_digitiser": true,
+  "written_utc": "2026-11-10"
+}

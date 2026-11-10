@@ -1,0 +1,245 @@
+{
+  "paper": {
+    "title_published": "A Combinatorial Library of Lipid Nanoparticles for RNA Delivery to Leukocytes",
+    "title_on_si_body_page2": "A Combinatorial Library of Lipid Nanoparticles for RNAi Delivery to Leukocytes",
+    "title_verified_against": [
+      "SI p.1 Wiley cover sheet (authoritative for the published record)",
+      "NCBI esummary db=pubmed id=31999380 retrieved 2026-11-10 (HTTP 200): 'A Combinatorial Library of Lipid Nanoparticles for RNA Delivery to Leukocytes.'"
+    ],
+    "title_truncation_check": "The briefing title was truncated at 'for RNA Delivery...'. The hidden tail is 'to Leukocytes', which IS the endpoint qualifier: the biological system is primary leukocytes / T lymphocytes and a multiple-myeloma B-cell line (U266), NOT hepatocytes. Recorded because two sibling curations today were briefed from truncated tracker titles.",
+    "journal": "Advanced Materials 32, e1906128 (2020 Mar)",
+    "pmid": "31999380",
+    "doi": "10.1002/adma.201906128",
+    "authors_first_last": "Srinivas Ramishetti ... Dan Peer (Tel Aviv University)",
+    "proposed_experiment_id": "SR_2020",
+    "note_on_experiment_id": "NOT YET ALLOCATED. Nothing is merged. SR_2020 does not collide with any of the 43 vitro / 20 vivo Experiment_IDs now in data/."
+  },
+  "endpoint": {
+    "what_the_paper_measures": "siRNA (RNAi) delivery to leukocytes, read out in the main text as gene silencing and in the SI as (a) in vivo CD45 silencing in T lymphocytes, (b) U266 cell viability after siPLK1 vs control siRNA, (c) Cy5 organ biodistribution, (d) TNS apparent-pKa titration, (e) blood-count and serum-chemistry toxicology.",
+    "cargo": "siRNA (siPLK1 therapeutic, siNC/siCon negative control, siCD45 in vivo, Cy5-siRNA for biodistribution)",
+    "corpus_admissible_readouts_present_in_SI": [
+      "Figure S9 only"
+    ],
+    "why": "data/ Experiment_method vocabulary is delivery-only: luminescence_normalized, luminescence_discretized_normalized, LRP6_knockdown_normalized, protein_adundance_normalized, editing_efficiency_normalized, luminescence_relative_to_Spikevax. Cell viability, Cy5 biodistribution, TNS fluorescence, CBC and serum chemistry are none of these."
+  },
+  "acquisition": {
+    "files_present": [
+      {
+        "path": "source/adma201906128-sup-0001-SuppMat.pdf",
+        "bytes": 3171894,
+        "pages": 48,
+        "producer": "itext-paulo-155 via pdftk 2.02",
+        "creationDate": "D:20200130022956+05'30'"
+      }
+    ],
+    "files_ABSENT": [
+      "the main article PDF (adma.201906128). The combinatorial library SCREEN -- i.e. which of the lipids actually delivers RNA to leukocytes, and how well -- is in main-text Figures 1-4, which are not in source/ and were not acquired."
+    ],
+    "tier_1_publisher_source_data": "ABSENT. Wiley adma.201906128 has exactly one supplementary deposit, sup-0001-SuppMat.pdf. No .xlsx / .csv / Source Data file exists for this DOI.",
+    "tier_2_si_tables": "PRESENT but off-endpoint. Only two tables exist in 48 pages (Table S1 p.47, Table S2 p.48) and both are toxicology, not delivery.",
+    "tier_3_author_repo": "ABSENT, checked two ways on 2026-11-10: (a) provenance/tools/find_repo.py over GitHub code+repo search on the DOI, the PMID, 'Peer lipid nanoparticle', 'Peer LNP', 'combinatorial library lipid' -- 0 relevant hits, the single repo hit was 'Ed13-coder/monero-lnp2pbot', a Telegram bot; (b) NCBI elink dbfrom=pubmed db=pmc id=31999380 returns ONLY linksetdb 'pubmed_pmc_refs' (articles citing this one) and NO 'pubmed_pmc' self-link, so there is no PMC full-text deposit and pmc_fetch.py has no PMCID to take.",
+    "tier_4_pdfplumber_text_table": "PRESENT for Table S1 and Table S2 (see below).",
+    "tier_4b_pdf_vector_geometry": "FAILS for every figure, and the reason is checkable -- see vector_vs_raster_triage."
+  },
+  "vector_vs_raster_triage": {
+    "method": "page.get_drawings() and page.get_images(full=True) on all 48 pages.",
+    "figure_pages_37_to_46": {
+      "get_drawings_items": 0,
+      "images_per_page": "1-2",
+      "filter": "DCTDecode (baseline JPEG) on every figure image except p.45 img 291 which is FlateDecode/Indexed",
+      "verdict": "FLATTENED RASTER. There is not one vector drawing item on any figure page, so there are no filled-rectangle coordinates to read a bar height from. This is the checkable reason tier 4b is unavailable, not an assertion that it was unavailable.",
+      "native_resolutions_px": {
+        "S2_p38": "1367x874",
+        "S3_p39": "1263x840",
+        "S4_p40": "1400x870",
+        "S6_p42": "1168x1004",
+        "S7_p43": "1341x966",
+        "S8+S9_p44": "1321x515 and 782x611"
+      }
+    },
+    "pages_47_48": {
+      "get_drawings_items": [
+        574,
+        691
+      ],
+      "all_items_are": "'re' (filled rectangles) -- these are the TABLE CELL RULES of Table S1 and Table S2, drawn as native vector",
+      "verdict": "Native vector IS present here, but it is table furniture. The table NUMBERS are in the text layer, so the correct tier is 4 (text), not 4b (geometry). Reading cell rectangles would add nothing the text layer does not already give exactly."
+    },
+    "chemical_scheme_pages_3_to_36": {
+      "get_drawings_items": "24-402 per page, item kinds l/c/re",
+      "verdict": "Native vector reaction schemes. These are STRUCTURE drawings, not value drawings. chains.vector_bonds could read bond coordinates off them; that is the path used if structures are digitised from the schemes rather than from the written synthesis."
+    },
+    "pdfplumber_find_tables_measured_2026_11_10": {
+      "pages_1_to_46": 0,
+      "page_47": {
+        "tables": 1,
+        "rows": 12,
+        "cols": 14,
+        "=": "header + 11 data rows; 1 label column + 13 analytes"
+      },
+      "page_48": {
+        "tables": 1,
+        "rows": 12,
+        "cols": 17,
+        "=": "header + 11 data rows; 1 label column + 16 analytes"
+      },
+      "total": 2,
+      "briefing_said": "'0 table-like pages'",
+      "verdict": "THE BRIEFING TRIAGE IS WRONG. pdfplumber.find_tables() returns TWO ruled tables, and their detected geometry (12x14, 12x17) matches the hand count of Table S1 and Table S2 exactly. Both are toxicology, so the gate's conclusion is unchanged, but the triage number that would have sent a curator to pixels for them was not reliable. Checked, not assumed.",
+      "numeric_token_count_measured": 3126,
+      "numeric_token_note": "briefing said 1,745; re.findall(r'\\d+\\.?\\d*') over extract_text() gives 3,126. Different tokeniser, so neither figure is quotable without its definition. The numbers are overwhelmingly NMR shifts, integrals and coupling constants in BODY PROSE on pp.3-36, not tabulated data."
+    }
+  },
+  "panels": [
+    {
+      "id": "Figure S1",
+      "page": 37,
+      "what": "TEM micrographs, lipids 2/6/9/13/14",
+      "tier": "none",
+      "values_extractable": 0,
+      "why": "Images with a 200 nm scale bar. No measured quantity is plotted."
+    },
+    {
+      "id": "Figure S2",
+      "page": 38,
+      "what": "U266 cell viability (%) by XTT, LNPs with NC-siRNA at 0.06 uM, 72 h. 16 bars: UT, MC3, Lipid 1..14.",
+      "readout_as_printed": "U266 cell viability (%)",
+      "tier": "5_pixels",
+      "why_tiers_1_4_fail": "No Source Data for this DOI; the SI contains no table of these values; no repo/PMC; and page 38 has 0 vector drawing items with one DCTDecode JPEG, so there is no bond/rect geometry to read.",
+      "values_extractable": 16,
+      "corpus_admissible": false,
+      "reason_not_admissible": "Cell viability under a NEGATIVE-control siRNA is a safety readout. It measures that the carrier does not kill the cell; it does not measure delivery. No Experiment_method in data/ is a viability assay.",
+      "value_to_this_curation": "It is the ONLY panel in the SI that covers all 14 library members individually, so it is what pins the library size at 14."
+    },
+    {
+      "id": "Figure S3",
+      "page": 39,
+      "what": "U266 cell viability (%) by XTT, siPLK1-LNPs at 0 / 0.012 / 0.03 / 0.06 / 0.12 uM, 72 h. 12 lipids per dose group.",
+      "readout_as_printed": "U266 cell viability (%) vs siPLK1-LNPs (uM)",
+      "tier": "5_pixels",
+      "values_extractable": 60,
+      "corpus_admissible": false,
+      "reason_not_admissible": "The readout is viability, not gene expression. It is a downstream functional CONSEQUENCE of PLK1 silencing, confounded by the carrier's own toxicity -- which is precisely why Figure S4 exists as the dose-matched control.",
+      "hazard": "Legend omits Lipid 8 and Lipid 10. See contradiction C-02."
+    },
+    {
+      "id": "Figure S4",
+      "page": 40,
+      "what": "U266 cell viability (%) by XTT, siCon(=siNC)-LNPs at the same 5 doses, 72 h. Same 12 lipids.",
+      "readout_as_printed": "U266 cell viability (%) vs siCon-LNPs (uM)",
+      "tier": "5_pixels",
+      "values_extractable": 60,
+      "corpus_admissible": false,
+      "reason_not_admissible": "Dose-matched safety control. Same reason as S2.",
+      "hazard": "ITS LEGEND ORDER AND ITS PALETTE BOTH DIFFER FROM FIGURE S3. See contradiction C-01 -- this is the finding that decides whether S3 and S4 can be paired at all."
+    },
+    {
+      "id": "Figure S5",
+      "page": 41,
+      "what": "PI / Annexin-V-APC FACS dot plots, MC3 vs lipid 8 vs lipid 10, siPLK1 vs siNC5, 0.06 uM, 72 h",
+      "tier": "none",
+      "values_extractable": 0,
+      "why": "Dot plots. Quadrant percentages would have to be read as printed glyphs; no axis-calibrated quantity is plotted as a mark whose position encodes a value."
+    },
+    {
+      "id": "Figure S6",
+      "page": 42,
+      "what": "Cy5 biodistribution, lipid 8 and lipid 10 LNPs, 2 h post i.v.; (C) histogram 'Total signal/Area'",
+      "tier": "5_pixels",
+      "values_extractable": "a small number of bars",
+      "corpus_admissible": false,
+      "reason_not_admissible": "Biodistribution = where the particle ACCUMULATES, measured as Cy5 dye signal. It is not functional delivery and data/ carries no biodistribution readout."
+    },
+    {
+      "id": "Figure S7",
+      "page": 43,
+      "what": "Cy5 biodistribution, lipid 2 and lipid 6 LNPs, 2 h and 24 h; (B) lipid 6 liver+spleen, (D) lipid 2 liver+spleen+lung, 'Total signal/Area'",
+      "tier": "5_pixels",
+      "values_extractable": 10,
+      "corpus_admissible": false,
+      "reason_not_admissible": "Same as S6.",
+      "note": "(B) and (D) have DIFFERENT y-axis maxima (400 vs 500) and (D) carries a third organ. Not interchangeable panels."
+    },
+    {
+      "id": "Figure S8",
+      "page": 44,
+      "what": "TNS assay, % fluorescence vs pH 3..9, lipids 2/6/8/10",
+      "tier": "5_pixels",
+      "values_extractable": "4 curves x ~13 pH points",
+      "corpus_admissible": false,
+      "reason_not_admissible": "Physicochemical characterisation (apparent pKa), not a delivery measurement. data/ has no pKa column."
+    },
+    {
+      "id": "Figure S9",
+      "page": 44,
+      "what": "In vivo CD45 gene silencing efficiency, % CD45 silencing, CD4+ and CD8+ T lymphocytes, spleen and lymph node, tLNPs vs Mock. (A) lipid 2-based tLNPs, (B) lipid 6-based tLNPs. n=4, single experiment.",
+      "readout_as_printed": "% CD45 silenicng [sic, misspelled on both y axes]",
+      "tier": "5_pixels",
+      "why_tiers_1_4_fail": "Same as S2; additionally this panel is one of two DCTDecode JPEGs on p.44 and carries 0 vector items.",
+      "values_extractable": "16 box-and-whisker glyphs (2 lipids x 2 organs x 2 subsets x {tLNP, Mock})",
+      "corpus_admissible": "IN KIND YES, IN PRACTICE NO -- see blockers",
+      "blockers": [
+        "ONLY 2 IONIZABLE LIPIDS (2 and 6). A per-experiment z-score over n=2 lipids is degenerate: it is +-1 by construction and carries no rank information. This is the decisive blocker.",
+        "Both are TARGETED LNPs (tLNPs, antibody-decorated), a formulation class the 79-column schema has no field for beyond fifthcomponent_*; the plain-LNP library members are not measured here.",
+        "The glyphs are BOX-AND-WHISKER, not bars. bars.bar_top requires full-width coverage down from a top rule and is documented to refuse on anything that is not a bar reaching its baseline; a box's lower edge floats. Reading a box top/median would need bespoke geometry, which this curation is instructed not to write."
+      ]
+    },
+    {
+      "id": "Figure S10",
+      "page": 45,
+      "what": "Agarose gel, serum stability",
+      "tier": "none",
+      "values_extractable": 0,
+      "why": "Gel image. No numeric scale."
+    },
+    {
+      "id": "Figure S11",
+      "page": 45,
+      "what": "Serum cytokines 2 h and 24 h post i.v., n=5",
+      "tier": "5_pixels",
+      "corpus_admissible": false,
+      "reason_not_admissible": "Immunogenicity, not delivery."
+    },
+    {
+      "id": "Figure S12",
+      "page": 46,
+      "what": "FACS gating strategy for main-text Fig 4D-F",
+      "tier": "none",
+      "values_extractable": 0
+    },
+    {
+      "id": "Table S1",
+      "page": 47,
+      "what": "Complete blood count 2 h and 24 h after 1 mg/kg siRNA i.v. UT + {lipid 2, 6, 8, 10, 13} x {2h, 24h} = 11 rows x 13 analytes (WBC, RBC, HGB, Hemat, MCV, MCH, MCHC, Neut, Lymp, Mono, Eos, Baso, Platelt), each mean +- SD.",
+      "tier": "4_pdfplumber_text",
+      "values_extractable": 143,
+      "corpus_admissible": false,
+      "reason_not_admissible": "Haematology toxicology. Not a delivery readout.",
+      "note": "The caption names lipids '2, 6, 8 and 10' but the table body also carries Lipid 13. See contradiction C-03."
+    },
+    {
+      "id": "Table S2",
+      "page": 48,
+      "what": "Serum chemistry 2 h and 24 h after 1 mg/kg siRNA i.v. UT + {lipid 2, 6, 8, 10, 13} x {2h, 24h} = 11 rows x 16 analytes, each mean +- SD.",
+      "tier": "4_pdfplumber_text",
+      "values_extractable": 176,
+      "corpus_admissible": false,
+      "reason_not_admissible": "Clinical-chemistry toxicology. Not a delivery readout.",
+      "note": "Same caption/body mismatch as Table S1 (C-03)."
+    },
+    {
+      "id": "Synthesis sections",
+      "pages": "3-36",
+      "what": "Full written synthesis + 1H NMR + ESI-MS for Lipids 1-14 and their intermediates.",
+      "tier": "4_pdfplumber_text (prose, not a table)",
+      "values_extractable": "14 lipid structures + 34 ESI-MS m/z anchors",
+      "corpus_admissible": "STRUCTURES yes, VALUES n/a",
+      "note": "This is where the 1,745 numeric tokens mostly live: NMR shifts, integrals, coupling constants, masses, reagent quantities. They are in BODY PROSE, not tables -- pdfplumber.find_tables() returns 0 on every one of pages 1-46, which is consistent with the briefing's '0 table-like pages'."
+    }
+  ],
+  "rollup": {
+    "D_si_only_corpus_admissible_delivery_rows": 0,
+    "the_one_sentence": "This SI contains exactly one delivery-endpoint panel (Figure S9) and it covers 2 ionizable lipids as antibody-targeted LNPs, which cannot be z-scored as an experiment; every other quantitative panel is viability, biodistribution, physicochemistry or toxicology. The combinatorial library SCREEN is in main-text Figures 1-4, which are not in source/.",
+    "what_IS_worth_taking": "The 14 ionizable-lipid STRUCTURES, each with a written synthesis and an ESI-MS anchor. Those are durable, checkable, and independent of whether the values ever arrive."
+  }
+}

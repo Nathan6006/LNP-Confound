@@ -1,0 +1,117 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "paper": {
+  "title": "Combinatorial Screening of Cationic Lipidoids Reveals How Molecular Conformation Affects Membrane-Targeting Antimicrobial Activity",
+  "title_in_brief_was_truncated": "The brief said '...Reveals How Molecular Structure Affects...'. The published title is 'How Molecular CONFORMATION Affects MEMBRANE-TARGETING ANTIMICROBIAL ACTIVITY'. The endpoint of this paper is antibacterial MIC against Bacillus subtilis, not nucleic-acid delivery. See DECISIONS.md D-1.",
+  "authors": "James Jennings, Dunja Ascheric, Enrico Federico Semeraro, Karl Lohner, Nermina Malanovic, Georg Pabst",
+  "affiliation": "Institute of Molecular Biosciences, University of Graz, NAWI Graz, 8010 Graz, Austria",
+  "journal": "ACS Appl. Mater. Interfaces 2023",
+  "doi": "10.1021/acsami.3c05481",
+  "pmid": "37602460",
+  "pmcid": "PMC10472336",
+  "licence": "CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/), read from the <permissions> element of the PMC JATS record: '(c) 2023 The Authors. Published by American Chemical Society ... Permits the broadest form of re-use including for commercial purposes, provided that author attribution and integrity are maintained.' CC-BY is CC0/CC-BY-compatible for the purposes of CLAUDE.md section 8."
+ },
+ "scaffolded": "2026-11-10",
+ "scaffold_note": "This folder was NOT created by provenance/new_curation.py -- it already existed with source/am3c05481_si_001.pdf in place when this curation started, and new_curation.py REFUSES an existing folder. The scaffold's file names, the 00_value_sources.json schema and reference_structures.csv's exact 7-column C10 header were reproduced by hand from provenance/new_curation.py so the gates read them unchanged.",
+ "files": [
+  {
+   "path": "curation/pabst_37602460/source/am3c05481_si_001.pdf",
+   "sha256": "84e754a6796ac91f3fe0a3e0c5f76d8cb1b1d6697f4442e239a27f03434cfe80",
+   "bytes": 2115412,
+   "retrieved_from": "https://pubs.acs.org/doi/suppl/10.1021/acsami.3c05481/suppl_file/am3c05481_si_001.pdf (the URL carried by <supplementary-material> in the PMC JATS record)",
+   "retrieved_utc": "unknown to this agent -- the file was already in source/ at 2026-11-10T05:25Z (filesystem mtime) and was placed there by the main session, not by this agent",
+   "retrieved_by": "main session",
+   "integrity_note": "The PDF's own text layer carries an ACS download watermark on every page naming an institutional subscriber and the date 10 November 2026, which independently corroborates that it came from pubs.acs.org on that date through an institutional session rather than from a mirror.",
+   "licence": "CC-BY 4.0, same as the article (ACS AuthorChoice/open access)."
+  },
+  {
+   "path": "curation/pabst_37602460/source/PMC10472336.jats.xml",
+   "sha256": "e1746d866eabbd846450bd01be93040128a34b7243faba4301cec68cb96b90cf",
+   "bytes": 167498,
+   "retrieved_from": "PMC OA, via provenance tool pmc_fetch.py PMC10472336 (NCBI efetch, db=pmc)",
+   "retrieved_utc": "2026-11-10T06:59Z",
+   "retrieved_by": "this agent, plain HTTP client (no browser)",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_0002.jpg",
+   "sha256": "80f9bcf6ed7e1700ce8031a7e070371928cdbb314f10638887a59ae8c1aac05e",
+   "bytes": 1039656,
+   "pixels": "4183x1847",
+   "is": "Figure 1 (JATS graphic id gr1) -- panel A the building-block scheme, panel B schematics, panel C the 8x13 combinatorial activity dot plot, panels D/E the descriptor scatter plots",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_0002.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl, plain client, no browser",
+   "note": "The first request returned a 21,483-byte HTML error page; the second returned the JPEG. A single failure on this endpoint is a transient rate-limit, not a block -- it was retried, not worked around.",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_0003.jpg",
+   "sha256": "6bf665f01e3e72e0fe10d8f8cc8a5159b3d79fcc2097b5588c0fadc6fe0aebd1",
+   "bytes": 104850,
+   "pixels": "750x335",
+   "is": "Figure 2 (gr2), SAXS traces. Low resolution -- refetched once and byte-stable, so this is the only rendition PMC serves.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_0003.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_0004.jpg",
+   "sha256": "694d1e942229fce0fba831c4a2b5b2e6de205c4cb4c0f8f6ca4ca293b5fb1fec",
+   "bytes": 71907,
+   "pixels": "697x171",
+   "is": "Figure 3 (gr3), PI permeabilisation kinetics. Low resolution.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_0004.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_0005.jpg",
+   "sha256": "b6d75f3ddb62fe7a5f79f0605ceda1ce82eeed776027a9112bed67766fc34bd5",
+   "bytes": 109718,
+   "pixels": "814x631",
+   "is": "Figure 4 (gr4), panel A the 27-member HC50 dot plot. Low resolution; refetched once and byte-stable.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_0005.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_0006.jpg",
+   "sha256": "7bdb070559dea7a936e9e96da13f93eb43cd146db351b013fc6fa97b4b4350d3",
+   "bytes": 1652048,
+   "pixels": "4183x2072",
+   "is": "Figure 5 (gr5), membrane schematics. No values.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_0006.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_0007.jpg",
+   "sha256": "64fe110486ec70497cd9a0619f907f27dfc1fc3db0f7f5b9007d81f912183949",
+   "bytes": 136768,
+   "pixels": "780x366",
+   "is": "Abstract/TOC graphic (ab-tgr1). No values.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_0007.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl",
+   "licence": "CC-BY 4.0"
+  },
+  {
+   "path": "curation/pabst_37602460/source/figs/am3c05481_m001.jpg",
+   "sha256": "1a9a2768f0c11ef7ba52cc23a0a71f9a62e8151d6de2864bad846d5ef91be912",
+   "bytes": 21479,
+   "is": "NOT AN IMAGE. 21,479 bytes of HTML error page; PMC refused this inline-math graphic on three attempts. It is an inline equation glyph and supplies nothing, so it was not retried further. Kept so the failure is visible rather than absent.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10472336/bin/am3c05481_m001.jpg",
+   "retrieved_utc": "2026-11-10T07:01Z",
+   "retrieved_by": "this agent, curl",
+   "licence": "n/a"
+  }
+ ],
+ "not_acquired": {
+  "am3c05481.pdf": "The publisher's own article PDF (JATS self-uri). On pubs.acs.org it sits behind a Cloudflare bot check that this run is forbidden to use a browser against. It was NOT needed: the PMC JATS record carries the complete body text, both main-text tables as structured <table> markup, and every figure caption, which is strictly better than a text layer extracted from a PDF."
+ }
+}

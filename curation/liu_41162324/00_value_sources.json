@@ -1,0 +1,75 @@
+{
+ "_what": "THE INTAKE GATE for curation/liu_41162324. Filled before any digitiser was written. For every panel or table that could supply a value, the tier it would come from and -- where that tier is 5_pixels -- a checkable sentence saying why tiers 1-4 failed. PIPELINE_V2.md section 3: the four curations that digitised panels carry 8 digitisation defects between them; the two that used a publisher workbook or an author repository carry 0.",
+
+ "paper": {
+  "title": "Fluorinated Ionizable Lipids for Efficient Spleen-Targeted mRNA Delivery in Cancer Immunotherapy",
+  "pmid": 41162324,
+  "doi": "10.1021/jacs.5c13982",
+  "journal": "J Am Chem Soc 147(45), November 2025",
+  "material_held": "curation/liu_41162324/source/ja5c13982_si_001.pdf only -- 100 pages. The ARTICLE PDF was not supplied.",
+  "material_not_held": "the article text and every main-text figure, which is where this paper's screen values live"
+ },
+
+ "tier_search": {
+  "1_publisher_source_data": {
+   "result": "none found",
+   "evidence": "The SI's own table of contents (SI PDF p.2) lists one file's contents end to end -- Experimental Procedures, then Figures S1-S60. No data workbook, no Source Data file and no second supplementary item is referenced anywhere in the 100 pages. A direct probe of pubs.acs.org for a second supplementary item was not completed; see 5_pixels.why_tiers_1_to_4_failed."
+  },
+  "2_si_tables": {
+   "result": "none exist",
+   "evidence": "pdfplumber find_tables() over all 100 SI pages returns 0 tables on every page. The SI has no numbered table of any kind; its numeric content is 60 figures, and the figures are embedded rasters."
+  },
+  "3_author_repository": {
+   "result": "none found, and the GitHub code search is INCONCLUSIVE, not negative",
+   "evidence": "tools/find_repo.py, 6 queries. The four repository-name queries ('Liu lipid nanoparticle', 'Liu LNP', 'Fluorinated Ionizable Lipids', 'Fluorinated Ionizable lipid') returned 0 hits each. The two CODE searches -- the ones that would find the DOI or the PMID inside a repository -- both returned HTTP 429 (rate limited) and therefore searched nothing. Recorded as inconclusive on purpose: a rate-limited query that reports zero hits is error class 28 in another costume. Europe PMC: hitCount 1, pmcid null, isOpenAccess N, inEPMC N, hasSuppl N -- so no PMC deposit and no supplementary material there either. The SI's Data Availability is not reproduced in the supplementary file."
+  },
+  "4_pdf_text_table": {
+   "result": "USED, and it is the tier every STRUCTURE in this curation comes from",
+   "evidence": "ja5c13982_si_001.pdf carries a full text layer across sections 1-9. stage01_parse_si.py extracts 42 numbered synthesis records from section 3.2, each with the compound name, the sentence naming its starting material, a molecular formula, a calculated [M+H]+, a found [M+H]+ and a 1H NMR integral list. Nothing structural in this curation is read from pixels.",
+   "limits": "The text layer covers 42 of the 74 library members. The 32 SP-series members have no individual paragraph: section 3.2.2 is three sentences for the whole sub-library."
+  },
+  "5_pixels": {
+   "result": "USED FOR EXACTLY ONE QUANTITY, and that quantity is not a value",
+   "what": "The count of x-axis ticks in Figure S51 (SI PDF p.91), i.e. the number of LNPs the authors drew, and the x-axis labels naming them.",
+   "why_tiers_1_to_4_failed": "The SI never states the size of the library. The string '315' does not occur anywhere in the 100 pages; neither does 'library', 'libraries', 'combinatorial', 'total of' or 'screen' (searched case-insensitively over the full text layer, 0 hits each). The roster therefore exists only as drawn axis labels. This is the 'round number the authors DREW but never printed' that CLAUDE.md section 5 asks for, and it is external to our text parse: it is measured at 75 ticks with pitch CV 0.028, against 74 FILs + SM102 enumerated from the text.",
+   "defect_guard": "The tick counter was seeded -- one tick painted out of the raster -- and the count dropped by exactly 1. See 07_qc.json seeded_mutations."
+  }
+ },
+
+ "every_numeric_SI_panel_and_its_disposition": [
+  {"panel": "Figures S1-S11 (SI pp.43-53)", "content": "1H NMR spectra of intermediates", "endpoint": "none", "emitted": false, "why": "spectra, not a delivery measurement"},
+  {"panel": "Figures S12-S29 (SI pp.54-72)", "content": "1H NMR spectra of 70 named FILs", "endpoint": "none", "emitted": false, "why": "spectra; used only as the roster cross-check that names SPCP members absent from these captions"},
+  {"panel": "Figures S30-S47 (SI pp.73-90)", "content": "ESI-MS of 66 named FILs", "endpoint": "none", "emitted": false, "why": "spectra; the numeric m/z values are printed in the section 3.2 TEXT and were taken from there (tier 4), not from these rasters"},
+  {"panel": "Figure S48 (SI p.90)", "content": "particle size of all FIL LNPs", "endpoint": "hydrodynamic diameter", "emitted": false, "why": "CLAUDE.md section 9 (2026-07-23): the corpus is delivery-only and explicitly excludes diameter, zeta and uptake"},
+  {"panel": "Figure S49 (SI p.90)", "content": "zeta potential", "endpoint": "zeta potential", "emitted": false, "why": "same exclusion"},
+  {"panel": "Figure S50 (SI p.90)", "content": "polydispersity index", "endpoint": "PDI", "emitted": false, "why": "same exclusion"},
+  {"panel": "Figure S51 (SI p.91)", "content": "DC2.4 cell viability, 24 h, 75 bars", "endpoint": "cell viability %", "emitted": false, "why": "a toxicity readout, not delivery. The corpus dropped 90 hemolysis_percent rows for the same reason (CLAUDE.md section 9, 2026-07-23). Used here only for its ROSTER."},
+  {"panel": "Figure S52 (SI p.92)", "content": "rabbit IVIS, SSC6F5 vs SM102", "endpoint": "luciferase, photons/sec/cm2", "emitted": false, "why": "2 lipids, one of them the benchmark SM102. A per-experiment z-score across 2 lipids is degenerate, and CLAUDE.md section 8 flags benchmark-only comparisons as the case that can push cross-lab concordance toward +1 for reasons unrelated to transferable SAR."},
+  {"panel": "Figure S53 (SI p.93)", "content": "IM/SC route comparison, SSC6F5 vs SM102", "endpoint": "luciferase", "emitted": false, "why": "same: 2 lipids, one a benchmark"},
+  {"panel": "Figure S54 (SI p.94)", "content": "30-day storage stability", "endpoint": "size/PDI/zeta", "emitted": false, "why": "excluded endpoint"},
+  {"panel": "Figure S55 (SI p.95)", "content": "serum biochemistry", "endpoint": "ALT/AST etc.", "emitted": false, "why": "safety readout, not delivery"},
+  {"panel": "Figure S56 (SI p.96)", "content": "H&E histology", "endpoint": "none (images)", "emitted": false, "why": "no quantity"},
+  {"panel": "Figure S57 (SI p.97)", "content": "SM102/18PA vs SM102 vs SSC6F5 characterisation", "endpoint": "size/zeta/EE", "emitted": false, "why": "excluded endpoint"},
+  {"panel": "Figure S58 (SI p.98)", "content": "SM102/18PA vs SM102 vs SSC6F5 biodistribution", "endpoint": "luciferase, % per organ", "emitted": false, "why": "3 arms, two of them benchmark formulations of the SAME lipid (SM102 and SM102/18PA). One novel lipid."},
+  {"panel": "Figure S59 (SI p.99)", "content": "anti-Apod antibody blockade", "endpoint": "luciferase", "emitted": false, "why": "a mechanism experiment on one lipid with an antibody pre-treatment; not a lipid screen"},
+  {"panel": "Figure S60 (SI p.100)", "content": "OVA-specific antibody titre ELISA", "endpoint": "antibody titre", "emitted": false, "why": "immunogenicity, not mRNA delivery"}
+ ],
+
+ "conclusion": {
+  "rows_emittable_to_the_corpus": 0,
+  "statement": "The SI carries NO per-lipid delivery measurement. Every numeric SI panel is either an excluded physicochemical/toxicity endpoint or a 2-3 arm in-vivo comparison in which one or two arms are the SM102 benchmark. The 74-member screen's transfection values are in main-text figures that were not supplied. This curation therefore delivers STRUCTURES and the paper's own contradictions, and emits no Experiment_value.",
+  "what_would_change_it": "The article PDF. Tier for any future value extraction would then be reassessed; on the material held, a main-text screen panel would be 5_pixels and would need its own intake-gate entry."
+ },
+
+ "formulation_and_assay_metadata_for_a_future_merge": {
+  "source": "SI section 4 (SI PDF p.39), section 5 (p.39-40), section 6 (p.40-41) -- tier 4, text layer",
+  "LNP_molar_ratio": "FIL : cholesterol : DSPC : PEG-lipid = 50 : 38.5 : 10 : 1.5",
+  "PEG_lipid": "PEG2K-DMG (1,2-dimyristoyl-rac-glycero-3-methoxypolyethylene glycol-2000), AVT Shanghai",
+  "helper": "DSPC",
+  "aqueous_phase": "10 mM citrate buffer pH 4.0; aqueous:ethanol 3:1 microfluidic mixing; dialysed 2 h at 4 C, 14 kDa MWCO",
+  "in_vitro": "DC2.4 (murine dendritic) cells, eGFP mRNA 200 ng/mL, 4 h treatment then 24 h, flow cytometry; cytotoxicity by CCK-8 at 1 ug FIL/well",
+  "in_vivo": "female Balb/c, 6 weeks, n=3, single IV tail vein, FLuc mRNA 0.1 mg/kg, IVIS at 6 h post-injection, D-luciferin 75 mg/kg IP, ex vivo organ signals normalised to organ area (photons/sec/cm2)",
+  "N_to_P": "not stated anywhere in the SI",
+  "benchmark": "SM102 LNP at the same molar ratio"
+ }
+}

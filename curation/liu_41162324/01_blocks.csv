@@ -1,0 +1,19 @@
+block_type,token,smiles,si_name,si_locus,detail
+amine_core,SS,CCCCCCCCC(CCCCCCCC)OC(=O)CCCCCCCNCCO,heptadecan-9-yl 8-((2-hydroxyethyl)amino)octanoate,"SI 3.2.1.1 (SI PDF p.24), reagent sentence",head=2-hydroxyethyl; tail=heptadecan-9-yl octanoate
+amine_core,SP,CCCCCCCC(CCCCCCC)COC(=O)CCCCCCCNCCO,2-heptylnonyl 8-((2-hydroxyethyl)amino)octanoate,SI 3.1.47 heading (SI PDF p.22),head=2-hydroxyethyl; tail=2-heptylnonyl octanoate
+amine_core,AL,CCCCCCCCC(CCCCCC)C(=O)OCCCCCCNCCCCO,6-((4-hydroxybutyl)amino)hexyl 2-hexyldecanoate,"SI 3.2.3.3 (SI PDF p.36), reagent sentence",head=4-hydroxybutyl; tail=hexyl 2-hexyldecanoate
+amine_core,AS,CCCCCCCC(CCCCCCC)C(=O)OCCCCCCNCCCCO,6-((4-hydroxybutyl)amino)hexyl 2-heptylnonanoate,"SI 3.2.3.4 (SI PDF p.36), reagent sentence",head=4-hydroxybutyl; tail=hexyl 2-heptylnonanoate
+fluoroalcohol,F1,OCCCCF,4-fluoro-1-butanol,SI section 1 Materials (SI PDF p.3),n_F=1
+fluoroalcohol,F3,OCCCC(F)(F)F,"4,4,4-trifluoro-1-butanol",SI section 1 Materials (SI PDF p.3),n_F=3
+fluoroalcohol,F5,OCCC(F)(F)C(F)(F)F,"3,3,4,4,4-pentafluorobutan-1-ol",SI section 1 Materials (SI PDF p.3),n_F=5
+fluoroalcohol,F7,OCC(F)(F)C(F)(F)C(F)(F)F,"2,2,3,3,4,4,4-heptafluoro-1-butanol",SI section 1 Materials (SI PDF p.3),n_F=7
+bromide_arm,C3,[CH2:2]CCCCC(=O)OCCCC(=O)O{TAIL},4-(fluoroalkoxy)-4-oxobutyl 6-bromohexanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=3
+bromide_arm,C4,[CH2:2]CCCCC(=O)OCCCCC(=O)O{TAIL},5-(fluoroalkoxy)-5-oxopentyl 6-bromohexanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=4
+bromide_arm,C5,[CH2:2]CCCCC(=O)OCCCCCC(=O)O{TAIL},6-oxo-6-(fluoroalkoxy)hexyl 6-bromohexanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=5
+bromide_arm,C6,[CH2:2]CCCCC(=O)OCCCCCCC(=O)O{TAIL},fluoroalkyl 7-((6-bromohexanoyl)oxy)heptanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=6
+bromide_arm,C7,[CH2:2]CCCCC(=O)OCCCCCCCC(=O)O{TAIL},fluoroalkyl 8-((6-bromohexanoyl)oxy)octanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=7
+bromide_arm,B1,[CH2:2]CCCCC(=O)OC(C)CCCC(=O)O{TAIL},6-oxo-6-(fluoroalkoxy)hexan-2-yl 6-bromohexanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=4
+bromide_arm,B2,[CH2:2]CCCCC(=O)OC(CC)CCCC(=O)O{TAIL},fluoroalkyl 5-((6-bromohexanoyl)oxy)heptanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=4
+bromide_arm,B4,[CH2:2]CCCCC(=O)OC(CCCC)CCCC(=O)O{TAIL},fluoroalkyl 5-((6-bromohexanoyl)oxy)nonanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=4
+bromide_arm,O,[CH2:2]CCCCC(=O)OCCCCOCCC(=O)O{TAIL},4-(3-(fluoroalkoxy)-3-oxopropoxy)butyl 6-bromohexanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=6
+bromide_arm,P,[CH2:2]CCCCC(=O)OCc1ccc(OCCC(=O)O{TAIL})cc1,4-(3-(fluoroalkoxy)-3-oxopropoxy)benzyl 6-bromohexanoate,SI section 3.2 reagent sentences,main_chain_between_carbonyls=7

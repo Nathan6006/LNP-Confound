@@ -1,0 +1,52 @@
+{
+ "bar_width_px": {
+  "max": 25,
+  "median": 25.0,
+  "min": 24
+ },
+ "drawn_reference_line": {
+  "_why": "The authors drew this dashed rule and labelled it 'nominally high potency' without printing a coordinate; the text names 10^8 p/s as the threshold. It is therefore a round number external to this digitiser, and the whole calibration is wrong by exactly the offset recorded here.",
+  "dark_coverage": 0.4453,
+  "nominal": 100000000.0,
+  "offset_decades": -0.00109,
+  "ratio_to_nominal": 0.99748,
+  "row_px": 1443.9,
+  "value_from_calibration": 99748500.0
+ },
+ "figure": "nihms-2006250-f0002.jpg",
+ "image_px": [
+  2100,
+  1983
+ ],
+ "monotone_left_to_right": false,
+ "n_bars_read": 50,
+ "n_labels_transcribed": 51,
+ "n_refusals": 1,
+ "n_x_ticks_detected": 51,
+ "refusals": {
+  "Naked mLuc": "no bar colour above the baseline at this tick (the bar is shorter than 4 px, i.e. its value is at the axis floor)"
+ },
+ "x_tick_gap_px": {
+  "max": 35.968,
+  "median": 35.782,
+  "min": 35.563
+ },
+ "y_axis": {
+  "kind": "log10",
+  "n_ticks": 6,
+  "origin_px": 1243.855,
+  "origin_value": 10000000000.0,
+  "px_per_unit": 99.9678,
+  "tick_fit_residual_px": 0.1195,
+  "tick_residual_tol_px": 2.5,
+  "tick_step_units": -1.0
+ },
+ "y_ticks_px": [
+  1243.817,
+  1343.853,
+  1443.91,
+  1543.64,
+  1643.676,
+  1743.752
+ ]
+}

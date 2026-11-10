@@ -1,0 +1,13 @@
+{
+ "n_joined": 1080,
+ "fitted_slope": 0.6056866563455579,
+ "implied_corpus_sd_1_over_slope": 1.6510187066585755,
+ "sd_of_our_rounded_ln": 1.651018682005893,
+ "max_abs_residual_ln_units": 0.0005334517239345951,
+ "rms_residual_ln_units": 0.0002853140001188986,
+ "expected_rms_for_3dp_rounding": 0.0002886751345948129,
+ "rms_ratio_observed_over_expected": 0.9883566886332901,
+ "rows_above_the_0.0005_bound": 7,
+ "VERDICT": "The corpus's YZ_2022 Experiment_value and this paper's RLU_HepG2 are THE SAME MEASUREMENTS. The entire discrepancy is the repository file's 3-decimal rounding: the rms residual is 2.8531e-04 against the 2.8868e-04 expected for a uniform rounding error on (-0.0005, 0.0005), a ratio of 0.988. The corpus therefore holds these values at HIGHER precision than the repository does, which is a second reason not to re-emit them.",
+ "what_this_is_not": "Not an inference from a correlation. Spearman 1.000000 would survive any monotone rescaling; this pins the magnitude."
+}

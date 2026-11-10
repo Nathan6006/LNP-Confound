@@ -1,0 +1,191 @@
+{
+ "_what": "Stage 07. THE GATE. Every check with numbers; exits non-zero on any failure. Each gate is seeded in 10_seed_checks.py and credited only when its agreement count moves.",
+ "paper": "Li, Wang, Wu, Davidson, Levkin, Bioconjug Chem 2013, 24(9), 1543-1551; PMID 23909648; DOI 10.1021/bc400158w",
+ "endpoint": "average transfection efficiency, percentage of transfected cells, plasmid DNA cargo, lipoplex with DOPE",
+ "value_tier": "4_pdf_text_table -- zero values digitised",
+ "re_derived_structures": [
+  {
+   "label": "1C12-D",
+   "smiles": "CCCCCCCCCCCCN(CCCCCCCCCCCC)CCN1CCCC1",
+   "formula": "C30H62N2",
+   "neutral_exact": 450.4913,
+   "MH_plus": 451.49858,
+   "formula_H": 62
+  },
+  {
+   "label": "1C16-S",
+   "smiles": "CCCCCCCCCCCCCCCCNCCN1CCCC1",
+   "formula": "C22H46N2",
+   "neutral_exact": 338.3661,
+   "MH_plus": 339.37338,
+   "formula_H": 46
+  },
+  {
+   "label": "1C16-D",
+   "smiles": "CCCCCCCCCCCCCCCCN(CCCCCCCCCCCCCCCC)CCN1CCCC1",
+   "formula": "C38H78N2",
+   "neutral_exact": 562.6165,
+   "MH_plus": 563.62378,
+   "formula_H": 78
+  }
+ ],
+ "gates": {
+  "Q-1a_table_geometry": {
+   "pass_": true,
+   "agreement_count": 5,
+   "of": 5,
+   "detail": "87 values; column bands from the DRAWN rules match the declared layout on 5/5 tables; S5 page-break band drift 0.72 pt",
+   "tolerance": null
+  },
+  "Q-1b_S5_dose_blocks": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "Table S5's DNA amount is a MERGED CELL; its glyph sits on row 6 of each 10-row block. The first parser treated it as the block's LAST row and stamped 9 of 30 values with the wrong dose, silently",
+   "tolerance": null
+  },
+  "Q-2_library_shape": {
+   "pass_": true,
+   "agreement_count": 200,
+   "of": 200,
+   "detail": "20 amines x 10 alkyl halides = 200; the tracker says 200. These are 200 CRUDE REACTION PRODUCTS, not 200 structures and not 200 measurements",
+   "tolerance": null
+  },
+  "Q-3_members_are_mixtures": {
+   "pass_": true,
+   "agreement_count": 23,
+   "of": 23,
+   "detail": "every one of the 23 (amine, alkyl) rows in Table S1 reports more than one tail count, up to 6; the screened material is a mono/di/tri/... mixture",
+   "tolerance": null
+  },
+  "Q-4_unprinted_tail_increment": {
+   "pass_": true,
+   "agreement_count": 38,
+   "of": 38,
+   "detail": "consecutive tail steps in the authors' own calc column equal one CnH2n; worst residual 0.0904 Da (amine 20 C7 3->4); their column is printed to 1 dp so two roundings permit +/-0.1",
+   "tolerance": "0.15 Da"
+  },
+  "Q-5a_ours_vs_their_calculated_mz": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "our recomputed [M+H]+ vs the authors' CALCULATED m/z: 1C12-D -0.053 ppm, 1C16-S -0.072 ppm, 1C16-D -0.006 ppm",
+   "tolerance": "5 ppm"
+  },
+  "Q-5b_their_calc_vs_their_observed": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "the authors' own calculated vs observed HRMS: 1C12-D -0.100 mDa, 1C16-S -0.100 mDa, 1C16-D +0.340 mDa",
+   "tolerance": "1 mDa"
+  },
+  "Q-5c_ours_vs_their_observed_mz": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "our recomputed [M+H]+ vs their OBSERVED m/z: 1C12-D -0.275 ppm, 1C16-S -0.367 ppm, 1C16-D +0.597 ppm",
+   "tolerance": "5 ppm"
+  },
+  "Q-5d_unprinted_HRMS_relations": {
+   "pass_": true,
+   "agreement_count": 2,
+   "of": 2,
+   "detail": "1C16-D - 1C16-S = 1 x C16H32: 224.25038 vs 224.25040 (-0.0210 mDa); 1C16-D - 1C12-D = 2 x C4H8: 112.12518 vs 112.12520 (-0.0205 mDa) -- these only close with tail multiplicities 2, 1, 2",
+   "tolerance": "0.1 mDa"
+  },
+  "Q-5e_tableS1_amine1_neutral_masses": {
+   "pass_": true,
+   "agreement_count": 4,
+   "of": 4,
+   "detail": "our neutral exact masses vs Table S1's calc column, residuals [0.0348, -0.0461, 0.0035, -0.0087] Da (amine 1 = 114.1157 Da)",
+   "tolerance": "0.06 Da"
+  },
+  "Q-5f_drawn_molecular_formula": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "our formula vs the formula printed under the structure drawing: 1C12-D C30H62N2 vs C30H62N2, 1C16-S C22H46N2 vs C22H46N2, 1C16-D C38H78N2 vs C38H78N2",
+   "tolerance": null
+  },
+  "Q-5g_drawn_neutral_exact_mass": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "our NEUTRAL exact mass vs the 'Exact Mass' printed under the drawing: 1C12-D -0.0000 mDa, 1C16-S -0.0005 mDa, 1C16-D +0.0005 mDa (the drawing's comma is a decimal separator: 450,49130)",
+   "tolerance": "0.2 mDa"
+  },
+  "Q-5h_drawn_molecular_weight": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "our average molecular weight vs the 'Molecular Weight' printed under the drawing: 1C12-D +0.0133 Da, 1C16-S +0.0100 Da, 1C16-D +0.0167 Da",
+   "tolerance": "0.05 Da"
+  },
+  "Q-6a_1H_figure_integral_sum": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "spectrum integral sum minus formula H count: 1C12-D +1.20 H, 1C16-S -1.55 H, 1C16-D -2.24 H",
+   "tolerance": "3 H"
+  },
+  "Q-6b_1H_text_listing_sum": {
+   "pass_": true,
+   "agreement_count": 2,
+   "of": 3,
+   "detail": "the SI's TEXT listing minus formula H count: 1C12-D -3 H, 1C16-S -1 H, 1C16-D +0 H -- 1C12-D is short by exactly one methyl (it prints 3H where the spectrum integrates 6.38 and C30H62N2 requires 6H). THIS GATE IS EXPECTED TO AGREE ON 2 OF 3: the third is a printing error in the paper, recorded as contradiction C-3, not a structural doubt",
+   "tolerance": "1 H"
+  },
+  "Q-7_unprinted_dose_inference": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "L2K at 75/150/200 ng = ('6.9', '1.7')/('14.0', '1.8')/('22.4', '4.0') (3 distinct); Tables S3, S4, S6 each print ('14.0', '1.8') -- identical to the 150 ng block in mean AND SD. INFERENCE, not a printed fact: recorded as such, dose left as 'not printed' on the rows and queued as DECISIONS.md D-4",
+   "tolerance": null
+  },
+  "Q-8_cross_panel_ratio": {
+   "pass_": true,
+   "agreement_count": 2,
+   "of": 2,
+   "detail": "1C16-S: Table S6 2.0% vs the best Table S5 150 ng cell 0.4% = 5.00x; 1C16-D: Table S6 11.3% vs the best Table S5 150 ng cell 7.0% = 1.61x -- REPORTED, NOT RECONCILED. Table S6 prints no DOPE ratio, so 1C16-S's 5.0x gap may be a formulation this curation cannot identify. The 29 emitted rows keep each panel's own value and name its table on the row; nothing is averaged across panels. DECISIONS.md D-6",
+   "tolerance": null
+  },
+  "Q-12_drawn_bond_geometry": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "drawn filled bond objects vs heavy bonds + double bonds (kekulised): 1C12-D 32=32, 1C16-S 24=24, 1C16-D 40=40; chains.vector_bonds(include_filled=True) returns exactly 2.0 segments per bond on all three pages (stroked mode returns 0 -- the bonds are filled outlines), and no glyph separation was needed because every glyph on these pages is a bitmap image rather than a path",
+   "tolerance": null
+  },
+  "Q-9_corpus_overlap": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "0 of 3 structures are in the corpus by FULL InChIKey and 0 by skeleton block, over 19919 unique corpus IL_SMILES; 0 IL_name collisions. But the amine-1 head substructure appears on 638 corpus rows across 5 experiments (KZ_2016, YX_2024, YR_2024, XH_2025, YX_2026_SDL), on far more elaborate ester/amide lipids -- the head is not novel, these compounds are absent",
+   "tolerance": null
+  },
+  "Q-10_emission_reconciliation": {
+   "pass_": true,
+   "agreement_count": 29,
+   "of": 29,
+   "detail": "29 emitted + 58 skipped = 87 values; confidence {'high': 29}; rows_with_a_caveat 1",
+   "tolerance": null
+  },
+  "Q-11_two_build_routes_agree": {
+   "pass_": true,
+   "agreement_count": 3,
+   "of": 3,
+   "detail": "stage03's atom-mapped assemble.attach build and this file's independent string-composition re-derivation give identical canonical SMILES for all three compounds",
+   "tolerance": null
+  },
+  "Q-13_C10_anchor_match_and_independence": {
+   "pass_": true,
+   "agreement_count": 6,
+   "of": 6,
+   "detail": "1C12-D match=Y template!=enumeration=Y; 1C16-S match=Y template!=enumeration=Y; 1C16-D match=Y template!=enumeration=Y -- the generator's HEAD-FIRST template (e.g. 'C1CCCN1CCN(CCCCCCCCCCCC)CCCCCCCCCCCC') is byte-different from the enumeration's canonical SMILES ('CCCCCCCCCCCCN(CCCCCCCCCCCC)CCN1CCCC1') for all three, and all three canonicalise to the same molecule",
+   "tolerance": null
+  }
+ },
+ "n_gates": 22,
+ "n_failed": 0,
+ "failures": []
+}

@@ -1,0 +1,483 @@
+{
+ "SSC3F1": {
+  "label": "SSC3F1",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SSC4F1": {
+  "label": "SSC4F1",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SSC5F1": {
+  "label": "SSC5F1",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SSC6F1": {
+  "label": "SSC6F1",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SSC3F3": {
+  "label": "SSC3F3",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SSC4F3": {
+  "label": "SSC4F3",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SSC5F3": {
+  "label": "SSC5F3",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SSC6F3": {
+  "label": "SSC6F3",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SSC3F5": {
+  "label": "SSC3F5",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SSC4F5": {
+  "label": "SSC4F5",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SSC5F5": {
+  "label": "SSC5F5",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SSC6F5": {
+  "label": "SSC6F5",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SSC3F7": {
+  "label": "SSC3F7",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SSC4F7": {
+  "label": "SSC4F7",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SSC5F7": {
+  "label": "SSC5F7",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SSC6F7": {
+  "label": "SSC6F7",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SSCOF1": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SSCOF3": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SSCOF5": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SSCOF7": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SSCPF1": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SSCPF3": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SSCPF5": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SSCPF7": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SSCB2F1": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB2F3": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB2F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB2F7": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB4F1": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB4F3": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB4F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSCB4F7": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPC3F1": {
+  "label": "SPC3F1",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SPC4F1": {
+  "label": "SPC4F1",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SPC5F1": {
+  "label": "SPC5F1",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SPC6F1": {
+  "label": "SPC6F1",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SPC3F3": {
+  "label": "SPC3F3",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SPC4F3": {
+  "label": "SPC4F3",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SPC5F3": {
+  "label": "SPC5F3",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SPC6F3": {
+  "label": "SPC6F3",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SPC3F5": {
+  "label": "SPC3F5",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SPC4F5": {
+  "label": "SPC4F5",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SPC5F5": {
+  "label": "SPC5F5",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SPC6F5": {
+  "label": "SPC6F5",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SPC3F7": {
+  "label": "SPC3F7",
+  "name_token_length": 3,
+  "measured_length": 3,
+  "matches": true,
+  "note": ""
+ },
+ "SPC4F7": {
+  "label": "SPC4F7",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "SPC5F7": {
+  "label": "SPC5F7",
+  "name_token_length": 5,
+  "measured_length": 5,
+  "matches": true,
+  "note": ""
+ },
+ "SPC6F7": {
+  "label": "SPC6F7",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "SPCOF1": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SPCOF3": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SPCOF5": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SPCOF7": {
+  "name_token_length": null,
+  "measured_length": 6,
+  "matches": null,
+  "note": "token 'O' is not a chain length: an ether-containing linker"
+ },
+ "SPCPF1": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SPCPF3": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SPCPF5": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SPCPF7": {
+  "name_token_length": null,
+  "measured_length": 7,
+  "matches": null,
+  "note": "token 'P' is not a chain length: a benzylic/para-phenylene linker"
+ },
+ "SPCB2F1": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB2F3": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB2F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB2F7": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB4F1": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB4F3": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB4F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SPCB4F7": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B4' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "SSC7F5": {
+  "label": "SSC7F5",
+  "name_token_length": 7,
+  "measured_length": 7,
+  "matches": true,
+  "note": ""
+ },
+ "SSCB1F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B1' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "ALC4F3": {
+  "label": "ALC4F3",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "ASC4F3": {
+  "label": "ASC4F3",
+  "name_token_length": 4,
+  "measured_length": 4,
+  "matches": true,
+  "note": ""
+ },
+ "ALC6F5": {
+  "label": "ALC6F5",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "ASC6F5": {
+  "label": "ASC6F5",
+  "name_token_length": 6,
+  "measured_length": 6,
+  "matches": true,
+  "note": ""
+ },
+ "ALCB1F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B1' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "ALCB2F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "ASCB1F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B1' is not a chain length: a branch size at the N-side ester carbon"
+ },
+ "ASCB2F5": {
+  "name_token_length": null,
+  "measured_length": 4,
+  "matches": null,
+  "note": "token 'B2' is not a chain length: a branch size at the N-side ester carbon"
+ }
+}

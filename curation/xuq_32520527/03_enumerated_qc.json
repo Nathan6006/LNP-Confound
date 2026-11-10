@@ -1,0 +1,387 @@
+{
+ "_what": "stage 03 QC for XQ_2020. The regiochemistry question is answered by exhaustive enumeration, not by a choice.",
+ "arm_fragment": {
+  "route_A_reduce_O16CBA": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)C[CH3:2])CO2)c(OC)c1",
+  "route_B_esterify_onto_HexDMBAH": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)C[CH3:2])CO2)c(OC)c1",
+  "agree": true,
+  "formula_unmapped": "C23H36O7",
+  "why_two_routes": "curation/lib/chains.py's rule -- two independent methods must agree or it raises -- applied to a fragment instead of a chain. The run brief's named failure mode is a sibling that built acyl fragments by string surgery on a canonical SMILES and mislocated every ester with both HRMS anchors still passing."
+ },
+ "acetal_regiochemistry": {
+  "the_question": "A cyclic benzylidene acetal's ring is closed by TWO diol oxygens. 1,1,1-tris(hydroxymethyl)ethane has THREE CH2OH groups, so there are three pairings. Molecular formula cannot tell them apart.",
+  "symmetry_ranks_of_the_three_oxygens": [
+   1,
+   1,
+   1
+  ],
+  "all_three_equivalent": true,
+  "conclusion": "All three CH2OH groups of 1,1,1-tris(hydroxymethyl)ethane are related by the molecule's own symmetry (identical canonical rank with breakTies=False), so all three pairings give ONE constitution: 2-aryl-5-methyl-5-(hydroxymethyl)-1,3-dioxane. There is no regiochemical choice to make and nothing to flag. This is PROVED here rather than asserted, because the run brief names acetal regiochemistry as a trap.",
+  "what_this_does_NOT_settle": "the cis/trans relationship between the C2 aryl group and the C5 substituents. That is stereochemistry, not constitution, and it is open: see DECISIONS.md D-2."
+ },
+ "o16cba_rebuilt_from_HexDMBAH_plus_acrylic_acid": {
+  "rebuilt": "C=CC(=O)OCC1(C)COC(c2c(OC)cc(OCCCCCC)cc2OC)OC1",
+  "stage01_hand_written": "C=CC(=O)OCC1(C)COC(c2c(OC)cc(OCCCCCC)cc2OC)OC1",
+  "match": true
+ },
+ "members": [
+  {
+   "id": "75",
+   "lipidoid": "75-O16CBA",
+   "head_block": "75",
+   "head_SMILES": "CCN(CC)CCN",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCN(CC)CC)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C52H84N2O14",
+   "their_formula_MplusH": "C52H85N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 961.5995,
+   "their_calculated_mz": 961.6,
+   "their_observed_mz": 961.64,
+   "d_ours_vs_their_calc": -0.0005,
+   "d_their_calc_vs_their_obs": -0.04,
+   "d_ours_vs_their_obs": -0.0405,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    31,
+    35
+   ]
+  },
+  {
+   "id": "76",
+   "lipidoid": "76-O16CBA",
+   "head_block": "76",
+   "head_SMILES": "NCCN1CCCC1",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCN3CCCC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C52H82N2O14",
+   "their_formula_MplusH": "C52H83N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 959.5839,
+   "their_calculated_mz": 959.58,
+   "their_observed_mz": 959.73,
+   "d_ours_vs_their_calc": 0.0039,
+   "d_their_calc_vs_their_obs": -0.15,
+   "d_ours_vs_their_obs": -0.1461,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    31,
+    35
+   ]
+  },
+  {
+   "id": "77",
+   "lipidoid": "77-O16CBA",
+   "head_block": "77",
+   "head_SMILES": "CN1CCCC1CCN",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCC3CCCN3C)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C53H84N2O14",
+   "their_formula_MplusH": "C53H85N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 973.5995,
+   "their_calculated_mz": 973.6,
+   "their_observed_mz": 973.73,
+   "d_ours_vs_their_calc": -0.0005,
+   "d_their_calc_vs_their_obs": -0.13,
+   "d_ours_vs_their_obs": -0.1305,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    31,
+    35,
+    57
+   ]
+  },
+  {
+   "id": "78",
+   "lipidoid": "78-O16CBA",
+   "head_block": "78",
+   "head_SMILES": "CN(C)CCN",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCN(C)C)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C50H80N2O14",
+   "their_formula_MplusH": "C50H81N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 933.5682,
+   "their_calculated_mz": 933.57,
+   "their_observed_mz": 933.64,
+   "d_ours_vs_their_calc": -0.0018,
+   "d_their_calc_vs_their_obs": -0.07,
+   "d_ours_vs_their_obs": -0.0718,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    31,
+    35
+   ]
+  },
+  {
+   "id": "80",
+   "lipidoid": "80-O16CBA",
+   "head_block": "80",
+   "head_SMILES": "CN(C)CCCN",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCCN(C)C)CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C51H82N2O14",
+   "their_formula_MplusH": "C51H83N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 947.5839,
+   "their_calculated_mz": 947.58,
+   "their_observed_mz": 947.64,
+   "d_ours_vs_their_calc": 0.0039,
+   "d_their_calc_vs_their_obs": -0.06,
+   "d_ours_vs_their_obs": -0.0561,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    37,
+    41
+   ]
+  },
+  {
+   "id": "81",
+   "lipidoid": "81-O16CBA",
+   "head_block": "81",
+   "head_SMILES": "CCN(CC)CCCN",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCCN(CC)CC)CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C53H86N2O14",
+   "their_formula_MplusH": "C53H87N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 975.6152,
+   "their_calculated_mz": 975.62,
+   "their_observed_mz": 975.73,
+   "d_ours_vs_their_calc": -0.0048,
+   "d_their_calc_vs_their_obs": -0.11,
+   "d_ours_vs_their_obs": -0.1148,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    39,
+    43
+   ]
+  },
+  {
+   "id": "82",
+   "lipidoid": "82-O16CBA",
+   "head_block": "82",
+   "head_SMILES": "NCCN1CCCCC1",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCN3CCCCC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C53H84N2O14",
+   "their_formula_MplusH": "C53H85N2O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 973.5995,
+   "their_calculated_mz": 973.6,
+   "their_observed_mz": 973.73,
+   "d_ours_vs_their_calc": -0.0005,
+   "d_their_calc_vs_their_obs": -0.13,
+   "d_ours_vs_their_obs": -0.1305,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    31,
+    35
+   ]
+  },
+  {
+   "id": "93",
+   "lipidoid": "93-O16CBA",
+   "head_block": "93",
+   "head_SMILES": "NCCCn1ccnc1",
+   "n_arms_from_printed_formula": 2,
+   "n_michael_slots_on_head": 2,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCCn3ccnc3)CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C52H79N3O14",
+   "their_formula_MplusH": "C52H80N3O14",
+   "formula_agrees": true,
+   "our_mz_MplusH": 970.5635,
+   "their_calculated_mz": 970.56,
+   "their_observed_mz": 970.64,
+   "d_ours_vs_their_calc": 0.0035,
+   "d_their_calc_vs_their_obs": -0.08,
+   "d_ours_vs_their_obs": -0.0765,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    39,
+    43
+   ]
+  },
+  {
+   "id": "113",
+   "lipidoid": "113-O16CBA",
+   "head_block": "113",
+   "head_SMILES": "CN(CCN)CCN",
+   "n_arms_from_printed_formula": 3,
+   "n_michael_slots_on_head": 4,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    2,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCNCCN(C)CCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C74H117N3O21",
+   "their_formula_MplusH": "C74H118N3O21",
+   "formula_agrees": true,
+   "our_mz_MplusH": 1384.8252,
+   "their_calculated_mz": 1384.83,
+   "their_observed_mz": 1384.91,
+   "d_ours_vs_their_calc": -0.0048,
+   "d_their_calc_vs_their_obs": -0.08,
+   "d_ours_vs_their_obs": -0.0848,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    38,
+    42,
+    68,
+    72
+   ]
+  },
+  {
+   "id": "306",
+   "lipidoid": "306-O16CBA",
+   "head_block": "306",
+   "head_SMILES": "CN(CCCN)CCCN",
+   "n_arms_from_printed_formula": 3,
+   "n_michael_slots_on_head": 4,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    1,
+    2,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCNCCCN(C)CCCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C76H121N3O21",
+   "their_formula_MplusH": "C76H122N3O21",
+   "formula_agrees": true,
+   "our_mz_MplusH": 1412.8565,
+   "their_calculated_mz": 1412.86,
+   "their_observed_mz": 1412.82,
+   "d_ours_vs_their_calc": -0.0035,
+   "d_their_calc_vs_their_obs": 0.04,
+   "d_ours_vs_their_obs": 0.0365,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    40,
+    44,
+    70,
+    74
+   ]
+  },
+  {
+   "id": "400",
+   "lipidoid": "400-O16CBA",
+   "head_block": "400",
+   "head_SMILES": "CN(C)CCCNCCCN",
+   "n_arms_from_printed_formula": 3,
+   "n_michael_slots_on_head": 3,
+   "n_distinct_products": 1,
+   "products_per_step": [
+    2,
+    2,
+    1
+   ],
+   "constitution_forced": true,
+   "SMILES": "CCCCCCOc1cc(OC)c(C2OCC(C)(COC(=O)CCN(CCCN(C)C)CCCN(CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CCC(=O)OCC3(C)COC(c4c(OC)cc(OCCCCCC)cc4OC)OC3)CO2)c(OC)c1",
+   "alternatives": [],
+   "our_formula_neutral": "C77H123N3O21",
+   "their_formula_MplusH": "C77H124N3O21",
+   "formula_agrees": true,
+   "our_mz_MplusH": 1426.8722,
+   "their_calculated_mz": 1426.87,
+   "their_observed_mz": 1426.91,
+   "d_ours_vs_their_calc": 0.0022,
+   "d_their_calc_vs_their_obs": -0.04,
+   "d_ours_vs_their_obs": -0.0378,
+   "stereo_unspecified_centres": [
+    13,
+    16,
+    41,
+    45,
+    71,
+    75
+   ]
+  }
+ ],
+ "summary": {
+  "n_distinct_ionizable_structures": 11,
+  "all_constitutions_forced": true,
+  "n_with_positional_ambiguity": 0,
+  "the_result": "Every one of the eleven lipidoids has EXACTLY ONE constitution consistent with its printed formula. For the three-armed members this is not luck: 113 and 306 are symmetric about their central tertiary nitrogen, so the only way to place three arms on two primary nitrogens is two-plus-one and the two choices are the same molecule; 400 has exactly three N-H slots, so three arms fill all of them. The enumeration proves this rather than assuming it.",
+  "n_distinct_canonical_SMILES": 11,
+  "note_on_77_and_82": "77-O16CBA and 82-O16CBA share the molecular formula C53H84N2O14 and the same calculated and observed m/z (973.60 / 973.73) in Figure 2F. They are constitutional isomers and their SMILES differ. An internal consistency win for the table, and a reminder that mass cannot see connectivity."
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "_what": "corpus overlap for PMID 36701517",
+ "ambiguous_names_in_corpus_n": 293,
+ "excipients_in_corpus": {
+  "C14-PEG2000": {
+   "smiles": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+  },
+  "C14PEG2000": {
+   "unavailable": "corpus_components.smi('C14PEG2000'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "Cholesterol": {
+   "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C"
+  },
+  "DMG-PEG2000": {
+   "smiles": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+  },
+  "DOPE": {
+   "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[NH3+])OC(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  "DOTAP": {
+   "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCC(C[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  "DSPC": {
+   "smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC"
+  }
+ },
+ "excipients_in_paper": {
+  "helper_lipids_of_the_three_lead_LNPs": [
+   "18:0 DDAB (Cat-LNP)",
+   "DSPC = 18:0 PC (Neu-LNP)",
+   "18:1 PA (An-LNP)"
+  ],
+  "peg_lipid_of_all_three_lead_LNPs": "C14PEG2000",
+  "peg_lipids_used_in_the_screen": [
+   "C14PEG2K",
+   "C18PEG2K"
+  ],
+  "sterol": "cholesterol"
+ },
+ "ionizable_lipid": {
+  "corpus_hits": {
+   "IL_name_exact": {
+    "vitro:AC_2025": 216
+   },
+   "full_inchikey": {
+    "vitro:AC_2025": 216,
+    "vitro:JW_2024": 19,
+    "vivo:BL_2023": 6
+   },
+   "skeleton": {}
+  },
+  "distinct_corpus_IL_SMILES": 19919,
+  "full_inchikey_matches": {
+   "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC": [
+    "vitro:AC_2025",
+    "vitro:JW_2024",
+    "vivo:BL_2023"
+   ]
+  },
+  "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+  "n_distinct_ionizable_lipids_in_paper": 1,
+  "paper_name": "cKK-E12",
+  "paper_source": "purchased from Organix Inc., catalogue O-8744 (SI Materials, Nanoparticle Formulation)",
+  "skeleton": "ZISVTYVLWSZJAL",
+  "skeleton_key_matches": {
+   "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC": [
+    "vitro:AC_2025",
+    "vitro:JW_2024",
+    "vivo:BL_2023"
+   ]
+  },
+  "smiles": "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC",
+  "stereochemistry": "the corpus string carries NO stereocentres. cKK-E12 is built from a lysine-derived diketopiperazine and the real compound has two defined alpha carbons, so the stored structure is the flat skeleton, not the drawn stereoisomer.",
+  "structure_source": "curation/corpus_components.py guarded lookup of the corpus name 'CKK-E12'; the paper draws no structure for it anywhere"
+ },
+ "near_miss_superset": {
+  "_honesty": "SMARTS substructure hits are a SUPERSET of real matches. A sibling curation's loose SMARTS gave 19 hits of which strict atom-by-atom checking left 0.",
+  "after_strict_skeleton_key": {
+   "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC": [
+    "vitro:AC_2025",
+    "vitro:JW_2024",
+    "vivo:BL_2023"
+   ]
+  },
+  "after_strict_skeleton_key_n": 1,
+  "smarts": [
+   "O=C1NCC(=O)NC1",
+   "O=C1[#6][#7][#6](=O)[#6][#7]1"
+  ],
+  "superset": {
+   "CC(C)CCCCCOC(=O)CC(NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCCCCCC(C)C)C(=O)OCCCCCC(C)C)NC1=O)C(=O)OCCCCCC(C)C": [
+    "vitro:XH_2025"
+   ],
+   "CCCCC(CC)COC(=O)CC(NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OCC(CC)CCCC)NC1=O)C(=O)OCC(CC)CCCC": [
+    "vitro:XH_2025"
+   ],
+   "CCCCC/C=C\\C/C=C\\CCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)NC1=O)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC": [
+    "vivo:LL_2025"
+   ],
+   "CCCCC/C=C\\C/C=C\\CCCCCCC(O)CN(CCCCC1NC(=O)C(CCCC[N+](CCC(=O)O[C@H]2CC[C@@]3(C)C(=CC[C@H]4[C@@H]5CC[C@H]([C@H](C)CCCC(C)C)[C@@]5(C)CC[C@@H]43)C2)(CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)NC1=O)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC": [
+    "vivo:ZT_2026"
+   ],
+   "CCCCC/C=C\\C/C=C\\CCCCCCC(O)CN(CCCCC1NC(=O)C(CCCC[N+](CCCCC(=O)O[C@H]2CC[C@@]3(C)C(=CC[C@H]4[C@@H]5CC[C@H]([C@H](C)CCCC(C)C)[C@@]5(C)CC[C@@H]43)C2)(CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)NC1=O)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC": [
+    "vivo:ZT_2026"
+   ],
+   "CCCCC/C=C\\C/C=C\\CCCCCCC(O)CN(CCCCC1NC(=O)C(CCCC[N+](CCCCCCC(=O)O[C@H]2CC[C@@]3(C)C(=CC[C@H]4[C@@H]5CC[C@H]([C@H](C)CCCC(C)C)[C@@]5(C)CC[C@@H]43)C2)(CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC)NC1=O)CC(O)CCCCCC/C=C\\C/C=C\\CCCCC": [
+    "vivo:ZT_2026"
+   ],
+   "CCCCC/C=C\\C/C=C\\CCCCCCCCOC(=O)C(CC(=O)OCC(CC)CCCC)NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OCCCCCCCC/C=C\\C/C=C\\CCCCC)NC1=O": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCC(CC)OC(=O)C(CC(=O)OCC(CC)CCCC)NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OC(CC)CCCCCCCC)NC1=O": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCC(CCCCCCCC)OC(=O)C(CC(=O)OCC(CC)CCCC)NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OC(CCCCCCCC)CCCCCCCC)NC1=O": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCCCC(C)OC(=O)C(CC(=O)OCC(CC)CCCC)NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OC(C)CCCCCCCCCC)NC1=O": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCCCC(CCCCCCCC)COC(=O)C(CC(=O)OCC(CC)CCCC)NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OCC(CCCCCCCC)CCCCCCCCCC)NC1=O": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCCCC(CCCCCCCCCC)OC(=O)C(CC(=O)OCC(CC)CCCC)NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCC(CC)CCCC)C(=O)OC(CCCCCCCCCC)CCCCCCCCCC)NC1=O": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC": [
+    "vitro:AC_2025",
+    "vitro:JW_2024",
+    "vivo:BL_2023"
+   ],
+   "CCCCCCCCCCCCSCN(CCCCC1NC(=O)C(CCCCN(CSCCCCCCCCCCCC)CSCCCCCCCCCCCC)NC1=O)CSCCCCCCCCCCCC": [
+    "vitro:NG_2025"
+   ],
+   "CCCCCCCCCCSCN(CCCCC1NC(=O)C(CCCCN(CSCCCCCCCCCC)CSCCCCCCCCCC)NC1=O)CSCCCCCCCCCC": [
+    "vitro:NG_2025"
+   ],
+   "CCCCCCCCCc1ccc(O)c(CN(CCCCC2NC(=O)C(CCCCN(Cc3cc(CCCCCCCCC)ccc3O)Cc3cc(CCCCCCCCC)ccc3O)NC2=O)Cc2cc(CCCCCCCCC)ccc2O)c1": [
+    "vitro:NG_2025",
+    "vivo:NG_2025_2"
+   ],
+   "CCCCCCCCOC(=O)CC(NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCCCCCCCC)C(=O)OCCCCCCCC)NC1=O)C(=O)OCCCCCCCC": [
+    "vitro:XH_2025"
+   ],
+   "CCCCCCCCSCN(CCCCC1NC(=O)C(CCCCN(CSCCCCCCCC)CSCCCCCCCC)NC1=O)CSCCCCCCCC": [
+    "vitro:NG_2025"
+   ],
+   "CCCCCCCCc1ccc(O)c(CN(CCCCC2NC(=O)C(CCCCN(Cc3cc(CCCCCCCC)ccc3O)Cc3cc(CCCCCCCC)ccc3O)NC2=O)Cc2cc(CCCCCCCC)ccc2O)c1": [
+    "vitro:NG_2025",
+    "vivo:NG_2025_2"
+   ],
+   "CCCCCCSCN(CCCCC1NC(=O)C(CCCCN(CSCCCCCC)CSCCCCCC)NC1=O)CSCCCCCC": [
+    "vitro:NG_2025"
+   ],
+   "CCCCCCc1ccc(O)c(CN(CCCCC2NC(=O)C(CCCCN(Cc3cc(CCCCCC)ccc3O)Cc3cc(CCCCCC)ccc3O)NC2=O)Cc2cc(CCCCCC)ccc2O)c1": [
+    "vitro:NG_2025",
+    "vivo:NG_2025_2"
+   ],
+   "CCCCOC(=O)CC(NCCCCC1NC(=O)C(CCCCNC(CC(=O)OCCCC)C(=O)OCCCC)NC1=O)C(=O)OCCCC": [
+    "vitro:XH_2025"
+   ],
+   "O=C1NC(CCCCN(Cc2ccccc2O)Cc2ccccc2O)C(=O)NC1CCCCN(Cc1ccccc1O)Cc1ccccc1O": [
+    "vitro:NG_2025"
+   ]
+  },
+  "superset_n": 23
+ },
+ "token_pattern_test": {
+  "contiguous_run_checked": 22,
+  "sparse_catalogue_expected": false,
+  "tokens": "LNP # 1..24 / 1..64 / 1..56, one contiguous run per screen",
+  "verdict": "LOCAL INDICES. These integers are row numbers inside this paper's own three screens, not amine-catalogue ids. No corpus lookup is performed on them. A structural attestation is available instead and is what is used: every row of Supplementary Figure 6's tables prints the ionizable lipid by name (cKK-E12) in its own column."
+ }
+}

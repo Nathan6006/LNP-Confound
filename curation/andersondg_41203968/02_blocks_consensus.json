@@ -1,0 +1,335 @@
+{
+ "heads": {
+  "10": "C1C[NH:3]CC[NH:3]CCC[NH:3]CC[NH:3]C1",
+  "1": "C1C[NH:3]CC[NH:3]CC[NH:3]1",
+  "11": "c1cc(CN2CCC[NH:3]CC[NH:3]CCC[NH:3]CC2)ccc1CN1CCC[NH:3]CC[NH:3]CCC[NH:3]CC1",
+  "12": "C1C[NH:3]CC[NH:3]CC[NH:3]CC[NH:3]1",
+  "13": "C1C[NH:3]CCC[NH:3]CCC[NH:3]C1",
+  "15": "C1C[NH:3]CC[NH:3]CC[NH:3]CC[NH:3]CC[NH:3]CC[NH:3]1",
+  "18": "C1C[NH:3]CCC[NH:3]CCC[NH:3]CCC[NH:3]CCC[NH:3]CCC[NH:3]C1",
+  "2": "C1C[NH:3]CC[NH:3]1",
+  "3": "C1C[NH:3]CC[NH:3]C1",
+  "4": "OCCC1C[NH:3]CC[NH:3]1",
+  "5": "C1C[NH:3]CCC12CC[NH:3]C2",
+  "6": "OCC1C[NH:3]C(CO)C[NH:3]1",
+  "7": "C1C2C[NH:3]CC2C[NH:3]1",
+  "8": "OC1C[NH:3]CC[NH:3]C1",
+  "9": "C(CC1CC[NH:3]CC1)CC1CC[NH:3]CC1"
+ },
+ "tails": {
+  "1": "CCCCC/C=C\\C/C=C\\C/C=C\\CCCCC(=O)OCC(O)[CH3:2]",
+  "10": "CCCCCCCCCCC(CCCCCCCC)C(=O)OCCCCCC(=O)OCC(O)[CH3:2]",
+  "2": "CC/C=C\\C/C=C\\C/C=C\\CCCCCCCC(=O)OCC(O)[CH3:2]",
+  "3": "CCCCC/C=C\\C/C=C\\CCCCCCCC(=O)OCC(O)[CH3:2]",
+  "4": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCC(O)[CH3:2]",
+  "41": "CCCCCC/C=C\\CCCC(=O)OCC(O)[CH3:2]",
+  "42": "CCCC/C=C\\CCCCCCCC(=O)OCC(O)[CH3:2]",
+  "43": "CCCCCC/C=C\\CCCCCCCC(=O)OCC(O)[CH3:2]",
+  "44": "CCCCCC/C=C\\CCCCCCCCCC(=O)OCC(O)[CH3:2]",
+  "47": "CCCCC/C=C\\CCCCC(=O)OCC(O)[CH3:2]",
+  "48": "CCCC/C=C\\CCCCCC(=O)OCC(O)[CH3:2]",
+  "49": "CCC/C=C\\CCCCCCC(=O)OCC(O)[CH3:2]",
+  "5": "CC(C)CCCC(C)CCCC(C)CCCC(C)CC(=O)OCC(O)[CH3:2]",
+  "50": "CC/C=C\\CCCCCCCC(=O)OCC(O)[CH3:2]",
+  "51": "C/C=C\\CCCCCCCCC(=O)OCC(O)[CH3:2]",
+  "53": "CCCC/C=C\\C/C=C\\CCC(=O)OCC(O)[CH3:2]",
+  "54": "CCC/C=C\\C/C=C\\CCCC(=O)OCC(O)[CH3:2]",
+  "55": "CC/C=C\\C/C=C\\CCCCC(=O)OCC(O)[CH3:2]",
+  "56": "C/C=C\\C/C=C\\CCCCCC(=O)OCC(O)[CH3:2]",
+  "59": "CCCCCC/C=C\\CCCCOC(=O)C[CH3:2]",
+  "6": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCCCC(O)[CH3:2]",
+  "7": "CCCCCCCC(=O)OCC(CCCCC(=O)OCC(O)[CH3:2])COC(=O)CCCCCCC",
+  "8": "CCCCCCC(CCCC)C(=O)OCCCCCC(=O)OCC(O)[CH3:2]",
+  "9": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCC(=O)OCC(O)[CH3:2]",
+  "C12": "CCCCCCCCCCCC(=O)OCC(O)[CH3:2]",
+  "C14": "CCCCCCCCCCCCCC(=O)OCC(O)[CH3:2]",
+  "C16": "CCCCCCCCCCCCCCCC(=O)OCC(O)[CH3:2]",
+  "61": "CCCCCC/C=C\\CCCCOSC[CH3:2]"
+ },
+ "stereo_waivers": [
+  "AMG arm"
+ ],
+ "n_stereo_waivers": 40,
+ "resolved_by_structure": {
+  "AMG141": {
+   "Am": "1",
+   "G": "41",
+   "rejected": [
+    "Am14+G1"
+   ]
+  }
+ },
+ "block_disagreements": [],
+ "problems": [
+  [
+   "AMG1041R",
+   "label does not split uniquely"
+  ],
+  [
+   "AMG1041S",
+   "label does not split uniquely"
+  ],
+  [
+   "AMG1061",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1441",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1541R",
+   "label does not split uniquely"
+  ],
+  [
+   "AMG1541S",
+   "label does not split uniquely"
+  ],
+  [
+   "AMG1547",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1548",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1549",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1550",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1551",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1553",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1554",
+   "3 distinct arms"
+  ],
+  [
+   "AMG1555",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1556",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1559",
+   "2 distinct arms"
+  ],
+  [
+   "AMG15C12",
+   "2 distinct arms"
+  ],
+  [
+   "AMG15L-41",
+   "label does not split uniquely"
+  ],
+  [
+   "AMG1641",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1741",
+   "2 distinct arms"
+  ],
+  [
+   "AMG1941",
+   "2 distinct arms"
+  ],
+  [
+   "G61",
+   "label does not split uniquely"
+  ]
+ ],
+ "n_arms_per_head": {
+  "10": {
+   "4": [
+    "AMG101",
+    "AMG1010",
+    "AMG102",
+    "AMG103",
+    "AMG104",
+    "AMG1041",
+    "AMG1042",
+    "AMG1043",
+    "AMG1044",
+    "AMG1047",
+    "AMG1048",
+    "AMG1049",
+    "AMG105",
+    "AMG1050",
+    "AMG1051",
+    "AMG1053",
+    "AMG1054",
+    "AMG1055",
+    "AMG1056",
+    "AMG1059",
+    "AMG106",
+    "AMG107",
+    "AMG108",
+    "AMG109",
+    "AMG10C12",
+    "AMG10C14",
+    "AMG10C16"
+   ]
+  },
+  "1": {
+   "3": [
+    "AMG11",
+    "AMG110",
+    "AMG12",
+    "AMG13",
+    "AMG14",
+    "AMG15",
+    "AMG16",
+    "AMG17",
+    "AMG18",
+    "AMG19",
+    "AMG141"
+   ]
+  },
+  "11": {
+   "6": [
+    "AMG1141"
+   ]
+  },
+  "12": {
+   "4": [
+    "AMG1241"
+   ]
+  },
+  "13": {
+   "3": [
+    "AMG1341"
+   ]
+  },
+  "15": {
+   "6": [
+    "AMG1541",
+    "AMG1561"
+   ]
+  },
+  "18": {
+   "6": [
+    "AMG1841"
+   ]
+  },
+  "2": {
+   "2": [
+    "AMG21",
+    "AMG210",
+    "AMG22",
+    "AMG23",
+    "AMG24",
+    "AMG25",
+    "AMG26",
+    "AMG27",
+    "AMG28",
+    "AMG29"
+   ]
+  },
+  "3": {
+   "2": [
+    "AMG31",
+    "AMG310",
+    "AMG32",
+    "AMG33",
+    "AMG34",
+    "AMG35",
+    "AMG36",
+    "AMG37",
+    "AMG38",
+    "AMG39"
+   ]
+  },
+  "4": {
+   "2": [
+    "AMG410",
+    "AMG42",
+    "AMG44",
+    "AMG45",
+    "AMG46",
+    "AMG47",
+    "AMG48",
+    "AMG49"
+   ]
+  },
+  "5": {
+   "2": [
+    "AMG51",
+    "AMG510",
+    "AMG52",
+    "AMG53",
+    "AMG54",
+    "AMG55",
+    "AMG56",
+    "AMG57",
+    "AMG58",
+    "AMG59"
+   ]
+  },
+  "6": {
+   "2": [
+    "AMG61",
+    "AMG610",
+    "AMG62",
+    "AMG63",
+    "AMG64",
+    "AMG65",
+    "AMG66",
+    "AMG67",
+    "AMG68",
+    "AMG69"
+   ]
+  },
+  "7": {
+   "2": [
+    "AMG71",
+    "AMG710",
+    "AMG72",
+    "AMG74",
+    "AMG75",
+    "AMG76",
+    "AMG77",
+    "AMG78",
+    "AMG79"
+   ]
+  },
+  "8": {
+   "2": [
+    "AMG81",
+    "AMG810",
+    "AMG82",
+    "AMG84",
+    "AMG85",
+    "AMG86",
+    "AMG87",
+    "AMG88",
+    "AMG89"
+   ]
+  },
+  "9": {
+   "2": [
+    "AMG91",
+    "AMG910",
+    "AMG92",
+    "AMG93",
+    "AMG94",
+    "AMG95",
+    "AMG96",
+    "AMG97",
+    "AMG98",
+    "AMG99"
+   ]
+  }
+ }
+}

@@ -1,0 +1,13 @@
+block_id,block_type,SMILES,formula,exact_mass,chemical_name,n_michael_slots,source,what_is_drawn
+75,amine_head,CCN(CC)CCN,C6H16N2,116.1313,"N,N-diethylethylenediamine",2,Figure 1C (nihms-1799810-f0001.jpg panel C),"diethylamino-N, two-carbon linker, terminal NH2"
+76,amine_head,NCCN1CCCC1,C6H14N2,114.1157,1-(2-aminoethyl)pyrrolidine,2,Figure 1C (nihms-1799810-f0001.jpg panel C),"pyrrolidine N, two-carbon linker, terminal NH2"
+77,amine_head,CN1CCCC1CCN,C7H16N2,128.1313,2-(2-aminoethyl)-1-methylpyrrolidine,2,Figure 1C (nihms-1799810-f0001.jpg panel C),"N-methylpyrrolidine substituted at ring C2, two-carbon linker, terminal NH2"
+78,amine_head,CN(C)CCN,C4H12N2,88.1000,"N,N-dimethylethylenediamine",2,Figure 1C (nihms-1799810-f0001.jpg panel C),"dimethylamino-N, two-carbon linker, terminal NH2"
+80,amine_head,CN(C)CCCN,C5H14N2,102.1157,"N,N-dimethyl-1,3-propanediamine",2,Figure 1C (nihms-1799810-f0001.jpg panel C),"dimethylamino-N, three-carbon linker, terminal NH2"
+81,amine_head,CCN(CC)CCCN,C7H18N2,130.1470,"N,N-diethyl-1,3-propanediamine",2,Figure 1C (nihms-1799810-f0001.jpg panel C),"diethylamino-N, three-carbon linker, terminal NH2"
+82,amine_head,NCCN1CCCCC1,C7H16N2,128.1313,1-(2-aminoethyl)piperidine,2,Figure 1C (nihms-1799810-f0001.jpg panel C),"piperidine N, two-carbon linker, terminal NH2"
+93,amine_head,NCCCn1ccnc1,C6H11N3,125.0953,1-(3-aminopropyl)imidazole,2,Figure 1C (nihms-1799810-f0001.jpg panel C),"imidazole N1, three-carbon linker, terminal NH2"
+113,amine_head,CN(CCN)CCN,C5H15N3,117.1266,"2,2'-(methylimino)bis(ethylamine)  [N-methyl-N,N-bis(2-aminoethyl)amine]",4,Figure 1C (nihms-1799810-f0001.jpg panel C),central N bearing a methyl stub drawn downward and two 2-aminoethyl arms
+306,amine_head,CN(CCCN)CCCN,C7H19N3,145.1579,"3,3'-diamino-N-methyldipropylamine",4,Figure 1C (nihms-1799810-f0001.jpg panel C),central N bearing a methyl stub drawn downward and two 3-aminopropyl arms
+400,amine_head,CN(C)CCCNCCCN,C8H21N3,159.1735,"N,N-dimethyldipropylenetriamine",3,Figure 1C (nihms-1799810-f0001.jpg panel C),"dimethylamino-N, propyl, an explicitly drawn N-H, propyl, terminal NH2"
+O16CBA,acrylate_tail,C=CC(=O)OCC1(C)COC(c2c(OC)cc(OCCCCCC)cc2OC)OC1,C23H34O7,422.2305,"2-(4-(hexyloxy)-2,6-dimethoxyphenyl)-5-methyl-1,3-dioxan-5-yl)methyl prop-2-enoate",0,Figure 1B + Figure S1 + the Experimental Section's named reagents,"acrylate ester on a CH2 of a 5-methyl-1,3-dioxane whose C2 bears 4-hexyloxy-2,6-dimethoxyphenyl"

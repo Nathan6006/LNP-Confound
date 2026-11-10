@@ -1,0 +1,86 @@
+{
+ "_what": "Stage 00 acquisition record for XQ_2020 (Xu lab, Tufts). Filled 2026-11-10 UTC.",
+ "paper": {
+  "title": "Combinatorial Library of Cyclic Benzylidene Acetal-Containing pH-Responsive Lipidoid Nanoparticles for Intracellular mRNA Delivery",
+  "authors_as_printed": "Yamin Li, Raissa Li#, Anirban Chakraborty#, Roza Ogurlu, Xuewei Zhao, Jinjin Chen, Qiaobing Xu* (# equal contribution)",
+  "affiliation": "Department of Biomedical Engineering, Tufts University, Medford, MA 02155, USA",
+  "journal": "Bioconjugate Chemistry",
+  "year": 2020,
+  "epub_date_from_jats": "2020-06-24",
+  "issue_date_from_jats": "2020-07-15",
+  "pmid": "32520527",
+  "pmcid": "PMC9069324",
+  "doi": "10.1021/acs.bioconjchem.0c00295",
+  "nihms_id": "NIHMS1799810"
+ },
+ "title_verification": {
+  "_why": "The run brief warned that a sibling was briefed from a TRUNCATED tracker title and the paper turned out to be about antimicrobial activity. The title was therefore re-read from the PMC record before any other work.",
+  "tracker_title_was_truncated": true,
+  "published_title_read_from": "PMC9069324.jats.xml <article-title>",
+  "endpoint_stated_in_abstract_and_Figure_5": "percentage of GFP-positive HeLa cells after 24 h, flow cytometry, GFP mRNA cargo",
+  "verdict": "IN SCOPE. The endpoint is nucleic-acid (mRNA) delivery to a mammalian cell line."
+ },
+ "licence": {
+  "jats_permissions_verbatim": "This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.",
+  "is_cc0_or_ccby": false,
+  "note": "NOT a CC0/CC-BY licence. This is the NIHMS author manuscript deposited under the NIH Public Access Policy; PMC states text-mining permission and fair use, not open re-licensing. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release -- flagged here so the release check can see it. See DECISIONS.md D-4."
+ },
+ "files": [
+  {
+   "name": "source/bc0c00295_si_001.pdf",
+   "what": "ACS Supporting Information, 8 pp (Figures S1-S7). Has a real text layer; structures in Figure S1 are vector.",
+   "bytes": 493828,
+   "sha256": "b7ab1df2a51afc1d449320a1f55a0b3eddf3e485c5e090ddfc987257be333d8e",
+   "provided_by": "run harness (pre-placed before this agent started)",
+   "watermark": "each page carries 'Downloaded from pubs.acs.org/... by PHILLIPS EXETER ACADEMY user on 10 November 2026'"
+  },
+  {
+   "name": "source/PMC9069324.jats.xml",
+   "what": "full JATS XML: abstract, complete body text, Table 1, all seven figure captions",
+   "bytes": 98125,
+   "sha256": "279da0c3d8e184d4a0a6896c5da1016a8e38e8ffcd948c750113edccb6f0b64d",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml&id=9069324",
+   "fetched_utc": "2026-11-10"
+  },
+  {
+   "name": "source/nihms-1799810-f0001.jpg .. -f0007.jpg",
+   "what": "Figures 1-7 as deposited rasters, 1050 px on the long edge, 150 dpi",
+   "url_template": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9069324/bin/nihms-1799810-f000N.jpg",
+   "fetched_utc": "2026-11-10",
+   "sha256": {
+    "f0001": "4bcdd7ddd36f1616d99bd2e1b5b16cdcb213320b6b38949d781c37901240984f",
+    "f0002": "aea32a4534e6e02ed11325931512e44d2a8a8df075c03447145c2bc09af73ea7",
+    "f0003": "187ec6c1b035d399dd188fcb6c0a0a8df51aecd7ee45294cbbd9f679595041a1",
+    "f0004": "26a00a4750f37264ace48f1aab02bca00457c7f3f111d3dab2bdc2434b179a2e",
+    "f0005": "cd73991deede154d29b763e1b4aa6ef3f4396b8906059a9c897983204cdada68",
+    "f0006": "a43bfc7bd825e0ebf896436e0befdcad26c05a37f72ba1545d876b9ea96a0289",
+    "f0007": "79c69312e1beba714110398c4893ebe6da01023afcded5d36c7162f0b9a5076e"
+   },
+   "bytes": {
+    "f0001": 259066,
+    "f0002": 227951,
+    "f0003": 392019,
+    "f0004": 545337,
+    "f0005": 150818,
+    "f0006": 129170,
+    "f0007": 109820
+   },
+   "sha256_note": "These are the hashes of the JPEGs. An earlier pass of this curation recorded hashes taken BEFORE the magic bytes were checked, and seven of them were the hashes of a Google reCAPTCHA challenge page saved with a .jpg name. A sha256 of an unverified download is a hash of whatever the server felt like sending; the fetcher used here requires a known magic (ffd8ff / %PDF / PK) before it writes a file at all, and the recorded hashes were taken afterwards."
+  }
+ ],
+ "assets_NOT_obtained": [
+  {
+   "name": "nihms-1799810.pdf (the author-manuscript PDF)",
+   "why": "pmc.ncbi.nlm.nih.gov served a Google reCAPTCHA challenge page for this one asset on four paced attempts (45 s apart). NOT bypassed -- the run's non-negotiables forbid defeating a bot check. Nothing is lost: the JATS XML carries the full text and Table 1 as markup, and all seven figures were retrieved individually.",
+   "would_it_have_helped": "Possibly a higher-resolution Figure 5. See 00_value_sources.json -> resolution_caveat."
+  },
+  {
+   "name": "NIHMS1799810-supplement-Supporting_Info.docx",
+   "why": "same reCAPTCHA. It is the author-manuscript form of the SI we already hold as the publisher PDF."
+  }
+ ],
+ "tools_not_used": [
+  "the shared Playwright browser (run brief forbids it for this agent)",
+  "provenance/structure_check.py, check_anchor_independence.py, check_anchor_coverage.py (they write tracked files other agents are using; anchor posture verified by hand instead -- see PROVENANCE.md)"
+ ]
+}

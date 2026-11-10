@@ -1,0 +1,5 @@
+panel,n_bar_columns_measured,n_head_groups_measured,n_head_labels_read,legend_tails_read
+S4_top,18,3,O17O|O17S|O16S-S,NOT MEASURED - see 04_library_membership.json REFUSED
+S4_bottom,5,7,O17O|O17S|O17C|O18S-S|N16S-S|EC18|EC16,NOT MEASURED - see 04_library_membership.json REFUSED
+S5_top,18,3,O17O|O17S|O16S-S,NOT MEASURED - see 04_library_membership.json REFUSED
+S5_bottom,5,8,O17O|O17S|O17C|O18S-S|O16S-S|N16S-S|EC18|EC16,NOT MEASURED - see 04_library_membership.json REFUSED

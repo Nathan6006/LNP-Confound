@@ -1,0 +1,218 @@
+{
+ "_what": "What this SI determines about the 18 amine head groups.",
+ "n_amines_in_library": 18,
+ "figS1_image": {
+  "xref": 179,
+  "w": 834,
+  "h": 1189,
+  "red_ink_px": 17570
+ },
+ "A1": {
+  "method": "vector bond coordinates (curation/lib/chains.vector_bonds), SI p.2 Scheme S1c",
+  "n_bonds_at_N": 3,
+  "heteroatom_glyph_boxes": [
+   [
+    269.4,
+    234.9,
+    273.3,
+    239.7
+   ],
+   [
+    289.7,
+    230.8,
+    299.7,
+    236.8
+   ]
+  ],
+  "branches": [
+   {
+    "vertices": 2,
+    "tip": [
+     257.8,
+     236.5
+    ],
+    "tip_is_heteroatom_glyph": false,
+    "carbons": 2
+   },
+   {
+    "vertices": 3,
+    "tip": [
+     288.7,
+     234.1
+    ],
+    "tip_is_heteroatom_glyph": true,
+    "carbons": 2
+   },
+   {
+    "vertices": 2,
+    "tip": [
+     264.5,
+     248.0
+    ],
+    "tip_is_heteroatom_glyph": false,
+    "carbons": 2
+   }
+  ],
+  "branch_carbon_counts": [
+   2,
+   2,
+   2
+  ],
+  "name_printed": "N1,N1-diethyl ethylene diamine (Scheme S1c, SI p.2)",
+  "SMILES": "CCN(CC)CCN",
+  "enumerated": true,
+  "confidence": "high",
+  "third_anchor": "MALDI of T18U-PY16-A1, C44H88N3O2S2 [M+H]+ 754.62. Subtracting T18U (C22H39NO2S) and the hexadecyl arm (C16H33S, replacing the thiol hydrogen) leaves C6H16N2 for the amine -- this structure's formula."
+ },
+ "A5": {
+  "method": "raster: turning points of the linker's y(x) centreline, counted as sign changes of y(x+lag)-y(x) with the lag SWEPT from 3 to 10 px. No threshold is fitted to the expected answer (error class 27) and no single lag is trusted (error class 28): the count is the modal one and the sweep is reported so a reviewer sees the spread.",
+  "linker_path_points": 67,
+  "linker_amplitude_px": 11.5,
+  "lag_sweep_turning_point_counts": {
+   "3": 3,
+   "4": 3,
+   "5": 5,
+   "6": 3,
+   "7": 3,
+   "8": 3,
+   "9": 3,
+   "10": 3
+  },
+  "lag_sweep_turning_point_positions": {
+   "3": [
+    651.0,
+    673.0,
+    693.0
+   ],
+   "4": [
+    651.0,
+    672.0,
+    693.0
+   ],
+   "5": [
+    651.0,
+    671.0,
+    691.0,
+    692.0,
+    693.0
+   ],
+   "6": [
+    650.0,
+    671.0,
+    692.0
+   ],
+   "7": [
+    649.0,
+    670.0,
+    691.0
+   ],
+   "8": [
+    648.0,
+    670.0,
+    690.0
+   ],
+   "9": [
+    648.0,
+    669.0,
+    690.0
+   ],
+   "10": [
+    647.0,
+    669.0,
+    690.0
+   ]
+  },
+  "lags_agreeing": "7/8",
+  "linker_carbons": 3,
+  "linker_rdp_vertices_by_eps": {
+   "1.2": 6,
+   "2.0": 5,
+   "3.0": 5,
+   "4.0": 5,
+   "5.0": 5
+  },
+  "N_substituents_measured": false,
+  "N_substituents_note": "NOT MEASURED -- below the raster's noise floor (see docstring). Read from the drawing as two ethyls, and flagged on every emitted row as structure_assumed = 1 naming this feature.",
+  "name_printed": null,
+  "SMILES": "CCN(CC)CCCN",
+  "enumerated": true,
+  "confidence": "medium",
+  "third_anchor": null,
+  "why": "The linker is measured (3 carbons, so A5 is NOT A1). The two N-ethyls are read from the drawing and could not be measured at this raster's resolution, and the paper gives A5 no name, no formula and no mass, so there is no anchor orthogonal to the drawing at all. Mass cannot see connectivity -- and here there is no mass either."
+ },
+ "A10": {
+  "method": "raster polygon aspect ratio (width / vertical side), tolerance swept",
+  "width_px": 57,
+  "candidates": {
+   "pentagon_5": 1.618,
+   "hexagon_6": 1.7321,
+   "heptagon_7": 1.8019
+  },
+  "tolerance_sweep": {
+   "1": {
+    "side_px": 0,
+    "width_over_side": null,
+    "nearest": null
+   },
+   "2": {
+    "side_px": 1,
+    "width_over_side": 57.0,
+    "nearest": "heptagon_7"
+   },
+   "3": {
+    "side_px": 30,
+    "width_over_side": 1.9,
+    "nearest": "heptagon_7"
+   },
+   "4": {
+    "side_px": 34,
+    "width_over_side": 1.6765,
+    "nearest": "hexagon_6"
+   },
+   "5": {
+    "side_px": 34,
+    "width_over_side": 1.6765,
+    "nearest": "hexagon_6"
+   }
+  },
+  "verdict": "INCONCLUSIVE -- the tolerance sweep returns heptagon_7/hexagon_6, so the drawn ring size is NOT decided by this measurement",
+  "name_printed": null,
+  "SMILES": null,
+  "enumerated": false,
+  "confidence": null,
+  "candidate_SMILES": "CCN1CCNCC1",
+  "why": "NOT ENUMERATED. Drawn only, and the one geometric measurement available at this raster resolution is INCONCLUSIVE between a 5-, 6- and 7-membered ring once its tolerance is swept. 1-ethylpiperazine is recorded as a CANDIDATE, not as a structure. Nothing is lost: A10 appears in NO row of Table S2. DECISIONS.md D-3."
+ },
+ "A8": {
+  "SMILES": null,
+  "enumerated": false,
+  "molecular_formula": "C7H17N3",
+  "method": "solved from two independent MALDI formulae -- T18U-PY12-A8 = C41H81N4O2S2 and T14-PY12-A8 = C37H75N4O2S2. Their difference, C4H6, is exactly T18U - T14, which is the cross-check that the solve is self-consistent.",
+  "confidence": null,
+  "why_not_enumerated": "A FORMULA IS NOT A STRUCTURE. C7H17N3 admits 1-(2-aminoethyl)-4-methylpiperazine, N-(3-aminopropyl)-N,N'-dimethylethylenediamine and many other triamines; nothing in the SI chooses between them, and A8 is the second-best and third-best lipidoid in the paper. DECISIONS.md D-2."
+ },
+ "n_enumerable_amines": 2,
+ "summary": {
+  "A1_branch_carbons": [
+   2,
+   2,
+   2
+  ],
+  "A5_linker_carbons": 3,
+  "A5_lag_sweep": {
+   "3": 3,
+   "4": 3,
+   "5": 5,
+   "6": 3,
+   "7": 3,
+   "8": 3,
+   "9": 3,
+   "10": 3
+  },
+  "A5_lags_agreeing": "7/8",
+  "A5_N_substituents_measured": false,
+  "A10_verdict": "INCONCLUSIVE -- the tolerance sweep returns heptagon_7/hexagon_6, so the drawn ring size is NOT decided by this measurement",
+  "amines_enumerable": 2,
+  "amines_in_library": 18
+ }
+}

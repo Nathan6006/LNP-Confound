@@ -1,0 +1,1976 @@
+{
+ "_what": "Corpus overlap for the 15 Han et al. ionizable lipids, measured three ways",
+ "corpus_index": {
+  "vitro_rows": 29195,
+  "vivo_rows": 1803,
+  "unique_IL_SMILES": 19919,
+  "unparseable": 0,
+  "distinct_full_inchikeys": 19919,
+  "distinct_skeleton_inchikeys": 19763
+ },
+ "exact_structure_match": [
+  {
+   "IL_name": "C10-200",
+   "InChIKey": "BLPKMPWPNQWRQP-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C12-200",
+   "InChIKey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "full_inchikey_match": true,
+   "skeleton_inchikey_match": true,
+   "corpus_rows_full": 518,
+   "corpus_rows_skeleton": 518,
+   "corpus_experiments": [
+    "AC_2025",
+    "JW_2024"
+   ],
+   "corpus_names": [
+    "C12-200",
+    "other"
+   ],
+   "corpus_pools": [
+    "vitro"
+   ]
+  },
+  {
+   "IL_name": "C14-200",
+   "InChIKey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C10-494",
+   "InChIKey": "GEIWVWNYNAVPIK-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C12-494",
+   "InChIKey": "QZHJDCDIFKCBDW-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C14-494",
+   "InChIKey": "OQALBVGFAKJDAR-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C10-306",
+   "InChIKey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C12-306",
+   "InChIKey": "NVSXPUMHZGSDJD-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C14-306",
+   "InChIKey": "QMQSOHXJGZYDSS-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C10-114",
+   "InChIKey": "SSDJOYIXZXEIKV-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C12-114",
+   "InChIKey": "AQIQHLVHJDTOJT-UHFFFAOYSA-N",
+   "full_inchikey_match": true,
+   "skeleton_inchikey_match": true,
+   "corpus_rows_full": 1,
+   "corpus_rows_skeleton": 1,
+   "corpus_experiments": [
+    "KL_2010"
+   ],
+   "corpus_names": [
+    "114C12"
+   ],
+   "corpus_pools": [
+    "vitro"
+   ]
+  },
+  {
+   "IL_name": "C14-114",
+   "InChIKey": "OPKMZUVSLCEDFW-UHFFFAOYSA-N",
+   "full_inchikey_match": true,
+   "skeleton_inchikey_match": true,
+   "corpus_rows_full": 1,
+   "corpus_rows_skeleton": 1,
+   "corpus_experiments": [
+    "KL_2010"
+   ],
+   "corpus_names": [
+    "114C14"
+   ],
+   "corpus_pools": [
+    "vitro"
+   ]
+  },
+  {
+   "IL_name": "C10-490",
+   "InChIKey": "DDDCMBNBKUTIFO-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C12-490",
+   "InChIKey": "MODLJEDNFWZSMU-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  },
+  {
+   "IL_name": "C14-490",
+   "InChIKey": "VVPCTPAAYAVHBO-UHFFFAOYSA-N",
+   "full_inchikey_match": false,
+   "skeleton_inchikey_match": false,
+   "corpus_rows_full": 0,
+   "corpus_rows_skeleton": 0,
+   "corpus_experiments": [],
+   "corpus_names": []
+  }
+ ],
+ "exact_structure_match_summary": {
+  "n_ours": 15,
+  "n_full_inchikey_match": 3,
+  "n_skeleton_only_match": 0,
+  "n_no_match": 12
+ },
+ "IL_name_token_sweep": [
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "200C10",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCC(O)CN(CCC)CCN1CCN(CCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "200C12",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCC(O)CN(CCC)CCN1CCN(CCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "200C14",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCC(O)CN(CCC)CCN1CCN(CCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "200C8",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCC(O)CN(CCC)CCN1CCN(CCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_C10",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCC)CCN1CCN(CCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_C11",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCC)CCN1CCN(CCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_C12",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCC)CCN1CCN(CCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_C13",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCC)CCN1CCN(CCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_C14",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCN1CCN(CCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O1,1,8",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CC(C)CCCC(C)CCOC(=O)CCN(CCC(=O)OCCC(C)CCCC(C)C)CCN1CCN(CN(CCC(=O)OCCC(C)CCCC(C)C)CCN(CCC(=O)OCCC(C)CCCC(C)C)CCC(=O)OCCC(C)CCCC(C)C)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O10",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCC)CCN1CCN(CN(CCC(=O)OCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O11",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCC)CCN1CCN(CN(CCC(=O)OCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O12",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCC)CCN1CCN(CN(CCC(=O)OCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O13",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCCC)CCN1CCN(CN(CCC(=O)OCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O14",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCN1CCN(CN(CCC(=O)OCCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O4,8",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCC(CCCC)COC(=O)CCN(CCC(=O)OCC(CCCC)CCCCCC)CCN1CCN(CN(CCC(=O)OCC(CCCC)CCCCCC)CCN(CCC(=O)OCC(CCCC)CCCCCC)CCC(=O)OCC(CCCC)CCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O6,10",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCC(CCCCCC)COC(=O)CCN(CCC(=O)OCC(CCCCCC)CCCCCCCC)CCN1CCN(CN(CCC(=O)OCC(CCCCCC)CCCCCCCC)CCN(CCC(=O)OCC(CCCCCC)CCCCCCCC)CCC(=O)OCC(CCCCC"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_O8,12",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCC(CCCCCCCC)COC(=O)CCN(CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)CCN1CCN(CN(CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)CCN(CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_Oi10",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CC(C)CCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCC(C)C)CCN1CCN(CN(CCC(=O)OCCCCCCCC(C)C)CCN(CCC(=O)OCCCCCCCC(C)C)CCC(=O)OCCCCCCCC(C)C)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_X3",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCC/C=C\\COC(=O)CCN(CCC(=O)OC/C=C\\CCCCCCCC)CCN1CCN(CN(CCC(=O)OC/C=C\\CCCCCCCC)CCN(CCC(=O)OC/C=C\\CCCCCCCC)CCC(=O)OC/C=C\\CCCCCCCC)CC1"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_X5",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CC(C)=CCC/C(C)=C/COC(=O)CCN(CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCN1CCN(CN(CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCN(CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCC(=O)OC/C=C(\\C"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "A200_X7",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCC/C=C\\C=C/CCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC)CCN1CCN(CN(CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC)CCN(CCC(=O)OCCCCCCCC/C=C\\C=C/CCC"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "C12-200",
+   "Experiment_ID": "AC_2025",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 498,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": true,
+   "SMILES_first": "CCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC"
+  },
+  {
+   "amine_token": "200",
+   "corpus_IL_name": "Lipid-200",
+   "Experiment_ID": "SX_2025",
+   "pool": [
+    "vivo"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCC(CCCC)C(=O)OCCCCC(=O)OCC(COC(=O)CCCCOC(=O)C(CCCC)CCCCCC)CN(CCCCN(C)CC)C(=O)CCCCOC(=O)C(CCCC)CCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_C10",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_C11",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_C12",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_C13",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_C14",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro",
+    "vivo"
+   ],
+   "rows": 2,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O1,1,8",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CC(C)CCCC(C)CCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCC(C)CCCC(C)C)CCC(=O)OCCC(C)CCCC(C)C)CCC(=O)OCCC(C)CCCC(C)C"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O10",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O11",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O12",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O13",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O14",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O4,8",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCC(CCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CCCC)CCCCCC)CCC(=O)OCC(CCCC)CCCCCC)CCC(=O)OCC(CCCC)CCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O6,10",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCC(CCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CCCCCC)CCCCCCCC)CCC(=O)OCC(CCCCCC)CCCCCCCC)CCC(=O)OCC(CCCCCC)CCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_O8,12",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCC(CCCCCCCC)COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC)CCC(=O)OCC(CCCCCCCC)CCCCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_Oi10",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CC(C)CCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC(C)C)CCC(=O)OCCCCCCCC(C)C)CCC(=O)OCCCCCCCC(C)C"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_X3",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCC/C=C\\COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OC/C=C\\CCCCCCCC)CCC(=O)OC/C=C\\CCCCCCCC)CCC(=O)OC/C=C\\CCCCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_X5",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CC(C)=CCC/C(C)=C/COC(=O)CCN(CCCN(C)CCCN(CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCC(=O)OC/C=C(\\C)CCC=C(C)C)CCC(=O)OC/C=C(\\C)CCC=C(C)C"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "A306_X7",
+   "Experiment_ID": "NC_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": true,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCC/C=C\\C=C/CCCCCCCCOC(=O)CCN(CCCN(C)CCCN(CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC)CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC)CCC(=O)OCCCCCCCC/C=C\\C=C/CCCCCC"
+  },
+  {
+   "amine_token": "306",
+   "corpus_IL_name": "Lipid-306",
+   "Experiment_ID": "SX_2025",
+   "pool": [
+    "vivo"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CC/C=C\\CCCCOC(CCC(=O)OCCCN(CC(COC(=O)CCCCOC(=O)C(CCCC)CCCCCC)COC(=O)CCCCOC(=O)C(CCCC)CCCCCC)C(=O)SCCCN(CC)CC)OCCCC/C=C\\CC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-22",
+   "Experiment_ID": "BL_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCCCCCC(C(=O)NCCCC)N(CCCN(CCCC)CCCC)C(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-23",
+   "Experiment_ID": "BL_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCCCCCC(C(=O)NCCCC)N(CCCN(C)C)C(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-9",
+   "Experiment_ID": "BL_2024",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCC/C=C\\CCCCCCCC(=O)OCCCCCC(C(=O)NCCCC)N(CCN(C)C)C(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L1-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CC2CCC(C(=O)NCCNCCNC(=O)C3CCC(CN4C(=O)CC(SCCCCCCCCCC)C4=O)CC3)CC2)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L1-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CC2CCC(C(=O)NCCNCCNC(=O)C3CCC(CN4C(=O)CC(SCCCCCCCCCCCC)C4=O)CC3)CC2)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L1-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CC2CCC(C(=O)NCCNCCNC(=O)C3CCC(CN4C(=O)CC(SCCCCCCCCCCCCCC)C4=O)CC3)CC2)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L1-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CC2CCC(C(=O)NCCNCCNC(=O)C3CCC(CN4C(=O)CC(SCCCCCC)C4=O)CC3)CC2)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L1-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CC2CCC(C(=O)NCCNCCNC(=O)C3CCC(CN4C(=O)CC(SCCCCCCCC)C4=O)CC3)CC2)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L2-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSSCCC(=O)NCCNCCNC(=O)CCSSCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L2-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSSCCC(=O)NCCNCCNC(=O)CCSSCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L2-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSSCCC(=O)NCCNCCNC(=O)CCSSCCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L2-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSSCCC(=O)NCCNCCNC(=O)CCSSCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L2-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSSCCC(=O)NCCNCCNC(=O)CCSSCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L3-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CC(=O)NCCNCCNC(=O)CN2C(=O)CC(SCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L3-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CC(=O)NCCNCCNC(=O)CN2C(=O)CC(SCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L3-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CC(=O)NCCNCCNC(=O)CN2C(=O)CC(SCCCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L3-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CC(=O)NCCNCCNC(=O)CN2C(=O)CC(SCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L3-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CC(=O)NCCNCCNC(=O)CN2C(=O)CC(SCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L4-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CCCC(=O)NCCNCCNC(=O)CCCN2C(=O)CC(SCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L4-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CCCC(=O)NCCNCCNC(=O)CCCN2C(=O)CC(SCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L4-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CCCC(=O)NCCNCCNC(=O)CCCN2C(=O)CC(SCCCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L4-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CCCC(=O)NCCNCCNC(=O)CCCN2C(=O)CC(SCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L4-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CCCC(=O)NCCNCCNC(=O)CCCN2C(=O)CC(SCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L5-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CCCCCC(=O)NCCNCCNC(=O)CCCCCN2C(=O)CC(SCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L5-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CCCCCC(=O)NCCNCCNC(=O)CCCCCN2C(=O)CC(SCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L5-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CCCCCC(=O)NCCNCCNC(=O)CCCCCN2C(=O)CC(SCCCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L5-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CCCCCC(=O)NCCNCCNC(=O)CCCCCN2C(=O)CC(SCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L5-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CCCCCC(=O)NCCNCCNC(=O)CCCCCN2C(=O)CC(SCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L6-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CCOCCC(=O)NCCNCCNC(=O)CCOCCN2C(=O)CC(SCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L6-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CCOCCC(=O)NCCNCCNC(=O)CCOCCN2C(=O)CC(SCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L6-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CCOCCC(=O)NCCNCCNC(=O)CCOCCN2C(=O)CC(SCCCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L6-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CCOCCC(=O)NCCNCCNC(=O)CCOCCN2C(=O)CC(SCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L6-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CCOCCC(=O)NCCNCCNC(=O)CCOCCN2C(=O)CC(SCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L7-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCN2C(=O)CC(SCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L7-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCN2C(=O)CC(SCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L7-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCN2C(=O)CC(SCCCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L7-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCN2C(=O)CC(SCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L7-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCN2C(=O)CC(SCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L8-C10",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCSC1CC(=O)N(CCOCCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCOCCN2C(=O)CC(SCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L8-C12",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCSC1CC(=O)N(CCOCCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCOCCN2C(=O)CC(SCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L8-C14",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCSC1CC(=O)N(CCOCCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCOCCN2C(=O)CC(SCCCCCCCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L8-C6",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCSC1CC(=O)N(CCOCCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCOCCN2C(=O)CC(SCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114-L8-C8",
+   "Experiment_ID": "QL_2026",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCSC1CC(=O)N(CCOCCOCCOCCC(=O)NCCNCCNC(=O)CCOCCOCCOCCN2C(=O)CC(SCCCCCCCC)C2=O)C1=O"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114C12",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCC(O)CN(CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114C14",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCC(O)CN(CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "114C16",
+   "Experiment_ID": "KL_2010",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": true,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCC(O)CN(CCN(CC(O)CCCCCCCCCCCCCC)CC(O)CCCCCCCCCCCCCC)CCN(CC(O)CCCCCCCCCCCCCC)CC(O)CCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "A114_C10",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCC)CCC(=O)OCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "A114_C11",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "A114_C12",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "A114_C13",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCC"
+  },
+  {
+   "amine_token": "114",
+   "corpus_IL_name": "A114_C14",
+   "Experiment_ID": "KW_2014",
+   "pool": [
+    "vitro"
+   ],
+   "rows": 1,
+   "n_distinct_SMILES": 1,
+   "carries_2hydroxyalkyl_arm": false,
+   "carries_amine306_core": false,
+   "carries_piperazine": false,
+   "SMILES_first": "CCCCCCCCCCCCCCOC(=O)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCN(CCC(=O)OCCCCCCCCCCCCCC)CCC(=O)OCCCCCCCCCCCCCC"
+  }
+ ],
+ "IL_name_token_sweep_note": "A NAME SWEEP, NOT AN IDENTITY CLAIM. Each hit is adjudicated by the structure columns beside it. Search is digit-boundary, not ^-anchored, so names such as 'A200_C12' and '114-L1-C12' are both reached.",
+ "superset_sweep_2hydroxyalkyl_amine": {
+  "SMARTS": "[NX3;!$(N=*)][CH2][CH1]([OX2H1])[CH2]",
+  "LABEL": "SUPERSET - NOT an identity match",
+  "why_superset": "This SMARTS matches ANY tertiary-amine 2-hydroxyalkyl motif, including lipidoids from unrelated libraries and any lipid that merely happens to carry an N-CH2-CH(OH)-CH2 fragment. It is reported as an upper bound on how much of the corpus is CHEMICALLY NEARBY, and must not be read as overlap.",
+  "unique_structures": 1517,
+  "rows": 2356,
+  "experiments": [
+   "AA_2008",
+   "AC_2025",
+   "BL_2023",
+   "JL_2024",
+   "JM_2016",
+   "JW_2024",
+   "KL_2010",
+   "LL_2025",
+   "LL_2026",
+   "LL_2026_2",
+   "LX_2024_3",
+   "RG_2023",
+   "SW_2024",
+   "SX_2025",
+   "XD_2026",
+   "XH_2024",
+   "ZT_2026"
+  ],
+  "rows_vitro": 2068,
+  "rows_vivo": 288
+ },
+ "amine_core_near_miss_sweep": {
+  "200": {
+   "SMARTS": "[NX3]([CH2][CH2][NX3]1[CH2][CH2][NX3]([CH2][CH2]1)[CH2][CH2][NX3][CH2][CH2][NX3])",
+   "LABEL": "SUPERSET of same-core corpus chemistry",
+   "unique_structures": 51,
+   "rows": 577,
+   "experiments": [
+    "AC_2025",
+    "BL_2023",
+    "JW_2024",
+    "KW_2014",
+    "LX_2024_2",
+    "NG_2025",
+    "NG_2025_2",
+    "XH_2025"
+   ],
+   "near_miss_unique_structures_excluding_ours": 50,
+   "near_miss_rows": 59,
+   "near_miss_experiments": [
+    "BL_2023",
+    "JW_2024",
+    "KW_2014",
+    "LX_2024_2",
+    "NG_2025",
+    "NG_2025_2",
+    "XH_2025"
+   ],
+   "near_miss_names_sample": [
+    "A-a12",
+    "A200_C10",
+    "A200_C11",
+    "A200_C12",
+    "A200_C13",
+    "A200_C14",
+    "A63-T1",
+    "A63-T10",
+    "A63-T2",
+    "A63-T3",
+    "A63-T4",
+    "A63-T5",
+    "A63-T6",
+    "A63-T7",
+    "A63-T8",
+    "A63-T9"
+   ]
+  },
+  "306": {
+   "SMARTS": "[CH3][NX3]([CH2][CH2][CH2][NX3])[CH2][CH2][CH2][NX3]",
+   "LABEL": "SUPERSET of same-core corpus chemistry",
+   "unique_structures": 436,
+   "rows": 576,
+   "experiments": [
+    "BL_2023",
+    "JC_2023",
+    "JM_2016",
+    "JW_2024",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2026_2",
+    "LX_2024",
+    "LX_2024_2",
+    "NC_2024",
+    "NG_2025",
+    "NG_2025_2",
+    "SL_2020",
+    "SL_2021",
+    "XH_2024_2",
+    "XH_2025",
+    "YX_2024",
+    "YX_2026_SDL",
+    "YY_2023",
+    "ZC_2023"
+   ],
+   "near_miss_unique_structures_excluding_ours": 436,
+   "near_miss_rows": 576,
+   "near_miss_experiments": [
+    "BL_2023",
+    "JC_2023",
+    "JM_2016",
+    "JW_2024",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2026_2",
+    "LX_2024",
+    "LX_2024_2",
+    "NC_2024",
+    "NG_2025",
+    "NG_2025_2",
+    "SL_2020",
+    "SL_2021",
+    "XH_2024_2",
+    "XH_2025",
+    "YX_2024",
+    "YX_2026_SDL",
+    "YY_2023",
+    "ZC_2023"
+   ],
+   "near_miss_names_sample": [
+    "22A2P10",
+    "22A2P11",
+    "22A2P12",
+    "22A2P13",
+    "22A2P14",
+    "22A2P15",
+    "22A2P16",
+    "22A2P4",
+    "22A2P5",
+    "22A2P6",
+    "22A2P7",
+    "22A2P8",
+    "22A2P9",
+    "22A3P10",
+    "22A3P11",
+    "22A3P12"
+   ]
+  },
+  "114": {
+   "SMARTS": "[NX3][CH2][CH2][NX3][CH2][CH2][NX3]",
+   "LABEL": "SUPERSET of same-core corpus chemistry",
+   "unique_structures": 3128,
+   "rows": 4008,
+   "experiments": [
+    "AA_2008",
+    "AC_2025",
+    "AP_2025",
+    "BL_2023",
+    "BL_2023_3CR",
+    "BL_2024",
+    "FG_2026",
+    "JC_2023",
+    "JM_2016",
+    "JW_2024",
+    "KL_2010",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2012",
+    "LL_2026",
+    "LL_2026_2",
+    "LR_2023",
+    "LX_2024",
+    "LX_2024_2",
+    "MO_2026",
+    "NC_2024",
+    "NG_2025",
+    "NG_2025_2",
+    "QL_2026",
+    "SL_2020",
+    "SL_2021",
+    "XH_2024_2",
+    "XH_2025",
+    "YR_2024",
+    "YX_2024",
+    "YX_2026",
+    "YX_2026_SDL",
+    "YY_2023",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "near_miss_unique_structures_excluding_ours": 3125,
+   "near_miss_rows": 3488,
+   "near_miss_experiments": [
+    "AA_2008",
+    "AP_2025",
+    "BL_2023",
+    "BL_2023_3CR",
+    "BL_2024",
+    "FG_2026",
+    "JC_2023",
+    "JM_2016",
+    "JW_2024",
+    "KL_2010",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2012",
+    "LL_2026",
+    "LL_2026_2",
+    "LR_2023",
+    "LX_2024",
+    "LX_2024_2",
+    "MO_2026",
+    "NC_2024",
+    "NG_2025",
+    "NG_2025_2",
+    "QL_2026",
+    "SL_2020",
+    "SL_2021",
+    "XH_2024_2",
+    "XH_2025",
+    "YR_2024",
+    "YX_2024",
+    "YX_2026",
+    "YX_2026_SDL",
+    "YY_2023",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "near_miss_names_sample": [
+    "(R3(1):01, R2(4):01, R1(6):17, R4(9):01)",
+    "(R3(1):01, R2(4):01, R1(6):17, R4(9):02)",
+    "(R3(1):01, R2(4):01, R1(6):17, R4(9):03)",
+    "(R3(1):01, R2(4):01, R1(6):17, R4(9):04)",
+    "(R3(1):01, R2(4):01, R1(6):17, R4(9):05)",
+    "(R3(1):01, R2(4):01, R1(6):17, R4(9):06)",
+    "(R3(1):01, R2(4):02, R1(6):17, R4(9):01)",
+    "(R3(1):01, R2(4):02, R1(6):17, R4(9):02)",
+    "(R3(1):01, R2(4):02, R1(6):17, R4(9):03)",
+    "(R3(1):01, R2(4):02, R1(6):17, R4(9):04)",
+    "(R3(1):01, R2(4):02, R1(6):17, R4(9):05)",
+    "(R3(1):01, R2(4):02, R1(6):17, R4(9):06)",
+    "(R3(1):01, R2(4):03, R1(6):17, R4(9):01)",
+    "(R3(1):01, R2(4):03, R1(6):17, R4(9):02)",
+    "(R3(1):01, R2(4):03, R1(6):17, R4(9):03)",
+    "(R3(1):01, R2(4):03, R1(6):17, R4(9):04)"
+   ]
+  },
+  "494": {
+   "SMARTS": "[NX3][CH2][CH2][OX2][CH2][CH2][NX3]1[CH2][CH2][NX3][CH2][CH2]1",
+   "LABEL": "SUPERSET of same-core corpus chemistry",
+   "unique_structures": 15,
+   "rows": 15,
+   "experiments": [
+    "LX_2024_2"
+   ],
+   "near_miss_unique_structures_excluding_ours": 15,
+   "near_miss_rows": 15,
+   "near_miss_experiments": [
+    "LX_2024_2"
+   ],
+   "near_miss_names_sample": [
+    "Xue_multiarm_A18_A-D-10",
+    "Xue_multiarm_A18_A-D-11",
+    "Xue_multiarm_A18_A-D-5",
+    "Xue_multiarm_A18_A-D-6",
+    "Xue_multiarm_A18_A-D-6b",
+    "Xue_multiarm_A18_A-D-7",
+    "Xue_multiarm_A18_A-D-7b",
+    "Xue_multiarm_A18_A-D-7b2",
+    "Xue_multiarm_A18_A-D-8",
+    "Xue_multiarm_A18_A-D-8b",
+    "Xue_multiarm_A18_A-D-9",
+    "Xue_multiarm_A18_A-D-9b",
+    "Xue_multiarm_A18_A-D-9b2",
+    "Xue_multiarm_A18_A-D-9b3",
+    "Xue_multiarm_A18_A-D-9v"
+   ]
+  },
+  "490": {
+   "SMARTS": "[NX3][CH2][CH1]([OX2][CH2][CH3])[CH2][NX3]1[CH2][CH2][NX3][CH2][CH2]1",
+   "LABEL": "SUPERSET of same-core corpus chemistry",
+   "unique_structures": 15,
+   "rows": 15,
+   "experiments": [
+    "LX_2024_2"
+   ],
+   "near_miss_unique_structures_excluding_ours": 15,
+   "near_miss_rows": 15,
+   "near_miss_experiments": [
+    "LX_2024_2"
+   ],
+   "near_miss_names_sample": [
+    "Xue_multiarm_A17_A-D-10",
+    "Xue_multiarm_A17_A-D-11",
+    "Xue_multiarm_A17_A-D-5",
+    "Xue_multiarm_A17_A-D-6",
+    "Xue_multiarm_A17_A-D-6b",
+    "Xue_multiarm_A17_A-D-7",
+    "Xue_multiarm_A17_A-D-7b",
+    "Xue_multiarm_A17_A-D-7b2",
+    "Xue_multiarm_A17_A-D-8",
+    "Xue_multiarm_A17_A-D-8b",
+    "Xue_multiarm_A17_A-D-9",
+    "Xue_multiarm_A17_A-D-9b",
+    "Xue_multiarm_A17_A-D-9b2",
+    "Xue_multiarm_A17_A-D-9b3",
+    "Xue_multiarm_A17_A-D-9v"
+   ]
+  }
+ },
+ "name_vs_structure_split_200_vs_114": [
+  {
+   "corpus_IL_name": "200C8",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C20H43N3O",
+   "MW": 341.58,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 1,
+   "matches_our_lipid": null
+  },
+  {
+   "corpus_IL_name": "200C10",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C22H47N3O",
+   "MW": 369.64,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 1,
+   "matches_our_lipid": null
+  },
+  {
+   "corpus_IL_name": "200C12",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C24H51N3O",
+   "MW": 397.69,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 1,
+   "matches_our_lipid": null
+  },
+  {
+   "corpus_IL_name": "200C14",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C26H55N3O",
+   "MW": 425.75,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 1,
+   "matches_our_lipid": null
+  },
+  {
+   "corpus_IL_name": "114C12",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C64H133N3O5",
+   "MW": 1024.78,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C12-114"
+   ]
+  },
+  {
+   "corpus_IL_name": "114C14",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C74H153N3O5",
+   "MW": 1165.05,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C14-114"
+   ]
+  },
+  {
+   "corpus_IL_name": "114C16",
+   "Experiment_ID": "KL_2010",
+   "rows": 1,
+   "formula": "C84H173N3O5",
+   "MW": 1305.32,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": null
+  },
+  {
+   "corpus_IL_name": "OURS:C10-200",
+   "Experiment_ID": "EH_2026(proposed)",
+   "rows": null,
+   "formula": "C60H125N5O5",
+   "MW": 996.69,
+   "n_N": 5,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C10-200"
+   ]
+  },
+  {
+   "corpus_IL_name": "OURS:C12-200",
+   "Experiment_ID": "EH_2026(proposed)",
+   "rows": null,
+   "formula": "C70H145N5O5",
+   "MW": 1136.96,
+   "n_N": 5,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C12-200"
+   ]
+  },
+  {
+   "corpus_IL_name": "OURS:C14-200",
+   "Experiment_ID": "EH_2026(proposed)",
+   "rows": null,
+   "formula": "C80H165N5O5",
+   "MW": 1277.23,
+   "n_N": 5,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C14-200"
+   ]
+  },
+  {
+   "corpus_IL_name": "OURS:C10-114",
+   "Experiment_ID": "EH_2026(proposed)",
+   "rows": null,
+   "formula": "C54H113N3O5",
+   "MW": 884.514,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C10-114"
+   ]
+  },
+  {
+   "corpus_IL_name": "OURS:C12-114",
+   "Experiment_ID": "EH_2026(proposed)",
+   "rows": null,
+   "formula": "C64H133N3O5",
+   "MW": 1024.784,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C12-114"
+   ]
+  },
+  {
+   "corpus_IL_name": "OURS:C14-114",
+   "Experiment_ID": "EH_2026(proposed)",
+   "rows": null,
+   "formula": "C74H153N3O5",
+   "MW": 1165.054,
+   "n_N": 3,
+   "n_2hydroxyalkyl_arms": 5,
+   "matches_our_lipid": [
+    "C14-114"
+   ]
+  }
+ ],
+ "name_vs_structure_split_note": "KL_2010 is Love et al. PNAS 2010, the ORIGINAL epoxide-amine lipidoid library that this paper's amine numbering comes from. Its 114C12 and 114C14 match our C12-114 and C14-114 on the FULL InChIKey, which independently confirms the cross-lab amine catalogue (F-055). Its 200C8/200C10/200C12/200C14 do NOT match our C*-200 and are not even the same size class. This is recorded as a CONTRADICTION IN data/, not as a doubt about our structure: AC_2025 (498 rows) and JW_2024 both carry our exact C12-200 InChIKey, and our MW is reproduced by the paper's own stoichiometry. We do not edit data/. See 08_contradictions.csv."
+}

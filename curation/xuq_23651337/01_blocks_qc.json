@@ -1,0 +1,32 @@
+{
+  "abstract_verbatim": "A combinatorial library of unsaturated lipidoids was synthesized through the Michael addition of amines to oleyl acrylamide. Their capability in facilitating in vitro gene delivery was evaluated by transfecting HeLa cells with EGFP-encoding plasmid DNA and mRNA. The preliminary screening results indicated that lipidoids with unsaturated oleyl tails are superior transfection agents compared to saturated lipidoids with n-octadecyl tails under the same conditions. The different transfection abilities of the unsaturated and saturated lipidioids were ascribed to the large, tightly packed lipoplexes of saturated lipidoids. The potential applications of the library of lipidoids were further expanded by looking at their ability to transfect fibroblasts as well as different cancerous cell lines.",
+  "abstract_source": "Europe PMC REST, search?query=EXT_ID:23651337 AND SRC:MED&resultType=core, fetched 2026-11-10. abstractText length = 797 characters.",
+  "blocks_emitted": 2,
+  "tails_enumerable": 2,
+  "amine_heads": {
+    "block_type": "amine_head",
+    "how_many_exist": 16,
+    "how_many_enumerable": 0,
+    "evidence_for_16": "Figure S3's x-axis carries 16 major tick marks, each at the centre of one bar, labelled 1..16 ('Lipidoid'). Measured, not counted by eye: stage05_values.py x_tick_vs_bar_centre.",
+    "why_zero_enumerable": "The SI names no amine, draws no amine, prints no formula, no HRMS and no NMR. There is no amine catalogue page, no synthesis section and no experimental section in the 3 pages we have.",
+    "name_token_warning": "The labels 1..16 are a LOCAL SERIES INDEX. They are NOT the Xu/Anderson catalogue amine numbers, which run 75-400 (see curation/xuq_32520527/01_blocks.csv and curation/xuq_32438474/01_blocks.csv: 75, 76, 77, 78, 80, 81, 82, 87, 90, 93, 304, 306, 400). The sibling curation/xuq_24574196 states the same for its own paper: \"The paper's local label '1' is NOT catalogue amine 1.\" Reading these 1..16 as catalogue numbers would assign 16 measured values to 16 wrong molecules.",
+    "consequence": "A lipidoid in this library is (amine head + n x oleyl acrylamide). With the head unknown, the lipidoid is unknown. 03_enumerated.csv therefore contains ZERO lipidoids. Nothing is guessed."
+  },
+  "series_numeral_ambiguity": {
+    "tokens": [
+      "16I",
+      "16II"
+    ],
+    "where": "Figure S2 caption (p. S2): 'Ethidium bromide (EB) exclusion assay of 16I/DNA and 16II/DNA'. Figure S1 caption (p. S2): 'TEM images of 16II/DNA (A) and 16II/mRNA complexes (B)'.",
+    "what_is_certain": "Lipidoid 16 exists in two forms distinguished by a roman numeral, and Figure S2's own legend names the two plotted series 'Unsaturated Lipidoid' and 'Saturated Lipidoid' -- so the numeral distinguishes the oleyl series from the n-octadecyl series.",
+    "what_is_NOT_determinable": "WHICH numeral is which. The caption lists '16I ... and 16II', the legend lists 'Unsaturated ... Saturated'; nothing states that the two orders correspond, and the SI defines neither numeral. See DECISIONS.md D-2.",
+    "a_tempting_inference_that_is_NOT_made": "Figure S1 shows 16II with both DNA and mRNA, which looks like the lead compound, and the abstract says the unsaturated lipidoids are superior -- so 16II 'should' be unsaturated. But the same abstract ascribes the difference to 'the large, tightly packed lipoplexes of SATURATED lipidoids', which is a reason to show a TEM of the saturated one. The two readings point opposite ways and the SI settles neither. Not assigned."
+  },
+  "library_size_arithmetic": {
+    "distinct_structures_determinable": 0,
+    "distinct_structures_that_exist": "NOT DETERMINABLE from the SI. 16 unsaturated lipidoids are individually measured in Figure S3, and at least one saturated counterpart (lipidoid 16's other form) exists. Whether the saturated series has 16 members or only the one shown in Figure S2 is not stated anywhere in the SI.",
+    "formulations": "NOT RECOVERABLE. The SI states no lipidoid:DNA weight ratio, no N:P, no helper-lipid composition, no dose and no particle concentration. It has no experimental section.",
+    "individually_measured_in_the_file_we_have": 16,
+    "individually_measured_on_a_DELIVERY_endpoint": 0
+  }
+}

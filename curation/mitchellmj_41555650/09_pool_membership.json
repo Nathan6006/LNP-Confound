@@ -1,0 +1,508 @@
+{
+ "n_bLNP_numbers_assigned": 98,
+ "n_bLNP_rows_tabulated": 93,
+ "numbers_assigned_but_never_tabulated": [
+  19,
+  41,
+  55,
+  56,
+  57,
+  67,
+  93,
+  95
+ ],
+ "n_greyed_excluded_from_pool": 12,
+ "greyed_bLNPs": [
+  1,
+  2,
+  7,
+  20,
+  23,
+  33,
+  36,
+  51,
+  60,
+  63,
+  73,
+  74
+ ],
+ "n_in_pooled_administration": 78,
+ "P14_grey_vs_stated_criteria": {
+  "n_compared": 90,
+  "n_disagreeing": 0,
+  "disagreements": [],
+  "what": "The caption's four thresholds and the grey colouring are two independent statements of the same fact. Agreement validates both the colour read and the criteria transcription."
+ },
+ "per_bLNP": {
+  "1": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "PDI 0.472 >= 0.3"
+  },
+  "2": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "PDI 0.451 >= 0.3"
+  },
+  "3": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "4": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "5": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "6": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "7": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "size not measurable; PDI not measurable"
+  },
+  "8": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "9": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "10": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "11": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "12": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "13": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "14": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "15": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "16": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "17": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "18": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "19": {
+   "grey_in_table": false,
+   "fails_stated_criteria": null,
+   "reason": "absent"
+  },
+  "20": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "PDI 0.325 >= 0.3"
+  },
+  "21": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "22": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "23": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "PDI not measurable"
+  },
+  "24": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "25": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "26": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "27": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "28": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "29": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "30": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "31": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "32": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "33": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "RNA 12.4 <= 15 ng/uL"
+  },
+  "34": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "35": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "36": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "EE 36.0% <= 50%; RNA 7.2 <= 15 ng/uL"
+  },
+  "37": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "38": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "39": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "40": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "42": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "43": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "44": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "45": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "46": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "47": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "48": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "49": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "50": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "51": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "EE 43.0% <= 50%; RNA 10.5 <= 15 ng/uL"
+  },
+  "52": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "53": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "54": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "58": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "59": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "60": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "size not measurable; PDI not measurable"
+  },
+  "61": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "62": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "63": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "size not measurable; PDI not measurable"
+  },
+  "64": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "65": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "66": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "68": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "69": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "70": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "71": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "72": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "73": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "EE -39.0% <= 50%; RNA -2.0 <= 15 ng/uL"
+  },
+  "74": {
+   "grey_in_table": true,
+   "fails_stated_criteria": true,
+   "reason": "RNA 11.9 <= 15 ng/uL"
+  },
+  "75": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "76": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "77": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "78": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "79": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "80": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "81": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "82": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "83": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "84": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "85": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "86": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "87": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "88": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "89": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "90": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "91": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "92": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "94": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "96": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "97": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "98": {
+   "grey_in_table": false,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "100": {
+   "grey_in_table": null,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "101": {
+   "grey_in_table": null,
+   "fails_stated_criteria": false,
+   "reason": ""
+  },
+  "102": {
+   "grey_in_table": null,
+   "fails_stated_criteria": false,
+   "reason": ""
+  }
+ }
+}

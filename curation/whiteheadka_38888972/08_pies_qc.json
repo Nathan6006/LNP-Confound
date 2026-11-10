@@ -1,0 +1,109 @@
+{
+ "_what_this_does_not_prove": "A pie reproduces a FRACTION. It says nothing about the absolute fluxes in Figure 3A, which are stacked on a log axis and are not decomposed anywhere in this folder.",
+ "legend_swatch_rgb": {
+  "Liver": [
+   118.0,
+   125.0,
+   166.0
+  ],
+  "Lungs": [
+   135.0,
+   65.0,
+   149.0
+  ],
+  "Spleen": [
+   124.0,
+   172.0,
+   212.0
+  ]
+ },
+ "printed_statistic_check": {
+  "514O6,10": {
+   "Liver": {
+    "delta_pp": -5.11,
+    "measured_pct": 24.89,
+    "printed_pct": 30.0
+   },
+   "Lungs": {
+    "delta_pp": 5.58,
+    "measured_pct": 40.58,
+    "printed_pct": 35.0
+   },
+   "Spleen": {
+    "delta_pp": -0.47,
+    "measured_pct": 34.53,
+    "printed_pct": 35.0
+   }
+  }
+ },
+ "rows": [
+  {
+   "Liver_pct": 24.89,
+   "Liver_pct_by_pixel_count": 23.64,
+   "Lungs_pct": 40.58,
+   "Lungs_pct_by_pixel_count": 38.1,
+   "Spleen_pct": 34.53,
+   "Spleen_pct_by_pixel_count": 32.32,
+   "disc_px": 170045,
+   "height_px": 465,
+   "lipidoid": "514O6,10",
+   "rays": 3600,
+   "rays_unresolved": 0,
+   "sum_pct": 100.0,
+   "width_px": 466
+  },
+  {
+   "Liver_pct": 17.65,
+   "Liver_pct_by_pixel_count": 16.83,
+   "Lungs_pct": 21.51,
+   "Lungs_pct_by_pixel_count": 20.31,
+   "Spleen_pct": 60.84,
+   "Spleen_pct_by_pixel_count": 56.97,
+   "disc_px": 170009,
+   "height_px": 465,
+   "lipidoid": "503Oi10",
+   "rays": 3600,
+   "rays_unresolved": 2,
+   "sum_pct": 100.0,
+   "width_px": 466
+  },
+  {
+   "Liver_pct": 6.64,
+   "Liver_pct_by_pixel_count": 6.59,
+   "Lungs_pct": 3.39,
+   "Lungs_pct_by_pixel_count": 3.19,
+   "Spleen_pct": 89.97,
+   "Spleen_pct_by_pixel_count": 84.35,
+   "disc_px": 172251,
+   "height_px": 468,
+   "lipidoid": "503O8,12",
+   "rays": 3600,
+   "rays_unresolved": 2,
+   "sum_pct": 100.0,
+   "width_px": 469
+  }
+ ],
+ "sector_rgb_measured_in_the_pies": {
+  "Liver": [
+   118.0,
+   125.0,
+   167.0
+  ],
+  "Lungs": [
+   136.0,
+   65.0,
+   157.0
+  ],
+  "Spleen": [
+   124.0,
+   175.0,
+   254.0
+  ]
+ },
+ "sector_to_swatch_distance_rgb": {
+  "Liver": 1.0,
+  "Lungs": 8.1,
+  "Spleen": 42.1
+ },
+ "tol_rgb": 40.0
+}

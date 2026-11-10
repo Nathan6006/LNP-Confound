@@ -1,0 +1,494 @@
+{
+ "tail_name_token_rule": {
+  "agreement_count": 5,
+  "n_tested": 5,
+  "prefix_agreement": 5,
+  "per_tail": [
+   {
+    "tail": "O17O",
+    "name_token": 17,
+    "measured_chain_heavy_atoms": 17,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "O17S",
+    "name_token": 17,
+    "measured_chain_heavy_atoms": 17,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "O17Se",
+    "name_token": 17,
+    "measured_chain_heavy_atoms": 17,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "O16S-S",
+    "name_token": 16,
+    "measured_chain_heavy_atoms": 16,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "N16S-S",
+    "name_token": 16,
+    "measured_chain_heavy_atoms": 16,
+    "agrees": true,
+    "prefix": "N",
+    "linker_from_route": "amide",
+    "prefix_agrees": true
+   }
+  ],
+  "passes": true
+ },
+ "si_reagent_molar_mass_ladder": {
+  "agreement_count": 16,
+  "n_tested": 18,
+  "intermediates_agreement": 2,
+  "n_intermediates": 2,
+  "per_reagent": [
+   {
+    "section": "1.1",
+    "reagent": "sodium hydride",
+    "grams": 0.72,
+    "mmol": 30.0,
+    "implied_g_per_mol": 24.0,
+    "true_molar_mass": 24.0,
+    "pct_error": 0.01,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.1",
+    "reagent": "ethylene glycol",
+    "grams": 5.6,
+    "mmol": 90.0,
+    "implied_g_per_mol": 62.22,
+    "true_molar_mass": 62.07,
+    "pct_error": 0.25,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.1",
+    "reagent": "1-bromotetradecane",
+    "grams": 6.0,
+    "mmol": 20.0,
+    "implied_g_per_mol": 300.0,
+    "true_molar_mass": 277.29,
+    "pct_error": 8.19,
+    "tol_pct": 5.0,
+    "ok": false
+   },
+   {
+    "section": "1.1",
+    "reagent": "potassium iodide",
+    "grams": 3.3,
+    "mmol": 20.0,
+    "implied_g_per_mol": 165.0,
+    "true_molar_mass": 166.0,
+    "pct_error": 0.6,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.1",
+    "reagent": "2-(tetradecyloxy)ethanol *",
+    "grams": 3.3,
+    "mmol": 12.8,
+    "implied_g_per_mol": 257.81,
+    "true_molar_mass": 258.45,
+    "pct_error": 0.25,
+    "tol_pct": 0.5,
+    "ok": true
+   },
+   {
+    "section": "1.1",
+    "reagent": "triethylamine",
+    "grams": 1.9,
+    "mmol": 19.2,
+    "implied_g_per_mol": 98.96,
+    "true_molar_mass": 101.19,
+    "pct_error": 2.21,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.1",
+    "reagent": "acryloyl chloride",
+    "grams": 1.4,
+    "mmol": 15.4,
+    "implied_g_per_mol": 90.91,
+    "true_molar_mass": 90.51,
+    "pct_error": 0.44,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.2",
+    "reagent": "1-bromotetradecane",
+    "grams": 5.0,
+    "mmol": 18.0,
+    "implied_g_per_mol": 277.78,
+    "true_molar_mass": 277.29,
+    "pct_error": 0.18,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.2",
+    "reagent": "potassium carbonate",
+    "grams": 3.6,
+    "mmol": 26.0,
+    "implied_g_per_mol": 138.46,
+    "true_molar_mass": 138.2,
+    "pct_error": 0.19,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.2",
+    "reagent": "2-mercaptoethanol",
+    "grams": 1.1,
+    "mmol": 14.0,
+    "implied_g_per_mol": 78.57,
+    "true_molar_mass": 78.14,
+    "pct_error": 0.56,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.3",
+    "reagent": "potassium selenocyanate",
+    "grams": 1.5,
+    "mmol": 10.0,
+    "implied_g_per_mol": 150.0,
+    "true_molar_mass": 144.08,
+    "pct_error": 4.11,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.3",
+    "reagent": "2-bromoethanol",
+    "grams": 1.6,
+    "mmol": 13.0,
+    "implied_g_per_mol": 123.08,
+    "true_molar_mass": 124.97,
+    "pct_error": 1.51,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.3",
+    "reagent": "sodium borohydride",
+    "grams": 0.9,
+    "mmol": 24.0,
+    "implied_g_per_mol": 37.5,
+    "true_molar_mass": 37.83,
+    "pct_error": 0.88,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.3",
+    "reagent": "1-bromotetradecane",
+    "grams": 4.1,
+    "mmol": 15.0,
+    "implied_g_per_mol": 273.33,
+    "true_molar_mass": 277.29,
+    "pct_error": 1.43,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.4",
+    "reagent": "2,2'-dipyridyl disulfide",
+    "grams": 4.0,
+    "mmol": 13.47,
+    "implied_g_per_mol": 296.96,
+    "true_molar_mass": 220.32,
+    "pct_error": 34.78,
+    "tol_pct": 5.0,
+    "ok": false
+   },
+   {
+    "section": "1.4",
+    "reagent": "1-dodecanol",
+    "grams": 2.0,
+    "mmol": 11.23,
+    "implied_g_per_mol": 178.09,
+    "true_molar_mass": 186.34,
+    "pct_error": 4.42,
+    "tol_pct": 5.0,
+    "ok": true
+   },
+   {
+    "section": "1.4",
+    "reagent": "dodecyl 2-pyridyl disulfide *",
+    "grams": 2.0,
+    "mmol": 6.43,
+    "implied_g_per_mol": 311.04,
+    "true_molar_mass": 311.56,
+    "pct_error": 0.17,
+    "tol_pct": 0.5,
+    "ok": true
+   },
+   {
+    "section": "1.4",
+    "reagent": "2-mercaptoethanol",
+    "grams": 0.6,
+    "mmol": 7.7,
+    "implied_g_per_mol": 77.92,
+    "true_molar_mass": 78.14,
+    "pct_error": 0.27,
+    "tol_pct": 5.0,
+    "ok": true
+   }
+  ],
+  "what_it_pins": "the two INTERMEDIATES are the load-bearing rows: 2-(tetradecyloxy)ethanol pins the O17 tails' chain at C14 and dodecyl 2-pyridyl disulfide pins the 16S-S tails' chain at C12, each to <=0.3 %. Three starting-material lines are sloppier by up to 35 %, which is why the chain length is taken from the intermediates and the discrepancy is logged in 08_contradictions.csv.",
+  "passes": true
+ },
+ "repeated_formulation_identity": {
+  "agreement_count": 3,
+  "n_tested": 3,
+  "positions": [
+   1,
+   6,
+   10
+  ],
+  "top_rows": [
+   274.0,
+   274.0,
+   274.0
+  ],
+  "values": [
+   5078.76,
+   5078.76,
+   5078.76
+  ],
+  "max_spread_px": 0.0,
+  "what_it_is": "16:4:1:1 is drawn three times, once in each sub-series. Three independent window detections and three independent bar_top calls must land on the same row. This is an unprinted identity the authors drew, not a recomputed marginal of our own read.",
+  "passes": true
+ },
+ "untreated_viability_is_100": {
+  "agreement_count": 1,
+  "n_tested": 1,
+  "ut_value_percent": 99.65,
+  "target": 100.0,
+  "error_pp": 0.35,
+  "error_px": 1.52,
+  "tol_pp": 1.0,
+  "what_it_is": "Figure S2b is 'Cell viability (%)' and the SI says the viability is calculated relative to untreated cells, so the UT bar MUST be exactly 100. The authors drew that round number and never printed it; it is external to our pipeline in a way a recomputed marginal is not.",
+  "passes": true
+ },
+ "printed_optima_reproduced": {
+  "agreement_count": 2,
+  "n_tested": 2,
+  "per_claim": [
+   {
+    "claim": "SI section 6: 'the best ... lipidoid concentration was found to be ... 30 ug/mL'",
+    "panel": "S2d",
+    "our_argmax": "30",
+    "agrees": true
+   },
+   {
+    "claim": "SI section 6: 'the best delivery time ... ~6 h'",
+    "panel": "S2c",
+    "our_argmax": "7 h",
+    "agrees": true,
+    "note": "the panel has no 6 h bar; 7 h is its maximum and 5 h its neighbour, so '~6 h' is consistent with either. Recorded as consistent, not as exact."
+   }
+  ],
+  "passes": true
+ },
+ "axis_calibration_and_loo": {
+  "agreement_count": 4,
+  "n_tested": 4,
+  "per_panel": [
+   {
+    "panel": "a",
+    "n_ticks": 5,
+    "fit_residual_px": 0.3054,
+    "loo_worst_px": 0.7634,
+    "loo_tol_px": 1.5,
+    "px_per_unit": 0.0664,
+    "ok": true
+   },
+   {
+    "panel": "b",
+    "n_ticks": 3,
+    "fit_residual_px": 0.0191,
+    "loo_worst_px": 0.0573,
+    "loo_tol_px": 1.5,
+    "px_per_unit": 4.3511,
+    "ok": true
+   },
+   {
+    "panel": "c",
+    "n_ticks": 3,
+    "fit_residual_px": 0.0418,
+    "loo_worst_px": 0.1254,
+    "loo_tol_px": 1.5,
+    "px_per_unit": 0.0369,
+    "ok": true
+   },
+   {
+    "panel": "d",
+    "n_ticks": 3,
+    "fit_residual_px": 0.0056,
+    "loo_worst_px": 0.0168,
+    "loo_tol_px": 1.5,
+    "px_per_unit": 0.0096,
+    "ok": true
+   }
+  ],
+  "why_loo": "calibrate's max-residual test is weak against a SINGLE bad tick; loo_residuals has no leverage masking. Both are reported.",
+  "passes": true
+ },
+ "bar_flank_agreement": {
+  "agreement_count": 33,
+  "n_tested": 33,
+  "max_flank_delta_px": 0.0,
+  "what_it_is": "every bar carries a symmetric s.d. whisker with a cap. A cap is centred, so it is in NEITHER flank; a flank delta of 0 on all bars is the evidence that no cap was read as a top (error class 32, F-018).",
+  "passes": true
+ },
+ "row_counts_sum": {
+  "agreement_count": 1,
+  "n_tested": 1,
+  "n_values": 44,
+  "n_emitted": 13,
+  "n_skipped": 31,
+  "every_skip_has_a_reason": true,
+  "passes": true
+ },
+ "z_normalisation": {
+  "agreement_count": 1,
+  "n_tested": 1,
+  "n_rows": 13,
+  "mean": 7.69230769210188e-08,
+  "sd_population": 1.000000105223876,
+  "tolerance": 1e-06,
+  "why_not_1e_9": "Experiment_value is stored at 6 dp, as the corpus does; the residual below is that rounding and nothing else",
+  "convention": "per-experiment z-score of log10, population sd (CLAUDE.md s3)",
+  "passes": true
+ },
+ "flags_on_the_row": {
+  "agreement_count": 13,
+  "n_tested": 13,
+  "rows_with_a_caveat": 13,
+  "confidence_values": [
+   "medium"
+  ],
+  "passes": true
+ },
+ "emit_refuses_a_literal_confidence": {
+  "agreement_count": 1,
+  "n_tested": 1,
+  "raised_on_literal": true,
+  "passes": true
+ },
+ "c10_anchor_gate": {
+  "agreement_count": 3,
+  "n_tested": 3,
+  "returncode_check": 0,
+  "returncode_seeded": 1,
+  "returncode_provenance": 0,
+  "what_the_seed_is": "one Michael arm moved from the amine nitrogen onto imidazole C2. Molecular formula C44H83N3O4S2 and exact mass 781.582500 are IDENTICAL to 6 dp, so no mass check can see it; the skeleton InChIKey changes from OLOIOPYNTGMAAP to GNLMIRXUIQYCQW.",
+  "passes": true
+ },
+ "corpus_overlap": {
+  "agreement_count": 1,
+  "n_tested": 1,
+  "full_inchikey_hits": 0,
+  "skeleton_inchikey_hits": 0,
+  "near_miss_head_93_vitro_rows": 277,
+  "near_miss_head_93_vivo_rows": 25,
+  "near_miss_experiments": [
+   "AA_2008",
+   "AP_2025",
+   "BL_2023",
+   "BL_2023_3CR",
+   "BL_2024",
+   "JW_2024",
+   "KW_2014",
+   "KZ_2016",
+   "LR_2023",
+   "XH_2024_2",
+   "YR_2024",
+   "YY_2023",
+   "ZC_2023"
+  ],
+  "leading_token_rows_reported_not_acted_on": 11,
+  "passes": true
+ },
+ "figS1_mass_confirms_head_9322": {
+  "agreement_count": 2,
+  "n_tested": 2,
+  "measured_mz": 765.5,
+  "Da_per_px": 3.93,
+  "per_test": [
+   {
+    "test": "head 9322 vs head 93",
+    "picks_9322": true,
+    "deviation_9322_px": 0.22,
+    "deviation_93_px": 3.78,
+    "margin_x": 17.5
+   },
+   {
+    "test": "which first-pass glyph candidate",
+    "nearest": 764.73,
+    "picks_9322": true,
+    "distances_px": {
+     "784.73": 4.89,
+     "794.75": 7.44,
+     "764.73": 0.2
+    }
+   }
+  ],
+  "n_panels_calibrated": 2,
+  "n_panels_refused": 4,
+  "what_changed": "the first pass refused this figure outright. With no hypothesis a ~4 Da/px axis cannot pin a formula, which was true; with a head recovered from the corpus the question becomes WHICH of three candidates 20 and 30 Da apart, and the axis answers that decisively.",
+  "passes": true
+ },
+ "_refusals": {
+  "figure_S1_mass_spectra": {
+   "_status": "PARTLY SUPERSEDED 2026-11-10. The GLYPH read is still refused -- the labels really are illegible. What is no longer refused is the panel: with head 9322 recovered from the corpus, the base-peak position measured against the m/z axis decides between the three candidate labels, and 2 of 6 panels calibrate under criteria that cannot be tuned to the answer. See 09_figS1_mass_test.json and 08_retracted_suspicions.csv R-06.",
+   "still_refused": "4 of 6 panels: no glyph gap in 2..12 yields 10 tick labels that are uniformly spaced to 4 % AND carry the 3-digit/4-digit width signature. The threshold was NOT loosened to recover them (O17S misses at 4.65 % nonuniformity, O16B at 18.3 %, EC18 at 37.8 %, N16B never reaches 10 boxes). So D-3 (is O16B the same as O16S-S) is still OPEN.",
+   "panel": "Figure S1, ESI-MS of head 9322 with six tails",
+   "raster_px": [
+    1558,
+    810
+   ],
+   "base_peak_label_glyph_height_px": [
+    5,
+    7
+   ],
+   "base_peak_label_box_width_px": [
+    18,
+    25
+   ],
+   "upscale_tried": "28x LANCZOS",
+   "verdict": "ILLEGIBLE. The 9322-O17O base peak reads as 784.73 / 794.75 / 764.73 with no way to decide between them.",
+   "consequence": "head 9322's molecular formula cannot be solved, so the four Figure S3 delivery values for 9322-O17S have no molecule and none of the seventeen 93xx analogue heads can be enumerated.",
+   "what_the_first_pass_got_wrong": "it concluded that because the axis cannot PIN a formula it could not TEST one. Those are different questions. ~3.9 Da/px still separates hypotheses 14 Da apart at a 3.6 px margin. The refusal was correct for the read and wrong as a stopping point.",
+   "what_is_still_true": "the axis cannot separate O from S (16 Da, ~4 px is marginal) and cannot separate O16B from N16B (1.97 Da, 0.5 px). Those remain unresolved."
+  }
+ },
+ "_summary": {
+  "n_checks": 14,
+  "n_failed": 0,
+  "failed": []
+ }
+}

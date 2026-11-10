@@ -1,0 +1,668 @@
+{
+ "_scope": "Sago et al. PNAS 2018, PMID 30275336. Compared against the LIVE corpus.",
+ "corpus_shape": {
+  "vitro": [
+   29195,
+   79
+  ],
+  "vivo": [
+   1803,
+   79
+  ]
+ },
+ "EXACT_InChIKey_overlap": {
+  "performed": false,
+  "why": "This paper yields NO determinable SMILES for any of its 8 lipid-amine compounds (7C1, 73, 78, 80, 83, 88, 90, 92). Four are PEI600/PEI1200 conjugates (polydisperse branched polymers); three are triethylenetetramine conjugates and one a macrocyclic tetraamine conjugate, all drawn as a single-repeat-unit cartoon with the backbone truncated to two stubs and NO stated degree of substitution. There is nothing to canonicalise, so an InChIKey comparison would be a comparison of invented molecules.",
+  "full_InChIKey_matches": null,
+  "skeleton_InChIKey_matches": null
+ },
+ "NAME_overlap": {
+  "vitro:7C1": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 34,
+   "distinct_names_containing": [
+    "117C14",
+    "117C18",
+    "A10Iso7C10",
+    "A10Iso7C11",
+    "A11Iso7C10",
+    "A11Iso7C11",
+    "A12Iso7C10",
+    "A12Iso7C11"
+   ],
+   "experiments_containing": [
+    "KL_2010",
+    "LL_2012",
+    "LM_2019"
+   ]
+  },
+  "vitro:73": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 22,
+   "distinct_names_containing": [
+    "731-22",
+    "731-23",
+    "731-9",
+    "732-22",
+    "732-23",
+    "732-9",
+    "733-22",
+    "733-23"
+   ],
+   "experiments_containing": [
+    "BL_2024",
+    "KW_2014"
+   ]
+  },
+  "vitro:78": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 37,
+   "distinct_names_containing": [
+    "A178_C10",
+    "A178_C11",
+    "A178_C12",
+    "A178_C13",
+    "A178_C14",
+    "A378_C10",
+    "A378_C11",
+    "A378_C12"
+   ],
+   "experiments_containing": [
+    "KW_2014",
+    "YR_2024"
+   ]
+  },
+  "vitro:80": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 94,
+   "distinct_names_containing": [
+    "80-L1-C10",
+    "80-L1-C12",
+    "80-L1-C14",
+    "80-L1-C6",
+    "80-L1-C8",
+    "80-L2-C10",
+    "80-L2-C12",
+    "80-L2-C14"
+   ],
+   "experiments_containing": [
+    "AA_2008",
+    "JW_2024",
+    "KW_2014",
+    "QL_2026",
+    "YR_2024"
+   ]
+  },
+  "vitro:83": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 22,
+   "distinct_names_containing": [
+    "831-22",
+    "831-23",
+    "831-9",
+    "832-22",
+    "832-23",
+    "832-9",
+    "833-22",
+    "833-23"
+   ],
+   "experiments_containing": [
+    "BL_2024",
+    "KW_2014"
+   ]
+  },
+  "vitro:88": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 10,
+   "distinct_names_containing": [
+    "A188_C10",
+    "A188_C11",
+    "A188_C12",
+    "A188_C13",
+    "A188_C14",
+    "A388_C10",
+    "A388_C11",
+    "A388_C12"
+   ],
+   "experiments_containing": [
+    "KW_2014"
+   ]
+  },
+  "vitro:90": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 62,
+   "distinct_names_containing": [
+    "90_N12",
+    "90_N14",
+    "90_N15",
+    "90_N16",
+    "90_N18",
+    "90_O10",
+    "90_O12",
+    "90_O13"
+   ],
+   "experiments_containing": [
+    "AA_2008",
+    "JW_2024",
+    "KW_2014",
+    "YR_2024"
+   ]
+  },
+  "vitro:92": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 36,
+   "distinct_names_containing": [
+    "A10Iso92DC18",
+    "A11Iso92DC18",
+    "A12Iso92DC18",
+    "A192_C10",
+    "A192_C11",
+    "A192_C12",
+    "A192_C13",
+    "A192_C14"
+   ],
+   "experiments_containing": [
+    "JW_2024",
+    "KW_2014",
+    "LM_2019"
+   ]
+  },
+  "vitro:7C2": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 0,
+   "distinct_names_containing": [],
+   "experiments_containing": []
+  },
+  "vitro:7C3": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 0,
+   "distinct_names_containing": [],
+   "experiments_containing": []
+  },
+  "vitro:7C4": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 0,
+   "distinct_names_containing": [],
+   "experiments_containing": []
+  },
+  "vivo:7C1": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 2,
+   "distinct_names_containing": [
+    "A4I18R7C18-2"
+   ],
+   "experiments_containing": [
+    "ZH_2023"
+   ]
+  },
+  "vivo:73": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 2,
+   "distinct_names_containing": [
+    "KIST_I73"
+   ],
+   "experiments_containing": [
+    "SY_2025"
+   ]
+  },
+  "vivo:78": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 4,
+   "distinct_names_containing": [
+    "4k:a78|i02|o29+o29|c23",
+    "4k:a78|i02|o29+o29|cl05&o04",
+    "4k:a78|i02|o31+o31|c23",
+    "4k:a78|i02|o47+o47|c23"
+   ],
+   "experiments_containing": [
+    "JW_2024"
+   ]
+  },
+  "vivo:80": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 2,
+   "distinct_names_containing": [
+    "A80_C13",
+    "Lipid-180"
+   ],
+   "experiments_containing": [
+    "KW_2014",
+    "SX_2025"
+   ]
+  },
+  "vivo:83": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 3,
+   "distinct_names_containing": [
+    "KIST_I83",
+    "Lipid-183"
+   ],
+   "experiments_containing": [
+    "SX_2025",
+    "SY_2025"
+   ]
+  },
+  "vivo:88": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 1,
+   "distinct_names_containing": [
+    "Lipid-188"
+   ],
+   "experiments_containing": [
+    "SX_2025"
+   ]
+  },
+  "vivo:90": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 0,
+   "distinct_names_containing": [],
+   "experiments_containing": []
+  },
+  "vivo:92": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 2,
+   "distinct_names_containing": [
+    "KIST_I92"
+   ],
+   "experiments_containing": [
+    "SY_2025"
+   ]
+  },
+  "vivo:7C2": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 2,
+   "distinct_names_containing": [
+    "A1I12R47C21"
+   ],
+   "experiments_containing": [
+    "ZH_2023"
+   ]
+  },
+  "vivo:7C3": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 0,
+   "distinct_names_containing": [],
+   "experiments_containing": []
+  },
+  "vivo:7C4": {
+   "exact_IL_name_matches": 0,
+   "names_CONTAINING_token_SUPERSET": 0,
+   "distinct_names_containing": [],
+   "experiments_containing": []
+  }
+ },
+ "NAME_TOKEN_COLLISION_WARNING": {
+  "vitro:73": {
+   "rows_a_naive_substring_join_would_capture": 22,
+   "distinct_structures_those_rows_span": 22,
+   "experiments": [
+    "BL_2024",
+    "KW_2014"
+   ]
+  },
+  "vitro:78": {
+   "rows_a_naive_substring_join_would_capture": 37,
+   "distinct_structures_those_rows_span": 37,
+   "experiments": [
+    "KW_2014",
+    "YR_2024"
+   ]
+  },
+  "vitro:80": {
+   "rows_a_naive_substring_join_would_capture": 94,
+   "distinct_structures_those_rows_span": 85,
+   "experiments": [
+    "AA_2008",
+    "JW_2024",
+    "KW_2014",
+    "QL_2026",
+    "YR_2024"
+   ]
+  },
+  "vitro:83": {
+   "rows_a_naive_substring_join_would_capture": 22,
+   "distinct_structures_those_rows_span": 22,
+   "experiments": [
+    "BL_2024",
+    "KW_2014"
+   ]
+  },
+  "vitro:88": {
+   "rows_a_naive_substring_join_would_capture": 10,
+   "distinct_structures_those_rows_span": 10,
+   "experiments": [
+    "KW_2014"
+   ]
+  },
+  "vitro:90": {
+   "rows_a_naive_substring_join_would_capture": 62,
+   "distinct_structures_those_rows_span": 45,
+   "experiments": [
+    "AA_2008",
+    "JW_2024",
+    "KW_2014",
+    "YR_2024"
+   ]
+  },
+  "vivo:73": {
+   "rows_a_naive_substring_join_would_capture": 2,
+   "distinct_structures_those_rows_span": 1,
+   "experiments": [
+    "SY_2025"
+   ]
+  },
+  "vivo:78": {
+   "rows_a_naive_substring_join_would_capture": 4,
+   "distinct_structures_those_rows_span": 4,
+   "experiments": [
+    "JW_2024"
+   ]
+  },
+  "vivo:80": {
+   "rows_a_naive_substring_join_would_capture": 2,
+   "distinct_structures_those_rows_span": 2,
+   "experiments": [
+    "KW_2014",
+    "SX_2025"
+   ]
+  },
+  "vivo:83": {
+   "rows_a_naive_substring_join_would_capture": 3,
+   "distinct_structures_those_rows_span": 2,
+   "experiments": [
+    "SX_2025",
+    "SY_2025"
+   ]
+  },
+  "vivo:88": {
+   "rows_a_naive_substring_join_would_capture": 1,
+   "distinct_structures_those_rows_span": 1,
+   "experiments": [
+    "SX_2025"
+   ]
+  },
+  "vivo:90": {
+   "rows_a_naive_substring_join_would_capture": 0,
+   "distinct_structures_those_rows_span": 0,
+   "experiments": []
+  }
+ },
+ "SUPERSET_substructure_sweep": {
+  "vitro:epoxide_opened_2hydroxyalkyl_on_N": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 1264,
+   "corpus_rows_matching": 2096,
+   "experiments": [
+    "AA_2008",
+    "AC_2025",
+    "BL_2023",
+    "JL_2024",
+    "JM_2016",
+    "JW_2024",
+    "KL_2010",
+    "KW_2014",
+    "LL_2026",
+    "LL_2026_2",
+    "LX_2024_3",
+    "SW_2024",
+    "XH_2024"
+   ]
+  },
+  "vitro:michael_adduct_3oxopropyl_ester_on_N": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 5192,
+   "corpus_rows_matching": 7023,
+   "experiments": [
+    "AA_2008",
+    "BL_2023",
+    "JM_2016",
+    "JW_2024",
+    "KS_2024",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2026",
+    "LL_2026_2",
+    "LM_2019",
+    "LX_2024_2",
+    "LX_2024_3",
+    "NC_2024",
+    "SL_2020",
+    "SW_2024",
+    "YY_2023",
+    "ZC_2023",
+    "ZT_2026"
+   ]
+  },
+  "vitro:michael_adduct_3oxopropyl_amide_on_N": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 457,
+   "corpus_rows_matching": 462,
+   "experiments": [
+    "AA_2008",
+    "JM_2016",
+    "KW_2014",
+    "LX_2024_3",
+    "XH_2025",
+    "YX_2026_SDL"
+   ]
+  },
+  "vitro:aminoethyl_aminoethyl_TETA_backbone": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 2990,
+   "corpus_rows_matching": 3724,
+   "experiments": [
+    "AA_2008",
+    "AC_2025",
+    "BL_2023",
+    "BL_2023_3CR",
+    "BL_2024",
+    "FG_2026",
+    "JC_2023",
+    "JM_2016",
+    "JW_2024",
+    "KL_2010",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2012",
+    "LL_2026",
+    "LL_2026_2",
+    "LX_2024",
+    "LX_2024_2",
+    "MO_2026",
+    "NC_2024",
+    "NG_2025",
+    "QL_2026",
+    "SL_2020",
+    "SL_2021",
+    "XH_2024_2",
+    "XH_2025",
+    "YR_2024",
+    "YX_2024",
+    "YX_2026",
+    "YX_2026_SDL",
+    "YY_2023",
+    "ZC_2023"
+   ]
+  },
+  "vitro:_unparsed_structures": 0,
+  "vivo:epoxide_opened_2hydroxyalkyl_on_N": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 277,
+   "corpus_rows_matching": 290,
+   "experiments": [
+    "BL_2023",
+    "LL_2025",
+    "RG_2023",
+    "SX_2025",
+    "XD_2026",
+    "XH_2024",
+    "ZT_2026"
+   ]
+  },
+  "vivo:michael_adduct_3oxopropyl_ester_on_N": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 601,
+   "corpus_rows_matching": 661,
+   "experiments": [
+    "BL_2023",
+    "KW_2014",
+    "KZ_2016",
+    "LR_2023",
+    "SY_2025",
+    "ZC_2023",
+    "ZT_2026"
+   ]
+  },
+  "vivo:michael_adduct_3oxopropyl_amide_on_N": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 14,
+   "corpus_rows_matching": 21,
+   "experiments": [
+    "SX_2025",
+    "SY_2025",
+    "XD_2026",
+    "ZH_2023"
+   ]
+  },
+  "vivo:aminoethyl_aminoethyl_TETA_backbone": {
+   "LABEL": "SUPERSET - class membership, NOT identity with this paper's compounds",
+   "distinct_corpus_structures_matching": 197,
+   "corpus_rows_matching": 284,
+   "experiments": [
+    "AP_2025",
+    "BL_2023",
+    "BL_2024",
+    "KW_2014",
+    "KZ_2016",
+    "LR_2023",
+    "NG_2025_2",
+    "XH_2024_2",
+    "ZC_2023",
+    "ZH_2023"
+   ]
+  },
+  "vivo:_unparsed_structures": 0
+ },
+ "EXCIPIENT_overlap_guarded_lookup": {
+  "DOPE": {
+   "found": true,
+   "corpus_SMILES": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[NH3+])OC(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  "DOPC": {
+   "found": true,
+   "corpus_SMILES": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC"
+  },
+  "DSPC": {
+   "found": true,
+   "corpus_SMILES": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC"
+  },
+  "Cholesterol": {
+   "found": true,
+   "corpus_SMILES": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C"
+  },
+  "cholesterol": {
+   "found": false,
+   "why": "SystemExit: corpus_components.smi('cholesterol'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "18:1 Lyso PC": {
+   "found": false,
+   "why": "SystemExit: corpus_components.smi('18:1 Lyso PC'): not found in any component column of the corpus. Check the spelling against the 19707 names that are present."
+  },
+  "C14-PEG2000": {
+   "found": true,
+   "corpus_SMILES": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+  },
+  "DMG-PEG2000": {
+   "found": true,
+   "corpus_SMILES": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+  }
+ },
+ "EXPERIMENT_ID_collision_check": {
+  "candidate_ids_for_this_paper": [
+   "CS_2018"
+  ],
+  "vitro_ids_in_use": [
+   "AA_2008",
+   "AC_2025",
+   "BL_2023",
+   "BL_2023_3CR",
+   "BL_2024",
+   "FG_2026",
+   "JC_2023",
+   "JL_2024",
+   "JM_2016",
+   "JW_2024",
+   "KL_2010",
+   "KS_2024",
+   "KW_2014",
+   "KZ_2016",
+   "LL_2012",
+   "LL_2026",
+   "LL_2026_2",
+   "LM_2019",
+   "LX_2024",
+   "LX_2024_2",
+   "LX_2024_3",
+   "LZ_2025",
+   "MO_2026",
+   "NC_2024",
+   "NG_2025",
+   "QL_2026",
+   "SL_2020",
+   "SL_2021",
+   "SP_2020",
+   "SW_2024",
+   "WT_2026",
+   "XH_2024",
+   "XH_2024_2",
+   "XH_2025",
+   "YR_2024",
+   "YX_2024",
+   "YX_2026",
+   "YX_2026_SDL",
+   "YY_2023",
+   "YZ_2022",
+   "YZ_2024",
+   "ZC_2023",
+   "ZT_2026"
+  ],
+  "vivo_ids_in_use": [
+   "AP_2025",
+   "BL_2023",
+   "BL_2024",
+   "JW_2024",
+   "KW_2014",
+   "KZ_2016",
+   "LL_2025",
+   "LR_2023",
+   "NG_2025_2",
+   "RG_2023",
+   "SB_2024",
+   "SS_2018",
+   "SX_2025",
+   "SY_2025",
+   "XD_2026",
+   "XH_2024",
+   "XH_2024_2",
+   "ZC_2023",
+   "ZH_2023",
+   "ZT_2026"
+  ],
+  "CS_2018_in_use": false,
+  "note": "SS_2018 (PMID 29653760) already exists in the vivo pool and is a DIFFERENT paper; checked by PMID, not by the year token."
+ },
+ "POOLED_READOUT_PRECEDENT": {
+  "finding": "The corpus schema already carries an Experiment_batching column whose vocabulary is {barcoded, individual}.",
+  "LR_2023": {
+   "pmid": 37127709,
+   "rows": 407,
+   "Experiment_batching": [
+    "barcoded"
+   ],
+   "Cargo_type": [
+    "peptide_barcode"
+   ]
+  },
+  "consequence": "A POOLED multiplexed in vivo barcode screen is ALREADY in the corpus, declared as such. Pooling is therefore a labelled property, not grounds for refusal. See D-1."
+ }
+}

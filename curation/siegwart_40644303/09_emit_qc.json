@@ -1,0 +1,30 @@
+{
+ "vitro_rows": 465,
+ "vivo_rows": 40,
+ "total": 505,
+ "rows_with_a_caveat": 180,
+ "rows_with_value_is_bound": 68,
+ "rows_with_positional_ambiguity": 135,
+ "experiments": [
+  "SL_2025",
+  "SL_2025_2"
+ ],
+ "z_check": {
+  "vitro/SL_2025": {
+   "n": 465,
+   "mean": -2.43e-10,
+   "sd": 1.0
+  },
+  "vivo/SL_2025": {
+   "n": 17,
+   "mean": -5.9e-11,
+   "sd": 1.0
+  },
+  "vivo/SL_2025_2": {
+   "n": 23,
+   "mean": 0.0,
+   "sd": 1.0
+  }
+ },
+ "descriptor_columns": "left blank on purpose: build_dataset.py recomputes all 22 from IL_SMILES, and a curation that writes its own is how 676 rows came to carry descriptors inconsistent with their own structure."
+}

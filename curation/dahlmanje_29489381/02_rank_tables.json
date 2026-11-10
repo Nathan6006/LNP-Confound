@@ -1,0 +1,145 @@
+{
+ "tables": [
+  {
+   "si_page": 20,
+   "label": "Library 1",
+   "columns": [
+    "Lipomer",
+    "Amine Lipid",
+    "Mass Ratio",
+    "PEG Chain",
+    "PEG MW",
+    "Lipomer Mole %",
+    "Cholesterol Mole %",
+    "PEG Mole %",
+    "Diameter (nm)",
+    "iMAEC",
+    "Heart Ecs",
+    "Lung Ecs",
+    "Marrow Ecs"
+   ],
+   "n_columns": 13,
+   "n_rows": 19,
+   "rows_with_two_cells_on_one_column": 0
+  },
+  {
+   "si_page": 20,
+   "label": "Library 1",
+   "columns": [
+    "Lipomer",
+    "Amine Lipid",
+    "Mass Ratio",
+    "PEG Chain",
+    "PEG MW",
+    "Lipomer Mole %",
+    "Cholesterol Mole %",
+    "PEG Mole %",
+    "Diameter (nm)",
+    "RAWs",
+    "Heart Macs",
+    "Lung Macs",
+    "Marrow Macs"
+   ],
+   "n_columns": 13,
+   "n_rows": 17,
+   "rows_with_two_cells_on_one_column": 0
+  },
+  {
+   "si_page": 20,
+   "label": "Library 2",
+   "columns": [
+    "Lipomer",
+    "Amine",
+    "Lipid",
+    "Phospholipid",
+    "Mass RatioPEG Chain",
+    "Mass RatioPEG Chain #2",
+    "PEG MW",
+    "Lipomer Mole %",
+    "Cholesterol Mole %",
+    "PEG Mole %",
+    "Helper Lipid Mole %",
+    "Diameter (nm)",
+    "iMAEC",
+    "Heart Ecs",
+    "Lung Ecs",
+    "Marrow Ecs"
+   ],
+   "n_columns": 16,
+   "n_rows": 12,
+   "rows_with_two_cells_on_one_column": 0
+  },
+  {
+   "si_page": 20,
+   "label": "Library 2",
+   "columns": [
+    "Lipomer",
+    "Amine",
+    "Lipid",
+    "Phospholipid",
+    "Mass RatioPEG Chain",
+    "Mass RatioPEG Chain #2",
+    "PEG MW",
+    "Lipomer Mole %",
+    "Cholesterol Mole %",
+    "PEG Mole %",
+    "Helper Lipid Mole %",
+    "Diameter (nm)",
+    "RAWs",
+    "Heart Macs",
+    "Lung Macs",
+    "Marrow Macs"
+   ],
+   "n_columns": 16,
+   "n_rows": 11,
+   "rows_with_two_cells_on_one_column": 0
+  },
+  {
+   "si_page": 21,
+   "label": "Library 3",
+   "columns": [
+    "Lipomer",
+    "Amine",
+    "Lipid",
+    "Mass Ratio",
+    "PEG Chain",
+    "PEG MW",
+    "Lipomer Mole %",
+    "Cholesterol Mole %",
+    "PEG Mole %",
+    "Diameter (nm)",
+    "iMAEC",
+    "Heart Ecs",
+    "Lung Ecs",
+    "Marrow Ecs"
+   ],
+   "n_columns": 14,
+   "n_rows": 16,
+   "rows_with_two_cells_on_one_column": 0
+  },
+  {
+   "si_page": 21,
+   "label": "Library 3",
+   "columns": [
+    "Lipomer",
+    "Amine",
+    "Lipid",
+    "Mass Ratio",
+    "PEG Chain",
+    "PEG MW",
+    "Lipomer Mole %",
+    "Cholesterol Mole %",
+    "PEG Mole %",
+    "Diameter (nm)",
+    "RAWs",
+    "Heart Macs",
+    "Lung Macs",
+    "Marrow Macs"
+   ],
+   "n_columns": 14,
+   "n_rows": 12,
+   "rows_with_two_cells_on_one_column": 0
+  }
+ ],
+ "n_rows_total": 87
+}

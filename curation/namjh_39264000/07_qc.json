@@ -1,0 +1,724 @@
+{
+ "_what": "Every check on this curation, with numbers, and a seeded defect for each that records HOW FAR THE METRIC MOVED.",
+ "_sufficiency": "Passing every printed statistic is NECESSARY AND NOT SUFFICIENT. QL_2026 reproduced every printed hit rate on bars up to 28% too high and XD_2026 landed 12/12 inside its stated band on tops 0-21 px wrong, because both errors were geometric and roughly multiplicative. The geometric checks here are `drawn_zero_on_every_colourbar`, `grid_measured_twice` and `fig4c_extreme_markers`.",
+ "_what_no_check_here_can_see": [
+  "CONNECTIVITY, from mass. The two HRMS peaks fix the molecular formula of FH-5-EB-5T-1 and FH-5-EB-5T-2 to 0.3 and 0.4 ppm, and are blind to which nitrogen an arm sits on and to where a branch sits on a chain. The regiochemistry here comes from the SI's synthetic route (SI 1.2.3-1.2.5), not from the mass.",
+  "FH-1, FH-4, FH-6, EB-6 and EB-7 have NO external anchor of any kind -- no named reagent, no HRMS, no NMR assignment. They rest on Fig 3a's drawing, measured by a tracer calibrated on the five blocks that do have one.",
+  "WHICH 177 of the 213 LNPs are not these 36. The 14 functional heads and 14 EB-T chains of the full screen are drawn nowhere.",
+  "Whether Fig S2c and Fig S2e are two measurements of the same mice or two separate experiments. The caption says only that each was normalised to the Nil group 'included in the experiment in question'."
+ ],
+ "checks": {
+  "hrms_fig_S9": {
+   "_what": "Two HRMS peaks printed in SI Figure S9, against formulas built by stage03 from blocks traced in stage01. Mass confirms COMPOSITION and is blind to connectivity.",
+   "_and_that_blindness_was_not_hypothetical": "This curation contained a real connectivity error -- the glycerol ester on the wrong end of the tail, and FH-1 built as linear palmitoyl -- and BOTH of these anchors matched it at 0.3 and 0.5 ppm, because not one atom had changed. See checks.connectivity_fp3_and_acyl_span, which replays it.",
+   "rows": [
+    {
+     "lipid": "FH-5-EB-5T-1",
+     "formula": "C58H100N2O12",
+     "calc_MH+": 1017.7349,
+     "printed_mz": 1017.7352,
+     "delta_Da": -0.00032,
+     "delta_ppm": -0.32,
+     "spectrum": "Sample-1-KL-CUK-154-004",
+     "ion_mode": "FAB+"
+    },
+    {
+     "lipid": "FH-5-EB-5T-2",
+     "formula": "C66H116N2O12",
+     "calc_MH+": 1129.8601,
+     "printed_mz": 1129.8606,
+     "delta_Da": -0.00052,
+     "delta_ppm": -0.46,
+     "spectrum": "Sample-2-KL-CUK-155-006",
+     "ion_mode": "FAB+"
+    }
+   ],
+   "worst_abs_ppm": 0.46,
+   "pass": true,
+   "seeded_defect": {
+    "fault": "one extra CH2 in the ester bridge (EB-5 -> EB-6)",
+    "metric": "abs(delta_ppm)",
+    "clean": 0.46,
+    "seeded": [
+     13771.1,
+     12404.3
+    ],
+    "moved_by_factor": 26966.0,
+    "fires": true
+   }
+  },
+  "tracer_calibration_against_named_reagents": {
+   "_what": "stage01's tracer is run on five blocks whose answer comes from a NAMED REAGENT in the SI, not from the drawing, before it is applied to FH-1, FH-4, FH-6, EB-6 and EB-7, which have no external anchor at all.",
+   "rows": [
+    {
+     "block": "T-1 total carbons",
+     "measured": 16,
+     "required": 16,
+     "pass": true,
+     "external_source": "SI 1.2.2: 2-hexyl-1-decanol, 1.00 g / 4.12 mmol -> MW 242.7; C16H34O = 242.44. A 2-hexyldecyl group is 16 carbons."
+    },
+    {
+     "block": "T-1 branch length",
+     "measured": 6,
+     "required": 6,
+     "pass": true,
+     "external_source": "the 'hexyl' of 2-hexyl-1-decanol"
+    },
+    {
+     "block": "T-2 total carbons",
+     "measured": 20,
+     "required": 20,
+     "pass": true,
+     "external_source": "SI 1.2.2: 2-octyl-1-dodecanol, 1.00 g / 3.35 mmol -> MW 298.5; C20H42O = 298.55."
+    },
+    {
+     "block": "T-2 branch length",
+     "measured": 8,
+     "required": 8,
+     "pass": true,
+     "external_source": "the 'octyl' of 2-octyl-1-dodecanol"
+    },
+    {
+     "block": "EB-5 backbone carbons",
+     "measured": 5,
+     "required": 5,
+     "pass": true,
+     "external_source": "SI 1.2.2: glutaric anhydride, 942 mg / 8.24 mmol -> MW 114.3; glutaric anhydride is C5H6O3, 114.10."
+    },
+    {
+     "block": "FH-5 substituent locants",
+     "measured": [
+      3,
+      5
+     ],
+     "required": [
+      3,
+      5
+     ],
+     "pass": true,
+     "external_source": "SI 1.2.1: 3,5-dihydroxybenzoic acid, 1.5 g / 9.7 mmol -> MW 154.6; C7H6O4 = 154.12."
+    },
+    {
+     "block": "FH-5 spacer CH2 count",
+     "measured": 0,
+     "required": 0,
+     "pass": true,
+     "external_source": "3,5-dihydroxyBENZOIC acid: the carbonyl is bonded to the ring."
+    },
+    {
+     "block": "FH-2 substituent count",
+     "measured": 0,
+     "required": 0,
+     "pass": true,
+     "external_source": "Fig 3a draws FH-2 as an unsubstituted phenyl -- a benzoyl group."
+    }
+   ],
+   "pass": true,
+   "seeded_defect": {
+    "fault": "one vertex dropped from T-1's main chain (the +/-1 zig-zag miscount, error class 48)",
+    "metric": "measured carbon count of T-1",
+    "clean": 16,
+    "required": 16,
+    "seeded": 15,
+    "fires": true
+   }
+  },
+  "connectivity_fp3_and_acyl_span": {
+   "_what": "Connectivity counts, which a molecular formula cannot see. Figure 2b prints FP3 = 3 for 36 of 213 LNPs and 2 for the other 177; FH-1 is the only head with a branch point, so the required value is read off a printed statistic rather than chosen.",
+   "n_members": 36,
+   "n_with_FP3_equal_3": 6,
+   "fig2b_consistency": "6 of the 36 enumerated lipids carry FH-1. Figure 2b counts 36 LNPs at FP3 = 3, which is exactly what these 6 lipids give across Table S2's six LNP types; the printed figure is 36. Recorded as a consistency, not as proof of which LNPs those 36 are.",
+   "violations": [],
+   "pass": true,
+   "seeded_defect": {
+    "fault": "HISTORICAL REPLAY of the defect this curation actually contained: acyl fragments derived by string surgery on a canonical SMILES",
+    "metric": "tertiary carbons and the acyl span from the glycerol ester",
+    "clean": {
+     "tertiary_C": 3,
+     "acyl_span": 5
+    },
+    "seeded": {
+     "tertiary_C": 2,
+     "acyl_span": 4
+    },
+    "AND_THE_POINT": {
+     "formula_identical": true,
+     "exact_mass_delta_Da": 0.0,
+     "meaning": "the broken structure passes BOTH HRMS anchors unchanged. Mass cannot see connectivity."
+    },
+    "replay": {
+     "lipid": "FH-1-EB-5T-1",
+     "correct_SMILES": "CCCCCCCCC(CCCCCC)COC(=O)CCCC(=O)OCC(CN1CCN(CCOC(=O)C(CCCCCC)CCCCCCCC)CC1)OC(=O)CCCC(=O)OCC(CCCCCC)CCCCCCCC",
+     "broken_SMILES": "CCCCCCCCCCCCCCCC(=O)OCCN1CCN(CC(COC(=O)CCCCCCCCC(CCCCCC)COC(=O)CCC)OC(=O)CCCCCCCCC(CCCCCC)COC(=O)CCC)CC1",
+     "formula_correct": "C67H126N2O10",
+     "formula_broken": "C67H126N2O10",
+     "formula_identical": true,
+     "exact_mass_delta_Da": 0.0,
+     "tertiary_C_correct": 3,
+     "tertiary_C_broken": 2,
+     "acyl_span_correct": 5,
+     "acyl_span_broken": 4
+    },
+    "fires": true
+   }
+  },
+  "drawn_zero_on_every_colourbar": {
+   "_what": "The colourbar bottom edge is a round number the authors DREW and never printed. The calibration is fitted on the four tick notches alone, so where it puts 0 is a prediction about a line nobody wrote down.",
+   "rows": [
+    {
+     "panel": "Fig S2c",
+     "predicted_px_for_0": 924.25,
+     "drawn_bar_bottom_px": 923.5,
+     "error_px": 0.75,
+     "error_units": 10.01,
+     "error_as_fraction_of_full_scale": 0.00222,
+     "tick_fit_residual_px": 0.1
+    },
+    {
+     "panel": "Fig S2e",
+     "predicted_px_for_0": 1464.0,
+     "drawn_bar_bottom_px": 1463.5,
+     "error_px": 0.5,
+     "error_units": 6.636,
+     "error_as_fraction_of_full_scale": 0.00147,
+     "tick_fit_residual_px": 0.2
+    },
+    {
+     "panel": "Fig 4b",
+     "predicted_px_for_0": 1033.5,
+     "drawn_bar_bottom_px": 1032.5,
+     "error_px": 1.0,
+     "error_units": 0.02,
+     "error_as_fraction_of_full_scale": 0.002,
+     "tick_fit_residual_px": 0.35
+    }
+   ],
+   "worst_abs_error_px": 1.0,
+   "pass": true,
+   "seeded_defect": {
+    "fault": "scale anchored 3 px off the detected tick notches, the F-019 shape (colourbar read on its own border)",
+    "metric": "px between the predicted 0 and the drawn bar bottom",
+    "clean": [
+     0.75,
+     0.5,
+     1.0
+    ],
+    "seeded": [
+     3.75,
+     3.5,
+     4.0
+    ],
+    "fires": true
+   }
+  },
+  "grid_measured_twice": {
+   "_what": "Cell boundaries detected from the drawn gridlines, against the grid implied by the panel's outer borders. Two independent reads of the same geometry.",
+   "rows": [
+    {
+     "panel": "Fig S2c",
+     "cell_px": {
+      "w": 57.0,
+      "h": 56.167
+     },
+     "disagreement_px": {
+      "x": 1.5,
+      "y": 1.17
+     },
+     "as_fraction_of_cell": {
+      "x": 0.0263,
+      "y": 0.0208
+     }
+    },
+    {
+     "panel": "Fig S2e",
+     "cell_px": {
+      "w": 57.0,
+      "h": 56.5
+     },
+     "disagreement_px": {
+      "x": 1.5,
+      "y": 1.0
+     },
+     "as_fraction_of_cell": {
+      "x": 0.0263,
+      "y": 0.0177
+     }
+    },
+    {
+     "panel": "Fig 4b",
+     "cell_px": {
+      "w": 84.917,
+      "h": 85.0
+     },
+     "disagreement_px": {
+      "x": 1.75,
+      "y": 1.5
+     },
+     "as_fraction_of_cell": {
+      "x": 0.0206,
+      "y": 0.0176
+     }
+    }
+   ],
+   "worst_fraction_of_a_cell": 0.0263,
+   "pass": true,
+   "seeded_defect": {
+    "fault": "cell grid shifted by half a cell in x, on Fig S2c",
+    "metric": "min cell flat fraction (refusal below 0.55) and max nearest-swatch distance (refusal above 5.0)",
+    "clean": {
+     "min_flat_fraction": 0.916,
+     "max_swatch_distance": 1.732
+    },
+    "seeded": {
+     "min_flat_fraction": 0.0,
+     "max_swatch_distance": 1.732,
+     "n_cells_resampled": 36
+    },
+    "fires": true
+   }
+  },
+  "colour_match_diagnostic": {
+   "_what": "CLAUDE.md section 5: anything above ~5 means the geometry is wrong, not the colours. heatmap.match RAISES above that rather than reporting it.",
+   "rows": [
+    {
+     "panel": "Fig S2c",
+     "max_swatch_distance": 1.732,
+     "n_ambiguous_within_10": 36,
+     "lut_swatches": 192,
+     "lut_band_width_units": {
+      "median": 13.347,
+      "max": 26.693
+     },
+     "lut_tie_merges": 0,
+     "min_cell_flat_fraction": 0.916
+    },
+    {
+     "panel": "Fig S2e",
+     "max_swatch_distance": 1.732,
+     "n_ambiguous_within_10": 36,
+     "lut_swatches": 192,
+     "lut_band_width_units": {
+      "median": 13.271,
+      "max": 26.543
+     },
+     "lut_tie_merges": 0,
+     "min_cell_flat_fraction": 0.916
+    },
+    {
+     "panel": "Fig 4b",
+     "max_swatch_distance": 0.707,
+     "n_ambiguous_within_10": 36,
+     "lut_swatches": 261,
+     "lut_band_width_units": {
+      "median": 0.0,
+      "max": 0.196
+     },
+     "lut_tie_merges": 1,
+     "min_cell_flat_fraction": 0.881
+    }
+   ],
+   "worst_distance": 1.732,
+   "threshold": 5.0,
+   "pass": true,
+   "seeded_defect": {
+    "fault": "the half-cell grid shift executed in check_grid_twice",
+    "metric": "max nearest-swatch RGB distance",
+    "clean": 1.732,
+    "seeded": "UNCHANGED at 1.732 -- recorded because it is the honest result and not the convenient one. A half-cell shift straddles a gridline, but the interior MEDIAN is still a fill colour, so this metric does not move. What moves is the flat fraction, 0.916 -> 0.0, and that is the metric that refuses. A seeded defect that the check it is attached to cannot see is worth more written down than quietly reassigned to the check that can.",
+    "fires": false,
+    "covered_by": "grid_measured_twice"
+   }
+  },
+  "fig4c_printed_r": {
+   "_what": "Fig 4c plots ln(I.D.) against ln(I.M.) for these same 36 LNPs and prints r = 0.7580. Nothing here was fitted to it: both axes come from independently digitised heatmaps, one in the SI and one in the main text.",
+   "printed_r": 0.758,
+   "by_panel": {
+    "Fig S2c": {
+     "pearson_r": 0.7124,
+     "spearman": 0.6495,
+     "delta_vs_printed": -0.0456
+    },
+    "Fig S2e": {
+     "pearson_r": 0.768,
+     "spearman": 0.6576,
+     "delta_vs_printed": 0.01
+    }
+   },
+   "closest_panel": "Fig S2e",
+   "pins": "Fig S2e is LNP type 4, which is the composition the paper adopts for every later experiment including the I.M. injection in Fig 4b. That the type-4 panel is the one matching Fig 4c's printed r is an independent check on WHICH heatmap belongs to WHICH formulation.",
+   "pass": true,
+   "seeded_defect": {
+    "fault": "I.D. and I.M. values paired at random (200 draws, seed 42)",
+    "metric": "abs(r - 0.7580)",
+    "clean": 0.01,
+    "seeded_median": 0.776,
+    "seeded_min": 0.4089,
+    "fires": true
+   }
+  },
+  "fig4c_extreme_markers": {
+   "_what": "Fig 4c's four extreme markers, calibrated from its own tick marks, against the extremes of our two digitised heatmaps.",
+   "rows": [
+    {
+     "extreme": "ln_ID_max",
+     "fig4c_drawn": 8.375,
+     "ours": 8.395,
+     "delta_ln": 0.021
+    },
+    {
+     "extreme": "ln_ID_min",
+     "fig4c_drawn": 2.494,
+     "ours": 3.972,
+     "delta_ln": 1.478
+    },
+    {
+     "extreme": "ln_IM_max",
+     "fig4c_drawn": 2.188,
+     "ours": 2.183,
+     "delta_ln": -0.006
+    },
+    {
+     "extreme": "ln_IM_min",
+     "fig4c_drawn": -0.006,
+     "ours": -0.01,
+     "delta_ln": -0.004
+    }
+   ],
+   "worst_abs_delta_ln_excluding_floor": 0.021,
+   "THE_FLOOR_CELL": {
+    "_what": "ln_ID_min is deliberately excluded from the agreement metric and is the most informative row here. The lowest Fig S2e cell matches the colourbar's lightest swatch, so its value is a BOUND, not a measurement -- every value from 0 up to the band top renders in that colour. Fig 4c draws the same LNP at a value our colour read cannot resolve, and it lands INSIDE the bound.",
+    "lipid": "FH-1-EB-7T-1",
+    "our_stored_value": 53.09,
+    "our_band": [
+     0.0,
+     53.09
+    ],
+    "our_flag": "upper",
+    "fig4c_implied_value": 12.11,
+    "bound_holds": true
+   },
+   "pass": true,
+   "seeded_defect": {
+    "fault": "marker radius mis-set to 0, i.e. extremes taken at the edge of the marker instead of its centre -- the class-20 'anchor on a glyph edge' shape",
+    "metric": "worst abs delta in ln, excluding the floor cell",
+    "clean": 0.021,
+    "seeded": 0.121,
+    "fires": true
+   }
+  },
+  "fig2_printed_group_sizes": {
+   "_what": "Figure 2 prints a group size on every one of nine panels. Each set partitions the same 213 LNPs, and the six compositions of Table S2 must reproduce all nine partitions from ONE assignment of LNPs to types.",
+   "panels": [
+    {
+     "panel": "2a number of phenolic hydroxyl groups (FP169)",
+     "groups": {
+      "0": 79,
+      "2": 134
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2b number of tails / tertiary carbons (FP3)",
+     "groups": {
+      "2": 177,
+      "3": 36
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2c number of primary alcohols (FP12)",
+     "groups": {
+      "0": 190,
+      "1": 23
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2g N/P ratio",
+     "groups": {
+      "6": 137,
+      "12": 76
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2h molar ratio of ionizable lipid",
+     "groups": {
+      "0.25": 112,
+      "0.5": 101
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2i molar ratio of DSPC",
+     "groups": {
+      "0": 83,
+      "0.1": 101,
+      "0.15": 3,
+      "0.25": 26
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2j molar ratio of DOPE",
+     "groups": {
+      "0": 130,
+      "0.15": 7,
+      "0.25": 76
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2k molar ratio of cholesterol",
+     "groups": {
+      "0.385": 101,
+      "0.485": 102,
+      "0.585": 10
+     },
+     "sum": 213
+    },
+    {
+     "panel": "2l mass ratio",
+     "groups": {
+      "0.5": 25,
+      "1": 188
+     },
+     "sum": 213
+    }
+   ],
+   "all_sum_to_213": true,
+   "per_LNP_type_counts": {
+    "1": 76,
+    "2": 25,
+    "3": 26,
+    "5": 3,
+    "6": 7,
+    "4": 76
+   },
+   "derived_vs_printed": {
+    "DSPC=0.1 (types 1+2)": {
+     "derived": 101,
+     "printed": 101
+    },
+    "DSPC=0 (types 4+6)": {
+     "derived": 83,
+     "printed": 83
+    },
+    "DOPE=0 (types 1+2+3+5)": {
+     "derived": 130,
+     "printed": 130
+    },
+    "chol=0.385 (types 1+2)": {
+     "derived": 101,
+     "printed": 101
+    },
+    "chol=0.485 (types 3+4)": {
+     "derived": 102,
+     "printed": 102
+    },
+    "chol=0.585 (types 5+6)": {
+     "derived": 10,
+     "printed": 10
+    },
+    "IL=0.5 (types 1+2)": {
+     "derived": 101,
+     "printed": 101
+    },
+    "IL=0.25 (types 3+4+5+6)": {
+     "derived": 112,
+     "printed": 112
+    },
+    "mass=1 (types 1+3+4+5+6)": {
+     "derived": 188,
+     "printed": 188
+    },
+    "N/P=6 (types 2..6)": {
+     "derived": 137,
+     "printed": 137
+    },
+    "all six types": {
+     "derived": 213,
+     "printed": 213
+    }
+   },
+   "mismatches": {},
+   "pass": true,
+   "seeded_defect": {
+    "fault": "move one LNP from type 1 to type 4 (n1 76->75, n4 76->77)",
+    "metric": "number of the eleven derived-vs-printed identities that fail",
+    "clean": 0,
+    "seeded": 7,
+    "fires": true,
+    "note": "n1 enters 6 identities and n4 enters 5; moving one LNP between them breaks the 6 that contain exactly one of the pair and leaves the rest. Counted by hand from the identity list above and re-derived in _seed_fig2 below.",
+    "clean_executed": 0,
+    "seeded_executed": 8
+   }
+  },
+  "pie_vs_tableS2": {
+   "_what": "Figure S2's two pie charts print their own molar percentages. They must equal Table S2's type 1 and type 4 rows exactly -- which is what assigns Fig S2c to type 1 and Fig S2e to type 4.",
+   "rows": [
+    {
+     "panel": "Fig S2b",
+     "lnp_type": 1,
+     "printed_in_pie": {
+      "IL": 50.0,
+      "DSPC": 10.0,
+      "chol": 38.5,
+      "peg": 1.5
+     },
+     "table_S2": {
+      "IL": 50.0,
+      "DSPC": 10.0,
+      "chol": 38.5,
+      "peg": 1.5
+     },
+     "match": true,
+     "sums_to_100": true
+    },
+    {
+     "panel": "Fig S2d",
+     "lnp_type": 4,
+     "printed_in_pie": {
+      "IL": 25.0,
+      "DOPE": 25.0,
+      "chol": 48.5,
+      "peg": 1.5
+     },
+     "table_S2": {
+      "IL": 25.0,
+      "DOPE": 25.0,
+      "chol": 48.5,
+      "peg": 1.5
+     },
+     "match": true,
+     "sums_to_100": true
+    }
+   ],
+   "pass": true,
+   "seeded_defect": {
+    "fault": "swap the two panels' LNP types",
+    "metric": "number of the eight percentages that match",
+    "clean": 8,
+    "seeded": 2,
+    "fires": true
+   }
+  },
+  "floor_and_ceiling_by_colour_identity": {
+   "_what": "F-040: a '< 4.0' value threshold straddled QL_2026's floor band and a band that was measurably not the floor colour, mis-flagging 65 measurements as bounds. heatmap.invert decides by WHICH SWATCH matched, and treats floor and ceiling symmetrically.",
+   "rows": [
+    {
+     "panel": "Fig S2c",
+     "n_on_floor_swatch": 9,
+     "n_on_ceiling_swatch": 0,
+     "flagged_by_colour": [
+      "FH-1-EB-5T-2",
+      "FH-1-EB-6T-1",
+      "FH-1-EB-7T-2",
+      "FH-2-EB-5T-1",
+      "FH-2-EB-5T-2",
+      "FH-2-EB-6T-1",
+      "FH-2-EB-6T-2",
+      "FH-2-EB-7T-1",
+      "FH-2-EB-7T-2"
+     ],
+     "same_set_a_threshold_would_give": true
+    },
+    {
+     "panel": "Fig S2e",
+     "n_on_floor_swatch": 3,
+     "n_on_ceiling_swatch": 0,
+     "flagged_by_colour": [
+      "FH-1-EB-7T-1",
+      "FH-2-EB-5T-2",
+      "FH-2-EB-7T-2"
+     ],
+     "same_set_a_threshold_would_give": true
+    },
+    {
+     "panel": "Fig 4b",
+     "n_on_floor_swatch": 0,
+     "n_on_ceiling_swatch": 0,
+     "flagged_by_colour": [],
+     "same_set_a_threshold_would_give": true
+    }
+   ],
+   "pass": true,
+   "seeded_defect": {
+    "fault": "flag by ONE fixed value threshold across all three panels, which is literally F-040: QL_2026's `< 4.0` cut straddled the floor band and a band at 3.32 that was measurably not the floor colour, and mis-flagged 65 measurements as bounds",
+    "metric": "the flagged SET, per panel",
+    "clean": {
+     "Fig S2c": 9,
+     "Fig S2e": 3,
+     "Fig 4b": 0
+    },
+    "seeded": {
+     "Fig S2c": {
+      "threshold_fold": 60.0,
+      "n_flagged": 9,
+      "n_flagged_that_are_NOT_on_the_floor_swatch": 0,
+      "n_floor_cells_this_threshold_MISSES": 0
+     },
+     "Fig S2e": {
+      "threshold_fold": 60.0,
+      "n_flagged": 3,
+      "n_flagged_that_are_NOT_on_the_floor_swatch": 0,
+      "n_floor_cells_this_threshold_MISSES": 0
+     },
+     "Fig 4b": {
+      "threshold_fold": 60.0,
+      "n_flagged": 36,
+      "n_flagged_that_are_NOT_on_the_floor_swatch": 36,
+      "n_floor_cells_this_threshold_MISSES": 0
+     }
+    },
+    "fires": true
+   }
+  },
+  "repo_sweep": {
+   "_what": "Tier 3 of the intake gate, executed.",
+   "tool": "provenance tooling find_repo.py",
+   "args": "--doi 10.1002/smll.202405618 --pmid 39264000 --title 'Rational Design Lipid Nanoparticles' --author Nam",
+   "run_utc": "2026-11-10",
+   "queries": 6,
+   "repositories_mentioning_this_doi_or_pmid": 0,
+   "data_availability_statement": "The data that support the findings of this study are available from the corresponding author upon reasonable request.",
+   "pass": true,
+   "seeded_defect": {
+    "fault": "n/a -- this records the result of an executed search, not a measurement",
+    "metric": "n/a",
+    "clean": null,
+    "seeded": null,
+    "fires": null
+   }
+  }
+ },
+ "summary": {
+  "hrms_fig_S9": true,
+  "tracer_calibration_against_named_reagents": true,
+  "connectivity_fp3_and_acyl_span": true,
+  "drawn_zero_on_every_colourbar": true,
+  "grid_measured_twice": true,
+  "colour_match_diagnostic": true,
+  "fig4c_printed_r": true,
+  "fig4c_extreme_markers": true,
+  "fig2_printed_group_sizes": true,
+  "pie_vs_tableS2": true,
+  "floor_and_ceiling_by_colour_identity": true,
+  "repo_sweep": true
+ },
+ "all_pass": true,
+ "seeded_defects_that_fire": {
+  "hrms_fig_S9": true,
+  "tracer_calibration_against_named_reagents": true,
+  "connectivity_fp3_and_acyl_span": true,
+  "drawn_zero_on_every_colourbar": true,
+  "grid_measured_twice": true,
+  "colour_match_diagnostic": false,
+  "fig4c_printed_r": true,
+  "fig4c_extreme_markers": true,
+  "fig2_printed_group_sizes": true,
+  "pie_vs_tableS2": true,
+  "floor_and_ceiling_by_colour_identity": true,
+  "repo_sweep": null
+ }
+}

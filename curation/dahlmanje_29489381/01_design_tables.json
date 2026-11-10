@@ -1,0 +1,86 @@
+{
+ "library_1": {
+  "si_page": 7,
+  "columns": [
+   "LNP #",
+   "Lipomer",
+   "Amine",
+   "Lipid",
+   "Mass Ratio",
+   "PEG Chain",
+   "PEG MW",
+   "Lipomer Mole %",
+   "Cholesterol Mole %",
+   "PEG Mole %"
+  ],
+  "n_rows_extracted": 144,
+  "n_rows_stated": 144,
+  "lnp_numbers_are_1_to_n": true,
+  "rows_rejected_non_integer_first_cell": 0,
+  "rows_with_two_cells_on_one_column": 0
+ },
+ "library_2": {
+  "si_page": 12,
+  "columns": [
+   "LNP #",
+   "Lipomer",
+   "Amine",
+   "Lipid",
+   "Helper Lipid",
+   "Mass",
+   "PEG",
+   "PEG MW",
+   "Lipomer Mole",
+   "Cholesterol Mole",
+   "PEG Mole %",
+   "Helper Lipid Mole %"
+  ],
+  "n_rows_extracted": 120,
+  "n_rows_stated": 120,
+  "lnp_numbers_are_1_to_n": true,
+  "rows_rejected_non_integer_first_cell": 7,
+  "rows_with_two_cells_on_one_column": 0
+ },
+ "library_3": {
+  "si_page": 13,
+  "columns": [
+   "LNP #",
+   "Lipomer",
+   "Amine",
+   "Lipid",
+   "Mass Ratio",
+   "PEG Chain",
+   "PEG MW",
+   "Lipomer Mole %",
+   "Cholesterol Mole %",
+   "PEG Mole %"
+  ],
+  "n_rows_extracted": 156,
+  "n_rows_stated": 156,
+  "lnp_numbers_are_1_to_n": true,
+  "rows_rejected_non_integer_first_cell": 0,
+  "rows_with_two_cells_on_one_column": 0
+ },
+ "library_4": {
+  "si_page": 23,
+  "columns": [
+   "LNP #",
+   "Lipomer",
+   "Amine",
+   "Lipid",
+   "Helper Lipid",
+   "Mass Ratio",
+   "PEG Chain",
+   "PEG MW",
+   "Lipomer Mole %",
+   "Cholesterol Mole %",
+   "PEG Mole %",
+   "Helper Lipid Mole %"
+  ],
+  "n_rows_extracted": 144,
+  "n_rows_stated": 144,
+  "lnp_numbers_are_1_to_n": true,
+  "rows_rejected_non_integer_first_cell": 0,
+  "rows_with_two_cells_on_one_column": 0
+ }
+}

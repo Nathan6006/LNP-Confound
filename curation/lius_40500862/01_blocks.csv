@@ -1,0 +1,16 @@
+IL_name,core,core_name,linker,alcohol_token,alcohol_or_acid,n_tails,free_hydroxyls,tails_per_nitrogen
+A5-CE-C8,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C8,"1-octanol, SI p.3",3,1,2 + 1
+A5-CE-C9,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C9,1-nonanol,3,1,2 + 1
+A5-CE-C10,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C10,1-decanol,3,1,2 + 1
+A5-CE-C5-4,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C5-4,"5-nonanol, SI p.4",2,2,1 + 1
+A5-CE-C7-6,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C7-6,tridecan-7-ol,2,2,1 + 1
+A5-CE-C7-7,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C7-7,tetradecan-7-ol,2,2,1 + 1
+A5-CE-C9-4tails,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C9,1-nonanol,4,0,2 + 2
+A5-CE-C7-6-3tails,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C7-6,tridecan-7-ol,3,1,2 + 1
+A5-C10,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carboxylate ester (O-CO),C10,"hendecanoic (undecanoic) acid, SI p.5",3,1,2 + 1
+A5-C7-6,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carboxylate ester (O-CO),C7-6,"2-hexyloctanoic acid, SI p.5",2,2,1 + 1
+A5-CE-C6,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C6,1-hexanol,3,1,2 + 1
+A5-CE-C6-5,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C6-5,undecan-6-ol,2,2,1 + 1
+A5-CE-C8-7,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C8-7,pentadecan-8-ol,2,2,1 + 1
+A5-CE-C8-8,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C8-8,hexadecan-8-ol,2,2,1 + 1
+A5-CE-C10-6,A5,"N,N,N',N'-tetrakis(2-hydroxyethyl)ethylenediamine",carbonate (O-CO-O),C10-6,hexadecan-10-ol,2,2,1 + 1

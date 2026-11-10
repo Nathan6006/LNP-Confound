@@ -1,0 +1,231 @@
+{
+ "_what": "Stage 00 acquisition record for SD_2026 (Dong et al., Nat Biotechnol 2026).",
+ "paper": {
+  "title": "Lipid nanoparticles optimized for large RNA cargo and tissue targeting enhance in vivo genome editing",
+  "title_in_tracker": "Lipid nanoparticles optimized for large RNA cargo and tissue tropism",
+  "title_note": "the tracker's title says 'tissue tropism'; the published title says 'tissue targeting enhance in vivo genome editing'. Same DOI and PMID.",
+  "journal": "Nature Biotechnology",
+  "year": 2026,
+  "doi": "10.1038/s41587-026-03298-8",
+  "pmid": 42806111,
+  "first_author": "Songtao Dong",
+  "corresponding": "Bowen Li (bw.li@utoronto.ca)",
+  "affiliation": "Leslie Dan Faculty of Pharmacy / Institute of Biomedical Engineering, University of Toronto",
+  "proposed_Experiment_ID_prefix": "SD_2026",
+  "received": "2025-10-30",
+  "accepted": "2026-08-06"
+ },
+ "licence": {
+  "string_on_landing_page": "Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.",
+  "creative_commons": false,
+  "checked_utc": "2026-11-10T06:23Z",
+  "checked_how": "GET https://www.nature.com/articles/s41587-026-03298-8 followed with redirects; searched the served HTML for creativecommons.org/licenses/ -- ZERO matches.",
+  "consequence": "NOT CC0/CC-BY. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release. This paper is closed-copyright and is recorded as such; see DECISIONS.md D-5."
+ },
+ "files": [
+  {
+   "path": "s41587-026-03298-8.pdf",
+   "kind": "main_article",
+   "url": "https://www.nature.com/articles/s41587-026-03298-8.pdf",
+   "sha256": "598ba940293551974bb061420afb09c5cb8772624fe671060f806c25ea9e4e55",
+   "bytes": 7813793,
+   "fetched_utc": "2026-10-28 (pre-existing in folder)",
+   "note": "already on disk when this curation began (2026-10-28); hash recorded here, URL is the publisher's PDF endpoint for the same DOI"
+  },
+  {
+   "path": "41587_2026_3298_MOESM1_ESM.pdf",
+   "kind": "supplementary_information",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41587-026-03298-8/MediaObjects/41587_2026_3298_MOESM1_ESM.pdf",
+   "sha256": "0f66fd8cfb69aeea59629ec9d6a1f489815041ef1b62e2ee236c6deefd2754dd",
+   "bytes": 47319200,
+   "fetched_utc": "2026-10-28 (pre-existing in folder)",
+   "note": "Supplementary Figs. 1-101 and Tables 1-5; already on disk 2026-10-28"
+  },
+  {
+   "path": "source/41587_2026_3298_MOESM2_ESM.pdf",
+   "kind": "reporting_summary",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41587-026-03298-8/MediaObjects/41587_2026_3298_MOESM2_ESM.pdf",
+   "sha256": "beebfbf1ad913e025ea7b3a709cb173e25d0733f0ce25d8f591127a7288fba72",
+   "bytes": 2962406,
+   "fetched_utc": "2026-11-10T06:20Z",
+   "note": "fetched 2026-11-10 by this curation; no text layer, 4 pages"
+  },
+  {
+   "path": "source/41587_2026_3298_MOESM3_ESM.pdf",
+   "kind": "source_data_fig_1",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41587-026-03298-8/MediaObjects/41587_2026_3298_MOESM3_ESM.pdf",
+   "sha256": "70d282239ec01a19cdbc608db5ae72be2ace41ba72a512eabc020171a6d34cdb",
+   "bytes": 8909101,
+   "fetched_utc": "2026-11-10T06:20Z",
+   "note": "publisher labels this 'Source Data Fig. 1'; its CONTENT is Sanger sequencing chromatograms for the six cell lines of Fig. 1q,r -- it contains no per-lipid screening value"
+  },
+  {
+   "path": "source/41587_2026_3298_MOESM4_ESM.pdf",
+   "kind": "source_data_extended_fig_1",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41587-026-03298-8/MediaObjects/41587_2026_3298_MOESM4_ESM.pdf",
+   "sha256": "657dc17ce19ca4e8ae995fcd0ee6544b6a70fbdd1db1aae32e3ac6e6968a5395",
+   "bytes": 154505,
+   "fetched_utc": "2026-11-10T06:20Z",
+   "note": "uncropped gel image; 1 page, no text layer"
+  }
+ ],
+ "springer_source_data_probe": {
+  "_what": "Springer Nature serves Source Data to a plain request with no login. The full MOESM asset space was enumerated by extension before any digitiser was written.",
+  "utc": "2026-11-10T06:20Z",
+  "method": "curl -o /dev/null -w %{http_code} over n = 1..16 x {xlsx, xls, zip, csv, docx, pdf, txt}; a 200 was then re-fetched and its first four bytes read. MAGIC BYTES, never a size floor.",
+  "result": "n = 1,2,3,4 return 200 for .pdf ONLY (magic 25504446 = '%PDF'). n = 5..16 return 403 for every extension. NO extension of any n returned a 'PK' magic, so NO xlsx/zip workbook exists for this article.",
+  "cross_check": "the article landing page's own 'Supplementary information' and 'Source data' sections list exactly four assets and name them: Supplementary Information (PDF), Reporting Summary (PDF), Source Data Fig. 1 (PDF, 'Sanger sequencing results'), Source Data Extended Data Fig. 1 (PDF, 'Uncropped gel image'). The enumeration and the page agree: four PDFs, no workbook.",
+  "http_matrix": {
+   "1": {
+    "pdf": 200,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "2": {
+    "pdf": 200,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "3": {
+    "pdf": 200,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "4": {
+    "pdf": 200,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "5": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "6": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "7": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "8": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "9": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "10": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "11": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "12": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "13": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "14": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "15": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   },
+   "16": {
+    "pdf": 403,
+    "xlsx": 403,
+    "xls": 403,
+    "zip": 403,
+    "csv": 403,
+    "docx": 403,
+    "txt": 403
+   }
+  }
+ },
+ "author_repository_probe": {
+  "_what": "scratchpad/tools/find_repo.py, run 2026-11-10.",
+  "command": "python3 -I find_repo.py --doi 10.1038/s41587-026-03298-8 --pmid 42806111 --title 'Lipid nanoparticles large RNA' --author Dahlman",
+  "author_arg_note": "the --author argument given to the tool was 'Dahlman'; the paper's group is Bowen Li (Toronto), not Dahlman. The DOI and PMID code searches do not depend on that argument and are what the conclusion rests on.",
+  "result": "no author repository. The DOI and PMID code searches returned only third-party literature-aggregator repositories (e.g. jam-sudo/TrendBio, whose hits are scraped PubMed/RSS JSON dumps). The repo-name searches for the group returned 0. The paper's Data availability statement names no repository, no accession and no DOI: 'All other data supporting the findings of this study are available within the paper and its Supplementary Information or upon reasonable request.'"
+ }
+}

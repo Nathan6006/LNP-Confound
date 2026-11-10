@@ -1,0 +1,366 @@
+{
+  "preamble": {
+    "lipidoids_enumerated_by_this_curation": 0,
+    "so_the_key_that_matters": "a lipidoid's own full InChIKey -- there is none to compare. Everything below concerns the tail reagents, names, or fragments.",
+    "corpus_shape": {
+      "vitro": [
+        29195,
+        79
+      ],
+      "vivo": [
+        1803,
+        79
+      ]
+    }
+  },
+  "a_tail_reagents": {
+    "unique_parseable_corpus_IL_SMILES": {
+      "vitro": 18720,
+      "vivo": 1506
+    },
+    "hits": [
+      {
+        "reagent": "tail_reagent:oleyl_acrylamide",
+        "inchikey": "JROSKIFCGJOXDY-QXMHVHEDSA-N",
+        "full_inchikey_match_in_corpus": null,
+        "skeleton_block_matches_in_corpus": null
+      },
+      {
+        "reagent": "tail_reagent:octadecyl_acrylamide",
+        "inchikey": "CNWVYEGPPMQTKA-UHFFFAOYSA-N",
+        "full_inchikey_match_in_corpus": null,
+        "skeleton_block_matches_in_corpus": null
+      }
+    ],
+    "interpretation": "0 matches, and 0 is the EXPECTED answer: a tail reagent is a monomer, not an ionizable lipid. A hit would have meant the corpus stored a reagent as a library member."
+  },
+  "b_name_tokens": {
+    "distinct_IL_names_in_corpus": 19956,
+    "exact_matches": {},
+    "n_exact_matches": 0,
+    "distinct_corpus_names_merely_STARTING_with_one_of_our_tokens": 5075,
+    "per_token_leading_counts": {
+      "1": 1374,
+      "2": 1330,
+      "3": 387,
+      "4": 433,
+      "5": 267,
+      "6": 420,
+      "7": 238,
+      "8": 337,
+      "9": 289,
+      "10": 254,
+      "11": 377,
+      "12": 211,
+      "13": 36,
+      "14": 25,
+      "15": 24,
+      "16": 13,
+      "16I": 0,
+      "16II": 0
+    },
+    "interpretation": "A LEADING NUMBER TOKEN IS NOT AN IDENTITY. The 5075 leading-prefix names are reported to SIZE the trap, never as candidates. Not acted on."
+  },
+  "c_substructure_sweep": {
+    "THIS_IS_A_SUPERSET": "the `loose_*` counts are counts of corpus lipids CONTAINING the queried fragment. They are NOT matches to any molecule in this paper and must not be quoted as such.",
+    "loose_probes": {
+      "loose_oleyl_amide_chain": {
+        "smarts": "C(=O)NCCCCCCCC/C=C\\CCCCCCCC",
+        "per_pool": {
+          "vitro": {
+            "unique_SMILES": 533,
+            "rows": 788,
+            "experiments": [
+              "JC_2023",
+              "YX_2024",
+              "YX_2026_SDL"
+            ]
+          },
+          "vivo": {
+            "unique_SMILES": 25,
+            "rows": 36,
+            "experiments": [
+              "JW_2024",
+              "ZH_2023"
+            ]
+          }
+        }
+      },
+      "loose_octadecyl_amide_chain": {
+        "smarts": "C(=O)NCCCCCCCCCCCCCCCCCC",
+        "per_pool": {
+          "vitro": {
+            "unique_SMILES": 484,
+            "rows": 740,
+            "experiments": [
+              "AA_2008",
+              "JC_2023",
+              "YX_2024",
+              "YX_2026_SDL"
+            ]
+          },
+          "vivo": {
+            "unique_SMILES": 74,
+            "rows": 152,
+            "experiments": [
+              "ZH_2023"
+            ]
+          }
+        }
+      },
+      "loose_michael_adduct_of_oleyl_acrylamide": {
+        "smarts": "[N;!$(N-C=O)]CCC(=O)NCCCCCCCC/C=C\\CCCCCCCC",
+        "per_pool": {
+          "vitro": {
+            "unique_SMILES": 17,
+            "rows": 17,
+            "experiments": [
+              "YX_2026_SDL"
+            ]
+          },
+          "vivo": {
+            "unique_SMILES": 2,
+            "rows": 4,
+            "experiments": [
+              "ZH_2023"
+            ]
+          }
+        }
+      },
+      "loose_michael_adduct_of_octadecyl_acrylamide": {
+        "smarts": "[N;!$(N-C=O)]CCC(=O)NCCCCCCCCCCCCCCCCCC",
+        "per_pool": {
+          "vitro": {
+            "unique_SMILES": 49,
+            "rows": 50,
+            "experiments": [
+              "AA_2008",
+              "YX_2026_SDL"
+            ]
+          },
+          "vivo": {
+            "unique_SMILES": 1,
+            "rows": 2,
+            "experiments": [
+              "ZH_2023"
+            ]
+          }
+        }
+      }
+    },
+    "strict_recheck": {
+      "what_strict_means": "the arm must be [tertiary non-amide N]-CH2-CH2-C(=O)-NH-[chain], and the chain must be walked atom by atom and found UNBRANCHED, ring-free, all-carbon and terminated by a CH3, with its length and double-bond position MEASURED. The liberated acrylamide is then rebuilt from the measured chain and compared as canonical SMILES.",
+      "results": {
+        "oleyl": {
+          "vitro": {
+            "unique_SMILES": 0,
+            "rows": 0,
+            "by_experiment": {}
+          },
+          "vivo": {
+            "unique_SMILES": 0,
+            "rows": 0,
+            "by_experiment": {}
+          }
+        },
+        "octadecyl": {
+          "vitro": {
+            "unique_SMILES": 43,
+            "rows": 44,
+            "by_experiment": {
+              "AA_2008": {
+                "rows": 44,
+                "unique_SMILES": 43
+              }
+            }
+          },
+          "vivo": {
+            "unique_SMILES": 0,
+            "rows": 0,
+            "by_experiment": {}
+          }
+        }
+      },
+      "loose_vs_strict": {
+        "oleyl_michael_adduct": {
+          "loose": 19,
+          "strict": 0,
+          "false_positives": 19
+        },
+        "octadecyl_michael_adduct": {
+          "loose": 50,
+          "strict": 43,
+          "false_positives": 7
+        }
+      },
+      "why_the_oleyl_loose_probe_lied": "it matched a C18:1 chain read from the METHYL end into a SUBSTITUTED interior carbon. In YX_2026_SDL's A8+B11+C15+D3 the amide nitrogen carries tert-butyl, not oleyl. The loose SMARTS constrains neither the terminal methyl nor the interior degree."
+    }
+  },
+  "d_free_external_check": {
+    "what_it_is": "AA_2008 (Akinc/Anderson 2008 lipidoid library), curated into this corpus independently of this folder and from a different paper, contains tail families named `<amine>_<N|O><n>`. The `N` families are ACRYLAMIDES and the `O` families ACRYLATES; `n` is the alkyl carbon count. `N18` is therefore N-octadecylacrylamide -- this paper's own saturated comparator.",
+    "d1_tail_structure_attestation": {
+      "AA_2008_N18_unique_lipids_tested": 43,
+      "liberate_our_octadecyl_acrylamide_exactly": 43,
+      "liberate_something_else": 0,
+      "no_strict_arm_found": 0,
+      "disagreements": [],
+      "our_independently_built_SMILES": "C=CC(=O)NCCCCCCCCCCCCCCCCCC",
+      "what_this_attests": "The structure stage03 built from the chemical name alone is byte-identical, as canonical SMILES, to the acrylamide liberated by retro-Michael from 43 AA_2008 N18 lipids that another curator entered from another paper. This UPGRADES 01_blocks.csv's `octadecyl_acrylamide` evidence: the abstract says only 'n-octadecyl tails' and never prints 'octadecyl acrylamide', but the corpus shows the amide is this chemistry's standing convention and that the amide tail reagent is exactly this molecule. It does NOT prove this paper used the amide -- only that the structure we wrote for that name is the right one.",
+      "what_it_does_NOT_attest": "the OLEYL reagent. The corpus contains 0 strict Michael adducts of oleyl acrylamide -- i.e. none -- so the unsaturated tail, which is this paper's whole point, has no corpus attestation at all."
+    },
+    "d2_catalogue_number_DISPROOF": {
+      "AA_2008_amine_numbers_in_use": [
+        1,
+        6,
+        7,
+        10,
+        11,
+        13,
+        15,
+        17,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        31,
+        32,
+        33,
+        34,
+        36,
+        38,
+        60,
+        61,
+        62,
+        63,
+        64,
+        70,
+        75,
+        76,
+        77,
+        79,
+        80,
+        81,
+        82,
+        86,
+        87,
+        90,
+        91,
+        93,
+        94,
+        95,
+        96,
+        98,
+        99,
+        100,
+        103,
+        109
+      ],
+      "n_catalogue_amines": 47,
+      "AA_2008_N18_amine_numbers": [
+        1,
+        6,
+        7,
+        10,
+        11,
+        13,
+        15,
+        17,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        31,
+        32,
+        33,
+        34,
+        36,
+        38,
+        60,
+        61,
+        62,
+        63,
+        76,
+        77,
+        79,
+        80,
+        81,
+        82,
+        86,
+        87,
+        90,
+        91,
+        93,
+        94,
+        95,
+        96,
+        98,
+        99,
+        100,
+        103,
+        109
+      ],
+      "this_papers_tokens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tokens_that_ARE_catalogue_numbers": [
+        1,
+        6,
+        7,
+        10,
+        11,
+        13,
+        15
+      ],
+      "tokens_that_are_NOT_catalogue_numbers": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        12,
+        14,
+        16
+      ],
+      "the_argument": "The Anderson/Akinc catalogue numbers actually in use are NOT CONTIGUOUS -- they run 1, 6, 7, 10, 11, 13, 15, 17, 20, ... skipping 2, 3, 4, 5, 8, 9, 12, 14 and 16. This paper's Figure S3 plots a CONTIGUOUS run 1..16, and 9 of those 16 ([2, 3, 4, 5, 8, 9, 12, 14, 16]) are not catalogue numbers at all. Under the hypothesis 'these labels are catalogue amine numbers' all 16 would have to be; 9 are not, so the hypothesis is REJECTED.",
+      "why_this_matters": "Reading 1..16 as catalogue numbers is the single most tempting way to invent 16 structures for this paper, and it is available: AA_2008 stores a structure for each of 7 of our tokens. Doing it would have assigned up to 16 measured values to wrong molecules -- the AC_2025 failure mode. This is a MEASURED disproof, not a stylistic preference, and it is the only external check this paper's name tokens admit.",
+      "corroborating_siblings": "curation/xuq_24574196 states the same for its own Xu-lab paper: \"The paper's local label '1' is NOT catalogue amine 1.\" The catalogue numbers recorded in xuq_32520527 / xuq_32438474 / xuq_32662132 are all >= 75."
+    }
+  },
+  "verdict": {
+    "lipidoid_level_overlap": "NONE POSSIBLE -- nothing enumerated.",
+    "tail_reagent_overlap": "0 full-InChIKey, 0 skeleton-block.",
+    "free_external_check_obtained": true,
+    "what_it_gave": [
+      "the octadecyl acrylamide structure attested by 43 independently curated AA_2008 N18 lipids (retro-Michael, canonical-SMILES identity)",
+      "a measured DISPROOF that this paper's 1..16 are catalogue amine numbers (9 of 16 are not catalogue members)"
+    ],
+    "what_it_did_NOT_give": "any structure for this paper's 16 amine heads, and no attestation of the oleyl reagent."
+  },
+  "checks_failed": [],
+  "seeded_check_counts": {
+    "n_agree": 44,
+    "n_total": 44
+  }
+}

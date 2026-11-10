@@ -1,0 +1,40 @@
+{
+ "_what": "Stage-00 acquisition record. The source file was ALREADY PRESENT in source/ when this curation began; it was not fetched by this agent, so the URL and landing-page licence string below are recorded as NOT CAPTURED rather than guessed. CLAUDE.md section 8 needs every source CC0/CC-BY-compatible before release and this gap has to be visible, not filled in.",
+ "paper": {
+  "pmid": "30637934",
+  "doi": "10.1002/smll.201805097",
+  "title": "Branched-Tail Lipid Nanoparticles Potently Deliver mRNA In Vivo due to Enhanced Ionization at Endosomal pH.",
+  "authors": "Hajj KA, Ball RL, Deluty SB, Singh SR, Strelkova D, Knapp CM, Whitehead KA.",
+  "journal": "Small 15(6), 2019 Feb",
+  "verified_from": "Europe PMC REST core record, SRC:MED EXT_ID:30637934, fetched 2026-11-10 (no browser, no login, no bot check)"
+ },
+ "files": [
+  {
+   "path": "source/smll201805097-sup-0001-S1.pdf",
+   "sha256": "072294717aef7bf40307f0f3ebbd03d74c4c254c60daa817e7ddedf1abf803b0",
+   "bytes": 2735188,
+   "pages": 17,
+   "what": "The Supporting Information. Wiley's own filename says -sup-0001-S1, i.e. the first and only numbered supplement for this DOI.",
+   "magic_bytes_verified": "%PDF, opened by pymupdf, 17 pages all carrying a text layer",
+   "url": "NOT CAPTURED -- the file was present in source/ before this curation started",
+   "licence_string": "NOT CAPTURED -- see url. Europe PMC reports isOpenAccess=N and license=null for this record, so it is very likely all-rights-reserved Wiley and a release decision must treat it that way."
+  }
+ ],
+ "NOT_IN_SOURCE": {
+  "main_article_pdf": "Absent and not obtainable. Europe PMC's fullTextUrlList has one entry, availabilityCode 'S' (Subscription required). NCBI esearch db=pmc on the DOI returns Count=0, so there is no PMC deposit and no author manuscript. Europe PMC /MED/30637934/supplementaryFiles returns HTTP 404. No paywall or bot check was approached.",
+  "consequence": "All main-text figures are unavailable: the primary library screen spanning amines 200, 304 and 306, the in-vivo screen behind the abstract's tenfold claim, the secondary lipidoid library, and the Figure 4A/4H correlations whose fitted constants the SI prints (y=aX^b, a=3956, b=0.64; y=ae^bx, a=299220, b=0.00025)."
+ },
+ "data_availability_statement": "None in the record. Europe PMC's core record carries no data-availability text and provenance/tools/find_repo.py found no deposit (0 relevant hits across DOI/PMID code search and all short repo-name queries).",
+ "tools_used": [
+  "curl against ebi.ac.uk/europepmc and eutils.ncbi.nlm.nih.gov (plain HTTP, no scraping of PubMed's HTML)",
+  "provenance/tools/triage.py",
+  "provenance/tools/find_repo.py",
+  "pymupdf (text and get_drawings only; no page was rendered to a raster)",
+  "rdkit, curation/lib"
+ ],
+ "tools_deliberately_NOT_used": [
+  "the shared Playwright browser (instructed not to)",
+  "provenance/structure_check.py, check_anchor_independence.py, check_anchor_coverage.py (they write tracked files other agents read; anchor posture is recorded by hand in PROVENANCE.md instead)",
+  "provenance/build_dataset.py (nothing is merged into data/)"
+ ]
+}

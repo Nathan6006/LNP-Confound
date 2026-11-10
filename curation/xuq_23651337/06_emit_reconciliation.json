@@ -1,0 +1,35 @@
+{
+  "rows_emitted": 0,
+  "rows_with_a_caveat": 0,
+  "quality_columns_from_schema": [
+    "Experiment_value_within_model",
+    "value_normalization_unit",
+    "confidence",
+    "positional_ambiguity",
+    "structure_assumed",
+    "value_is_bound",
+    "curation_note"
+  ],
+  "quality_columns_restated_in_this_file": 0,
+  "why_zero_rows": {
+    "1_no_admissible_value_in_hand": "every number in the SI is viability (Fig S3), nucleic-acid binding (Fig S2) or a micrograph (Fig S1). 0 of 18 rows in 05_values.csv are corpus_admissible = yes.",
+    "2_the_delivery_values_are_unobtainable": "they are in the main article. ACS subscription; elink gives only pubmed_pmc_refs with no pubmed_pmc self-link; esearch db=pmc on the DOI returns count=0; no author repository.",
+    "3_no_structure_exists_either": "0 of 16 lipidoids are enumerable; the SI names, draws and formulates no amine.",
+    "any_one_is_sufficient": true
+  },
+  "emit_guards": {
+    "refuses_a_literal_confidence": {
+      "fired_as_required": true,
+      "detail": "emit: confidence='high' is a LITERAL."
+    },
+    "refuses_a_caveat_with_no_note": {
+      "fired_as_required": true,
+      "detail": "emit_rows('guard_note') item 'x': this row carries a caveat (confidence='medium', positional_ambiguity='', structure_assumed='', value_is_bound='') and its curation_note is empty."
+    },
+    "accepts_a_correct_per_item_call": {
+      "fired_as_required": true,
+      "detail": "control returned [{'positional_ambiguity': '', 'structure_assumed': '', 'value_is_bound': '', 'value_normalization_unit': '', 'Experiment_value_within_model': '', 'confidence': 'medium', 'curation_note': 'the reason, on the row'}]"
+    }
+  },
+  "guards_note": "exercised against SYNTHETIC items. This folder emits nothing, so these demonstrate the guards are live; they do not demonstrate that this folder's (non-existent) flags are right."
+}

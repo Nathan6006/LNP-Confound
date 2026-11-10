@@ -1,0 +1,69 @@
+{
+ "values_located": 26,
+ "panelA_categories": 14,
+ "panelA_with_a_drawn_bar": 12,
+ "panelB_points": 12,
+ "emitted": 11,
+ "not_emitted": 15,
+ "counts_sum": true,
+ "every_not_emitted_row_has_a_reason": true,
+ "three_counts_that_differ": {
+  "_what": "Distinct structures, formulations, and individually measured values are three different numbers and this paper separates them cleanly.",
+  "distinct_structures_in_the_306_family": 11,
+  "distinct_structures_in_the_whole_library": "NOT DETERMINABLE from what we hold. The SI Methods name THREE amines (200, 304, 306) and the abstract names 'a small library' plus 'a secondary lipidoid library', but every value-bearing table and figure in the SI is 306-family only and the main text is behind a subscription. So the library is larger than 11 by an unknown factor and no value for a 200- or 304-amine lipidoid is recoverable.",
+  "formulations": 1,
+  "formulation_detail": "One formulation for the whole screen: 35 : 16 : 46.5 : 2.5 mol%, 10:1 w/w lipidoid:mRNA. No formulation variable is screened anywhere in this paper.",
+  "individually_measured_in_vitro_delivery_values": 11,
+  "individually_measured_counting_the_second_plate": 23,
+  "individually_measured_physicochemical_only": {
+   "Table_S1_LNP_characterisation": 11,
+   "Table_S2_lipidoid_pKa_and_buffering": 10,
+   "Figure_S7_printed_pKa": 8
+  },
+  "in_vivo_values_resolved_per_lipidoid": "Figure S3D: 3 lipidoids x a time course. Figure S4: 2 lipidoids x 3 doses, as a six-organ STACKED total. Figure S5: 2 lipidoids x 3 timepoints, EPO protein not luciferase. None digitised; see DECISIONS.md D-2."
+ },
+ "cross_panel_disagreement": {
+  "_what": "Both panels are HeLa / firefly-luciferase / RLU / 24 h, and S6A's single dose IS 100 ng, so S6B's 100 ng series must reproduce S6A on these four lipidoids. It does not: see 08_contradictions.csv. Neither panel is averaged into the other and neither is adjusted by the other.",
+  "shared": [
+   {
+    "lipid": "Oi10",
+    "S6A_100ng": 1176187,
+    "S6B_100ng": 1506876,
+    "ratio_B_over_A": 1.2812
+   },
+   {
+    "lipid": "O10",
+    "S6A_100ng": 1741649,
+    "S6B_100ng": 1004583,
+    "ratio_B_over_A": 0.5768
+   },
+   {
+    "lipid": "O11",
+    "S6A_100ng": 1511900,
+    "S6B_100ng": 784111,
+    "ratio_B_over_A": 0.5186
+   },
+   {
+    "lipid": "O12",
+    "S6A_100ng": 1333312,
+    "S6B_100ng": 665247,
+    "ratio_B_over_A": 0.4989
+   }
+  ],
+  "ratio_min": 0.4989,
+  "ratio_max": 1.2812,
+  "rank_S6A_desc": [
+   "O10",
+   "O11",
+   "O12",
+   "Oi10"
+  ],
+  "rank_S6B_desc": [
+   "Oi10",
+   "O10",
+   "O11",
+   "O12"
+  ],
+  "spearman_rho": -0.2
+ }
+}

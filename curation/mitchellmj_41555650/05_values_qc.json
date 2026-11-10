@@ -1,0 +1,144 @@
+{
+ "P4_block_map_vs_printed_labels": {
+  "n_labels_anchored": 18,
+  "n_mismatched": 0,
+  "mismatches": [],
+  "what": "The IL column is sparse -- one label per 6-row block, placed wherever the cell's text box sits. The IL for each b-LNP is therefore derived from BLOCK STRUCTURE (15 ILs x 6 formulations, with the greyed-out numbers skipped), and every label pdfplumber did read must land in the block it was assigned to."
+ },
+ "P5_design_grid_matches_printed_molar_ratios": {
+  "n_checked": 90,
+  "n_mismatched": 0,
+  "mismatches": [],
+  "what": "Every block must run (35,2.5)(45,2.5)(55,2.5)(35,5)(45,5)(55,5). This is a 90-row test of the block map AND of the table read: a single mis-assigned b-LNP number breaks the pattern."
+ },
+ "P6_helper_and_sterol_constant_across_library": {
+  "DOPE_values": [
+   "16"
+  ],
+  "Chol_values": [
+   "46.5"
+  ],
+  "constant": true
+ },
+ "P7_molar_percents_sum_to_100": {
+  "n": 93,
+  "n_exactly_100": 18,
+  "distinct_sums": [
+   100.0,
+   102.5,
+   110.0,
+   112.5,
+   120.0,
+   122.5
+  ],
+  "offenders": {
+   "2": 110.0,
+   "3": 120.0,
+   "4": 102.5,
+   "5": 112.5,
+   "6": 122.5,
+   "8": 110.0,
+   "9": 120.0,
+   "10": 102.5,
+   "11": 112.5,
+   "12": 122.5,
+   "14": 110.0,
+   "15": 120.0,
+   "16": 102.5,
+   "17": 112.5,
+   "18": 122.5,
+   "21": 110.0,
+   "22": 120.0,
+   "23": 102.5,
+   "24": 112.5,
+   "25": 122.5,
+   "27": 110.0,
+   "28": 120.0,
+   "29": 102.5,
+   "30": 112.5,
+   "31": 122.5,
+   "33": 110.0,
+   "34": 120.0,
+   "35": 102.5,
+   "36": 112.5,
+   "37": 122.5,
+   "39": 110.0,
+   "40": 120.0,
+   "42": 102.5,
+   "43": 112.5,
+   "44": 122.5,
+   "46": 110.0,
+   "47": 120.0,
+   "48": 102.5,
+   "49": 112.5,
+   "50": 122.5,
+   "52": 110.0,
+   "53": 120.0,
+   "54": 102.5,
+   "58": 112.5,
+   "59": 122.5,
+   "61": 110.0,
+   "62": 120.0,
+   "63": 102.5,
+   "64": 112.5,
+   "65": 122.5,
+   "68": 110.0,
+   "69": 120.0,
+   "70": 102.5,
+   "71": 112.5,
+   "72": 122.5,
+   "74": 110.0,
+   "75": 120.0,
+   "76": 102.5,
+   "77": 112.5,
+   "78": 122.5,
+   "80": 110.0,
+   "81": 120.0,
+   "82": 102.5,
+   "83": 112.5,
+   "84": 122.5,
+   "86": 110.0,
+   "87": 120.0,
+   "88": 102.5,
+   "89": 112.5,
+   "90": 122.5,
+   "92": 110.0,
+   "94": 120.0,
+   "96": 102.5,
+   "97": 112.5,
+   "98": 122.5
+  },
+  "what": "The authors never print this. A molar-ratio table that does not sum to 100 has a transcription error in it."
+ },
+ "value_counts": {
+  "total": 910,
+  "admissible": 48,
+  "inadmissible": 862,
+  "by_locus": {
+   "SI Figure S2A (p. 14)": {
+    "total": 48,
+    "admissible": 48
+   },
+   "SI Figure S1A (p. 13)": {
+    "total": 46,
+    "admissible": 0
+   },
+   "SI Table S1 (pp. 22-24)": {
+    "total": 372,
+    "admissible": 0
+   },
+   "SI Table S2 (pp. 25-27)": {
+    "total": 372,
+    "admissible": 0
+   },
+   "SI Table S3 (p. 28)": {
+    "total": 48,
+    "admissible": 0
+   },
+   "SI Table S4 (p. 28)": {
+    "total": 24,
+    "admissible": 0
+   }
+  }
+ }
+}

@@ -16,15 +16,30 @@ Per-paper figure extraction | `../curation/<paper>/` |
 
 | file | rows | cols | contents |
 |---|---|---|---|
-`data/data_vitro.csv` | 25,997 | 72 | 40 experiments, all in vitro |
-`data/data_vivo.csv` | 1,768 | 72 | 18 experiments, all in vivo |
+`data/data_vitro.csv` | 29,195 | 79 | 43 experiments, all in vitro |
+`data/data_vivo.csv` | 1,803 | 79 | 20 experiments, all in vivo |
 `data/Original_LNPDB.csv` | 19,797 | 66 | untouched upstream reference |
 
+> These three numbers, and the experiment counts, are gated by **C15**
+> (`check_docs.py` + `docs_claims.json`). Until 2026-11-09 this table read
+> 25,997 × 72 / 40 experiments and 1,768 × 72 / 18 — the 2026-10-28 corpus,
+> four merges out of date — and nothing noticed, because every C15 claim was
+> tagged `CLAUDE.md` and no claim pointed at this file. That is error class 39
+> recurring in the file that documents the fix for it.
+
 `data_vitro.csv` = original LNPDB (vitro) + the ML-work change log + the Bowen Li
-lab additions, with three deletions reversed, plus two curated papers
-(`ZT_2026`, 486 vitro / 51 vivo; `LL_2026`, 840 vitro; `LL_2026_2`, 147 vitro) — see CHANGELOG.md §6. `data_vivo.csv` is the vivo corpus
-re-canonicalized with descriptors recomputed; the ML change log never touched it,
-and there are no Bowen Li vivo additions.
+lab additions, with three deletions reversed, plus the curated papers:
+`ZT_2026` (486 vitro / 51 vivo), `LL_2026` (840 vitro), `LL_2026_2` (147 vitro),
+`WT_2026` (2,544 vitro), `QL_2026` (344 vitro), `XD_2026` (12 vivo),
+`NG_2025` (310 vitro), `NG_2025_2` (23 vivo) — see CHANGELOG.md §6 and §11-§15.
+`data_vivo.csv` is the vivo corpus re-canonicalized with descriptors recomputed;
+the ML change log never touched it, and there are no Bowen Li vivo additions.
+
+The 79 columns are the 67 LNPDB curation columns + 5 RDKit descriptors from the
+ML change log + the **7 quality/provenance columns** defined once in
+`schema_quality.json` (added 2026-10-30, F-001). Do not restate that list: it
+exists because a per-curation flag was restated in six places, drifted, and
+then died one stage before the merge.
 
 ## Lineage, and which source wins where
 
@@ -224,7 +239,21 @@ collision, the mislabelled volume column) are genuinely upstream.
 
 `audit.py` → `audit_findings.json`. Written to look for error classes the
 builder does not know about, so a clean build and a clean audit are separate
-statements. Nine checks, both files.
+statements.
+
+**There are sixteen checks, not nine.** C1-C14 run inside `audit.py`; C15
+(`check_docs.py`) and C16 (`check_anchor_independence.py`) are separate
+commands, and C17 (`check_reagent_crosscheck.py`) was added 2026-11-09. The
+table below covers C1-C9 only, which is what this section said when it said
+"Nine checks"; for the rest see `CLAUDE.md` §6 and `ERROR_CLASSES.md`.
+
+`audit.py` **gates**, and only since 2026-10-30: before that `main()`'s return
+value was discarded and the exit code came from the C10/C11 delegates alone, so
+C1-C9 printed whatever they liked and the command exited 0. Eight simultaneous
+seeded violations passed (F-012). The gate is `audit_baseline.json`, which
+records each accepted condition **with the reason it is accepted** and fails on
+a departure in *either* direction -- a known condition vanishing without anyone
+editing the baseline is how a check that stopped looking announces itself.
 
 | check | vitro | vivo |
 |---|---|---|
@@ -236,6 +265,12 @@ C5 formulation ratios | 0 off | 3 (explained below) |
 C6 non-finite or extreme values | 0 | 0 |
 C7 field consistency / blank required fields | 0 | 0 |
 C8 descriptors vs stored SMILES | 0 of 24,524 | 0 of 1,717 |
+
+The C8 row above is the 2026-10-28 build intermediate. C8 then checked **7 of
+the 14** published descriptor columns, so a `LogP` of 42 passed it; found by
+`test_checks.py`'s first run and fixed. Counts in this table are from that
+build and are not re-measured here -- the live figures are in
+`audit_findings.json`.
 C9 unassigned stereogenic C=C | 212 rows | 2 rows |
 
 **Four apparent problems turned out to be my own checks being wrong**, and are

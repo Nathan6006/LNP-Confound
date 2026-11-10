@@ -1,0 +1,210 @@
+{
+  "paper": {
+    "pmid": "40433897",
+    "doi": "10.1021/acsnano.5c01378",
+    "title_verified_full": "Iterative Screening of Vitamin E-Based Functional Lipid Nanoparticles for mRNA Delivery.",
+    "title_source": "Europe PMC REST core record, SRC:MED EXT_ID:40433897, fetched 2026-11-10",
+    "journal": "ACS Nano 2025;19(22)",
+    "abstractText_length": 1199,
+    "is_original_research": true,
+    "original_research_discriminator": "abstractText length 1199 (non-zero) AND the SI contains Methods-grade material (17 figures of measurements, HRMS characterisation, a 60-row orthogonal formulation table). Not a research-highlight commentary.",
+    "endpoint": "nucleic-acid delivery (mRNA FLuc luminescence, mRNA/pDNA GFP+ %, siLuc knockdown) - IN SCOPE",
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "pmcid": null
+  },
+
+  "acquisition": {
+    "held": [
+      {
+        "file": "source/nn5c01378_si_001.pdf",
+        "bytes": 1176524,
+        "sha256": "c5a3248e3ec19d6e9532c546cdf325a71b338a8e27b5db5163f6126809b509d2",
+        "pages": 11,
+        "what": "Supporting Information: Tables S1-S2, Figures S1-S17",
+        "note": "Pre-supplied in source/ by the caller; watermarked 'Downloaded from pubs.acs.org/... by PHILLIPS EXETER ACADEMY user on 10 November 2026'."
+      }
+    ],
+    "not_held": [
+      {
+        "file": "main article PDF (ACS Nano, subscription)",
+        "why_not_acquired": "Europe PMC: isOpenAccess=N, inEPMC=N, inPMC=N, fullTextUrlList has only the DOI with availability 'Subscription required'. NCBI elink dbfrom=pubmed&db=pmc returns ONLY linkname 'pubmed_pmc_refs' (7 citing PMCIDs) and NO 'pubmed_pmc' self-link, so no PMC deposit exists and there is no PMCID to fetch. Per PIPELINE_V2 BROWSER_ACQUISITION, ACS needs a browser; this run was explicitly forbidden from using the shared browser. No paywall or bot-check bypass was attempted.",
+        "consequence": "Main-text Figures 1-6 (which hold the full iterative screen across the 35-amine library) are UNSEEN. Everything below is SI-only."
+      },
+      {
+        "file": "author code/data repository",
+        "why_not_acquired": "provenance/tools/find_repo.py --pmid 40433897 --title 'vitamin E lipid nanoparticle mRNA' --author Zhang returned no candidate above noise (top hits are unrelated pathology-lab and biology repos). No Zenodo/Dryad DOI is referenced anywhere in the SI text."
+      }
+    ]
+  },
+
+  "tier_availability": {
+    "1_publisher_source_data": "ABSENT. ACS Nano published exactly one supplementary asset for this DOI (nn5c01378_si_001.pdf); there is no Source Data workbook. Not verifiable further without the publisher landing page (browser forbidden) - recorded as UNVERIFIED-ABSENT, not as a checked absence.",
+    "2_si_numeric_table": "PRESENT but carries NO endpoint. pdfplumber find_tables() recovers Table S1 (p2, flow-cytometry antibodies: dilutions/clones/catalogues) and Table S2 (p2-3, 60-row orthogonal formulation design: VN2C2 / DDAB / Chol / DMG-PEG mol%). Table S2 is FORMULATION METADATA, not a measurement. No SI table contains a delivery value.",
+    "3_author_repo": "ABSENT (see acquisition.not_held).",
+    "4_pdf_text_vector": "ABSENT for values. The only numerals in the SI text layer are Table S1/S2 cells, the 8 HRMS calc/found pairs in the Figure S2 caption, and figure-caption n's. No value appears as text.",
+    "4b_pdf_vector_geometry": "IMPOSSIBLE, with a checkable reason: every figure on pages 4-11 is a single flattened DCTDecode JPEG. pymupdf get_drawings() returns exactly 2 paths on each of pages 4-11 and those 2 are the page-furniture rectangles of the ACS download watermark, not figure content (pages 1-3, which carry no figure at all, have 2, 7 and 3 paths respectively). There are 0 vector bond paths and 0 vector axis paths anywhere in the document.",
+    "5_pixels": "The ONLY route to any value in this SI. Justified by the four lines above."
+  },
+
+  "native_dpi": {
+    "method": "pymupdf get_images(full=True) + get_image_rects(): dpi = image_pixel_dimension / rect_dimension_in_points * 72. Measured on the EMBEDDED raster, not on a page render.",
+    "per_image": [
+      {"page": 4,  "xref": 72, "figure": "S1",     "px": "1267x1143", "dpi_x": 219.9, "dpi_y": 220.0},
+      {"page": 5,  "xref": 74, "figure": "S2",     "px": "1267x1728", "dpi_x": 219.9, "dpi_y": 220.0},
+      {"page": 6,  "xref": 76, "figure": "S3",     "px": "1149x909",  "dpi_x": 220.1, "dpi_y": 219.8},
+      {"page": 6,  "xref": 77, "figure": "S4",     "px": "1146x583",  "dpi_x": 219.9, "dpi_y": 219.9},
+      {"page": 7,  "xref": 79, "figure": "S5",     "px": "1267x305",  "dpi_x": 219.9, "dpi_y": 219.5},
+      {"page": 7,  "xref": 80, "figure": "S6",     "px": "698x333",   "dpi_x": 219.8, "dpi_y": 219.6},
+      {"page": 7,  "xref": 81, "figure": "S7",     "px": "436x438",   "dpi_x": 219.5, "dpi_y": 219.6},
+      {"page": 8,  "xref": 84, "figure": "S8",     "px": "803x412",   "dpi_x": 216.2, "dpi_y": 216.2},
+      {"page": 8,  "xref": 85, "figure": "S9",     "px": "695x412",   "dpi_x": 186.3, "dpi_y": 186.2},
+      {"page": 8,  "xref": 83, "figure": "S10",    "px": "495x362",   "dpi_x": 219.6, "dpi_y": 219.9},
+      {"page": 9,  "xref": 87, "figure": "S11",    "px": "593x486",   "dpi_x": 219.9, "dpi_y": 219.7},
+      {"page": 9,  "xref": 88, "figure": "S12",    "px": "454x419",   "dpi_x": 219.9, "dpi_y": 220.3},
+      {"page": 9,  "xref": 89, "figure": "S13",    "px": "648x377",   "dpi_x": 189.9, "dpi_y": 190.0},
+      {"page": 10, "xref": 91, "figure": "S14",    "px": "637x365",   "dpi_x": 220.1, "dpi_y": 220.5},
+      {"page": 10, "xref": 92, "figure": "S15",    "px": "664x364",   "dpi_x": 220.1, "dpi_y": 219.9},
+      {"page": 10, "xref": 93, "figure": "S16",    "px": "500x299",   "dpi_x": 173.8, "dpi_y": 173.8},
+      {"page": 11, "xref": 96, "figure": "S17",    "px": "601x350",   "dpi_x": 219.7, "dpi_y": 219.7}
+    ],
+    "range": "173.8 - 220.5 dpi",
+    "tolerance_rule": "curation/lib tolerances are written for a 600 dpi render. Any px tolerance applied to these rasters must be scaled by 600/native_dpi (x2.73 at 220 dpi). Both the 600-dpi-equivalent figure and the native-px figure are recorded per panel in 07_qc.json, and the widened tolerance is seeded there to prove it still bites."
+  },
+
+  "panels": [
+    {
+      "id": "FigS4b",
+      "page": 6, "xref": 77,
+      "what": "siLuc silencing by 60 orthogonal LNP formulations in 4T1-Luc",
+      "readout_as_printed": "Luciferase expression (%)",
+      "y_axis": "0-150, major ticks 0/50/100/150",
+      "n_bars": 63,
+      "bar_identity": "LNP1..LNP60 (all VN2C2, composition from Table S2) + Lip3000 + Naked siRNA",
+      "tier": "5_pixels",
+      "why_lower_tiers_failed": "no Source Data; Table S2 gives composition only; no text numerals; 0 vector paths on page 6",
+      "corpus_admissible": "endpoint yes (knockdown); see 05_values.csv per row",
+      "extracted": true
+    },
+    {
+      "id": "FigS4a",
+      "page": 6, "xref": 77,
+      "what": "four 3-D response surfaces, GFP+% over (VN2C2/DDAB) x (Chol/DMG-PEG) at DDAB = 20/40/60/80%",
+      "tier": "not_extractable",
+      "why": "A fitted response SURFACE, not individually measured formulations. Nothing on it is a reported measurement of a named LNP; it is the regression of the Table S2 design. Trap-1 case: 'plotted marginal/fitted means over factors' is a third number, distinct from formulations and from measured means.",
+      "extracted": false
+    },
+    {
+      "id": "FigS5a",
+      "page": 7, "xref": 79,
+      "what": "siLuc delivery by 6 VN lipid structures at 3 DMG-PEG levels, 4T1-Luc",
+      "readout_as_printed": "Luciferase expression (%)",
+      "y_axis": "0-120, major ticks 0/40/80/120",
+      "n_bars": 18,
+      "bar_identity": "legend order VN3C2O, VN2C4, VN2C2, VN3C2, VN3C1, VN2C3 within each of PEG-0.5, PEG-1, PEG-2",
+      "tier": "5_pixels",
+      "why_lower_tiers_failed": "same as FigS4b",
+      "corpus_admissible": "endpoint yes; STRUCTURE is the blocker - see DECISIONS.md D-1",
+      "extracted": true
+    },
+    {
+      "id": "FigS5b",
+      "page": 7, "xref": 79,
+      "what": "siLuc delivery by the same 6 structures at 3 DMG-PEG levels, MC38-Luc",
+      "readout_as_printed": "Relative luciferase expression (%)",
+      "y_axis": "0-50, major ticks 0/10/20/30/40/50",
+      "n_bars": 18,
+      "tier": "5_pixels",
+      "corpus_admissible": "endpoint yes; structure blocker as S5a",
+      "extracted": true
+    },
+    {
+      "id": "FigS7",
+      "page": 7, "xref": 81,
+      "what": "pGFP transfection vs lipid:pDNA mass ratio",
+      "readout_as_printed": "Percentage of GFP+ cells (%)",
+      "y_axis": "0-60, major ticks 0/20/40/60",
+      "n_bars": 7,
+      "bar_identity": "5:1, 10:1, 15:1, 20:1, 30:1, Lip3000, Naked pGFP",
+      "tier": "5_pixels",
+      "corpus_admissible": "endpoint yes (pDNA/GFP delivery); lipid identity NOT stated in the caption - the caption says only 'different lipid to pDNA ratios'. Flagged.",
+      "extracted": true
+    },
+    {
+      "id": "FigS8a",
+      "page": 8, "xref": 84,
+      "what": "mFLuc delivery after replacing VN2C1 with equimolar VE or TPGS",
+      "readout_as_printed": "Luciferase intensity (arbitrary RLU, axis in 2x10^5 steps)",
+      "y_axis": "0-8x10^5, major ticks 0/2/4/6/8 x10^5",
+      "n_bars": 5,
+      "bar_identity": "PBS, VE, TPGS, VN2C1, Lip3000",
+      "tier": "5_pixels",
+      "corpus_admissible": "endpoint yes (mRNA FLuc luminescence); cell line NOT stated in the SI caption. Flagged.",
+      "extracted": true
+    },
+    {
+      "id": "FigS8b",
+      "page": 8, "xref": 84,
+      "what": "mFLuc delivery when VE/TPGS is added to a commercial (SM102) formulation",
+      "readout_as_printed": "Luciferase intensity",
+      "y_axis": "0-8x10^5",
+      "n_bars": 5,
+      "bar_identity": "PBS, VE+SM102, TPGS+SM102, SM102, VN2C1",
+      "tier": "5_pixels",
+      "corpus_admissible": "endpoint yes; carries the SM-102 benchmark - see 02_corpus_overlap.json",
+      "extracted": true
+    },
+    {
+      "id": "FigS13b",
+      "page": 9, "xref": 89,
+      "what": "mGFP delivery by VN2C1 LNP before/after 7 d storage, RAW264.7",
+      "readout_as_printed": "GFP+ cells (%)",
+      "y_axis": "0-60, major ticks 0/20/40/60",
+      "n_bars": 3,
+      "bar_identity": "PBS, VN2C1 (day 0), VN2C1 (day 7)",
+      "tier": "5_pixels",
+      "corpus_admissible": "endpoint yes (mRNA GFP delivery)",
+      "extracted": true
+    },
+    {
+      "id": "FigS3a", "page": 6, "what": "Eff. Diam. (nm) of 60 prescriptions",
+      "tier": "not_extracted", "corpus_admissible": "NO - particle size is not a delivery endpoint", "extracted": false},
+    {
+      "id": "FigS3b", "page": 6, "what": "gel-retardation photographs, 60 LNPs + pDNA",
+      "tier": "not_extractable", "corpus_admissible": "NO - a photograph of a gel carries no numeric scale", "extracted": false},
+    {
+      "id": "FigS6", "page": 7, "what": "Eff. Diam. (nm), DDAB vs DSPC LNPs in DMEM/FBS",
+      "tier": "not_extracted", "corpus_admissible": "NO - particle size / colloidal stability", "extracted": false},
+    {
+      "id": "FigS9", "page": 8, "what": "p-STING western blot + type-I interferon transcript (n=4)",
+      "tier": "not_extracted", "corpus_admissible": "NO - immune-pathway activation, not nucleic-acid delivery", "extracted": false},
+    {
+      "id": "FigS10", "page": 8, "what": "Encapsulation rate (%) of the 6 VN lipids",
+      "tier": "not_extracted", "corpus_admissible": "NO - encapsulation efficiency is a formulation property, not delivery", "extracted": false},
+    {
+      "id": "FigS11", "page": 9, "what": "haemolysis tubes at pH 7.4 and 5.5",
+      "tier": "not_extractable", "corpus_admissible": "NO - photograph, no numeric scale; and membrane lysis is not delivery", "extracted": false},
+    {
+      "id": "FigS12", "page": 9, "what": "TEM micrographs", "tier": "not_extractable",
+      "corpus_admissible": "NO - morphology", "extracted": false},
+    {
+      "id": "FigS14", "page": 10, "what": "Cy5-mRNA cellular uptake at 1/2/4 h, MC38",
+      "tier": "not_extracted", "corpus_admissible": "NO - UPTAKE is not delivery. Cy5 label reports particle association, not cargo expression.", "extracted": false},
+    {
+      "id": "FigS15", "page": 10, "what": "body weight over time", "tier": "not_extracted",
+      "corpus_admissible": "NO - toxicology", "extracted": false},
+    {
+      "id": "FigS16", "page": 10, "what": "tumour growth / survival under mIL-12 LNP + anti-PD-L1",
+      "tier": "not_extracted", "corpus_admissible": "NO - therapeutic efficacy, not a delivery readout", "extracted": false},
+    {
+      "id": "FigS17", "page": 11, "what": "PD-L1 positive rate and MFI after IFN-gamma",
+      "tier": "not_extracted", "corpus_admissible": "NO - receptor expression", "extracted": false}
+  ],
+
+  "structures": {
+    "source": "Figure S1a (35 commercial amines, each labelled with a CAS registry number) + Figure S1b (reaction scheme) + Figure S2 caption (8 HRMS calc/found pairs, in the TEXT layer).",
+    "tier": "2_si_numeric_table for the HRMS masses (text layer); 5_pixels for the amine drawings, but each drawing carries a CAS NUMBER, which is an external symbolic identifier - the structure is looked up from the CAS string, not traced from the drawing.",
+    "note": "The library INDEXING rule (what the x in VNx and the y in Cy mean) is stated nowhere in the SI. See DECISIONS.md D-1."
+  }
+}

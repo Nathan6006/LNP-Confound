@@ -1,0 +1,67 @@
+{
+ "requested": "https://doi.org/10.1038/s41557-024-01557-2",
+ "final_url": "https://www.nature.com/articles/s41557-024-01557-2?error=cookies_not_supported&code=b653237e-8059-40cf-b246-f6cce2fb6d93",
+ "title": "Fast and facile synthesis of amidine-incorporated degradable lipids for versatile mRNA delivery in vivo | Nature Chemistry",
+ "n_assets": 8,
+ "assets": [
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM1_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM2_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM3_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM4_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM5_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM6_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM7_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM8_ESM.xlsx"
+ ],
+ "downloaded": [
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM1_ESM.pdf",
+   "file": "41557_2024_1557_MOESM1_ESM.pdf",
+   "bytes": 5748191,
+   "sha256": "562bce4401238606883ac29801dc11f58b5da70f941f49a656af9f0ffd0ea5dc"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM2_ESM.pdf",
+   "file": "41557_2024_1557_MOESM2_ESM.pdf",
+   "bytes": 55091,
+   "sha256": "9ff7580b9d5f6a06fa09362e0c5f916f76edf57280f674a23cec7da51b18d156"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM3_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM3_ESM.xlsx",
+   "bytes": 25962,
+   "sha256": "aedc67e910628062e2ad17f26d4da953a4ea2b49f0f6e46169c00d6a850fb098"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM4_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM4_ESM.xlsx",
+   "bytes": 18750,
+   "sha256": "6da42342fd2936f2634964e0ad99637a0678779d18486fce11db37be04f6c878"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM5_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM5_ESM.xlsx",
+   "bytes": 12214,
+   "sha256": "cd8f70367decca73da368c7c38de897a5422418c813a0a346a79d16fa43974ad"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM6_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM6_ESM.xlsx",
+   "bytes": 13772,
+   "sha256": "dfa8018bb4bc0a873f6d82fea77b4d840dc024569f902d6bdc571c2fe3e7f248"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM7_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM7_ESM.xlsx",
+   "bytes": 11578,
+   "sha256": "9083e1a94f502ef754f5d122523bc627ffafe6a2d78b31adf9b9e16aae806082"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41557-024-01557-2/MediaObjects/41557_2024_1557_MOESM8_ESM.xlsx",
+   "file": "41557_2024_1557_MOESM8_ESM.xlsx",
+   "bytes": 13925,
+   "sha256": "7261f2892a612c793eae1d0d5c8b7afd2752790b8e073f21a048a9a5b07a272b"
+  }
+ ],
+ "retrieved_utc": "2026-11-10T04:20:09Z"
+}

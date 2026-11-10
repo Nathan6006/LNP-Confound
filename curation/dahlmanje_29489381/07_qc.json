@@ -1,0 +1,179 @@
+{
+ "_what": "Every check run on this curation, with numbers. Each one has been made to fail on purpose and the seed asserts THAT CHECK'S OWN METRIC MOVES, not merely that something raised -- see 04_seed_results.json. Passing every printed statistic is necessary and not sufficient, so the checks that matter most here are the two the authors never printed: the mole percents summing to 100, and each library being a complete factorial.",
+
+ "paper": {"pmid": "29489381", "pmcid": "PMC6054134",
+           "doi": "10.1021/acs.nanolett.8b00432",
+           "journal": "Nano Letters 18(3):2148-2157 (2018)"},
+
+ "OUTCOME": {
+  "rows_emitted_to_corpus": 0,
+  "emit_rows_called": false,
+  "emit_rows_not_called_because": "there is no row to flag. emit.emit_rows writes the quality columns of a corpus row; this curation produces none, so calling it would require inventing the row it is meant to qualify.",
+  "blocker_1_values": "No per-LNP delivery value exists in anything we hold or could obtain. The SI prints no delivery number on any of its 26 pages. The main-text figures hold them, and Figs 3B-G (and SI Fig S3j-uu) are UNLABELLED log-log scatters, so even with the figure in hand a digitised point carries no particle identity. Data availability is request-only; find_repo returned 0 repositories.",
+  "blocker_2_structures": "Not one of the 15 lipomers has a determinable SMILES. 7 of 15 are built on PEI 600 or PEI 1200 (polydisperse branched polymers -- no single molecule exists); for the other 8 the amine is defined but the degree of substitution is never stated, leaving the product open across 1 to 6 tails, i.e. a factor of ~6 in mass.",
+  "either_blocker_alone_is_sufficient": true
+ },
+
+ "reconciliation_against_the_tracker": {
+  "tracker_states": 281,
+  "libraries_1_3_formulated": 420,
+  "libraries_1_3_stable_and_pooled": 281,
+  "matches": true,
+  "per_library": {"1": {"formulated": 144, "stable": 112},
+                  "2": {"formulated": 120, "stable": 105},
+                  "3": {"formulated": 156, "stable": 64}},
+  "library_4_is_separate": {"formulated": 144, "stable": 85,
+                            "note": "the spleen screen (Fig 5/6, SI Fig S5a). Not part of the 281 and never pooled with it."},
+  "what_281_counts": "LNP FORMULATIONS, not chemistries. The 281 are built from 15 distinct lipomers; 206 of the 564 formulated LNPs across all four libraries carry one single lipomer (7C1).",
+  "enumerated_here": {"design_rows_extracted": 564, "distinct_lipomers": 15,
+                      "distinct_amines": 6, "distinct_tail_reagents": 4,
+                      "lipomers_with_a_SMILES": 0}
+ },
+
+ "checks": [
+  {
+   "id": "A", "what": "library row counts against the stated sizes",
+   "numbers": {"extracted": {"1": 144, "2": 120, "3": 156, "4": 144},
+               "stated": {"1": 144, "2": 120, "3": 156, "4": 144},
+               "n_matching": 4, "n_libraries": 4,
+               "lnp_numbers_contiguous_1_to_n": "4 of 4 libraries"},
+   "result": "PASS",
+   "seeded": "drop one library-1 design row -> n_matching 4 -> 3"
+  },
+  {
+   "id": "B", "what": "every design row's four mole percents sum to exactly 100",
+   "numbers": {"n_rows": 564, "n_exactly_100": 564,
+               "distribution": {"100.0": 564}},
+   "result": "PASS",
+   "why_this_one_matters": "The authors never print this. It is a constraint they imposed on the design and it is therefore external to any single printing of a row, which is what lets it adjudicate the 36-vs-35 disagreement in 08_contradictions.csv.",
+   "seeded": "add 1 to one cholesterol mole % -> n_exactly_100 564 -> 563"
+  },
+  {
+   "id": "B2", "what": "the same invariant on the Fig S4e/f/g rank tables",
+   "numbers": {"n_rows": 87, "n_exactly_100": 86, "n_offenders": 1,
+               "offender": {"panel": "Fig S4f p20 EC sub-table",
+                            "lipomer": "58", "lipomer_mole_pct": "36",
+                            "chol": "60", "peg": "5", "helper": "0",
+                            "sum": 101.0, "diameter_nm": "31.2"}},
+   "result": "FIRES -- and the single offender is a real defect in the paper, recorded in 08_contradictions.csv row 1",
+   "seeded": "both directions. Forward: break a clean row. Reverse: repair the live 36 to the 35 that the other two printings give -> n_exactly_100 86 -> 87, proving the metric tracks the condition rather than being stuck."
+  },
+  {
+   "id": "C", "what": "stable-pool reconciliation against the two percentages printed in SI Fig S3h/i",
+   "numbers": {"formulated": 420, "stable": 281,
+               "computed_included_pct": 66.9, "printed_included_pct": 66.9,
+               "computed_removed_pct": 33.1, "printed_removed_pct": 33.1,
+               "n_printed_statistics_reproduced": 2},
+   "result": "PASS -- both printed pie percentages reproduce exactly from 281/420",
+   "caveat": "Necessary, not sufficient. It confirms the pool arithmetic and says nothing about any structure or any value."
+  },
+  {
+   "id": "D", "what": "block inventory",
+   "numbers": {"distinct_lipomer_ids": 15,
+               "ids": ["7C1", "8", "48", "58", "68", "69", "78", "79", "88",
+                       "92", "100", "102", "104", "106", "108"],
+               "per_library": {"1": 2, "2": 15, "3": 2, "4": 3},
+               "stated_per_library": {"1": 2, "2": 15, "3": 2, "4": 3},
+               "distinct_amines": 6, "distinct_tail_reagents": 4,
+               "possible_amine_x_tail": 24, "made": 15},
+   "result": "PASS against the captions; the Fig S3d SCHEME says 16, see 08_contradictions.csv row 2"
+  },
+  {
+   "id": "E", "what": "every Fig S4 rank row must match a row of its own library's design table on all nine composition fields",
+   "numbers": {"n_rank_rows": 87, "matched": 86, "unmatched": 1,
+               "unmatched_is": "the same 36-vs-35 row as B2"},
+   "result": "PASS (86/87); the single miss is the paper's own disagreement, not an extraction error -- B2 independently identifies the same row",
+   "why_this_one_matters": "It is the check that validates the positional extraction end to end: a column misassignment in either table would break many matches, not one.",
+   "seeded": "corrupt one matched rank row's PEG MW -> matched 86 -> 85"
+  },
+  {
+   "id": "F", "what": "rank columns are repeat-free, and in vivo ranks respect the top-10 bound",
+   "numbers": {"n_rank_columns": 24, "repeated_ranks_total": 0,
+               "in_vivo_ranks_above_10": 0,
+               "in_vivo_columns_are_exactly": "1..10 for library 1 (n=10 each) and 1..6 for libraries 2 and 3 (n=6 each)",
+               "in_vitro_maxima": {"L1 iMAEC": 95, "L1 RAWs": 74,
+                                   "L2 iMAEC": 53, "L2 RAWs": 51,
+                                   "L3 iMAEC": 64, "L3 RAWs": 53}},
+   "result": "PASS",
+   "why_this_one_matters": "24 columns of sparse single digits are exactly where a column shifted by one would hide. A shift would collide two values into one column and produce repeats; 0 repeats across 24 columns is strong evidence the assignment is right.",
+   "seeded": "two cases -- repeat one rank (0 -> 1) and force an in vivo 11 (0 -> 1)"
+  },
+  {
+   "id": "H", "what": "in vitro ranks must fit inside their own library's stable pool",
+   "numbers": {"n_columns": 6, "n_fitting": 6, "n_hitting_the_pool_exactly": 1,
+               "the_exact_hit": "Library 3 iMAEC max rank 64 against a stable pool of 64"},
+   "result": "PASS",
+   "why_this_one_matters": "An independent handle on the rank scale that uses a number from a different part of the paper (the stable counts in main text P11). Library 3's worst listed particle sitting exactly on 64 is not something the extraction could have arranged."
+  },
+  {
+   "id": "I", "what": "each library is a COMPLETE factorial of its own factors",
+   "numbers": {"n_libraries_complete": 4,
+               "library_1": "2 lipomers x 3 PEG chains x 3 PEG MWs x 8 mole-% sets = 144 = rows",
+               "library_2": "15 lipomers x 1 x 1 x 8 mole-% sets = 120 = rows",
+               "library_3": "2 x 3 x 2 x 13 mole-% sets = 156 = rows",
+               "library_4": "3 lipomers x 1 x 1 x 48 mole-% sets = 144 = rows"},
+   "result": "PASS, 4 of 4",
+   "why_this_one_matters": "Another invariant the authors never printed. A missing, duplicated or mis-parsed design row breaks the product identity immediately; all four closing exactly is a strong statement that 564/564 rows were read correctly."
+  },
+  {
+   "id": "J", "what": "block structures: formula implied by the chemical NAME vs the SMILES written for it",
+   "numbers": {"n_blocks_with_a_structure": 8, "n_formula_matches": 8,
+               "n_failures": 0,
+               "macrocycle_ring_size_measured": 15,
+               "macrocycle_N_positions_measured": [1, 4, 8, 12],
+               "macrocycle_N_positions_required_by_name": [1, 4, 8, 12]},
+   "result": "PASS",
+   "found_two_of_my_own_errors_before_it_passed": [
+    "1,2-epoxypentadecane first written one carbon too long (C16H32O against the C15H30O the name requires)",
+    "the azamacrocycle first written with its nitrogens off the 1,4,8,12 locants, at the correct ring size and the correct formula"
+   ],
+   "seeded": "lengthen spermidine by one CH2 -> failures 0 -> 1 and exit code 0 -> 1; and move one macrocycle nitrogen to position 11, which leaves BOTH sides at C11H26N4 / 214.2157 Da (measured, not asserted) so only the ring walk can see it"
+  },
+  {
+   "id": "K", "what": "C10 anchor: blocks re-derived from the numbers in their own chemical names, by a route that shares no SMILES literal with the enumerator",
+   "numbers": {"n_blocks_checked": 8, "n_inchikey_matches": 8,
+               "n_mismatches": 0,
+               "n_generated_strings_byte_identical_to_the_enumerator": 8},
+   "result": "PASS",
+   "posture": "Byte-identity of the emitted string is NOT the signal and C16 says so: a correct re-derivation is byte-identical to a correct enumeration once canonicalised, which is exactly why C10's own anchor_may_be_a_copy missed F-037. What differs here is the GENERATOR'S TEMPLATE -- make_reference.py composes each structure from segment lengths, ring locants and chain-length-minus-two, and copies no SMILES from stage05_blocks.py.",
+   "anchor_for_the_ionizable_lipids": "EMPTY on all 15 rows. The paper draws no complete lipomer anywhere; every scheme is a generic Markush with an unlabelled R and, for the PEI lipomers, the amine itself abstracted to diethylamine. The empty rows are stored so the absence is visible."
+  },
+  {
+   "id": "L", "what": "the SI reaction scheme's colour key, measured rather than read",
+   "numbers": {"R1=C10 band": [250, 190, 159], "104 band": [250, 190, 159],
+               "distance": 0.0,
+               "R2=C13 band": [252, 228, 214], "7C1 band": [252, 228, 214],
+               "distance_2": 0.0, "cross_distance": 66.88},
+   "result": "PASS -- and it RETRACTS a contradiction I had raised",
+   "note": "Read in stacked order the key looks inverted (7C1 over 104 against R1 over R2). It is colour-keyed, not order-keyed, and the colours pair 104 with R1=C10 and 7C1 with R2=C13, which is chemically right. SI Fig S5a confirms it independently. See 08_contradictions.csv row 5."
+  }
+ ],
+
+ "printed_statistics_reproduced": {
+  "n": 2,
+  "items": [
+   {"statistic": "66.9% Included (SI Fig S3i pie)", "computed": 66.9,
+    "from": "281/420"},
+   {"statistic": "33.1% Removed (SI Fig S3i pie)", "computed": 33.1,
+    "from": "139/420"}
+  ],
+  "caveat": "Both are arithmetic on counts we also take from the paper, so they are weak evidence. The load-bearing checks here are B, I and H, which use quantities the authors never printed."
+ },
+
+ "a_round_number_the_authors_drew_but_never_printed": {
+  "what": "the four mole percents of every formulation sum to exactly 100",
+  "n_rows_tested": 564,
+  "n_satisfying": 564,
+  "residual": "exactly 0 on all 564; the sums are integers or one decimal and no row needed rounding",
+  "why_it_is_the_right_kind_of_test": "It is a constraint of the experimental design rather than a recomputed marginal, so it is external to our extraction in the way CLAUDE.md asks for, and it is what decides the one disagreement the paper has with itself.",
+  "second_such_number": "each of the four libraries is a complete factorial, closing exactly at 144, 120, 156 and 144"
+ },
+
+ "what_could_not_be_verified": [
+  "Any delivery value. None is obtainable, so none was checked.",
+  "The main text's '309 relationships between LNP structure and in vivo delivery' (P14). SI Fig S4h is a stacked bar chart of significant/non-significant counts over 8 categories, with a printed axis to 100 and no printed totals; reading it would require pixels, and the curation uses none.",
+  "The stable counts 112, 105, 64 and 85 individually. Only their sum (281) and the derived 66.9%/33.1% are printed; the per-library figures come from the main text's prose and SI Fig S3e/g/S5b are diameter dot plots, not counts.",
+  "The degree of substitution of any lipomer. It is stated nowhere in the main text, the SI, or any scheme, and this is the second of the two blockers above.",
+  "Whether the Fig S4e/f/g in vitro ranks come from the 20 ng dose and the 72 h timepoint. Methods fixes 20 ng and 72 h for everything after the dose test, and the library panels are labelled '72 hours', but the Fig S4 panel itself states neither. 05_values.csv records this as 'not stated on the panel' rather than filling it in, and it is DECISION D-4."
+ ]
+}

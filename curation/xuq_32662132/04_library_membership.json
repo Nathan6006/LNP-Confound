@@ -1,0 +1,106 @@
+{
+ "S4_top": {
+  "n_segments_gap1": 9,
+  "n_segments_gap14": 20,
+  "REFUSED": "the per-head TAIL MEMBERSHIP is not measured here. Bars inside one head group touch, so no gap-based segmentation separates them: at gap=1 the short segments fall below the minimum width and 9 survive, at gap=14 they merge into 20. Separating them needs colour clustering against the legend swatches, and these panels are pKa and hemolysis - not a delivery endpoint and not an emitted value - so that work is not done. The numbers above are recorded so the refusal is checkable, NOT as a bar count."
+ },
+ "S4_bottom": {
+  "n_segments_gap1": 34,
+  "n_segments_gap14": 6,
+  "REFUSED": "the per-head TAIL MEMBERSHIP is not measured here. Bars inside one head group touch, so no gap-based segmentation separates them: at gap=1 the short segments fall below the minimum width and 34 survive, at gap=14 they merge into 6. Separating them needs colour clustering against the legend swatches, and these panels are pKa and hemolysis - not a delivery endpoint and not an emitted value - so that work is not done. The numbers above are recorded so the refusal is checkable, NOT as a bar count."
+ },
+ "S5_top": {
+  "n_segments_gap1": 4,
+  "n_segments_gap14": 17,
+  "REFUSED": "the per-head TAIL MEMBERSHIP is not measured here. Bars inside one head group touch, so no gap-based segmentation separates them: at gap=1 the short segments fall below the minimum width and 4 survive, at gap=14 they merge into 17. Separating them needs colour clustering against the legend swatches, and these panels are pKa and hemolysis - not a delivery endpoint and not an emitted value - so that work is not done. The numbers above are recorded so the refusal is checkable, NOT as a bar count."
+ },
+ "S5_bottom": {
+  "n_segments_gap1": 33,
+  "n_segments_gap14": 5,
+  "REFUSED": "the per-head TAIL MEMBERSHIP is not measured here. Bars inside one head group touch, so no gap-based segmentation separates them: at gap=1 the short segments fall below the minimum width and 33 survive, at gap=14 they merge into 5. Separating them needs colour clustering against the legend swatches, and these panels are pKa and hemolysis - not a delivery endpoint and not an emitted value - so that work is not done. The numbers above are recorded so the refusal is checkable, NOT as a bar count."
+ },
+ "_labels": {
+  "heads_top_panels": [
+   "9310",
+   "9311",
+   "9312",
+   "9313",
+   "9315",
+   "9316",
+   "9321",
+   "9322",
+   "9323",
+   "9324",
+   "9331",
+   "9332",
+   "9333",
+   "9334",
+   "9341",
+   "9351",
+   "9352",
+   "93"
+  ],
+  "n_heads_top": 18,
+  "heads_bottom_panels": [
+   "9311",
+   "9313",
+   "9322",
+   "9331",
+   "9332"
+  ],
+  "n_heads_bottom": 5,
+  "legend_S4_top": [
+   "O17O",
+   "O17S",
+   "O16S-S"
+  ],
+  "legend_S4_bottom": [
+   "O17O",
+   "O17S",
+   "O17C",
+   "O18S-S",
+   "N16S-S",
+   "EC18",
+   "EC16"
+  ],
+  "legend_S5_top": [
+   "O17O",
+   "O17S",
+   "O16S-S"
+  ],
+  "legend_S5_bottom": [
+   "O17O",
+   "O17S",
+   "O17C",
+   "O18S-S",
+   "O16S-S",
+   "N16S-S",
+   "EC18",
+   "EC16"
+  ],
+  "note": "read by eye off the rasters at 1:1; the axis labels and legend text are 20-30 px tall and unambiguous, unlike Figure S1's 5-7 px m/z labels. The LEGENDS DISAGREE: Figure S4's lower legend has 7 entries and Figure S5's has 8, the extra one being O16S-S, for what should be the same sub-library (08_contradictions.csv C-01)."
+ },
+ "_counts_for_trap_1": {
+  "distinct_amine_heads_named": 18,
+  "distinct_tail_labels_named_anywhere": [
+   "EC16",
+   "EC18",
+   "N16B",
+   "N16S-S",
+   "O16B",
+   "O16S-S",
+   "O17C",
+   "O17O",
+   "O17S",
+   "O17Se",
+   "O18S-S"
+  ],
+  "distinct_tails_structurally_specified": 5,
+  "distinct_ionizable_structures_built": 5,
+  "distinct_structures_with_a_reachable_delivery_value": 2,
+  "distinct_structures_with_BOTH_a_structure_and_a_delivery_value": 1,
+  "formulations_individually_measured_for_delivery_in_reach": 38,
+  "corpus_rows_emitted": 13,
+  "the_library_is_NOT_a_full_factorial": "many head x tail cells are drawn with no bar at all, and the paper never states a library size or design."
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "claim": "abstract: 306O10 and 306Oi10 have ten-carbon tails and identical molecular weights",
+ "O10_formula": "C59H115N3O8",
+ "Oi10_formula": "C59H115N3O8",
+ "formulae_identical": true,
+ "O10_exact_mass": 993.868418,
+ "Oi10_exact_mass": 993.868418,
+ "exact_mass_delta_Da": 0.0,
+ "O10_tail_carbons": 10,
+ "Oi10_tail_carbons": 10,
+ "both_ten_carbon": true,
+ "isomers_not_identical": true
+}

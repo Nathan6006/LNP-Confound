@@ -1,0 +1,93 @@
+{
+ "panel": "Figure 3I",
+ "endpoint": "whole-animal IVIS total flux (p/s)",
+ "calibration": {
+  "kind": "linear",
+  "px_per_unit": 0.0,
+  "origin_px": 2387.747,
+  "origin_value": 250000000.0,
+  "tick_step_units": -50000000.0,
+  "n_ticks": 6,
+  "tick_fit_residual_px": 0.0218,
+  "tick_residual_tol_px": 2.5
+ },
+ "tick_rows_px": [
+  2387.73,
+  2567.0,
+  2746.27,
+  2925.5,
+  3104.73,
+  3283.99
+ ],
+ "baseline_row_from_calibration": 3284.0,
+ "scan_top_row_px": 2472,
+ "significance_bracket_rows_px": [
+  2384,
+  2464
+ ],
+ "bars": [
+  {
+   "lipid": "H2A4B4",
+   "colour": "blue",
+   "bar_window_px": [
+    3428,
+    3547
+   ],
+   "top_row_px": 3186,
+   "flank_delta_px": 0.0,
+   "coverage": 1.0,
+   "width_px": 119,
+   "value_p_per_s": 27330000.0,
+   "inner_ink_row_span_px": [
+    3158,
+    3223
+   ],
+   "inner_ink_value_span": [
+    35150000.0,
+    17010000.0
+   ]
+  },
+  {
+   "lipid": "A4B4-S3",
+   "colour": "red",
+   "bar_window_px": [
+    3607,
+    3726
+   ],
+   "top_row_px": 2621,
+   "flank_delta_px": 0.0,
+   "coverage": 0.9972,
+   "width_px": 119,
+   "value_p_per_s": 184900000.0,
+   "inner_ink_row_span_px": [
+    2499,
+    2720
+   ],
+   "inner_ink_value_span": [
+    219000000.0,
+    157300000.0
+   ]
+  },
+  {
+   "lipid": "A4B4-S4",
+   "colour": "black",
+   "bar_window_px": [
+    3787,
+    3906
+   ],
+   "top_row_px": 3208,
+   "flank_delta_px": 0.0,
+   "coverage": 1.0,
+   "width_px": 119,
+   "value_p_per_s": 21200000.0,
+   "inner_ink_row_span_px": [
+    3127,
+    3272
+   ],
+   "inner_ink_value_span": [
+    43790000.0,
+    3346000.0
+   ]
+  }
+ ]
+}

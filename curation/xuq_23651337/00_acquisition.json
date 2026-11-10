@@ -1,0 +1,49 @@
+{
+  "paper": {
+    "pmid": "23651337",
+    "doi": "10.1021/sb300023h",
+    "title_full_as_published": "A combinatorial library of unsaturated lipidoids for efficient intracellular gene delivery.",
+    "title_verified_from": "Europe PMC REST: /search?query=EXT_ID:23651337 AND SRC:MED&resultType=core&format=json, fetched 2026-11-10 UTC. Field `title`.",
+    "authors": "Wang M, Sun S, Alberti KA, Xu Q.",
+    "journal": "ACS Synthetic Biology",
+    "volume_issue": "1(9)",
+    "year_per_europepmc": 2012,
+    "year_per_pmid_record_and_task_brief": 2013,
+    "year_note": "Recorded both ways rather than picked. Europe PMC journalInfo.yearOfPublication is 2012 for issue 1(9); the PubMed-side year is 2013. Nothing downstream depends on it because no row is emitted. See 08_contradictions.csv C-4.",
+    "pubType": ["Letter"],
+    "abstractText_length_chars": 797,
+    "is_original_research": true,
+    "discriminator_used": "abstractText length (797, non-zero) plus a self-described synthesis, screen and mechanistic attribution. pubType='Letter' was NOT used as the discriminator."
+  },
+  "files_received": [
+    {
+      "path": "source/sb300023h_si_001.pdf",
+      "what": "Supporting Information, 3 pages (S1 contents page, S2 two figures, S3 one figure)",
+      "bytes": 1028490,
+      "sha256": "92256854c364c0b0e32e3b4ff956177e7dbcb9c0defc2572b49f627fbf1ae353",
+      "recorded_utc": "2026-11-10",
+      "how_obtained": "PRESENT IN THE FOLDER WHEN THIS CURATION STARTED. Not fetched by this curation; no browser was used and no URL was visited for it.",
+      "embedded_provenance": "Every page carries the vertical watermark 'Downloaded from pubs.acs.org/asbcd6/article-supplement/1448672/pdf/sb300023h_si_001/ by PHILLIPS EXETER ACADEMY user on 10 November 2026' - i.e. it was retrieved through an institutional subscription by someone else.",
+      "licence": "NOT RECORDED. No landing page was visited, so no licence string was captured. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release; for this source that requirement is UNMET and this entry is the record of the gap, not a claim of compliance. isOpenAccess=N in Europe PMC, so it is very unlikely to be an open licence."
+    }
+  ],
+  "files_NOT_obtained": [
+    {
+      "what": "the main article PDF",
+      "why_it_matters": "it holds every delivery value (EGFP from plasmid DNA and from mRNA in HeLa, plus fibroblasts and cancer lines), the amine catalogue, and any drawn structure",
+      "checkable_negatives": [
+        "Europe PMC core: isOpenAccess=N, inEPMC=N, inPMC=N, hasSuppl=N; fullTextUrlList is a single entry with availability='Subscription required'.",
+        "NCBI elink dbfrom=pubmed&db=pmc&id=23651337 returns ONLY linkname 'pubmed_pmc_refs' with 17 links (papers citing it). No 'pubmed_pmc' self-link exists, i.e. there is no PMC deposit.",
+        "NCBI esearch db=pmc&term=10.1021/sb300023h -> count=0 ('No items found').",
+        "NCBI esearch db=pmc&term=sb300023h -> count=0, quotedphrasesnotfound=['sb300023h'].",
+        "provenance/tools/find_repo.py --pmid 23651337 --title 'unsaturated lipidoid library' --author Xu -> no candidate repository; all hits are unrelated string collisions.",
+        "find ~/LNP -iname '*sb300023*' -> only the SI already in hand. ~/LNP/Papers/ contains no Wang 2012/2013 and no Xu 2012."
+      ],
+      "why_no_further_attempt": "ACS requires a browser session. The shared Playwright browser is out of scope for this run by instruction, and no paywall or bot-check bypass is permitted."
+    },
+    {
+      "what": "any additional supplementary file",
+      "checkable_negative": "hasSuppl=N in the Europe PMC core record, and the SI in hand is a single 3-page PDF whose own contents page lists exactly three figures and nothing else - no tables, no synthesis section, no experimental section."
+    }
+  ]
+}

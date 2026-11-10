@@ -1,0 +1,107 @@
+{
+ "scaffold": {
+  "tocopherol_smiles": "Cc1c(C)c2c(c(C)c1O)CC[C@@](C)(CCCC(C)CCCC(C)CCCC(C)C)O2",
+  "tocopherol_formula": "C29H50O2",
+  "arm_literal": "[CH2:2]CC(=O)Oc1c(C)c2c(c(C)c1C)CC[C@@](C)(CCCC(C)CCCC(C)CCCC(C)C)O2",
+  "arm_formula": "C32H53O3",
+  "VE_AC_smiles": "C=CC(=O)Oc1c(C)c(C)c2c(c1C)CC[C@@](C)(CCCC(C)CCCC(C)CCCC(C)C)O2",
+  "VE_AC_formula": "C32H52O3",
+  "VE_AC_M_plus_Na_calc": 507.3809,
+  "paper_calc": 507.3809,
+  "paper_found": 507.3804,
+  "delta_vs_paper_calc_mDa": -0.03,
+  "stereocentres_assigned": 1,
+  "stereocentres_unassigned": 2,
+  "note": "Only tocopherol's C2 is assigned. The 4' and 8' side-chain centres are left unassigned because the paper names no isomer, so every structure below carries stereo uncertainty that mass cannot see."
+ },
+ "lipids": [
+  {
+   "name": "VN3C2O",
+   "panel": "b",
+   "formula_ion": "C71H123N2O8",
+   "core_formula": "C7H18N2O2",
+   "core_cas": null,
+   "core_smiles": null,
+   "why": "No amine drawn in Figure S1a has formula C7H18N2O2. The two bis(hydroxyethyl) amines drawn (CAS 4439-20-7 and 3197-06-6) are both C6H16N2O2, exactly one CH2 short. Under the VN2/VN3 = ethylene/propylene reading the core would be the propylene homologue of 3197-06-6, which the paper does not draw.",
+   "structure_pinned": false
+  },
+  {
+   "name": "VN2C4",
+   "panel": "c",
+   "formula_ion": "C70H119N2O6",
+   "core_formula": "C6H14N2",
+   "core_cas": null,
+   "core_smiles": null,
+   "why": "TWO drawn amines have formula C6H14N2: 7154-73-6 (1-(2-aminoethyl)pyrrolidine, one 2-arm site) and 694-83-7 (trans-1,2-diaminocyclohexane, two 1-arm sites). They differ in connectivity and the exact mass cannot see the difference.",
+   "structure_pinned": false
+  },
+  {
+   "name": "VN2C2",
+   "panel": "d",
+   "formula_ion": "C70H121N2O6",
+   "core_formula": "C6H16N2",
+   "core_cas": "100-36-7",
+   "core_smiles": "CCN(CC)CC[NH2:1]",
+   "why": "Exactly one drawn amine has formula C6H16N2 (CAS 100-36-7, N,N-diethylethylenediamine) and exactly one of its nitrogens carries two hydrogens, so the two arms have only one site. Its +CH2 partner 104-78-9 is also drawn, which is what the measured CH2 ladder predicts.",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": "CCN(CC)CCN(CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2)CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2",
+   "proposed_formula": "C70H120N2O6",
+   "proposed_M_plus_H": 1085.9219,
+   "printed_calc_M_plus_H": 1085.922,
+   "delta_vs_printed_mDa": -0.08,
+   "formula_matches_HRMS": null
+  },
+  {
+   "name": "VN3C2",
+   "panel": "e",
+   "formula_ion": "C71H123N2O6",
+   "core_formula": "C7H18N2",
+   "core_cas": "104-78-9",
+   "core_smiles": "CCN(CC)CCC[NH2:1]",
+   "why": "TWO drawn amines have formula C7H18N2: 104-78-9 (N,N-diethyl-1,3-propanediamine) and 10061-68-4 (N,N'-diethyl-1,3-propanediamine). The CH2 ladder discriminates: VN3C2 = VN2C2 + CH2 to 0.05 mDa, and the linker homologue of VN2C2's core (100-36-7) is 104-78-9, not 10061-68-4.",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": "CCN(CC)CCCN(CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2)CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2",
+   "proposed_formula": "C71H122N2O6",
+   "proposed_M_plus_H": 1099.9376,
+   "printed_calc_M_plus_H": 1099.9376,
+   "delta_vs_printed_mDa": -0.03,
+   "formula_matches_HRMS": null
+  },
+  {
+   "name": "VN3C1",
+   "panel": "f",
+   "formula_ion": "C69H119N2O6",
+   "core_formula": "C5H14N2",
+   "core_cas": "109-55-7",
+   "core_smiles": "CN(C)CCC[NH2:1]",
+   "why": "Exactly one drawn amine has formula C5H14N2 (CAS 109-55-7, N,N-dimethyl-1,3-propanediamine) and exactly one of its nitrogens carries two hydrogens.",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": "Cc1c(C)c(OC(=O)CCN(CCCN(C)C)CCC(=O)Oc2c(C)c(C)c3c(c2C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC3)c(C)c2c1CC[C@@](C)(CCCC(C)CCCC(C)CCCC(C)C)O2",
+   "proposed_formula": "C69H118N2O6",
+   "proposed_M_plus_H": 1071.9063,
+   "printed_calc_M_plus_H": 1071.9063,
+   "delta_vs_printed_mDa": -0.03,
+   "formula_matches_HRMS": null
+  },
+  {
+   "name": "PANEL-G (label disputed)",
+   "panel": "g",
+   "formula_ion": "C71H121N2O6",
+   "core_formula": "C7H16N2",
+   "core_cas": null,
+   "core_smiles": null,
+   "why": "The caption labels this VN3C2, but panel (e) already labels a DIFFERENT formula VN3C2 and the two differ by H2. Exactly one drawn amine has C7H16N2 (51387-90-7), but the compound's NAME is unresolved, so it cannot be joined to any value.",
+   "structure_pinned": false
+  },
+  {
+   "name": "VN2C1",
+   "panel": "h",
+   "formula_ion": "C68H117N2O6",
+   "core_formula": "C4H12N2",
+   "core_cas": null,
+   "core_smiles": null,
+   "why": "NO amine drawn in Figure S1a has formula C4H12N2. This is the paper's LEAD compound (Figures S8, S12, S13 and all in-vivo work). Under the CH2-ladder reading the core is the ethylene homologue of 109-55-7, i.e. N,N-dimethylethylenediamine (CAS 108-00-9) - which the figure does not draw. Figure S1a says 35 amines and draws 34 distinct ones (7209-38-3 twice), so exactly one slot is unaccounted for; that is suggestive and is not evidence.",
+   "structure_pinned": false
+  }
+ ]
+}

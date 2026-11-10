@@ -1,0 +1,20 @@
+{
+ "paper": {"pmid": "40433897", "doi": "10.1021/acsnano.5c01378",
+  "title": "Iterative Screening of Vitamin E-Based Functional Lipid Nanoparticles for mRNA Delivery.",
+  "journal": "ACS Nano 2025;19(22)",
+  "title_and_endpoint_verified_from": "Europe PMC REST core record (SRC:MED, EXT_ID:40433897), fetched 2026-11-10"},
+ "files": [
+  {"path": "source/nn5c01378_si_001.pdf", "bytes": 1176524, "pages": 11,
+   "sha256": "c5a3248e3ec19d6e9532c546cdf325a71b338a8e27b5db5163f6126809b509d2",
+   "acquired": "pre-supplied in source/ by the caller before this run",
+   "recorded_utc": "2026-11-10",
+   "url": "https://pubs.acs.org/ancac3/article-supplement/3755198/pdf/nn5c01378_si_001 (per the file's own download watermark; not fetched by this run)",
+   "licence": "NOT CAPTURED. The ACS landing page was not visited (browser forbidden for this run), so the licence string required by CLAUDE.md section 8 before corpus release is UNKNOWN. ACS Nano is subscription-access and isOpenAccess=N, so a CC0/CC-BY-compatible licence must not be assumed."}
+ ],
+ "not_acquired": [
+  {"what": "main article PDF",
+   "why": "Europe PMC isOpenAccess=N, inEPMC=N, inPMC=N, pmcid=null; NCBI elink returns only pubmed_pmc_refs (7 citing PMCIDs) and no pubmed_pmc self-link, so no PMC deposit exists. ACS requires a browser and this run was forbidden the shared browser. No paywall or bot check was bypassed."},
+  {"what": "author code/data repository",
+   "why": "provenance/tools/find_repo.py returned no candidate above noise; no Zenodo/Dryad DOI is referenced in the SI."}
+ ]
+}

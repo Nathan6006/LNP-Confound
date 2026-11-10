@@ -1,0 +1,41 @@
+code,kind,sidechain_SMILES,n_carbons,amine_order,branched,unsaturated,used_in_222_266,resolved,drawn_in_Figure_1B,vector_measured_carbons,note
+Aet,cationic,CCN,2,primary,0,0,yes,yes,yes,,2-aminoethyl
+Apd,hydrophilic,C(CO)CO,3,primary,1,0,yes,yes,yes,,"1,3-dihydroxypropan-2-yl, from 2-amino-1,3-propanediol (SI Materials). Attaches through the CENTRAL carbon -- Figure 1B draws the squiggle there, and SI Figure S7 draws it again in the full structures of 236 and 266."
+Apr,cationic,CCCN,3,primary,0,0,yes,yes,yes,,3-aminopropyl
+Dea,hydrophilic,N(CCO)(CCO)-  [on the backbone N],4,secondary,0,0,yes,yes,yes,,diethanolamine. SECONDARY amine: the backbone nitrogen itself bears both hydroxyethyl arms and no hydrogen. Figure 1B marks it with an asterisk and draws the squiggle ON THE NITROGEN.
+Dec,lipid,CCCCCCCCCC,10,primary,0,0,yes,yes,yes,,n-decyl; n-decylamine is in the SI Materials list
+Dme,cationic,,4,primary,0,0,yes,no,no,,"UNRESOLVED CONNECTIVITY. The code appears in SI Table S9 (peptoid 231) and nowhere in Figure 1B's drawn pool. The printed calculated exact mass pins the COMPOSITION at C4H10N, but C4H10N is satisfied by 2-(dimethylamino)ethyl, 3-(methylamino)propyl, 2-(methylamino)propyl and others, and mass cannot see connectivity. Figure 1B's 'Mae' is drawn as methylaminopropyl and has the SAME formula, which is precisely why the mass does not decide. NOT ENUMERATED; peptoid 231 is excluded from 03_enumerated.csv."
+Dod,lipid,CCCCCCCCCCCC,12,primary,0,0,yes,yes,yes,12,"n-dodecyl. Figure 1B prints the formula C12H23, which is one hydrogen short of dodecyl (C12H25); SI Figure S7's legend prints 'Dod (C12)' and draws 12 vertices. See 08_contradictions.csv."
+Eae,hydrophilic,N(CC)(CCO)-  [on the backbone N],4,secondary,0,0,yes,yes,yes,,"2-(ethylamino)ethanol (SI Materials, TCI). SECONDARY amine, same treatment as Dea. NOT DRAWN in Figure 1B's pool -- the code appears only in SI Table S9. The structure is the Materials-list reagent, and the calculated exact mass confirms the composition."
+Ehx,lipid,CC(CC)CCCC,8,primary,1,0,yes,yes,yes,8,"2-ethylhexyl, drawn in full in Figure 1B and again in SI Figure S7's legend. RACEMIC at C2: 2-ethylhexylamine is sold and used as the racemate (SI Materials: VWR) and the paper draws no wedge. Stored without a stereocentre."
+Hex,lipid,CCCCCC,6,primary,0,0,yes,yes,yes,,n-hexyl
+Mip,cationic,CCCn1ccnc1C,7,primary,0,0,yes,yes,yes,,3-(2-methyl-1H-imidazol-1-yl)propyl.
+Mop,cationic,CCCN1CCOCC1,7,primary,0,0,yes,yes,yes,,"3-morpholinopropyl (3-morpholinopropylamine, SI Materials)."
+Nhe,hydrophilic,CCO,2,primary,0,0,yes,yes,yes,,2-hydroxyethyl
+Nhp,hydrophilic,CCCO,3,primary,0,0,yes,yes,yes,,3-hydroxypropyl
+Nme,hydrophilic,CCOC,3,primary,0,0,yes,yes,yes,,"2-methoxyethyl. SMILES reads attachment-C, then O, then methyl: C-O-C."
+Nmp,hydrophilic,CCCOC,4,primary,0,0,yes,yes,yes,,"3-methoxypropyl (3-methoxypropan-1-amine, SI Materials)."
+Oct,lipid,CCCCCCCC,8,primary,0,0,yes,yes,yes,,n-octyl
+Ole,lipid,CCCCCCCC/C=C\CCCCCCCC,18,primary,0,1,yes,yes,yes,,"(Z)-octadec-9-en-1-yl. Figure 1B writes the word 'Oleyl' and draws no bond-line structure, so the 9Z position and geometry are the standard meaning of the word, not a reading. Flagged structure_assumed on every row using it."
+Bpp,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Cme,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Cpr,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Cym,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Eed,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Frm,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Fur,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Imp,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Iso,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Mae,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Met,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Mme,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Mpe,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Mpi,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Mpl,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Mpp,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Ode,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Pet,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Pip,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Smb,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Spm,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."
+Tae,,,,,,,no,no,yes,,"appears only in SI Table S1's 221-member screening library, which has no extractable value; not transcribed. See blocks.py."

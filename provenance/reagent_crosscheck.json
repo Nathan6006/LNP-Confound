@@ -1,0 +1,4667 @@
+{
+ "what": "C17 cross-experiment reagent name -> structure",
+ "gated": [
+  {
+   "name": "DMPE-PEG2000",
+   "prefix": "PEG",
+   "n_experiments": 9,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NLDCRRFPGOSAHV": [
+     "JW_2024"
+    ],
+    "OJTFVTWLLKMOJL": [
+     "BL_2023",
+     "BL_2024",
+     "JC_2023",
+     "LM_2019",
+     "LR_2023",
+     "LX_2024",
+     "LZ_2025",
+     "NC_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  }
+ ],
+ "reported": [
+  {
+   "name": "A10_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MQAFJQYMCDHMCH": [
+     "JC_2023"
+    ],
+    "WTQHVTAHHWFUMT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IMJOCSCGJLGYAC": [
+     "YX_2024"
+    ],
+    "LOPYBQAKKBHUGW": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "COVLRWPSGINCOU": [
+     "JC_2023"
+    ],
+    "LLQVJYWBDITZPV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JLBJFRMCVXVPMS": [
+     "YX_2024"
+    ],
+    "PSAIAWQGHKAXEQ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NANYXEVKLHDAKH": [
+     "JC_2023"
+    ],
+    "TXAQCFJLNGGAKU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AQIPVHNBCFNUCN": [
+     "JC_2023"
+    ],
+    "UFIJXNHUXZEDEG": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GBFMVPQZVPUUSJ": [
+     "YX_2024"
+    ],
+    "OJCJMIXNLZRFGX": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BUPTVXATVCHUED": [
+     "JC_2023"
+    ],
+    "WUXOOLUMHCLBLD": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HSDFCQLXQWDFDO": [
+     "YX_2024"
+    ],
+    "XWMUHVBVNNXRFF": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DAGJGNGLVYHWBP": [
+     "YX_2024"
+    ],
+    "UBQSALCPQQIYGU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IETRRFUWECYSDE": [
+     "YX_2024"
+    ],
+    "QBFZREPEBWBHPO": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DIQYDYNIXIBAGO": [
+     "YX_2024"
+    ],
+    "WEJGGBYYQNKICH": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DAGJGNGLVYHWBP": [
+     "YX_2024"
+    ],
+    "HLDCNHQCDZPHAO": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IETRRFUWECYSDE": [
+     "YX_2024"
+    ],
+    "WIMXUVGWXNVBTR": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DIQYDYNIXIBAGO": [
+     "YX_2024"
+    ],
+    "ULKFCUHSPZEWJW": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CLVSBGNSLGMTBS": [
+     "JC_2023"
+    ],
+    "PQPDABYHOBGEKV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FLNOPFNDGLVSMF": [
+     "JC_2023"
+    ],
+    "GLHPAYPTNIECJV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A10_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JEDVRHWKYCLEPR": [
+     "JC_2023"
+    ],
+    "VWCUZAILWVBKHR": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BDHRULWTLIYGJC": [
+     "JC_2023"
+    ],
+    "UGSAAHAIHXRHDC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LJWIRLRJENGZKC": [
+     "YX_2024"
+    ],
+    "POPHRRNXOBXEDG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GUQJUWHTUXGJBE": [
+     "JC_2023"
+    ],
+    "XAKHNMPBJSOINH": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GHZSCFHSYFKVAS": [
+     "JC_2023"
+    ],
+    "LFNCPKTYKVMNOR": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FEBPNGUWXXVPEE": [
+     "JC_2023"
+    ],
+    "QSDAXZDVIUPTMX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BRSRTDPTTAENIV": [
+     "JC_2023"
+    ],
+    "ZHZPEKVSJUZHNZ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IVGXHLUHEIEAIO": [
+     "JC_2023"
+    ],
+    "QVRKDPVJOQHFLY": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KFBYZSLOFSAQQT": [
+     "YX_2024"
+    ],
+    "TYYJLZWUXWDMTD": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "RNRYKYLYHCKHFC": [
+     "JC_2023"
+    ],
+    "WJYAYNBUONGVLN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AJAPCNOVYAHVBS": [
+     "YX_2024"
+    ],
+    "XWLUVTLPIDLVGF": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JCIRPTKXUPBAKU": [
+     "YX_2024"
+    ],
+    "LMQCUQQZRJBDNE": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QTHXJLINIQLPMY": [
+     "YX_2024"
+    ],
+    "RINPWHTXQWXPOF": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AJAPCNOVYAHVBS": [
+     "YX_2024"
+    ],
+    "ROHRLZYSCBKMLU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JCIRPTKXUPBAKU": [
+     "YX_2024"
+    ],
+    "SCEKSXLFMINXIT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CHNMZIAGOKZNHJ": [
+     "JC_2023"
+    ],
+    "QTHXJLINIQLPMY": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IYUGHLJMQURLRF": [
+     "YX_2024"
+    ],
+    "QFBXBSBHUIFGGN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GXVADYZAHWDVHJ": [
+     "YX_2024"
+    ],
+    "LNWLAIFMOJIZLE": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A11_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CPORFTBWYUUZEQ": [
+     "YX_2024"
+    ],
+    "VWPMGZKKILNSMW": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HAJQPOVLZCJCGL": [
+     "YX_2024"
+    ],
+    "PCXDXAWNOWLVDS": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CYIPCXHBVYFBKX": [
+     "JC_2023"
+    ],
+    "FRIULHSTIQQXDO": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QEXXHAROZPVKOW": [
+     "JC_2023"
+    ],
+    "UWKDCFBUUINOER": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BXRTZZGSJAIZOL": [
+     "YX_2024"
+    ],
+    "CFOYGQJXXZWEOL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PDTFOEWVBHPJJO": [
+     "JC_2023"
+    ],
+    "WANNNVQJENAGAK": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FUCHGYDFTKYAMB": [
+     "YX_2024"
+    ],
+    "JHOJECWTKUJBBH": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FOQLXXGUZDRRGS": [
+     "JC_2023"
+    ],
+    "TVEIVCTZJCIBGL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KAHNSVUSRRLZIH": [
+     "YX_2024"
+    ],
+    "YVBLSUOONZWDFJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MIHFVOWYWGKYNG": [
+     "JC_2023"
+    ],
+    "NRTKKFAJXYOIAT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DARFJBZXLWIODW": [
+     "JC_2023"
+    ],
+    "WOFLEWBMTJAPHD": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FIXAMIXTIGMFNL": [
+     "YX_2024"
+    ],
+    "ISQORGVYKSKDHQ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OHADMAATHMQBAD": [
+     "YX_2024"
+    ],
+    "SZYQTTRRZNLAKK": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "WOFLEWBMTJAPHD": [
+     "YX_2024"
+    ],
+    "XKZFFSMACPNBJG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FIXAMIXTIGMFNL": [
+     "YX_2024"
+    ],
+    "KSGGNBXPTHNMQR": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OHADMAATHMQBAD": [
+     "YX_2024"
+    ],
+    "PTRZCAQMYAZHCQ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ITLIISWJYGCQQJ": [
+     "YX_2024"
+    ],
+    "ZRVRCHSZWDHASY": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JNDHIOKPZGJAQI": [
+     "YX_2024"
+    ],
+    "URLZFRHNLCYBOH": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A12_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GCKNUCMZTHTUAH": [
+     "YX_2024"
+    ],
+    "GXOZPDNRNSVFLN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IFFDLTIGQVWIPT": [
+     "JC_2023"
+    ],
+    "WUPDRRMQHYRWAT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BKSUTUQUIVVWJQ": [
+     "JC_2023"
+    ],
+    "JYUWDUVJAVSSNY": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "SIOZNUKHXIWXDO": [
+     "YX_2024"
+    ],
+    "UFGQOJJSIMZZCZ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GQAHHFPEACBDOP": [
+     "JC_2023"
+    ],
+    "MYYNRIPRVJHCLV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DRMMITCOSKPDOY": [
+     "JC_2023"
+    ],
+    "FBIFPIYSFFQRBR": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MFQCWMURBLHACR": [
+     "YX_2024"
+    ],
+    "UMBGFRXHVSXSSD": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FDQJXFUVLMXRBS": [
+     "YX_2024"
+    ],
+    "UVRWQOQRPPFZQM": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JDOPHYZWOBTEFX": [
+     "YX_2024"
+    ],
+    "JIAAIGJUNDBTFU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IWSIXOCEWBCVQS": [
+     "JC_2023"
+    ],
+    "KKFDTELALWMRLH": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QPYZAMMVWHKEFK": [
+     "JC_2023"
+    ],
+    "XQNCKGNQAVNSGC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FASJOUWOMOFITG": [
+     "JC_2023"
+    ],
+    "URKKQRDYLAFPEQ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PLIJAGLWEWHYGD": [
+     "YX_2024"
+    ],
+    "PVOSDWVXPQIYEN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GHVLFEFLNIJXTH": [
+     "JC_2023"
+    ],
+    "XQNCKGNQAVNSGC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "URKKQRDYLAFPEQ": [
+     "YX_2024"
+    ],
+    "VCOYLORAVFHHBY": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AZLXFFSSXFQKAH": [
+     "JC_2023"
+    ],
+    "PLIJAGLWEWHYGD": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DGZDYZKJKNWKTJ": [
+     "JC_2023"
+    ],
+    "LANOEZHDPJPYFA": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LEZSJSCZIYGXEE": [
+     "YX_2024"
+    ],
+    "SVWDGPDRDDKXHP": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A13_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OXBLYYZPXWBALQ": [
+     "YX_2024"
+    ],
+    "RSTYFXBTXWUPOX": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GEUSLMPYKBCONY": [
+     "YX_2024"
+    ],
+    "QIXRWYUOKIFBPT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CWUKGBKFTSFGHH": [
+     "JC_2023"
+    ],
+    "HYLBUPSOHWWXQO": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CMHYAUBWIHECGW": [
+     "YX_2024"
+    ],
+    "ITLUMXKVXKCSEM": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HUBUCIICNDOJFO": [
+     "YX_2024"
+    ],
+    "WQLMWUNERVNBTN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AGIMBAGBZNXBPQ": [
+     "JC_2023"
+    ],
+    "XSRQQRBELYIOQD": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NKKQANZURAJPCI": [
+     "YX_2024"
+    ],
+    "WAUNXNNPVHIAEW": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MGNZUSNQZJSVMP": [
+     "JC_2023"
+    ],
+    "ZGOWPBGJJQUOAE": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HZBWKGKQTCQGDG": [
+     "JC_2023"
+    ],
+    "LEXCHFCRHHOCBH": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "UWEZVZIMPWJQKL": [
+     "YX_2024"
+    ],
+    "ZMCHLNGAKQRRTC": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "TXJPOEOVLHJQNN": [
+     "JC_2023"
+    ],
+    "YVSURCQLQDKECX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ASOWYNTWICNFAK": [
+     "YX_2024"
+    ],
+    "BDGOGGULOATILB": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BUMGQNKIKLPUDU": [
+     "YX_2024"
+    ],
+    "ZGTWYYINCWLCCL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "XWPGZDLRTJIRMS": [
+     "JC_2023"
+    ],
+    "YVSURCQLQDKECX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ASOWYNTWICNFAK": [
+     "YX_2024"
+    ],
+    "VGSLZXFWPGBAKU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BUMGQNKIKLPUDU": [
+     "YX_2024"
+    ],
+    "IDDSHDQKRYSUFJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JHHSBWNJUCWETA": [
+     "JC_2023"
+    ],
+    "SERJSVJQKLUKEL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BELWMGDNVYZYBM": [
+     "JC_2023"
+    ],
+    "MFFCOEMNRRTYDQ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A14_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JWZYPBJSXYCFNY": [
+     "YX_2024"
+    ],
+    "YMKXEVCHNJEPMW": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ANSDHADPQBLPHW": [
+     "YX_2024"
+    ],
+    "HIMCJYXLLHJHPJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DPVGUYPUODUDTB": [
+     "JC_2023"
+    ],
+    "FAEWOHHQKQFPEY": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JAUFASXOOVUEGW": [
+     "JC_2023"
+    ],
+    "XJKFRGGWJYVLDT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NTFBKNZEKNVJNZ": [
+     "YX_2024"
+    ],
+    "QEFMKMAEHHWGRL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PJEOSKIDVYEERP": [
+     "YX_2024"
+    ],
+    "VRFWBHFFUPTRSV": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LKLSIEFMDLHNBH": [
+     "YX_2024"
+    ],
+    "PTFTYYLVEJRSDZ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NLVDTFZYBUBETQ": [
+     "YX_2024"
+    ],
+    "ZWAJTPPUBLNSBT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HXZOPSYTKBOWMH": [
+     "JC_2023"
+    ],
+    "WWFSRJQKZHRHDN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NCJMWUFYSMRIKY": [
+     "YX_2024"
+    ],
+    "RBTSFLHFWIXDAU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NJPCIBWGPUQXHA": [
+     "YX_2024"
+    ],
+    "WZAUKUCGPAGUIV": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ODVUGTPFABOWJF": [
+     "JC_2023"
+    ],
+    "WHLXIVOIULDYMN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HUJKAHASOUGTHH": [
+     "YX_2024"
+    ],
+    "XIZKQDOHIIENTA": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NJPCIBWGPUQXHA": [
+     "YX_2024"
+    ],
+    "ZYRCMEJHTOGOTA": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GEIPIODAUJMISC": [
+     "JC_2023"
+    ],
+    "WHLXIVOIULDYMN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HNXPZZDPRGIDKM": [
+     "JC_2023"
+    ],
+    "HUJKAHASOUGTHH": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PHPULHWVDUBVKU": [
+     "JC_2023"
+    ],
+    "QJODZFKDWZXYOH": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QPXOFURVZMJLEK": [
+     "JC_2023"
+    ],
+    "XVVDADOCBFCMEF": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A15_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GRNCHAUMVMVDLV": [
+     "JC_2023"
+    ],
+    "VBYBWDRFJYNTPQ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CHISNQBPBIKLGC": [
+     "YX_2024"
+    ],
+    "YDGJVEHCMYPNGN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LXNMYHNLYOQZOJ": [
+     "YX_2024"
+    ],
+    "XSWOJHXJULMTEU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "XGSAOCQLRWPOJU": [
+     "JC_2023"
+    ],
+    "YCYWLQRFMQNSBS": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GUOXVVHJCSHHFC": [
+     "JC_2023"
+    ],
+    "RILFVUXVAJHAEO": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MIJSMXGQOVBVKK": [
+     "JC_2023"
+    ],
+    "PWGSAXQMXIMSNB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OEOCKRUSWXYPGR": [
+     "YX_2024"
+    ],
+    "VQMATYQQYSNLRU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BNTZWCWTGKIHLK": [
+     "JC_2023"
+    ],
+    "CBKNQAXXFVGJNU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "SDATYPORFYRHDU": [
+     "YX_2024"
+    ],
+    "VMUMNMZMHSTDHQ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GLSPUDKHFGBAPN": [
+     "YX_2024"
+    ],
+    "PYIGTPPWSADVMX": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NZRAYPRYDKKKEI": [
+     "YX_2024"
+    ],
+    "RUWCJMCKCACPHI": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NLUTYCAVIORYPC": [
+     "YX_2024"
+    ],
+    "WGGASRIWQGYJNV": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IUZFTGHGEPLYLT": [
+     "JC_2023"
+    ],
+    "QBABVYBQIOIPOX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FYCHENASBRMFGD": [
+     "JC_2023"
+    ],
+    "NZRAYPRYDKKKEI": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NLUTYCAVIORYPC": [
+     "YX_2024"
+    ],
+    "UNKVGQMISOXGNZ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JGBZWRVSKGTVQA": [
+     "JC_2023"
+    ],
+    "QBABVYBQIOIPOX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KPNBXCQTTRQEHG": [
+     "YX_2024"
+    ],
+    "OYQWMTIVSVYAMG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JNHWWZODZXCIII": [
+     "JC_2023"
+    ],
+    "WABASFXRHFHNNB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A16_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AKIOIYVCPCZCAK": [
+     "YX_2024"
+    ],
+    "RSKAUEGBGAQZDM": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DBTMFRUKDUMTSE": [
+     "YX_2024"
+    ],
+    "IIQPNPKPBMQBEO": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DOAPNRQMPOGYPZ": [
+     "YX_2024"
+    ],
+    "UGHBPTKVSNALCB": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DCADKEVINPGSLS": [
+     "YX_2024"
+    ],
+    "JWUMBLDTQUGYIL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HMBACNQSCILOBP": [
+     "JC_2023"
+    ],
+    "LNSRUXHLKADQTJ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NOSPNYWKNNWVNI": [
+     "JC_2023"
+    ],
+    "WTFJBKHMTJJNCM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CBRBTWVHQRHGLL": [
+     "YX_2024"
+    ],
+    "MMWJTTCUBSPOGV": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BKEZBQPRLJYKQL": [
+     "YX_2024"
+    ],
+    "LCUBRZZRYZRFOD": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NJPAJGPRWCFJMW": [
+     "YX_2024"
+    ],
+    "PMUGVWPPHLWOKP": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NEMRMMOBIPODJK": [
+     "YX_2024"
+    ],
+    "YQSFEEHNTVGVQF": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LSXODWXXYNTCTB": [
+     "JC_2023"
+    ],
+    "SWNXHVMRNUCLQF": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AJDCMGPJOWUQHD": [
+     "YX_2024"
+    ],
+    "DPRXSTUUBLPBAI": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DWMPNZISOIQAKB": [
+     "YX_2024"
+    ],
+    "GXGJYFULZOCZIG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NPPJZWMGXTVJNF": [
+     "JC_2023"
+    ],
+    "SWNXHVMRNUCLQF": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AJDCMGPJOWUQHD": [
+     "YX_2024"
+    ],
+    "BJOKIOPHOOOMBQ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DWMPNZISOIQAKB": [
+     "YX_2024"
+    ],
+    "ZXUFMRINPSSHPG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AZTMBOQMUYHWSY": [
+     "JC_2023"
+    ],
+    "ZZOYLVUGLMMNEV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CIKIJXQCBDFQDN": [
+     "JC_2023"
+    ],
+    "ZSHZXWVKTAADEM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A1_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DYCOVWUFGYIIJU": [
+     "YX_2024"
+    ],
+    "HYFUNZRXINAZPI": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AANSLSAQJAGOMI": [
+     "JC_2023"
+    ],
+    "QMCRBTAXPVWLNL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DUZFZEWIHNXENK": [
+     "YX_2024"
+    ],
+    "PZCKVAILAUPXPM": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QYXINKURLQSTQJ": [
+     "JC_2023"
+    ],
+    "XBZHJQDKIHKVQZ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HFFBGNIWNJOOLM": [
+     "JC_2023"
+    ],
+    "OHPWRWHJGTWBKR": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JTRJXYGEYWNPEN": [
+     "JC_2023"
+    ],
+    "SQZSENNPXALRRL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GFGNZORTSGUIPI": [
+     "JC_2023"
+    ],
+    "MBBPTRJAAITOQX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BYCZNWOWVOVXNI": [
+     "JC_2023"
+    ],
+    "DUWXNUVPFICCKJ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BCNLRBSELAIMHO": [
+     "YX_2024"
+    ],
+    "DLDLIOCOCMYWIT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "POXUHXTWGDVVLM": [
+     "JC_2023"
+    ],
+    "VMEHLQOMWJBYLI": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MBJYLIITSAGWOM": [
+     "YX_2024"
+    ],
+    "MFHHDJQUMUTCLG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JDZZDXMNXGMOOF": [
+     "YX_2024"
+    ],
+    "QPMDZNVNALESRP": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MPMVAJNXJWJJAJ": [
+     "YX_2024"
+    ],
+    "ZBNOITXEMFOWBL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IERLTIKIQYKORM": [
+     "JC_2023"
+    ],
+    "MBJYLIITSAGWOM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JDZZDXMNXGMOOF": [
+     "YX_2024"
+    ],
+    "MLMRDBVYRRCAHH": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LZTKJGMWPDMWCI": [
+     "JC_2023"
+    ],
+    "MPMVAJNXJWJJAJ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "WCABKWZVTGAUTN": [
+     "YX_2024"
+    ],
+    "XFANHRDLHSARHY": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GOCIEKKBWCINBP": [
+     "YX_2024"
+    ],
+    "WTAIYFRLIWNFQV": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A2_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ALHSHLHFSHKTNM": [
+     "JC_2023"
+    ],
+    "MYZXIYNXBIAKMB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CVLPEASZTCYRBY": [
+     "YX_2024"
+    ],
+    "OVUMOAPUDADVMF": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GHPDLFSHNUTHGG": [
+     "YX_2024"
+    ],
+    "YDDIESXMLBIQLQ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BNRLENZHZUJICX": [
+     "JC_2023"
+    ],
+    "COCFJSGHPULUTC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FRMXQUMQDGDWNZ": [
+     "JC_2023"
+    ],
+    "XJFPJONNIWCCEA": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HAGZOFLZVFYQCG": [
+     "JC_2023"
+    ],
+    "SIZFFXJUAQLLJY": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BGWQGDSTKVHQDM": [
+     "JC_2023"
+    ],
+    "XXYLDCMBGCMCRP": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KCSJVVKZBWTIHJ": [
+     "YX_2024"
+    ],
+    "SRKMQDBCCPUKPO": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LOKQNZLVQDUTMF": [
+     "JC_2023"
+    ],
+    "PKPIGAQGXBEKOF": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FMQDZLGEJHEQDL": [
+     "JC_2023"
+    ],
+    "ZEYPYUXHEJCTRL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BVTLWOFXVSALMM": [
+     "JC_2023"
+    ],
+    "OWGRPJSMTUQDSW": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IGCQNCBWCWEQJM": [
+     "JC_2023"
+    ],
+    "RDPAIUAMTIAJPL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ROYCNRFBCNSLCN": [
+     "JC_2023"
+    ],
+    "ZQUCRQZOMNLGHR": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OWGRPJSMTUQDSW": [
+     "YX_2024"
+    ],
+    "RCGLZUIAXQTGFL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BGGBWLQJYUDGQU": [
+     "JC_2023"
+    ],
+    "RDPAIUAMTIAJPL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GQARWLJMHPDHLV": [
+     "JC_2023"
+    ],
+    "ZQUCRQZOMNLGHR": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "VZPSNZBAAQGDSZ": [
+     "JC_2023"
+    ],
+    "YAOPZSMNJMBJFQ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "YQSMGSRMOGYIIH": [
+     "JC_2023"
+    ],
+    "ZXWBNKWZVOYDHN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A3_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MAIJCEOXFKPFOU": [
+     "YX_2024"
+    ],
+    "ZZXVYFJMLGVZJG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GQMBXNQOQXPFLN": [
+     "YX_2024"
+    ],
+    "WMEGQOOUNBPULU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IXNHJPZVWILYIY": [
+     "YX_2024"
+    ],
+    "JVTZHBLWIOKINE": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NRSRVZHDZNIECN": [
+     "JC_2023"
+    ],
+    "YEAQNWQCMJUJDQ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LBMKGULPJLPQND": [
+     "YX_2024"
+    ],
+    "VQNRMYNZOWOWBB": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MIDLRMXBOCKIPU": [
+     "YX_2024"
+    ],
+    "MSHZISVCVYKEEM": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HTUODSKRPRCQGR": [
+     "JC_2023"
+    ],
+    "LVTBIQMTUKJTRX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LVVKATLCPDQNEZ": [
+     "YX_2024"
+    ],
+    "RHWLBTNSZPXJIZ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IRSNHPKAUYNAPD": [
+     "YX_2024"
+    ],
+    "QPFNRDJMBLSAPT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "UFLXJTVSJRRNET": [
+     "JC_2023"
+    ],
+    "XYMMFWGFOWMTFB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DADPKLVNNVPKAV": [
+     "JC_2023"
+    ],
+    "WCDXERUYVDMLLT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DHYSYYUXAVKDSI": [
+     "JC_2023"
+    ],
+    "SZZQAFJAMZAHOM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GAKXFRBSCXIUNN": [
+     "YX_2024"
+    ],
+    "UZKXIGOBIOPXNZ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IASCOYCPZXWPAY": [
+     "JC_2023"
+    ],
+    "WCDXERUYVDMLLT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PNLYOTHPCUPAGK": [
+     "JC_2023"
+    ],
+    "SZZQAFJAMZAHOM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GAKXFRBSCXIUNN": [
+     "YX_2024"
+    ],
+    "GNHANQYTWKULPH": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "TUGDWGBZISSLBH": [
+     "JC_2023"
+    ],
+    "ZXWKKYAKMYCIEC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CFWRVCIDPWXIFV": [
+     "YX_2024"
+    ],
+    "NFOZDSVYJIAWCS": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A4_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OEPYYIWBDVPEJQ": [
+     "YX_2024"
+    ],
+    "PVWXJIZZCWAPAT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KGYAIUAETQUPJI": [
+     "YX_2024"
+    ],
+    "ROIVTPGMUHXJLY": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BGHLMAQOPZIUJR": [
+     "JC_2023"
+    ],
+    "JFJGQXNTEKHUKF": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MPPHPINKTGVVFA": [
+     "YX_2024"
+    ],
+    "SDTFGIISVNNPJU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GJFHOWRNWNHMAA": [
+     "YX_2024"
+    ],
+    "JUXVSKTYTIYRAJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HOYUYSUROMVTEK": [
+     "JC_2023"
+    ],
+    "MUQQHXWTVLYCIA": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OFXYWIQXNRKDEN": [
+     "JC_2023"
+    ],
+    "OWKWUMAVPDPLPO": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CNPQIGSVADGQAE": [
+     "YX_2024"
+    ],
+    "PVYHAIABNLSCSY": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BDPBOBCLPCHDSF": [
+     "JC_2023"
+    ],
+    "ZHHFZQWHDWMWCV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DXJQGIDWGLBTBK": [
+     "JC_2023"
+    ],
+    "HLQGSPKWDOZCMA": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "UBRDEMPQQNUKIJ": [
+     "JC_2023"
+    ],
+    "VAUILAQEWJSHGZ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CWWICWOKASVVRE": [
+     "YX_2024"
+    ],
+    "RVYPFXYAOFBTIM": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NSPOOULKKRZXAT": [
+     "YX_2024"
+    ],
+    "WRBPZXMDPBZMHB": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "VAUILAQEWJSHGZ": [
+     "YX_2024"
+    ],
+    "VEYVFKVLKHJBNT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CWWICWOKASVVRE": [
+     "YX_2024"
+    ],
+    "MHPDHTVTWZUZCJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BORHEKRWILELSR": [
+     "JC_2023"
+    ],
+    "NSPOOULKKRZXAT": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "SHHGDFOWMDKEMQ": [
+     "JC_2023"
+    ],
+    "SKROITITYKYPQE": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DXGBZDHIUGOJDV": [
+     "YX_2024"
+    ],
+    "VLHSLMBDMKODEN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A5_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JBBONJCNRQOYBY": [
+     "JC_2023"
+    ],
+    "WPPWACDXXBXJGM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "VJODNFORJHYCDC": [
+     "JC_2023"
+    ],
+    "VYVXQPAXFQTDLN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CCONEJJPVYEOKJ": [
+     "JC_2023"
+    ],
+    "YHOCTQXFDRVINI": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ROEANKHCRCVXEX": [
+     "JC_2023"
+    ],
+    "SYDRWABJMOXKFQ": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QAHIDHIJBAIUGL": [
+     "JC_2023"
+    ],
+    "UDFZXVFRPAHKSS": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IDJQGGJEYREUIQ": [
+     "JC_2023"
+    ],
+    "PILPNSKIYMRLST": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DFCLDLWCNBNRKD": [
+     "JC_2023"
+    ],
+    "QQQHMLNPNXJRRP": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BHLMXLSWASPQMO": [
+     "YX_2024"
+    ],
+    "QAAWYJSBVZTOKJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FZYPPNIPKDVBEC": [
+     "YX_2024"
+    ],
+    "YPDSOROIRBYOHW": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KOWLIQZYHPTANY": [
+     "YX_2024"
+    ],
+    "QFMLBMUGASOBGL": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JNTRFUDVPLJBOK": [
+     "JC_2023"
+    ],
+    "JPGYCUAIRNKSQU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LLTCPPLXQGQHBH": [
+     "YX_2024"
+    ],
+    "MOVRCSFLJWNNHV": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PWQJIGQWHDACQC": [
+     "JC_2023"
+    ],
+    "WOUCSTZPYOIQFX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GVXQPMKLQKDCRG": [
+     "JC_2023"
+    ],
+    "JPGYCUAIRNKSQU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LLTCPPLXQGQHBH": [
+     "YX_2024"
+    ],
+    "PVICVTPGPZZGSN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PCMLYXSFEIPYKD": [
+     "JC_2023"
+    ],
+    "WOUCSTZPYOIQFX": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "RHOLTXQMXWQJJL": [
+     "JC_2023"
+    ],
+    "VDKQILYCJHKAPD": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CCTGQAACSVOFHJ": [
+     "JC_2023"
+    ],
+    "XANBYHIOYJYQFU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A6_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "RHFYVZPQEZYHSZ": [
+     "JC_2023"
+    ],
+    "RPRMEIMJIRBCBV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OJOSKFUHFHABET": [
+     "YX_2024"
+    ],
+    "OOHNWTHVLQKACE": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IYIGBCWRQOQWRJ": [
+     "JC_2023"
+    ],
+    "WIONRQOQSDNHMW": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BWISFZRCCJEONN": [
+     "JC_2023"
+    ],
+    "NUCHCKHOGIPCSL": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DKFZJLQHGLWUOA": [
+     "YX_2024"
+    ],
+    "FFMMIBDPQXRXQB": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HHOUXGGWRWWDEK": [
+     "JC_2023"
+    ],
+    "JODNIITZAZCKQM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "QVLCRRRQGDFLCR": [
+     "YX_2024"
+    ],
+    "TZWINBBXYPXXKR": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AKDQSBWJCKASGT": [
+     "YX_2024"
+    ],
+    "FYTKNIBVSQLKHA": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HGUBJWMYGXAYND": [
+     "YX_2024"
+    ],
+    "IMTQQZYOODFBGU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DRUKSTXFKJAKHV": [
+     "JC_2023"
+    ],
+    "OEQUNZZNDXYZDE": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "LLRNQSKKJMXOGC": [
+     "JC_2023"
+    ],
+    "YRSYUGJVAJXULG": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NQQYMDLEICAKBC": [
+     "YX_2024"
+    ],
+    "VNRGNJJFLPPCMY": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FNQDMKTWHKNYLY": [
+     "YX_2024"
+    ],
+    "GTHREUNTJJFQBK": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "AMRMYGLSBXOEBI": [
+     "JC_2023"
+    ],
+    "YRSYUGJVAJXULG": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GOPBXSKZUDOBMZ": [
+     "JC_2023"
+    ],
+    "NQQYMDLEICAKBC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FNQDMKTWHKNYLY": [
+     "YX_2024"
+    ],
+    "PPZSLOMTPVCKJA": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CWMHMQAABBBHEB": [
+     "YX_2024"
+    ],
+    "KMOCPAGYVMJPDN": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DGKHBAVYJUMWTM": [
+     "JC_2023"
+    ],
+    "JXXIVGXFXNHEJH": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A7_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JFQKFIALOXULIT": [
+     "YX_2024"
+    ],
+    "NVWSHIFGTQZMPU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MDGRBYGUCFXSDS": [
+     "JC_2023"
+    ],
+    "SVHINABMVWKLKY": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ZAUDRPRNNUNTAY": [
+     "JC_2023"
+    ],
+    "ZLULUPHEPKOADI": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MCTUKUFXDXCEKY": [
+     "JC_2023"
+    ],
+    "NVSGPDOXTRFSNV": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KOFQCVJNMZBSBI": [
+     "JC_2023"
+    ],
+    "LCCLZLWMBHSXCN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BJIVFCNDLRCVEG": [
+     "YX_2024"
+    ],
+    "HRKOXCCNKHPALR": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HMRNUGHGTLERKW": [
+     "YX_2024"
+    ],
+    "QUSRYIKUYIMHSU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BHNLZEIWLMLQBL": [
+     "JC_2023"
+    ],
+    "HOMZWYGCMPAMSC": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KTRRXFIYYAWQPW": [
+     "YX_2024"
+    ],
+    "LVVUGNPNMSPKIX": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GCKPLLFZBDHHIL": [
+     "YX_2024"
+    ],
+    "WYXYHNYVCOFPCC": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MXPIVGQHHPGSQE": [
+     "JC_2023"
+    ],
+    "OBJVYQNNLPAIOB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ACKWHPYNVVFISW": [
+     "YX_2024"
+    ],
+    "KMEATEAJOXAUAI": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "RBSDEBYQIGJURQ": [
+     "YX_2024"
+    ],
+    "RMLRBFHENCVPRJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "DKHTVWRTUHVLLE": [
+     "JC_2023"
+    ],
+    "OBJVYQNNLPAIOB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "ACKWHPYNVVFISW": [
+     "YX_2024"
+    ],
+    "HSSKYQKHUDMESJ": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "RBSDEBYQIGJURQ": [
+     "YX_2024"
+    ],
+    "SWGYMAPQGQTUIO": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "JSNVMBZGOLPJMF": [
+     "JC_2023"
+    ],
+    "KPQGJBWICLKTDK": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "UWWDYBQVZZWFSA": [
+     "JC_2023"
+    ],
+    "ZMESEZJIPMCQNN": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A8_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "STVZHINKQCMUEJ": [
+     "YX_2024"
+    ],
+    "ZKONOFQDGYIOTG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B1_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "CQGXYDBLOVYDGS": [
+     "YX_2024"
+    ],
+    "XYALHKXBSLUGNR": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B1_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FDAUTBKQMFYIPH": [
+     "YX_2024"
+    ],
+    "TZVDFHAQUFCABK": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B1_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HKOIFAVDVUMPIK": [
+     "YX_2024"
+    ],
+    "IMXYJMFWZWVICP": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B2_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "FVXDXKDOQVCRKN": [
+     "YX_2024"
+    ],
+    "OSJKUTPTXLQLPD": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B2_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PFXWHDLXWUZKNI": [
+     "JC_2023"
+    ],
+    "YQTNAWNBXNLSMB": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B2_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "UJQQEEWELHMHDA": [
+     "JC_2023"
+    ],
+    "UYLGYONLWGTBDM": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B3_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "HFTQNWVPOCIKFK": [
+     "YX_2024"
+    ],
+    "USJZKUDSDJMKHU": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B3_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KUEYIAFBMXKZHQ": [
+     "YX_2024"
+    ],
+    "LTUBUZSSKHYOQI": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B3_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "XLTCSLWUIJKMRC": [
+     "YX_2024"
+    ],
+    "YAVKSTQJZURLKT": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B4_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BTJLTCAQNLLMNJ": [
+     "YX_2024"
+    ],
+    "YGKGZZIKOAIXRX": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B4_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "OEJXYDAWAXGNGE": [
+     "YX_2024"
+    ],
+    "ZAWRUEIGCJECHG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B4_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "IHSQDSBJSOPRLJ": [
+     "JC_2023"
+    ],
+    "WVYWVOUMXJKIOU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B5_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "BTJLTCAQNLLMNJ": [
+     "YX_2024"
+    ],
+    "IPYRUYIYWCYYEI": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B5_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "KFNCXJHCJIDCQI": [
+     "JC_2023"
+    ],
+    "OEJXYDAWAXGNGE": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B5_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "PZIPBBXLFIQVKR": [
+     "JC_2023"
+    ],
+    "WVYWVOUMXJKIOU": [
+     "YX_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B6_C1",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "GKVFEFGGWZHQCY": [
+     "YX_2024"
+    ],
+    "MNRIRMFZDAHZGE": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B6_C2",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "MLZCVUODKILAIX": [
+     "YX_2024"
+    ],
+    "ZUUFGJQZNSMOIC": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  },
+  {
+   "name": "A9_B6_C3",
+   "prefix": "IL",
+   "n_experiments": 2,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NEIYKKARGVRPPX": [
+     "YX_2024"
+    ],
+    "YDEWYNSZIOWNNG": [
+     "JC_2023"
+    ]
+   },
+   "registered": false,
+   "comparison": "skeleton_inchikey"
+  }
+ ],
+ "stereo_gated": [
+  {
+   "name": "DMPE-PEG2000",
+   "prefix": "PEG",
+   "n_experiments": 9,
+   "n_distinct_structures": 2,
+   "keys": {
+    "NLDCRRFPGOSAHV-UHFFFAOYSA-N": [
+     "JW_2024"
+    ],
+    "OJTFVTWLLKMOJL-UHFFFAOYSA-N": [
+     "BL_2023",
+     "BL_2024",
+     "JC_2023",
+     "LM_2019",
+     "LR_2023",
+     "LX_2024",
+     "LZ_2025",
+     "NC_2024"
+    ]
+   },
+   "registered": false,
+   "comparison": "full_inchikey"
+  }
+ ],
+ "n_names": 19999,
+ "n_multi_experiment": 396,
+ "unbaselined": [],
+ "vanished": []
+}

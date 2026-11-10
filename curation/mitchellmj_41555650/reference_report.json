@@ -1,0 +1,54 @@
+{
+ "independence_checked_how": "ast.walk over this module at run time; see audit_independence()",
+ "independent": true,
+ "findings": [],
+ "forbidden_calls": [
+  "AddAtom",
+  "AddBond",
+  "CombineMols",
+  "RWMol",
+  "ReactionFromSmarts",
+  "RemoveAtom",
+  "ReplaceSubstructs",
+  "RunReactants",
+  "attach",
+  "esterify"
+ ],
+ "forbidden_imports": [
+  "assemble",
+  "curation.lib",
+  "curation.lib.assemble"
+ ],
+ "anchors": {
+  "C10-306": {
+   "anchor_formula": "C47H99N3O4",
+   "anchor_exact_mass": 769.76356,
+   "enumeration_formula": "C47H99N3O4",
+   "anchor_InChIKey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+   "enumeration_InChIKey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "full_match": true,
+   "anchor_written_SMILES": "CCCCCCCCC(O)CN(CC(O)CCCCCCCC)CCCN(C)CCCN(CC(O)CCCCCCCC)CC(O)CCCCCCCC",
+   "anchor_canonical": "CCCCCCCCC(O)CN(CCCN(C)CCCN(CC(O)CCCCCCCC)CC(O)CCCCCCCC)CC(O)CCCCCCCC",
+   "enumeration_SMILES": "CCCCCCCCC(O)CN(CCCN(C)CCCN(CC(O)CCCCCCCC)CC(O)CCCCCCCC)CC(O)CCCCCCCC",
+   "written_string_is_byte_identical_to_enumeration": false,
+   "canonical_is_byte_identical_to_enumeration": true,
+   "byte_identity_note": "Byte-identity of the CANONICAL form is EXPECTED when both are right and is NOT evidence of copying (F-037). The written string above is what was authored; compare THAT."
+  },
+  "C14-200": {
+   "anchor_formula": "C80H165N5O5",
+   "anchor_exact_mass": 1276.28107,
+   "enumeration_formula": "C80H165N5O5",
+   "anchor_InChIKey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+   "enumeration_InChIKey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "full_match": true,
+   "anchor_written_SMILES": "CCCCCCCCCCCCC(O)CN(CC(O)CCCCCCCCCCCC)CCN1CCN(CC1)CCN(CC(O)CCCCCCCCCCCC)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC",
+   "anchor_canonical": "CCCCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC",
+   "enumeration_SMILES": "CCCCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC",
+   "written_string_is_byte_identical_to_enumeration": false,
+   "canonical_is_byte_identical_to_enumeration": true,
+   "byte_identity_note": "Byte-identity of the CANONICAL form is EXPECTED when both are right and is NOT evidence of copying (F-037). The written string above is what was authored; compare THAT."
+  }
+ }
+}

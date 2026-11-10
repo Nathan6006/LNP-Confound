@@ -1,0 +1,953 @@
+{
+ "_what": "Stage 05 geometry and per-bar reads. Tier 5 (pixels).",
+ "dpi": 600,
+ "panels": [
+  {
+   "key": "S1b",
+   "page": 2,
+   "round_id": "R1_hbond",
+   "cargo": "unmodified Fluc mRNA",
+   "n_text": "n = 4 hindlimbs",
+   "clip_pt": [
+    443,
+    150,
+    522,
+    228
+   ],
+   "render_dpi": 600,
+   "native_image_dpi": 219.88,
+   "frame": {
+    "spine_l": 42,
+    "spine_r": 52,
+    "baseline_top": 590,
+    "baseline_bot": 600
+   },
+   "tick_rows": [
+    32.3,
+    145.0,
+    258.25,
+    371.32,
+    482.2,
+    595.0
+   ],
+   "tick_values": [
+    100000000.0,
+    10000000.0,
+    1000000.0,
+    100000.0,
+    10000.0,
+    1000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 112.519,
+    "origin_px": 32.712,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 6,
+    "tick_fit_residual_px": 1.0463,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residual_px": [
+    0.87,
+    0.328,
+    0.608,
+    1.278,
+    0.841,
+    0.645
+   ],
+   "loo_worst_px": 1.278,
+   "loo_tol_px_used": 4.093,
+   "loo_worst_native_px": 0.468,
+   "loo_tol_native_px": 1.5,
+   "flank_tol_px_used": 5.457,
+   "flank_tol_native_px": 2.0,
+   "px_per_decade": 112.519,
+   "bars": [
+    {
+     "label": "SM-102",
+     "run": [
+      102,
+      220
+     ],
+     "x0": 105,
+     "x1": 217,
+     "width_px": 112,
+     "fill_rgb": [
+      220,
+      214,
+      228
+     ],
+     "solid_top_row": 145,
+     "outer_row": 145,
+     "rule_thickness_px": 17,
+     "rule_thickness_needed_px": 12,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.5,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 17.0,
+     "wall_rows_used": 171,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 153.25,
+     "value": 8486557.952231616,
+     "log10_value": 6.9287
+    },
+    {
+     "label": "C3-K2-A14",
+     "run": [
+      271,
+      389
+     ],
+     "x0": 274,
+     "x1": 386,
+     "width_px": 112,
+     "fill_rgb": [
+      252,
+      215,
+      196
+     ],
+     "solid_top_row": 255,
+     "outer_row": 279,
+     "rule_thickness_px": 17,
+     "rule_thickness_needed_px": 12,
+     "rejected_candidates": [
+      {
+       "row": 263,
+       "thick_px": 5,
+       "needed_px": 12,
+       "why": "thinner than the side wall drawn with the same pen; this is the error-bar cap"
+      }
+     ],
+     "stroke_t_px": 17.5,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 171,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 287.75,
+     "value": 541224.9877577181,
+     "log10_value": 5.7334
+    },
+    {
+     "label": "C3-K2-E14",
+     "run": [
+      443,
+      558
+     ],
+     "x0": 443,
+     "x1": 555,
+     "width_px": 112,
+     "fill_rgb": [
+      212,
+      221,
+      220
+     ],
+     "solid_top_row": 219,
+     "outer_row": 222,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 19.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 171,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 231.5,
+     "value": 1711171.1034138899,
+     "log10_value": 6.2333
+    }
+   ]
+  },
+  {
+   "key": "S2b",
+   "page": 3,
+   "round_id": "R2_tail_length",
+   "cargo": "unmodified Fluc mRNA",
+   "n_text": "n = 4 or 5 hindlimbs",
+   "clip_pt": [
+    443,
+    137,
+    520,
+    214
+   ],
+   "render_dpi": 600,
+   "native_image_dpi": 220.26,
+   "frame": {
+    "spine_l": 44,
+    "spine_r": 54,
+    "baseline_top": 583,
+    "baseline_bot": 592
+   },
+   "tick_rows": [
+    37.01,
+    219.0,
+    405.0,
+    587.5
+   ],
+   "tick_values": [
+    1000000.0,
+    100000.0,
+    10000.0,
+    1000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 183.7484,
+    "origin_px": 36.506,
+    "origin_value": 1000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 1.2521,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residual_px": [
+    1.674,
+    1.789,
+    1.425,
+    0.826
+   ],
+   "loo_worst_px": 1.789,
+   "loo_tol_px_used": 4.086,
+   "loo_worst_native_px": 0.657,
+   "loo_tol_native_px": 1.5,
+   "flank_tol_px_used": 5.448,
+   "flank_tol_native_px": 2.0,
+   "px_per_decade": 183.748,
+   "bars": [
+    {
+     "label": "C3-K2-E14",
+     "run": [
+      101,
+      213
+     ],
+     "x0": 104,
+     "x1": 213,
+     "width_px": 109,
+     "fill_rgb": [
+      212,
+      221,
+      220
+     ],
+     "solid_top_row": 111,
+     "outer_row": 114,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 12,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.5,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 17.0,
+     "wall_rows_used": 169,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 122.25,
+     "value": 341475.7149159351,
+     "log10_value": 5.5334
+    },
+    {
+     "label": "C3-K2-E10",
+     "run": [
+      262,
+      382
+     ],
+     "x0": 267,
+     "x1": 379,
+     "width_px": 112,
+     "fill_rgb": [
+      252,
+      235,
+      209
+     ],
+     "solid_top_row": 92,
+     "outer_row": 95,
+     "rule_thickness_px": 19,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 19.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 169,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 0.9821,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 104.5,
+     "value": 426539.5293385479,
+     "log10_value": 5.63
+    },
+    {
+     "label": "C3-K2-E15",
+     "run": [
+      431,
+      545
+     ],
+     "x0": 433,
+     "x1": 542,
+     "width_px": 109,
+     "fill_rgb": [
+      213,
+      220,
+      228
+     ],
+     "solid_top_row": 78,
+     "outer_row": 78,
+     "rule_thickness_px": 17,
+     "rule_thickness_needed_px": 12,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.5,
+     "stroke_t_left_px": 17.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 169,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 0.9541,
+     "band_cover": 1.0,
+     "min_inside_cover": 0.9541,
+     "value_row": 86.25,
+     "value": 536142.0362701021,
+     "log10_value": 5.7293
+    }
+   ]
+  },
+  {
+   "key": "S3b",
+   "page": 3,
+   "round_id": "R3_linker",
+   "cargo": "unmodified Fluc mRNA",
+   "n_text": "n = 4 or 6 hindlimbs",
+   "clip_pt": [
+    321,
+    456,
+    381,
+    540
+   ],
+   "render_dpi": 600,
+   "native_image_dpi": 220.27,
+   "frame": {
+    "spine_l": 40,
+    "spine_r": 50,
+    "baseline_top": 638,
+    "baseline_bot": 648
+   },
+   "tick_rows": [
+    32.01,
+    184.98,
+    337.98,
+    490.0,
+    643.0
+   ],
+   "tick_values": [
+    10000000.0,
+    1000000.0,
+    100000.0,
+    10000.0,
+    1000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 152.7004,
+    "origin_px": 32.191,
+    "origin_value": 10000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.3906,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residual_px": [
+    0.463,
+    0.122,
+    0.488,
+    0.423,
+    0.014
+   ],
+   "loo_worst_px": 0.488,
+   "loo_tol_px_used": 4.086,
+   "loo_worst_native_px": 0.179,
+   "loo_tol_native_px": 1.5,
+   "flank_tol_px_used": 5.448,
+   "flank_tol_native_px": 2.0,
+   "px_per_decade": 152.7,
+   "bars": [
+    {
+     "label": "C3-K2-E10",
+     "run": [
+      97,
+      222
+     ],
+     "x0": 102,
+     "x1": 220,
+     "width_px": 118,
+     "fill_rgb": [
+      253,
+      228,
+      198
+     ],
+     "solid_top_row": 226,
+     "outer_row": 229,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 18.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 17.0,
+     "wall_rows_used": 186,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 0.9492,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 238.0,
+     "value": 448955.99049360235,
+     "log10_value": 5.6522
+    },
+    {
+     "label": "C3-K3-E10",
+     "run": [
+      277,
+      394
+     ],
+     "x0": 277,
+     "x1": 391,
+     "width_px": 114,
+     "fill_rgb": [
+      205,
+      206,
+      224
+     ],
+     "solid_top_row": 106,
+     "outer_row": 106,
+     "rule_thickness_px": 17,
+     "rule_thickness_needed_px": 11,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.0,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 186,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 0.9825,
+     "band_cover": 1.0,
+     "min_inside_cover": 0.9825,
+     "value_row": 114.0,
+     "value": 2912403.046270237,
+     "log10_value": 6.4643
+    }
+   ]
+  },
+  {
+   "key": "S4b",
+   "page": 4,
+   "round_id": "R4_core_unmod",
+   "cargo": "unmodified Fluc mRNA",
+   "n_text": "n = 8 or 10 hindlimbs",
+   "clip_pt": [
+    132,
+    260,
+    237,
+    336
+   ],
+   "render_dpi": 600,
+   "native_image_dpi": 221.25,
+   "frame": {
+    "spine_l": 48,
+    "spine_r": 58,
+    "baseline_top": 576,
+    "baseline_bot": 586
+   },
+   "tick_rows": [
+    30.51,
+    169.0,
+    305.72,
+    445.27,
+    581.0
+   ],
+   "tick_values": [
+    100000000.0,
+    10000000.0,
+    1000000.0,
+    100000.0,
+    10000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 137.7243,
+    "origin_px": 30.851,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 1.2418,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residual_px": [
+    0.848,
+    0.607,
+    0.724,
+    1.774,
+    1.87
+   ],
+   "loo_worst_px": 1.87,
+   "loo_tol_px_used": 4.068,
+   "loo_worst_native_px": 0.689,
+   "loo_tol_native_px": 1.5,
+   "flank_tol_px_used": 5.424,
+   "flank_tol_native_px": 2.0,
+   "px_per_decade": 137.724,
+   "bars": [
+    {
+     "label": "SM-102",
+     "run": [
+      113,
+      233
+     ],
+     "x0": 113,
+     "x1": 230,
+     "width_px": 117,
+     "fill_rgb": [
+      220,
+      214,
+      228
+     ],
+     "solid_top_row": 153,
+     "outer_row": 153,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 11,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.0,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 167,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 161.0,
+     "value": 11350160.325453067,
+     "log10_value": 7.055
+    },
+    {
+     "label": "C3-K3-E10",
+     "run": [
+      289,
+      409
+     ],
+     "x0": 289,
+     "x1": 409,
+     "width_px": 120,
+     "fill_rgb": [
+      205,
+      206,
+      224
+     ],
+     "solid_top_row": 270,
+     "outer_row": 270,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 19.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 167,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 279.5,
+     "value": 1565262.2042760698,
+     "log10_value": 6.1946
+    },
+    {
+     "label": "OC2-K3-E10",
+     "run": [
+      466,
+      588
+     ],
+     "x0": 469,
+     "x1": 585,
+     "width_px": 116,
+     "fill_rgb": [
+      220,
+      195,
+      217
+     ],
+     "solid_top_row": 123,
+     "outer_row": 153,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 11,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.0,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 167,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 161.0,
+     "value": 11350160.325453067,
+     "log10_value": 7.055
+    },
+    {
+     "label": "OC3-K3-E10",
+     "run": [
+      642,
+      767
+     ],
+     "x0": 645,
+     "x1": 764,
+     "width_px": 119,
+     "fill_rgb": [
+      204,
+      224,
+      215
+     ],
+     "solid_top_row": 196,
+     "outer_row": 199,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 19.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 167,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 208.5,
+     "value": 5129912.395297355,
+     "log10_value": 6.7101
+    }
+   ]
+  },
+  {
+   "key": "S4c",
+   "page": 4,
+   "round_id": "R5_core_modmRNA",
+   "cargo": "modified Fluc mRNA",
+   "n_text": "n = 4",
+   "clip_pt": [
+    268,
+    260,
+    325,
+    336
+   ],
+   "render_dpi": 600,
+   "native_image_dpi": 221.25,
+   "frame": {
+    "spine_l": 44,
+    "spine_r": 54,
+    "baseline_top": 576,
+    "baseline_bot": 586
+   },
+   "tick_rows": [
+    30.51,
+    169.0,
+    305.95,
+    444.88,
+    581.0
+   ],
+   "tick_values": [
+    100000000.0,
+    10000000.0,
+    1000000.0,
+    100000.0,
+    10000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 137.6856,
+    "origin_px": 30.897,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.9246,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residual_px": [
+    0.965,
+    0.596,
+    0.395,
+    1.321,
+    1.599
+   ],
+   "loo_worst_px": 1.599,
+   "loo_tol_px_used": 4.068,
+   "loo_worst_native_px": 0.59,
+   "loo_tol_native_px": 1.5,
+   "flank_tol_px_used": 5.424,
+   "flank_tol_native_px": 2.0,
+   "px_per_decade": 137.686,
+   "bars": [
+    {
+     "label": "SM-102",
+     "run": [
+      112,
+      236
+     ],
+     "x0": 112,
+     "x1": 236,
+     "width_px": 124,
+     "fill_rgb": [
+      220,
+      214,
+      228
+     ],
+     "solid_top_row": 140,
+     "outer_row": 140,
+     "rule_thickness_px": 19,
+     "rule_thickness_needed_px": 11,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.0,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 167,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 148.0,
+     "value": 14108876.775161425,
+     "log10_value": 7.1495
+    },
+    {
+     "label": "OC2-K3-E10",
+     "run": [
+      296,
+      429
+     ],
+     "x0": 299,
+     "x1": 426,
+     "width_px": 127,
+     "fill_rgb": [
+      220,
+      195,
+      217
+     ],
+     "solid_top_row": 115,
+     "outer_row": 118,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 19.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 167,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 127.5,
+     "value": 19878444.317219853,
+     "log10_value": 7.2984
+    }
+   ]
+  },
+  {
+   "key": "S7a",
+   "page": 7,
+   "round_id": "R6_NP5_benchmarks",
+   "cargo": "unmodified Fluc mRNA",
+   "n_text": "n = 8 or 12 hindlimbs",
+   "clip_pt": [
+    188,
+    106,
+    290,
+    200
+   ],
+   "render_dpi": 600,
+   "native_image_dpi": 188.49,
+   "frame": {
+    "spine_l": 36,
+    "spine_r": 51,
+    "baseline_top": 727,
+    "baseline_bot": 738
+   },
+   "tick_rows": [
+    44.5,
+    274.0,
+    503.0,
+    732.49
+   ],
+   "tick_values": [
+    100000000.0,
+    10000000.0,
+    1000000.0,
+    100000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 229.296,
+    "origin_px": 44.553,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.1513,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residual_px": [
+    0.176,
+    0.216,
+    0.207,
+    0.153
+   ],
+   "loo_worst_px": 0.216,
+   "loo_tol_px_used": 4.775,
+   "loo_worst_native_px": 0.068,
+   "loo_tol_native_px": 1.5,
+   "flank_tol_px_used": 6.366,
+   "flank_tol_native_px": 2.0,
+   "px_per_decade": 229.296,
+   "bars": [
+    {
+     "label": "DLin-MC3-DMA",
+     "run": [
+      93,
+      204
+     ],
+     "x0": 99,
+     "x1": 201,
+     "width_px": 102,
+     "fill_rgb": [
+      245,
+      236,
+      221
+     ],
+     "solid_top_row": 293,
+     "outer_row": 300,
+     "rule_thickness_px": 19,
+     "rule_thickness_needed_px": 13,
+     "rejected_candidates": [],
+     "stroke_t_px": 19.0,
+     "stroke_t_left_px": 19.0,
+     "stroke_t_right_px": 19.0,
+     "wall_rows_used": 211,
+     "flank_delta_px": 3.0,
+     "flank_delta_native_px": 0.942,
+     "coverage": 0.9412,
+     "band_cover": 1.0,
+     "min_inside_cover": 0.9706,
+     "value_row": 309.5,
+     "value": 6990660.471939375,
+     "log10_value": 6.8445
+    },
+    {
+     "label": "SM-102",
+     "run": [
+      255,
+      360
+     ],
+     "x0": 255,
+     "x1": 360,
+     "width_px": 105,
+     "fill_rgb": [
+      220,
+      214,
+      228
+     ],
+     "solid_top_row": 258,
+     "outer_row": 258,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 10,
+     "rejected_candidates": [],
+     "stroke_t_px": 14.5,
+     "stroke_t_left_px": 13.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 213,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 265.25,
+     "value": 10901850.94307254,
+     "log10_value": 7.0375
+    },
+    {
+     "label": "OC2-K3-E10",
+     "run": [
+      411,
+      523
+     ],
+     "x0": 411,
+     "x1": 520,
+     "width_px": 109,
+     "fill_rgb": [
+      220,
+      195,
+      217
+     ],
+     "solid_top_row": 246,
+     "outer_row": 249,
+     "rule_thickness_px": 16,
+     "rule_thickness_needed_px": 11,
+     "rejected_candidates": [],
+     "stroke_t_px": 16.0,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 16.0,
+     "wall_rows_used": 213,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 257.0,
+     "value": 11843496.617546812,
+     "log10_value": 7.0735
+    },
+    {
+     "label": "OC2-K2-A10",
+     "run": [
+      570,
+      679
+     ],
+     "x0": 570,
+     "x1": 676,
+     "width_px": 106,
+     "fill_rgb": [
+      225,
+      211,
+      210
+     ],
+     "solid_top_row": 233,
+     "outer_row": 236,
+     "rule_thickness_px": 13,
+     "rule_thickness_needed_px": 10,
+     "rejected_candidates": [],
+     "stroke_t_px": 14.5,
+     "stroke_t_left_px": 16.0,
+     "stroke_t_right_px": 13.0,
+     "wall_rows_used": 213,
+     "flank_delta_px": 0.0,
+     "flank_delta_native_px": 0.0,
+     "coverage": 1.0,
+     "band_cover": 1.0,
+     "min_inside_cover": 1.0,
+     "value_row": 243.25,
+     "value": 13597094.251140218,
+     "log10_value": 7.1334
+    }
+   ]
+  }
+ ],
+ "refusals": []
+}

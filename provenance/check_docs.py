@@ -90,8 +90,18 @@ def main():
     }
 
     bad = []
+    missing_files = []
     print("C15 docs-vs-data")
     for c in spec["claims"]:
+        # A claim pointing at a doc that no longer exists passes forever while
+        # documenting nothing. Cheap to check, and it is the failure mode that
+        # kept provenance/README.md uncovered: every claim was tagged
+        # CLAUDE.md, so no claim could ever name that file as stale.
+        f = c.get("file")
+        if f:
+            fp = os.path.join(HERE, "..", f)
+            if not os.path.exists(fp) and f not in missing_files:
+                missing_files.append(f)
         try:
             got = eval(c["expr"], {"__builtins__": __builtins__}, env)  # noqa: S307
         except Exception as e:                       # a claim that cannot be
@@ -105,6 +115,21 @@ def main():
                   f"corpus says {got}")
 
     print()
+    if missing_files:
+        print("CLAIMS POINT AT FILES THAT DO NOT EXIST:")
+        for f in missing_files:
+            print(f"  * {f}")
+        print("Either the doc was renamed -- update `file` in "
+              "docs_claims.json -- or it was deleted, in which case its "
+              "claims should go with it.\n")
+
+    # `file: null` is a deliberate state: nothing documents the number, and
+    # the claim exists so the gap is gated rather than drifting unobserved.
+    by_file = collections.Counter(c.get("file") or "(no doc claims it)"
+                                  for c in spec["claims"])
+    print("coverage by file: "
+          + ", ".join(f"{k} {v}" for k, v in sorted(by_file.items())))
+    print()
     if bad:
         print(f"{len(bad)} of {len(spec['claims'])} documented numbers DISAGREE "
               f"with the corpus:\n")
@@ -115,6 +140,8 @@ def main():
         print("Fix the prose AND this file together, or establish which is "
               "right first -- a doc and a checker that disagree are two claims, "
               "not one.")
+        return 1
+    if missing_files:
         return 1
 
     print(f"DOCS MATCH DATA -- {len(spec['claims'])} claims checked")

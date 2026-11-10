@@ -1,0 +1,92 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). For every panel or table that supplies a VALUE, the tier it came from. Written BEFORE any digitiser was opened. Tiers: 1_publisher_source_data > 2_si_tables > 3_author_repository > 4_pdf_text_table > 5_pixels.",
+  "paper": {
+    "citation": "Wang et al., Fast and facile synthesis of amidine-incorporated degradable lipids for versatile mRNA delivery in vivo. Nat Chem 16, 1436-1446 (2024).",
+    "pmid": "38982196",
+    "pmcid": "PMC11446653",
+    "doi": "10.1038/s41557-024-01557-2",
+    "proposed_experiment_id": "MW_2024",
+    "lab": "Michael J. Mitchell (UPenn)"
+  },
+
+  "library_size_stated": {
+    "value": 100,
+    "basis": [
+      "Abstract (Europe PMC record for PMID 38982196), verbatim: 'a combinatorial library of 100 chemically diverse AID-lipids'.",
+      "Fig. 1a, AID-lipids panel, printed inside the dashed box: '25 x 4 = 100', with the corner labels '1T-O9' and '25T-O16'.",
+      "Fig. 2a flow diagram, printed: '100 AID-lipids' -> '100 AID-LNPs'.",
+      "Supplementary discussion p.34, verbatim: 'in our combinatorial library of 100 AID-lipids, 98% were able to deliver mRNA in vitro'."
+    ],
+    "NOT_established_from_a_cell_count": "The 100 is read from the paper's own prose and from Fig. 1a. The Source Data workbook independently contains exactly 100 columns in 'Fig. 2b' and a 25 x 4 block in 'Fig. 2c'; that AGREEMENT is recorded as check P2 in 07_qc.json, it is not the source of the number."
+  },
+
+  "value_panels": [
+    {
+      "panel": "Fig. 2b",
+      "quantity": "Luminescence (a.u.), mLuc in HepG2, 15 ng mRNA per 5,000 cells, 24 h",
+      "tier": "1_publisher_source_data",
+      "file": "source/41557_2024_1557_MOESM4_ESM.xlsx",
+      "sheet": "Fig. 2b",
+      "cells": "B6:CW6 (lipid No. 1-100), B7:CW8 (two biological replicates)",
+      "n_values": 200,
+      "note": "Columns are 'No.' 1..100, which is an EXPERIMENT NUMBER, not an amine number. The No. -> (amine, tail) map is derived in 02_index_map.json and verified against Fig. 2c and against Supplementary Figs. S3/S4."
+    },
+    {
+      "panel": "Fig. 2c",
+      "quantity": "The same 200 luminescence values, re-laid-out as a 25-amine x 4-tail heatmap",
+      "tier": "1_publisher_source_data",
+      "file": "source/41557_2024_1557_MOESM4_ESM.xlsx",
+      "sheet": "Fig. 2c",
+      "cells": "C8:K32 (row label = amine 1..25; D/E = O9 rep1/rep2, F/G = O12, H/I = O14, J/K = O16)",
+      "n_values": 200,
+      "note": "This sheet is what makes the amine/tail assignment recoverable at all. It is the SAME 200 numbers as 'Fig. 2b' (checked exactly, P3), so it adds no new measurement; it adds the index."
+    },
+    {
+      "panel": "Supplementary Fig. S3 / S4",
+      "quantity": "Subsets of the same screen, labelled by amine number",
+      "tier": "1_publisher_source_data",
+      "file": "source/41557_2024_1557_MOESM3_ESM.xlsx",
+      "sheets": ["Fig. S3", "Fig. S4"],
+      "role": "INDEPENDENT CONFIRMATION of the amine numbering, not a value source. S3 is labelled '11','12','13' and S4 '12','14'; their cells reproduce Fig. 2c rows 11-14 exactly (P4)."
+    },
+    {
+      "panel": "Fig. 2g / Fig. 2h / Supplementary Fig. S5 / S6",
+      "quantity": "Follow-up dose-response, in vivo i.m. flux, purified-vs-unpurified",
+      "tier": "1_publisher_source_data",
+      "files": ["source/41557_2024_1557_MOESM4_ESM.xlsx", "source/41557_2024_1557_MOESM3_ESM.xlsx"],
+      "role": "Not emitted as corpus rows (different formulation route / different dose series / in vivo). Used only as cross-checks on lipid identity (the named top-8) and recorded in 07_qc.json."
+    }
+  ],
+
+  "structure_sources": [
+    {
+      "what": "The 25 amines and the 4 acrylates, drawn in full",
+      "source": "Fig. 1a (main article), raster PNG from media.springernature.com",
+      "file": "source/nature_fig1_full.png",
+      "tier_for_STRUCTURE": "5_pixels",
+      "why_tiers_1_4_failed": "CHECKABLE: (a) there is no machine-readable structure file of any kind among the eight publisher supplementary assets listed in 00_acquisition_raw.json -- six are .xlsx of plotted numbers, MOESM2 is the Nature reporting summary, MOESM1 is the SI; (b) the SI PDF carries NO vector chemistry: `page.get_drawings()` over all 38 pages returns stroked paths on pages 1, 25 and 28-34 only, which are the Table-of-Contents rule, two flow-cytometry gating panels and five table rules -- every structural figure in the SI is a flattened image (run 01_trace_chains.py --audit-vector to reproduce); (c) the main-article PDF and its JATS full text are subscription-restricted: europepmc isOpenAccess='N', the REST fullTextXML endpoint returns HTTP 500 for PMC11446653, nature.com redirects every article and /figures/ URL to idp.nature.com, and pmc.ncbi.nlm.nih.gov serves a bot-check page. So no vector or text rendition of Fig. 1a was obtainable. (d) There is no author repository, Zenodo or Dryad deposit cited anywhere in the SI.",
+      "consequence": "Chain lengths are measured by the raster route of curation/lib/chains.py ONLY. chains.count_carbons is therefore called with raster= and no vector=, and `agreed` is False for every chain. 07_qc.json records a SECOND, independent raster statistic (zig-zag apex periodicity) per chain so that the single-method result is not unchecked, plus the arithmetic MS anchor below."
+    },
+    {
+      "what": "External arithmetic anchor on the measured chain lengths",
+      "source": "Supplementary Fig. 9 caption, SI p.11, verbatim: 'Mass spectrum of 12T-O14. Calculated MS: 603.01, found [M+H]+ = 603.73.'",
+      "tier": "4_pdf_text_table",
+      "role": "The only number in the paper that is a function of two measured chain lengths at once (amine 12's alkyl and the O14 tail). It is external to the pixel measurement, so it is the P1 check."
+    }
+  ],
+
+  "main_text_NOT_obtained": {
+    "what_is_missing": "The Methods section and the Fig. 1/Fig. 2 captions of the main article.",
+    "attempts": [
+      "europepmc REST /PMC11446653/fullTextXML -> HTTP 500 (2026-11-10T04:50Z)",
+      "europepmc REST /38982196/fullTextXML -> HTTP 500; /MED/38982196/fullTextXML -> HTTP 404",
+      "europepmc.org/articles/PMC11446653?pdf=render -> HTTP 403",
+      "pmc.ncbi.nlm.nih.gov/articles/PMC11446653/ -> browser-verification interstitial",
+      "www.nature.com/articles/s41557-024-01557-2 and .../figures/1 and .../figures/2 -> HTTP 303 to idp.nature.com (authentication)",
+      "ncbi oa.fcgi -> 404 (article is an author manuscript, not in the OA subset); Europe PMC record reports isOpenAccess = 'N'"
+    ],
+    "what_this_costs": "The reaction STOICHIOMETRY is unknown. For the 11 di-/polyamines (amines 15-25) the number of arms installed per molecule cannot be settled from what we hold. See DECISIONS.md D-1. It also means the LNP excipient molar ratio and the exact in-vitro protocol are taken from Fig. 2b's own printed subtitle and the Supplementary Fig. 2 caption rather than from Methods."
+  },
+
+  "digitisers_written": "NONE for values. No pixel is read for any Experiment_value in this curation. 01_trace_chains.py reads pixels for STRUCTURE only."
+}

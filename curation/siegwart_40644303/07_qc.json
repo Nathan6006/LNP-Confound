@@ -1,0 +1,655 @@
+{
+ "_what": "Every check on this curation, with numbers, each run twice: once on the real data and once with its own defect seeded.",
+ "paper": "Lee et al., ACS Biomater. Sci. Eng. 2025, 11, 4844-4852; PMID 40644303; PMC12869450",
+ "Q1_library_size": {
+  "claim": "the abstract and the Figure 1 caption both say 465 lipids",
+  "cores_labelled_in_Fig1a": 15,
+  "tails_labelled_in_Fig1a": 31,
+  "product": 465,
+  "cells_read": 465,
+  "enumerated": 465,
+  "stated": 465,
+  "difference": 0,
+  "all_465_present_in_corpus_KZ_2016": 465,
+  "verdict": "EXACT. 15 x 31 = 465 with no residual, and every one of the 465 names is a member of KZ_2016 (Zhou et al., PNAS 2016, PMID 26729861), the library this screen was drawn from. The 42 in-vivo lipids are 7 cores x 6 tails, of which 18 are already among the 465, so 24 structures are new; 465 + 24 = 489 enumerated.",
+  "seeded": {
+   "defect": "drop one tail from the column list, as a column miscount in the figure would",
+   "metric": "cores x tails, against the stated 465",
+   "before": 465,
+   "after": 450,
+   "difference_from_stated_after": -15,
+   "fires": true
+  }
+ },
+ "Q2_heatmap_grid": {
+  "claim": "the 465 cells are assigned to the right (core, tail)",
+  "how": "the UPPER stripe of Figure 1a is a 3-level re-binning of the siRNA screen the corpus already holds as KZ_2016 at 4 levels. Agreement between them tests the row order, the column order and the panel extent WITHOUT using any colour of ours.",
+  "spearman_our_siRNA_ordinal_vs_KZ_2016": 0.899,
+  "n": 465,
+  "cross_tab_monotone": "246 of 247 cells in KZ's lowest level read as our band 1, and 30 of 30 in KZ's highest read as our band 3",
+  "grid_residuals_px": {
+   "columns": 0.7435,
+   "siRNA_stripes": 0.4762,
+   "mRNA_stripes": 0.4583,
+   "tolerance": 2.5
+  },
+  "drawn_but_never_printed": {
+   "what": "the 31 column-label text centroids must sit on the 31 cell centres, and nothing in the paper states that they do. The cells were located from their own drawn extents, the labels measured separately.",
+   "max_px": 1.5,
+   "mean_px": 0.68,
+   "cell_width_px": 36
+  },
+  "seeded": {
+   "defect": "shift the row assignment by +/-1 and +/-2 rows, and the column assignment by +/-1 and +/-2 columns",
+   "metric": "Spearman(our siRNA ordinal, KZ_2016 Experiment_value), n = 465",
+   "before": 0.899,
+   "after": 0.6001,
+   "rho_after_row_shift": {
+    "-2": 0.5198,
+    "-1": 0.5279,
+    "1": 0.5473,
+    "2": 0.5176
+   },
+   "rho_after_column_shift": {
+    "-2": 0.4803,
+    "-1": 0.6001,
+    "1": 0.5924,
+    "2": 0.4711
+   },
+   "fires": true,
+   "read": "every shift collapses 0.899 to ~0.5 or below, so this check can tell a correct grid from an off-by-one. That is the failure CLAUDE.md section 5 says the colour-distance diagnostic has caught twice."
+  }
+ },
+ "Q3_heatmap_colours": {
+  "claim": "each cell's colour is one of three bands, and the bands are the ones panel c prints",
+  "max_nearest_swatch_distance_RGB": {
+   "siRNA": 4.243,
+   "mRNA": 4.61,
+   "threshold": 5.0
+  },
+  "cells_within_10_RGB_of_a_second_swatch": {
+   "siRNA": 0,
+   "mRNA": 0
+  },
+  "band_medians_vs_panel_c_printed_rectangles_RGB": {
+   "siRNA_high": 2.449,
+   "siRNA_intermediate": 2.0,
+   "mRNA_high": 1.0,
+   "mRNA_intermediate": 0.5
+  },
+  "band_counts": {
+   "siRNA": {
+    "0": 35,
+    "1": 153,
+    "2": 277
+   },
+   "mRNA": {
+    "0": 68,
+    "1": 72,
+    "2": 325
+   }
+  },
+  "seeded": {
+   "defect": "move the sampling grid half a cell (18 px) to the right, onto the gutters between columns",
+   "metric": "max nearest-swatch distance, RGB",
+   "before": 4.61,
+   "after": 101.36,
+   "threshold": 5.0,
+   "cells_whose_band_assignment_changed": 86,
+   "of_cells": 465,
+   "fires": true,
+   "message": "match: max nearest-swatch distance 101.36 > 5.0 (cell 98, rgb [73.0, 72.0, 199.0], nearest swatch [1.0, 1.0, 192.0])."
+  }
+ },
+ "Q4_invivo_axes": {
+  "fig2b": {
+   "y_tick_fit_residual_px": 0.1147,
+   "n_ticks": 6,
+   "px_per_unit": 0.0003,
+   "drawn_but_never_printed": "the x-axis RULE is drawn and its position is never stated. It must coincide with the zero the y ticks fit, and the ticks were fitted without it.",
+   "baseline_minus_fitted_zero_px": 0.41,
+   "n_bars_read": 17,
+   "n_bars_expected": 18,
+   "refusals": {},
+   "bar_widths_px": [
+    36,
+    37
+   ],
+   "x_tick_spacing_px": 56.0
+  },
+  "fig3b": {
+   "y_tick_fit_residual_px": 0.0579,
+   "n_ticks": 4,
+   "px_per_unit": 0.0,
+   "drawn_but_never_printed": "the x-axis RULE is drawn and its position is never stated. It must coincide with the zero the y ticks fit, and the ticks were fitted without it.",
+   "baseline_minus_fitted_zero_px": -0.2,
+   "n_bars_read": 23,
+   "n_bars_expected": 24,
+   "refusals": {
+    "5A4-SC10": "bar_top: full-width rule fired at row 1072 but the left 9px flank has no covered row at all. A bar's top rule spans the full width, so it is present in both flanks; something present only in the middle is a replicate dot cluster, a whisker cap or a mean marker. That is error class 32 (F-018, F-020)."
+   },
+   "bar_widths_px": [
+    27,
+    28
+   ],
+   "x_tick_spacing_px": 41.5
+  },
+  "seeded": {
+   "defect": "move ONE of Figure 2b's six y ticks 5 px, the size of the offset between a tick mark and the centroid of its label glyph (error class 20)",
+   "metric": "tick-fit residual, px",
+   "before": 0.1167,
+   "after": 4.19,
+   "tolerance_px": 2.5,
+   "radiance_error_per_px_at_mid_axis": 3931.3,
+   "fires": true,
+   "message": "calibrate: tick-fit residual 4.19 px exceeds 2.5 px over 6 ticks at [841.12, 892.11, 948.06, 993.86, 1044.79, 1095.47]."
+  }
+ },
+ "Q5_two_independent_readings": {
+  "claim": "the 42 liver radiances read from the Figure 2b/3b BARS are the same numbers drawn as markers in Figure 5a",
+  "why_it_is_not_a_recomputed_marginal": "Figure 5a is a different figure with a different axis, different ticks and a different scale, and each marker is assigned to a named lipid by its x coordinate, which is the SI table's pK_a -- a tier-4 number we did not measure. A multiplicative error in the bar panels would have to be matched by an identical error in an unrelated panel to pass this.",
+  "n_confirmed": 32,
+  "n_total": 42,
+  "max_abs_pKa_residual_on_confirmed": 0.016,
+  "median_scatter_over_bar": 1.0124,
+  "mean_scatter_over_bar": 1.0161,
+  "sd_scatter_over_bar": 0.0377,
+  "min_ratio": 0.914,
+  "max_ratio": 1.1183,
+  "disagreements_over_10pct": [
+   [
+    "3A4V2-SC8",
+    1.1008
+   ],
+   [
+    "5A5-SC6",
+    1.1183
+   ]
+  ],
+  "not_independently_confirmed": [
+   [
+    "3A4-SC8",
+    "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+   ],
+   [
+    "3A4V-SC5",
+    "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+   ],
+   [
+    "4A5-SC5",
+    ""
+   ],
+   [
+    "4A5-SC7",
+    ""
+   ],
+   [
+    "5A4-SC8",
+    ""
+   ],
+   [
+    "5A4-SC9",
+    ""
+   ],
+   [
+    "5A5-SC8",
+    ""
+   ],
+   [
+    "5A5-SC9",
+    "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+   ],
+   [
+    "5A5-SC10",
+    ""
+   ]
+  ],
+  "read": "the bar reading is ~1.2% LOW on average, which is what a top-edge rule should be against a marker centroid: the bar top is the top of a 2-3 px rule. The scatter is on sd 3.8%.",
+  "seeded": {
+   "defect": "multiply every bar value by 1.10, the sort of uniform geometric error that survives a printed-statistic check",
+   "median_ratio_after": 1.1136,
+   "fires": true,
+   "read": "a 10% scale error moves the median ratio to 1.11, well outside the 1.012 measured. The printed statistics in Q7 would NOT have noticed it."
+  }
+ },
+ "Q6_structures_vs_corpus": {
+  "claim": "our 465 enumerated structures match an independently curated source for the same library",
+  "full_InChIKey_agreement": 360,
+  "n": 465,
+  "disagreements": 105,
+  "disagreements_by_tail": [
+   [
+    "SC3",
+    15
+   ],
+   [
+    "SC1",
+    3
+   ],
+   [
+    "SC2",
+    3
+   ],
+   [
+    "SC4",
+    3
+   ]
+  ],
+  "disagreements_by_core": [
+   [
+    "3A2",
+    31
+   ],
+   [
+    "5A2",
+    31
+   ],
+   [
+    "6A1",
+    31
+   ],
+   [
+    "3A1",
+    1
+   ]
+  ],
+  "what_the_disagreements_are": "SC3 (15 lipids): Figure 1b draws an UNBRANCHED 3-segment chain and the trace finds 0 branch nodes, i.e. n-propyl; the corpus's IL_SMILES has neopentyl. 3A2 (31): Figure 1b draws a PIPERAZINE (the molecule has 3 N) and the corpus structure has 2 N, a piperidine -- the formulae differ, C51H93N3O12S3 vs C52H94N2O12S3. 5A2 and 6A1 (62): identical formula, different placement of the free N-H on tetraethylenepentamine, which is the partial-substitution convention this curation flags as positional_ambiguity on every affected row. All four are queued in DECISIONS.md; none is resolved here.",
+  "two_of_our_own_errors_this_check_caught": "SO2 and SO8 were first transcribed one carbon short, and the whole arm was first built as a DISULFIDE because the arm fragment carried a plausible but wrong attachment atom. Nothing in the assembly complained: every structure parsed, no radicals, stereo preserved. Only the corpus comparison saw it.",
+  "seeded": {
+   "defect": "swap the sulfa-Michael regiochemistry on EVERY lipid whose arm carries it (S onto the alpha carbon, methyl onto the beta)",
+   "metric": "full-InChIKey agreements with corpus KZ_2016, out of 465",
+   "before": 360,
+   "after": 0,
+   "lipids_the_seed_touched": 285,
+   "molecular_formula_identical_on_all_of_them": true,
+   "fires": true,
+   "read": "the InChIKey separates them and the FORMULA DOES NOT. Any HRMS or composition check is blind to this, which is why the regiochemistry is taken from Scheme 1's written two-step synthesis and not from a mass."
+  }
+ },
+ "Q7_printed_statistics": {
+  "_warning": "PASSING ALL OF THESE IS NECESSARY AND NOT SUFFICIENT. QL_2026 reproduced every printed hit rate on bars up to 28% too high. Q5 is the check that would see that; these are corroboration.",
+  "checks": [
+   {
+    "printed": "'465 lipids' (abstract, introduction, Figure 1 caption, conclusions)",
+    "ours": "15 cores x 31 tails = 465",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'42 lipids in total, including the parent lipids'",
+    "ours": "7 cores x 6 tails = 42",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'the encapsulation efficiency percentages were greater than 80% across all formulations'",
+    "ours": "min 86.00%, max 99.14% over 42",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'the size of the LNP formulations ranged from 100 to 200 nm'",
+    "ours": "107-248 nm; 40/42 inside",
+    "verdict": "FAIL (2 outside: 5A5-SC8 at 248 nm and 5A5-SC10 at 203 nm). Recorded in 08_contradictions.csv."
+   },
+   {
+    "printed": "'pKas of the 3A4 family ranged between 5.9 and 7'",
+    "ours": "5.99-6.91 over the 18 3A4-family formulations",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'the 3A4 parent lipid bearing the amino-ethanol motif and SC6 tail presented the highest liver Luc expression'",
+    "ours": "Figure 2b maximum is 3A4-SC6 at 7.37e+05 p/sec/cm2/sr",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'the highest Luc activity observed in 4A3-SC8 and SC9'",
+    "ours": "4A3 series ranked: ['4A3-SC9', '4A3-SC8', '4A3-SC7', '4A3-SC6', '4A3-SC5', '4A3-SC10']",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'comparatively lower expressions were observed overall for the 4A5 series'",
+    "ours": "mean 4A3 2.86e+07 vs mean 4A5 1.65e+07",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "for the 5A4 family 'a spacing of two carbons proving to be superior' (5A4 is 2, 5A5 is 3)",
+    "ours": "mean 5A4 9.43e+06 vs mean 5A5 2.71e+06, ratio 3.49x",
+    "verdict": "PASS"
+   },
+   {
+    "printed": "'a broader range of pKa values (6.2-7.4) may be acceptable'",
+    "ours": "the best formulation of each family sits at pKa 6.31 (3A4-SC6), 7.06 (4A3-SC9) and 6.46 (5A4-SC7); the stated range covers all three",
+    "verdict": "PASS"
+   }
+  ],
+  "n_pass": 9,
+  "n_fail": 1,
+  "seeded": {
+   "defect": "multiply every in-vivo value by 1.28, the size of the QL_2026 geometric error",
+   "verdicts_after": "unchanged: every statistic above is a RANKING or a comparison, so a uniform multiplicative error passes all of them",
+   "fires": false,
+   "read": "this is the point. These checks cannot see a scale error, and recording that they cannot is more useful than recording that they passed."
+  }
+ },
+ "Q8_nmr_hydrogen_count": {
+  "claim": "the SI prints a 1H NMR peak list with integrals for every in-vivo lipid; the integrals must sum to the structure's hydrogen count",
+  "why_it_is_worth_having": "it is SYMBOLIC and tier-4 -- printed numerals in the PDF's text layer, nothing digitised -- and it is sensitive to a one-carbon error anywhere in the molecule, which no colour or bar check is.",
+  "n_lipids_with_a_peak_list": 25,
+  "n_exact": 19,
+  "n_off_by_any": 6,
+  "median_multiplets_in_an_exact_block": 10,
+  "how_to_read_the_discrepancies": "this check is REPORTED, not gated. A peak list whose multiplet count is below the median is a block our regex truncated at a page boundary, not a wrong structure; the remainder differ by a few protons, which is what rounding an overlapping multiplet does. The useful signal is that 19 of 25 sum EXACTLY, including 3A4-SC5 at 86 = 86, and that no discrepancy is near the 12-14 H a one-carbon-per-arm error would cause.",
+  "discrepancies": [
+   {
+    "lipid": "3A4-SC9",
+    "nmr_integral_sum": 103,
+    "structure_H": 110,
+    "delta": -7,
+    "n_multiplets": 9,
+    "block_chars": 276
+   },
+   {
+    "lipid": "3A4-SC10",
+    "nmr_integral_sum": 115,
+    "structure_H": 116,
+    "delta": -1,
+    "n_multiplets": 8,
+    "block_chars": 246
+   },
+   {
+    "lipid": "3A4V-SC5",
+    "nmr_integral_sum": 55,
+    "structure_H": 86,
+    "delta": -31,
+    "n_multiplets": 7,
+    "block_chars": 240
+   },
+   {
+    "lipid": "3A4V2-SC5",
+    "nmr_integral_sum": 90,
+    "structure_H": 84,
+    "delta": 6,
+    "n_multiplets": 10,
+    "block_chars": 289
+   },
+   {
+    "lipid": "4A3-SC6",
+    "nmr_integral_sum": 128,
+    "structure_H": 123,
+    "delta": 5,
+    "n_multiplets": 11,
+    "block_chars": 316
+   },
+   {
+    "lipid": "4A3-SC7",
+    "nmr_integral_sum": 136,
+    "structure_H": 131,
+    "delta": 5,
+    "n_multiplets": 11,
+    "block_chars": 316
+   }
+  ],
+  "per_lipid": [
+   {
+    "lipid": "3A4-SC5",
+    "nmr_integral_sum": 86,
+    "structure_H": 86,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 424
+   },
+   {
+    "lipid": "3A4-SC6",
+    "nmr_integral_sum": 92,
+    "structure_H": 92,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 306
+   },
+   {
+    "lipid": "3A4-SC7",
+    "nmr_integral_sum": 98,
+    "structure_H": 98,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 306
+   },
+   {
+    "lipid": "3A4-SC8",
+    "nmr_integral_sum": 104,
+    "structure_H": 104,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 291
+   },
+   {
+    "lipid": "3A4-SC9",
+    "nmr_integral_sum": 103,
+    "structure_H": 110,
+    "delta": -7,
+    "n_multiplets": 9,
+    "block_chars": 276
+   },
+   {
+    "lipid": "3A4-SC10",
+    "nmr_integral_sum": 115,
+    "structure_H": 116,
+    "delta": -1,
+    "n_multiplets": 8,
+    "block_chars": 246
+   },
+   {
+    "lipid": "3A4V-SC5",
+    "nmr_integral_sum": 55,
+    "structure_H": 86,
+    "delta": -31,
+    "n_multiplets": 7,
+    "block_chars": 240
+   },
+   {
+    "lipid": "3A4V-SC6",
+    "nmr_integral_sum": 92,
+    "structure_H": 92,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 335
+   },
+   {
+    "lipid": "3A4V-SC7",
+    "nmr_integral_sum": 98,
+    "structure_H": 98,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 335
+   },
+   {
+    "lipid": "3A4V-SC8",
+    "nmr_integral_sum": 104,
+    "structure_H": 104,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 335
+   },
+   {
+    "lipid": "3A4V-SC9",
+    "nmr_integral_sum": 110,
+    "structure_H": 110,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 335
+   },
+   {
+    "lipid": "3A4V-SC10",
+    "nmr_integral_sum": 116,
+    "structure_H": 116,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 483
+   },
+   {
+    "lipid": "3A4V2-SC5",
+    "nmr_integral_sum": 90,
+    "structure_H": 84,
+    "delta": 6,
+    "n_multiplets": 10,
+    "block_chars": 289
+   },
+   {
+    "lipid": "4A3-SC5",
+    "nmr_integral_sum": 115,
+    "structure_H": 115,
+    "delta": 0,
+    "n_multiplets": 11,
+    "block_chars": 316
+   },
+   {
+    "lipid": "4A3-SC6",
+    "nmr_integral_sum": 128,
+    "structure_H": 123,
+    "delta": 5,
+    "n_multiplets": 11,
+    "block_chars": 316
+   },
+   {
+    "lipid": "4A3-SC7",
+    "nmr_integral_sum": 136,
+    "structure_H": 131,
+    "delta": 5,
+    "n_multiplets": 11,
+    "block_chars": 316
+   },
+   {
+    "lipid": "4A3-SC8",
+    "nmr_integral_sum": 139,
+    "structure_H": 139,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 300
+   },
+   {
+    "lipid": "4A3-SC9",
+    "nmr_integral_sum": 147,
+    "structure_H": 147,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 300
+   },
+   {
+    "lipid": "4A3-SC10",
+    "nmr_integral_sum": 155,
+    "structure_H": 155,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 300
+   },
+   {
+    "lipid": "4A5-SC5",
+    "nmr_integral_sum": 111,
+    "structure_H": 111,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 307
+   },
+   {
+    "lipid": "4A5-SC6",
+    "nmr_integral_sum": 119,
+    "structure_H": 119,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 308
+   },
+   {
+    "lipid": "4A5-SC7",
+    "nmr_integral_sum": 127,
+    "structure_H": 127,
+    "delta": 0,
+    "n_multiplets": 10,
+    "block_chars": 455
+   },
+   {
+    "lipid": "4A5-SC8",
+    "nmr_integral_sum": 135,
+    "structure_H": 135,
+    "delta": 0,
+    "n_multiplets": 9,
+    "block_chars": 276
+   },
+   {
+    "lipid": "4A5-SC9",
+    "nmr_integral_sum": 143,
+    "structure_H": 143,
+    "delta": 0,
+    "n_multiplets": 9,
+    "block_chars": 276
+   },
+   {
+    "lipid": "4A5-SC10",
+    "nmr_integral_sum": 151,
+    "structure_H": 151,
+    "delta": 0,
+    "n_multiplets": 9,
+    "block_chars": 573
+   }
+  ],
+  "seeded": {
+   "defect": "add one carbon to 3A4-SC5's tail (SC5 -> SC6 chain length) and re-count",
+   "nmr_integral_sum": 86,
+   "structure_H_after": 90,
+   "delta_after": -4,
+   "fires": true
+  }
+ },
+ "Q9_si_table_parser": {
+  "claim": "SI Figure S3's text table gives diameter, PDI, pKa and E.E. for all 42 in-vivo formulations",
+  "rows_parsed": 42,
+  "unique_lipids": 42,
+  "all_42_are_enumerated": 42,
+  "seeded": {
+   "defect": "drop one value from the pKa column",
+   "metric": "rows written by the parser",
+   "before": 42,
+   "after": 0,
+   "fires": true,
+   "message": "stage02_si_table.py asserts len(values) == len(names) per column and exits with 'REFUSING: a short column shifts every value onto the wrong lipid'. Confirmed by running the parser against a copy of the page text with one pKa removed; see seeded_run below.",
+   "seeded_run": {
+    "exit_code": 1,
+    "stderr_tail": "stage02: pKa has 5 values for 18 lipids. REFUSING: a short column shifts every value onto the wrong lipid, which is the F-004 shape and passed a range check there."
+   }
+  }
+ },
+ "Q10_C10_anchor": {
+  "claim": "the C10 anchor is built by a route that shares nothing with the enumerator, and it matches",
+  "anchor_route": "explicit V2000 atom/bond table -> Chem.MolFromMolBlock. No SMILES fragment, no RWMol, no AddBond, no RemoveAtom.",
+  "enumerator_route": "curation/lib/assemble.attach, i.e. RWMol + AddBond on SMILES fragments",
+  "exact_match": true,
+  "anchors": 1,
+  "structures_enumerated": 489,
+  "coverage_note": "Scheme 1 is the only complete lipid this paper draws; Figure 1b draws building blocks and Figures 2b/3a draw amine cores. The second row of reference_structures.csv records that absence with an empty reference_SMILES so it is visible.",
+  "seeded": {
+   "defect": "in the atom table, bond the sulfur to the ALPHA carbon instead of the beta carbon (bond 12-13 becomes 10-13) -- the regiochemistry Scheme 1's written two-step synthesis is the only evidence against",
+   "metric": "anchor matches the enumeration (C10 exact_match)",
+   "before": true,
+   "after": false,
+   "inchikey_differs": true,
+   "molecular_formula_identical": true,
+   "fires": true,
+   "read": "the formula is unchanged, so this is another defect no mass check can see."
+  }
+ },
+ "_seeded_summary": {
+  "checks_with_a_seeded_defect": 10,
+  "fired": [
+   "Q10_C10_anchor",
+   "Q1_library_size",
+   "Q2_heatmap_grid",
+   "Q3_heatmap_colours",
+   "Q4_invivo_axes",
+   "Q5_two_independent_readings",
+   "Q6_structures_vs_corpus",
+   "Q8_nmr_hydrogen_count",
+   "Q9_si_table_parser"
+  ],
+  "did_not_fire": [
+   "Q7_printed_statistics"
+  ],
+  "note": "Q7 is in did_not_fire ON PURPOSE: a uniform multiplicative error passes every printed-statistic check, and that is the single most important fact in this file."
+ }
+}

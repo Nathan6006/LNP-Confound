@@ -1,0 +1,203 @@
+{
+ "corpus": {
+  "vitro_rows": 29195,
+  "vivo_rows": 1803,
+  "unique_IL_SMILES": 19919,
+  "experiments_vitro": 43,
+  "experiments_vivo": 20,
+  "unparseable_IL_SMILES": 0
+ },
+ "benchmarks": {
+  "SM-102": {
+   "full_inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "full_key_hit": true,
+   "n_experiments_full_key": 1,
+   "skeleton_key_hit": true,
+   "n_experiments_skeleton": 1,
+   "IL_name_hit_experiments": [
+    "AC_2025",
+    "SB_2024",
+    "SS_2018",
+    "SY_2025",
+    "WT_2026",
+    "XD_2026"
+   ],
+   "three_of_three": true
+  },
+  "DLin-MC3-DMA": {
+   "full_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "full_key_hit": true,
+   "n_experiments_full_key": 1,
+   "skeleton_key_hit": true,
+   "n_experiments_skeleton": 1,
+   "IL_name_hit_experiments": [
+    "AC_2025",
+    "BL_2023",
+    "NG_2025_2",
+    "SB_2024",
+    "SP_2020",
+    "WT_2026",
+    "XD_2026",
+    "YZ_2022",
+    "YZ_2024",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "three_of_three": true
+  },
+  "ALC-0315": {
+   "full_inchikey": "QGWBEETXHOVFQS-UHFFFAOYSA-N",
+   "full_key_hit": true,
+   "n_experiments_full_key": 1,
+   "skeleton_key_hit": true,
+   "n_experiments_skeleton": 1,
+   "IL_name_hit_experiments": [
+    "AC_2025",
+    "LZ_2025",
+    "XD_2026"
+   ],
+   "three_of_three": true
+  }
+ },
+ "benchmarks_summary": "3/3 hit on all three keys at once",
+ "this_paper": {
+  "VN3C2O": {
+   "formula_from_HRMS": "C71H123N2O8",
+   "core_formula": "C7H18N2O2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": null,
+   "IL_name_hit": []
+  },
+  "VN2C4": {
+   "formula_from_HRMS": "C70H119N2O6",
+   "core_formula": "C6H14N2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": null,
+   "IL_name_hit": []
+  },
+  "VN2C2": {
+   "formula_from_HRMS": "C70H121N2O6",
+   "core_formula": "C6H16N2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": "CCN(CC)CCN(CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2)CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2",
+   "full_inchikey": "MCIVYXAONILTGD-FFKRUXFOSA-N",
+   "full_key_hit": false,
+   "skeleton_key_hit": false,
+   "skeleton_hits": [],
+   "IL_name_hit": []
+  },
+  "VN3C2": {
+   "formula_from_HRMS": "C71H123N2O6",
+   "core_formula": "C7H18N2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": "CCN(CC)CCCN(CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2)CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2",
+   "full_inchikey": "HSWMWALKBBILAY-JRFUTLRPSA-N",
+   "full_key_hit": false,
+   "skeleton_key_hit": false,
+   "skeleton_hits": [],
+   "IL_name_hit": []
+  },
+  "VN3C1": {
+   "formula_from_HRMS": "C69H119N2O6",
+   "core_formula": "C5H14N2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": "Cc1c(C)c(OC(=O)CCN(CCCN(C)C)CCC(=O)Oc2c(C)c(C)c3c(c2C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC3)c(C)c2c1CC[C@@](C)(CCCC(C)CCCC(C)CCCC(C)C)O2",
+   "full_inchikey": "IKJJODGMSAVTDL-ZCKNRNDZSA-N",
+   "full_key_hit": false,
+   "skeleton_key_hit": false,
+   "skeleton_hits": [],
+   "IL_name_hit": []
+  },
+  "PANEL-G (label disputed)": {
+   "formula_from_HRMS": "C71H121N2O6",
+   "core_formula": "C7H16N2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": null,
+   "IL_name_hit": []
+  },
+  "VN2C1": {
+   "formula_from_HRMS": "C68H117N2O6",
+   "core_formula": "C4H12N2",
+   "structure_pinned": false,
+   "proposed_IL_SMILES": null,
+   "IL_name_hit": []
+  }
+ },
+ "substructure_search": {
+  "tocopherol_full": {
+   "n_corpus_lipids_containing_it": 0,
+   "hits": []
+  },
+  "chromanol_ring_system": {
+   "n_corpus_lipids_containing_it": 0,
+   "hits": []
+  }
+ },
+ "near_miss": {
+  "probe": "VN2C2",
+  "probe_smiles": "CCN(CC)CCN(CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2)CCC(=O)Oc1c(C)c(C)c2c(c1C)O[C@](C)(CCCC(C)CCCC(C)CCCC(C)C)CC2",
+  "fingerprint": "Morgan r=2, 2048 bits",
+  "top10": [
+   {
+    "tanimoto": 0.4545,
+    "IL_name": "A123_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.4328,
+    "IL_name": "A501_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.4203,
+    "IL_name": "A514_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.4028,
+    "IL_name": "A516_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.3944,
+    "IL_name": "A75_C8B1",
+    "experiment": "YR_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.3944,
+    "IL_name": "A75_C6B1",
+    "experiment": "YR_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.3939,
+    "IL_name": "A113_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.3857,
+    "IL_name": "A509_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.3824,
+    "IL_name": "A123_Oi10",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   },
+   {
+    "tanimoto": 0.3824,
+    "IL_name": "A122_O1,1,8",
+    "experiment": "NC_2024",
+    "pool": "vitro"
+   }
+  ]
+ }
+}

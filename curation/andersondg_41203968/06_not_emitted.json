@@ -1,0 +1,34 @@
+{
+ "skipped": [
+  [
+   "AMG1441",
+   "2b",
+   "NO_BLOCK:Am14"
+  ],
+  [
+   "AMG1641",
+   "2b",
+   "NO_BLOCK:Am16"
+  ],
+  [
+   "AMG1741",
+   "2b",
+   "NO_BLOCK:Am17"
+  ],
+  [
+   "AMG1941",
+   "2b",
+   "NO_BLOCK:Am19"
+  ],
+  [
+   "SM-102",
+   "2c",
+   "benchmark, not a library member"
+  ],
+  [
+   "ckk-e12",
+   "2c",
+   "benchmark, not a library member"
+  ]
+ ]
+}

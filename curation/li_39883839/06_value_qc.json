@@ -1,0 +1,107 @@
+{
+ "V1_fig3H_printed_ROI_containment": {
+  "n": 3,
+  "n_inside": 3,
+  "legibility": "leading digit and exponent legible; 2nd-4th mantissa digits are not resolvable at the embedded resolution (~1 px per stroke). Read as 3.0e7 / 1.7e8 / 4.1e7 with an uncertainty of about +/-0.1 in the leading decimal.",
+  "rows": [
+   {
+    "lipid": "H2A4B4",
+    "roi": "ROI 1",
+    "printed_value": 30000000.0,
+    "bar_replicate_span": [
+     17010000.0,
+     35150000.0
+    ],
+    "inside": true,
+    "bar_mean_digitised": 27330000.0,
+    "ratio_to_bar_mean": 1.098
+   },
+   {
+    "lipid": "A4B4-S3",
+    "roi": "ROI 2",
+    "printed_value": 170000000.0,
+    "bar_replicate_span": [
+     157300000.0,
+     219000000.0
+    ],
+    "inside": true,
+    "bar_mean_digitised": 184900000.0,
+    "ratio_to_bar_mean": 0.919
+   },
+   {
+    "lipid": "A4B4-S4",
+    "roi": "ROI 3",
+    "printed_value": 41000000.0,
+    "bar_replicate_span": [
+     3346000.0,
+     43790000.0
+    ],
+    "inside": true,
+    "bar_mean_digitised": 21200000.0,
+    "ratio_to_bar_mean": 1.934
+   }
+  ],
+  "what": "A number the authors DREW on the image and never discussed, external to our calibration. Each is one representative mouse, so the test is containment in the group's drawn spread -- NOT equality with the n=3 bar mean."
+ },
+ "V2_H2A4B4_two_panels": {
+  "Fig2K": 28400000.0,
+  "Fig3I": 27330000.0,
+  "ratio": 1.0392,
+  "pct_difference": 3.92,
+  "what": "Independent panels, independent tick sets, independent calibrations, one lipid at one dose and route. NOTE: this is NOT evidence for panel K's linear axis -- the linear reading was already forced by panel K's own four equally spaced labelled ticks and verified by its 4e7 short tick. It is a check on the two digitisations given that scale."
+ },
+ "V3_same_molecule_two_names": {
+  "Fig2K_H2A4-Ole": 1118000.0,
+  "Fig2H_H2A4B2_upper_bound": 688000.0,
+  "Fig2H_H2A4B2_measured": null,
+  "consistent": true,
+  "what": "H2A4-Ole and H2A4B2 have the same full InChIKey. On Fig 2H the bar has no resolvable height; on Fig 2K it is the second smallest bar. Both say 'at the floor', which is as much agreement as either panel can express."
+ },
+ "V4_fig2H_vs_fig2K": {
+  "shared": {
+   "H2A4B3": {
+    "Fig2H": 37390000.0,
+    "Fig2K": 1450000.0,
+    "ratio_H_over_K": 25.79
+   },
+   "H2A4B4": {
+    "Fig2H": 79360000.0,
+    "Fig2K": 28400000.0,
+    "ratio_H_over_K": 2.79
+   }
+  },
+  "what": "Both panels state 0.05 mg/kg mLuc, I.M., 6 h. The same two lipids differ by 2.8x and 25.8x between them, in the same direction, so the panels are different cohorts on different effective scales and must NOT share a z-score block without a decision. This is DECISIONS D-1."
+ },
+ "V5_molar_percent_sum": {
+  "components": {
+   "ionizable": 50.0,
+   "DSPC": 10.0,
+   "cholesterol": 38.5,
+   "C14-PEG2000": 1.5
+  },
+  "sum": 100.0,
+  "exactly_100": true,
+  "what": "The Methods print the ratio 50:10:38.5:1.5 and never say it is a mole-percent set. It sums to exactly 100, which fixes the formulation columns without a further assumption."
+ },
+ "V6_batch_dose": {
+  "caption_mg_per_kg": {
+   "batch1": 0.32,
+   "batch2": 0.08
+  },
+  "methods_mg_per_kg": {
+   "batch1": 0.25,
+   "batch2": 0.8
+  },
+  "caption_per_LNP": {
+   "batch1": 0.02,
+   "batch2": 0.02
+  },
+  "methods_per_LNP": {
+   "batch1": 0.015625,
+   "batch2": 0.2
+  },
+  "caption_per_LNP_identical": true,
+  "methods_per_LNP_ratio": 12.8,
+  "what": "Batch 1 pooled 16 LNPs per mouse and batch 2 pooled 4. The caption's two doses give EXACTLY the same per-LNP dose (0.02 mg/kg each); the Methods' two give 0.0156 and 0.200, a 12.8x spread. A screen that changes the per-LNP dose 13-fold between rounds cannot compare them, so the caption is the self-consistent pair. No row is emitted from either batch (both are pooled mixtures), so this adjudicates a recorded contradiction, not a value."
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "n_cases": 8,
+ "n_passed": 8,
+ "n_without_teeth": 0,
+ "failed_cases": [],
+ "cases": [
+  {
+   "case": "A: drop one library-1 design row",
+   "metric": "A_library_row_counts.n_matching",
+   "clean": 4,
+   "seeded": 3,
+   "expected_when_seeded": 3,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "4 libraries match their stated size; dropping one row must take that to 3."
+  },
+  {
+   "case": "B: add 1 to one cholesterol mole %",
+   "metric": "B_mole_percent_sums.n_exactly_100",
+   "clean": 564,
+   "seeded": 563,
+   "expected_when_seeded": 563,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "564 design rows sum to exactly 100; breaking one must give 563."
+  },
+  {
+   "case": "E: corrupt one rank row's PEG MW",
+   "metric": "E_rank_rows_matched_to_a_design_row.matched",
+   "clean": 86,
+   "seeded": 85,
+   "expected_when_seeded": 85,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "86 of 87 rank rows match a design row; corrupting a matched row's composition must give 85."
+  },
+  {
+   "case": "F1: repeat a rank inside one in vitro column",
+   "metric": "F_rank_column_integrity.repeated_ranks_total",
+   "clean": 0,
+   "seeded": 1,
+   "expected_when_seeded": 1,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "0 repeated ranks across 24 columns; one deliberate repeat must give 1."
+  },
+  {
+   "case": "F2: push an in vivo rank past the top-10 bound",
+   "metric": "F_rank_column_integrity.in_vivo_ranks_above_10",
+   "clean": 0,
+   "seeded": 1,
+   "expected_when_seeded": 1,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "0 in vivo ranks exceed 10; forcing an 11 must give 1."
+  },
+  {
+   "case": "B2 (reverse direction): repair the live 101% row",
+   "metric": "B2_rank_table_mole_percent_sums.n_exactly_100",
+   "clean": 86,
+   "seeded": 87,
+   "expected_when_seeded": 87,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "86 of 87 rank rows sum to 100 BECAUSE of a real defect in the paper; repairing it must give 87. This proves the metric tracks the condition and is not stuck."
+  },
+  {
+   "case": "H: lengthen spermidine by one carbon",
+   "metric": "05_blocks_qc.failures (len) / exit code",
+   "clean": 0,
+   "seeded": 1,
+   "expected_when_seeded": 1,
+   "metric_moved": true,
+   "PASS": true,
+   "note": "the name-derived formula check must catch an extra CH2 that leaves the SMILES perfectly parseable; exit code must also go 0 -> 1 (got 1)."
+  },
+  {
+   "case": "I: move one macrocycle nitrogen (1,4,8,12 -> 1,4,8,11), same ring size, same formula",
+   "metric": "ring_nitrogen_positions",
+   "clean": [
+    1,
+    4,
+    8,
+    12
+   ],
+   "seeded": [
+    1,
+    4,
+    8,
+    11
+   ],
+   "expected_when_seeded": "!= [1,4,8,12]",
+   "metric_moved": true,
+   "PASS": true,
+   "formula_and_mass_both_sides": [
+    [
+     "C11H26N4",
+     214.2157
+    ],
+    [
+     "C11H26N4",
+     214.2157
+    ]
+   ],
+   "note": "both sides measured at C11H26N4 / 214.2157 Da, so formula and mass are blind to this; only the ring walk sees it."
+  }
+ ]
+}

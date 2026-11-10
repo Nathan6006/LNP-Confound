@@ -1,0 +1,110 @@
+{
+ "head_external_attestation": {
+  "_what": "the heads are not drawn in this paper. Each is resolved from the corpus through corpus_components.smi, which raises on an ambiguous name instead of picking by row order.",
+  "93": {
+   "corpus_IL_head_name": [
+    "93 (AA_2008, 11 rows)",
+    "A93 (KW_2014, 5 rows)"
+   ],
+   "corpus_SMILES": "NCCCn1ccnc1",
+   "two_spellings_one_structure": true,
+   "third_record": "curation/xuq_32520527 read head 93 off a drawn figure in a third Xu-lab paper and got the same structure"
+  },
+  "9322": {
+   "corpus_IL_head_name": [
+    "A9322 (YR_2024, 22 rows)"
+   ],
+   "corpus_SMILES": "Cc1nccn1CCCN",
+   "is_the_2_methyl_analogue_of_93": true,
+   "mass_confirmation": "09_figS1_mass_test.json"
+  },
+  "the_other_17_heads": {
+   "names": [
+    "9310",
+    "9311",
+    "9312",
+    "9313",
+    "9315",
+    "9316",
+    "9321",
+    "9323",
+    "9324",
+    "9331",
+    "9332",
+    "9333",
+    "9334",
+    "9341",
+    "9351",
+    "9352"
+   ],
+   "corpus_attestation": "NONE. Zero rows in either pool carry any of these tokens in IL_name or IL_head_name.",
+   "verdict": "NOT ENUMERABLE. 9322 = the 2-methyl analogue of 93 is ONE data point; it does not define a digit grammar. The paper states no grammar, and nothing here maps 9313 or 9331 to a substitution pattern. THE GRAMMAR IS UNVERIFIED and no structure is invented."
+  }
+ },
+ "n_blocks": 7,
+ "n_heads": 2,
+ "n_tails_built": 5,
+ "n_tails_named_but_not_built": 6,
+ "tails_not_built": {
+  "O18S-S": "named in the Figure S4 and S5 legends; the SI synthesises O16S-S and N16S-S only. The chain-atom naming rule (01_blocks_qc.json) predicts 2-(tetradecyldisulfanyl)ethyl acrylate, but a prediction from a rule is not a structure read from a source. FLAGGED, NOT BUILT.",
+  "O17C": "named in the Figure S1, S4 and S5 legends; synthesised nowhere in the SI. The rule fixes the chain at 17 heavy atoms but NOT what 'C' designates - a plain C17 alkyl chain, a carbonate, or a carbamate all fit the name. Linkers are formula-blind and the SI has no 13C spectrum and no legible HRMS, so THE TEST IS UNAVAILABLE. FLAGGED, NOT BUILT.",
+  "EC18": "epoxide tail, attributed to reference [3] (Sun et al. Bioconjug. Chem. 2012). Not drawn, not synthesised here. FLAGGED, NOT BUILT.",
+  "EC16": "epoxide tail, same provenance as EC18. FLAGGED, NOT BUILT.",
+  "O16B": "appears ONLY as a Figure S1 panel label. Probably O16S-S under a second name ('B' for bisulfide); the chain count 16 matches. Unprovable here because Figure S1's m/z labels are 5-7 px tall and illegible. See 08_contradictions.csv C-02. FLAGGED, NOT BUILT.",
+  "N16B": "same as O16B, against N16S-S. FLAGGED, NOT BUILT."
+ },
+ "name_token_rule": {
+  "claim": "for every tail the SI actually synthesises, the number in its name equals the heavy-atom count of the chain hanging off the ester oxygen or amide nitrogen, and the leading letter is O for an ester and N for an amide. Zero free parameters.",
+  "per_tail": [
+   {
+    "tail": "O17O",
+    "name_token": 17,
+    "measured_chain_heavy_atoms": 17,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "O17S",
+    "name_token": 17,
+    "measured_chain_heavy_atoms": 17,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "O17Se",
+    "name_token": 17,
+    "measured_chain_heavy_atoms": 17,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "O16S-S",
+    "name_token": 16,
+    "measured_chain_heavy_atoms": 16,
+    "agrees": true,
+    "prefix": "O",
+    "linker_from_route": "ester",
+    "prefix_agrees": true
+   },
+   {
+    "tail": "N16S-S",
+    "name_token": 16,
+    "measured_chain_heavy_atoms": 16,
+    "agrees": true,
+    "prefix": "N",
+    "linker_from_route": "amide",
+    "prefix_agrees": true
+   }
+  ],
+  "n_agree": 5,
+  "n_tested": 5,
+  "prefix_n_agree": 5,
+  "why_it_matters": "the run brief's trap 5 says a name token is not a chain length. Here it is, and that is MEASURED on five tails rather than assumed. The rule is what makes O18S-S's and O17C's chain lengths predictable - and it is still not enough to build them, because it does not fix what 'C' designates."
+ }
+}

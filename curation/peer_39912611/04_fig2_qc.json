@@ -1,0 +1,164 @@
+{
+ "image": "source/figs/nn4c18636_0002.jpg",
+ "panels": {
+  "A": {
+   "cell_line": "HeLa",
+   "n_gridlines_detected": 4,
+   "gridlines_used_px": [
+    87.0,
+    137.52,
+    189.0,
+    240.0
+   ],
+   "gridline_values": [
+    1000000000.0,
+    100000000.0,
+    10000000.0,
+    1000000.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 51.0484,
+    "origin_px": 86.806,
+    "origin_value": 1000000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.339,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residuals_px": [
+    0.646,
+    0.484,
+    0.138,
+    0.161
+   ],
+   "worst_loo_px": 0.646,
+   "loo_tol_px": 1.5,
+   "n_bar_windows": 36,
+   "n_bar_tops": 36,
+   "failures": {},
+   "stroke_offset_px_subtracted": 0.0,
+   "fill_starts_px_below_detected_top_median": 0.0,
+   "baseline_row_px": 291.05,
+   "bar_width_px": [
+    8,
+    9,
+    10
+   ]
+  },
+  "B": {
+   "cell_line": "RAW264.7",
+   "n_gridlines_detected": 8,
+   "gridlines_used_px": [
+    377.0,
+    403.0,
+    428.0,
+    453.0,
+    478.0,
+    503.64,
+    528.52,
+    553.35
+   ],
+   "gridline_values": [
+    100000000.0,
+    10000000.0,
+    1000000.0,
+    100000.0,
+    10000.0,
+    1000.0,
+    100.0,
+    10.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 25.1662,
+    "origin_px": 377.482,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 8,
+    "tick_fit_residual_px": 0.4817,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residuals_px": [
+    0.826,
+    0.485,
+    0.226,
+    0.023,
+    0.168,
+    0.396,
+    0.052,
+    0.502
+   ],
+   "worst_loo_px": 0.826,
+   "loo_tol_px": 1.5,
+   "n_bar_windows": 36,
+   "n_bar_tops": 36,
+   "failures": {},
+   "stroke_offset_px_subtracted": 0.0,
+   "fill_starts_px_below_detected_top_median": 0.0,
+   "baseline_row_px": 578.52,
+   "bar_width_px": [
+    8,
+    9,
+    10
+   ]
+  },
+  "C": {
+   "cell_line": "HepG2",
+   "n_gridlines_detected": 8,
+   "gridlines_used_px": [
+    670.0,
+    695.0,
+    720.0,
+    746.0,
+    771.0,
+    796.0,
+    821.45,
+    846.5
+   ],
+   "gridline_values": [
+    100000000.0,
+    10000000.0,
+    1000000.0,
+    100000.0,
+    10000.0,
+    1000.0,
+    100.0,
+    10.0
+   ],
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 25.247,
+    "origin_px": 669.879,
+    "origin_value": 100000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 8,
+    "tick_fit_residual_px": 0.3799,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_residuals_px": [
+    0.207,
+    0.174,
+    0.454,
+    0.437,
+    0.153,
+    0.139,
+    0.118,
+    0.181
+   ],
+   "worst_loo_px": 0.454,
+   "loo_tol_px": 1.5,
+   "n_bar_windows": 36,
+   "n_bar_tops": 36,
+   "failures": {},
+   "stroke_offset_px_subtracted": 0.0,
+   "fill_starts_px_below_detected_top_median": 1.0,
+   "baseline_row_px": 871.75,
+   "bar_width_px": [
+    8,
+    9,
+    10
+   ]
+  }
+ }
+}

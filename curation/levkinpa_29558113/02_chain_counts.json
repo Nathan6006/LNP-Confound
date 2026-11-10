@@ -1,0 +1,262 @@
+{
+ "_what": "Chain length per building block, measured from the PDF's own bond coordinates (curation/lib/chains.py vector route) and cross-checked against the printed HRMS carbon count.",
+ "page": 2,
+ "stroked_paths_on_page": 366,
+ "blocks": {
+  "PY18": {
+   "kind": "alkanethiol -> S-S-alkyl arm",
+   "bbox_pt": [
+    340,
+    152,
+    612,
+    162
+   ],
+   "n_stroked_segments": 18,
+   "n_merged_vertices": 19,
+   "carbons_from_geometry": 18,
+   "carbons_from_HRMS_formula": 18,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 396.276,
+   "count_carbons": {
+    "n": 18,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "PY16": {
+   "kind": "alkanethiol -> S-S-alkyl arm",
+   "bbox_pt": [
+    340,
+    163,
+    612,
+    173
+   ],
+   "n_stroked_segments": 16,
+   "n_merged_vertices": 17,
+   "carbons_from_geometry": 16,
+   "carbons_from_HRMS_formula": 16,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 368.2447,
+   "count_carbons": {
+    "n": 16,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "PY14": {
+   "kind": "alkanethiol -> S-S-alkyl arm",
+   "bbox_pt": [
+    340,
+    177,
+    612,
+    187
+   ],
+   "n_stroked_segments": 14,
+   "n_merged_vertices": 15,
+   "carbons_from_geometry": 14,
+   "carbons_from_HRMS_formula": 14,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 340.2134,
+   "count_carbons": {
+    "n": 14,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "PY12": {
+   "kind": "alkanethiol -> S-S-alkyl arm",
+   "bbox_pt": [
+    340,
+    190,
+    612,
+    200
+   ],
+   "n_stroked_segments": 12,
+   "n_merged_vertices": 13,
+   "carbons_from_geometry": 12,
+   "carbons_from_HRMS_formula": 12,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 312.1821,
+   "count_carbons": {
+    "n": 12,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "T18": {
+   "kind": "acyl chloride -> amide tail",
+   "bbox_pt": [
+    136,
+    154,
+    340,
+    170
+   ],
+   "n_stroked_segments": 20,
+   "n_vertices_no_double_dedup": 21,
+   "n_merged_vertices": 20,
+   "carbons_from_geometry": 18,
+   "carbons_from_HRMS_formula": 18,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 384.2938,
+   "count_carbons": {
+    "n": 18,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "T16": {
+   "kind": "acyl chloride -> amide tail",
+   "bbox_pt": [
+    136,
+    173,
+    340,
+    189
+   ],
+   "n_stroked_segments": 18,
+   "n_vertices_no_double_dedup": 19,
+   "n_merged_vertices": 18,
+   "carbons_from_geometry": 16,
+   "carbons_from_HRMS_formula": 16,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 356.2625,
+   "count_carbons": {
+    "n": 16,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "T14": {
+   "kind": "acyl chloride -> amide tail",
+   "bbox_pt": [
+    136,
+    191,
+    340,
+    206
+   ],
+   "n_stroked_segments": 16,
+   "n_vertices_no_double_dedup": 17,
+   "n_merged_vertices": 16,
+   "carbons_from_geometry": 14,
+   "carbons_from_HRMS_formula": 14,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 328.2312,
+   "count_carbons": {
+    "n": 14,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  },
+  "T18U": {
+   "kind": "oleoyl chloride -> mono-unsaturated amide tail",
+   "bbox_pt": [
+    166,
+    85,
+    292,
+    97
+   ],
+   "n_stroked_segments": 18,
+   "chain_vertices_left_to_right": 18,
+   "carbons_from_geometry": 18,
+   "carbons_from_HRMS_formula": 18,
+   "geometry_and_mass_agree": true,
+   "HRMS_mz_printed": 382.2782,
+   "n_horizontal_strokes": 2,
+   "double_bond_between_carbons": [
+    9,
+    10
+   ],
+   "double_bond_geometry": "cis/Z -- drawn as a HORIZONTAL bond joining two up-vertices of the zig-zag, which is the standard ChemDraw cis depiction. Corroborated by 13C 129.99/129.73 and 1H 5.36-5.27 (m, 2H).",
+   "count_carbons": {
+    "n": 18,
+    "methods": [
+     "vector"
+    ],
+    "agreed": false,
+    "name_token_matches": true
+   }
+  }
+ },
+ "name_token_checks": [
+  {
+   "label": "PY18",
+   "name_token_length": 18,
+   "measured_length": 18,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "PY16",
+   "name_token_length": 16,
+   "measured_length": 16,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "PY14",
+   "name_token_length": 14,
+   "measured_length": 14,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "PY12",
+   "name_token_length": 12,
+   "measured_length": 12,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "T18",
+   "name_token_length": 18,
+   "measured_length": 18,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "T16",
+   "name_token_length": 16,
+   "measured_length": 16,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "T14",
+   "name_token_length": 14,
+   "measured_length": 14,
+   "matches": true,
+   "note": ""
+  },
+  {
+   "label": "T18U",
+   "name_token_length": 18,
+   "measured_length": 18,
+   "matches": true,
+   "note": ""
+  }
+ ],
+ "summary": {
+  "all_geometry_mass_agree": true,
+  "name_token_mismatches": []
+ }
+}

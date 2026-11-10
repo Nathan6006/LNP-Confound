@@ -1,205 +1,359 @@
 {
  "_what": "Numbers CLAUDE.md and the provenance docs ASSERT, each paired with an expression that measures the same thing from the live corpus. check_docs.py evaluates every expression and fails on any mismatch.",
  "_why": "Three documented numbers were stale or undefined on 2026-11-07 and none of them failed anything: the F-001 flag count (1,152, and the metric the docs told you to re-measure it with returned 1,652 -- F-024), the chance baseline (1/31 vitro, which matched neither the live corpus nor the frozen run -- F-026), and a trailing-space condition understated as 'several' when it was 915 cells (F-022). Prose cannot be audited. A number in prose with no executable twin drifts the moment the corpus moves, and the drift is invisible because nothing compares them.",
- "_how": "Add an entry whenever a doc states a number about the corpus. `expr` is evaluated with `V` (vitro rows), `W` (vivo rows), `O` (Original_LNPDB rows), `A` (audit_findings.json), `S` (schema_quality.json columns) in scope -- see check_docs.py. Keep `where` pointing at the file and section that makes the claim, so a failure says which prose to fix.",
+ "_how": "Add an entry whenever a doc states a number about the corpus. `expr` is evaluated with `V` (vitro rows), `W` (vivo rows), `O` (Original_LNPDB rows), `A` (audit_findings.json), `S` (schema_quality.json columns) in scope -- see check_docs.py. Keep `where` pointing at the file and section that makes the claim, so a failure says which prose to fix.  Each claim now carries `file`, and check_docs.py verifies that file exists before trusting the claim -- a claim pointing at a renamed or deleted doc would otherwise pass forever while documenting nothing. Added 2026-11-09 with the first claims outside CLAUDE.md: until then all 33 claims were tagged CLAUDE.md, so provenance/README.md sat four merges out of date (25,997 x 72, 40 experiments, 'Nine checks') and nothing could see it.",
  "claims": [
   {
    "id": "vitro_rows",
    "where": "CLAUDE.md \u00a72, \u00a73",
    "expect": 29195,
-   "expr": "len(V)"
+   "expr": "len(V)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "vitro_cols",
    "where": "CLAUDE.md \u00a72, \u00a73",
    "expect": 79,
-   "expr": "len(V[0])"
+   "expr": "len(V[0])",
+   "file": "CLAUDE.md"
   },
   {
    "id": "vitro_experiments",
    "where": "CLAUDE.md \u00a73",
    "expect": 43,
-   "expr": "len({r['Experiment_ID'] for r in V})"
+   "expr": "len({r['Experiment_ID'] for r in V})",
+   "file": "CLAUDE.md"
   },
   {
    "id": "vivo_rows",
    "where": "CLAUDE.md \u00a72, \u00a73",
    "expect": 1803,
-   "expr": "len(W)"
+   "expr": "len(W)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "vivo_cols",
    "where": "CLAUDE.md \u00a72, \u00a73",
    "expect": 79,
-   "expr": "len(W[0])"
+   "expr": "len(W[0])",
+   "file": "CLAUDE.md"
   },
   {
    "id": "vivo_experiments",
    "where": "CLAUDE.md \u00a73",
    "expect": 20,
-   "expr": "len({r['Experiment_ID'] for r in W})"
+   "expr": "len({r['Experiment_ID'] for r in W})",
+   "file": "CLAUDE.md"
   },
   {
    "id": "original_lnpdb_rows",
    "where": "CLAUDE.md \u00a72",
    "expect": 19797,
-   "expr": "len(O)"
+   "expr": "len(O)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "original_lnpdb_cols",
    "where": "CLAUDE.md \u00a72",
    "expect": 66,
-   "expr": "len(O[0])"
+   "expr": "len(O[0])",
+   "file": "CLAUDE.md"
   },
   {
    "id": "quality_columns",
    "where": "CLAUDE.md \u00a73 (79 = 67 + 5 + 7)",
    "expect": 7,
-   "expr": "len(S)"
+   "expr": "len(S)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "schema_total",
    "where": "CLAUDE.md \u00a73",
    "expect": 79,
-   "expr": "67 + 5 + len(S)"
+   "expr": "67 + 5 + len(S)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "chance_baseline_S_vitro",
    "where": "CLAUDE.md \u00a77 -- was stale at 31 until 2026-11-07 (F-026)",
    "expect": 43,
-   "expr": "len({r['Experiment_ID'] for r in V})"
+   "expr": "len({r['Experiment_ID'] for r in V})",
+   "file": "CLAUDE.md"
   },
   {
    "id": "chance_baseline_S_vivo",
    "where": "CLAUDE.md \u00a77 -- was stale at 17 until 2026-11-07 (F-026)",
    "expect": 20,
-   "expr": "len({r['Experiment_ID'] for r in W})"
+   "expr": "len({r['Experiment_ID'] for r in W})",
+   "file": "CLAUDE.md"
   },
   {
    "id": "rows_with_a_caveat",
    "where": "CLAUDE.md \u00a75, \u00a76 -- the F-001 number. NOT rows_carrying_a_flag (F-024). 1,157 until 2026-11-09, when F-040 removed the bound flag from 65 QL_2026 cells that are measurements, not bounds",
    "expect": 1424,
-   "expr": "A['vitro']['C13_quality_vocabulary']['rows_with_a_caveat'] + A['vivo']['C13_quality_vocabulary']['rows_with_a_caveat']"
+   "expr": "A['vitro']['C13_quality_vocabulary']['rows_with_a_caveat'] + A['vivo']['C13_quality_vocabulary']['rows_with_a_caveat']",
+   "file": "CLAUDE.md"
   },
   {
    "id": "rows_carrying_a_flag",
    "where": "CLAUDE.md \u00a76 -- includes confidence=high, which is an assurance not a caveat",
    "expect": 1920,
-   "expr": "A['vitro']['C13_quality_vocabulary']['rows_carrying_a_flag'] + A['vivo']['C13_quality_vocabulary']['rows_carrying_a_flag']"
+   "expr": "A['vitro']['C13_quality_vocabulary']['rows_carrying_a_flag'] + A['vivo']['C13_quality_vocabulary']['rows_carrying_a_flag']",
+   "file": "CLAUDE.md"
   },
   {
    "id": "positional_ambiguity_rows",
    "where": "CLAUDE.md \u00a73. 987 until the NG_2025 merge 2026-11-09, which added 332 crude Mannich rows (ortho/para and both ortho positions open, nothing purified)",
    "expect": 1319,
-   "expr": "sum(1 for r in V + W if r.get('positional_ambiguity') == '1')"
+   "expr": "sum(1 for r in V + W if r.get('positional_ambiguity') == '1')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "ZT_2026_vitro",
    "where": "CLAUDE.md \u00a72",
    "expect": 486,
-   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'ZT_2026')"
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'ZT_2026')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "ZT_2026_vivo",
    "where": "CLAUDE.md \u00a72",
    "expect": 51,
-   "expr": "sum(1 for r in W if r['Experiment_ID'] == 'ZT_2026')"
+   "expr": "sum(1 for r in W if r['Experiment_ID'] == 'ZT_2026')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "LL_2026_vitro",
    "where": "CLAUDE.md \u00a72",
    "expect": 840,
-   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'LL_2026')"
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'LL_2026')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "LL_2026_2_vitro",
    "where": "CLAUDE.md \u00a72",
    "expect": 147,
-   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'LL_2026_2')"
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'LL_2026_2')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "WT_2026_vitro",
    "where": "CLAUDE.md \u00a72",
    "expect": 2544,
-   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'WT_2026')"
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'WT_2026')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "XD_2026_vivo",
    "where": "CLAUDE.md \u00a72",
    "expect": 12,
-   "expr": "sum(1 for r in W if r['Experiment_ID'] == 'XD_2026')"
+   "expr": "sum(1 for r in W if r['Experiment_ID'] == 'XD_2026')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "QL_2026_vitro",
    "where": "CLAUDE.md \u00a72",
    "expect": 344,
-   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'QL_2026')"
+   "expr": "sum(1 for r in V if r['Experiment_ID'] == 'QL_2026')",
+   "file": "CLAUDE.md"
   },
   {
    "id": "names_multi_structure_across_experiments",
    "where": "CLAUDE.md \u00a73 -- 288 names carry DIFFERENT structures in DIFFERENT experiments. Distinct from error class 30's 292, which counts names with >1 structure regardless of experiment",
    "expect": 288,
-   "expr": "n_names_multi_structure_cross_experiment(V)"
+   "expr": "n_names_multi_structure_cross_experiment(V)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "unassigned_stereogenic_CC_vitro",
    "where": "CLAUDE.md \u00a73 (FG_2026 120, YX_2026_SDL 79, NC_2024 13 = 212). This is the VITRO count; \u00a73 does not mention the vivo rows, see the next claim",
    "expect": 212,
-   "expr": "A['vitro']['C9_stereochemistry']['rows_with_unassigned_stereogenic_CC']"
+   "expr": "A['vitro']['C9_stereochemistry']['rows_with_unassigned_stereogenic_CC']",
+   "file": "CLAUDE.md"
   },
   {
    "id": "unassigned_stereogenic_CC_vivo",
    "where": "NOT stated in CLAUDE.md \u00a73, which gives only the vitro 212. Recorded here so the 2 vivo rows are visible rather than absent",
    "expect": 2,
-   "expr": "A['vivo']['C9_stereochemistry']['rows_with_unassigned_stereogenic_CC']"
+   "expr": "A['vivo']['C9_stereochemistry']['rows_with_unassigned_stereogenic_CC']",
+   "file": null,
+   "why_no_file": "Nothing documents this number. The claim exists so the gap is gated: if the quantity moves, the build fails and someone decides whether to document it, rather than it drifting unobserved."
   },
   {
    "id": "unassigned_CN_imine_vitro",
    "where": "NOT stated in CLAUDE.md \u00a73 either, and it is 240 rows -- larger than the C=C count the docs do mention",
    "expect": 240,
-   "expr": "A['vitro']['C9_stereochemistry']['rows_with_unassigned_CN_imine']"
+   "expr": "A['vitro']['C9_stereochemistry']['rows_with_unassigned_CN_imine']",
+   "file": null,
+   "why_no_file": "Nothing documents this number. The claim exists so the gap is gated: if the quantity moves, the build fails and someone decides whether to document it, rather than it drifting unobserved."
   },
   {
    "id": "SB_SY_non_zscore_vivo_rows",
    "where": "CLAUDE.md \u00a73, \u00a78",
    "expect": 60,
-   "expr": "sum(1 for r in W if r['Experiment_ID'] in ('SB_2024', 'SY_2025'))"
+   "expr": "sum(1 for r in W if r['Experiment_ID'] in ('SB_2024', 'SY_2025'))",
+   "file": "CLAUDE.md"
   },
   {
    "id": "padded_cells_vitro",
    "where": "CLAUDE.md \u00a73 -- fixed 2026-11-07 (F-022); was 720",
    "expect": 0,
-   "expr": "A['vitro']['C7_fields']['padded_cells']"
+   "expr": "A['vitro']['C7_fields']['padded_cells']",
+   "file": "CLAUDE.md"
   },
   {
    "id": "padded_cells_vivo",
    "where": "CLAUDE.md \u00a73 -- fixed 2026-11-07 (F-022); was 195",
    "expect": 0,
-   "expr": "A['vivo']['C7_fields']['padded_cells']"
+   "expr": "A['vivo']['C7_fields']['padded_cells']",
+   "file": "CLAUDE.md"
   },
   {
    "id": "registered_reagents",
    "where": "CLAUDE.md \u00a73 -- C11 pins 15 named reagents. Was 13 until 2026-11-09, when F-043 added DODAP (on all 537 ZT_2026 rows) and DMPC. EggSM is deliberately NOT added: a natural mixture has no single right SMILES, same rule as the PEG-lipids",
    "expect": 15,
-   "expr": "n_registered_reagents()"
+   "expr": "n_registered_reagents()",
+   "file": "CLAUDE.md"
   },
   {
    "id": "blank_pmid_vitro",
    "where": "CLAUDE.md \u00a73 -- was 2,544 (all of WT_2026) on a false 'preprint, not indexed' reason until 2026-11-07 (F-027)",
    "expect": 0,
-   "expr": "A['vitro']['C7_fields']['blank_required_fields'].get('Publication_PMID', 0)"
+   "expr": "A['vitro']['C7_fields']['blank_required_fields'].get('Publication_PMID', 0)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "blank_pmid_vivo",
    "where": "CLAUDE.md \u00a73 -- every vivo paper is indexed",
    "expect": 0,
-   "expr": "A['vivo']['C7_fields']['blank_required_fields'].get('Publication_PMID', 0)"
+   "expr": "A['vivo']['C7_fields']['blank_required_fields'].get('Publication_PMID', 0)",
+   "file": "CLAUDE.md"
   },
   {
    "id": "WT_2026_pmid",
    "where": "CLAUDE.md \u00a73 -- PMID 42367940, indexed 2026-06-29; verified by esearch on the stored DOI",
    "expect": "42367940",
-   "expr": "next(iter({r['Publication_PMID'] for r in V if r['Experiment_ID'] == 'WT_2026'}))"
+   "expr": "next(iter({r['Publication_PMID'] for r in V if r['Experiment_ID'] == 'WT_2026'}))",
+   "file": "CLAUDE.md"
+  },
+  {
+   "id": "readme_vitro_rows",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 29195,
+   "expr": "len(V)"
+  },
+  {
+   "id": "readme_vitro_cols",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 79,
+   "expr": "len(V[0])"
+  },
+  {
+   "id": "readme_vitro_experiments",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 43,
+   "expr": "len(set(r['Experiment_ID'] for r in V))"
+  },
+  {
+   "id": "readme_vivo_rows",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 1803,
+   "expr": "len(W)"
+  },
+  {
+   "id": "readme_vivo_cols",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 79,
+   "expr": "len(W[0])"
+  },
+  {
+   "id": "readme_vivo_experiments",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 20,
+   "expr": "len(set(r['Experiment_ID'] for r in W))"
+  },
+  {
+   "id": "readme_quality_columns",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 7,
+   "expr": "len(S)"
+  },
+  {
+   "id": "readme_merged_ZT_2026_vitro",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 486,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='ZT_2026')"
+  },
+  {
+   "id": "readme_merged_ZT_2026_vivo",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 51,
+   "expr": "sum(1 for r in W if r['Experiment_ID']=='ZT_2026')"
+  },
+  {
+   "id": "readme_merged_LL_2026",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 840,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='LL_2026')"
+  },
+  {
+   "id": "readme_merged_LL_2026_2",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 147,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='LL_2026_2')"
+  },
+  {
+   "id": "readme_merged_WT_2026",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 2544,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='WT_2026')"
+  },
+  {
+   "id": "readme_merged_QL_2026",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 344,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='QL_2026')"
+  },
+  {
+   "id": "readme_merged_XD_2026",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 12,
+   "expr": "sum(1 for r in W if r['Experiment_ID']=='XD_2026')"
+  },
+  {
+   "id": "readme_merged_NG_2025",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 310,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='NG_2025')"
+  },
+  {
+   "id": "readme_merged_NG_2025_2",
+   "where": "provenance/README.md, 'The two files'",
+   "file": "provenance/README.md",
+   "expect": 23,
+   "expr": "sum(1 for r in W if r['Experiment_ID']=='NG_2025_2')"
+  },
+  {
+   "id": "protocol_schema_columns",
+   "where": "curation/PROTOCOL.md, stage 06",
+   "file": "curation/PROTOCOL.md",
+   "expect": 79,
+   "expr": "len(V[0])"
   }
  ]
 }

@@ -1,0 +1,44 @@
+{
+ "control": {
+  "agree": 18,
+  "total": 18,
+  "note": "unmutated run"
+ },
+ "seedA_304_as_piperazine": {
+  "agree": 17,
+  "total": 18,
+  "moved": true,
+  "what_changed": [
+   "304-OCholB"
+  ],
+  "note": "1,4-bis(2-(methylamino)ethyl)piperazine C10H24N4 instead of tris(2-(methylamino)ethyl)amine C9H24N4. This is the real ambiguity in Figure 2A: the drawing's two upper arms close visually into what looks like a hexagon."
+ },
+ "seedB_carbamate_N_reacts": {
+  "agree": 6,
+  "total": 18,
+  "moved": true,
+  "what_changed": [
+   "75-OCholB",
+   "75-OChol",
+   "76-OCholB",
+   "76-OChol",
+   "77-OCholB",
+   "77-OChol"
+  ],
+  "note": "drops the !$(N[CX3]=[OX1]) exclusion, so every OCholB/OChol carbamate N-H takes a tail as well."
+ },
+ "seedC_epicholesterol": {
+  "agree": 18,
+  "total": 18,
+  "moved": false,
+  "full_inchikeys_changed": 15,
+  "skeleton_inchikeys_unchanged": 18,
+  "note": "F-013's exact mechanism, as a measured blindness. The formula check does NOT move (18/18 still agree) and the InChIKey SKELETON block does not change on any affected structure. Only the FULL InChIKey moves. This is why 03_enumerated.csv stores the full key and why the C10 anchor in make_reference.py is required."
+ },
+ "_verdict": {
+  "seedA_moved": true,
+  "seedB_moved": true,
+  "seedC_moved_formula": false,
+  "seedC_moved_full_inchikey": true
+ }
+}

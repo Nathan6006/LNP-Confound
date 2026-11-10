@@ -1,0 +1,540 @@
+{
+ "_what": "Every check run on this curation, with its number. A check with no number is a claim, not a check.",
+ "paper": "Wang et al., Nat Chem 2024, PMID 38982196",
+ "checks": {
+  "P1_mass_12T_O14": {
+   "what": "Supplementary Fig. 9 caption, SI p.11, verbatim: 'Mass spectrum of 12T-O14. Calculated MS: 603.01, found [M+H]+ = 603.73.' Our 12T-O14 is built from amine 12 (measured 10 alkyl carbons, para) and tail O14 (measured 14).",
+   "printed_calculated": 603.01,
+   "ours_average_MW": 603.01,
+   "formula": "C37H66N2O2S",
+   "delta": 0.0,
+   "pass": true,
+   "why_it_bites": "This number is a function of TWO measured chain lengths at once. An amine-12 chain one carbon out, or an O14 one carbon out, moves it by 14."
+  },
+  "P1b_mass_19T_O12_settles_the_arm_count": {
+   "what": "Supplementary Fig. 1a prints the model product's mass spectrum: '401.129  100.00%  [M+2H]2+'. Amine 19 has TWO primary nitrogens, so this number distinguishes a one-arm product from a two-arm one.",
+   "printed_mz": 401.129,
+   "ours_two_arm_MH2_2plus": 401.167,
+   "alternative_one_arm_MH2_2plus": 230.386,
+   "alternative_one_arm_MH_1plus": 459.765,
+   "delta_two_arm": 0.038,
+   "pass": true,
+   "one_arm_excluded_by": "more than 50 Da in either charge state",
+   "instrument_accuracy_in_this_paper": "the same instrument reports 603.73 for a compound whose calculated mass is 603.01, i.e. 0.7 Da at 1+, so 0.04 Da at 2+ is well inside its demonstrated accuracy."
+  },
+  "P2_library_size": {
+   "stated": 100,
+   "stated_where": [
+    "abstract: 'a combinatorial library of 100 chemically diverse AID-lipids'",
+    "Fig. 1a, printed inside the AID-lipids box: '25 x 4 = 100'",
+    "Fig. 2a flow diagram: '100 AID-lipids'",
+    "Supplementary discussion p.34: 'in our combinatorial library of 100 AID-lipids, 98% were able to deliver mRNA in vitro'"
+   ],
+   "enumerated": 100,
+   "amine_blocks": 25,
+   "acrylate_blocks": 4,
+   "distinct_InChIKeys": 100,
+   "pass": true
+  },
+  "P3_fig2b_vs_fig2c": {
+   "what": "'Fig. 2b' and 'Fig. 2c' are the same 200 numbers in two layouts. If they were not, the index map would be joining two different experiments.",
+   "n_pairs_fig2b": 100,
+   "n_pairs_fig2c": 100,
+   "multiset_identical": true,
+   "pass": true
+  },
+  "P4_SI_S3_S4_confirm_the_amine_labels": {
+   "what": "Supplementary Figs. S3 and S4 are labelled by AMINE number and were not used to build the index map.",
+   "cells_compared": 20,
+   "cells_matching": 20,
+   "amines_covered": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "pass": true
+  },
+  "P5_fig2b_categories": {
+   "what": "Fig. 2b prints 'Outstanding performance (23%)', 'Acceptable performance (75%)' and 'Background (2%)' beside two dashed lines drawn at 1e5 and 1e3.",
+   "threshold_outstanding": 100000.0,
+   "threshold_background": 1000.0,
+   "printed": {
+    "outstanding": 23,
+    "acceptable": 75,
+    "background": 2
+   },
+   "ours": {
+    "outstanding": 23,
+    "acceptable": 75,
+    "background": 2
+   },
+   "background_members": [
+    "10T-O9",
+    "11T-O9"
+   ],
+   "pass": true
+  },
+  "P6_fig2d_per_amine": {
+   "what": "Source Data sheet 'Fig. 2d' gives, for each AMINE 1..25, how many of its four lipids are outstanding. Reproducing all 25 tests the index map amine by amine.",
+   "n_compared": 25,
+   "n_matching": 25,
+   "printed": [
+    0,
+    0,
+    2,
+    1,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    0,
+    2,
+    2,
+    1,
+    0,
+    2,
+    3,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "ours": [
+    0,
+    0,
+    2,
+    1,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    0,
+    2,
+    2,
+    1,
+    0,
+    2,
+    3,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "pass": true
+  },
+  "P7_fig2f_per_tail": {
+   "what": "Source Data 'Fig. 2f' gives the same count per ACRYLATE TAIL. This tests the other axis of the index map.",
+   "printed": {
+    "O9": 2,
+    "O12": 6,
+    "O14": 8,
+    "O16": 7
+   },
+   "ours": {
+    "O9": 2,
+    "O12": 6,
+    "O14": 8,
+    "O16": 7
+   },
+   "pass": true
+  },
+  "P8_relative_hit_rates": {
+   "what": "Fig. 2e and Fig. 2f print nine 'relative hit rate (%)' values. The paper does not define the quantity; it is recovered here as (this group's share of the 23 outstanding lipids) minus (its share of the 100-member library), and all nine then reproduce to 0.1.",
+   "formula": "100*hits_in_group/23 - 100*size_of_group/100",
+   "n_compared": 9,
+   "n_exact_to_0.05": 8,
+   "n_matching_within_0.15": 9,
+   "detail": {
+    "C14-18 alkylamine": {
+     "printed": 10.1,
+     "ours": 10.1,
+     "delta": 0.0
+    },
+    "Ring-alkyl aniline": {
+     "printed": 14.1,
+     "ours": 14.1,
+     "delta": 0.0
+    },
+    "Monoamine": {
+     "printed": -3.8,
+     "ours": -3.8,
+     "delta": 0.0
+    },
+    "Diamine": {
+     "printed": 9.7,
+     "ours": 9.7,
+     "delta": 0.0
+    },
+    "Polyamine": {
+     "printed": -5.9,
+     "ours": -5.9,
+     "delta": 0.0
+    },
+    "O9": {
+     "printed": -16.3,
+     "ours": -16.3,
+     "delta": 0.0
+    },
+    "O12": {
+     "printed": 1.0,
+     "ours": 1.1,
+     "delta": 0.1
+    },
+    "O14": {
+     "printed": 9.8,
+     "ours": 9.8,
+     "delta": 0.0
+    },
+    "O16": {
+     "printed": 5.4,
+     "ours": 5.4,
+     "delta": 0.0
+    }
+   },
+   "the_one_that_is_not_exact": "O12. The unrounded quantity is 1.087; the other eight are stored to one decimal and this one is stored as the integer 1. Recorded in 08_contradictions.csv rather than absorbed into a tolerance silently.",
+   "pass": true
+  },
+  "P9_C14_18_label_pins_the_measured_chain_lengths": {
+   "what": "Fig. 2e names one group 'C14-18 alkylamine'. That label encodes chain lengths the authors never tabulate, so it is an external test of the pixel measurement -- the 'round number the authors drew but never printed' class.",
+   "measured_lengths_amines_1_to_6": {
+    "1": 10,
+    "2": 12,
+    "3": 14,
+    "4": 16,
+    "5": 18,
+    "6": 18
+   },
+   "amines_3_to_6_are": [
+    14,
+    16,
+    18,
+    18
+   ],
+   "consistent_with_the_label": true,
+   "contiguous_blocks_of_4_reproducing_the_printed_10.1": [
+    "3-6",
+    "10-13",
+    "11-14",
+    "17-20",
+    "19-22"
+   ],
+   "of_those_the_ones_that_are_alkylamine_blocks": [
+    "3-6"
+   ],
+   "block_composition": {
+    "3-6": {
+     "amines": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "all_simple_alkylamines": true,
+     "descriptions": {
+      "3": "n-alkylamine, C14",
+      "4": "n-alkylamine, C16",
+      "5": "n-alkylamine, C18",
+      "6": "mono-unsaturated alkylamine, C18, delta-9, Z (cis)"
+     }
+    },
+    "10-13": {
+     "amines": [
+      10,
+      11,
+      12,
+      13
+     ],
+     "all_simple_alkylamines": false,
+     "descriptions": {
+      "10": "glycine C8 alkyl ester",
+      "11": "4-alkylaniline, C8 chain, measured para",
+      "12": "4-alkylaniline, C10 chain, measured para",
+      "13": "4-alkylaniline, C12 chain, measured para"
+     }
+    },
+    "11-14": {
+     "amines": [
+      11,
+      12,
+      13,
+      14
+     ],
+     "all_simple_alkylamines": false,
+     "descriptions": {
+      "11": "4-alkylaniline, C8 chain, measured para",
+      "12": "4-alkylaniline, C10 chain, measured para",
+      "13": "4-alkylaniline, C12 chain, measured para",
+      "14": "4-alkoxyaniline, C9 chain, measured para"
+     }
+    },
+    "17-20": {
+     "amines": [
+      17,
+      18,
+      19,
+      20
+     ],
+     "all_simple_alkylamines": false,
+     "descriptions": {
+      "17": "alpha,omega-diaminoalkane, C5",
+      "18": "linear triamine, C2/C2 linkers, central NH secondary",
+      "19": "N-methyl bis(aminoalkyl)amine, C2/C2 arms",
+      "20": "tris(aminoalkyl)amine, C2/C2/C2 arms"
+     }
+    },
+    "19-22": {
+     "amines": [
+      19,
+      20,
+      21,
+      22
+     ],
+     "all_simple_alkylamines": false,
+     "descriptions": {
+      "19": "N-methyl bis(aminoalkyl)amine, C2/C2 arms",
+      "20": "tris(aminoalkyl)amine, C2/C2/C2 arms",
+      "21": "N-methyl bis(aminoalkyl)amine, C3/C3 arms",
+      "22": "tris(aminoalkyl)amine, C3/C3/C3 arms"
+     }
+    }
+   },
+   "amines_1_and_2_are_outside_the_C14_18_range": true,
+   "pass": true
+  },
+  "P10_top8_named_in_fig2g_and_2h": {
+   "what": "Fig. 2g and 2h follow up 'top 8 AID-LNPs' BY NAME. Those names are a direct statement about which molecule each experiment number was, so reproducing the selection from the screen tests the whole map at once.",
+   "named_in_fig2g": [
+    "12T-O14",
+    "13T-O12",
+    "13T-O14",
+    "15T-O14",
+    "15T-O16",
+    "16T-O16",
+    "19T-O12",
+    "20T-O9"
+   ],
+   "named_in_fig2h": [
+    "12T-O14",
+    "13T-O12",
+    "13T-O14",
+    "15T-O14",
+    "15T-O16",
+    "16T-O16",
+    "19T-O12",
+    "20T-O9"
+   ],
+   "ours_top3_mono_top3_di_top2_poly": [
+    "12T-O14",
+    "13T-O12",
+    "13T-O14",
+    "15T-O14",
+    "15T-O16",
+    "16T-O16",
+    "19T-O12",
+    "20T-O9"
+   ],
+   "fig2g_equals_fig2h": true,
+   "pass": true,
+   "note": "They are NOT the eight highest overall -- the selection is stratified by amine class, which is how Fig. 2g itself groups them."
+  },
+  "P11_98_percent_delivered": {
+   "what": "Supplementary discussion p.34, verbatim: 'in our combinatorial library of 100 AID-lipids, 98% were able to deliver mRNA in vitro'.",
+   "ours_above_background": 98,
+   "printed": 98,
+   "pass": true
+  },
+  "P12_structures": {
+   "n": 100,
+   "unparseable": [],
+   "radical_atoms": [],
+   "distinct_InChIKeys": 100,
+   "rows_with_defined_C_C_stereo": 4,
+   "stereo_note": "The only stereochemistry in the library is amine 6's C=C, measured Z from the drawn geometry; it reaches 4 lipids. Every other block is achiral, so assemble.check_stereo_preserved has nothing to protect on 96 of 100 builds -- that is a fact about this paper, not a passed test.",
+   "pass": true
+  },
+  "P13_every_named_lipid_resolves": {
+   "what": "Every AID-lipid named anywhere in the Source Data must be a member of the enumerated library -- or be a compound the paper made separately.",
+   "names_seen": 13,
+   "unresolved": [
+    "12T-18a",
+    "12T-18b"
+   ],
+   "explanation": {
+    "12T-18a": "not a library member: Supplementary Fig. 6 synthesises '12T-O18a' and '12T-O18b' by a different route to test a C18 tail the library does not contain. The Source Data sheet drops the 'O'. See 08_contradictions.csv.",
+    "12T-18b": "same."
+   },
+   "pass": true
+  },
+  "P14_replicates": {
+   "what": "Supplementary Fig. 2 caption: 'n= 2 biologically independent samples, initial screening'.",
+   "rows": 100,
+   "rows_with_two_replicates": 100,
+   "pass": true
+  },
+  "P15_chain_measurements": {
+   "n_measurements": 57,
+   "vector_route": "UNAVAILABLE -- see 00_value_sources.json and `--audit-vector`. count_carbons is therefore single-method and `agreed` is False everywhere.",
+   "arc_vs_dp_worst_residual_bonds": 0.296,
+   "label_gap_separation": {
+    "threshold_px": 12,
+    "largest_accepted_as_a_label": 8.0,
+    "smallest_rejected": 19.0,
+    "note": "A real atom label abuts the bond; the margin row numeral does not. If these two ever stop being cleanly separated the threshold is doing the deciding, not the drawing."
+   },
+   "apex_gate": {
+    "steep_max_threshold": 1.0,
+    "flat_run_threshold": 12,
+    "applicable_worst_steep": 0.67,
+    "applicable_worst_flat": 6,
+    "inapplicable_best_steep": 0.78,
+    "inapplicable_best_flat": 31,
+    "n_applicable": 38,
+    "n_not_applicable": 9,
+    "note": "Every path the gate admits had apex == Douglas-Peucker. Every path it rejects would have disagreed, and each one does contain a vertical or a flat drawn bond. The two populations are separated by a wide empty band, so the thresholds are not doing the deciding."
+   },
+   "si_linker": {
+    "amidine_C_plus_CH2_run": 4,
+    "CH2_between_amidine_C_and_S": 3,
+    "S_to_carbonylO_heavy_atoms": 3,
+    "CH2_between_S_and_carbonyl": 2,
+    "note": "Traut's reagent is 2-iminothiolane, a five-membered ring: ring-opening by a primary amine gives an amidine carbon followed by three CH2 and a free thiol. The thiol then adds to the acrylate's terminal carbon, putting two CH2 between S and the ester carbonyl. Both counts are measured above."
+   },
+   "si_core": {
+    "N_to_amidine_NH_carbons": 2,
+    "n_arms_on_the_tertiary_N": 2,
+    "methyl_carbons": 1,
+    "note": "Amine 19 re-measured from the PRODUCT drawing on the SI page, independently of stage 01's reading of Fig. 1a. make_reference.py builds the C10 anchor from these numbers and from the linker below, so the anchor shares neither the figure, the scale, the calibration nor the assembly code path with the enumerator."
+   },
+   "pass": true
+  },
+  "P16_flags_on_the_row": {
+   "rows": 100,
+   "rows_with_a_caveat": 40,
+   "by_confidence": {
+    "high": 60,
+    "medium": 28,
+    "low": 12
+   },
+   "structure_assumed": 20,
+   "positional_ambiguity": 8,
+   "value_is_bound": 0,
+   "note": "value_is_bound is 0 on purpose: every value is a printed number in the publisher's workbook, including the two the paper calls background. A background-level READING is a measurement, not a bound -- F-040 is the opposite mistake, 65 measurements flagged as bounds.",
+   "pass": true
+  },
+  "P17_screen_vs_the_papers_own_repeat": {
+   "what": "Fig. 2g re-tests eight of the screened lipids in the same cell line at the same stated dose. This is NOT a check in the pass/fail sense -- it is a measurement of the paper's own within-lab reproducibility, and it is the most consequential number this curation produces for the project.",
+   "n_shared": 8,
+   "lipids": [
+    "12T-O14",
+    "13T-O12",
+    "13T-O14",
+    "15T-O14",
+    "15T-O16",
+    "16T-O16",
+    "19T-O12",
+    "20T-O9"
+   ],
+   "ratio_followup_over_screen": {
+    "12T-O14": 0.534,
+    "13T-O12": 0.922,
+    "13T-O14": 0.55,
+    "15T-O14": 0.744,
+    "15T-O16": 0.321,
+    "16T-O16": 0.603,
+    "19T-O12": 0.949,
+    "20T-O9": 0.725
+   },
+   "geometric_mean_ratio": 0.636,
+   "spearman_screen_vs_followup": -0.262,
+   "spearman_within_screen_replicates_n100": 0.99,
+   "reading": "Replicate agreement inside one experiment is 0.990 over 100 lipids; the same lab re-running eight of those lipids gives -0.262. The rank order does not survive the repeat, and no caption states a protocol difference. Recorded in 08_contradictions.csv row 1 and DECISIONS.md D-6.",
+   "pass": true
+  }
+ },
+ "seeded_mutations": {
+  "_what": "A NEW CHECK IS NOT DONE UNTIL IT HAS BEEN MADE TO FAIL ON PURPOSE (CLAUDE.md section 6). Each defect below was seeded into a COPY of this folder in the session scratchpad, the pipeline re-run, and the alarm confirmed. Nothing in this folder was mutated.",
+  "runs": [
+   {
+    "seed": "amine 12's measured chain length 10 -> 9",
+    "fired": [
+     "P1_mass_12T_O14"
+    ],
+    "note": "the printed 603.01 moves by 14 Da"
+   },
+   {
+    "seed": "the amidine-to-S CH2 run 3 -> 4 in the SI linker measurement",
+    "fired": [
+     "P1_mass_12T_O14",
+     "P1b_mass_19T_O12_settles_the_arm_count"
+    ],
+    "note": "both printed masses move; the linker is over-determined"
+   },
+   {
+    "seed": "amine 12 and amine 13 chain lengths swapped",
+    "fired": [
+     "P1_mass_12T_O14"
+    ],
+    "note": "P6 correctly does NOT fire -- it tests the index map, and this mutation changes the structures, not the map"
+   },
+   {
+    "seed": "the amine labels in Fig. 2c cyclically shifted by one",
+    "fired": [
+     "stage 04 REFUSED: 20 of 20 Supplementary Fig. S3/S4 cells disagree"
+    ],
+    "note": "the defect never reaches an artifact"
+   },
+   {
+    "seed": "the same shift, with stage 04's SI cross-check disabled so the defect propagates",
+    "fired": [
+     "P4_SI_S3_S4_confirm_the_amine_labels",
+     "P6_fig2d_per_amine",
+     "P8_relative_hit_rates",
+     "P9_C14_18_label_pins_the_measured_chain_lengths",
+     "P10_top8_named_in_fig2g_and_2h"
+    ],
+    "note": "five independent alarms on one defect"
+   },
+   {
+    "seed": "every polyamine forced to a single arm",
+    "fired": [
+     "stage 03 REFUSED: 'after 0 arm(s) the molecule has 2 primary amine(s), expected 1'"
+    ],
+    "note": "and with that invariant disabled, emit_rows refused the row because its confidence no longer matched its note"
+   },
+   {
+    "seed": "19T-O12 overwritten with the one-arm product in 03_enumerated.csv",
+    "fired": [
+     "P1b_mass_19T_O12_settles_the_arm_count (401.129 printed vs 230.386 ours)",
+     "make_reference.py --verify: match = false"
+    ],
+    "note": "the C10 anchor and the printed mass catch it independently"
+   }
+  ],
+  "not_covered": "No seeded mutation exercises P5, P7, P11, P13, P14 or P16 on their own; they fire only as part of a larger defect above. A reviewer should treat a clean result from those six as weaker evidence than from P1, P1b, P4, P6, P8, P9 and P10."
+ },
+ "panel_readings": {
+  "_what": "The few things taken by READING a rendered panel rather than from a file. Each is a category label, never a value.",
+  "fig2b_thresholds": "two dashed lines at 1e5 and 1e3, with the three percentages printed beside them (source/nature_fig2_full.png, panel b)",
+  "fig2c_and_2d_group_axis": "Monoamine = amines 1-14, Diamine = 15-17, Polyamine = 18-25 (nature_fig2_full.png crop (800,690)-(2169,1130))",
+  "fig2d_dashed_boxes": "'Long-chain alkylamines' spans amines 3-6; 'Ring-alkyl anilines' spans 11-13, excluding 14 (same crop)",
+  "why_this_is_safe": "P8 and P9 then show these groupings are the only ones that reproduce the nine printed relative hit rates, so the reading is confirmed numerically rather than trusted."
+ },
+ "summary": {
+  "checks_run": 18,
+  "checks_passed": 18,
+  "failed": []
+ }
+}

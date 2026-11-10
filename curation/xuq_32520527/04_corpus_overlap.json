@@ -1,0 +1,138 @@
+{
+ "_what": "Corpus-overlap report for XQ_2020, per the run brief's trap 2. REPORT ONLY -- nothing here was acted on; this is a merge-level fact.",
+ "corpus_read": {
+  "vitro": "data/data_vitro.csv",
+  "vivo": "data/data_vivo.csv",
+  "unique_SMILES": 19919,
+  "unique_full_InChIKeys": 19919,
+  "unique_skeleton_InChIKeys": 19763,
+  "read_on": "2026-11-10"
+ },
+ "headline": {
+  "n_our_structures": 11,
+  "n_matching_an_existing_corpus_lipid_by_FULL_InChIKey": 0,
+  "n_matching_by_SKELETON_InChIKey": 0,
+  "n_matching_by_IL_name": 0,
+  "verdict": "ZERO overlap on all three keys. All eleven R-O16CBA lipidoids are new to the corpus. That is expected rather than lucky: the cyclic-benzylidene-acetal tail appears in no other curated paper, and a corpus-wide search for IL_names containing 'O16' or 'CBA' returns only the twelve 'Xue_siloxane_Si_n_O16' lipids, which are siloxanes."
+ },
+ "per_lipidoid": [
+  {
+   "lipidoid": "113-O16CBA",
+   "full_InChIKey": "UADGBEBTTDIGDS-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "306-O16CBA",
+   "full_InChIKey": "LNEWDYQYDLBMAL-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "400-O16CBA",
+   "full_InChIKey": "HKARBGOUBZLDKK-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "75-O16CBA",
+   "full_InChIKey": "WSZOYDRWFJGICF-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "76-O16CBA",
+   "full_InChIKey": "RMZSGCUXIYLCOE-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "77-O16CBA",
+   "full_InChIKey": "MKODPXIYOAPYKM-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "78-O16CBA",
+   "full_InChIKey": "AAYDXUIQYPVVHK-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "80-O16CBA",
+   "full_InChIKey": "DCHGAHGDUATDEI-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "81-O16CBA",
+   "full_InChIKey": "JRDBWEJYUYRTDZ-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "82-O16CBA",
+   "full_InChIKey": "ZKXMQFVWURUAFG-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  },
+  {
+   "lipidoid": "93-O16CBA",
+   "full_InChIKey": "RCBQJDQSGGDAOA-UHFFFAOYSA-N",
+   "full_InChIKey_in_corpus": [],
+   "skeleton_InChIKey_in_corpus": [],
+   "IL_name_in_corpus": []
+  }
+ ],
+ "THE_REAL_OVERLAP_IS_AT_THE_HEAD_GROUP": {
+  "_what": "The eleven amine heads are the Xu-lab / Tufts catalogue numbering, and four of them are already in the corpus as the heads of a DIFFERENT library. This is invisible to a full-InChIKey comparison and is the kind of cross-source chemistry Result 3 cares about.",
+  "QL_2026": {
+   "heads_shared": [
+    "75",
+    "80",
+    "113",
+    "400"
+   ],
+   "n_corpus_rows_built_on_them": 160,
+   "our_structures_agree_with_theirs": "4/4, byte-identical canonical SMILES; their source is a vendor catalogue name in the SI materials list, ours is the structure drawn in Figure 1C. This is check P11.",
+   "evidence_file": "curation/ql_2026/liu2026_adhm202502225_blocks.csv rows H2, H3, H4, H5"
+  },
+  "shared_head_but_NOT_a_shared_lipid": "No full structure is shared, so none of these would enter Stage 5's shared-lipid concordance. The commonality is the head group only."
+ },
+ "THE_NAME_TOKEN_TRAP": {
+  "_what": "163 corpus IL_names begin with one of our eleven amine numbers, and they do NOT all mean the same thing. QL_2026's '113-L1-C6' uses 113 as the Xu amine number and its structure does contain our amine 113. BL_2024's '113-9', '113-22' and '113-23' use 113 as a series index in an unrelated naming scheme and contain no such head. Keying on the leading token across experiments would merge them.",
+  "per_amine_number": {
+   "75": [
+    "vitro:QL_2026"
+   ],
+   "76": [],
+   "77": [],
+   "78": [],
+   "80": [
+    "vitro:QL_2026"
+   ],
+   "81": [],
+   "82": [],
+   "93": [],
+   "113": [
+    "vitro:BL_2024",
+    "vitro:QL_2026"
+   ],
+   "306": [],
+   "400": [
+    "vitro:QL_2026"
+   ]
+  },
+  "the_rule": "CLAUDE.md section 3: never key on IL_name alone across experiments - use the SMILES."
+ }
+}

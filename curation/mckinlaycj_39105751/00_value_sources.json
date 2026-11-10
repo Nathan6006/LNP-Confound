@@ -1,0 +1,137 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2.md section 3, Stage 00b). Every panel or table that could supply a value names the tier it came from. Filled BEFORE any digitiser was written. NOTHING IN THIS FOLDER DIGITISES A VALUE, and this file is why.",
+  "_tiers": [
+    "1_publisher_source_data", "2_si_tables", "3_author_repository",
+    "4_pdf_text_table", "5_pixels"
+  ],
+
+  "headline": "EXACTLY FIVE per-member delivery values are printed anywhere in the material held, and all five are in main-text Table 1, which arrives as structured XML in the PMC JATS record (tier 4, a real text table -- zero pixels). They are peptoids 226, 236, 245, 263 and 264, total Fluc photon flux in p/s, mean +/- SD, n = 3. Every other per-member delivery value in this paper lives in a main-article FIGURE (2C, 3B, 5D, 6A) whose raster we could not obtain, and the SI's own tables carry PARTICLE PROPERTIES ONLY -- size, PDI, % encapsulation, zeta, pKa, hemolysis -- none of which is a delivery endpoint under the corpus definition.",
+
+  "paper": {
+    "pmid": "39105751",
+    "pmcid": "PMC11342374",
+    "doi": "10.1021/acsnano.4c05513",
+    "title": "Discovery of a Peptoid-Based Nanoparticle Platform for Therapeutic mRNA Delivery via Diverse Library Clustering and Structural Parametrization",
+    "note_on_title": "The tracker's short title omits the subtitle 'via Diverse Library Clustering and Structural Parametrization', which is present in the PMC record. Same paper."
+  },
+
+  "value_bearing_panels": [
+    {
+      "panel": "main-text Table 1 -- 'Lipid Properties of Top-Performing Peptoids Compared to DOE Model-Predicted Optimal Configuration and Preoptimization Peptoid from the Screening Library'",
+      "supplies": "luciferase expression (p/s) for peptoids 226, 236, 245, 263, 264",
+      "tier": "4_pdf_text_table",
+      "held": true,
+      "method": "parsed out of source/PMC11342374.jats.xml as <table-wrap> -> <tr>/<td> cells. This is the publisher's own structured markup, not a text layer and not pixels: the cell boundaries are declared, so there is no row/column inference step and no off-by-one header risk of the kind that has bitten this project twice.",
+      "why_not_1": "ACS publishes no Source Data product for ACS Nano. The PMC record declares one supplementary file and it is the SI PDF we already hold.",
+      "why_not_2": "The SI has no table of per-member luciferase values. Enumerated exhaustively below under si_tables_inventory.",
+      "why_not_3": "No author repository. provenance find_repo.py (--doi 10.1021/acsnano.4c05513 --pmid 39105751 --author McKinlay) returned 0 repo hits across 4 queries; the paper's text names no repository, Zenodo, Dryad or figshare deposit.",
+      "this_is_the_only_delivery_value_source_used": true
+    },
+    {
+      "panel": "main-article Figure 2C -- mean Fluc flux for each of the 93 library peptoids screened in vivo, grouped by cluster",
+      "supplies": "the single largest block of per-member values in the paper (93 peptoids)",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why_not_1_to_4": "Not a table anywhere. The caption states the panel IS the data ('each point representing the mean flux (n = 3) of individual cluster members'). SI Table S1 carries the 221-member library's sequences and IN-SILICO PREDICTED properties only -- MW, LogP, TPSA, predicted charge, monomer counts -- no measured value. SI Table S2 is per-cluster averages of those same predictions.",
+      "why_not_5_pixels": "We do not hold the raster. The main-article PDF is behind the ACS paywall. PMC hosts the figure JPEGs at https://pmc.ncbi.nlm.nih.gov/articles/instance/11342374/bin/nn4c05513_000N.jpg and ONE of eight (nn4c05513_0001.jpg, Figure 1, 4183x2463 px at 600 dpi) was served; the remaining seven returned a 21 kB HTML interstitial on a single plain request each. That interstitial is a bot check. Per the standing instruction (CLAUDE.md non-negotiables: 'Do NOT attempt to bypass a paywall or bot check') NO retry loop, backoff or user-agent rotation was attempted -- one such attempt was refused by the harness and was not repeated. So the pixels are not available to us, and this is an ACQUISITION gap, not a digitisation failure.",
+      "would_it_even_be_emittable": "Partly. Figure 2C plots cluster-grouped points with no member labels on the points, so a digitised value could not be assigned to a named peptoid without the mapping the panel does not print. Even with the raster this panel would yield unlabelled values."
+    },
+    {
+      "panel": "main-article Figure 3B/3C -- total Fluc expression and organ distribution for the 12 headgroup variants 222-233",
+      "supplies": "12 per-member values",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why": "Same acquisition gap as Figure 2C (nn4c05513_0003.jpg not served). SI Table S3 covers exactly these 12 peptoids but its columns are Particle Size, PDI, % mRNA Encapsulation, Hemolysis at pH 5, Hemolysis at pH 7 -- no expression column. Of 226 (the panel's winner) only the Table 1 value survives in text.",
+      "note": "Bars in this panel ARE labelled per peptoid, so the raster would have been emittable. It is the one real loss."
+    },
+    {
+      "panel": "main-article Figure 5D/5E/5F -- Fluc bioluminescence in Balb/c liver for the 34 DOE lipid-block variants",
+      "supplies": "34 per-member values",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why": "Same acquisition gap (nn4c05513_0005.jpg not served). SI Table S4 gives the 34 sequence DESIGNS and their four DOE parameters; SI Table S5 gives their measured PARTICLE properties. Neither carries expression. Table 1 lifts 5 of these 34 into text and those 5 are what we emit.",
+      "note": "This is the panel Table 1's five values are drawn from -- the main text cites 'Table 1 and Figure 5D' together."
+    },
+    {
+      "panel": "main-article Figure 6A -- anti-RSV serum protein, top 4 peptoids, 0.75 mg/kg, 24 h",
+      "supplies": "4 per-member values, a SECOND endpoint",
+      "tier": "NONE_AVAILABLE",
+      "held": false,
+      "why": "Same acquisition gap (nn4c05513_0006.jpg not served). SI Table S7 gives only diameter, PDI and % encapsulation for these 4 formulations."
+    },
+    {
+      "panel": "SI Figure S7B -- total flux (p/s) for 236 vs 266, the sequence-isomer pair",
+      "supplies": "2 per-member values",
+      "tier": "5_pixels",
+      "held": true,
+      "extracted": false,
+      "why_not_extracted": "DELIBERATELY NOT DIGITISED, and the reason is not difficulty. (a) It is a SEPARATE experiment from Table 1: its caption states a 2.5 ug IV dose and its own 236 bar sits near 1.6e9 where Table 1's 236 is 1.08 +/- 0.41e9, so the two cannot share an Experiment_ID, and a 2-row experiment z-scores to exactly +/-1 regardless of what the bars say -- it would carry zero information into the corpus while adding a digitisation risk surface. (b) The corpus convention is one z-score per experiment; two points is not a distribution. Recorded here rather than silently skipped so a reviewer can disagree with the call.",
+      "what_it_was_used_for_instead": "Its DRAWN STRUCTURES. SI page 20 draws peptoids 236 and 266 in full, as vector ChemDraw output, and that is the C10 anchor (see make_reference.py). The panel earns its place as external structural ground truth, not as a value."
+    },
+    {
+      "panel": "SI Figure S10 -- total flux (p/s) for Nutshell 236 vs SM-102 vs MC3, matched 0.75 mg/kg, 6 h",
+      "supplies": "3 values, TWO OF WHICH ARE THE CORPUS'S UNIVERSAL IN-VIVO BENCHMARKS",
+      "tier": "5_pixels",
+      "held": true,
+      "extracted": false,
+      "why_not_extracted": "NOT a difficulty call, and NOT a free skip -- it is queued as D-3 in DECISIONS.md because it bears directly on an open project-level question. CLAUDE.md section 8 records that the in-vivo pool's ONLY cross-source chemistry is MC3 and SM-102, and warns that 'a source whose only shared lipids are benchmarks that top every screen can push cross-lab concordance toward +1 for reasons that have nothing to do with transferable SAR'. This panel would hand the corpus exactly such a pair. Extracting it would be making that call by doing it.",
+      "also": "It is a third separate experiment (0.75 mg/kg, where Table 1 is 0.125 mg/kg), so it could not join the 5 emitted rows under one Experiment_ID even if the decision went the other way.",
+      "axis": "linear, ticks drawn at 1,2,3,4,5 x 10^11, present in the page's text layer -- so if D-3 is resolved in favour, curation/lib axis+bars can calibrate it from its own furniture with no estimation step."
+    }
+  ],
+
+  "si_tables_inventory": {
+    "_what": "Every table in the SI, and whether it carries a delivery value. Exhaustive, so 'the SI has no value table' is a checkable claim rather than an impression.",
+    "Table S1 (pp 3-9)": "221 library peptoids: sequence, predicted MW, LogP, polar surface area, lipid monomers, lipid carbons, total monomers, predicted charge at pH 5.5, cluster. ALL IN SILICO. No measured value.",
+    "Table S2 (p 10)": "per-cluster averages of the Table S1 predictions. No measured value.",
+    "Table S3 (p 13)": "peptoids 222-233: particle size, PDI, % mRNA encapsulation, hemolysis pH 5, hemolysis pH 7. No expression.",
+    "Table S4 (p 14)": "the 34 DOE lipid-block designs: sequence + 4 DOE parameters. No measured value. USED, for sequences and for the carbon-count check.",
+    "Table S5 (p 15)": "peptoids 226, 234-266: particle size, PDI, % encap, zeta, pKa (TNS), hemolysis pH 5 and 7. No expression.",
+    "Table S6 (p 19)": "236 and 266 particle properties. No expression.",
+    "Table S7 (p 21)": "4 aRSV formulations: diameter, PDI, % encapsulation. No expression.",
+    "Table S8 (pp 35-39)": "synthetic characterisation for the cluster-evaluation peptoids: sequence, calculated and found exact mass, HPLC retention time, LCMS method. No value, but a MASS ANCHOR.",
+    "Table S9 (pp 40-41)": "peptoids 222-266: sequence, yield, HPLC retention time, HPLC purity, calculated exact mass, found exact mass. No value, but THE mass anchor -- 45 independent calculated-exact-mass checks. USED."
+  },
+
+  "non_value_sources_actually_used": [
+    {
+      "what": "the monomer pool (39 monomer functionalities, three-letter codes and drawn structures)",
+      "where": "main-article Figure 1B",
+      "tier": "5_pixels, but on the ONE figure raster PMC served",
+      "method": "nn4c05513_0001.jpg, 4183x2463 px, 600 dpi, fetched from PMC and read visually. Structures are drawn, not named, so this is the only place the codes are defined.",
+      "caveat": "Figure 1B labels TWO different structures 'Mpp' (a pyrrolidinylmethyl and a 4-methylpiperazinylpropyl). See 08_contradictions.csv. Neither appears in the 222-266 set we enumerate, so the collision does not touch an emitted structure."
+    },
+    {
+      "what": "Dod = 12 carbons and Ehx = 8 carbons, measured rather than read off the label",
+      "where": "SI page 20 (Figure S7) legend, vector ChemDraw",
+      "tier": "4_pdf_text_table_equivalent",
+      "method": "curation/lib chains.vector_bonds + vector_chain_length on the PDF's OWN stroked bond coordinates. Dod: 12 stroked segments -> 13 merged vertices; Ehx: 8 segments -> 9 vertices. Attachment point is one vertex, so carbons = vertices - 1 = 12 and 8. The SAME convention gives the right answer on both chains, which is what makes it derived rather than assumed.",
+      "note": "Independent of the printed '(C12)'/'(C8)' labels AND of Table S4's carbon arithmetic. Three routes, one answer."
+    },
+    {
+      "what": "sequences for peptoids 222-266",
+      "where": "SI Table S9 (pp 40-41), cross-checked against SI Table S4 (p 14) for the 34 overlapping",
+      "tier": "4_pdf_text_table",
+      "method": "pdfplumber word positions, clustered into rows by y, with wrapped sequence cells rejoined. Parsed, never transcribed by hand."
+    },
+    {
+      "what": "formulation, dose, route, strain, cargo, timepoint",
+      "where": "main-article Experimental Methods in source/PMC11342374.jats.xml",
+      "tier": "4_pdf_text_table",
+      "method": "JATS section text. peptoid:DSPC:cholesterol:DMG-PEG2000 = 20:1.79:7.16:1.84 by WEIGHT; microfluidic, 10 mM citrate pH 5.0, 1:3 by volume; dialysed into tris-sucrose pH 7.4; 0.125 mg/kg Fluc mRNA IV in 100 uL; female Balb/c 6-8 wk; IVIS at 6 h, 10 min after IP D-luciferin; total photon flux in the ROI."
+    },
+    {
+      "what": "the structures of peptoids 236 and 266, drawn in full",
+      "where": "SI page 20 (Figure S7A)",
+      "tier": "5_pixels for the side-chain ORDER (colour-coded boxes read off a 600 dpi render), vector for the chain lengths",
+      "method": "the C10 anchor. See make_reference.py.",
+      "why_pixels_is_acceptable_here": "This is not a value. It is external structural ground truth used to CHECK an enumeration built from a text table, which is the direction PIPELINE_V2 section 3 asks for ('use the figure to VERIFY, not to extract')."
+    }
+  ],
+
+  "verify_claim": {
+    "claim": "the SI PDF contains no per-peptoid delivery/expression value",
+    "command": "python3 -I stage00_scan_for_values.py",
+    "what_it_does": "scans every SI page's text layer for expression vocabulary (luciferase, flux, p/s, radiance, photon, RLU, expression) and for numeric tokens in the 1e6-1e11 range that a photon flux would occupy, and reports per page. A reviewer can re-run it in one command."
+  }
+}

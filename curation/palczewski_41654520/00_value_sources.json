@@ -1,0 +1,148 @@
+{
+ "written_before_any_digitiser_or_structure_code": true,
+ "headline": "ALL per-member delivery values are in the publisher SOURCE DATA workbook 41467_2026_69077_MOESM6_ESM.xlsx (TIER 1), at per-replicate resolution. ALL structures are in the Supplementary Information PDF as full IUPAC names plus HRMS formulas (TIER 4 text, pp 18-50). NOTHING in this curation needs pixels. Zero panels are read geometrically.",
+ "library_size": {
+  "recorded_in_task": "not recorded -- establishing it was the first job",
+  "established": {
+   "amide/ester-coupled CBB series": "CBB1-CBB22 (22 compounds). CBB22 is commercial Coomassie Brilliant Blue G-250 itself; CBB21 is the bis(K1-diamine) sulfonamide core made from it; CBB1-20 are CBB21 bis-acylated (or CBB G-250 bis-esterified, for CBB15/16).",
+   "oxidation product": "CBBox11 (1) -- two hydroxylation isomers, SI Fig 2",
+   "click/triazole CBBZ series": "CBBZ0 (the propargyl-ether dye scaffold) + CBBZ1-CBBZ10 (10 conjugates) = 11",
+   "total named delivery agents": 34,
+   "screened with a value": "CBB1-22 (Fig 2c, Fig 4c), CBBox11 + CBB14 + CBBZ1-Z10 (Fig 2d), CBB11 + CBBZ1-Z7 (Fig 4d)",
+   "how_established": "SI pp 18-50 compound headings ('(Compound CBBn)'), each with its own HRMS, cross-read against the Source Data column headers of Fig 2c/2d/4c/4d and against the main text sentence 'among CBB1-22 and CBBZ1-Z7'.",
+   "NO combinatorial enumeration": "Despite the title's 'combinatorial synthetic strategy', this is NOT a block x block enumeration with a multiplicative size. Every member is an individually named, individually purified, individually HRMS-characterised compound. There is no Markush grid and no stated library size to reconcile against: the honest statement is 34 named compounds, not a product of block counts. 01_blocks.csv therefore records the ACTUAL two-position decomposition (dye scaffold x tail) that the syntheses use, and 03_enumerated.csv has one row per named compound."
+  }
+ },
+ "cargo": {
+  "WARNING": "This is PROTEIN / RNP delivery, not mRNA transfection. A different cargo is a different experiment.",
+  "cargo_1": {
+   "name": "Cre recombinase",
+   "kind": "protein (enzyme)",
+   "panels": [
+    "Fig 2c",
+    "Fig 2d",
+    "Fig 3b",
+    "Fig 5c"
+   ]
+  },
+  "cargo_2": {
+   "name": "ABE8e ribonucleoprotein (adenine base editor ABE8e + sgRNA)",
+   "kind": "RNP (protein + guide RNA)",
+   "panels": [
+    "Fig 4c",
+    "Fig 4d",
+    "Fig 5f-i",
+    "Fig 6",
+    "Supp Fig 4 (lower)",
+    "Supp Figs 12, 13"
+   ]
+  },
+  "cargo_3": {
+   "name": "ABE8e-NG and ABE8e-N108Q-NG RNP",
+   "kind": "RNP",
+   "panels": [
+    "Supp Fig 13"
+   ]
+  },
+  "there_is_no_mRNA_anywhere_in_this_paper": true
+ },
+ "tiers": [
+  {
+   "locus": "Fig 2c",
+   "tier": "1_publisher_source_data",
+   "file": "source/41467_2026_69077_MOESM6_ESM.xlsx",
+   "sheet": "Figure 2",
+   "cells": "A1:AA5",
+   "layout": "row 1 = column headers 1..22 then LF, C, NE; rows 2-5 = 4 replicates",
+   "readout_as_printed": "RFP conversion (%)",
+   "cargo": "Cre recombinase",
+   "method": "flow cytometry",
+   "n_library_members": 22,
+   "emittable": true,
+   "why_not_lower_tier": "n/a -- this IS tier 1; no figure was read."
+  },
+  {
+   "locus": "Fig 2d",
+   "tier": "1_publisher_source_data",
+   "sheet": "Figure 2",
+   "cells": "A6:P8",
+   "layout": "row 6 = headers ox11, 14, Z1..Z10, LF, C, NE; rows 7-8 = replicates",
+   "readout_as_printed": "RFP conversion (%)",
+   "cargo": "Cre recombinase",
+   "method": "fluorescence microscopy only (NOT flow) -- the legend says so explicitly, and the CBB14 value differs from Fig 2c's, so the two panels are different assays and must not be pooled",
+   "n_library_members": 12,
+   "emittable": true,
+   "n_replicates_in_sheet": 2
+  },
+  {
+   "locus": "Fig 4c",
+   "tier": "1_publisher_source_data",
+   "sheet": "Figure 4",
+   "cells": "A1:AA5",
+   "readout_as_printed": "eGFP/mCherry (%)",
+   "cargo": "ABE8e RNP",
+   "method": "flow cytometry",
+   "n_library_members": 22,
+   "emittable": true,
+   "n_replicates_in_sheet": 4
+  },
+  {
+   "locus": "Fig 4d",
+   "tier": "1_publisher_source_data",
+   "sheet": "Figure 4",
+   "cells": "A8:L11",
+   "readout_as_printed": "eGFP/mCherry (%)",
+   "cargo": "ABE8e RNP",
+   "method": "fluorescence microscopy only",
+   "n_library_members": 8,
+   "emittable": true,
+   "n_replicates_in_sheet": 3
+  },
+  {
+   "locus": "Supp Fig 4a/4b",
+   "tier": "1_publisher_source_data",
+   "sheet": "Supplementary Figure 4",
+   "readout_as_printed": "RFP conversion (%) / eGFP-mCherry ratio vs [CBB(Z)]/[cargo] = 2,4,8,16",
+   "cargo": "Cre (upper block) and ABE8e RNP (lower block)",
+   "emittable": false,
+   "why": "a dose-ratio titration on 9 selected compounds, not a library screen; its 8:1 row is the condition Fig 2c/4c already report. Kept as the independent cross-check that 8:1 is the emitted ratio."
+  },
+  {
+   "locus": "Fig 3b / Fig 5 / Fig 6 / Supp Figs 7,9,12,13,14",
+   "tier": "1_publisher_source_data",
+   "emittable": false,
+   "why": "in vivo (subretinal, mouse eye) and liposome-formulation panels. The varying unit is the FORMULATION (Lipo1-8) or the mouse, not the library member: only CBB6/11/14/ox11 appear, at n<=6 eyes, and the readouts are ERG b-wave amplitude (uV), 11-cis-retinal (pmol), and % DNA/cDNA editing. No library-wide in vivo screen exists in this paper, so there is no in vivo row set to emit."
+  },
+  {
+   "locus": "Supp Fig 5",
+   "tier": "1_publisher_source_data",
+   "emittable": false,
+   "why": "viability (% DAPI-negative), not delivery. Recorded here so a later reader does not mistake it for a second screen."
+  },
+  {
+   "locus": "all 34 structures",
+   "tier": "4_pdfplumber_text_table",
+   "file": "source/41467_2026_69077_MOESM1_ESM.pdf",
+   "pages": "18-50",
+   "what": "'Synthesis of CBB intermediates and lipidoids'. Every compound carries its full IUPAC name, 1H/13C NMR, and 'HRMS calculated for <formula>, <m/z>; found <m/z> (error <x> ppm)'. The IUPAC name IS the connectivity; the HRMS formula is an independent arm-count check.",
+   "why_not_tier_1_2_3": "tier 1: the Source Data workbook carries values and LC-MS traces, no structures. tier 2: there is no SI structure table -- SI Figs 1 and 3 are schematics, not tables. tier 3: no author repository exists (find_repo.py, 0 repo_hits across the DOI, PMID, title and author sweeps). So the SI text is the highest tier that holds structures, and it is a TEXT layer, not pixels.",
+   "pixels_needed": false
+  },
+  {
+   "locus": "SI Figs 1 and 3 (synthesis schematics)",
+   "tier": "5_pixels",
+   "used_for_any_value_or_structure": false,
+   "why_listed": "Rendered and LOOKED AT only to confirm, by eye, the two things a name cannot settle on its own: that acylation is on the terminal primary amine (not the internal tertiary one) and that the CBBZ triazole is 1,4. No number and no SMILES is taken from a pixel."
+  }
+ ],
+ "github_check": {
+  "command": "python3 -I find_repo.py --doi 10.1038/s41467-026-69077-w --pmid 41654520 --title 'combinatorial genome editing delivery' --author Palczewski",
+  "repo_hits": 0,
+  "note": "18 candidates all filtered out as unrelated. The paper's Code availability / Data availability makes no repository claim. Tier 3 is genuinely unavailable."
+ },
+ "risk_register": [
+  "Fig 2d and Fig 4d are MICROSCOPY while Fig 2c and Fig 4c are FLOW on the same reporter line. CBB14 reads 58.2% (2c, flow) vs 31.95% (2d, microscopy) and CBB11 reads 28.6% (4c, flow) vs 53.3% (4d, microscopy). Same compound, same cargo, same cell line, different instrument -> ~2x either way. These are four separate assay blocks, not one screen.",
+  "Fig 2c / 4c share the SAME 22 compounds, so the two cargoes give a within-lab, same-chemistry, cargo-swap concordance point (directly relevant to CLAUDE.md section 8's molea.csv rung).",
+  "CBB22 is the unmodified commercial dye and CBB21 is the un-acylated core; both are library members with values, and both are legitimate 'no tail' points rather than controls. LF (Lipofectamine 3000), C (cargo only), A (ABE8e only) and NE (no enzyme) ARE controls and are NOT emitted as library members."
+ ]
+}

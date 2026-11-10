@@ -1,0 +1,4 @@
+lipidoid,disc_px,height_px,width_px,rays,rays_unresolved,Spleen_pct,Lungs_pct,Liver_pct,sum_pct,Spleen_pct_by_pixel_count,Lungs_pct_by_pixel_count,Liver_pct_by_pixel_count
+"514O6,10",170045,465,466,3600,0,34.53,40.58,24.89,100.0,32.32,38.1,23.64
+503Oi10,170009,465,466,3600,2,60.84,21.51,17.65,100.0,56.97,20.31,16.83
+"503O8,12",172251,468,469,3600,2,89.97,3.39,6.64,100.0,84.35,3.19,6.59

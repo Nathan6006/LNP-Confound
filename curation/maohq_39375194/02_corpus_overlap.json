@@ -1,0 +1,512 @@
+{
+ "structure_overlap": {
+  "DLin-MC3-DMA (IL)": {
+   "full_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "skeleton": "NRLNQCOGCKAESA",
+   "FULL_key_hits": {
+    "AC_2025/IL": 216,
+    "BL_2023/IL": 2,
+    "NG_2025_2/IL": 1,
+    "SB_2024/IL": 11,
+    "SP_2020/IL": 30,
+    "WT_2026/IL": 675,
+    "XD_2026/IL": 1,
+    "YZ_2022/IL": 1080,
+    "YZ_2024/IL": 1080,
+    "ZC_2023/IL": 1,
+    "ZH_2023/IL": 1
+   },
+   "n_rows_full": 3098,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "DOTAP (HL)": {
+   "full_inchikey": "KWVJHCQQUFDPLU-YEUCEMRASA-N",
+   "skeleton": "KWVJHCQQUFDPLU",
+   "FULL_key_hits": {
+    "BL_2023/HL": 38,
+    "JW_2024/HL": 843,
+    "WT_2026/HL": 123,
+    "YX_2024/HL": 1200,
+    "YZ_2022/HL": 180,
+    "YZ_2024/HL": 180
+   },
+   "n_rows_full": 2564,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "DDAB (HL)": {
+   "full_inchikey": "OGQYPPBGSLZBEG-UHFFFAOYSA-N",
+   "skeleton": "OGQYPPBGSLZBEG",
+   "FULL_key_hits": {
+    "YZ_2022/HL": 180,
+    "YZ_2024/HL": 180
+   },
+   "n_rows_full": 360,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "DOPE (HL)": {
+   "full_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "skeleton": "MWRBNPKJOOWZPW",
+   "FULL_key_hits": {
+    "AC_2025/HL": 1290,
+    "AP_2025/HL": 91,
+    "BL_2023/HL": 735,
+    "BL_2023_3CR/HL": 480,
+    "BL_2024/HL": 611,
+    "FG_2026/HL": 960,
+    "JC_2023/HL": 288,
+    "JW_2024/HL": 844,
+    "KS_2024/HL": 140,
+    "LL_2012/HL": 112,
+    "LL_2025/HL": 8,
+    "LL_2026/HL": 840,
+    "LL_2026_2/HL": 147,
+    "LM_2019/HL": 1080,
+    "LR_2023/HL": 395,
+    "LX_2024/HL": 180,
+    "LX_2024_2/HL": 270,
+    "LX_2024_3/HL": 252,
+    "MO_2026/HL": 1152,
+    "NC_2024/HL": 260,
+    "NG_2025/HL": 310,
+    "NG_2025_2/HL": 22,
+    "QL_2026/HL": 344,
+    "RG_2023/HL": 260,
+    "SB_2024/HL": 23,
+    "SL_2020/HL": 91,
+    "SW_2024/HL": 180,
+    "SY_2025/HL": 18,
+    "XH_2024/HL": 60,
+    "XH_2024_2/HL": 151,
+    "XH_2025/HL": 500,
+    "YX_2024/HL": 1200,
+    "YX_2026/HL": 1920,
+    "YX_2026_SDL/HL": 1781,
+    "YY_2023/HL": 119,
+    "YZ_2022/HL": 180,
+    "YZ_2024/HL": 180,
+    "ZC_2023/HL": 131,
+    "ZT_2026/HL": 132
+   },
+   "n_rows_full": 17737,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "DSPC (HL)": {
+   "full_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "skeleton": "NRJAVPSFFCBXDT",
+   "FULL_key_hits": {
+    "AC_2025/HL": 688,
+    "JL_2024/HL": 623,
+    "JW_2024/HL": 186,
+    "KL_2010/HL": 50,
+    "KW_2014/HL": 1273,
+    "KZ_2016/HL": 1538,
+    "LR_2023/HL": 12,
+    "LZ_2025/HL": 96,
+    "NG_2025_2/HL": 1,
+    "SB_2024/HL": 1,
+    "SP_2020/HL": 30,
+    "SS_2018/HL": 10,
+    "SX_2025/HL": 141,
+    "SY_2025/HL": 18,
+    "WT_2026/HL": 1307,
+    "XD_2026/HL": 12,
+    "YR_2024/HL": 286,
+    "YZ_2022/HL": 180,
+    "YZ_2024/HL": 180,
+    "ZH_2023/HL": 325,
+    "ZT_2026/HL": 81
+   },
+   "n_rows_full": 7038,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "14PA (HL)": {
+   "full_inchikey": "OZSITQMWYBNPMW-GDLZYMKVSA-M",
+   "skeleton": "OZSITQMWYBNPMW",
+   "FULL_key_hits": {
+    "YZ_2022/HL": 180,
+    "YZ_2024/HL": 180
+   },
+   "n_rows_full": 360,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "18PG as DRAWN in this paper (HL)": {
+   "full_inchikey": "DSNRWDQKZIEDDB-SQYFZQSCSA-M",
+   "skeleton": "DSNRWDQKZIEDDB",
+   "FULL_key_hits": {
+    "ZT_2026/HL": 81
+   },
+   "n_rows_full": 81,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  },
+  "Cholesterol (CHL)": {
+   "full_inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "skeleton": "HVYWMOMLDIMFJA",
+   "FULL_key_hits": {
+    "AA_2008/CHL": 497,
+    "AC_2025/CHL": 1978,
+    "AP_2025/CHL": 91,
+    "BL_2023/CHL": 773,
+    "BL_2023_3CR/CHL": 480,
+    "BL_2024/CHL": 611,
+    "FG_2026/CHL": 960,
+    "JC_2023/CHL": 288,
+    "JL_2024/CHL": 623,
+    "JM_2016/CHL": 72,
+    "JW_2024/CHL": 1873,
+    "KL_2010/CHL": 50,
+    "KS_2024/CHL": 140,
+    "KW_2014/CHL": 1273,
+    "KZ_2016/CHL": 1538,
+    "LL_2012/CHL": 112,
+    "LL_2025/CHL": 8,
+    "LL_2026/CHL": 840,
+    "LL_2026_2/CHL": 147,
+    "LM_2019/CHL": 1080,
+    "LR_2023/CHL": 407,
+    "LX_2024/CHL": 180,
+    "LX_2024_2/CHL": 270,
+    "LX_2024_3/CHL": 252,
+    "LZ_2025/CHL": 96,
+    "MO_2026/CHL": 1152,
+    "NC_2024/CHL": 260,
+    "NG_2025/CHL": 310,
+    "NG_2025_2/CHL": 23,
+    "QL_2026/CHL": 344,
+    "RG_2023/CHL": 260,
+    "SB_2024/CHL": 3,
+    "SL_2020/CHL": 91,
+    "SL_2021/CHL": 572,
+    "SP_2020/CHL": 5,
+    "SS_2018/CHL": 10,
+    "SW_2024/CHL": 180,
+    "SX_2025/CHL": 141,
+    "SY_2025/CHL": 18,
+    "WT_2026/CHL": 2544,
+    "XD_2026/CHL": 12,
+    "XH_2024/CHL": 60,
+    "XH_2024_2/CHL": 151,
+    "XH_2025/CHL": 500,
+    "YR_2024/CHL": 286,
+    "YX_2024/CHL": 2400,
+    "YX_2026/CHL": 1920,
+    "YX_2026_SDL/CHL": 1781,
+    "YY_2023/CHL": 119,
+    "YZ_2022/CHL": 1080,
+    "YZ_2024/CHL": 1080,
+    "ZC_2023/CHL": 131,
+    "ZH_2023/CHL": 325
+   },
+   "n_rows_full": 30397,
+   "SKELETON_only_hits_stereo_differs": {},
+   "n_rows_skeleton_only": 0
+  }
+ },
+ "name_overlap": {
+  "DLin-MC3-DMA": {
+   "AC_2025/IL": 216,
+   "SP_2020/IL": 30,
+   "WT_2026/IL": 675,
+   "YZ_2022/IL": 1080,
+   "YZ_2024/IL": 1080,
+   "BL_2023/IL": 2,
+   "NG_2025_2/IL": 1,
+   "XD_2026/IL": 1,
+   "ZC_2023/IL": 1,
+   "ZH_2023/IL": 1
+  },
+  "Dlin-MC3-DMA": {
+   "SB_2024/IL": 11
+  },
+  "18PG": {
+   "WT_2026/HL": 1114,
+   "YZ_2022/HL": 180,
+   "YZ_2024/HL": 180
+  },
+  "14PA": {
+   "YZ_2022/HL": 180,
+   "YZ_2024/HL": 180
+  },
+  "DOPE": {
+   "AC_2025/HL": 1290,
+   "BL_2023/HL": 735,
+   "BL_2023_3CR/HL": 480,
+   "BL_2024/HL": 611,
+   "FG_2026/HL": 960,
+   "JC_2023/HL": 288,
+   "JW_2024/HL": 844,
+   "KS_2024/HL": 140,
+   "LL_2012/HL": 112,
+   "LL_2026/HL": 840,
+   "LL_2026_2/HL": 147,
+   "LM_2019/HL": 1080,
+   "LX_2024/HL": 180,
+   "LX_2024_2/HL": 270,
+   "LX_2024_3/HL": 252,
+   "MO_2026/HL": 1152,
+   "NC_2024/HL": 260,
+   "NG_2025/HL": 310,
+   "QL_2026/HL": 344,
+   "SL_2020/HL": 91,
+   "SW_2024/HL": 180,
+   "XH_2024/HL": 60,
+   "XH_2024_2/HL": 151,
+   "XH_2025/HL": 500,
+   "YX_2024/HL": 1200,
+   "YX_2026/HL": 1920,
+   "YX_2026_SDL/HL": 1781,
+   "YY_2023/HL": 119,
+   "YZ_2022/HL": 180,
+   "YZ_2024/HL": 180,
+   "ZC_2023/HL": 131,
+   "ZT_2026/HL": 132,
+   "AP_2025/HL": 91,
+   "LL_2025/HL": 8,
+   "LR_2023/HL": 395,
+   "NG_2025_2/HL": 22,
+   "RG_2023/HL": 260,
+   "SB_2024/HL": 23,
+   "SY_2025/HL": 18
+  },
+  "DSPC": {
+   "AC_2025/HL": 688,
+   "JL_2024/HL": 623,
+   "JW_2024/HL": 186,
+   "KL_2010/HL": 50,
+   "KW_2014/HL": 1273,
+   "KZ_2016/HL": 1538,
+   "LZ_2025/HL": 96,
+   "SP_2020/HL": 30,
+   "WT_2026/HL": 1307,
+   "YR_2024/HL": 286,
+   "YZ_2022/HL": 180,
+   "YZ_2024/HL": 180,
+   "ZT_2026/HL": 81,
+   "LR_2023/HL": 12,
+   "NG_2025_2/HL": 1,
+   "SB_2024/HL": 1,
+   "SS_2018/HL": 10,
+   "SX_2025/HL": 141,
+   "SY_2025/HL": 18,
+   "XD_2026/HL": 12,
+   "ZH_2023/HL": 325
+  },
+  "DOTAP": {
+   "JW_2024/HL": 843,
+   "WT_2026/HL": 123,
+   "YX_2024/HL": 1200,
+   "YZ_2022/HL": 180,
+   "YZ_2024/HL": 180,
+   "BL_2023/HL": 38
+  },
+  "DDAB": {
+   "YZ_2022/HL": 180,
+   "YZ_2024/HL": 180
+  },
+  "Cholesterol": {
+   "AA_2008/CHL": 497,
+   "AC_2025/CHL": 1978,
+   "BL_2023/CHL": 773,
+   "BL_2023_3CR/CHL": 480,
+   "BL_2024/CHL": 611,
+   "FG_2026/CHL": 960,
+   "JC_2023/CHL": 288,
+   "JL_2024/CHL": 623,
+   "JM_2016/CHL": 72,
+   "JW_2024/CHL": 1873,
+   "KL_2010/CHL": 50,
+   "KS_2024/CHL": 140,
+   "KW_2014/CHL": 1273,
+   "KZ_2016/CHL": 1538,
+   "LL_2012/CHL": 112,
+   "LL_2026/CHL": 840,
+   "LL_2026_2/CHL": 147,
+   "LM_2019/CHL": 1080,
+   "LX_2024/CHL": 180,
+   "LX_2024_2/CHL": 270,
+   "LX_2024_3/CHL": 252,
+   "LZ_2025/CHL": 96,
+   "MO_2026/CHL": 1152,
+   "NC_2024/CHL": 260,
+   "NG_2025/CHL": 310,
+   "QL_2026/CHL": 344,
+   "SL_2020/CHL": 91,
+   "SL_2021/CHL": 572,
+   "SP_2020/CHL": 5,
+   "SW_2024/CHL": 180,
+   "WT_2026/CHL": 2544,
+   "XH_2024/CHL": 60,
+   "XH_2024_2/CHL": 151,
+   "XH_2025/CHL": 500,
+   "YR_2024/CHL": 286,
+   "YX_2024/CHL": 2400,
+   "YX_2026/CHL": 1920,
+   "YX_2026_SDL/CHL": 1781,
+   "YY_2023/CHL": 119,
+   "YZ_2022/CHL": 1080,
+   "YZ_2024/CHL": 1080,
+   "ZC_2023/CHL": 131,
+   "AP_2025/CHL": 91,
+   "LL_2025/CHL": 8,
+   "LR_2023/CHL": 407,
+   "NG_2025_2/CHL": 23,
+   "RG_2023/CHL": 260,
+   "SB_2024/CHL": 3,
+   "SS_2018/CHL": 10,
+   "SX_2025/CHL": 141,
+   "SY_2025/CHL": 18,
+   "XD_2026/CHL": 12,
+   "ZH_2023/CHL": 325
+  }
+ },
+ "reagent_18PG_conflict": {
+  "corpus_registry_18PG": {
+   "smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC(O)CO)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "full_inchikey": "ZEFGRNLJASLRBZ-GXFQOPFSSA-M",
+   "skeleton": "ZEFGRNLJASLRBZ",
+   "identity": "SOPG, 18:0/18:1, ONE C=C"
+  },
+  "this_paper_drawn_18PG": {
+   "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OC[C@@H](O)CO)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+   "full_inchikey": "DSNRWDQKZIEDDB-SQYFZQSCSA-M",
+   "skeleton": "DSNRWDQKZIEDDB",
+   "identity": "DOPG, 18:1/18:1, TWO C=C"
+  },
+  "same_skeleton": false,
+  "same_full_key": false,
+  "corpus_rows_named_18PG": 1474,
+  "corpus_experiments_named_18PG": [
+   "WT_2026",
+   "YZ_2022",
+   "YZ_2024"
+  ],
+  "paper_evidence": [
+   "SI Table 2 draws 18PG with a cis C=C in BOTH tails (renders/p2_x68.png, extracted at its native 300 dpi).",
+   "SI Table 3 prints Double_bonds = 2 for 18PG; SOPG has 1.",
+   "The repo file carries Double_bonds = 2 on all 180 18PG rows."
+  ],
+  "mass_cannot_see_this": "Wrong -- here mass CAN see it: SOPG is C42H80O10P(-) and DOPG is C42H78O10P(-), two hydrogens apart. What mass could not see is WHICH tail carries the unsaturation. The discriminator used is the drawn structure plus the paper's own printed double-bond count, which agree.",
+  "posture": "REPORTED, NOT ACTED ON. Three independent corpus experiments carry 18PG as SOPG on the authority of a verbatim Materials sentence in YZ_2022. This paper draws DOPG. Both could be right -- they are different purchases -- or one curation is wrong. Deciding which half to repair is exactly the AC_2025 question, whose first confident repair put 419 measured values on the wrong molecules. See DECISIONS.md D-2."
+ },
+ "formulation_overlap": {
+  "np_to_massratio_map": {
+   "4.0": 8.48,
+   "8.0": 16.96,
+   "12.0": 25.44
+  },
+  "map_derived_from_the_1_2_3_ladder": true,
+  "per_experiment": {
+   "YZ_2022": {
+    "corpus_rows": 1080,
+    "corpus_keys_distinct": 1080,
+    "corpus_key_collisions": 0,
+    "our_rows_matched": 1080,
+    "our_rows_unmatched": 0,
+    "match_is_one_to_one": true,
+    "value_agreement": {
+     "HepG2": {
+      "n": 1080,
+      "spearman_rank": 1.0,
+      "pearson_on_z": 1.0,
+      "max_abs_residual_after_z": 0.000323,
+      "mean_abs_residual_after_z": 0.000153
+     },
+     "N2a": {
+      "n": 720,
+      "spearman_rank": 0.494035,
+      "pearson_on_z": 0.582479,
+      "max_abs_residual_after_z": 4.54758,
+      "mean_abs_residual_after_z": 0.717568
+     },
+     "ARPE19": {
+      "n": 720,
+      "spearman_rank": 0.330077,
+      "pearson_on_z": 0.370101,
+      "max_abs_residual_after_z": 4.877613,
+      "mean_abs_residual_after_z": 0.871263
+     },
+     "HEK293": {
+      "n": 1080,
+      "spearman_rank": 0.476249,
+      "pearson_on_z": 0.468285,
+      "max_abs_residual_after_z": 3.531698,
+      "mean_abs_residual_after_z": 0.824436
+     },
+     "B16": {
+      "n": 1080,
+      "spearman_rank": 0.487632,
+      "pearson_on_z": 0.620018,
+      "max_abs_residual_after_z": 2.838582,
+      "mean_abs_residual_after_z": 0.694796
+     },
+     "PC3": {
+      "n": 1080,
+      "spearman_rank": 0.446736,
+      "pearson_on_z": 0.698132,
+      "max_abs_residual_after_z": 2.95998,
+      "mean_abs_residual_after_z": 0.553232
+     }
+    }
+   },
+   "YZ_2024": {
+    "corpus_rows": 1080,
+    "corpus_keys_distinct": 1080,
+    "corpus_key_collisions": 0,
+    "our_rows_matched": 1080,
+    "our_rows_unmatched": 0,
+    "match_is_one_to_one": true,
+    "value_agreement": {
+     "HepG2": {
+      "n": 1080,
+      "spearman_rank": -0.00308,
+      "pearson_on_z": 0.073575,
+      "max_abs_residual_after_z": 9.002544,
+      "mean_abs_residual_after_z": 1.018138
+     },
+     "N2a": {
+      "n": 720,
+      "spearman_rank": 0.104211,
+      "pearson_on_z": 0.200005,
+      "max_abs_residual_after_z": 7.486416,
+      "mean_abs_residual_after_z": 0.978077
+     },
+     "ARPE19": {
+      "n": 720,
+      "spearman_rank": 0.044157,
+      "pearson_on_z": 0.118015,
+      "max_abs_residual_after_z": 9.926432,
+      "mean_abs_residual_after_z": 1.064912
+     },
+     "HEK293": {
+      "n": 1080,
+      "spearman_rank": 0.040098,
+      "pearson_on_z": 0.10281,
+      "max_abs_residual_after_z": 8.204029,
+      "mean_abs_residual_after_z": 1.040578
+     },
+     "B16": {
+      "n": 1080,
+      "spearman_rank": -0.056438,
+      "pearson_on_z": -0.025788,
+      "max_abs_residual_after_z": 10.608983,
+      "mean_abs_residual_after_z": 1.09833
+     },
+     "PC3": {
+      "n": 1080,
+      "spearman_rank": -0.051181,
+      "pearson_on_z": -0.029591,
+      "max_abs_residual_after_z": 10.797677,
+      "mean_abs_residual_after_z": 1.031074
+     }
+    }
+   }
+  },
+  "note": "Trap 4: where two sources share a formulation, measure the ratio. Neither side is averaged or rescaled onto the other; the corpus side is a per-experiment z of log10 and our side is z-scored ln, and a z of ln IS a z of log10, so the comparison is exact rather than fitted."
+ }
+}

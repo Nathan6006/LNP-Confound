@@ -1,0 +1,36 @@
+{
+ "_what": "Stage 00 acquisition record. Fields this agent could not observe are stated as not observed rather than filled in.",
+ "paper": {
+  "pmid": "24574196",
+  "doi": "10.1002/adhm.201400039",
+  "title": "Enhanced Intracellular siRNA Delivery Using Bioreducible Lipid-Like Nanoparticles",
+  "journal": "Advanced Healthcare Materials",
+  "year": 2014,
+  "publisher": "Wiley-VCH"
+ },
+ "files": [
+  {
+   "path": "source/adhm201400039-sup-0001-S1.pdf",
+   "sha256": "4ac0eb6156871ac114a446d18c1868922cb77662f274a4c7bad2036d72054868",
+   "bytes": 368331,
+   "magic_bytes": "%PDF-1.5",
+   "magic_bytes_verified_is_pdf": true,
+   "pages": 9,
+   "what": "Supporting Information",
+   "source_url": "NOT OBSERVED BY THIS AGENT -- the file was already present in source/ when this run began. Recorded as unknown rather than reconstructed from a plausible Wiley URL.",
+   "fetched_utc": "NOT OBSERVED (file mtime 2026-11-09T23:51 local, which is this repo's, not the server's)"
+  }
+ ],
+ "licence": {
+  "string_on_the_document": "Copyright WILEY-VCH Verlag GmbH & Co. KGaA, 69469 Weinheim, Germany, 2014. (SI page 1, verbatim)",
+  "openalex_oa_status": "closed",
+  "openalex_is_oa": false,
+  "any_repository_has_fulltext": false,
+  "cc0_or_ccby_compatible": false,
+  "note": "CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release. THIS ONE IS NOT. It is recorded here now because that is far cheaper than discovering it at release. Moot while this folder emits zero rows, and blocking the moment it does not."
+ },
+ "not_acquired": {
+  "main_article": "closed access; see 00_value_sources.json acquisition.main_article_routes_exhausted",
+  "primary_reference_for_the_bioreducible_acrylates": "Ryu, Roy, Ventura & Thayumanavan, Langmuir 2010, 26, 7086 -- would settle DECISIONS.md D-2; not acquired"
+ }
+}

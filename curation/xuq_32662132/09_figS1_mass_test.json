@@ -1,0 +1,444 @@
+{
+ "_what": "base-peak m/z by axis geometry; tick VALUES fixed by a label-width signature, not by reading them",
+ "panels": {
+  "9322-O17C": {
+   "axis_row": 371,
+   "axis_len_px": 190,
+   "gap_search": [
+    {
+     "gap": 2,
+     "n": 10,
+     "spacing_nonuniformity": 0.0364,
+     "width_ratio": 1.211
+    }
+   ],
+   "gap_chosen": 2,
+   "n_label_boxes": 10,
+   "label_widths": [
+    9,
+    8,
+    12,
+    9,
+    11,
+    11,
+    11,
+    12,
+    11,
+    13
+   ],
+   "label_width_signature": {
+    "mean_first_four": 9.5,
+    "mean_last_six": 11.5,
+    "ratio": 1.211,
+    "expected_ratio_4_over_3": 1.333,
+    "verdict": "three-digit labels 200-800 then four-digit 1000-2000"
+   },
+   "calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.2514,
+    "origin_px": 38.055,
+    "origin_value": 200.0,
+    "tick_step_units": 200.0,
+    "n_ticks": 10,
+    "tick_fit_residual_px": 1.3697,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_worst_px": 1.662,
+   "Da_per_px": 3.977,
+   "base_peak_col_px": 178.98,
+   "base_peak_height_px": 319,
+   "measured_mz": 760.5,
+   "tail_provenance": "NO CANDIDATE - D-4 is open",
+   "predicted_MplusH": null,
+   "derived_tail_mass_Da": 310.19,
+   "derived_tail_uncertainty_Da": 1.99,
+   "derived_tail_vs_candidates_Da": {
+    "heptadecyl acrylate C20H38O2 (plain C17 alkyl)": -0.1,
+    "2-(hexadecyloxycarbonyloxy)ethyl acrylate (a carbonate, C22H40O5)": -74.1,
+    "O17O (ether, for scale)": -2.08
+   }
+  },
+  "9322-O17O": {
+   "axis_row": 376,
+   "axis_len_px": 459,
+   "gap_search": [
+    {
+     "gap": 2,
+     "n": 10,
+     "spacing_nonuniformity": 0.0066,
+     "width_ratio": 1.276
+    }
+   ],
+   "gap_chosen": 2,
+   "n_label_boxes": 10,
+   "label_widths": [
+    9,
+    8,
+    9,
+    9,
+    11,
+    11,
+    11,
+    11,
+    11,
+    12
+   ],
+   "label_width_signature": {
+    "mean_first_four": 8.75,
+    "mean_last_six": 11.17,
+    "ratio": 1.276,
+    "expected_ratio_4_over_3": 1.333,
+    "verdict": "three-digit labels 200-800 then four-digit 1000-2000"
+   },
+   "calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.2545,
+    "origin_px": 38.064,
+    "origin_value": 200.0,
+    "tick_step_units": 200.0,
+    "n_ticks": 10,
+    "tick_fit_residual_px": 0.4364,
+    "tick_residual_tol_px": 2.5
+   },
+   "loo_worst_px": 0.667,
+   "Da_per_px": 3.93,
+   "base_peak_col_px": 181.98,
+   "base_peak_height_px": 291,
+   "measured_mz": 765.5,
+   "tail_provenance": "SI 1.1, built",
+   "predicted_MplusH": 764.651,
+   "formula_neutral": "C7H13N3",
+   "deviation_Da": 0.8,
+   "deviation_px": 0.2,
+   "head_discrimination": {
+    "predicted_with_head_9322_2_methylimidazole": 764.651,
+    "predicted_with_head_93_plain_imidazole": 750.635,
+    "separation_Da": 14.016,
+    "separation_px": 3.57,
+    "deviation_from_9322_px": 0.2,
+    "deviation_from_93_px": 3.78,
+    "picks": "9322 (2-methylimidazole)"
+   }
+  },
+  "9322-O17S": {
+   "axis_row": 370,
+   "axis_len_px": 470,
+   "gap_search": [
+    {
+     "gap": 2,
+     "n": 10,
+     "spacing_nonuniformity": 0.0465,
+     "width_ratio": 1.185
+    },
+    {
+     "gap": 3,
+     "n": 10,
+     "spacing_nonuniformity": 0.0465,
+     "width_ratio": 1.185
+    },
+    {
+     "gap": 4,
+     "n": 13,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 5,
+     "n": 13,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 6,
+     "n": 12,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 7,
+     "n": 12,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 8,
+     "n": 12,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 9,
+     "n": 12,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 10,
+     "n": 12,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 11,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 12,
+     "n": 8,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    }
+   ],
+   "gap_chosen": null,
+   "n_label_boxes": null,
+   "REFUSED": "no glyph gap in 2..12 gives 10 tick labels that are uniformly spaced to 4 % AND carry the 3-digit/4-digit width signature"
+  },
+  "9322-O16B": {
+   "axis_row": 370,
+   "axis_len_px": 476,
+   "gap_search": [
+    {
+     "gap": 2,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 3,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 4,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 5,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 6,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 7,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 8,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 9,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 10,
+     "n": 9,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 11,
+     "n": 10,
+     "spacing_nonuniformity": 0.1827,
+     "width_ratio": 1.079
+    },
+    {
+     "gap": 12,
+     "n": 10,
+     "spacing_nonuniformity": 0.1827,
+     "width_ratio": 1.079
+    }
+   ],
+   "gap_chosen": null,
+   "n_label_boxes": null,
+   "REFUSED": "no glyph gap in 2..12 gives 10 tick labels that are uniformly spaced to 4 % AND carry the 3-digit/4-digit width signature"
+  },
+  "9322-N16B": {
+   "axis_row": 377,
+   "axis_len_px": 470,
+   "gap_search": [
+    {
+     "gap": 2,
+     "n": 14,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 3,
+     "n": 13,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 4,
+     "n": 14,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 5,
+     "n": 12,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 6,
+     "n": 8,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 7,
+     "n": 8,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 8,
+     "n": 8,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 9,
+     "n": 6,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 10,
+     "n": 6,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 11,
+     "n": 4,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 12,
+     "n": 4,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    }
+   ],
+   "gap_chosen": null,
+   "n_label_boxes": null,
+   "REFUSED": "no glyph gap in 2..12 gives 10 tick labels that are uniformly spaced to 4 % AND carry the 3-digit/4-digit width signature"
+  },
+  "9322-EC18": {
+   "axis_row": 372,
+   "axis_len_px": 467,
+   "gap_search": [
+    {
+     "gap": 2,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 3,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 4,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 5,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 6,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 7,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 8,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 9,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 10,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 11,
+     "n": 11,
+     "spacing_nonuniformity": null,
+     "width_ratio": null
+    },
+    {
+     "gap": 12,
+     "n": 10,
+     "spacing_nonuniformity": 0.378,
+     "width_ratio": 0.99
+    }
+   ],
+   "gap_chosen": null,
+   "n_label_boxes": null,
+   "REFUSED": "no glyph gap in 2..12 gives 10 tick labels that are uniformly spaced to 4 % AND carry the 3-digit/4-digit width signature"
+  }
+ },
+ "_first_pass_candidate_test": {
+  "candidates_read_as_glyphs": [
+   784.73,
+   794.75,
+   764.73
+  ],
+  "predicted_from_the_recovered_head": 764.651,
+  "measured_by_geometry": 765.5,
+  "Da_per_px": 3.93,
+  "distance_to_each_candidate_Da": {
+   "784.73": -19.2,
+   "794.75": -29.2,
+   "764.73": 0.8
+  },
+  "distance_to_each_candidate_px": {
+   "784.73": -4.89,
+   "794.75": -7.44,
+   "764.73": 0.2
+  }
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "requested": "https://doi.org/10.1038/s41565-025-02044-6",
+ "final_url": "https://www.nature.com/articles/s41565-025-02044-6?error=cookies_not_supported&code=576d7096-df11-44fc-b0e3-9a853d0b360c",
+ "title": "Degradable cyclic amino alcohol ionizable lipids as vectors for potent influenza mRNA vaccines | Nature Nanotechnology",
+ "n_assets": 12,
+ "assets": [
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM1_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM2_ESM.pdf",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM3_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM4_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM5_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM6_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM7_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM8_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM9_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM10_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM11_ESM.xlsx",
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM12_ESM.xlsx"
+ ],
+ "downloaded": [
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM1_ESM.pdf",
+   "file": "41565_2025_2044_MOESM1_ESM.pdf",
+   "bytes": 14737128,
+   "sha256": "b4c8909963f3e39fe7c766fa6d52d4ba7dffbeb7e99f5904abadaa762ec9c9e4"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM2_ESM.pdf",
+   "file": "41565_2025_2044_MOESM2_ESM.pdf",
+   "bytes": 2187301,
+   "sha256": "b4a0b915bf1ffebe8c545207a4977422e4c02c481b3c1ffe8278a5202af198c7"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM3_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM3_ESM.xlsx",
+   "bytes": 17307,
+   "sha256": "732b7bb1c1917d744f8cf9ab1fb26c5f16076b55bd19548480186e9bd447c3e0"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM4_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM4_ESM.xlsx",
+   "bytes": 17614,
+   "sha256": "215cb97ff823e3335b22aae154dccc1e9ee570c3433d2a330bddff81349c6b96"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM5_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM5_ESM.xlsx",
+   "bytes": 23065,
+   "sha256": "2bedd41c10f9659b6c4bea2c99b46ea7d7151dd251119c5ce0d66a02295c2c5d"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM6_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM6_ESM.xlsx",
+   "bytes": 19645,
+   "sha256": "b46f5ac8582dac31f5ef79f5d5a7aa242636ab98d431a08bd77c7ae6230c50df"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM7_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM7_ESM.xlsx",
+   "bytes": 19368,
+   "sha256": "d824cc266484dfdbe594481a1722d97e3875a3ed86ec086848e82d44adf9c770"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM8_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM8_ESM.xlsx",
+   "bytes": 19069,
+   "sha256": "bad3a736411082e2c7ac626486d08457067a3c84c5da05fc5dfd9e0aed95d954"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM9_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM9_ESM.xlsx",
+   "bytes": 16675,
+   "sha256": "2d92b4320bc5c041c4313d6575fef80ab1c15aed07bc84c39397be2652a84ef6"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM10_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM10_ESM.xlsx",
+   "bytes": 17536,
+   "sha256": "cff76afad818988ad65594bce73bf99447c0ae3303540b704c01948d0ac15e35"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM11_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM11_ESM.xlsx",
+   "bytes": 18437,
+   "sha256": "d1b7eb2a55c9f26fbadabc28b23267e48ff6ff369a0503b9bb722f28002e6866"
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41565-025-02044-6/MediaObjects/41565_2025_2044_MOESM12_ESM.xlsx",
+   "file": "41565_2025_2044_MOESM12_ESM.xlsx",
+   "bytes": 16911,
+   "sha256": "859bc50cc07d4f708486b92a84253b3210f8db3212aba162950a5598a2893d74"
+  }
+ ],
+ "retrieved_utc": "2026-11-10T04:20:46Z"
+}

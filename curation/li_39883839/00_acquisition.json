@@ -1,0 +1,96 @@
+{
+ "_what": "Stage 00 acquisition record. PIPELINE_V2 section 3.",
+ "paper": {
+  "title": "Rational design and modular synthesis of biodegradable ionizable lipids via the Passerini reaction for mRNA delivery",
+  "authors_first": "Xu Y, Gong F, Golubovic A, ... Li B (corresponding, bw.li@utoronto.ca)",
+  "lab": "Bowen Li, University of Toronto (Leslie Dan Faculty of Pharmacy / IBME)",
+  "journal": "Proc Natl Acad Sci USA 122(5) e2409572122 (2025)",
+  "pmid": 39883839,
+  "pmcid": "PMC11804478",
+  "doi": "10.1073/pnas.2409572122",
+  "received": "2024-05-13",
+  "accepted": "2025-01-02",
+  "published": "2025-01-30"
+ },
+ "licence": {
+  "string_from_landing_page": "CC BY-NC-ND 4.0  (https://creativecommons.org/licenses/by-nc-nd/4.0/)",
+  "source": "JATS <license> element in source/PMC11804478.jats.xml; PMC record property pmc-license-ref = 'CC BY-NC-ND'",
+  "corpus_release_status": "NOT CC0/CC-BY-COMPATIBLE. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release. NC and ND both bite. Raised as D-5 in DECISIONS.md -- this is a release blocker, not a curation blocker."
+ },
+ "pmc_route": {
+  "jats": "efetch db=pmc retmode=xml id=11804478 -- worked, no bot check.",
+  "figure_rasters": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11804478/bin/<name> -- WORKED (600 dpi, 4205 px wide).",
+  "routes_that_FAILED": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC11804478/bin/<name>  -> 48716 B HTML error page for all 7 declared assets (this is the route pmc_fetch.py uses; it is the 'PMC<id>' form, not the 'instance/<num>' form).",
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11804478/bin/<name> -> HTTP 404."
+  ],
+  "note_for_the_tool": "pmc_fetch.py reported 7/7 failures and 0 downloads; the same filenames succeed verbatim on the instance/<num>/bin/ route. The tool's BIN template is the only thing wrong."
+ },
+ "publisher_route_not_used": {
+  "attempt": "https://doi.org/10.1073/pnas.2409572122 resolved to pnas.org and returned a Cloudflare interstitial (title 'Just a moment...', 0 assets) -- see 00_acquisition_raw.json.",
+  "decision": "Not retried. PMC open access served everything needed at 600 dpi. No paywall or bot check was bypassed."
+ },
+ "files": [
+  {
+   "path": "source/pnas.2409572122.sapp.pdf",
+   "url": "https://www.pnas.org/doi/suppl/10.1073/pnas.2409572122/suppl_file/pnas.2409572122.sapp.pdf",
+   "what": "SI Appendix (29 pp)",
+   "bytes": 2044615,
+   "sha256": "39bd9405d31b5e288c1dfbc2d4b15cfcd31ed4114d88941a8e628ed00f6e9d9d",
+   "retrieved_utc": "2026-11-10T05:28:00Z"
+  },
+  {
+   "path": "source/PMC11804478.jats.xml",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml&id=11804478",
+   "what": "JATS full text",
+   "bytes": 118880,
+   "sha256": "1a94afd192d944b38f31df0c807cde860ddb44efdcd1d01cef24a828ab9fae05",
+   "retrieved_utc": "2026-11-10T07:05:00Z"
+  },
+  {
+   "path": "source/fig/pnas.2409572122fig01.jpg",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11804478/bin/pnas.2409572122fig01.jpg",
+   "what": "Figure 1 raster, 600 dpi",
+   "bytes": 1354074,
+   "sha256": "0008997aa5838d5fe61416b3afb7178c5f1d21a9f8467c9a6988df1b75a1b324",
+   "retrieved_utc": "2026-11-10T07:08:54Z"
+  },
+  {
+   "path": "source/fig/pnas.2409572122fig02.jpg",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11804478/bin/pnas.2409572122fig02.jpg",
+   "what": "Figure 2 raster, 600 dpi",
+   "bytes": 1872091,
+   "sha256": "fa67e41264f6173034c2594b3d4663d05241887fe8731110495f874fcde245f5",
+   "retrieved_utc": "2026-11-10T07:08:54Z"
+  },
+  {
+   "path": "source/fig/pnas.2409572122fig03.jpg",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11804478/bin/pnas.2409572122fig03.jpg",
+   "what": "Figure 3 raster, 600 dpi",
+   "bytes": 2131616,
+   "sha256": "03107d74f2beccc46b8c43459eeb0038aa6faf5ddcfb3679eeabd56dbf5e8f6a",
+   "retrieved_utc": "2026-11-10T07:08:54Z"
+  },
+  {
+   "path": "source/fig/pnas.2409572122fig04.jpg",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11804478/bin/pnas.2409572122fig04.jpg",
+   "what": "Figure 4 raster, 600 dpi",
+   "bytes": 2479850,
+   "sha256": "6ceee16383b941dc29bfb0f6d3dd750321d7607ca0d587de8434204f27497fe9",
+   "retrieved_utc": "2026-11-10T07:08:54Z"
+  },
+  {
+   "path": "source/fig/pnas.2409572122fig05.jpg",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11804478/bin/pnas.2409572122fig05.jpg",
+   "what": "Figure 5 raster, 600 dpi",
+   "bytes": 2076946,
+   "sha256": "18f1b21e47486e325a92f254de32b17f0f3889466333526fbe9614b4e5a6ad2e",
+   "retrieved_utc": "2026-11-10T07:08:54Z"
+  }
+ ],
+ "what_is_NOT_available": [
+  "No publisher Source Data file. PNAS does not offer one for this article and the Data Availability statement reads: 'All study data are included in the article and/or SI Appendix.'",
+  "No author repository. find_repo.py (DOI 10.1073/pnas.2409572122, PMID 39883839, author Li) returned 0 plausible hits; the top-ranked candidates are unrelated projects. The group's AGILE paper (Nat Commun 2024) has a repo, but it belongs to a different library and is not cited here as a data source.",
+  "No Zenodo/Dryad deposit referenced anywhere in the article, SI or JATS."
+ ]
+}

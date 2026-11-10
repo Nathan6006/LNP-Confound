@@ -1,0 +1,52 @@
+block,kind,smiles,n_carbons,measured,read_by,source
+SC1,tail,CC(C)CS,,no,"drawn structure, Fig 1b (branched: the skeleton has a degree-3 node, so a path trace does not describe it)",Fig 1b
+SC2,tail,CC(C)CCS,,no,"drawn structure, Fig 1b (branched: the skeleton has a degree-3 node, so a path trace does not describe it)",Fig 1b
+SC3,tail,CCCS,3,yes,"raster trace of Fig 1b, 3 bond segments between the HS and Me labels",Fig 1b
+SC4,tail,CCCCS,4,yes,"raster trace of Fig 1b, 4 bond segments between the HS and Me labels",Fig 1b
+SC5,tail,CCCCCS,5,yes,"raster trace of Fig 1b, 5 bond segments between the HS and Me labels",Fig 1b
+SC6,tail,CCCCCCS,6,yes,"raster trace of Fig 1b, 6 bond segments between the HS and Me labels",Fig 1b
+SC7,tail,CCCCCCCS,7,yes,"raster trace of Fig 1b, 7 bond segments between the HS and Me labels",Fig 1b
+SC8,tail,CCCCCCCCS,8,yes,"raster trace of Fig 1b, 8 bond segments between the HS and Me labels",Fig 1b
+SC9,tail,CCCCCCCCCS,9,yes,"raster trace of Fig 1b, 9 bond segments between the HS and Me labels",Fig 1b
+SC10,tail,CCCCCCCCCCS,10,yes,"raster trace of Fig 1b, 10 bond segments between the HS and Me labels",Fig 1b
+SC11,tail,CCCCCCCCCCCS,11,yes,"raster trace of Fig 1b, 11 bond segments between the HS and Me labels",Fig 1b
+SC12,tail,CCCCCCCCCCCCS,12,yes,"raster trace of Fig 1b, 12 bond segments between the HS and Me labels",Fig 1b
+SC14,tail,CCCCCCCCCCCCCCS,14,yes,"raster trace of Fig 1b, 14 bond segments between the HS and Me labels",Fig 1b
+SC16,tail,CCCCCCCCCCCCCCCCS,16,yes,"raster trace of Fig 1b, 16 bond segments between the HS and Me labels",Fig 1b
+SC18,tail,CCCCCCCCCCCCCCCCCCS,18,yes,"raster trace of Fig 1b, 18 bond segments between the HS and Me labels",Fig 1b
+SN1,tail,CN(C)CCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN2,tail,CCCCNCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN3,tail,CCN(CC)CCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN4,tail,SCCN1CCCC1,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN5,tail,SCCN1CCCCC1,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN6,tail,SCCN1CCCCCC1,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN7,tail,CCCN(CCC)CCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SN8,tail,CCCCN(CCCC)CCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO1,tail,OC(=O)CCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO2,tail,OC(=O)CCCCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO3,tail,OC(=O)CCCCCCCCCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO4,tail,OCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO5,tail,OCC(O)CS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO6,tail,OCCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO7,tail,OCCCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+SO8,tail,OCCCCCCS,,no,"drawn structure, Fig 1b (not a chain: it carries an amine, a ring, an acid or a diol)",Fig 1b
+3A1,core,[101NH2]CC1CC[102NH]CC1,,no,drawn structure; 3 arms on 3 N-H,Fig 1b
+3A2,core,[101NH2]CCN1CC[102NH]CC1,,no,drawn structure; 3 arms on 3 N-H,Fig 1b
+3A3,core,CN(C)CCC[101NH]CCC[102NH2],,no,drawn structure; 3 arms on 3 N-H,Fig 1b
+3A4,core,OCC[101NH]CCC[102NH2],,no,drawn structure; 3 arms on 3 N-H,"Fig 1b, Scheme 1"
+3A5,core,C[101NH]CCN(CC[102NH]C)CC[103NH]C,,no,drawn structure; 3 arms on 3 N-H,Fig 1b
+4A1,core,[101NH2]CCCN1CCN(CCC[102NH2])CC1,,no,drawn structure; 4 arms on 4 N-H,Fig 1b
+4A3,core,[101NH2]CCCN(C)CCC[102NH2],,no,drawn structure; 4 arms on 4 N-H,"Fig 1b, Scheme 1"
+4A4,core,[101NH2]CCOCCOCC[102NH2],,no,drawn structure; 4 arms on 4 N-H,Fig 1b
+5A1,core,[101NH2]CCC[102NH]CCC[103NH2],,no,drawn structure; 5 arms on 5 N-H,Fig 1b
+5A2,core,[101NH2]CC[102NH]CC[103NH]CC[104NH]CC[105NH2],,no,drawn structure; 5 arms on 7 N-H,Fig 1b
+6A1,core,[101NH2]CC[102NH]CC[103NH]CC[104NH]CC[105NH2],,no,drawn structure; 6 arms on 7 N-H,Fig 1b
+5A3,core,[101NH2]CCC[102NH]CCC[103NH]CCC[104NH2],,no,drawn structure; 5 arms on 6 N-H,Fig 1b
+6A2,core,[101NH2]CCC[102NH]CCC[103NH]CCC[104NH2],,no,drawn structure; 6 arms on 6 N-H,Fig 1b
+5A4,core,[101NH2]CCN(CC[102NH2])CC[103NH2],,no,drawn structure; 5 arms on 6 N-H,"Fig 1b, Scheme 1"
+6A3,core,[101NH2]CCN(CC[102NH2])CC[103NH2],,no,drawn structure; 6 arms on 6 N-H,Fig 1b
+3A4V,core,OCCC[101NH]CC[102NH2],,no,drawn structure; 3 arms on 3 N-H,"Scheme 1, Fig 2b"
+3A4V2,core,OCC[101NH]CC[102NH2],,no,drawn structure; 3 arms on 3 N-H,"Scheme 1, Fig 2b"
+4A5,core,[101NH2]CCN(C)CC[102NH2],,no,drawn structure; 4 arms on 4 N-H,"Scheme 1, Fig 3a"
+5A5,core,[101NH2]CCCN(CCC[102NH2])CCC[103NH2],,no,drawn structure; 5 arms on 6 N-H,"Scheme 1, Fig 3a"
+AEMA (G1),linker,C=CC(=O)OCCOC(=O)C(C)=C,,no,"drawn reagent, Scheme 1",Scheme 1

@@ -1,12 +1,91 @@
 {
  "what": "enumerated structures vs the structure the paper draws",
- "anchors_compared": 14,
- "connectivity_failures": 0,
+ "anchors_compared": 21,
+ "connectivity_failures": 3,
  "stereo_only_differences": 0,
  "expected_mismatches_paper_drawing_wrong": 1,
- "papers_with_no_drawn_structure": 9,
+ "papers_with_no_drawn_structure": 12,
  "anchors_that_may_be_a_copy_of_the_enumeration": 6,
  "results": [
+  {
+   "paper": "andersondg_41203968",
+   "lipid_name": "AMG1541",
+   "source_figure": "SI p.109 (structure drawn beside the AMG1541 characterisation); Figure 5a and 5g in the article",
+   "read_on": "2026-11-10",
+   "note": "Composed as a SMILES string from two chemical names in the paper's prose -- 'hexacyclen headgroup (Am15)' and 'monounsaturated 12 carbon tails' / 'Z-alkenes' -- with no RWMol, no AddBond, no RemoveAtom and no read of any stage output. The alkene POSITION (5,6) is the one feature the prose does not fix and is taken from the drawing.",
+   "reference_inchikey": "VVNZJBZUSOWDSM-OHHWYPJWSA-N",
+   "enumerated_inchikey": "VVNZJBZUSOWDSM-OHHWYPJWSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "kooh_42690843",
+   "lipid_name": "A18B8C14",
+   "source_figure": "SI p.S18-S19: the compound name '(pentane-1,5-diylbis(azanediyl))bis(tetradecane-6,1-diyl)bis(2-hexyldecanoate)' and the structure drawn beneath it",
+   "read_on": "2026-11-10",
+   "note": "Derived from the compound NAME printed in the SI, not from the block drawing the enumerator reads, and composed by plain string concatenation of name-derived tokens -- no RWMol, no AddBond, no RemoveAtom, no atom map. compose() refuses a ring-closure digit shared between fragments, which is the documented failure mode of this route. The alpha carbon(s) are unassigned stereocentres in both the anchor and the enumeration: the photochemical radical addition is not stereoselective and the SI does not resolve them, so C10's stereo comparison has nothing to compare.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "kooh_42690843",
+   "lipid_name": "A2B1C1",
+   "source_figure": "SI p.S12: the compound name 'N1-(1-cyclopentylnonyl)-N3,N3-dimethylpropane-1,3-diamine' and the structure drawn beneath it",
+   "read_on": "2026-11-10",
+   "note": "Derived from the compound NAME printed in the SI, not from the block drawing the enumerator reads, and composed by plain string concatenation of name-derived tokens -- no RWMol, no AddBond, no RemoveAtom, no atom map. compose() refuses a ring-closure digit shared between fragments, which is the documented failure mode of this route. The alpha carbon(s) are unassigned stereocentres in both the anchor and the enumeration: the photochemical radical addition is not stereoselective and the SI does not resolve them, so C10's stereo comparison has nothing to compare.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "levkinpa_29558113",
+   "lipid_name": "T18U-PY16-A1",
+   "source_figure": "SI p.2, Scheme S1c (vector; the only full lipidoid structure the SI draws)",
+   "read_on": "2026-11-10",
+   "note": "Built head-first by string concatenation of fragments each written from the chemical name the SI prints; no RDKit assembly, no atom maps, no shared template with stage03_enumerate.py. Chain lengths and the 9Z position come from 02_chain_counts.json, measured from the PDF's own bond coordinates.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "levkinpa_29558113",
+   "lipid_name": "T18-PY18-A5",
+   "source_figure": "SI p.15, Figure S1 top scheme (raster)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR STORED, deliberately, so the absence is visible. Figure S1's top scheme does draw a complete primary-amine product, but it is a JPEG raster whose chain lengths could not be measured (the same noise floor that defeated A5's N-ethyl branches, 01_amines.json), and an anchor whose chain lengths were counted by eye is error class 48 with extra steps.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "levkinpa_29558113",
+   "lipid_name": "T18U-PY12-A8",
+   "source_figure": "none -- the SI draws no structure for A8",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE. A8 is known only as the molecular formula C7H17N3 (01_amines.json). This is the paper's SECOND-best lipidoid, so the gap is recorded here rather than left to be noticed later. DECISIONS.md D-2.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "lij_42130331",
+   "lipid_name": "113-AA-C8C14",
+   "source_figure": "Fig. S2, structure 113-AA-CxCy, with R and n taken from the same figure's legend (Cx = C8, Cy = C14 i.e. n = 11)",
+   "read_on": "2026-11-10",
+   "note": "Composed centre-out from the tertiary nitrogen as one SMILES string and parsed once. No RWMol, no AddBond, no RemoveAtom, no atom map in this file. Chain lengths are repeat counts of the values stage02_blocks.py measured.",
+   "reference_inchikey": "FQOKYYDZJAZLAN-UHFFFAOYSA-N",
+   "enumerated_inchikey": "FQOKYYDZJAZLAN-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "lij_42130331",
+   "lipid_name": "96-AA-C8C6",
+   "source_figure": "Fig. S2, structure 96-AA-CxCy, legend Cx = C8, Cy = C6 i.e. n = 3",
+   "read_on": "2026-11-10",
+   "note": "The two-arm case: amine 96's secondary N-H opens an epoxide directly, giving an arm with no sulfur and no amide. Built by the same string route, so C10 tests the arm-count rule and not only the thioether.",
+   "reference_inchikey": "KYROFQAXRYHDDY-UHFFFAOYSA-N",
+   "enumerated_inchikey": "KYROFQAXRYHDDY-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
   {
    "paper": "lin_aromatic_2026",
    "lipid_name": "10A2-3B-EP10",
@@ -15,6 +94,32 @@
    "note": "Final product of the PRECISE protection/deprotection synthesis, so the regiochemistry is pinned by the route rather than assumed: one 3B arm on EACH primary nitrogen, four EP10 tails on the remaining N-H. Rebuilt 2026-11-07 by make_reference.py, which concatenates three fragments written from the reagents' chemical names and uses no RWMol/AddBond/RemoveAtom and no import from this folder -- so the different-code-path claim is executed, not asserted (F-008 round). The anchor is checked against the SI's own HRMS ([M+H]+ 1127.9648), which makes it testable against the paper and not merely against us.",
    "reference_inchikey": "JUAPTPKSYXADRC-UHFFFAOYSA-N",
    "enumerated_inchikey": "JUAPTPKSYXADRC-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "liu_41162324",
+   "lipid_name": "SSC4F1",
+   "source_figure": "SI PDF p.25, reaction scheme under heading 3.2.1.2 (embedded raster 1153x107 px, read at 7x)",
+   "read_on": "2026-11-10",
+   "note": "Typed by hand from the reaction scheme the SI draws under this compound's own synthesis heading, walking the molecule right to left from the fluorine. No RWMol, no AddBond, no RemoveAtom, no CombineMols, no atom map and no import of stage03_enumerate.py or curation/lib/assemble -- so the different-code-path claim is executed, not asserted (F-013, F-037). The heptadecan-9-yl octanoate / 2-hydroxyethylamine portion is additionally asserted, at build time, to be a substructure of the SM-102 entry in provenance/reagent_registry.py, which is written from that reagent's chemical name. LIMIT: this anchor cannot test the SP core, the P linker or any F7 member, none of which are drawn on the two pages read.",
+   "reference_inchikey": "MWAGYSPYRXPCKE-UHFFFAOYSA-N",
+   "enumerated_inchikey": "MWAGYSPYRXPCKE-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "liu_41162324",
+   "lipid_name": "SSC6F5",
+   "source_figure": "SI PDF p.31, reaction scheme under heading 3.2.1.20 (embedded raster 1152x114 px, read at 7x)",
+   "read_on": "2026-11-10",
+   "note": "Typed by hand from the reaction scheme the SI draws under this compound's own synthesis heading, walking the molecule right to left from the fluorine. No RWMol, no AddBond, no RemoveAtom, no CombineMols, no atom map and no import of stage03_enumerate.py or curation/lib/assemble -- so the different-code-path claim is executed, not asserted (F-013, F-037). The heptadecan-9-yl octanoate / 2-hydroxyethylamine portion is additionally asserted, at build time, to be a substructure of the SM-102 entry in provenance/reagent_registry.py, which is written from that reagent's chemical name. LIMIT: this anchor cannot test the SP core, the P linker or any F7 member, none of which are drawn on the two pages read.",
+   "reference_inchikey": "BIGCFAHQGUUHQC-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BIGCFAHQGUUHQC-UHFFFAOYSA-N",
    "skeleton_match": true,
    "stereo_match": true,
    "status": "exact_match",
@@ -111,6 +216,27 @@
    "status": "exact_match"
   },
   {
+   "paper": "siegwart_40644303",
+   "lipid_name": "3A4-SC5",
+   "source_figure": "Scheme 1, drawn product",
+   "read_on": "2026-11-10",
+   "note": "Built from an explicit V2000 atom/bond table typed from Scheme 1's drawn product, parsed with Chem.MolFromMolBlock. No SMILES fragment, no string concatenation of chemistry, no RWMol, no AddBond and no RemoveAtom in this file; the enumerator (stage03_enumerate.py) uses curation/lib/assemble.attach, i.e. RWMol+AddBond on SMILES fragments. Writing the anchor as a SMILES read tail-first from the drawing WOULD have collided: the enumerator's canonical string for this lipid already starts at the pentyl tail. Regiochemistry (S on the methacrylate beta carbon, methyl on alpha) is from the two-step synthesis, which is the only evidence that distinguishes it -- the swapped assignment has the same formula and the same exact mass.",
+   "reference_inchikey": "IRFDGVDUNLJDIH-UHFFFAOYSA-N",
+   "enumerated_inchikey": "IRFDGVDUNLJDIH-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "siegwart_40644303",
+   "lipid_name": "",
+   "source_figure": "Figure 1b / Figures 2b, 3a",
+   "read_on": "2026-11-10",
+   "note": "NO SECOND ANCHOR EXISTS. Figure 1b draws the 15 amine cores and the 31 thiol tails as separate building blocks and Figures 2b and 3a draw amine cores only, so Scheme 1's 3A4-SC5 is the ONLY complete lipid this paper draws. The absence is recorded here rather than left invisible: 488 of the 489 enumerated structures have no drawn counterpart to test against, and C10 therefore covers 1 of them.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
    "paper": "siegwart_42634137",
    "lipid_name": "C6O2B2",
    "source_figure": "Fig 2a (amine half) + Fig 1b (linker, sterol)",
@@ -118,6 +244,19 @@
    "note": "Independently derived: amine half typed by hand from Fig 2a (p.5), 5-carbon linker from Fig 1b (p.3), sterol taken VERBATIM from provenance/reagent_registry.json (cholest-5-en-3beta-ol, InChIKey HVYWMOMLDIMFJA-DPAQBDIFSA-N), assembled by string substitution with no RWMol/AddBond/RemoveAtom anywhere -- see make_reference.py. Replaces an earlier anchor that was a byte-for-byte copy of 03_enumerated.csv and therefore could only pass (F-013); that copy stored epicholesterol while its note claimed 3-beta. LIMIT: the sterol's eight stereocentres come from the registry, not from a fresh read of the figure, so this anchor cannot catch an error in the registry entry itself. Agrees with 03_enumerated.csv; the two were derived by different routes (see this file's docstring), so the agreement is evidence rather than a tautology.",
    "reference_inchikey": "JZSXLVWEZCBZIZ-MNARHFHWSA-N",
    "enumerated_inchikey": "JZSXLVWEZCBZIZ-MNARHFHWSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "whiteheadka_38888972",
+   "lipid_name": "306Oi10",
+   "source_figure": "Fig 1A",
+   "read_on": "2026-11-10",
+   "note": "Derived from Figure 1A, which draws the complete reaction 306 + 4 Oi10 -> 306Oi10 with every bond. Built by STRING SUBSTITUTION of four short fragment literals into a tail-first template (make_reference.py): no RWMol, no AddBond, no RemoveAtom, no CombineMols and no RDKit reaction anywhere, so it shares no assembly code with stage03_enumerate.py, which builds every bond through curation/lib assemble.attach from an atom-mapped head. The traversal order is also different on purpose -- the template starts at an isopropyl terminus and walks inward, which RDKit's canonical order does not. WHAT IT TESTS THAT NOTHING ELSE CAN: the SUBSTITUTION COUNT (four tails, two on each primary nitrogen, none on the tertiary one). Formula and exact mass are consequences of that count, not evidence for it. LIMIT: Oi10 is 'isodecyl acrylate', a commercial branched-isomer mixture; the 8-methylnonyl branch is the one the authors DREW, so this anchor inherits that claim rather than testing it, and every Oi10 row in 03_enumerated.csv carries structure_assumed = 1.",
+   "reference_inchikey": "BPPZRZOKGADTQE-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BPPZRZOKGADTQE-UHFFFAOYSA-N",
    "skeleton_match": true,
    "stereo_match": true,
    "status": "exact_match",

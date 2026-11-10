@@ -1,0 +1,85 @@
+{
+  "pmid": "39664425",
+  "pmcid": "PMC11628822",
+  "doi": "10.1016/j.apsb.2024.08.032",
+  "written_before_any_chemistry": true,
+  "title_verified": {
+    "full_published_title": "Pioneering integration of combinatorial chemistry and machine learning to accelerate the development of tailored LNPs for mRNA delivery",
+    "verified_from": "Europe PMC REST resultType=core (source/europepmc_core_39664425.json) AND JATS fullTextXML <article-title> (source/europepmc_PMC11628822_fullTextXML.xml)",
+    "two_routes_agree": true,
+    "truncation_check": "No truncation. The tracker short-title and the published title agree head-to-tail; no hidden qualifier such as an organ, cell type or antimicrobial endpoint."
+  },
+  "endpoint": {
+    "topic_in_scope": true,
+    "endpoint_as_discussed": "mRNA transfection / delivery (luminescent total flux in muscle; %tdTomato+ cells in liver, spleen, lung)",
+    "but": "The endpoint belongs to a DIFFERENT paper. This article reports no endpoint of its own."
+  },
+  "article_type": {
+    "jats_article_type": "letter",
+    "pmc_subj_group_heading": "Highlight",
+    "classification": "research highlight / commentary",
+    "original_data": "NONE",
+    "evidence": [
+      "No <abstract> element in the JATS record and no abstractText in the Europe PMC core record.",
+      "No Methods, Results, Materials, Statistics or Data-availability section. The only <title> elements in the whole record are: Key words, Author contributions, Conflicts of interest, References, Acknowledgments.",
+      "Author contributions list exactly four roles across four authors: Writing - original draft, Conceptualization, Writing - review & editing. No investigation, methodology, formal analysis, validation, resources or data curation role is claimed by anyone.",
+      "0 <table-wrap> elements. 1 <fig>, 1 <graphic>. 0 supplementary-material elements; Europe PMC core record reports hasSuppl = N.",
+      "The single figure caption ends: 'Reprinted with the permission from Ref. 1. Copyright (c) 2024 Nature materials.'"
+    ]
+  },
+  "primary_paper_being_commented_on": {
+    "citation": "Li B, Raji IO, Gordon AGR, Sun L, Raimondo TM, Oladimeji FA, et al. Accelerating ionizable lipid discovery for mRNA delivery using machine learning and combinatorial chemistry. Nat Mater 23:1002-1008 (2024).",
+    "pmid": "38740955",
+    "doi": "10.1038/s41563-024-01867-3",
+    "already_in_corpus_as": "BL_2024",
+    "corpus_rows": {"data_vitro.csv": 560, "data_vivo.csv": 51}
+  },
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "publisher Source Data / SI workbook",
+      "checkable_sentence": "Europe PMC core reports hasSuppl = N; the JATS record contains zero <supplementary-material> elements; the PMC HTML contains zero occurrences of the string 'Supplementary' and its only downloadable link is pdf/main.pdf (the article itself).",
+      "rows_available": 0,
+      "status": "ABSENT"
+    },
+    {
+      "tier": 2,
+      "name": "SI numeric table",
+      "checkable_sentence": "The JATS record contains zero <table-wrap> elements and the PMC HTML contains zero <table> tags, so there is no numeric table anywhere in the article.",
+      "rows_available": 0,
+      "status": "ABSENT"
+    },
+    {
+      "tier": 3,
+      "name": "author repository",
+      "checkable_sentence": "A Highlight letter with no Data-availability section and no investigation role in its author contributions deposits no data; any repository reachable for this content would be the repository of Ref. 1 (PMID 38740955), which is a different paper and is already curated as BL_2024.",
+      "rows_available": 0,
+      "status": "NOT APPLICABLE - no data of its own to deposit"
+    },
+    {
+      "tier": 4,
+      "name": "PDF text / vector",
+      "checkable_sentence": "The article body is 9 prose paragraphs plus a figure caption. It states exactly four numbers about lipids - 584, 40000, 40, 10 - and every one of them is a property of Ref. 1's library, not a measurement; none is paired with a lipid identity and a transfection value.",
+      "rows_available": 0,
+      "status": "NO VALUES"
+    },
+    {
+      "tier": "4b",
+      "name": "pdf vector geometry (page.get_drawings)",
+      "checkable_sentence": "Not reached, and the reason is checkable without it: the only figure is served as a single flattened JPEG (gr1.jpg, md5 8cca629044a5e7ffee0f9d91f7c320c6, 740x917 px, 548920 bytes) from both the PMC CDN and the Europe PMC fulltextRepo route, byte-identical. A flattened raster has no vector drawing items to read. Tier 4b is therefore unavailable for a structural reason, not an untested one.",
+      "rows_available": 0,
+      "status": "UNAVAILABLE - figure is a flattened raster"
+    },
+    {
+      "tier": 5,
+      "name": "raster pixels",
+      "checkable_sentence": "Figure 1 panel 4 does contain four quantitative bar charts with numeric axes, so pixels COULD be read - but the caption states the panel is reprinted from Ref. 1, PMID 38740955, which is already in the corpus as BL_2024 (560 + 51 rows). Digitising it would assign a second Experiment_ID to measurements that already have one, fabricating a second laboratory for one experiment.",
+      "rows_available": 0,
+      "status": "REFUSED - would duplicate BL_2024 under a fabricated source key",
+      "see": "DECISIONS.md D-1"
+    }
+  ],
+  "rows_emittable": 0,
+  "stop_reason": "Article is a Highlight commentary with zero original measurements. Its only quantitative figure is a licensed reprint of a paper already curated as BL_2024.",
+  "D_si_only": 0
+}

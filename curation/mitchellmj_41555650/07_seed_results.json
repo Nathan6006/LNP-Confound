@@ -1,0 +1,101 @@
+[
+ {
+  "check": "C10 anchor (identical formula AND exact mass)",
+  "what": "an OH moved C2->C3 on one arm of C10-306",
+  "clean_exit": 0,
+  "seeded_exit": 1,
+  "clean_metric": "anchor==enum:True",
+  "seeded_metric": "anchor==enum:False (delta mass 0.0)",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "formula  good/seed: C47H99N3O4 C47H99N3O4\nexactmass delta   : 0.0\nMATCHES_GOOD True\nMATCHES_SEED False\n"
+ },
+ {
+  "check": "emit.emit_rows refuses a LITERAL confidence (F-011)",
+  "what": "confidence=\"high\" passed as a string instead of a callable",
+  "clean_exit": 0,
+  "seeded_exit": 1,
+  "clean_metric": "callable accepted",
+  "seeded_metric": "literal REJECTED",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "RAISED EmitError emit: confidence='high' is a LITERAL.\nEvery row would receive 'high' regardless of its own record. That is error class 29, and it has now been found three times (F-011, F-025, F-046). In F-011 it rela\n"
+ },
+ {
+  "check": "emit.emit_rows refuses a CAVEAT WITH NO NOTE (F-024)",
+  "what": "confidence=\"low\" with an empty curation_note",
+  "clean_exit": 0,
+  "seeded_exit": 1,
+  "clean_metric": "note present -> accepted",
+  "seeded_metric": "empty note REJECTED",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "RAISED EmitError emit_rows('seed') item 'a': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='', value_is_bound='') and its curation_note\n"
+ },
+ {
+  "check": "conf_rule refuses to assign confidence from an assertion",
+  "what": "a record asserting an IUPAC structure with no stoichiometry evidence",
+  "clean_exit": 0,
+  "seeded_exit": 1,
+  "clean_metric": "evidence present -> high",
+  "seeded_metric": "evidence absent -> REFUSED",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "REFUSED\n"
+ },
+ {
+  "check": "P5 design-grid vs printed molar ratios",
+  "what": "one b-LNP in the C12-200 block swapped for the excluded number 67",
+  "clean_exit": 0,
+  "seeded_exit": 0,
+  "clean_metric": "0 mismatches",
+  "seeded_metric": "1 mismatches",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "MIS_GOOD 0\nMIS_SEED 1\n"
+ },
+ {
+  "check": "P1 amine-core formula vs the paper's own stoichiometry",
+  "what": "one CH2 added to amine 306 (a plausible cataloguing slip)",
+  "clean_exit": 0,
+  "seeded_exit": 0,
+  "clean_metric": "5/5 cores within 0.5% (worst 0.1638%)",
+  "seeded_metric": "4/5 cores within 0.5% (worst 8.7544%)",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "N_WITHIN_0p5_GOOD 5\nN_WITHIN_0p5_SEED 4\nWORST_GOOD 0.1638\nWORST_SEED 8.7544\n"
+ },
+ {
+  "check": "P3 arms built (from N-H count) vs arms stated in the IUPAC name",
+  "what": "amine 114 mis-read as tris(2-aminoethyl)amine: 6 N-H, same 3 nitrogens",
+  "clean_exit": 0,
+  "seeded_exit": 0,
+  "clean_metric": "15/15 agree",
+  "seeded_metric": "12/15 agree",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "AGREE_GOOD 15 of 15\nAGREE_SEED 12 of 15\n"
+ },
+ {
+  "check": "P8 axis LOO at the WIDENED native tolerance, seeded in THIS panel's geometry",
+  "what": "one of the seven decade ticks displaced by 0 / 1 / 2 / 3.25 / 5.0 px",
+  "clean_exit": 0,
+  "seeded_exit": 0,
+  "clean_metric": "0.00 px seed -> passes",
+  "seeded_metric": "5.00 px seed -> CAUGHT",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "SEED 0.00 px -> LOO 0.3696  strict=True native=True\nSEED 1.00 px -> LOO 1.3333  strict=True native=True\nSEED 2.00 px -> LOO 2.3333  strict=False native=True\nSEED 3.25 px -> LOO 3.5833  strict=False native=False\nSEED 5.00 px -> LOO 5.3333  strict=False native=False\nTOL_NATIVE 2.5302\n"
+ },
+ {
+  "check": "P14 grey colouring vs the caption's four stated criteria",
+  "what": "one b-LNP's grey/black classification flipped",
+  "clean_exit": 0,
+  "seeded_exit": 0,
+  "clean_metric": "0 disagreements over 90 rows",
+  "seeded_metric": "1 disagreements over 90 rows",
+  "agreement_count_moved": true,
+  "CREDITED": true,
+  "seeded_output_tail": "DISAGREE_CLEAN 0\nDISAGREE_SEEDED 1\n"
+ }
+]

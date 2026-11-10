@@ -1,0 +1,107 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2.md S3, stage 00b). Written BEFORE any chemistry or any digitiser, as required. Every panel that could supply a value, the tier it would come from, and - where the tier is 5_pixels or 0_unavailable - a sentence a reviewer can check saying why tiers 1-4 failed.",
+  "paper": "Sun et al., PNAS 2026, 10.1073/pnas.2528477123, PMID 42150080",
+  "read_on": "2026-11-10",
+
+  "VERDICT": "NO USABLE PER-MEMBER VALUE SOURCE. 0 corpus rows emittable. STOP.",
+  "verdict_in_one_line": "The library screen's per-member values live in the MAIN TEXT, which is not held and is not obtainable by any permitted route today; everything inside the held SI Appendix is either a non-corpus endpoint (size, PDI, viability), a single-formulation experiment with no structure-activity variation, or a qualitative image.",
+
+  "tiers_checked": {
+    "1_publisher_source_data": {
+      "result": "ABSENT",
+      "evidence": "PMC JATS declares pmc-prop-has-supplement=yes with exactly ONE supplementary item, the sapp.pdf we hold (pmc_fetch.py: n_supp_declared=1, n_tables=0). Crossref has no 'components' field and an empty 'relation' {}. The article's JATS badge subject is 'video', so the further pnas.2528477123.sm* files are movies, not datasets. PNAS publishes no 'Source Data' product of the Springer/Nature kind for this article."
+    },
+    "2_si_tables": {
+      "result": "PRESENT BUT IRRELEVANT",
+      "evidence": "The SI Appendix contains exactly one table, Table S1 (p.3), which lists PCR/sgRNA primer sequences. Full text layer of all 15 pages was dumped and searched; there is no Table S2 and no per-formulation numeric table anywhere."
+    },
+    "3_author_repo": {
+      "result": "ABSENT",
+      "evidence": "find_repo.py: 0 repo hits, 0 surviving code hits after filtering (7 DOI-string and 20 PMID-string code hits, all unrelated third-party files). No Zenodo/Dryad/OSF pointer is reachable - the Data Availability statement itself is in the main text we cannot read."
+    },
+    "4_pdfplumber_text_table": {
+      "result": "NOT APPLICABLE",
+      "evidence": "see tier 2 - there is no numeric table to parse. Axis CATEGORY labels in Figs S2/S3/S6 do have a text layer and were read symbolically (that is how the 16 formulation names below were established), but the bar HEIGHTS are vector geometry, not text."
+    },
+    "5_pixels": {
+      "result": "AVAILABLE ONLY FOR NON-CORPUS ENDPOINTS",
+      "evidence": "see per-panel table below"
+    },
+    "0_unavailable": {
+      "result": "THIS IS WHERE THE SCREEN IS",
+      "evidence": "The hiPSC-CM luciferase screen that names the library is in the main article (11 pages, 7,949 words per the JATS <counts>), Figure 1. The main article is not held. www.pnas.org/doi/10.1073/pnas.2528477123 returns HTTP 403 (Cloudflare interstitial titled 'Just a moment...') to curl with a browser User-Agent and to WebFetch; pmc.ncbi.nlm.nih.gov/articles/PMC13214034/ returns HTTP 403 and the PMC record declares pmc-status-live=no, pmc-status-embargo=yes with <event event-type=\"pmc-release\"> 2026-11-18. The shared Playwright browser belongs to the main session and the task brief forbids its use here; no paywall or bot-check bypass was attempted. ~/LNP/Papers/ holds only the same SI PDF, not the article."
+    }
+  },
+
+  "panels": [
+    {
+      "panel": "Main text Fig 1 (inferred from the abstract: 'By screening a chemically diverse LNP library, we identified a lead LNP, 18:1 TAP10')",
+      "would_supply": "the per-member hiPSC-CM transfection values - the only thing in this paper the corpus wants",
+      "tier": "0_unavailable",
+      "why_1_to_4_failed": "Tiers 1-3 are absent (above). Tier 4/5 require the main-article PDF, which is 403 from PNAS and embargoed at PMC until 2026-11-18.",
+      "n_values": "unknown"
+    },
+    {
+      "panel": "Fig S2A - particle diameter (nm), 16 formulations, mean +/- s.e.m., n=3",
+      "would_supply": "hydrodynamic diameter",
+      "tier": "5_pixels",
+      "why_1_to_4_failed": "no table, no repo, no source data; bars are vector polylines on p.5 (get_drawings: 424 line items, 576 curve items, 1 filled rect which is the white page background)",
+      "corpus_eligible": false,
+      "why_not": "CLAUDE.md 2026-07-23: the in-vivo pool was defined 'delivery-only ... excl. diameter/zeta/uptake'. Diameter is not an Experiment_value endpoint in this corpus."
+    },
+    {
+      "panel": "Fig S2B - polydispersity index, 16 formulations, n=3",
+      "would_supply": "PDI",
+      "tier": "5_pixels",
+      "why_1_to_4_failed": "as Fig S2A",
+      "corpus_eligible": false,
+      "why_not": "same exclusion as diameter"
+    },
+    {
+      "panel": "Fig S3 - relative cell viability of hiPSC-CMs at 24 h, 16 formulations, n=3",
+      "would_supply": "normalized cell viability (%)",
+      "tier": "5_pixels",
+      "why_1_to_4_failed": "as Fig S2A",
+      "corpus_eligible": false,
+      "why_not": "a toxicity endpoint, not a delivery endpoint. The corpus deliberately excludes the 90 hemolysis_percent rows of Original_LNPDB for exactly this reason (CLAUDE.md 2026-07-23). Viability is the same class."
+    },
+    {
+      "panel": "Fig S6B - IVIS average radiance (p/s/cm2/sr) of thymus, lung, heart, diaphragm, liver; PBS vs 18:1 TAP10 LNP-Luc; IT route; 6 h; 1 mg/kg total Luc mRNA; n=2",
+      "would_supply": "a genuine luminescence delivery endpoint - 5 organs x 1 formulation",
+      "tier": "5_pixels",
+      "why_1_to_4_failed": "no table, no repo, no source data; the y-axis has printed decade ticks (0, 1x10^7 ... 4x10^7) so it IS calibratable, but see corpus_eligible",
+      "corpus_eligible": false,
+      "why_not": "ONE ionizable lipid across five organs is a biodistribution block, not a screen. An Experiment_ID built from it would contain 1 unique IL_SMILES: it can contribute nothing to shared-lipid concordance (Result 3), nothing to LOSO (Result 4), and the per-experiment z-score convention would be computing a z over 5 organs of the same molecule. n=2 'biologically independent replicates' is also stated for the treatment group only. Recorded here so the decision is visible, not silently dropped - see D-3."
+    },
+    {
+      "panel": "Fig S7B - tdTomato+ fraction of viable non-cardiomyocyte heart populations (total non-CM, CD31 endothelial, CD45 immune, aSMA SMC, PDGFRa fibroblast), n=3",
+      "would_supply": "%-positive delivery by cell population",
+      "tier": "5_pixels",
+      "why_1_to_4_failed": "flow cytometry density plots; the gated percentages are drawn inside the plots as small overlaid glyphs, and no table restates them",
+      "corpus_eligible": false,
+      "why_not": "one formulation (18:1 TAP10), one route. Same argument as Fig S6B."
+    },
+    {
+      "panel": "Figs S4, S5, S8, S9, S10, S11",
+      "would_supply": "nothing numeric",
+      "tier": "n/a",
+      "corpus_eligible": false,
+      "why_not": "H&E / immunohistochemistry / light-sheet / western / Sanger panels. Qualitative images with scale bars only."
+    },
+    {
+      "panel": "Fig S1 - 1H-NMR and LC/MS of 6A1-SC8",
+      "would_supply": "no delivery value; it is an ANCHOR, and a good one",
+      "tier": "4_pdfplumber_text_table",
+      "note": "the NMR integrals and the MS peak labels are in the PDF text layer, read symbolically. Used in 07_qc.json to cross-check the structure the corpus already stores for 6A1-SC8."
+    }
+  ],
+
+  "trap_checks_from_the_brief": {
+    "trap_1_lipids_vs_formulations": "CONFIRMED PRESENT. The 16 names on the Fig S2/S3 axes are FORMULATIONS, not lipids: 'Base LNP' plus three Avanti catalogue helper lipids titrated at 10/20/30/40/50 mol% (18:1 TAP = DOTAP, permanently cationic; 18:1 DAP = DODAP, ionizable; 18:1 PA = DOPA, anionic). The ionizable dendrimer lipid is held constant. 16 formulations, 1 ionizable library member visible. See 01_blocks.csv.",
+    "trap_2_already_in_corpus": "CONFIRMED PRESENT. 6A1-SC8 is already in data/data_vivo.csv under Experiment_ID KZ_2016, and the mass anchor in Fig S1 matches that stored structure exactly. See 02_corpus_overlap.json. Reported, not acted on.",
+    "trap_3_unscaled_heatmap": "NOT MET. There is no heatmap in the SI.",
+    "trap_4_assay_blocks": "RELEVANT BUT MOOT. The SI carries at least four non-poolable assay blocks (hiPSC-CM luciferase in vitro; IVIS radiance in vivo; flow-cytometry %tdTomato+; immunohistochemistry). None was pooled because none was emitted."
+  },
+
+  "what_would_change_this": "The PMC release date on the record is 2026-11-18. After that, PMC should serve the main article (the publisher blocks XML full text, so expect the PDF route, Fig 1 at tier 5_pixels). That is the ONLY route identified that does not require a browser. Re-open then; nothing in this folder needs to be redone."
+}

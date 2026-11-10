@@ -1,0 +1,552 @@
+{
+ "what": "Figures S2 and S4, U266 cell viability (%), XTT",
+ "tier": "5_pixels",
+ "corpus_admissible": false,
+ "purpose": "cross-panel agreement test, not emission",
+ "S2": {
+  "native_px": [
+   874,
+   1367
+  ],
+  "image_format": "jpeg",
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 4.2394,
+   "origin_px": 68.512,
+   "origin_value": 150.0,
+   "tick_step_units": -25.0,
+   "n_ticks": 7,
+   "tick_fit_residual_px": 0.2536,
+   "tick_residual_tol_px": 2.5
+  },
+  "tick_rows": [
+   68.5,
+   174.355,
+   280.698,
+   386.5,
+   492.5,
+   598.187,
+   704.545
+  ],
+  "loo_residuals_px": [
+   0.022,
+   0.2,
+   0.261,
+   0.036,
+   0.055,
+   0.355,
+   0.221
+  ],
+  "loo_worst_px": 0.355,
+  "loo_tol_px": 1.5,
+  "loo_verdict": "PASS",
+  "n_bar_windows": 16,
+  "n_refused": 0,
+  "bars": {
+   "UT": {
+    "value_pct": 100.11,
+    "row": 280,
+    "x0": 208,
+    "x1": 258,
+    "width_px": 50,
+    "flank_delta_px": 0.0
+   },
+   "MC3": {
+    "value_pct": 93.04,
+    "row": 310,
+    "x0": 280,
+    "x1": 330,
+    "width_px": 50,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 1": {
+    "value_pct": 100.11,
+    "row": 280,
+    "x0": 352,
+    "x1": 401,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 2": {
+    "value_pct": 103.65,
+    "row": 265,
+    "x0": 424,
+    "x1": 472,
+    "width_px": 48,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 3": {
+    "value_pct": 93.75,
+    "row": 307,
+    "x0": 495,
+    "x1": 544,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 4": {
+    "value_pct": 106.01,
+    "row": 255,
+    "x0": 566,
+    "x1": 615,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 5": {
+    "value_pct": 95.87,
+    "row": 298,
+    "x0": 638,
+    "x1": 687,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 6": {
+    "value_pct": 105.54,
+    "row": 257,
+    "x0": 710,
+    "x1": 758,
+    "width_px": 48,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 7": {
+    "value_pct": 104.83,
+    "row": 260,
+    "x0": 781,
+    "x1": 830,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 8": {
+    "value_pct": 89.03,
+    "row": 327,
+    "x0": 853,
+    "x1": 901,
+    "width_px": 48,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 9": {
+    "value_pct": 89.03,
+    "row": 327,
+    "x0": 924,
+    "x1": 973,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 10": {
+    "value_pct": 90.68,
+    "row": 320,
+    "x0": 996,
+    "x1": 1044,
+    "width_px": 48,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 11": {
+    "value_pct": 93.98,
+    "row": 306,
+    "x0": 1067,
+    "x1": 1116,
+    "width_px": 49,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 12": {
+    "value_pct": 93.75,
+    "row": 307,
+    "x0": 1140,
+    "x1": 1186,
+    "width_px": 46,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 13": {
+    "value_pct": 102.94,
+    "row": 268,
+    "x0": 1211,
+    "x1": 1258,
+    "width_px": 47,
+    "flank_delta_px": 0.0
+   },
+   "Lipid 14": {
+    "value_pct": 94.92,
+    "row": 302,
+    "x0": 1282,
+    "x1": 1330,
+    "width_px": 48,
+    "flank_delta_px": 0.0
+   }
+  }
+ },
+ "S4": {
+  "native_px": [
+   870,
+   1400
+  ],
+  "image_format": "png",
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 3.2316,
+   "origin_px": 275.057,
+   "origin_value": 150.0,
+   "tick_step_units": -25.0,
+   "n_ticks": 7,
+   "tick_fit_residual_px": 0.3225,
+   "tick_residual_tol_px": 2.5
+  },
+  "tick_rows": [
+   274.821,
+   356.054,
+   436.502,
+   517.5,
+   598.541,
+   679.068,
+   759.51
+  ],
+  "loo_residuals_px": [
+   0.439,
+   0.289,
+   0.164,
+   0.084,
+   0.393,
+   0.083,
+   0.54
+  ],
+  "loo_worst_px": 0.54,
+  "loo_tol_px": 1.5,
+  "loo_verdict": "PASS",
+  "legend_swatches": {
+   "1": [
+    200,
+    222,
+    248
+   ],
+   "2": [
+    144,
+    191,
+    249
+   ],
+   "3": [
+    85,
+    160,
+    251
+   ],
+   "4": [
+    192,
+    192,
+    255
+   ],
+   "5": [
+    142,
+    141,
+    255
+   ],
+   "6": [
+    87,
+    87,
+    249
+   ],
+   "7": [
+    0,
+    1,
+    254
+   ],
+   "9": [
+    0,
+    0,
+    192
+   ],
+   "11": [
+    222,
+    139,
+    249
+   ],
+   "12": [
+    128,
+    0,
+    129
+   ],
+   "13": [
+    185,
+    86,
+    216
+   ],
+   "14": [
+    0,
+    0,
+    128
+   ]
+  },
+  "column_runs_per_colour": {
+   "1": 5,
+   "2": 5,
+   "3": 5,
+   "4": 5,
+   "5": 5,
+   "6": 5,
+   "7": 5,
+   "9": 5,
+   "11": 5,
+   "12": 5,
+   "13": 5,
+   "14": 5
+  },
+  "colour_match_qc": {
+   "n_cells": 12,
+   "max_nearest_swatch_distance": 4.123,
+   "n_ambiguous": 0,
+   "assignment_agrees_with_mask": true,
+   "assigned": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    13,
+    14
+   ],
+   "expected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  "n_refused": 0,
+  "refusals": {},
+  "dose_uM": 0.06,
+  "bars": {
+   "Lipid 1": {
+    "value_pct": 99.89,
+    "row": 437,
+    "x0": 899,
+    "x1": 915,
+    "width_px": 16,
+    "flank_delta_px": 1.0,
+    "swatch_rgb": [
+     200,
+     222,
+     248
+    ]
+   },
+   "Lipid 2": {
+    "value_pct": 97.72,
+    "row": 444,
+    "x0": 920,
+    "x1": 934,
+    "width_px": 14,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     144,
+     191,
+     249
+    ]
+   },
+   "Lipid 3": {
+    "value_pct": 123.1,
+    "row": 362,
+    "x0": 940,
+    "x1": 954,
+    "width_px": 14,
+    "flank_delta_px": 1.0,
+    "swatch_rgb": [
+     85,
+     160,
+     251
+    ]
+   },
+   "Lipid 4": {
+    "value_pct": 110.72,
+    "row": 402,
+    "x0": 959,
+    "x1": 974,
+    "width_px": 15,
+    "flank_delta_px": 1.0,
+    "swatch_rgb": [
+     192,
+     192,
+     255
+    ]
+   },
+   "Lipid 5": {
+    "value_pct": 106.39,
+    "row": 416,
+    "x0": 979,
+    "x1": 992,
+    "width_px": 13,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     142,
+     141,
+     255
+    ]
+   },
+   "Lipid 6": {
+    "value_pct": 105.77,
+    "row": 418,
+    "x0": 1000,
+    "x1": 1014,
+    "width_px": 14,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     87,
+     87,
+     249
+    ]
+   },
+   "Lipid 7": {
+    "value_pct": 104.53,
+    "row": 422,
+    "x0": 1020,
+    "x1": 1032,
+    "width_px": 12,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     0,
+     1,
+     254
+    ]
+   },
+   "Lipid 9": {
+    "value_pct": 89.06,
+    "row": 472,
+    "x0": 1040,
+    "x1": 1052,
+    "width_px": 12,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     0,
+     0,
+     192
+    ]
+   },
+   "Lipid 11": {
+    "value_pct": 94.01,
+    "row": 456,
+    "x0": 1058,
+    "x1": 1073,
+    "width_px": 15,
+    "flank_delta_px": 2.0,
+    "swatch_rgb": [
+     222,
+     139,
+     249
+    ]
+   },
+   "Lipid 12": {
+    "value_pct": 94.01,
+    "row": 456,
+    "x0": 1098,
+    "x1": 1112,
+    "width_px": 14,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     128,
+     0,
+     129
+    ]
+   },
+   "Lipid 13": {
+    "value_pct": 103.29,
+    "row": 426,
+    "x0": 1078,
+    "x1": 1092,
+    "width_px": 14,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     185,
+     86,
+     216
+    ]
+   },
+   "Lipid 14": {
+    "value_pct": 94.94,
+    "row": 453,
+    "x0": 1118,
+    "x1": 1132,
+    "width_px": 14,
+    "flank_delta_px": 0.0,
+    "swatch_rgb": [
+     0,
+     0,
+     128
+    ]
+   }
+  }
+ },
+ "cross_panel_test": {
+  "claim": "Figure S2 (NC-siRNA, 0.06 uM, 72 h, U266, XTT) and Figure S4's 0.06 uM group (siNC, 72 h, U266, XTT) are the same condition and must agree.",
+  "n_shared_lipids": 12,
+  "shared": [
+   "Lipid 1",
+   "Lipid 2",
+   "Lipid 3",
+   "Lipid 4",
+   "Lipid 5",
+   "Lipid 6",
+   "Lipid 7",
+   "Lipid 9",
+   "Lipid 11",
+   "Lipid 12",
+   "Lipid 13",
+   "Lipid 14"
+  ],
+  "S2_values": [
+   100.11,
+   103.65,
+   93.75,
+   106.01,
+   95.87,
+   105.54,
+   104.83,
+   89.03,
+   93.98,
+   93.75,
+   102.94,
+   94.92
+  ],
+  "S4_values": [
+   99.89,
+   97.72,
+   123.1,
+   110.72,
+   106.39,
+   105.77,
+   104.53,
+   89.06,
+   94.01,
+   94.01,
+   103.29,
+   94.94
+  ],
+  "ratio_S4_over_S2": [
+   0.9978,
+   0.9428,
+   1.3131,
+   1.0444,
+   1.1097,
+   1.0022,
+   0.9971,
+   1.0003,
+   1.0003,
+   1.0028,
+   1.0034,
+   1.0002
+  ],
+  "ratio_mean": 1.0345,
+  "ratio_sd": 0.0918,
+  "ratio_min": 0.9428,
+  "ratio_max": 1.3131,
+  "max_abs_difference_pp": 29.35,
+  "mean_abs_difference_pp": 4.33,
+  "spearman_rank_corr": 0.4825
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "assay": {
+  "organism": "Bacillus subtilis",
+  "organism_kind": "Gram-positive bacterium, model strain (NOT a cell line)",
+  "cargo": "none -- the lipidoid is tested as the compound itself; there is no nucleic acid, no helper lipid, no PEG-lipid and no nanoparticle in this assay",
+  "formulation": "methylated (quaternised) lipidoid dispersed directly in Luria Broth growth medium; DLS shows 100-1000 nm aggregates for most members (Figure S2)",
+  "route": "in vitro, liquid broth growth-inhibition assay (bioscreen OD)",
+  "readout_as_printed": "optical density at 420-580 nm (OD420-580) of planktonic bacteria",
+  "activity_definition": ">99.9% inhibition of growth, evidenced either by complete lack of growth over 24 h or by a significantly delayed onset of the log phase; the 150 min delay threshold is derived in Figure S3",
+  "inoculum_screen": "1e6 CFU/mL",
+  "inoculum_PI_assay": "1e7 CFU/mL",
+  "timepoint": "24 h",
+  "screen_doses_uM": "25, 50, 100",
+  "mic_doses_uM": "1 - 12.5 (the 27-member follow-up)",
+  "hemolysis_doses_uM": "up to 200 (human erythrocytes)"
+ },
+ "printed_tail_totals_tableS3": {
+  "6B": 38,
+  "8": 40,
+  "8CB": 47,
+  "9": 51,
+  "9C": 39,
+  "10": 51,
+  "10B": 43,
+  "10B'": 48,
+  "11": 49,
+  "12": 42,
+  "13B": 25,
+  "14": 15,
+  "16": 12
+ },
+ "note": "printed_tail_totals_tableS3 is recorded because it CONTRADICTS the cells it totals; see 08_contradictions.csv C-1."
+}

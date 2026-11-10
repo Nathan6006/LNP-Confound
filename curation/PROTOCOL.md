@@ -33,35 +33,75 @@ worthless if the answer was visible while extracting.
    page/figure provenance.
 5. `05_formulations.csv` — molar ratios, helper/chol/PEG identities, IL:mRNA ratios, and
    the mol→weight arithmetic with the MWs used recorded inline.
-6. `06_merged.csv` — one row per LNP in the 67-column LNPDB schema plus provenance
+6. `06_merged.csv` — one row per LNP in the **79-column** corpus schema (67 LNPDB
+   curation columns + 5 ML-change-log descriptors + the 7 quality/provenance
+   columns of `provenance/schema_quality.json`) plus provenance
    columns (stripped on final merge).
 7. `07_qc.json` — every check below, pass/fail per row.
 
-## Checks (all automated; `07_qc.json`)
+## Two check-numbering schemes -- P for per-paper, C for corpus
+
+**Read this before quoting a check number.** Until 2026-11-09 this file and
+`provenance/audit.py` both numbered their checks `C1...`, and they meant
+different things:
+
+| number | in THIS file | in `audit.py` |
+|---|---|---|
+| 1 | exact mass vs reported HRMS | SMILES parse / canonical |
+| 2 | benchmark lipids as positive controls | mass monotonicity in verified-length series |
+| 7 | render-and-compare | field consistency / blank required fields |
+| 8 | overlap against the lipid union | descriptors vs stored SMILES |
+
+Every per-folder `07_qc.json` used the first scheme and every review report
+used the second, so "C7 passed" meant two different things depending on which
+file you were holding. That is a live misread waiting to happen during
+adjudication, and adjudication is where a wrong repair puts measured values on
+the wrong molecules.
+
+**So the per-paper checks below are now P1-P9.** `C1-C17` are reserved for the
+corpus-level checks, which are the ones that gate a build:
+
+| | corpus-level check | where it lives |
+|---|---|---|
+| C1-C9 | internal consistency of the corpus | `provenance/audit.py` |
+| C10 | enumerated structure vs the structure the paper DRAWS | `structure_check.py` |
+| C11 | named commercial reagent vs its fixed structure | `reagent_registry.py` |
+| C12 | z-score normalisation unit declared | `audit.py` |
+| C13 | quality-flag vocabulary, and the two caveat counts | `audit.py` |
+| C14 | sterol liberated from every ester, full InChIKey | `audit.py` |
+| C15 | numbers the DOCS assert, vs the corpus | `check_docs.py` |
+| C16 | is each C10 anchor DERIVED or transcribed? | `check_anchor_independence.py` |
+| C17 | one reagent name, one structure, across experiments | `check_reagent_crosscheck.py` |
+
+When you add a check, take **max + 1 and check it is unused** -- error classes
+18 and 19 were each used twice, and two documents cite "class 19" meaning
+different things.
+
+## Checks P1-P9 (all automated; `07_qc.json`)
 
 Ordered by how much they actually catch.
 
-- **C1 exact mass vs reported HRMS.** The strongest check. One CH2 = 14.0157 Da, so a
+- **P1 exact mass vs reported HRMS.** The strongest check. One CH2 = 14.0157 Da, so a
   ±1 carbon error — my worst failure mode on long chains — is unmissable at ppm
   tolerance. Any lipid whose HRMS is reported in the SI gets independently confirmed.
-- **C2 benchmark lipids as positive controls.** These papers formulate MC3 / SM-102 /
+- **P2 benchmark lipids as positive controls.** These papers formulate MC3 / SM-102 /
   ALC-0315 / 306Oi10 as comparators, and the corpus already holds their canonical
   SMILES. Reproducing a benchmark exactly validates my reading of *that paper's* drawing
   conventions before its novel structures are trusted.
-- **C3 enumeration count == stated library size.** If the paper says 572 and I produce
+- **P3 enumeration count == stated library size.** If the paper says 572 and I produce
   560 or 1144, the degree of substitution is wrong. Systematic, so high value.
-- **C4 no duplicate canonical SMILES within a source.** Duplicates mean regiochemistry
+- **P4 no duplicate canonical SMILES within a source.** Duplicates mean regiochemistry
   or symmetry was mishandled.
-- **C5 RDKit parse + valence sanity** on every SMILES; N count > 0 for an ionizable lipid.
-- **C6 molar ratios sum to ~100**, and recomputed MW matches any stated MW.
-- **C7 render-and-compare.** RDKit draws my SMILES; compare against the paper's diagram
+- **P5 RDKit parse + valence sanity** on every SMILES; N count > 0 for an ionizable lipid.
+- **P6 molar ratios sum to ~100**, and recomputed MW matches any stated MW.
+- **P7 render-and-compare.** RDKit draws my SMILES; compare against the paper's diagram
   side by side. Catches gross topology errors. Will NOT reliably catch ±1 carbon — that
-  is C1's job, and C7 must never be used as a substitute for it.
-- **C8 overlap against the 19,827-lipid union** of all of the user's layers
+  is P1's job, and P7 must never be used as a substitute for it.
+- **P8 overlap against the 19,827-lipid union** of all of the user's layers
   (`new_data/LNPDB_vitro_del_processed.csv`, `new_data/lnpcd_tox_processed.csv`,
   `confound/data/*.csv`). Catches accidental re-curation of something already held. For
   the two validation papers a HIGH overlap is the expected, desired result.
-- **C9 value distribution sanity**: bin counts for heatmaps, range checks, and for a
+- **P9 value distribution sanity**: bin counts for heatmaps, range checks, and for a
   discretized source the number of distinct values must equal the number of legend bins.
 
 ## Scoring the validation runs

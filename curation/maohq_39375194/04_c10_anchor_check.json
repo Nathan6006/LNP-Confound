@@ -1,0 +1,84 @@
+{
+ "results": [
+  {
+   "lipid": "DLin-MC3-DMA",
+   "status": "exact_match",
+   "anchor_full": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "emitted_full": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "anchor_skeleton": "NRLNQCOGCKAESA",
+   "emitted_skeleton": "NRLNQCOGCKAESA",
+   "byte_identical": true
+  },
+  {
+   "lipid": "DOTAP",
+   "status": "exact_match",
+   "anchor_full": "KWVJHCQQUFDPLU-YEUCEMRASA-N",
+   "emitted_full": "KWVJHCQQUFDPLU-YEUCEMRASA-N",
+   "anchor_skeleton": "KWVJHCQQUFDPLU",
+   "emitted_skeleton": "KWVJHCQQUFDPLU",
+   "byte_identical": true
+  },
+  {
+   "lipid": "DDAB",
+   "status": "exact_match",
+   "anchor_full": "OGQYPPBGSLZBEG-UHFFFAOYSA-N",
+   "emitted_full": "OGQYPPBGSLZBEG-UHFFFAOYSA-N",
+   "anchor_skeleton": "OGQYPPBGSLZBEG",
+   "emitted_skeleton": "OGQYPPBGSLZBEG",
+   "byte_identical": true
+  },
+  {
+   "lipid": "DOPE",
+   "status": "exact_match",
+   "anchor_full": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "emitted_full": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "anchor_skeleton": "MWRBNPKJOOWZPW",
+   "emitted_skeleton": "MWRBNPKJOOWZPW",
+   "byte_identical": true
+  },
+  {
+   "lipid": "DSPC",
+   "status": "exact_match",
+   "anchor_full": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "emitted_full": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "anchor_skeleton": "NRJAVPSFFCBXDT",
+   "emitted_skeleton": "NRJAVPSFFCBXDT",
+   "byte_identical": true
+  },
+  {
+   "lipid": "18PG",
+   "status": "exact_match",
+   "anchor_full": "DSNRWDQKZIEDDB-GCMPNPAFSA-M",
+   "emitted_full": "DSNRWDQKZIEDDB-GCMPNPAFSA-M",
+   "anchor_skeleton": "DSNRWDQKZIEDDB",
+   "emitted_skeleton": "DSNRWDQKZIEDDB",
+   "byte_identical": true
+  },
+  {
+   "lipid": "14PA",
+   "status": "exact_match",
+   "anchor_full": "OZSITQMWYBNPMW-GDLZYMKVSA-M",
+   "emitted_full": "OZSITQMWYBNPMW-GDLZYMKVSA-M",
+   "anchor_skeleton": "OZSITQMWYBNPMW",
+   "emitted_skeleton": "OZSITQMWYBNPMW",
+   "byte_identical": true
+  },
+  {
+   "lipid": "Cholesterol",
+   "status": "NO_ANCHOR",
+   "note": "NO INDEPENDENT ANCHOR. Left empty on purpose so the gap is visible. Hand-writing an 8-stereocentre steroid here would be"
+  },
+  {
+   "lipid": "DMG-PEG2000",
+   "status": "NO_ANCHOR",
+   "note": "EMPTY ON PURPOSE. The panel draws n = 44, but the block length is a distribution, so no single SMILES is the reagent and"
+  }
+ ],
+ "n_anchors": 7,
+ "n_exact_match": 7,
+ "n_skeleton_match": 7,
+ "n_stereo_mismatch": 0,
+ "n_no_anchor": 2,
+ "byte_identical_count": 7,
+ "_byte_identity_note": "Byte-identity is EXPECTED for a correct re-derivation once canonicalised and is NOT evidence of copying (F-037). Independence here is established by make_reference.py's run-time AST walk, recorded in PROVENANCE.md."
+}

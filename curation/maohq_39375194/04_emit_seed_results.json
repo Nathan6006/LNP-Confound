@@ -1,0 +1,52 @@
+{
+ "seeds": [
+  {
+   "seed": "control",
+   "what": "the real per-item callables",
+   "expected_returncode": 0,
+   "returncode": 0,
+   "raised": false,
+   "CREDITED": true,
+   "message_head": "emitted 2 rows, caveats 1"
+  },
+  {
+   "seed": "literal_confidence",
+   "what": "confidence='high' as a LITERAL (error class 29 / F-011: a literal relabelled 24 'ASSUMED' lipids as the project's highest confidence)",
+   "expected_returncode": 1,
+   "returncode": 1,
+   "raised": true,
+   "CREDITED": true,
+   "message_head": "REFUSED: emit: confidence='high' is a LITERAL."
+  },
+  {
+   "seed": "caveat_without_note",
+   "what": "confidence='medium' on an 18PG row with an empty curation_note (F-024: found 6 such rows on its first run)",
+   "expected_returncode": 1,
+   "returncode": 1,
+   "raised": true,
+   "CREDITED": true,
+   "message_head": "REFUSED: emit_rows('seed:caveat_without_note') item 'LC_2024|1|RLU_B16': this row carries a caveat (confidence='medium', positional_ambiguity='0', structure_ass"
+  },
+  {
+   "seed": "bad_vocabulary",
+   "what": "confidence='very high', outside provenance/schema_quality.json's allowed set",
+   "expected_returncode": 1,
+   "returncode": 1,
+   "raised": true,
+   "CREDITED": true,
+   "message_head": "REFUSED: emit_rows('seed:bad_vocabulary') item 'LC_2024|1|RLU_B16': confidence='very high' is not in the schema's allowed set ['high', 'medium', 'low', '']. The"
+  },
+  {
+   "seed": "missing_record",
+   "what": "an item with no enumeration record behind its flag",
+   "expected_returncode": 1,
+   "returncode": 1,
+   "raised": true,
+   "CREDITED": true,
+   "message_head": "REFUSED: emit_rows('seed:missing_record'): item 'LC_2024|1|RLU_B16' has no enumeration record. A flag with no record behind it cannot be traced, which is the wh"
+  }
+ ],
+ "n": 5,
+ "n_credited": 5,
+ "all_credited": true
+}

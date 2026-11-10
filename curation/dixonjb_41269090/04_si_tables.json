@@ -1,0 +1,108 @@
+{
+  "_what": "The numerals of SI Tables S2, S3 and S4, transcribed by reading the embedded bitmaps. These three tables have no text layer (stage00_scan_for_values.py proves it), so this file is the hand-off point between pixels and arithmetic. Everything downstream is exact arithmetic on these integers.",
+  "_how_read": {
+    "method": "the page's embedded PNG extracted at its native resolution (no page re-render), then read visually; Table S2 at 2x LANCZOS whole-table, Tables S3/S4 at 2x LANCZOS whole-table",
+    "second_independent_read": "each table read a SECOND time from a DIFFERENT crop at a DIFFERENT magnification -- Table S2 as two half-height crops of the right-hand columns at 2.4x, Tables S3/S4 as a label-column + LECs-column composite at 2.0x. Agreement is recorded in 07_qc.json.",
+    "native_dpi_measured": {"table_S2_page22": 198.5, "table_S3_page23": 249.7, "table_S4_page24": 249.8},
+    "read_on": "2026-11-10",
+    "no_geometry": "no axis, no scale, no origin, no colour ramp and no bar is involved; these are printed numerals. curation/lib's axis/bars/heatmap modules are deliberately NOT used because there is nothing for them to measure."
+  },
+
+  "table_S2": {
+    "caption": "Table S2. Average LEC count and LEC/aVHH+ cell count for lead LEC-specific LNP candidates, namely LNP1, LNP2, LNP3, LNP4, LNP7, and LNP11.",
+    "page": 22,
+    "columns": ["Type of LN", "Administration", "LEC Count", "aVHH+ Cell Count"],
+    "cohort": "Figure 2 validation study: each LNP administered INDIVIDUALLY, intradermally, into BOTH paws.",
+    "rows": [
+      ["ALN", "Saline", 2182, 37],
+      ["ALN", "LNP1", 1022, 543],
+      ["ALN", "LNP2", 1467, 697],
+      ["ALN", "LNP3", 948, 134],
+      ["ALN", "LNP4", 997, 134],
+      ["ALN", "LNP7", 2757, 977],
+      ["ALN", "LNP11", 372, 37],
+      ["BLN", "Saline", 2016, 39],
+      ["BLN", "LNP1", 2139, 376],
+      ["BLN", "LNP2", 2169, 715],
+      ["BLN", "LNP3", 1971, 572],
+      ["BLN", "LNP4", 3319, 159],
+      ["BLN", "LNP7", 2204, 743],
+      ["BLN", "LNP11", 3631, 239],
+      ["PLN", "Saline", 95, 2],
+      ["PLN", "LNP1", 388, 139],
+      ["PLN", "LNP2", 105, 31],
+      ["PLN", "LNP3", 771, 144],
+      ["PLN", "LNP4", 118, 49],
+      ["PLN", "LNP7", 782, 292],
+      ["PLN", "LNP11", 230, 52]
+    ]
+  },
+
+  "cell_types": ["Macrophages", "Monocytes", "cDC2", "cDC1", "DNs", "FRCs", "LECs", "BECs", "VECs"],
+
+  "table_S3": {
+    "caption": "Table S3. Average cell count for the various cell types found in ALN, BLN, PLN Contralateral (non-injected), PLN injected, and PLV for saline-, free aVHH-, MC3-, and LNP7-injected animals.",
+    "page": 23,
+    "cohort": "Figure 4 study: ONE hindlimb injected, so ALN, BLN and PLN Contralateral are off-target control sites and PLN Injected and PLV are the draining sites.",
+    "rows": [
+      ["ALN", "Saline", 4036, 1294, 2914, 1008, 114907, 6175, 7099, 237, 1269],
+      ["ALN", "Free aVHH", 4970, 1606, 4155, 1356, 270150, 6045, 10462, 744, 3796],
+      ["ALN", "MC3", 4013, 67256, 4264, 2682, 155750, 7848, 7993, 145, 1995],
+      ["ALN", "LNP7", 4665, 10492, 6018, 3885, 337655, 8294, 7802, 167, 1879],
+      ["BLN", "Saline", 7113, 2666, 8368, 2474, 105104, 13394, 10007, 296, 2267],
+      ["BLN", "Free aVHH", 10295, 4097, 11666, 3698, 168662, 15316, 16065, 574, 6351],
+      ["BLN", "MC3", 8562, 6471, 12017, 4630, 224232, 21738, 15810, 249, 5418],
+      ["BLN", "LNP7", 7940, 4129, 12104, 3390, 227405, 14637, 10541, 310, 3433],
+      ["PLN Contralateral", "Saline", 1790, 728, 1417, 541, 18325, 2056, 3034, 3475, 488],
+      ["PLN Contralateral", "Free aVHH", 1069, 439, 915, 636, 15212, 1273, 3686, 45, 624],
+      ["PLN Contralateral", "MC3", 1302, 651, 1486, 719, 13422, 2742, 1267, 28, 381],
+      ["PLN Contralateral", "LNP7", 1784, 927, 1934, 912, 29328, 2412, 4061, 62, 1111],
+      ["PLN Injected", "Saline", 2054, 599, 1330.25, 336, 28092, 1791, 3272, 56.25, 632],
+      ["PLN Injected", "Free aVHH", 4425, 1737, 1680, 874, 27735, 1990, 4153, 70.5, 1002],
+      ["PLN Injected", "MC3", 7739, 25134, 2737, 2445, 34778, 4618, 4220, 72, 1091],
+      ["PLN Injected", "LNP7", 7568, 25225, 3605, 2586, 69388, 5089, 5042, 85, 1058],
+      ["PLV", "Saline", null, null, null, null, null, null, 185, null, null],
+      ["PLV", "Free aVHH", null, null, null, null, null, null, 188, null, null],
+      ["PLV", "MC3", null, null, null, null, null, null, 189, null, null],
+      ["PLV", "LNP7", null, null, null, null, null, null, 269, null, null]
+    ]
+  },
+
+  "table_S4": {
+    "caption": "Table S4. Average aVHH+ cell count for the various cell types found in ALN, BLN, PLN Contralateral (non-injected), PLN injected, and PLV for saline-, free aVHH, MC3-, and LNP7-injected animals.",
+    "page": 24,
+    "rows": [
+      ["ALN", "Saline", 43, 3, 31, 21, 8.5, 35, 89, 1, 3],
+      ["ALN", "Free aVHH", 45, 3, 106, 37, 52, 38, 406, 3, 15],
+      ["ALN", "MC3", 320, 876, 437, 31, 31, 44, 263, 1, 18],
+      ["ALN", "LNP7", 201, 1142, 781, 82, 55, 62, 192, 1, 14],
+      ["BLN", "Saline", 160, 5, 492, 246, 6, 49, 156, 5, 13],
+      ["BLN", "Free aVHH", 150, 10, 170, 75, 10, 67, 226, 115, 44],
+      ["BLN", "MC3", 287, 20, 162, 47, 14, 65, 254, 3, 41],
+      ["BLN", "LNP7", 152, 28, 578, 441, 14, 57, 409, 7, 21],
+      ["PLN Contralateral", "Saline", 50, 2.5, 37, 52, 3, 17, 65, 0.5, 2],
+      ["PLN Contralateral", "Free aVHH", 37, 2, 97, 149, 5, 9, 158, 1, 12],
+      ["PLN Contralateral", "MC3", 25, 4, 43, 35, 12, 68, 45, 1, 4],
+      ["PLN Contralateral", "LNP7", 28, 2, 82, 75, 8, 16, 89, 2, 8],
+      ["PLN Injected", "Saline", 73, 2, 31, 13, 6, 21, 98, 1, 7],
+      ["PLN Injected", "Free aVHH", 78, 11, 29, 11, 10, 21, 79, 1, 8],
+      ["PLN Injected", "MC3", 772, 2755, 521, 86, 78, 296, 591, 1, 20],
+      ["PLN Injected", "LNP7", 888, 3681, 1677, 978, 202, 568, 1690, 3, 77],
+      ["PLV", "Saline", null, null, null, null, null, null, 3, null, null],
+      ["PLV", "Free aVHH", null, null, null, null, null, null, 3, null, null],
+      ["PLV", "MC3", null, null, null, null, null, null, 18, null, null],
+      ["PLV", "LNP7", null, null, null, null, null, null, 104, null, null]
+    ]
+  },
+
+  "printed_percentages_in_main_text": {
+    "_what": "verbatim percentages from the PMC full text, used only as a CROSS-CHECK on the derivation, never as a value source.",
+    "fig2_ALN": {"LNP1": 45, "LNP2": 47, "LNP7": 28},
+    "fig2_BLN": {"LNP1": 44, "LNP2": 34, "LNP7": 32},
+    "fig2_PLN": {"LNP1": 39, "LNP2": 42, "LNP7": 53},
+    "fig4_PLN_injected": {"saline": 2, "free aVHH": 2, "MC3": 5, "LNP7": 31},
+    "fig4_PLV": {"saline": 1, "free aVHH": 2, "MC3": 10, "LNP7": 37},
+    "fig4B_LNP7_PLN_injected_cDC2": 42,
+    "fig4B_LNP7_PLN_injected_cDC1": 28
+  }
+}

@@ -1,0 +1,11 @@
+block,role,SMILES,canonical_SMILES,formula,exact_mass,formula_expected_from_name,formula_matches_name,note
+PEI 600,amine,,,,,,,"Branched poly(ethylenimine), nominal MW 600 Da. A POLYDISPERSE MIXTURE of branched oligomers with primary, secondary and tertiary nitrogens in a distribution; no single SMILES is correct. SI Fig S2a/S3d/S3f/S5a draw it as diethylamine with 'PEI 600' written underneath, which is an abstraction, not a structure."
+PEI 1200,amine,,,,,,,"Branched poly(ethylenimine), nominal MW 1200 Da. Same reason as PEI 600."
+Spermine Free Base,amine,NCCCNCCCCNCCCN,NCCCNCCCCNCCCN,C10H26N4,202.2157,C10H26N4,yes,"N,N'-bis(3-aminopropyl)butane-1,4-diamine. 6 N-H available for alkylation."
+Spermidine,amine,NCCCNCCCCN,NCCCCNCCCN,C7H19N3,145.1579,C7H19N3,yes,"N-(3-aminopropyl)butane-1,4-diamine. 5 N-H available."
+Triethylenetetramine,amine,NCCNCCNCCN,NCCNCCNCCN,C6H18N4,146.1531,C6H18N4,yes,"N,N'-bis(2-aminoethyl)ethane-1,2-diamine. 6 N-H available."
+"1,4,8,12-Tetraazacyclopentadecane",amine,N1CCNCCCNCCCNCCC1,C1CNCCCNCCNCCCNC1,C11H26N4,214.2157,C11H26N4,yes,"15-membered macrocycle; the four ring nitrogens are asserted to sit at positions 1, 4, 8 and 12 and stage05 WALKS THE RING to confirm it rather than trusting the SMILES as typed. 4 N-H available."
+C12 Epoxy,tail,CCCCCCCCCCC1CO1,CCCCCCCCCCC1CO1,C12H24O,184.1827,C12H24O,yes,"1,2-epoxydodecane. The name token is the TOTAL chain length: the alkyl substituent on the oxirane is C10, which is what SI Fig S5a labels 'R1=C10' for this same reagent."
+C15 Epoxy,tail,CCCCCCCCCCCCCC1CO1,CCCCCCCCCCCCCC1CO1,C15H30O,226.2297,C15H30O,yes,"1,2-epoxypentadecane; alkyl substituent C13, which is SI Fig S2a/S3f's 'R2=C13'."
+Lauryl Acrylate,tail,C=CC(=O)OCCCCCCCCCCCC,C=CC(=O)OCCCCCCCCCCCC,C15H28O2,240.2089,C15H28O2,yes,Dodecyl prop-2-enoate; Michael acceptor.
+Stearyl Methacrylate,tail,CC(=C)C(=O)OCCCCCCCCCCCCCCCCCC,C=C(C)C(=O)OCCCCCCCCCCCCCCCCCC,C22H42O2,338.3185,C22H42O2,yes,Octadecyl 2-methylprop-2-enoate; Michael acceptor.

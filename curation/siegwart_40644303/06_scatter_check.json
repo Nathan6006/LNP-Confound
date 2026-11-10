@@ -1,0 +1,734 @@
+{
+ "_what": "Figure 5a re-read, matched to lipids by their SI-table pK_a, and compared with the Figure 2b/3b bar values.",
+ "panels": {
+  "fig5a_3A4": {
+   "y_calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.0002,
+    "origin_px": 19.573,
+    "origin_value": 800000.0,
+    "tick_step_units": -200000.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.1634,
+    "tick_residual_tol_px": 2.5
+   },
+   "x_calibration": {
+    "kind": "linear",
+    "px_per_unit": 148.4,
+    "origin_px": 157.4,
+    "origin_value": 5.5,
+    "tick_step_units": 0.5,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.5,
+    "tick_residual_tol_px": 2.5
+   },
+   "y_tick_px": [
+    19.45,
+    68.9,
+    118.22,
+    167.22,
+    216.51
+   ],
+   "series": {
+    "3A4": {
+     "n_markers_found": 5,
+     "single_marker_area_px": 61.0,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "3A4-SC5",
+       "pKa": 6.21,
+       "found": true,
+       "x_as_pKa": 6.208,
+       "pKa_residual": -0.002,
+       "scatter_value": 59091.4,
+       "bar_value": 57350.0,
+       "ratio_scatter_over_bar": 1.0304,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4-SC6",
+       "pKa": 6.31,
+       "found": true,
+       "x_as_pKa": 6.309,
+       "pKa_residual": -0.001,
+       "scatter_value": 739374.7,
+       "bar_value": 737451.7,
+       "ratio_scatter_over_bar": 1.0026,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4-SC7",
+       "pKa": 6.23,
+       "found": true,
+       "x_as_pKa": 6.232,
+       "pKa_residual": 0.002,
+       "scatter_value": 404309.8,
+       "bar_value": 399366.5,
+       "ratio_scatter_over_bar": 1.0124,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4-SC8",
+       "pKa": 6.49,
+       "found": false,
+       "confirmed": false,
+       "why": "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+      },
+      {
+       "lipid": "3A4-SC9",
+       "pKa": 6.46,
+       "found": true,
+       "x_as_pKa": 6.474,
+       "pKa_residual": 0.014,
+       "scatter_value": 179465.2,
+       "bar_value": 179218.0,
+       "ratio_scatter_over_bar": 1.0014,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4-SC10",
+       "pKa": 5.99,
+       "found": true,
+       "x_as_pKa": 5.985,
+       "pKa_residual": -0.005,
+       "scatter_value": 106296.8,
+       "bar_value": 104524.7,
+       "ratio_scatter_over_bar": 1.017,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      }
+     ]
+    },
+    "3A4V": {
+     "n_markers_found": 5,
+     "single_marker_area_px": 26.0,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "3A4V-SC5",
+       "pKa": 6.14,
+       "found": false,
+       "confirmed": false,
+       "why": "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+      },
+      {
+       "lipid": "3A4V-SC6",
+       "pKa": 6.36,
+       "found": true,
+       "x_as_pKa": 6.36,
+       "pKa_residual": -0.0,
+       "scatter_value": 116627.8,
+       "bar_value": 120249.6,
+       "ratio_scatter_over_bar": 0.9699,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V-SC7",
+       "pKa": 6.38,
+       "found": true,
+       "x_as_pKa": 6.379,
+       "pKa_residual": -0.001,
+       "scatter_value": 86221.5,
+       "bar_value": 88799.8,
+       "ratio_scatter_over_bar": 0.971,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V-SC8",
+       "pKa": 6.69,
+       "found": true,
+       "x_as_pKa": 6.692,
+       "pKa_residual": 0.002,
+       "scatter_value": 164375.2,
+       "bar_value": 167424.3,
+       "ratio_scatter_over_bar": 0.9818,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V-SC9",
+       "pKa": 6.81,
+       "found": true,
+       "x_as_pKa": 6.815,
+       "pKa_residual": 0.005,
+       "scatter_value": 78721.5,
+       "bar_value": 80937.4,
+       "ratio_scatter_over_bar": 0.9726,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V-SC10",
+       "pKa": 6.91,
+       "found": true,
+       "x_as_pKa": 6.912,
+       "pKa_residual": 0.002,
+       "scatter_value": 56010.4,
+       "bar_value": 61281.2,
+       "ratio_scatter_over_bar": 0.914,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      }
+     ]
+    },
+    "3A4V2": {
+     "n_markers_found": 6,
+     "single_marker_area_px": 46.5,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "3A4V2-SC5",
+       "pKa": 6.32,
+       "found": true,
+       "x_as_pKa": 6.315,
+       "pKa_residual": -0.005,
+       "scatter_value": 226818.3,
+       "bar_value": 222461.4,
+       "ratio_scatter_over_bar": 1.0196,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V2-SC6",
+       "pKa": 6.27,
+       "found": true,
+       "x_as_pKa": 6.273,
+       "pKa_residual": 0.003,
+       "scatter_value": 638914.9,
+       "bar_value": 635239.9,
+       "ratio_scatter_over_bar": 1.0058,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V2-SC7",
+       "pKa": 6.37,
+       "found": true,
+       "x_as_pKa": 6.354,
+       "pKa_residual": -0.016,
+       "scatter_value": 92818.6,
+       "bar_value": 88799.8,
+       "ratio_scatter_over_bar": 1.0453,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V2-SC8",
+       "pKa": 6.31,
+       "found": true,
+       "x_as_pKa": 6.307,
+       "pKa_residual": -0.003,
+       "scatter_value": 41492.1,
+       "bar_value": 37693.9,
+       "ratio_scatter_over_bar": 1.1008,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V2-SC9",
+       "pKa": 6.12,
+       "found": true,
+       "x_as_pKa": 6.113,
+       "pKa_residual": -0.007,
+       "scatter_value": 42492.7,
+       "bar_value": 41625.1,
+       "ratio_scatter_over_bar": 1.0208,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "3A4V2-SC10",
+       "pKa": 6.42,
+       "found": true,
+       "x_as_pKa": 6.419,
+       "pKa_residual": -0.001,
+       "scatter_value": 97851.2,
+       "bar_value": 96662.3,
+       "ratio_scatter_over_bar": 1.0123,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      }
+     ]
+    }
+   }
+  },
+  "fig5a_4A3": {
+   "y_calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.0,
+    "origin_px": 19.432,
+    "origin_value": 50000000.0,
+    "tick_step_units": -10000000.0,
+    "n_ticks": 6,
+    "tick_fit_residual_px": 0.3161,
+    "tick_residual_tol_px": 2.5
+   },
+   "x_calibration": {
+    "kind": "linear",
+    "px_per_unit": 148.3,
+    "origin_px": 690.4,
+    "origin_value": 5.5,
+    "tick_step_units": 0.5,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.2,
+    "tick_residual_tol_px": 2.5
+   },
+   "y_tick_px": [
+    19.43,
+    58.87,
+    98.46,
+    137.46,
+    177.49,
+    216.6
+   ],
+   "series": {
+    "4A3": {
+     "n_markers_found": 6,
+     "single_marker_area_px": 64.0,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "4A3-SC5",
+       "pKa": 7.32,
+       "found": true,
+       "x_as_pKa": 7.318,
+       "pKa_residual": -0.002,
+       "scatter_value": 17061239.4,
+       "bar_value": 16782535.6,
+       "ratio_scatter_over_bar": 1.0166,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A3-SC6",
+       "pKa": 7.28,
+       "found": true,
+       "x_as_pKa": 7.281,
+       "pKa_residual": 0.001,
+       "scatter_value": 24886738.0,
+       "bar_value": 24734777.5,
+       "ratio_scatter_over_bar": 1.0061,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A3-SC7",
+       "pKa": 7.19,
+       "found": true,
+       "x_as_pKa": 7.186,
+       "pKa_residual": -0.004,
+       "scatter_value": 37036970.1,
+       "bar_value": 36800247.9,
+       "ratio_scatter_over_bar": 1.0064,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A3-SC8",
+       "pKa": 7.27,
+       "found": true,
+       "x_as_pKa": 7.267,
+       "pKa_residual": -0.003,
+       "scatter_value": 38575492.6,
+       "bar_value": 38445539.3,
+       "ratio_scatter_over_bar": 1.0034,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A3-SC9",
+       "pKa": 7.06,
+       "found": true,
+       "x_as_pKa": 7.058,
+       "pKa_residual": -0.002,
+       "scatter_value": 41208223.9,
+       "bar_value": 40913476.4,
+       "ratio_scatter_over_bar": 1.0072,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A3-SC10",
+       "pKa": 7.04,
+       "found": true,
+       "x_as_pKa": 7.045,
+       "pKa_residual": 0.005,
+       "scatter_value": 13986433.4,
+       "bar_value": 13766168.0,
+       "ratio_scatter_over_bar": 1.016,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      }
+     ]
+    },
+    "4A5": {
+     "n_markers_found": 6,
+     "single_marker_area_px": 46.0,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "4A5-SC5",
+       "pKa": 7.04,
+       "found": true,
+       "x_as_pKa": 7.038,
+       "pKa_residual": -0.002,
+       "scatter_value": 27743843.0,
+       "bar_value": 27476929.8,
+       "ratio_scatter_over_bar": 1.0097,
+       "merged_marker": true,
+       "confirmed": false,
+       "why": ""
+      },
+      {
+       "lipid": "4A5-SC6",
+       "pKa": 6.94,
+       "found": true,
+       "x_as_pKa": 6.942,
+       "pKa_residual": 0.002,
+       "scatter_value": 20792235.3,
+       "bar_value": 20621548.9,
+       "ratio_scatter_over_bar": 1.0083,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A5-SC7",
+       "pKa": 7.05,
+       "found": true,
+       "x_as_pKa": 7.053,
+       "pKa_residual": 0.003,
+       "scatter_value": 26194666.6,
+       "bar_value": 26105853.6,
+       "ratio_scatter_over_bar": 1.0034,
+       "merged_marker": true,
+       "confirmed": false,
+       "why": ""
+      },
+      {
+       "lipid": "4A5-SC8",
+       "pKa": 6.74,
+       "found": true,
+       "x_as_pKa": 6.741,
+       "pKa_residual": 0.001,
+       "scatter_value": 8519381.4,
+       "bar_value": 8281863.2,
+       "ratio_scatter_over_bar": 1.0287,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A5-SC9",
+       "pKa": 7.22,
+       "found": true,
+       "x_as_pKa": 7.217,
+       "pKa_residual": -0.003,
+       "scatter_value": 9533730.6,
+       "bar_value": 9378724.2,
+       "ratio_scatter_over_bar": 1.0165,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "4A5-SC10",
+       "pKa": 7.12,
+       "found": true,
+       "x_as_pKa": 7.114,
+       "pKa_residual": -0.006,
+       "scatter_value": 7248921.8,
+       "bar_value": 7185002.3,
+       "ratio_scatter_over_bar": 1.0089,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      }
+     ]
+    }
+   }
+  },
+  "fig5a_5A4": {
+   "y_calibration": {
+    "kind": "linear",
+    "px_per_unit": 0.0,
+    "origin_px": 19.538,
+    "origin_value": 20000000.0,
+    "tick_step_units": -5000000.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.3079,
+    "tick_residual_tol_px": 2.5
+   },
+   "x_calibration": {
+    "kind": "linear",
+    "px_per_unit": 198.4,
+    "origin_px": 1183.95,
+    "origin_value": 6.0,
+    "tick_step_units": 0.5,
+    "n_ticks": 4,
+    "tick_fit_residual_px": 0.15,
+    "tick_residual_tol_px": 2.5
+   },
+   "y_tick_px": [
+    19.42,
+    68.79,
+    118.44,
+    167.42,
+    216.6
+   ],
+   "series": {
+    "5A4": {
+     "n_markers_found": 6,
+     "single_marker_area_px": 63.0,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "5A4-SC5",
+       "pKa": 6.21,
+       "found": true,
+       "x_as_pKa": 6.21,
+       "pKa_residual": -0.0,
+       "scatter_value": 7129127.1,
+       "bar_value": 6910787.1,
+       "ratio_scatter_over_bar": 1.0316,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "5A4-SC6",
+       "pKa": 6.41,
+       "found": true,
+       "x_as_pKa": 6.416,
+       "pKa_residual": 0.006,
+       "scatter_value": 10374277.7,
+       "bar_value": 10201369.9,
+       "ratio_scatter_over_bar": 1.0169,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "5A4-SC7",
+       "pKa": 6.46,
+       "found": true,
+       "x_as_pKa": 6.454,
+       "pKa_residual": -0.006,
+       "scatter_value": 15541210.6,
+       "bar_value": 15411459.4,
+       "ratio_scatter_over_bar": 1.0084,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "5A4-SC8",
+       "pKa": 6.38,
+       "found": true,
+       "x_as_pKa": 6.376,
+       "pKa_residual": -0.004,
+       "scatter_value": 7831486.0,
+       "bar_value": 7733432.8,
+       "ratio_scatter_over_bar": 1.0127,
+       "merged_marker": true,
+       "confirmed": false,
+       "why": ""
+      },
+      {
+       "lipid": "5A4-SC9",
+       "pKa": 6.4,
+       "found": true,
+       "x_as_pKa": 6.398,
+       "pKa_residual": -0.002,
+       "scatter_value": 7029694.7,
+       "bar_value": 6910787.1,
+       "ratio_scatter_over_bar": 1.0172,
+       "merged_marker": true,
+       "confirmed": false,
+       "why": ""
+      },
+      {
+       "lipid": "5A4-SC10",
+       "pKa": 6.66,
+       "found": true,
+       "x_as_pKa": 6.658,
+       "pKa_residual": -0.002,
+       "scatter_value": 1539216.7,
+       "bar_value": null,
+       "ratio_scatter_over_bar": null,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      }
+     ]
+    },
+    "5A5": {
+     "n_markers_found": 5,
+     "single_marker_area_px": 60.0,
+     "n_markers_unassigned": 0,
+     "rows": [
+      {
+       "lipid": "5A5-SC5",
+       "pKa": 6.93,
+       "found": true,
+       "x_as_pKa": 6.925,
+       "pKa_residual": -0.005,
+       "scatter_value": 3068399.6,
+       "bar_value": 2797558.5,
+       "ratio_scatter_over_bar": 1.0968,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "5A5-SC6",
+       "pKa": 6.97,
+       "found": true,
+       "x_as_pKa": 6.97,
+       "pKa_residual": 0.0,
+       "scatter_value": 2515130.3,
+       "bar_value": 2249128.0,
+       "ratio_scatter_over_bar": 1.1183,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "5A5-SC7",
+       "pKa": 7.21,
+       "found": true,
+       "x_as_pKa": 7.208,
+       "pKa_residual": -0.002,
+       "scatter_value": 2933947.2,
+       "bar_value": 2797558.5,
+       "ratio_scatter_over_bar": 1.0488,
+       "merged_marker": false,
+       "confirmed": true,
+       "why": ""
+      },
+      {
+       "lipid": "5A5-SC8",
+       "pKa": 6.77,
+       "found": true,
+       "x_as_pKa": 6.763,
+       "pKa_residual": -0.007,
+       "scatter_value": 2841937.4,
+       "bar_value": 2523343.3,
+       "ratio_scatter_over_bar": 1.1263,
+       "merged_marker": true,
+       "confirmed": false,
+       "why": ""
+      },
+      {
+       "lipid": "5A5-SC9",
+       "pKa": 6.93,
+       "found": false,
+       "confirmed": false,
+       "why": "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+      },
+      {
+       "lipid": "5A5-SC10",
+       "pKa": 6.73,
+       "found": true,
+       "x_as_pKa": 6.726,
+       "pKa_residual": -0.004,
+       "scatter_value": 2989025.1,
+       "bar_value": 2797558.5,
+       "ratio_scatter_over_bar": 1.0684,
+       "merged_marker": true,
+       "confirmed": false,
+       "why": ""
+      }
+     ]
+    }
+   }
+  }
+ },
+ "summary": {
+  "n_compared": 32,
+  "median_scatter_over_bar": 1.0124,
+  "mean_scatter_over_bar": 1.0161,
+  "sd_scatter_over_bar": 0.0377,
+  "max_abs_pKa_residual_confirmed": 0.016,
+  "min_ratio": 0.914,
+  "max_ratio": 1.1183,
+  "disagreements_over_10pct": [
+   [
+    "3A4V2-SC8",
+    1.1008
+   ],
+   [
+    "5A5-SC6",
+    1.1183
+   ]
+  ],
+  "not_independently_confirmed": [
+   [
+    "3A4-SC8",
+    "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+   ],
+   [
+    "3A4V-SC5",
+    "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+   ],
+   [
+    "4A5-SC5",
+    ""
+   ],
+   [
+    "4A5-SC7",
+    ""
+   ],
+   [
+    "5A4-SC8",
+    ""
+   ],
+   [
+    "5A4-SC9",
+    ""
+   ],
+   [
+    "5A5-SC8",
+    ""
+   ],
+   [
+    "5A5-SC9",
+    "fewer markers than lipids in this series: markers overlap, or one sits on the axis rule and merges with it."
+   ],
+   [
+    "5A5-SC10",
+    ""
+   ]
+  ],
+  "_read": "A median ratio at 1.00 says the bar panels and the scatter panels agree on the ABSOLUTE scale, not merely on the ranking. A systematic multiplicative error in the bars would show here as a median away from 1."
+ }
+}

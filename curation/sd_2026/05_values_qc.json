@@ -1,0 +1,273 @@
+{
+ "_what": "Stage 05: values from the three Fig. 1 panels that carry a calibratable axis.",
+ "panels": {
+  "Fig_1n": {
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 10.6643,
+    "origin_px": 484.036,
+    "origin_value": 100000000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.0,
+    "tick_residual_tol_px": 2.5,
+    "ticks_detected_px": [
+     484.036,
+     494.701,
+     505.365,
+     516.029,
+     526.694
+    ],
+    "tick_labels_read_as_text": [
+     [
+      484.0,
+      "1011"
+     ],
+     [
+      494.7,
+      "1010"
+     ],
+     [
+      505.4,
+      "109"
+     ],
+     [
+      516.0,
+      "108"
+     ],
+     [
+      526.7,
+      "107"
+     ]
+    ],
+    "ticks_used_in_fit": [
+     [
+      484.036,
+      "1011"
+     ],
+     [
+      494.701,
+      "1010"
+     ],
+     [
+      505.365,
+      "109"
+     ],
+     [
+      516.029,
+      "108"
+     ],
+     [
+      526.694,
+      "107"
+     ]
+    ],
+    "ticks_held_out": []
+   },
+   "n_groups": 12,
+   "category_labels_read_as_text": [
+    "ALC-0315",
+    "LP-01",
+    "SC-1",
+    "SC-2",
+    "SC-3",
+    "SC-4",
+    "SC-5",
+    "LC-1",
+    "LC-2",
+    "LC-3",
+    "LC-4",
+    "LC-5"
+   ],
+   "group_x_spacing_pt": [
+    11.2142,
+    11.2143,
+    11.2143,
+    11.2142,
+    11.2143,
+    11.2142,
+    11.2143,
+    11.2142,
+    11.2143,
+    11.2142,
+    11.2143
+   ],
+   "log10_mean": 8.6153,
+   "log10_sd_pop": 0.5604,
+   "values": {
+    "ALC-0315": 8.8052,
+    "LP-01": 8.447,
+    "SC-1": 8.4126,
+    "SC-2": 8.2665,
+    "SC-3": 8.0774,
+    "SC-4": 7.9885,
+    "SC-5": 8.0057,
+    "LC-1": 10.106,
+    "LC-2": 9.0377,
+    "LC-3": 8.5897,
+    "LC-4": 8.8295,
+    "LC-5": 8.8179
+   }
+  },
+  "Fig_1o": {
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 10.9397,
+    "origin_px": 409.076,
+    "origin_value": 10000000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 5,
+    "tick_fit_residual_px": 0.0001,
+    "tick_residual_tol_px": 2.5,
+    "ticks_detected_px": [
+     409.076,
+     420.016,
+     430.955,
+     441.895,
+     452.835
+    ],
+    "tick_labels_read_as_text": [
+     [
+      409.1,
+      "1010"
+     ],
+     [
+      420.0,
+      "109"
+     ],
+     [
+      431.0,
+      "108"
+     ],
+     [
+      441.9,
+      "107"
+     ],
+     [
+      452.8,
+      "106"
+     ]
+    ],
+    "ticks_used_in_fit": [
+     [
+      409.076,
+      "1010"
+     ],
+     [
+      420.016,
+      "109"
+     ],
+     [
+      430.955,
+      "108"
+     ],
+     [
+      441.895,
+      "107"
+     ],
+     [
+      452.835,
+      "106"
+     ]
+    ],
+    "ticks_held_out": []
+   },
+   "n_groups": 3,
+   "category_labels_read_as_text": [
+    "ALC-0315",
+    "LP-01",
+    "LC-1"
+   ],
+   "group_x_spacing_pt": [
+    12.6154,
+    12.6153
+   ],
+   "log10_mean": 7.6991,
+   "log10_sd_pop": 0.5999,
+   "values": {
+    "ALC-0315": 7.8031,
+    "LP-01": 6.9179,
+    "LC-1": 8.3762
+   }
+  },
+  "Fig_1p": {
+   "calibration": {
+    "kind": "log10",
+    "px_per_unit": 10.9305,
+    "origin_px": 479.022,
+    "origin_value": 1000000000.0,
+    "tick_step_units": -1.0,
+    "n_ticks": 3,
+    "tick_fit_residual_px": 0.0001,
+    "tick_residual_tol_px": 2.5,
+    "ticks_detected_px": [
+     479.022,
+     489.952,
+     500.883,
+     522.744
+    ],
+    "tick_labels_read_as_text": [
+     [
+      479.0,
+      "109"
+     ],
+     [
+      490.0,
+      "108"
+     ],
+     [
+      500.9,
+      "107"
+     ],
+     [
+      522.7,
+      "105"
+     ]
+    ],
+    "ticks_used_in_fit": [
+     [
+      479.022,
+      "109"
+     ],
+     [
+      489.952,
+      "108"
+     ],
+     [
+      500.883,
+      "107"
+     ]
+    ],
+    "ticks_held_out": [
+     {
+      "label": "105",
+      "value_log10": 5.0,
+      "pixel": 522.744,
+      "predicted_log10": 5.0,
+      "error_decades": 0.0,
+      "error_px": 0.0
+     }
+    ]
+   },
+   "n_groups": 3,
+   "category_labels_read_as_text": [
+    "ALC-0315",
+    "LP-01",
+    "LC-1"
+   ],
+   "group_x_spacing_pt": [
+    12.6048,
+    12.6047
+   ],
+   "log10_mean": 6.6665,
+   "log10_sd_pop": 0.719,
+   "values": {
+    "ALC-0315": 6.3652,
+    "LP-01": 5.9761,
+    "LC-1": 7.6581
+   }
+  }
+ },
+ "rows_with_a_caveat": 12,
+ "n_rows": 18
+}

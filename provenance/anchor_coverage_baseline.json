@@ -1,0 +1,26 @@
+{
+ "_what": "C18's accepted anchor-coverage conditions, each WITH THE REASON. A departure in EITHER direction fails. These are NOT assurances -- every entry below names work that has not been done.",
+
+ "_rule": "An entry here does not say the coverage is adequate. It says the gap is known, measured and queued. Removing an entry requires writing the anchor, not editing this file.",
+
+ "_posture": "C10 tests topology against external ground truth and is the only Tier-1 check that does. One exact match on one molecule is not evidence about the other 343. So the honest reading of a clean C10 line is 'the anchors we have agree', not 'the structures are right'.",
+
+ "accepted": {
+  "ng_2025": {
+   "why": "6 anchors, ALL 6 flagged anchor_may_be_a_copy, and the folder has no make_reference.py. The anchors are typed literals in a CSV, so C10 may be comparing each value to itself -- the F-013 shape exactly. Byte-equality is not proof of a copy (two correct routes give the same canonical SMILES once canonicalised, which is why C16 tests the generator's composed template instead), so this is not a claim that they ARE copies. It is a statement that nothing can currently tell.",
+   "work_needed": "Write curation/ng_2025/make_reference.py, deriving the 6 anchors by a route that shares as little as possible with stage04_enumerate.py. ng_2025 is the best-placed folder to do this well, because stage01_vector.py already reads the PDF's own bond coordinates and got 20/20 -- a vector re-derivation is genuinely independent of the raster enumeration.",
+   "also": "322 structures against 6 anchors is 53.7 per anchor, the best ratio of any multi-structure curation here.",
+   "opened": "2026-11-09"
+  },
+  "ql_2026": {
+   "why": "ONE typed anchor (T3A-L5-C10) for 344 structures, no make_reference.py, and nothing anchoring library L1 or L2 specifically. 344 structures per anchor.",
+   "work_needed": "An anchor per library, built by a separate route. Round 2's Wave-1 reviewer re-derived all 344 structures with an independent enumerator and agreed, which is real evidence -- but it was a one-off agent pass, not a check that runs every build, and it is not stored anywhere a future build re-executes.",
+   "opened": "2026-11-09"
+  },
+  "lin_aromatic_2026": {
+   "why": "ONE anchor (10A2-3B-EP10) for 987 structures. The anchor itself is strong -- it is the final product of the SI's protection/deprotection route, so its regiochemistry is pinned by the synthesis rather than assumed, and that is what caught the original one-arm-per-nitrogen bug that HRMS passed 4/4 either way. It HAS a make_reference.py. But 987 structures per anchor is a coverage statement, not an independence one.",
+   "work_needed": "A second anchor from a different point in the library -- ideally one of the 4 HRMS-confirmed compounds that is NOT 10A2-3B-EP10, so the arm-count and the regiochemistry are each pinned twice.",
+   "opened": "2026-11-09"
+  }
+ }
+}

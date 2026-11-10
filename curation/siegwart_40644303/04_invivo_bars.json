@@ -1,0 +1,782 @@
+{
+ "fig2b": {
+  "figure": "fig2.jpg",
+  "y_calibration": {
+   "kind": "linear",
+   "px_per_unit": 0.0003,
+   "origin_px": 841.215,
+   "origin_value": 1000000.0,
+   "tick_step_units": -200000.0,
+   "n_ticks": 6,
+   "tick_fit_residual_px": 0.1147,
+   "tick_residual_tol_px": 2.5
+  },
+  "y_tick_px": [
+   841.12,
+   892.11,
+   943.06,
+   993.86,
+   1044.79,
+   1095.47
+  ],
+  "y_tick_values": [
+   1000000.0,
+   800000.0,
+   600000.0,
+   400000.0,
+   200000.0,
+   0.0
+  ],
+  "baseline_row_px": 1096,
+  "baseline_minus_fitted_zero_px": 0.41,
+  "baseline_note": "positive means the drawn rule sits BELOW the fitted zero. It is reported and not used; anchoring on it is error class 20.",
+  "n_x_ticks": 18,
+  "x_tick_spacing_px": 56.0,
+  "bar_width_px": [
+   36,
+   37
+  ],
+  "n_drawn": 17,
+  "n_valued": 17,
+  "refusals": {},
+  "bars": [
+   {
+    "lipid": "3A4-SC5",
+    "x_tick_px": 276.0,
+    "drawn": true,
+    "bar_x0": 259,
+    "bar_x1": 296,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     82.0
+    ],
+    "bar_top_px": 1081,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 15.0,
+    "value": 57350.0
+   },
+   {
+    "lipid": "3A4-SC6",
+    "x_tick_px": 332.0,
+    "drawn": true,
+    "bar_x0": 315,
+    "bar_x1": 351,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     82.0
+    ],
+    "bar_top_px": 908,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 188.0,
+    "value": 737451.7
+   },
+   {
+    "lipid": "3A4-SC7",
+    "x_tick_px": 388.0,
+    "drawn": true,
+    "bar_x0": 371,
+    "bar_x1": 407,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     82.0
+    ],
+    "bar_top_px": 994,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 102.0,
+    "value": 399366.5
+   },
+   {
+    "lipid": "3A4-SC8",
+    "x_tick_px": 443.5,
+    "drawn": true,
+    "bar_x0": 426,
+    "bar_x1": 463,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     82.0
+    ],
+    "bar_top_px": 1051,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 45.0,
+    "value": 175286.7
+   },
+   {
+    "lipid": "3A4-SC9",
+    "x_tick_px": 499.0,
+    "drawn": true,
+    "bar_x0": 482,
+    "bar_x1": 518,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     82.0
+    ],
+    "bar_top_px": 1050,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 46.0,
+    "value": 179218.0
+   },
+   {
+    "lipid": "3A4-SC10",
+    "x_tick_px": 555.0,
+    "drawn": true,
+    "bar_x0": 538,
+    "bar_x1": 574,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     82.0
+    ],
+    "bar_top_px": 1069,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 27.0,
+    "value": 104524.7
+   },
+   {
+    "lipid": "3A4V-SC5",
+    "x_tick_px": 648.0,
+    "drawn": false,
+    "bar_top_px": null,
+    "value": null,
+    "note": "no bar is drawn at this x tick: the panel shows no coloured pixels above the baseline here."
+   },
+   {
+    "lipid": "3A4V-SC6",
+    "x_tick_px": 703.0,
+    "drawn": true,
+    "bar_x0": 686,
+    "bar_x1": 723,
+    "bar_rgb": [
+     255.0,
+     207.0,
+     112.0
+    ],
+    "bar_top_px": 1065,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 31.0,
+    "value": 120249.6
+   },
+   {
+    "lipid": "3A4V-SC7",
+    "x_tick_px": 759.0,
+    "drawn": true,
+    "bar_x0": 742,
+    "bar_x1": 779,
+    "bar_rgb": [
+     255.0,
+     207.0,
+     112.0
+    ],
+    "bar_top_px": 1073,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 23.0,
+    "value": 88799.8
+   },
+   {
+    "lipid": "3A4V-SC8",
+    "x_tick_px": 815.0,
+    "drawn": true,
+    "bar_x0": 797,
+    "bar_x1": 834,
+    "bar_rgb": [
+     255.0,
+     207.0,
+     112.0
+    ],
+    "bar_top_px": 1053,
+    "flank_delta_px": 0.0,
+    "coverage": 0.982,
+    "height_px": 43.0,
+    "value": 167424.3
+   },
+   {
+    "lipid": "3A4V-SC9",
+    "x_tick_px": 871.0,
+    "drawn": true,
+    "bar_x0": 853,
+    "bar_x1": 890,
+    "bar_rgb": [
+     255.0,
+     207.0,
+     112.0
+    ],
+    "bar_top_px": 1075,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 21.0,
+    "value": 80937.4
+   },
+   {
+    "lipid": "3A4V-SC10",
+    "x_tick_px": 926.0,
+    "drawn": true,
+    "bar_x0": 909,
+    "bar_x1": 946,
+    "bar_rgb": [
+     255.0,
+     207.0,
+     112.0
+    ],
+    "bar_top_px": 1080,
+    "flank_delta_px": 0.0,
+    "coverage": 0.991,
+    "height_px": 16.0,
+    "value": 61281.2
+   },
+   {
+    "lipid": "3A4V2-SC5",
+    "x_tick_px": 1019.0,
+    "drawn": true,
+    "bar_x0": 1002,
+    "bar_x1": 1038,
+    "bar_rgb": [
+     113.0,
+     189.0,
+     214.0
+    ],
+    "bar_top_px": 1039,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 57.0,
+    "value": 222461.4
+   },
+   {
+    "lipid": "3A4V2-SC6",
+    "x_tick_px": 1075.0,
+    "drawn": true,
+    "bar_x0": 1058,
+    "bar_x1": 1094,
+    "bar_rgb": [
+     113.0,
+     189.0,
+     214.0
+    ],
+    "bar_top_px": 934,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 162.0,
+    "value": 635239.9
+   },
+   {
+    "lipid": "3A4V2-SC7",
+    "x_tick_px": 1131.0,
+    "drawn": true,
+    "bar_x0": 1113,
+    "bar_x1": 1150,
+    "bar_rgb": [
+     113.0,
+     189.0,
+     214.0
+    ],
+    "bar_top_px": 1073,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 23.0,
+    "value": 88799.8
+   },
+   {
+    "lipid": "3A4V2-SC8",
+    "x_tick_px": 1186.0,
+    "drawn": true,
+    "bar_x0": 1169,
+    "bar_x1": 1206,
+    "bar_rgb": [
+     113.0,
+     189.0,
+     214.0
+    ],
+    "bar_top_px": 1086,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 10.0,
+    "value": 37693.9
+   },
+   {
+    "lipid": "3A4V2-SC9",
+    "x_tick_px": 1242.0,
+    "drawn": true,
+    "bar_x0": 1225,
+    "bar_x1": 1261,
+    "bar_rgb": [
+     113.0,
+     189.0,
+     214.0
+    ],
+    "bar_top_px": 1085,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 11.0,
+    "value": 41625.1
+   },
+   {
+    "lipid": "3A4V2-SC10",
+    "x_tick_px": 1298.0,
+    "drawn": true,
+    "bar_x0": 1280,
+    "bar_x1": 1317,
+    "bar_rgb": [
+     113.0,
+     189.0,
+     214.0
+    ],
+    "bar_top_px": 1071,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 25.0,
+    "value": 96662.3
+   }
+  ]
+ },
+ "fig3b": {
+  "figure": "fig3.jpg",
+  "y_calibration": {
+   "kind": "linear",
+   "px_per_unit": 0.0,
+   "origin_px": 858.396,
+   "origin_value": 60000000.0,
+   "tick_step_units": -20000000.0,
+   "n_ticks": 4,
+   "tick_fit_residual_px": 0.0579,
+   "tick_residual_tol_px": 2.5
+  },
+  "y_tick_px": [
+   858.43,
+   931.27,
+   1004.28,
+   1077.22
+  ],
+  "y_tick_values": [
+   60000000.0,
+   40000000.0,
+   20000000.0,
+   0.0
+  ],
+  "baseline_row_px": 1077,
+  "baseline_minus_fitted_zero_px": -0.2,
+  "baseline_note": "positive means the drawn rule sits BELOW the fitted zero. It is reported and not used; anchoring on it is error class 20.",
+  "n_x_ticks": 24,
+  "x_tick_spacing_px": 41.5,
+  "bar_width_px": [
+   27,
+   28
+  ],
+  "n_drawn": 24,
+  "n_valued": 23,
+  "refusals": {
+   "5A4-SC10": "bar_top: full-width rule fired at row 1072 but the left 9px flank has no covered row at all. A bar's top rule spans the full width, so it is present in both flanks; something present only in the middle is a replicate dot cluster, a whisker cap or a mean marker. That is error class 32 (F-018, F-020)."
+  },
+  "bars": [
+   {
+    "lipid": "4A3-SC5",
+    "x_tick_px": 302.5,
+    "drawn": true,
+    "bar_x0": 290,
+    "bar_x1": 317,
+    "bar_rgb": [
+     230.0,
+     98.0,
+     84.0
+    ],
+    "bar_top_px": 1016,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 61.0,
+    "value": 16782535.6
+   },
+   {
+    "lipid": "4A3-SC6",
+    "x_tick_px": 343.5,
+    "drawn": true,
+    "bar_x0": 331,
+    "bar_x1": 358,
+    "bar_rgb": [
+     231.5,
+     98.0,
+     83.5
+    ],
+    "bar_top_px": 987,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 90.0,
+    "value": 24734777.5
+   },
+   {
+    "lipid": "4A3-SC7",
+    "x_tick_px": 385.0,
+    "drawn": true,
+    "bar_x0": 372,
+    "bar_x1": 399,
+    "bar_rgb": [
+     231.0,
+     98.0,
+     83.0
+    ],
+    "bar_top_px": 943,
+    "flank_delta_px": 1.0,
+    "coverage": 0.9877,
+    "height_px": 134.0,
+    "value": 36800247.9
+   },
+   {
+    "lipid": "4A3-SC8",
+    "x_tick_px": 426.0,
+    "drawn": true,
+    "bar_x0": 413,
+    "bar_x1": 440,
+    "bar_rgb": [
+     232.0,
+     98.0,
+     84.0
+    ],
+    "bar_top_px": 937,
+    "flank_delta_px": 1.0,
+    "coverage": 0.9753,
+    "height_px": 140.0,
+    "value": 38445539.3
+   },
+   {
+    "lipid": "4A3-SC9",
+    "x_tick_px": 467.5,
+    "drawn": true,
+    "bar_x0": 455,
+    "bar_x1": 482,
+    "bar_rgb": [
+     230.0,
+     98.0,
+     83.0
+    ],
+    "bar_top_px": 928,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 149.0,
+    "value": 40913476.4
+   },
+   {
+    "lipid": "4A3-SC10",
+    "x_tick_px": 508.5,
+    "drawn": true,
+    "bar_x0": 496,
+    "bar_x1": 523,
+    "bar_rgb": [
+     231.0,
+     98.0,
+     83.0
+    ],
+    "bar_top_px": 1027,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 50.0,
+    "value": 13766168.0
+   },
+   {
+    "lipid": "4A5-SC5",
+    "x_tick_px": 577.0,
+    "drawn": true,
+    "bar_x0": 564,
+    "bar_x1": 592,
+    "bar_rgb": [
+     254.0,
+     208.0,
+     108.0
+    ],
+    "bar_top_px": 977,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 100.0,
+    "value": 27476929.8
+   },
+   {
+    "lipid": "4A5-SC6",
+    "x_tick_px": 618.5,
+    "drawn": true,
+    "bar_x0": 606,
+    "bar_x1": 633,
+    "bar_rgb": [
+     253.0,
+     208.0,
+     108.0
+    ],
+    "bar_top_px": 1002,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 75.0,
+    "value": 20621548.9
+   },
+   {
+    "lipid": "4A5-SC7",
+    "x_tick_px": 659.5,
+    "drawn": true,
+    "bar_x0": 647,
+    "bar_x1": 674,
+    "bar_rgb": [
+     253.0,
+     208.0,
+     108.0
+    ],
+    "bar_top_px": 982,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 95.0,
+    "value": 26105853.6
+   },
+   {
+    "lipid": "4A5-SC8",
+    "x_tick_px": 701.0,
+    "drawn": true,
+    "bar_x0": 688,
+    "bar_x1": 716,
+    "bar_rgb": [
+     254.0,
+     208.0,
+     109.0
+    ],
+    "bar_top_px": 1047,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 30.0,
+    "value": 8281863.2
+   },
+   {
+    "lipid": "4A5-SC9",
+    "x_tick_px": 742.0,
+    "drawn": true,
+    "bar_x0": 729,
+    "bar_x1": 757,
+    "bar_rgb": [
+     254.0,
+     208.0,
+     109.0
+    ],
+    "bar_top_px": 1043,
+    "flank_delta_px": 1.0,
+    "coverage": 0.9881,
+    "height_px": 34.0,
+    "value": 9378724.2
+   },
+   {
+    "lipid": "4A5-SC10",
+    "x_tick_px": 783.5,
+    "drawn": true,
+    "bar_x0": 771,
+    "bar_x1": 798,
+    "bar_rgb": [
+     254.0,
+     208.0,
+     110.0
+    ],
+    "bar_top_px": 1051,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 26.0,
+    "value": 7185002.3
+   },
+   {
+    "lipid": "5A4-SC5",
+    "x_tick_px": 852.0,
+    "drawn": true,
+    "bar_x0": 839,
+    "bar_x1": 867,
+    "bar_rgb": [
+     114.0,
+     189.0,
+     212.0
+    ],
+    "bar_top_px": 1052,
+    "flank_delta_px": 1.0,
+    "coverage": 0.9881,
+    "height_px": 25.0,
+    "value": 6910787.1
+   },
+   {
+    "lipid": "5A4-SC6",
+    "x_tick_px": 893.5,
+    "drawn": true,
+    "bar_x0": 881,
+    "bar_x1": 908,
+    "bar_rgb": [
+     113.0,
+     188.0,
+     212.0
+    ],
+    "bar_top_px": 1040,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 37.0,
+    "value": 10201369.9
+   },
+   {
+    "lipid": "5A4-SC7",
+    "x_tick_px": 934.5,
+    "drawn": true,
+    "bar_x0": 922,
+    "bar_x1": 949,
+    "bar_rgb": [
+     114.0,
+     189.0,
+     212.0
+    ],
+    "bar_top_px": 1021,
+    "flank_delta_px": 0.0,
+    "coverage": 0.9753,
+    "height_px": 56.0,
+    "value": 15411459.4
+   },
+   {
+    "lipid": "5A4-SC8",
+    "x_tick_px": 976.0,
+    "drawn": true,
+    "bar_x0": 963,
+    "bar_x1": 990,
+    "bar_rgb": [
+     114.0,
+     189.0,
+     212.5
+    ],
+    "bar_top_px": 1049,
+    "flank_delta_px": 1.0,
+    "coverage": 0.9877,
+    "height_px": 28.0,
+    "value": 7733432.8
+   },
+   {
+    "lipid": "5A4-SC9",
+    "x_tick_px": 1017.0,
+    "drawn": true,
+    "bar_x0": 1004,
+    "bar_x1": 1032,
+    "bar_rgb": [
+     114.5,
+     189.0,
+     211.0
+    ],
+    "bar_top_px": 1052,
+    "flank_delta_px": 1.0,
+    "coverage": 0.9881,
+    "height_px": 25.0,
+    "value": 6910787.1
+   },
+   {
+    "lipid": "5A4-SC10",
+    "x_tick_px": 1058.5,
+    "drawn": true,
+    "bar_top_px": null,
+    "value": null,
+    "note": "bars.bar_top REFUSED: bar_top: full-width rule fired at row 1072 but the left 9px flank has no covered row at all. A bar's top rule spans the full width, so it is present in both flanks; something present only in the middle is a replicate dot cluster, a whisker cap or a mean marker. That is error class 32 (F-018, F-020)."
+   },
+   {
+    "lipid": "5A5-SC5",
+    "x_tick_px": 1127.0,
+    "drawn": true,
+    "bar_x0": 1114,
+    "bar_x1": 1141,
+    "bar_rgb": [
+     160.5,
+     159.5,
+     164.5
+    ],
+    "bar_top_px": 1067,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 10.0,
+    "value": 2797558.5
+   },
+   {
+    "lipid": "5A5-SC6",
+    "x_tick_px": 1168.5,
+    "drawn": true,
+    "bar_x0": 1156,
+    "bar_x1": 1183,
+    "bar_rgb": [
+     160.0,
+     159.0,
+     164.0
+    ],
+    "bar_top_px": 1069,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 8.0,
+    "value": 2249128.0
+   },
+   {
+    "lipid": "5A5-SC7",
+    "x_tick_px": 1209.5,
+    "drawn": true,
+    "bar_x0": 1197,
+    "bar_x1": 1224,
+    "bar_rgb": [
+     160.0,
+     159.0,
+     164.0
+    ],
+    "bar_top_px": 1067,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 10.0,
+    "value": 2797558.5
+   },
+   {
+    "lipid": "5A5-SC8",
+    "x_tick_px": 1251.0,
+    "drawn": true,
+    "bar_x0": 1238,
+    "bar_x1": 1265,
+    "bar_rgb": [
+     161.0,
+     160.0,
+     165.0
+    ],
+    "bar_top_px": 1068,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 9.0,
+    "value": 2523343.3
+   },
+   {
+    "lipid": "5A5-SC9",
+    "x_tick_px": 1292.0,
+    "drawn": true,
+    "bar_x0": 1279,
+    "bar_x1": 1306,
+    "bar_rgb": [
+     161.0,
+     160.0,
+     165.0
+    ],
+    "bar_top_px": 1066,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 11.0,
+    "value": 3071773.7
+   },
+   {
+    "lipid": "5A5-SC10",
+    "x_tick_px": 1333.5,
+    "drawn": true,
+    "bar_x0": 1321,
+    "bar_x1": 1348,
+    "bar_rgb": [
+     161.0,
+     160.0,
+     165.0
+    ],
+    "bar_top_px": 1067,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "height_px": 10.0,
+    "value": 2797558.5
+   }
+  ]
+ }
+}

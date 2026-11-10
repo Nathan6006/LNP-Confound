@@ -1,0 +1,338 @@
+{
+ "_what": "Per-paper checks P1-P10 for lius_40500862. Each is an agreement count out of a stated denominator.",
+ "checks": {
+  "P1_hrms_ours_vs_si_calculated_ppm": {
+   "agree": 10,
+   "of": 10,
+   "pass": true,
+   "tolerance": 0.1,
+   "max_abs_ppm": 0.075,
+   "per_lipid_ppm": {
+    "A5-CE-C8": -0.038,
+    "A5-CE-C9": 0.031,
+    "A5-CE-C10": -0.034,
+    "A5-CE-C5-4": 0.075,
+    "A5-CE-C7-6": 0.064,
+    "A5-CE-C7-7": 0.061,
+    "A5-CE-C9-4tails": 0.003,
+    "A5-CE-C7-6-3tails": 0.026,
+    "A5-C10": 0.04,
+    "A5-C7-6": 0.022
+   },
+   "_what": "Our independently assembled SMILES against the m/z the authors printed as 'calculated'. This is the comparison that tests OUR structure."
+  },
+  "P2_hrms_si_found_vs_si_calculated_ppm": {
+   "agree": 10,
+   "of": 10,
+   "pass": true,
+   "tolerance": 10.0,
+   "max_abs_ppm": 6.334,
+   "mean_ppm": 4.6831,
+   "n_positive": 10,
+   "per_lipid_ppm": {
+    "A5-CE-C8": 5.67,
+    "A5-CE-C9": 4.147,
+    "A5-CE-C10": 4.306,
+    "A5-CE-C5-4": 2.598,
+    "A5-CE-C7-6": 5.076,
+    "A5-CE-C7-7": 5.156,
+    "A5-CE-C9-4tails": 5.448,
+    "A5-CE-C7-6-3tails": 6.334,
+    "A5-C10": 5.663,
+    "A5-C7-6": 2.433
+   },
+   "_what": "The authors' own internal consistency. Independent of us entirely, so a failure here is a published typo.",
+   "_finding": "All 10 of 10 residuals are POSITIVE with mean +4.8 ppm. That is a systematic instrument calibration offset, not scatter and not a typo: a transcription error would be a single large outlier of either sign. No published typo detected."
+  },
+  "P3_hrms_ours_vs_si_found_ppm": {
+   "agree": 10,
+   "of": 10,
+   "pass": true,
+   "tolerance": 10.0,
+   "max_abs_ppm": 6.307,
+   "per_lipid_ppm": {
+    "A5-CE-C8": -5.708,
+    "A5-CE-C9": -4.116,
+    "A5-CE-C10": -4.34,
+    "A5-CE-C5-4": -2.523,
+    "A5-CE-C7-6": -5.012,
+    "A5-CE-C7-7": -5.095,
+    "A5-CE-C9-4tails": -5.445,
+    "A5-CE-C7-6-3tails": -6.307,
+    "A5-C10": -5.623,
+    "A5-C7-6": -2.411
+   },
+   "_what": "Closes the triangle. Agreeing with the calculated value and with the found value are different statements."
+  },
+  "P4_carbonate_minus_carboxylate_is_n_oxygens": {
+   "agree": 2,
+   "of": 2,
+   "pass": true,
+   "tolerance": 0.5,
+   "pairs": {
+    "A5-CE-C10 - A5-C10": {
+     "observed_Da": 47.9848,
+     "n_tails": 3,
+     "expected_Da": 47.98474,
+     "residual_mDa": 0.0561
+    },
+    "A5-CE-C7-6 - A5-C7-6": {
+     "observed_Da": 31.9898,
+     "n_tails": 2,
+     "expected_Da": 31.98983,
+     "residual_mDa": -0.0292
+    }
+   },
+   "_what": "THE LINKAGE CHECK THAT MASS CAN DO. Carbonate and its carboxylate counterpart differ by exactly one oxygen per tail. Mass still cannot see WHERE that oxygen sits -- P10 does that."
+  },
+  "P5_axis_leave_one_out_tick_residual": {
+   "agree": 5,
+   "of": 5,
+   "pass": true,
+   "tolerance": 1.5,
+   "per_panel": {
+    "S22C": {
+     "loo_worst_px": 0.126,
+     "max_residual_px": 0.0504,
+     "n_ticks": 5,
+     "tick_spacing_px": [
+      68.912,
+      69.012,
+      69.03,
+      69.045
+     ]
+    },
+    "S24_left": {
+     "loo_worst_px": 0.3311,
+     "max_residual_px": 0.1906,
+     "n_ticks": 5,
+     "tick_spacing_px": [
+      73.214,
+      73.814,
+      73.32,
+      73.771
+     ]
+    },
+    "S24_right": {
+     "loo_worst_px": 0.3632,
+     "max_residual_px": 0.2275,
+     "n_ticks": 5,
+     "tick_spacing_px": [
+      73.137,
+      73.27,
+      73.814,
+      73.186
+     ]
+    },
+    "S5": {
+     "loo_worst_px": 0.688,
+     "max_residual_px": 0.3147,
+     "n_ticks": 4,
+     "tick_spacing_px": [
+      135.393,
+      135.63,
+      134.784
+     ]
+    },
+    "S23A": {
+     "loo_worst_px": 0.3641,
+     "max_residual_px": 0.2566,
+     "n_ticks": 6,
+     "tick_spacing_px": [
+      52.275,
+      52.297,
+      52.194,
+      52.674,
+      51.916
+     ]
+    }
+   },
+   "_what": "axis.calibrate's max-residual test is weak against a SINGLE bad tick -- least squares drags the line toward the outlier. Reported as leave-one-out, which has no leverage masking."
+  },
+  "P6_axis_rule_sits_on_the_extreme_tick": {
+   "agree": 5,
+   "of": 5,
+   "pass": true,
+   "tolerance": 1.5,
+   "per_panel": {
+    "S22C": {
+     "extreme_tick_px": 379.932,
+     "detected_axis_rule_px": 379.5,
+     "delta_px": 0.432,
+     "tick_value_there": 10000.0
+    },
+    "S24_left": {
+     "extreme_tick_px": 350.0,
+     "detected_axis_rule_px": 350.0,
+     "delta_px": 0.0,
+     "tick_value_there": 10000.0
+    },
+    "S24_right": {
+     "extreme_tick_px": 352.0,
+     "detected_axis_rule_px": 352.0,
+     "delta_px": 0.0,
+     "tick_value_there": 10000.0
+    },
+    "S5": {
+     "extreme_tick_px": 435.235,
+     "detected_axis_rule_px": 435.5,
+     "delta_px": 0.265,
+     "tick_value_there": 1.0
+    },
+    "S23A": {
+     "extreme_tick_px": 336.909,
+     "detected_axis_rule_px": 337.0,
+     "delta_px": 0.091,
+     "tick_value_there": 0.0
+    }
+   },
+   "_what": "A round number the authors DREW and never printed: on every panel the x-axis rule is the lowest decade tick (1e4, 1e4, 1e4, 1e0) or the linear zero. Detected from the black rule, which took no part in the tick fit.",
+   "_earned_itself": "This check found a real error on its first run: S22C's baseline had been taken as row 440 from a full-page dark-row scan, but row 440 is panel A's flow-cytometry box and panel C's rule is at 380, coinciding with its 1e4 tick. Error class 20. Fixed in stage01_values.py; all 23 values were unchanged, verified by diff."
+  },
+  "P7_bar_top_left_right_flank_agreement": {
+   "agree": 12,
+   "of": 12,
+   "pass": true,
+   "tolerance": 2.0,
+   "per_bar": {
+    "S22C::A5-CE-C10": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9815,
+     "width_px": 36
+    },
+    "S22C::A5-C10": {
+     "flank_delta_px": 0.0,
+     "coverage": 1.0,
+     "width_px": 36
+    },
+    "S22C::A5-CE-C7-6": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9619,
+     "width_px": 35
+    },
+    "S22C::A5-C7-6": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.963,
+     "width_px": 36
+    },
+    "S24_left::A5-CE-C7-6": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9929,
+     "width_px": 47
+    },
+    "S24_left::A5-C7-6": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9928,
+     "width_px": 46
+    },
+    "S24_right::A5-CE-C10": {
+     "flank_delta_px": 0.0,
+     "coverage": 1.0,
+     "width_px": 47
+    },
+    "S24_right::A5-C10": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9928,
+     "width_px": 46
+    },
+    "S23A::A5-C10": {
+     "flank_delta_px": 0.0,
+     "coverage": 1.0,
+     "width_px": 34
+    },
+    "S23A::A5-CE-C10": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9902,
+     "width_px": 34
+    },
+    "S23A::A5-C7-6": {
+     "flank_delta_px": 1.0,
+     "coverage": 0.9905,
+     "width_px": 35
+    },
+    "S23A::A5-CE-C7-6": {
+     "flank_delta_px": 0.0,
+     "coverage": 0.9804,
+     "width_px": 34
+    }
+   },
+   "_what": "bars.bar_top's class-32 guard. A replicate dot or a whisker cap is centred and so is in neither flank; a real top rule is at the same row in both. Every bar here reads 0.0 px, which is why F-018's 15-of-60 failure cannot be present."
+  },
+  "P8_S5_marker_centroid_equals_bbox_centre": {
+   "agree": 11,
+   "of": 11,
+   "pass": true,
+   "tolerance": 1.5,
+   "worst_px": 0.685,
+   "per_point": {
+    "A5-CE-C6": 0.349,
+    "A5-CE-C8": 0.685,
+    "A5-CE-C9": -0.152,
+    "A5-CE-C10": 0.256,
+    "A5-CE-C5-4": 0.11,
+    "A5-CE-C6-5": 0.206,
+    "A5-CE-C7-6": 0.009,
+    "A5-CE-C7-7": 0.019,
+    "A5-CE-C8-7": -0.092,
+    "A5-CE-C8-8": 0.242,
+    "A5-CE-C10-6": -0.446
+   },
+   "_what": "S5 has no bars, so bar_top does not apply and a marker's value is its CENTROID. If the chroma mask were catching an overlapping label or a clipped marker the centroid would leave the bounding-box centre."
+  },
+  "P9_corpus_overlap_full_inchikey": {
+   "agree": 1,
+   "of": 1,
+   "pass": true,
+   "tolerance": null,
+   "full_inchikey_matches": 0,
+   "il_name_matches": 0,
+   "skeleton_only_matches": 0,
+   "rows_scanned": {
+    "vitro": 29195,
+    "vivo": 1803
+   },
+   "_what": "Report, do not act. Siblings in this run found 360/489, 246/580 and 11/104 members already present."
+  },
+  "P10_linkage_is_a_carbonate_not_an_ester_or_carbamate": {
+   "agree": 3,
+   "of": 3,
+   "pass": true,
+   "tolerance": null,
+   "c13_peaks_ppm": [
+    155.16,
+    79.32,
+    64.91,
+    59.41,
+    56.59,
+    52.93,
+    52.67,
+    34.24,
+    33.99,
+    31.76,
+    31.72,
+    29.26,
+    29.17,
+    25.15,
+    22.58,
+    14.06
+   ],
+   "source": "Figure S12, SI p.24",
+   "carbonate_band_peaks": [
+    155.16
+   ],
+   "ester_band_peaks": [],
+   "n_NCH2_peaks_52_to_54": 2,
+   "subtests": {
+    "a_carbonyl_in_the_dialkyl_carbonate_band_153_157": true,
+    "no_carbonyl_in_the_aliphatic_ester_band_168_180": true,
+    "two_distinct_NCH2_near_53_one_tail_per_nitrogen": true
+   },
+   "_what": "MASS CANNOT SEE CONNECTIVITY. P1-P4 would all pass on an ester bearing an extra oxygen elsewhere. 13C separates them: a dialkyl carbonate carbonyl is ~155 ppm and an aliphatic ester ~173, and this spectrum has one peak at 155.16 and nothing between 168 and 180. The two peaks at 52.93/52.67 are the authors' own stated evidence that the tails sit one per nitrogen rather than two on one."
+  }
+ },
+ "summary": {
+  "checks_run": 10,
+  "checks_passed": 10,
+  "failures": []
+ }
+}

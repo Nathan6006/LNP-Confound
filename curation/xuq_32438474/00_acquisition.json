@@ -1,0 +1,98 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "paper": {
+  "title": "Protein and mRNA Delivery Enabled by Cholesteryl-Based Biodegradable Lipidoid Nanoparticles",
+  "authors": "Yamin Li, Rachel Jarvis, Kuixin Zhu, Zachary Glass, Roza Ogurlu, Peiyang Gao, Peixuan Li, Jinjin Chen, Yingjie Yu, Yongjie Yang, Qiaobing Xu",
+  "journal": "Angew. Chem. Int. Ed. 2020, 59, 14957-14964",
+  "pmid": "32438474",
+  "pmcid": "PMC7679290",
+  "doi": "10.1002/anie.202004994",
+  "proposed_experiment_id": "YL_2020"
+ },
+ "scaffolded": "2026-11-10",
+ "files": [
+  {
+   "path": "curation/xuq_32438474/source/anie202004994-sup-0001-misc_information.pdf",
+   "sha256": "78b23bf4b83d4c8a2c50b1e97dbf36406eeb85402bab8aa3608d283c6fee7596",
+   "bytes": 5618290,
+   "what": "Wiley Supporting Information, 58 pp (S1-S57). Figures S1-S45. VECTOR bar charts (not raster).",
+   "retrieved_from": "supplied with the task brief; already present in source/ at 2026-11-09T23:52 local",
+   "retrieved_utc": "pre-existing (not fetched by this curation)",
+   "licence": "NOT RECORDED. Wiley SI landing page was not visited by this curation (browser is owned by the main session). CLAUDE.md s8 requires a CC0/CC-BY-compatible licence string before corpus release; this is OPEN."
+  },
+  {
+   "path": "curation/xuq_32438474/source/PMC7679290.jats.xml",
+   "sha256": "95fe3ea49b2c974525d07de0764a98ede73b471eb32ab5bcd5c2da8044f5165d",
+   "bytes": 110271,
+   "what": "PMC JATS full text (NIHMS author manuscript). Complete Results/Discussion + all 7 figure captions.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7679290/ via scratchpad tools/pmc_fetch.py",
+   "retrieved_utc": "2026-11-10T07:22:00Z",
+   "licence": "PMC Author Manuscript (NIH Public Access). NOT a CC-BY deposit; reuse terms are the publisher's. OPEN for s8."
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0001.jpg",
+   "sha256": "1a1cb272b778c0b29bd86a610c2e5e4df9a89d3b8e8bb37521f18f72544262c3",
+   "bytes": 159431, "what": "graphical abstract / TOC image",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0001.jpg",
+   "retrieved_utc": "2026-11-10T07:22:48Z", "licence": "see JATS entry"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0002.jpg",
+   "sha256": "73d99e65d0babf8ee48de35fe89fe42b26e1b0fd7b02f7edc6e6731e7e20c8ea",
+   "bytes": 651066, "what": "FIGURE 1 (1800x1330 px, 300 dpi). 1A draws the three tails + heads 75/76/77.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0002.jpg",
+   "retrieved_utc": "2026-11-10T07:22:48Z", "licence": "see JATS entry"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0003.jpg",
+   "sha256": "96089296330ce8b38818b3922743f841a653a4a7639aa7989f29aecd142b45a2",
+   "bytes": 646252, "what": "FIGURE 2 (1800x1330 px, 300 dpi). 2A draws heads 78/80/81/87/90/304.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0003.jpg",
+   "retrieved_utc": "2026-11-10T07:23:00Z", "licence": "see JATS entry"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0004.jpg",
+   "sha256": "22db4b56ddc4dd0b7e4ba92fc40e56c0ef56467e753fc86f765cd174a7ebc89e",
+   "bytes": 20597,
+   "what": "FIGURE 3 -- NOT ACQUIRED. The 20,597 bytes on disk are a Google reCAPTCHA challenge page, not a JPEG. Figure 3B is the paper's only mRNA screen. See 00_value_sources.json.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0004.jpg",
+   "retrieved_utc": "2026-11-10T07:22:48Z FAILED (reCAPTCHA); retried with backoff, still reCAPTCHA",
+   "licence": "n/a"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0005.jpg",
+   "sha256": "0ddfecded5a98471a11353c92be0259e41485e730a464e759ec0ea4b652d52b3",
+   "bytes": 372062, "what": "FIGURE 4 (uptake mechanism + efficacy-vs-viability scatter)",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0005.jpg",
+   "retrieved_utc": "2026-11-10T07:25:00Z", "licence": "see JATS entry"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0006.jpg",
+   "sha256": "45e2bed8665b021e1e07adc3c6706ceccaad8b2a86f239e959e3426d7129f8a4",
+   "bytes": 1478334, "what": "FIGURE 5 (in vivo IM, images only)",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0006.jpg",
+   "retrieved_utc": "2026-11-10T07:25:00Z", "licence": "see JATS entry"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0007.jpg",
+   "sha256": "128686b477548b2a1b53e379ea34be32ffdaf8e2e3cb9b7e7fc4a3c1b04b9b1b",
+   "bytes": 20598,
+   "what": "FIGURE 6 -- NOT ACQUIRED (reCAPTCHA page). Images only; carries no per-member numeric value, so this does not block the curation.",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0007.jpg",
+   "retrieved_utc": "2026-11-10T07:22:48Z FAILED", "licence": "n/a"
+  },
+  {
+   "path": "curation/xuq_32438474/source/pmc/nihms-1624779-f0008.jpg",
+   "sha256": "0d3d9777b61a5c8108c295d24bdd9d405175f68a21c8aff92b5e0d5a2577d3a0",
+   "bytes": 1394823, "what": "FIGURE 7 (brain; 7B is a GFAP/NeuN colocalisation percentage, not a delivery value)",
+   "retrieved_from": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7679290/bin/nihms-1624779-f0008.jpg",
+   "retrieved_utc": "2026-11-10T07:25:00Z", "licence": "see JATS entry"
+  }
+ ],
+ "not_acquired": [
+  {"what": "publisher (Wiley) article PDF, which would carry Figure 3 as VECTOR",
+   "why": "behind Wiley's bot check; the task forbids using the shared browser and forbids bypassing bot checks. Plain clients get the challenge page."},
+  {"what": "author repository / Source Data",
+   "why": "find_repo.py --doi 10.1002/anie.202004994 --pmid 32438474 --author Xu returned no matching repository (only unrelated string hits). Angew 2020 had no Source Data policy."}
+ ]
+}

@@ -1,0 +1,320 @@
+{
+  "paper": {
+    "pmid": "23651337",
+    "doi": "10.1021/sb300023h"
+  },
+  "scripts": {
+    "stage05_values.py": {
+      "clean_exit_code": 0,
+      "clean_counts": {
+        "CA_y_label_to_tick": 6,
+        "CB_y_calibration": 6,
+        "CC_minor_tick_holdout": 6,
+        "CD_bar_top_three_way": 16,
+        "CE_baseline_is_zero_tick": 16,
+        "CF_bar_to_label_assignment": 16,
+        "CG_frame_top_is_110pct": 1,
+        "CH_one_x_grid": 5
+      },
+      "seeds": {
+        "seed_major_tick": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CB_y_calibration",
+              "clean": 6,
+              "seeded": 5
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_minor_tick": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CC_minor_tick_holdout",
+              "clean": 6,
+              "seeded": 5
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_bartop_fill": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CD_bar_top_three_way",
+              "clean": 16,
+              "seeded": 15
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_errbar_origin": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CD_bar_top_three_way",
+              "clean": 16,
+              "seeded": 15
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_baseline": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CE_baseline_is_zero_tick",
+              "clean": 16,
+              "seeded": 15
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_xtick": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CH_one_x_grid",
+              "clean": 5,
+              "seeded": 4
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_label": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CA_y_label_to_tick",
+              "clean": 6,
+              "seeded": 4
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_frame_top": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CG_frame_top_is_110pct",
+              "clean": 1,
+              "seeded": 0
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_grid": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "CH_one_x_grid",
+              "clean": 5,
+              "seeded": 3
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_major_tick_gross": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [],
+          "credited_by": "library_refusal",
+          "library_refusal": {
+            "exception": "CalibrationError",
+            "message": "calibrate: tick-fit residual 20.92 px exceeds 2.5 px over 6 ticks at [993.01, 1247.01, 1527.0, 1756.0, 2010.02, 2264.01]."
+          },
+          "credited": true
+        }
+      }
+    },
+    "stage03_enumerate.py": {
+      "clean_exit_code": 0,
+      "clean_counts": {
+        "n_agree": 3
+      },
+      "seeds": {
+        "seed_chain_direction": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "n_agree",
+              "clean": 3,
+              "seeded": 2
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_alkene_stereo": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "n_agree",
+              "clean": 3,
+              "seeded": 2
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_chain_length": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "n_agree",
+              "clean": 3,
+              "seeded": 0
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        }
+      }
+    },
+    "stage02_corpus_overlap.py": {
+      "clean_exit_code": 0,
+      "clean_counts": {
+        "n_agree": 44
+      },
+      "seeds": {
+        "seed_tail_structure": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "n_agree",
+              "clean": 44,
+              "seeded": 1
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        },
+        "seed_tokens_are_catalogue": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "n_agree",
+              "clean": 44,
+              "seeded": 43
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        }
+      }
+    },
+    "make_reference.py": {
+      "clean_exit_code": 0,
+      "clean_counts": {
+        "n_agree": 2
+      },
+      "seeds": {
+        "reverse": {
+          "exit_code": 1,
+          "exits_non_zero": true,
+          "agreement_counts_moved": [
+            {
+              "check": "n_agree",
+              "clean": 2,
+              "seeded": 1
+            }
+          ],
+          "credited_by": "agreement_count_moved",
+          "library_refusal": null,
+          "credited": true
+        }
+      }
+    },
+    "stage01_blocks.py": {
+      "clean_exit_code": 0,
+      "seeds": {}
+    },
+    "stage06_emit.py": {
+      "clean_exit_code": 0,
+      "seeds": {}
+    }
+  },
+  "failures": [],
+  "ast_independence_guard_selftest": {
+    "seeded_file": "copy of make_reference.py with `import assemble` and a `Chem.RWMol()` call added",
+    "exit_code": 1,
+    "fired_as_required": true,
+    "last_line": "ModuleNotFoundError: No module named 'assemble'",
+    "note": "run in a temporary directory on a COPY. make_reference.py itself is untouched."
+  },
+  "summary": {
+    "endpoint_of_the_paper": "EGFP expression in HeLa after transfection with EGFP plasmid DNA and EGFP mRNA (plus fibroblasts and cancer lines) -- a delivery endpoint, ADMISSIBLE IN KIND",
+    "where_those_values_are": "the MAIN ARTICLE, which is not in hand",
+    "tier_of_what_IS_in_hand": "4b_pdf_vector_geometry",
+    "native_dpi": "n/a -- vector; axis.native_tol() deliberately not called, no tolerance widened",
+    "distinct_structures_determinable": 0,
+    "distinct_structures_existing": "NOT DETERMINABLE from the SI. 16 unsaturated lipidoids are individually measured in Figure S3, and at least one saturated counterpart (lipidoid 16's other form) exists. Whether the saturated series has 16 members or only the one shown in Figure S2 is not stated anywhere in the SI.",
+    "formulations": "NOT RECOVERABLE. The SI states no lipidoid:DNA weight ratio, no N:P, no helper-lipid composition, no dose and no particle concentration. It has no experimental section.",
+    "individually_measured_values_located": 16,
+    "corpus_admissible_values": 0,
+    "rows_emitted": 0,
+    "free_external_check": 43,
+    "catalogue_tokens_rejected": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      12,
+      14,
+      16
+    ],
+    "panel_checks": {
+      "CA_y_label_to_tick": "6/6",
+      "CB_y_calibration": "6/6",
+      "CC_minor_tick_holdout": "6/6",
+      "CD_bar_top_three_way": "16/16",
+      "CE_baseline_is_zero_tick": "16/16",
+      "CF_bar_to_label_assignment": "16/16",
+      "CG_frame_top_is_110pct": "1/1",
+      "CH_one_x_grid": "5/5"
+    },
+    "seeds_run": 16,
+    "seeds_credited": 16
+  }
+}

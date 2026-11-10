@@ -1,0 +1,3284 @@
+{
+ "_what": "Stage 01 chain measurements. Every integer here was measured from Fig. 1a's pixels by curation/lib/chains; none was counted by eye.",
+ "figure": "nature_fig1_full.png",
+ "image_px": [
+  2170,
+  2713
+ ],
+ "ink_threshold": 128,
+ "dp_tolerance_sweep": [
+  3.0,
+  4.0,
+  5.0,
+  6.0
+ ],
+ "n_components": 1307,
+ "n_glyph_boxes": 539,
+ "vector_route": "UNAVAILABLE -- see 00_value_sources.json and `--audit-vector`. count_carbons is therefore single-method and `agreed` is False everywhere.",
+ "measurements": {
+  "amine01_chain": {
+   "role": "n-alkyl chain of amine 1",
+   "seed": [
+    66,
+    514
+   ],
+   "component": 291,
+   "kind": "linear",
+   "skeleton_px": 268,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 327.1,
+   "bonds_from_arc_length": 9.98,
+   "bonds_from_dp": 10,
+   "arc_vs_dp_residual_bonds": 0.02,
+   "vertices": 11,
+   "dp_sweep": {
+    "3.0": 11,
+    "4.0": 11,
+    "5.0": 11,
+    "6.0": 11
+   },
+   "apex_count": 11,
+   "px_length": 268,
+   "end_left_xy": [
+    66,
+    514
+   ],
+   "end_right_xy": [
+    333,
+    521
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     40.0
+    ],
+    [
+     "label",
+     6.1
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 10,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 6,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 11,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine02_chain": {
+   "role": "n-alkyl chain of amine 2",
+   "seed": [
+    66,
+    568
+   ],
+   "component": 314,
+   "kind": "linear",
+   "skeleton_px": 324,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 395.5,
+   "bonds_from_arc_length": 11.98,
+   "bonds_from_dp": 12,
+   "arc_vs_dp_residual_bonds": 0.02,
+   "vertices": 13,
+   "dp_sweep": {
+    "3.0": 13,
+    "4.0": 13,
+    "5.0": 13,
+    "6.0": 13
+   },
+   "apex_count": 13,
+   "px_length": 324,
+   "end_left_xy": [
+    66,
+    568
+   ],
+   "end_right_xy": [
+    389,
+    575
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     34.0
+    ],
+    [
+     "label",
+     5.1
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 12,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 6,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 13,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine03_chain": {
+   "role": "n-alkyl chain of amine 3",
+   "seed": [
+    66,
+    621
+   ],
+   "component": 336,
+   "kind": "linear",
+   "skeleton_px": 380,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 463.5,
+   "bonds_from_arc_length": 13.97,
+   "bonds_from_dp": 14,
+   "arc_vs_dp_residual_bonds": 0.03,
+   "vertices": 15,
+   "dp_sweep": {
+    "3.0": 15,
+    "4.0": 15,
+    "5.0": 15,
+    "6.0": 15
+   },
+   "apex_count": 15,
+   "px_length": 380,
+   "end_left_xy": [
+    66,
+    621
+   ],
+   "end_right_xy": [
+    445,
+    629
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     33.0
+    ],
+    [
+     "label",
+     5.4
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 14,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 15,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine04_chain": {
+   "role": "n-alkyl chain of amine 4",
+   "seed": [
+    66,
+    676
+   ],
+   "component": 363,
+   "kind": "linear",
+   "skeleton_px": 434,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 530.8,
+   "bonds_from_arc_length": 15.94,
+   "bonds_from_dp": 16,
+   "arc_vs_dp_residual_bonds": 0.06,
+   "vertices": 17,
+   "dp_sweep": {
+    "3.0": 17,
+    "4.0": 17,
+    "5.0": 17,
+    "6.0": 17
+   },
+   "apex_count": 17,
+   "px_length": 434,
+   "end_left_xy": [
+    67,
+    677
+   ],
+   "end_right_xy": [
+    500,
+    683
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     33.0
+    ],
+    [
+     "label",
+     6.1
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 16,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 17,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine05_chain": {
+   "role": "n-alkyl chain of amine 5",
+   "seed": [
+    66,
+    733
+   ],
+   "component": 386,
+   "kind": "linear",
+   "skeleton_px": 491,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 599.8,
+   "bonds_from_arc_length": 17.95,
+   "bonds_from_dp": 18,
+   "arc_vs_dp_residual_bonds": 0.05,
+   "vertices": 19,
+   "dp_sweep": {
+    "3.0": 19,
+    "4.0": 19,
+    "5.0": 19,
+    "6.0": 19
+   },
+   "apex_count": 19,
+   "px_length": 491,
+   "end_left_xy": [
+    66,
+    733
+   ],
+   "end_right_xy": [
+    556,
+    740
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     34.0
+    ],
+    [
+     "label",
+     6.1
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 18,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 6,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 19,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine06_chain": {
+   "role": "mono-unsaturated chain of amine 6. The inner line of the C=C is a SEPARATE component (amine06_double_bond), so this trace is the plain backbone; the apex comparison is the one place it is skipped, because a C=C is drawn FLAT and so has no turning point",
+   "seed": [
+    66,
+    794
+   ],
+   "component": 409,
+   "kind": "linear",
+   "skeleton_px": 491,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 595.2,
+   "bonds_from_arc_length": 17.82,
+   "bonds_from_dp": 18,
+   "arc_vs_dp_residual_bonds": 0.18,
+   "vertices": 19,
+   "dp_sweep": {
+    "3.0": 19,
+    "4.0": 19,
+    "5.0": 19,
+    "6.0": 19
+   },
+   "apex_count": 18,
+   "px_length": 491,
+   "end_left_xy": [
+    66,
+    794
+   ],
+   "end_right_xy": [
+    556,
+    802
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     32.0
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 18,
+   "path_shape": {
+    "steep_max": 0.78,
+    "flat_run_px": 31,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 0.7777777777777778) or a flat drawn bond (flat_run 31 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 19,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine06_double_bond": {
+   "role": "the inner line of amine 6 C=C: which backbone bond it marks",
+   "seed": [
+    300,
+    801
+   ],
+   "component": 415,
+   "kind": "double_bond_marker",
+   "skeleton_px": 31,
+   "marker_bbox": [
+    291,
+    321,
+    800,
+    801
+   ],
+   "vertex_x_after_rebuild": [
+    66,
+    94,
+    122,
+    149,
+    177,
+    205,
+    233,
+    261,
+    291,
+    321,
+    349,
+    377,
+    405,
+    432,
+    457,
+    484,
+    511,
+    540,
+    556
+   ],
+   "flat_bond_between_vertices": [
+    8,
+    9
+   ],
+   "double_bond_position_from_amine_end": 9,
+   "flank_y": {
+    "marker_y": 800.5,
+    "left_vertex_y": 810.0,
+    "right_vertex_y": 810.0
+   },
+   "both_stubs_same_side": true,
+   "geometry": "Z (cis)",
+   "geometry_basis": "The two chain stubs flanking the flat C=C are on the same side of it (cis) or on opposite sides (trans). Measured from the rebuilt vertex list, not read off the picture."
+  },
+  "amine07_acyl": {
+   "role": "acyl chain of amine 7, terminal CH3 -> carbonyl C. The junction IS the carbonyl carbon, so every vertex is a carbon",
+   "seed": [
+    66,
+    860
+   ],
+   "component": 443,
+   "kind": "to_junction",
+   "skeleton_px": 521,
+   "n_junction_px": 14,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 509.6,
+   "bonds_from_arc_length": 14.9,
+   "bonds_from_dp": 15,
+   "arc_vs_dp_residual_bonds": 0.1,
+   "vertices": 16,
+   "dp_sweep": {
+    "3.0": 16,
+    "4.0": 16,
+    "5.0": 16,
+    "6.0": 16
+   },
+   "apex_count": 16,
+   "px_length": 417,
+   "end_left_xy": [
+    66,
+    860
+   ],
+   "end_right_xy": [
+    482,
+    876
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     35.0
+    ]
+   ],
+   "minus": 0,
+   "heavy_atoms_in_chain": 16,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 16,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine08_acyl": {
+   "role": "acyl chain of amine 8, terminal CH3 -> carbonyl C",
+   "seed": [
+    66,
+    956
+   ],
+   "component": 474,
+   "kind": "to_junction",
+   "skeleton_px": 578,
+   "n_junction_px": 14,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 580.8,
+   "bonds_from_arc_length": 16.97,
+   "bonds_from_dp": 17,
+   "arc_vs_dp_residual_bonds": 0.03,
+   "vertices": 18,
+   "dp_sweep": {
+    "3.0": 18,
+    "4.0": 18,
+    "5.0": 18,
+    "6.0": 18
+   },
+   "apex_count": 18,
+   "px_length": 472,
+   "end_left_xy": [
+    66,
+    956
+   ],
+   "end_right_xy": [
+    537,
+    971
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     33.0
+    ]
+   ],
+   "minus": 0,
+   "heavy_atoms_in_chain": 18,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 18,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine09_branched": {
+   "role": "amine 9: the three branches of the 2-substituted carbon",
+   "seed": [
+    66,
+    1076
+   ],
+   "component": 505,
+   "kind": "three_branch",
+   "skeleton_px": 440,
+   "branches": [
+    {
+     "free_end_xy": [
+      66,
+      1076
+     ],
+     "vertices": 9,
+     "dp_sweep": {
+      "3.0": 9,
+      "4.0": 9,
+      "5.0": 9,
+      "6.0": 9
+     },
+     "free_end": [
+      "methyl",
+      33.2
+     ],
+     "carbons_excluding_junction": 8
+    },
+    {
+     "free_end_xy": [
+      149,
+      1027
+     ],
+     "vertices": 7,
+     "dp_sweep": {
+      "3.0": 7,
+      "4.0": 7,
+      "5.0": 7,
+      "6.0": 7
+     },
+     "free_end": [
+      "methyl",
+      118.7
+     ],
+     "carbons_excluding_junction": 6
+    },
+    {
+     "free_end_xy": [
+      333,
+      1083
+     ],
+     "vertices": 3,
+     "dp_sweep": {
+      "3.0": 3,
+      "4.0": 3,
+      "5.0": 3,
+      "6.0": 3
+     },
+     "free_end": [
+      "label",
+      6.1
+     ],
+     "carbons_excluding_junction": 1
+    }
+   ],
+   "n_free_ends": 3
+  },
+  "amine10_ester_alkyl": {
+   "role": "O-alkyl chain of amine 10; its right end rests on the ester O glyph",
+   "seed": [
+    66,
+    1136
+   ],
+   "component": 548,
+   "kind": "linear",
+   "skeleton_px": 213,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 260.0,
+   "bonds_from_arc_length": 8.02,
+   "bonds_from_dp": 8,
+   "arc_vs_dp_residual_bonds": 0.02,
+   "vertices": 9,
+   "dp_sweep": {
+    "3.0": 9,
+    "4.0": 9,
+    "5.0": 9,
+    "6.0": 9
+   },
+   "apex_count": 9,
+   "px_length": 213,
+   "end_left_xy": [
+    66,
+    1136
+   ],
+   "end_right_xy": [
+    278,
+    1142
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     19.0
+    ],
+    [
+     "label",
+     3.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 8,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 6,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 9,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine10_glycyl": {
+   "role": "amine 10 head, NH2 end -> carbonyl carbon. The carbonyl O letter is fused to the two C=O lines, so the component carries a loop and has only two free ends; walking in from the NH2 side avoids it. Two heavy atoms means CH2 + C(=O), i.e. glycine and not beta-alanine",
+   "seed": [
+    300,
+    1142
+   ],
+   "component": 549,
+   "kind": "to_junction_from_right",
+   "skeleton_px": 152,
+   "n_junction_px": 16,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 51.9,
+   "bonds_from_arc_length": 1.94,
+   "bonds_from_dp": 2,
+   "arc_vs_dp_residual_bonds": 0.06,
+   "vertices": 3,
+   "dp_sweep": {
+    "3.0": 3,
+    "4.0": 3,
+    "5.0": 3,
+    "6.0": 3
+   },
+   "apex_count": 3,
+   "px_length": 43,
+   "end_left_xy": [
+    362,
+    1145
+   ],
+   "end_right_xy": [
+    320,
+    1151
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 3,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine10_ester_link": {
+   "role": "amine 10 head, ester O -> carbonyl carbon. One heavy atom means the ester oxygen is bonded straight to the carbonyl carbon, with no carbon in between",
+   "seed": [
+    300,
+    1142
+   ],
+   "component": 549,
+   "kind": "to_junction",
+   "skeleton_px": 152,
+   "n_junction_px": 16,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 18.7,
+   "bonds_from_arc_length": 0.97,
+   "bonds_from_dp": 1,
+   "arc_vs_dp_residual_bonds": 0.03,
+   "vertices": 2,
+   "dp_sweep": {
+    "3.0": 2,
+    "4.0": 2,
+    "5.0": 2,
+    "6.0": 2
+   },
+   "apex_count": 2,
+   "px_length": 16,
+   "end_left_xy": [
+    300,
+    1142
+   ],
+   "end_right_xy": [
+    315,
+    1151
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     0.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 1,
+   "path_shape": {
+    "steep_max": null,
+    "flat_run_px": null,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max None) or a flat drawn bond (flat_run None px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 2,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine11_alkyl": {
+   "role": "4-alkyl chain of amine 11, terminal CH3 -> the substituted ring carbon, which is a vertex and is subtracted",
+   "seed": [
+    66,
+    1265
+   ],
+   "component": 582,
+   "kind": "to_junction",
+   "skeleton_px": 414,
+   "n_junction_px": 4,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 274.4,
+   "bonds_from_arc_length": 8.02,
+   "bonds_from_dp": 8,
+   "arc_vs_dp_residual_bonds": 0.02,
+   "vertices": 9,
+   "dp_sweep": {
+    "3.0": 9,
+    "4.0": 9,
+    "5.0": 9,
+    "6.0": 9
+   },
+   "apex_count": 9,
+   "px_length": 224,
+   "end_left_xy": [
+    66,
+    1265
+   ],
+   "end_right_xy": [
+    289,
+    1265
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     28.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 8,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 9,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine12_alkyl": {
+   "role": "4-alkyl chain of amine 12",
+   "seed": [
+    66,
+    1348
+   ],
+   "component": 621,
+   "kind": "to_junction",
+   "skeleton_px": 470,
+   "n_junction_px": 5,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 340.5,
+   "bonds_from_arc_length": 9.95,
+   "bonds_from_dp": 10,
+   "arc_vs_dp_residual_bonds": 0.05,
+   "vertices": 11,
+   "dp_sweep": {
+    "3.0": 11,
+    "4.0": 11,
+    "5.0": 11,
+    "6.0": 11
+   },
+   "apex_count": 11,
+   "px_length": 279,
+   "end_left_xy": [
+    66,
+    1348
+   ],
+   "end_right_xy": [
+    344,
+    1349
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     22.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 10,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 11,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine13_alkyl": {
+   "role": "4-alkyl chain of amine 13",
+   "seed": [
+    66,
+    1429
+   ],
+   "component": 659,
+   "kind": "to_junction",
+   "skeleton_px": 526,
+   "n_junction_px": 8,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 409.0,
+   "bonds_from_arc_length": 11.95,
+   "bonds_from_dp": 12,
+   "arc_vs_dp_residual_bonds": 0.05,
+   "vertices": 13,
+   "dp_sweep": {
+    "3.0": 13,
+    "4.0": 13,
+    "5.0": 13,
+    "6.0": 13
+   },
+   "apex_count": 13,
+   "px_length": 335,
+   "end_left_xy": [
+    66,
+    1429
+   ],
+   "end_right_xy": [
+    400,
+    1430
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     21.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 12,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 6,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 13,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine14_alkoxy": {
+   "role": "4-alkoxy chain of amine 14; its right end rests on the ether O, whose outline letter is fused into the benzene-ring component, so the weaker adjacent-ink test is used there",
+   "seed": [
+    66,
+    1529
+   ],
+   "component": 718,
+   "kind": "linear",
+   "skeleton_px": 242,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 296.9,
+   "bonds_from_arc_length": 9.1,
+   "bonds_from_dp": 9,
+   "arc_vs_dp_residual_bonds": 0.1,
+   "vertices": 10,
+   "dp_sweep": {
+    "3.0": 10,
+    "4.0": 10,
+    "5.0": 10,
+    "6.0": 10
+   },
+   "apex_count": 10,
+   "px_length": 242,
+   "end_left_xy": [
+    66,
+    1529
+   ],
+   "end_right_xy": [
+    307,
+    1538
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     20.0
+    ],
+    [
+     "label_fused",
+     126.2
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 9,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 10,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine14_ring": {
+   "role": "the benzene ring of amine 14: ring size from its own enclosed hole",
+   "seed": [
+    309,
+    1541
+   ],
+   "component": 693,
+   "kind": "ring",
+   "skeleton_px": 256,
+   "ring_vertices": 6,
+   "dp_sweep": {
+    "3.0": 6,
+    "4.0": 6,
+    "5.0": 6,
+    "6.0": 6
+   },
+   "hole_area_px": 2491.0,
+   "hole_centroid_xy": [
+    64.0,
+    33.7
+   ]
+  },
+  "amine11_ring_substitution": {
+   "role": "amine 11: where the alkyl chain and the NH2 sit on the ring",
+   "seed": [
+    66,
+    1265
+   ],
+   "component": 582,
+   "kind": "ring_substitution",
+   "skeleton_px": 414,
+   "hole_area_px": 2491.0,
+   "ring_circumradius_px": 31.0,
+   "centre_xy": [
+    317.1,
+    1248.7
+   ],
+   "substituted_vertices": [
+    {
+     "r_px": 32.0,
+     "angle_deg": 150.1
+    },
+    {
+     "r_px": 32.5,
+     "angle_deg": -30.9
+    }
+   ],
+   "other_junctions": [],
+   "subtended_angle_deg": 179.0,
+   "pattern": "para",
+   "deviation_from_ideal_deg": 1.0
+  },
+  "amine12_ring_substitution": {
+   "role": "amine 12: where the alkyl chain and the NH2 sit on the ring",
+   "seed": [
+    66,
+    1348
+   ],
+   "component": 621,
+   "kind": "ring_substitution",
+   "skeleton_px": 470,
+   "hole_area_px": 2489.0,
+   "ring_circumradius_px": 31.0,
+   "centre_xy": [
+    373.0,
+    1332.2
+   ],
+   "substituted_vertices": [
+    {
+     "r_px": 32.6,
+     "angle_deg": 149.4
+    },
+    {
+     "r_px": 32.3,
+     "angle_deg": -30.1
+    }
+   ],
+   "other_junctions": [],
+   "subtended_angle_deg": 179.5,
+   "pattern": "para",
+   "deviation_from_ideal_deg": 0.5
+  },
+  "amine13_ring_substitution": {
+   "role": "amine 13: where the alkyl chain and the NH2 sit on the ring",
+   "seed": [
+    66,
+    1429
+   ],
+   "component": 659,
+   "kind": "ring_substitution",
+   "skeleton_px": 526,
+   "hole_area_px": 2491.0,
+   "ring_circumradius_px": 31.0,
+   "centre_xy": [
+    429.0,
+    1413.2
+   ],
+   "substituted_vertices": [
+    {
+     "r_px": 32.5,
+     "angle_deg": 149.3
+    },
+    {
+     "r_px": 32.7,
+     "angle_deg": -31.1
+    }
+   ],
+   "other_junctions": [],
+   "subtended_angle_deg": 179.6,
+   "pattern": "para",
+   "deviation_from_ideal_deg": 0.4
+  },
+  "amine14_ring_substitution": {
+   "role": "amine 14: where the ether O and the NH2 sit on the ring",
+   "seed": [
+    309,
+    1541
+   ],
+   "component": 693,
+   "kind": "ring_substitution",
+   "skeleton_px": 256,
+   "hole_area_px": 2491.0,
+   "ring_circumradius_px": 31.0,
+   "centre_xy": [
+    373.0,
+    1512.7
+   ],
+   "substituted_vertices": [
+    {
+     "r_px": 32.3,
+     "angle_deg": 150.3
+    },
+    {
+     "r_px": 32.6,
+     "angle_deg": -30.9
+    }
+   ],
+   "other_junctions": [
+    {
+     "r_px": 53.7,
+     "angle_deg": 150.3
+    }
+   ],
+   "subtended_angle_deg": 178.8,
+   "pattern": "para",
+   "deviation_from_ideal_deg": 1.2
+  },
+  "amine15_linker": {
+   "role": "N-to-N chain of amine 15",
+   "seed": [
+    915,
+    516
+   ],
+   "component": 287,
+   "kind": "linear",
+   "skeleton_px": 61,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 73.7,
+   "bonds_from_arc_length": 3.0,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.0,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 61,
+   "end_left_xy": [
+    915,
+    516
+   ],
+   "end_right_xy": [
+    975,
+    519
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine16_linker": {
+   "role": "N-to-N chain of amine 16",
+   "seed": [
+    915,
+    576
+   ],
+   "component": 317,
+   "kind": "linear",
+   "skeleton_px": 89,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 107.5,
+   "bonds_from_arc_length": 3.99,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 89,
+   "end_left_xy": [
+    915,
+    576
+   ],
+   "end_right_xy": [
+    1003,
+    577
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     5.4
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine17_linker": {
+   "role": "N-to-N chain of amine 17",
+   "seed": [
+    915,
+    631
+   ],
+   "component": 340,
+   "kind": "linear",
+   "skeleton_px": 144,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 174.9,
+   "bonds_from_arc_length": 5.96,
+   "bonds_from_dp": 6,
+   "arc_vs_dp_residual_bonds": 0.04,
+   "vertices": 7,
+   "dp_sweep": {
+    "3.0": 7,
+    "4.0": 7,
+    "5.0": 7,
+    "6.0": 7
+   },
+   "apex_count": 7,
+   "px_length": 144,
+   "end_left_xy": [
+    915,
+    631
+   ],
+   "end_right_xy": [
+    1058,
+    632
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     6.3
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 5,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 7,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine18_linkerA": {
+   "role": "amine 18, terminal NH2 -> secondary NH",
+   "seed": [
+    915,
+    689
+   ],
+   "component": 365,
+   "kind": "linear",
+   "skeleton_px": 59,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 70.8,
+   "bonds_from_arc_length": 2.92,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.08,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 59,
+   "end_left_xy": [
+    916,
+    690
+   ],
+   "end_right_xy": [
+    974,
+    691
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     6.3
+    ],
+    [
+     "label",
+     6.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine18_linkerB": {
+   "role": "amine 18, secondary NH -> terminal NH2",
+   "seed": [
+    998,
+    691
+   ],
+   "component": 366,
+   "kind": "linear",
+   "skeleton_px": 61,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 74.1,
+   "bonds_from_arc_length": 3.01,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 61,
+   "end_left_xy": [
+    998,
+    691
+   ],
+   "end_right_xy": [
+    1058,
+    689
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ],
+    [
+     "label",
+     6.1
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine19_linkerA": {
+   "role": "amine 19, terminal NH2 -> tertiary N",
+   "seed": [
+    915,
+    770
+   ],
+   "component": 401,
+   "kind": "linear",
+   "skeleton_px": 61,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 73.7,
+   "bonds_from_arc_length": 3.0,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.0,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 61,
+   "end_left_xy": [
+    915,
+    770
+   ],
+   "end_right_xy": [
+    975,
+    773
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine19_linkerB": {
+   "role": "amine 19, tertiary N -> terminal NH2",
+   "seed": [
+    998,
+    773
+   ],
+   "component": 402,
+   "kind": "linear",
+   "skeleton_px": 61,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 73.3,
+   "bonds_from_arc_length": 2.99,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 61,
+   "end_left_xy": [
+    999,
+    773
+   ],
+   "end_right_xy": [
+    1059,
+    771
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.0
+    ],
+    [
+     "label",
+     5.4
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine19_Nmethyl": {
+   "role": "amine 19: the bond off the tertiary N whose far end carries no label -- a methyl",
+   "seed": [
+    986,
+    793
+   ],
+   "component": 410,
+   "kind": "stub",
+   "skeleton_px": 19,
+   "px_length": 19,
+   "n_free_ends": 2,
+   "upper_end": [
+    "methyl",
+    25.0
+   ],
+   "lower_end": [
+    "label",
+    7.0
+   ],
+   "is_methyl": true
+  },
+  "amine20_linkerA": {
+   "role": "amine 20, first N-to-N linker",
+   "seed": [
+    915,
+    859
+   ],
+   "component": 437,
+   "kind": "linear",
+   "skeleton_px": 62,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 74.7,
+   "bonds_from_arc_length": 3.03,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.03,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 62,
+   "end_left_xy": [
+    915,
+    859
+   ],
+   "end_right_xy": [
+    976,
+    862
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     4.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine20_linkerB": {
+   "role": "amine 20, second N-to-N linker",
+   "seed": [
+    998,
+    862
+   ],
+   "component": 438,
+   "kind": "linear",
+   "skeleton_px": 60,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 72.3,
+   "bonds_from_arc_length": 2.96,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.04,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 60,
+   "end_left_xy": [
+    999,
+    862
+   ],
+   "end_right_xy": [
+    1058,
+    860
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.0
+    ],
+    [
+     "label",
+     6.3
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine20_linkerC": {
+   "role": "amine 20, third (lower) N-to-N linker",
+   "seed": [
+    986,
+    882
+   ],
+   "component": 452,
+   "kind": "linear",
+   "skeleton_px": 63,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 72.4,
+   "bonds_from_arc_length": 2.96,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.04,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 3,
+   "px_length": 63,
+   "end_left_xy": [
+    986,
+    882
+   ],
+   "end_right_xy": [
+    1030,
+    909
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     7.0
+    ],
+    [
+     "label",
+     6.3
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 5,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 5 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine21_linkerA": {
+   "role": "amine 21, first N-to-N linker",
+   "seed": [
+    915,
+    985
+   ],
+   "component": 493,
+   "kind": "linear",
+   "skeleton_px": 87,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 105.1,
+   "bonds_from_arc_length": 3.92,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.08,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 87,
+   "end_left_xy": [
+    915,
+    985
+   ],
+   "end_right_xy": [
+    1001,
+    987
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     7.6
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine21_linkerB": {
+   "role": "amine 21, second N-to-N linker",
+   "seed": [
+    1026,
+    985
+   ],
+   "component": 494,
+   "kind": "linear",
+   "skeleton_px": 89,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 107.5,
+   "bonds_from_arc_length": 3.99,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 89,
+   "end_left_xy": [
+    1026,
+    985
+   ],
+   "end_right_xy": [
+    1114,
+    986
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.1
+    ],
+    [
+     "label",
+     6.3
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine21_Nmethyl": {
+   "role": "amine 21: unlabelled bond off the tertiary N -- a methyl",
+   "seed": [
+    1014,
+    946
+   ],
+   "component": 470,
+   "kind": "stub",
+   "skeleton_px": 21,
+   "px_length": 21,
+   "n_free_ends": 2,
+   "upper_end": [
+    "label",
+    0.0
+   ],
+   "lower_end": [
+    "methyl",
+    18.0
+   ],
+   "is_methyl": true
+  },
+  "amine22_linkerA": {
+   "role": "amine 22, first N-to-N linker",
+   "seed": [
+    915,
+    1104
+   ],
+   "component": 536,
+   "kind": "linear",
+   "skeleton_px": 88,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 106.5,
+   "bonds_from_arc_length": 3.96,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.04,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 88,
+   "end_left_xy": [
+    915,
+    1104
+   ],
+   "end_right_xy": [
+    1002,
+    1105
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label",
+     6.3
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 6,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine22_linkerB": {
+   "role": "amine 22, second N-to-N linker",
+   "seed": [
+    1026,
+    1104
+   ],
+   "component": 537,
+   "kind": "linear",
+   "skeleton_px": 89,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 107.9,
+   "bonds_from_arc_length": 4.0,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.0,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 89,
+   "end_left_xy": [
+    1026,
+    1104
+   ],
+   "end_right_xy": [
+    1114,
+    1104
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.1
+    ],
+    [
+     "label",
+     6.1
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine22_linkerC": {
+   "role": "amine 22, third (upper) N-to-N linker",
+   "seed": [
+    1014,
+    1064
+   ],
+   "component": 513,
+   "kind": "linear",
+   "skeleton_px": 92,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 107.2,
+   "bonds_from_arc_length": 3.98,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.02,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 4,
+   "px_length": 92,
+   "end_left_xy": [
+    1015,
+    1086
+   ],
+   "end_right_xy": [
+    1085,
+    1056
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     0.0
+    ],
+    [
+     "label",
+     7.3
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 5,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 5 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine23_linkerA": {
+   "role": "amine 23, left N-to-N linker",
+   "seed": [
+    915,
+    1233
+   ],
+   "component": 595,
+   "kind": "linear",
+   "skeleton_px": 89,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 108.3,
+   "bonds_from_arc_length": 4.01,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 89,
+   "end_left_xy": [
+    915,
+    1233
+   ],
+   "end_right_xy": [
+    1003,
+    1234
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.0
+    ],
+    [
+     "label",
+     5.1
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine23_linkerB": {
+   "role": "amine 23, right N-to-N linker",
+   "seed": [
+    1082,
+    1187
+   ],
+   "component": 563,
+   "kind": "linear",
+   "skeleton_px": 88,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 106.9,
+   "bonds_from_arc_length": 3.97,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.03,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 88,
+   "end_left_xy": [
+    1083,
+    1187
+   ],
+   "end_right_xy": [
+    1170,
+    1187
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.0
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 3,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine23_ringA": {
+   "role": "amine 23 piperazine, upper half-ring between the two ring N glyphs",
+   "seed": [
+    1014,
+    1194
+   ],
+   "component": 562,
+   "kind": "linear",
+   "skeleton_px": 63,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 72.8,
+   "bonds_from_arc_length": 2.97,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.03,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 3,
+   "px_length": 63,
+   "end_left_xy": [
+    1015,
+    1214
+   ],
+   "end_right_xy": [
+    1058,
+    1187
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     0.0
+    ],
+    [
+     "label",
+     6.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 3,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 3 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine23_ringB": {
+   "role": "amine 23 piperazine, lower half-ring",
+   "seed": [
+    1026,
+    1234
+   ],
+   "component": 574,
+   "kind": "linear",
+   "skeleton_px": 62,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 70.1,
+   "bonds_from_arc_length": 2.9,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.1,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 3,
+   "px_length": 62,
+   "end_left_xy": [
+    1028,
+    1235
+   ],
+   "end_right_xy": [
+    1070,
+    1208
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     6.3
+    ],
+    [
+     "label",
+     8.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 3,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 3 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine24_linkerA": {
+   "role": "amine 24, terminal NH2 -> secondary NH",
+   "seed": [
+    915,
+    1344
+   ],
+   "component": 642,
+   "kind": "linear",
+   "skeleton_px": 59,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 70.8,
+   "bonds_from_arc_length": 2.92,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.08,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 59,
+   "end_left_xy": [
+    916,
+    1345
+   ],
+   "end_right_xy": [
+    974,
+    1346
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     6.3
+    ],
+    [
+     "label",
+     6.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine24_linkerB": {
+   "role": "amine 24, secondary NH -> piperazine N",
+   "seed": [
+    998,
+    1346
+   ],
+   "component": 643,
+   "kind": "linear",
+   "skeleton_px": 61,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 73.3,
+   "bonds_from_arc_length": 2.99,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 61,
+   "end_left_xy": [
+    998,
+    1346
+   ],
+   "end_right_xy": [
+    1058,
+    1344
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ],
+    [
+     "label",
+     6.1
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine24_linkerC": {
+   "role": "amine 24, piperazine N -> terminal NH2",
+   "seed": [
+    1137,
+    1298
+   ],
+   "component": 618,
+   "kind": "linear",
+   "skeleton_px": 61,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 73.7,
+   "bonds_from_arc_length": 3.0,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.0,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 4,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 4,
+   "px_length": 61,
+   "end_left_xy": [
+    1138,
+    1298
+   ],
+   "end_right_xy": [
+    1198,
+    1295
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ],
+    [
+     "label",
+     5.1
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine24_ringA": {
+   "role": "amine 24 piperazine, upper half-ring",
+   "seed": [
+    1070,
+    1304
+   ],
+   "component": 617,
+   "kind": "linear",
+   "skeleton_px": 66,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": false,
+   "dp_resolved_by": "the arc-length measurement, which is independent of the Douglas-Peucker tolerance: 3.04 bonds against a ruler of 34.21 px/bond, i.e. 4 vertices, and that value does appear in the sweep. The tolerance was not chosen.",
+   "arc_length_px": 74.9,
+   "bonds_from_arc_length": 3.04,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.04,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 3,
+   "px_length": 66,
+   "end_left_xy": [
+    1070,
+    1325
+   ],
+   "end_right_xy": [
+    1115,
+    1297
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     0.0
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 5,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 5 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine24_ringB": {
+   "role": "amine 24 piperazine, lower half-ring",
+   "seed": [
+    1082,
+    1344
+   ],
+   "component": 630,
+   "kind": "linear",
+   "skeleton_px": 65,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": false,
+   "dp_resolved_by": "the arc-length measurement, which is independent of the Douglas-Peucker tolerance: 3.02 bonds against a ruler of 34.21 px/bond, i.e. 4 vertices, and that value does appear in the sweep. The tolerance was not chosen.",
+   "arc_length_px": 74.4,
+   "bonds_from_arc_length": 3.02,
+   "bonds_from_dp": 3,
+   "arc_vs_dp_residual_bonds": 0.02,
+   "vertices": 4,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 4,
+    "5.0": 4,
+    "6.0": 4
+   },
+   "apex_count": 3,
+   "px_length": 65,
+   "end_left_xy": [
+    1082,
+    1344
+   ],
+   "end_right_xy": [
+    1126,
+    1317
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.1
+    ],
+    [
+     "label",
+     7.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 2,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 5,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 5 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 4,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine25_armA": {
+   "role": "amine 25, upper-left aminopropyl arm. Its component also contains the LETTER N of the left tertiary nitrogen, fused to the bond, so the walk stops at that fusion and both ends are nitrogen positions",
+   "seed": [
+    942,
+    1440
+   ],
+   "component": 677,
+   "kind": "to_junction",
+   "skeleton_px": 138,
+   "n_junction_px": 7,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 112.2,
+   "bonds_from_arc_length": 3.7,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.3,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 4,
+   "px_length": 95,
+   "end_left_xy": [
+    943,
+    1440
+   ],
+   "end_right_xy": [
+    1013,
+    1472
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.4
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 4,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 4 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine25_armB": {
+   "role": "amine 25, lower-left aminopropyl arm. Its right end abuts the left tertiary N, whose glyph is fused into amine25_armA component, so the glyph test is unavailable there and the weaker adjacent-ink test is used",
+   "seed": [
+    915,
+    1488
+   ],
+   "component": 696,
+   "kind": "linear",
+   "skeleton_px": 89,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 107.5,
+   "bonds_from_arc_length": 3.99,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.01,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 89,
+   "end_left_xy": [
+    915,
+    1488
+   ],
+   "end_right_xy": [
+    1003,
+    1489
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     5.1
+    ],
+    [
+     "label_fused",
+     82.6
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine25_core": {
+   "role": "amine 25, the central N-to-N chain joining the two tertiary nitrogens",
+   "seed": [
+    1026,
+    1488
+   ],
+   "component": 697,
+   "kind": "linear",
+   "skeleton_px": 117,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 142.1,
+   "bonds_from_arc_length": 5.0,
+   "bonds_from_dp": 5,
+   "arc_vs_dp_residual_bonds": 0.0,
+   "vertices": 6,
+   "dp_sweep": {
+    "3.0": 6,
+    "4.0": 6,
+    "5.0": 6,
+    "6.0": 6
+   },
+   "apex_count": 6,
+   "px_length": 117,
+   "end_left_xy": [
+    1026,
+    1488
+   ],
+   "end_right_xy": [
+    1142,
+    1491
+   ],
+   "endpoints_measured": [
+    [
+     "label_fused",
+     101.2
+    ],
+    [
+     "label",
+     6.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 4,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 6,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine25_armC": {
+   "role": "amine 25, right aminopropyl arm",
+   "seed": [
+    1165,
+    1491
+   ],
+   "component": 698,
+   "kind": "linear",
+   "skeleton_px": 89,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 107.9,
+   "bonds_from_arc_length": 4.0,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.0,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 5,
+   "px_length": 89,
+   "end_left_xy": [
+    1166,
+    1491
+   ],
+   "end_right_xy": [
+    1254,
+    1491
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     4.0
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "amine25_armD": {
+   "role": "amine 25, lower-right aminopropyl arm",
+   "seed": [
+    1154,
+    1511
+   ],
+   "component": 713,
+   "kind": "linear",
+   "skeleton_px": 91,
+   "n_free_ends": 2,
+   "n_junction_px": 0,
+   "ruler": "amines",
+   "dp_converged": true,
+   "arc_length_px": 106.6,
+   "bonds_from_arc_length": 3.96,
+   "bonds_from_dp": 4,
+   "arc_vs_dp_residual_bonds": 0.04,
+   "vertices": 5,
+   "dp_sweep": {
+    "3.0": 5,
+    "4.0": 5,
+    "5.0": 5,
+    "6.0": 5
+   },
+   "apex_count": 4,
+   "px_length": 91,
+   "end_left_xy": [
+    1154,
+    1512
+   ],
+   "end_right_xy": [
+    1226,
+    1540
+   ],
+   "endpoints_measured": [
+    [
+     "label",
+     8.0
+    ],
+    [
+     "label",
+     5.0
+    ]
+   ],
+   "minus": 2,
+   "heavy_atoms_in_chain": 3,
+   "path_shape": {
+    "steep_max": 9000000000.0,
+    "flat_run_px": 4,
+    "apex_applicable": false
+   },
+   "second_statistic_agrees": null,
+   "second_statistic_not_applicable": "This path contains a vertical bond (steep_max 9000000000.0) or a flat drawn bond (flat_run 4 px), so the apex statistic structurally undercounts and is not compared. The Douglas-Peucker count is stable over the whole tolerance sweep and is the single measurement for this chain.",
+   "count_carbons": {
+    "n": 5,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   }
+  },
+  "acrylate_O9_tail": {
+   "role": "the ester O-alkyl chain of acrylate O9. The acrylate panel draws its ester O as an outline letter that TOUCHES the first C-O bond, so letter and tail are one component; the walk therefore starts at the terminal methyl and stops where the bond meets the letter, which is the oxygen position",
+   "seed": [
+    190,
+    1744
+   ],
+   "component": 805,
+   "kind": "to_junction_from_right",
+   "skeleton_px": 304,
+   "n_junction_px": 1,
+   "ruler": "acrylates",
+   "dp_converged": true,
+   "arc_length_px": 315.6,
+   "bonds_from_arc_length": 8.86,
+   "bonds_from_dp": 9,
+   "arc_vs_dp_residual_bonds": 0.14,
+   "vertices": 10,
+   "dp_sweep": {
+    "3.0": 10,
+    "4.0": 10,
+    "5.0": 10,
+    "6.0": 10
+   },
+   "apex_count": 10,
+   "px_length": 257,
+   "end_left_xy": [
+    462,
+    1734
+   ],
+   "end_right_xy": [
+    206,
+    1746
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     236.1
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 9,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 4,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 10,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "acrylate_O9_tail",
+    "name_token_length": 9,
+    "measured_length": 9,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "acrylate_O12_tail": {
+   "role": "the ester O-alkyl chain of acrylate O12. The acrylate panel draws its ester O as an outline letter that TOUCHES the first C-O bond, so letter and tail are one component; the walk therefore starts at the terminal methyl and stops where the bond meets the letter, which is the oxygen position",
+   "seed": [
+    186,
+    1833
+   ],
+   "component": 830,
+   "kind": "to_junction_from_right",
+   "skeleton_px": 391,
+   "n_junction_px": 1,
+   "ruler": "acrylates",
+   "dp_converged": true,
+   "arc_length_px": 422.1,
+   "bonds_from_arc_length": 11.85,
+   "bonds_from_dp": 12,
+   "arc_vs_dp_residual_bonds": 0.15,
+   "vertices": 13,
+   "dp_sweep": {
+    "3.0": 13,
+    "4.0": 13,
+    "5.0": 13,
+    "6.0": 13
+   },
+   "apex_count": 13,
+   "px_length": 344,
+   "end_left_xy": [
+    545,
+    1840
+   ],
+   "end_right_xy": [
+    202,
+    1835
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     234.0
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 12,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 13,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "acrylate_O12_tail",
+    "name_token_length": 12,
+    "measured_length": 12,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "acrylate_O14_tail": {
+   "role": "the ester O-alkyl chain of acrylate O14. The acrylate panel draws its ester O as an outline letter that TOUCHES the first C-O bond, so letter and tail are one component; the walk therefore starts at the terminal methyl and stops where the bond meets the letter, which is the oxygen position",
+   "seed": [
+    185,
+    1911
+   ],
+   "component": 852,
+   "kind": "to_junction_from_right",
+   "skeleton_px": 450,
+   "n_junction_px": 1,
+   "ruler": "acrylates",
+   "dp_converged": true,
+   "arc_length_px": 492.7,
+   "bonds_from_arc_length": 13.83,
+   "bonds_from_dp": 14,
+   "arc_vs_dp_residual_bonds": 0.17,
+   "vertices": 15,
+   "dp_sweep": {
+    "3.0": 15,
+    "4.0": 15,
+    "5.0": 15,
+    "6.0": 15
+   },
+   "apex_count": 15,
+   "px_length": 403,
+   "end_left_xy": [
+    603,
+    1918
+   ],
+   "end_right_xy": [
+    201,
+    1913
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     278.7
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 14,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 15,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "acrylate_O14_tail",
+    "name_token_length": 14,
+    "measured_length": 14,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "acrylate_O16_tail": {
+   "role": "the ester O-alkyl chain of acrylate O16. The acrylate panel draws its ester O as an outline letter that TOUCHES the first C-O bond, so letter and tail are one component; the walk therefore starts at the terminal methyl and stops where the bond meets the letter, which is the oxygen position",
+   "seed": [
+    187,
+    1997
+   ],
+   "component": 875,
+   "kind": "to_junction_from_right",
+   "skeleton_px": 509,
+   "n_junction_px": 1,
+   "ruler": "acrylates",
+   "dp_converged": true,
+   "arc_length_px": 568.3,
+   "bonds_from_arc_length": 15.95,
+   "bonds_from_dp": 16,
+   "arc_vs_dp_residual_bonds": 0.05,
+   "vertices": 17,
+   "dp_sweep": {
+    "3.0": 17,
+    "4.0": 17,
+    "5.0": 17,
+    "6.0": 17
+   },
+   "apex_count": 17,
+   "px_length": 462,
+   "end_left_xy": [
+    664,
+    2002
+   ],
+   "end_right_xy": [
+    203,
+    1999
+   ],
+   "endpoints_measured": [
+    [
+     "methyl",
+     262.5
+    ]
+   ],
+   "minus": 1,
+   "heavy_atoms_in_chain": 16,
+   "path_shape": {
+    "steep_max": 0.67,
+    "flat_run_px": 5,
+    "apex_applicable": true
+   },
+   "second_statistic_agrees": true,
+   "count_carbons": {
+    "n": 17,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": false
+   },
+   "name_token_check": {
+    "label": "acrylate_O16_tail",
+    "name_token_length": 16,
+    "measured_length": 16,
+    "matches": true,
+    "note": ""
+   }
+  }
+ },
+ "bond_ruler": {
+  "amines": {
+   "bond_px": 34.21,
+   "label_truncation_px": 14.49
+  },
+  "acrylates": {
+   "bond_px": 35.63,
+   "label_truncation_px": 9.36
+  },
+  "derived_from": "the arc between consecutive turning points of amines 1-5, i.e. from the turning-point detector alone. It never sees a Douglas-Peucker count, which is what makes the arc-length bond count an INDEPENDENT second measurement rather than a restatement of the first."
+ },
+ "bond_pitch_px": {
+  "consecutive_width_deltas": [
+   56,
+   56,
+   54,
+   57
+  ],
+  "implied_pitch_per_carbon": [
+   28.0,
+   28.0,
+   27.0,
+   28.5
+  ],
+  "note": "Amines 1-5 differ by exactly two drawn carbons each, so each delta is two bond pitches. A delta that was not ~2x a single pitch would mean the series is not a simple homologous one."
+ },
+ "arc_vs_dp": {
+  "tolerance_bonds": 0.35,
+  "worst_residual": 0.296,
+  "worst_at": "amine25_armA",
+  "n_compared": 48,
+  "note": "Every chain was measured twice: Douglas-Peucker vertices on the skeleton, and bonds from the drawn arc length against a ruler calibrated from turning points only. chains.count_carbons still receives one `raster` count because both routes are raster; this is the agreement that the missing vector route would otherwise have provided."
+ },
+ "apex_applicability_gate": {
+  "steep_max_threshold": 1.0,
+  "flat_run_threshold": 12,
+  "applicable_worst_steep": 0.67,
+  "applicable_worst_flat": 6,
+  "inapplicable_best_steep": 0.78,
+  "inapplicable_best_flat": 31,
+  "n_applicable": 38,
+  "n_not_applicable": 9,
+  "note": "Every path the gate admits had apex == Douglas-Peucker. Every path it rejects would have disagreed, and each one does contain a vertical or a flat drawn bond. The two populations are separated by a wide empty band, so the thresholds are not doing the deciding."
+ },
+ "label_gap_separation": {
+  "threshold_px": 12,
+  "largest_accepted_as_a_label": 8.0,
+  "smallest_rejected": 19.0,
+  "note": "A real atom label abuts the bond; the margin row numeral does not. If these two ever stop being cleanly separated the threshold is doing the deciding, not the drawing."
+ }
+}

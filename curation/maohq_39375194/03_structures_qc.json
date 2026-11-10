@@ -1,0 +1,49 @@
+{
+ "resolved": [
+  "DLin-MC3-DMA",
+  "Cholesterol",
+  "DOTAP",
+  "DDAB",
+  "DOPE",
+  "DSPC",
+  "14PA",
+  "18PG"
+ ],
+ "unresolved": [
+  "DMG-PEG2000"
+ ],
+ "drawn_18PG_derivation": {
+  "base": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OC[C@@H](O)CO)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+  "base_full_InChIKey": "DSNRWDQKZIEDDB-SQYFZQSCSA-M",
+  "drawn": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC(O)CO)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+  "drawn_full_InChIKey": "DSNRWDQKZIEDDB-GCMPNPAFSA-M",
+  "skeleton_unchanged": true,
+  "specified_stereocentres_before": 2,
+  "specified_stereocentres_after": 1,
+  "fell_by_exactly_one": true,
+  "formula_unchanged": true,
+  "exact_mass_unchanged": true,
+  "surviving_centres": [
+   "R"
+  ]
+ },
+ "descriptors_from_corpus": {
+  "corpus_rows_with_this_exact_full_InChIKey": 3081,
+  "name_hits_whose_structure_is_NOT_this_one": 0,
+  "experiments": [
+   "AC_2025",
+   "SP_2020",
+   "WT_2026",
+   "YZ_2022",
+   "YZ_2024"
+  ],
+  "columns_checked": 22,
+  "columns_with_more_than_one_value": {},
+  "all_agree": true,
+  "why": "These are build_dataset.py's own descriptor values for this exact structure. Reusing them is not a shortcut: re-implementing a descriptor definition in a curation script is how it drifts from the builder's. Agreement across every corpus row carrying the structure is the check."
+ },
+ "n_distinct_ionizable_lipid_structures": 1,
+ "n_distinct_helper_lipid_structures": 6,
+ "n_components_with_a_structure": 8,
+ "n_components_without_a_structure": 1
+}

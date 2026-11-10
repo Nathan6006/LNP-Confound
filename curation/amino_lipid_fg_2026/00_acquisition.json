@@ -1,0 +1,56 @@
+{
+ "_what": "Acquisition record for the FG_2026 Source Data, retrieved 2026-11-09 to test whether it relieves this folder's BLOCKER.",
+ "doi": "10.1038/s41563-026-02555-0",
+ "pmid": "41922838",
+ "retrieved_utc": "2026-11-10T02:47:59Z",
+ "how": "Resolved the DOI in a Playwright-driven browser, enumerated the anchor hrefs on the article page, and downloaded each static-content.springer.com asset. NO LOGIN WAS REQUIRED: both nature.com and static-content.springer.com return 200 to a plain request. The browser was needed only to ENUMERATE the asset URLs from the page, not to authenticate.",
+ "licence": "NOT YET RECORDED -- must be read off the article landing page before any of this is used in a released corpus (CLAUDE.md section 8 requires CC0/CC-BY-compatible).",
+ "files": [
+  {
+   "published_path": "41563_2026_2555_MOESM3_ESM.xlsx",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41563-026-02555-0/MediaObjects/41563_2026_2555_MOESM3_ESM.xlsx",
+   "sha256": "b18a5d60f531cf8bcd078f4cdc9d56a769ce6fe1998b56cdf54054c2770c6570",
+   "bytes": 18439,
+   "label": "Source Data Fig. 1"
+  },
+  {
+   "published_path": "41563_2026_2555_MOESM4_ESM.xlsx",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41563-026-02555-0/MediaObjects/41563_2026_2555_MOESM4_ESM.xlsx",
+   "sha256": "e23d969312e819f8df022be150d7d83967d9245e9c5eeac0dd239f4bda8ac1d6",
+   "bytes": 24352,
+   "label": "Source Data Fig. 2"
+  },
+  {
+   "published_path": "41563_2026_2555_MOESM5_ESM.xlsx",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41563-026-02555-0/MediaObjects/41563_2026_2555_MOESM5_ESM.xlsx",
+   "sha256": "56b865f8fd2ef6154e32048663504e1266dce316bbedda12a2fea3db4235b266",
+   "bytes": 19284,
+   "label": "Source Data Fig. 3"
+  },
+  {
+   "published_path": "41563_2026_2555_MOESM6_ESM.xlsx",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41563-026-02555-0/MediaObjects/41563_2026_2555_MOESM6_ESM.xlsx",
+   "sha256": "bfd0c9e25566f7290c8a11d631a784f8f5ad35711147b823153e05a6b613df5f",
+   "bytes": 21489,
+   "label": "Source Data Fig. 4"
+  },
+  {
+   "published_path": "41563_2026_2555_MOESM7_ESM.xlsx",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41563-026-02555-0/MediaObjects/41563_2026_2555_MOESM7_ESM.xlsx",
+   "sha256": "21e87ad2faa6080501477a30a9f7ed9c9b5549bc64179b9c57b7dcf3fe577ba7",
+   "bytes": 30706,
+   "label": "Source Data Fig. 5"
+  }
+ ],
+ "VERDICT_ON_THE_BLOCKER": "PARTIAL RELIEF ONLY. The blocker stands for the full screen.",
+ "what_it_DOES_supply": {
+  "Fig. 1d": "30 amino-acid head-group blocks with normalised values (Cha = 1.000, Asn = 0.404, Lys = 0.294, ...). This is value-level ground truth for the 30/30 block identification this folder already validated structurally.",
+  "Fig. 1e": "20 named library members with values, e.g. CHCha-10 = 17.823, CHAsn-10 = 17.340, LHCha-10 = 17.198. Confirms the naming scheme is <core><AminoAcid>-<tail index> with cores CH and LH."
+ },
+ "what_it_does_NOT_supply": {
+  "the 960": "Only 20 distinct library-member names appear anywhere in all five workbooks -- 2 cores, 15 of 30 amino acids, 9 of 16 tail indices. Total numeric cells across all five files is 1,615, and the largest single sheet is Fig. 5h at 608. There is no 960-value table.",
+  "the 16 aldehyde tail structures": "absent",
+  "the 2 bis-isonitrile cores": "absent"
+ },
+ "consequence": "Value-level blind validation against FG_2026 can proceed for 20 of 960 members plus all 30 blocks, which is enough to check the naming scheme and the block ranking but NOT enough for the 960-row recall comparison this folder was created to perform. Do not record the blocker as resolved."
+}

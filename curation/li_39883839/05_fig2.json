@@ -1,0 +1,165 @@
+{
+ "Fig2H": {
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 0.0,
+   "origin_px": 2397.0,
+   "origin_value": 150000000.0,
+   "tick_step_units": -50000000.0,
+   "n_ticks": 4,
+   "tick_fit_residual_px": 0.0,
+   "tick_residual_tol_px": 2.5
+  },
+  "major_tick_rows_px": [
+   2397.0,
+   2615.0,
+   2833.0,
+   3051.0
+  ],
+  "n_minor_ticks_ignored": 24,
+  "bars": [
+   {
+    "lipid": "H2A4B1",
+    "bar_window_px": [
+     3520,
+     3621
+    ],
+    "REFUSED": "bar_top: no row in [2350,3049) reaches 0.90 coverage of the full 101px bar for 3 contiguous rows.",
+    "upper_bound_p_per_s": 688000.0,
+    "bound_note": "No resolvable bar height: the top rule is within 3 px of the baseline. Reported as an UPPER BOUND at the detection floor, which is what the drawing supports; it is not a measurement of zero."
+   },
+   {
+    "lipid": "H2A4B2",
+    "bar_window_px": [
+     3670,
+     3773
+    ],
+    "REFUSED": "bar_top: no row in [2350,3049) reaches 0.90 coverage of the full 103px bar for 3 contiguous rows.",
+    "upper_bound_p_per_s": 688000.0,
+    "bound_note": "No resolvable bar height: the top rule is within 3 px of the baseline. Reported as an UPPER BOUND at the detection floor, which is what the drawing supports; it is not a measurement of zero."
+   },
+   {
+    "lipid": "H2A4B3",
+    "bar_window_px": [
+     3822,
+     3923
+    ],
+    "top_row_px": 2888,
+    "flank_delta_px": 0.0,
+    "coverage": 0.9967,
+    "value_p_per_s": 37390000.0
+   },
+   {
+    "lipid": "H2A4B4",
+    "bar_window_px": [
+     3972,
+     4075
+    ],
+    "top_row_px": 2705,
+    "flank_delta_px": 0.0,
+    "coverage": 0.9903,
+    "value_p_per_s": 79360000.0
+   }
+  ],
+  "significance_bracket_rows_px": null,
+  "scan_top_row_px": 2350
+ },
+ "Fig2K": {
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 0.0,
+   "origin_px": 3662.9,
+   "origin_value": 30000000.0,
+   "tick_step_units": -10000000.0,
+   "n_ticks": 4,
+   "tick_fit_residual_px": 0.2,
+   "tick_residual_tol_px": 2.5
+  },
+  "major_tick_rows_px": [
+   3663.0,
+   3813.5,
+   3964.0,
+   4115.0
+  ],
+  "n_minor_ticks_ignored": 38,
+  "bars": [
+   {
+    "lipid": "H2A4B3",
+    "bar_window_px": [
+     3500,
+     3575
+    ],
+    "top_row_px": 4093,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "value_p_per_s": 1450000.0
+   },
+   {
+    "lipid": "H2A4B4",
+    "bar_window_px": [
+     3616,
+     3691
+    ],
+    "top_row_px": 3687,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "value_p_per_s": 28400000.0
+   },
+   {
+    "lipid": "H2A4-Ole",
+    "bar_window_px": [
+     3732,
+     3807
+    ],
+    "top_row_px": 4098,
+    "flank_delta_px": 0.0,
+    "coverage": 0.9556,
+    "value_p_per_s": 1118000.0
+   },
+   {
+    "lipid": "H2A4-Butyl",
+    "bar_window_px": [
+     3848,
+     3923
+    ],
+    "top_row_px": 3962,
+    "flank_delta_px": 0.0,
+    "coverage": 0.9244,
+    "value_p_per_s": 10150000.0
+   },
+   {
+    "lipid": "DLin-MC3-DMA",
+    "bar_window_px": [
+     3964,
+     4039
+    ],
+    "top_row_px": 4002,
+    "flank_delta_px": 0.0,
+    "coverage": 1.0,
+    "value_p_per_s": 7491000.0
+   },
+   {
+    "lipid": "SM-102",
+    "bar_window_px": [
+     4079,
+     4154
+    ],
+    "REFUSED": "this bar's own side edges carry 376 ink px ABOVE the highest calibrated tick (3e+07 at row 3663), so its top lies in the UPPER segment of the broken axis. That segment carries ONE labelled tick (1e8); axis.calibrate needs >= 3, and two points define a line through anything. The panel does not determine this value and none is invented.",
+    "value_p_per_s": null,
+    "lower_bound_p_per_s": 40000000.0,
+    "bound_note": "The bar top is above the axis break. The top of the calibrated lower segment is the 4e7 tick, which this fit predicts to within 0.25 px, so the value is a LOWER BOUND of 4e7. The upper segment cannot be calibrated, so no point value is available."
+   }
+  ],
+  "short_tick_check": {
+   "value": 40000000.0,
+   "drawn_row_px": 3512.0,
+   "predicted_row_px": 3512.25,
+   "delta_px": -0.25
+  },
+  "significance_bracket_rows_px": [
+   3537,
+   3541
+  ],
+  "scan_top_row_px": 3549
+ }
+}

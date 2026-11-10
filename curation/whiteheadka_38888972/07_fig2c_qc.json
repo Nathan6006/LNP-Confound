@@ -1,0 +1,70 @@
+{
+ "_marker_recovery": "The panel's markers overlap, so not all 49 appear as separate connected components. Only unambiguous single markers enter the comparison; the merged blobs are counted and left out.",
+ "blob_size_px": {
+  "kept_max": 222,
+  "kept_min": 162
+ },
+ "blobs_kept": 30,
+ "blobs_merged_sizes_px": [
+  263,
+  267,
+  300,
+  328,
+  395,
+  670,
+  762
+ ],
+ "blobs_total": 207,
+ "estimated_markers_in_merged_blobs": 14,
+ "n_lipidoids_from_2A_and_2B": 49,
+ "n_points_in_2C": 30,
+ "set_match": {
+  "TNS_AU_delta": {
+   "max_abs": 179.7,
+   "mean": -80.2,
+   "median": -80.5,
+   "rms": 100.4
+  },
+  "_reading": "A mean delta near zero on BOTH axes means neither digitiser carries a uniform scale or origin error. The rms is the per-point agreement and is bounded below by the panels' own drawing precision: a 1 px marker-centroid error is ~68 AU on x and ~0.012 decades on y.",
+  "log10_flux_delta": {
+   "max_abs": 0.0174,
+   "mean": 0.0094,
+   "median": 0.0095,
+   "rms": 0.0101
+  },
+  "n_matched": 30
+ },
+ "x_axis": {
+  "kind": "linear",
+  "n_ticks": 3,
+  "origin_px": 1460.925,
+  "origin_value": 0.0,
+  "px_per_unit": 0.0148,
+  "tick_fit_residual_px": 0.045,
+  "tick_residual_tol_px": 2.5,
+  "tick_step_units": 15000.0
+ },
+ "x_ticks_px": [
+  1460.948,
+  1682.742,
+  1904.67
+ ],
+ "y_axis": {
+  "kind": "log10",
+  "n_ticks": 6,
+  "origin_px": 119.671,
+  "origin_value": 10000000000.0,
+  "px_per_unit": 80.6923,
+  "tick_fit_residual_px": 0.1302,
+  "tick_residual_tol_px": 2.5,
+  "tick_step_units": -1.0
+ },
+ "y_ticks_px": [
+  119.801,
+  200.263,
+  280.995,
+  361.696,
+  442.475,
+  523.18
+ ]
+}

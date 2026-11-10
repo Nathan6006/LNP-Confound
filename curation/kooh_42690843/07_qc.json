@@ -1,0 +1,149 @@
+{
+ "_what": "Every check this curation ran, with numbers, and -- for each one -- the record that its own defect was SEEDED and the check was watched to fire. CLAUDE.md section 6: a new check is not done until it has been made to fail on purpose. Three incidents paid for that rule, and all three printed a clean line.",
+ "paper": "Chun, Nam, Lee, Lee, Park, Lim, Kim, Park, Kim, Choi, Koo, JACS 2026, 148(39) 42494-42507, PMID 42690843, DOI 10.1021/jacs.6c13674",
+ "material_held": "SI only (ja6c13674_si_001.pdf, 49 pp, sha256 4889dba5903b29ff80cb000f312b292660ffd4ed145ad99d5d3dc04e755c15f5)",
+
+ "headline_numbers": {
+  "blocks_declared": 48,
+  "blocks_whose_drawn_geometry_agrees": 48,
+  "lipids_the_SI_characterises": 9,
+  "lipids_the_paper_says_were_made": 275,
+  "combinations_the_blocks_allow": 2912,
+  "lipids_enumerated_here": 9,
+  "values_extractable": 0,
+  "corpus_rows_emittable_today": 0,
+  "rows_with_a_caveat": 0,
+  "open_decisions": 7,
+  "contradictions_recorded": 7
+ },
+
+ "checks": [
+
+  {"id": "P-A", "name": "the SI holds no per-lipid transfection value",
+   "script": "stage00_scan_for_values.py",
+   "what": "scans all 49 SI pages for transfection-readout vocabulary (RLU, radiance, luminescence, fold-change, normalised expression, total flux, MFI, %GFP, p/s) and for the library's own member labels AxByCz, and reports any page carrying both.",
+   "numbers": {"pages_scanned": 49, "pages_with_readout_vocabulary": [21, 26, 27, 29], "pages_naming_a_member": 23, "distinct_member_labels_in_the_whole_SI": 9, "pages_with_BOTH": [29], "unadjudicated": 0},
+   "adjudication": "S29 is the Figure S7 caption: Cy5-mRNA CELLULAR UPTAKE by flow cytometry for one lipid, normalised to untreated controls, no number printed. Not a transfection readout. Adjudicated by page number INSIDE the script, so a new candidate page fails the run rather than being waved through.",
+   "result": "PASS -- no page pairs a library member with a transfection readout",
+   "seeded_defect": {"how": "--seed appends a synthetic page S999 reading 'A18B8C14 luminescence 1.24e7 RLU ... fold-change 40.1'", "fired": true, "message": "UNADJUDICATED candidate page(s) [999] -- look at them."}},
+
+  {"id": "P-B", "name": "all 48 building blocks, bond-for-bond against the drawing",
+   "script": "stage02_blocks.py",
+   "what": "SI p.S5 is fully vector. ChemDraw draws one stroked line per heavy-atom bond plus a second parallel line per double bond and draws no bond into a label glyph, so for every block: drawn_lines == heavy_atom_bonds(SMILES) + double_bonds(kekulized SMILES). The page's own bond coordinates are read through curation/lib chains.vector_bonds -- no pixels, no estimation step.",
+   "numbers": {
+     "stroked_line_items_on_S5": 483,
+     "dashed_group_dividers_removed": 2,
+     "bond_lines": 481,
+     "connected_clusters_at_11.0_pt_linkage": 48,
+     "closest_approach_between_two_different_clusters_pt": 12.8,
+     "linkage_tolerance_pt": 11.0,
+     "anchor_assignment": "bijective; every one of 48 anchors matched exactly one cluster within 4.0 pt and no cluster was claimed twice",
+     "blocks_agreeing": "48/48",
+     "sum_of_predicted_lines_over_48_blocks": 481,
+     "measured_lines_on_the_page": 481
+   },
+   "the_undrawn_round_number": "481 == 481 is the closure an author never printed: the whole figure's line budget is accounted for with nothing left over and nothing borrowed. A single wrong chain length, ring size or branch anywhere in the 48 structures breaks it, and the per-block column localises the break. This is the analogue, for a reagent panel with no axes, of the dashed reference line at 50,020 RLU -- a quantity external to our pipeline that we did not choose.",
+   "blind_to": ["which heteroatom a label is (N and O draw the same number of bonds) -- element identities read from the 600 dpi renders in 00_pages/", "a branch moved without changing the bond count (2-methyl vs 3-methylpiperidine both draw 11 lines) -- also read from the renders", "double-bond E/Z geometry -- see DECISIONS.md D-4"],
+   "result": "PASS 48/48",
+   "seeded_defect": {"how": "--seed-defect B8 lengthens octylboronic acid by one carbon, the +/-1 chain error of error class 48", "fired": true, "message": "MISMATCH B8 expected 11 drawn, measured 10; sum 482 vs 481"},
+   "first_run_found": "A11's imidazole measured 11 lines against a prediction of 9, because the prediction counted AROMATIC bonds. ChemDraw draws the Kekule structure. Fixed by kekulizing before counting double bonds; the fix is why the global sum closes."},
+
+  {"id": "P-C", "name": "reagent amount pins the block's molecular weight, without the drawing",
+   "script": "stage02_blocks.py (AMOUNT_EVIDENCE)",
+   "what": "for each of the nine blocks that enters an emitted structure, the SI prints the amount used at a stated molar amount. amount/mol (volume x literature density, for a liquid) gives the reagent's MW independently of the figure and of our reading of it.",
+   "numbers": [
+    {"block": "A2",  "page": "S12", "printed": "6.2 uL / 0.05 mmol", "implied_MW": 101.68, "structure_MW": 102.18, "dev_pct": 0.49},
+    {"block": "A18", "page": "S14", "printed": "5.9 uL / 0.05 mmol", "implied_MW": 103.01, "structure_MW": 102.18, "dev_pct": 0.82},
+    {"block": "B1",  "page": "S12", "printed": "5.7 mg / 0.05 mmol", "implied_MW": 114.00, "structure_MW": 113.95, "dev_pct": 0.04},
+    {"block": "B3",  "page": "S12", "printed": "5.1 mg / 0.05 mmol", "implied_MW": 102.00, "structure_MW": 101.94, "dev_pct": 0.06},
+    {"block": "B8",  "page": "S13", "printed": "7.9 mg / 0.05 mmol", "implied_MW": 158.00, "structure_MW": 158.05, "dev_pct": 0.03},
+    {"block": "C1",  "page": "S12", "printed": "8.6 uL / 0.05 mmol", "implied_MW": 142.24, "structure_MW": 142.24, "dev_pct": 0.00},
+    {"block": "C8",  "page": "S17", "printed": "25.6 mg / 0.10 mmol", "implied_MW": 256.00, "structure_MW": 256.39, "dev_pct": 0.15},
+    {"block": "C9",  "page": "S18", "printed": "25.6 mg / 0.10 mmol", "implied_MW": 256.00, "structure_MW": 256.39, "dev_pct": 0.15},
+    {"block": "C14", "page": "S19", "printed": "39.3 uL / 0.10 mmol", "implied_MW": 354.49, "structure_MW": 354.58, "dev_pct": 0.03}
+   ],
+   "tolerance_pct": 4.0, "worst_observed_pct": 0.82,
+   "weakest_link": "the four VOLUME rows need a literature density (A2 0.82, A18 0.873, C1 0.827, C14 0.902 g/mL). They are labelled 'volume' in the script so a reviewer can see which rows lean on a constant we supplied. The five MASS rows need nothing but the printed milligrams.",
+   "result": "PASS 9/9",
+   "blind_to": "ISOMERS. 4-methyloctanoic and nonanoic acid have the same MW; this check cannot separate C8 from C9 and does not claim to. That separation comes from the compound names and the branch drawn on p.S5 -- and the SI itself gets it wrong once, contradiction K-3."},
+
+  {"id": "P-D", "name": "every lipid's HRMS, against the SI's printed calcd",
+   "script": "stage03_enumerate.py",
+   "numbers": {"lipids": 9, "max_abs_deviation_from_printed_calcd_mDa": 0.04,
+               "per_lipid_mDa": {"A2B1C1": 0.03, "A2B3C1": 0.03, "A2B8C1": 0.03, "A18B1C1": -0.02, "A18B3C1": -0.02, "A18B8C1": -0.02, "A18B8C8": 0.04, "A18B8C9": 0.04, "A18B8C14": 0.04},
+               "formula_agreement": "9/9 exact"},
+   "result": "PASS 9/9",
+   "necessary_not_sufficient": "This is the check that CANNOT see the thing most likely to be wrong here. See P-E."},
+
+  {"id": "P-E", "name": "REGIOCHEMISTRY -- the alkyl is on the alpha CARBON, not the nitrogen",
+   "script": "stage03_enumerate.py (connectivity_from_name)",
+   "why_it_exists": "The coupling is a 427 nm photo-Petasis multicomponent reaction: amine + aldehyde form an imine, then the boronic acid's alkyl radical adds to the imine CARBON. N-alkylation and C-alkylation of the same imine give the SAME molecular formula and the SAME exact mass, so all nine HRMS values pass either way. Mass cannot see connectivity.",
+   "what": "a SMARTS test that each lipid has exactly the expected number of alpha methines ([CX4H1] bonded to N and to two carbons), and that each one carries the boronic block's own group as drawn in 01_blocks.csv.",
+   "the_external_evidence_it_encodes": [
+     "the authors' IUPAC names: A2B1C1 = N1-(1-cyclopentylNONYL)-..., i.e. a C9 chain (nonanal) bearing cyclopentyl (B1) at its C1 -- both blocks on ONE carbon. A2B3C1 = tridecan-5-yl (C9+C4, branch at 5). A2B8C1 = heptadecan-9-yl (C9+C8, branch at 9). Three independent arithmetic reproductions.",
+     "the diamine product names: A18B8C8 = ...bis(TETRADECANE-6,1-DIYL)..., a C14 attached to N at position 6 = C8's five-carbon aldehyde arm plus B8's octyl meeting at C6.",
+     "the 1H NMR: a ONE-proton methine near 2.9-3.0 ppm in every product (A2B3C1 2.95-2.90 m 1H; A2B8C1 2.96 t 1H). A reductive amination without boronic-acid incorporation gives a 2H N-CH2 triplet and no methine."],
+   "result": "PASS 9/9",
+   "seeded_defect": {"how": "--seed-defect rebuilds A2B1C1 as N1-cyclopentyl-N1-nonyl-N3,N3-dimethylpropane-1,3-diamine: the same atoms, cyclopentyl moved from the alpha carbon to the nitrogen",
+                     "HRMS_on_the_defect": "formula C19H40N2, [M+H]+ 297.3264, +0.026 mDa from the SI's printed calcd -- the mass check PASSES on the wrong molecule, which is the demonstration",
+                     "fired": true, "message": "alpha carbon does not carry the B1 group (0/1 matches)"}},
+
+  {"id": "P-F", "name": "each lipid against the structure the SI DRAWS",
+   "script": "stage03_enumerate.py (DRAWN_LINES)",
+   "what": "the same bond-line identity as P-B, applied to the ChemDraw structure printed beside each compound in the SI. Independent of the block figure and of the names.",
+   "numbers": [["S12","A2B1C1",21,21],["S13","A2B3C1+A2B8C1",42,42],["S14","A18B1C1",36,36],["S15","A18B3C1",32,32],["S16","A18B8C1",40,40],["S17","A18B8C8",58,58],["S18","A18B8C9",58,58],["S19","A18B8C14",72,72]],
+   "result": "PASS 8/8 pages, 9/9 lipids, every page exact",
+   "note": "S13 carries two structures and its 42 lines are the sum of 19 and 23; the check is on the page total, so it would not localise a compensating pair of errors on that one page. Everywhere else the page holds one structure."},
+
+  {"id": "P-G", "name": "intermediates C8i/C9i/C10i and aldehydes C9/C10, as drawn",
+   "script": "ad hoc, recorded here",
+   "numbers": {"S8_two_hydroxy_esters": {"measured": 36, "predicted": 36, "detail": "C8i and C9i are both C15H30O3: 17 bonds + 1 double = 18 lines each"},
+               "S9_C10i": {"measured": 19, "predicted": 19},
+               "S11_C9_plus_C10": {"measured": 39, "predicted": 39, "detail": "19 + 20"}},
+   "result": "PASS",
+   "what_it_bought": "this is the geometric evidence behind contradiction K-2: C8's title names an ETHER (C15H30O2, 18 lines) while the drawing, the precursor, the 13C carbonyl at 174.4 ppm and the printed HRMS formula C15H29O3 are all an ESTER."},
+
+  {"id": "P-H", "name": "the C10 anchors are independent, and the guard on the route they use has teeth",
+   "script": "make_reference.py",
+   "independence": "the enumerator builds from the BLOCK DRAWINGS on p.S5 using RDKit fragment assembly (curation/lib assemble.attach: CombineMols + AddBond on atom-mapped atoms). The anchor builds from the AUTHORS' IUPAC NAMES on p.S12 and p.S18-S19 by plain string concatenation of name-derived tokens, touching no RDKit API until the string is complete -- no RWMol, no AddBond, no RemoveAtom, no atom map, and a different traversal direction.",
+   "numbers": {"anchors": 2,
+               "A18B8C14": {"formula": "C65H130N2O4", "MplusH": 1004.0103, "SI_calcd": 1004.0103, "d_mDa": 0.037, "InChIKey": "HPGATCFAUZTJTG-UHFFFAOYSA-N"},
+               "A2B1C1": {"formula": "C19H40N2", "MplusH": 297.3264, "SI_calcd": 297.3264, "d_mDa": 0.026, "InChIKey": "UFARHNXHEMYLEF-UHFFFAOYSA-N"},
+               "anchor_vs_enumeration": "InChIKey identical for both; the canonical SMILES are also byte-identical"},
+   "on_byte_identity": "Byte-identity here is the EXPECTED result of two correct derivations, not evidence of copying. F-037 is explicit that byte-identity of the emitted anchor is not the signal and testing for it is a trap, which is why C16 inspects the GENERATOR'S composed template instead. This folder's template is a dictionary of name-derived fragments ('pentane_1_5_diyl': 'CCCCC', 'cyclopentyl': 'C1CCCC1', ...) that appears nowhere in stage03_enumerate.py, and C10's anchor_may_be_a_copy should not trip because the generator exists.",
+   "result": "PASS",
+   "seeded_defects": [
+    {"how": "compose() handed two ring fragments that both use digit 1 -- the exact collision that once fused piperazine to cholesterol", "fired": true, "message": "ring-closure digit '1' appears in fragment 0 and fragment 1 ... Refusing."},
+    {"how": "compose() handed a fragment with an unclosed ring ('C1CCCC')", "fired": true, "message": "odd number of '1', so its ring is not closed inside itself"},
+    {"how": "the nonyl token shortened by one carbon", "fired": true, "message": "[M+H]+ 283.3108, -14015.6 mDa from the SI's printed calcd"}]},
+
+  {"id": "P-I", "name": "flags are written on the row by the one audited writer",
+   "script": "stage07_emit.py -> 07_rows_quality.csv",
+   "what": "the seven quality columns of provenance/schema_quality.json, produced by curation/lib emit.emit_rows. No corpus row exists yet (no values), so the flags are attached to the nine structures and will travel with them.",
+   "numbers": {"rows": 9, "rows_with_a_caveat": 0, "confidence_high": 9, "positional_ambiguity_1": 0, "structure_assumed_1": 0, "value_is_bound_set": 0},
+   "why_zero_caveats": "every block is pinned by its printed reagent amount, every structure matches both the drawn bond-line count and the printed HRMS formula, and the regiochemistry is pinned by the authors' own names. Nothing about these nine constitutions is assumed. The alpha stereocentres are unassigned and the curation_note says so on every row, but an unassigned centre in a racemic product is a fact about the chemistry, not a caveat about our reading of it. If D-3 resolves that crude-screen rows enter the corpus, THOSE rows will carry structure_assumed = 1; these nine are the purified compounds.",
+   "result": "PASS",
+   "seeded_defects": [
+    {"how": "confidence passed as the literal string 'high', as F-011, F-025 and F-046 each did", "fired": true, "message": "emit: confidence='high' is a LITERAL."},
+    {"how": "a confidence of 'low' with an empty curation_note", "fired": true, "message": "this row carries a caveat ... and its curation_note is empty."}]}
+ ],
+
+ "printed_statistics_reproduced": {
+  "_caveat": "Passing every printed statistic is necessary, not sufficient. QL_2026 reproduced every printed hit rate on bars up to 28 % too high. The statistics below are the only quantitative claims the SI makes that are independent of our own reading.",
+  "HRMS_calcd_values": "9/9 reproduced to <= 0.04 mDa from our structures (P-D)",
+  "reagent_amounts": "9/9 reproduced to <= 0.82 % (P-C)",
+  "substrate_MWs_implied_by_procedure_B": "3/3 -- 258.4 mg / 1.0 mmol = C8i and C9i (258.40); 272.4 = C10i (272.42). This is what shows the labels in those sentences are wrong and the amounts are right (K-4).",
+  "HPLC_purity": "A18B8C14, 96.00 % (p.S19). The only purity figure anywhere in the SI; relevant to D-3.",
+  "not_reproducible_from_what_we_hold": "every yield percentage (76 %, 71 %, 59 %, 61 %, 68 %, 69 %) is a mass/mass figure we can only re-derive from the same two printed numbers, so re-deriving it tests nothing."
+ },
+
+ "what_could_not_be_verified": [
+  "the identity of the 275 library members (D-1) -- the SI names 9",
+  "every transfection value in the paper (05_values.csv is empty; 00_value_sources.json)",
+  "double-bond E/Z on C4, C5 and C7, which rests on a human read of the render alone (D-4)",
+  "heteroatom element identity on all 48 blocks: the bond-line check is blind to N-vs-O and that was read from the 600 dpi renders",
+  "A2B8C1's reported found mass, which is -123 ppm from its own calcd (K-6, D-7)",
+  "the licence (D-5)",
+  "whether the screened material is the stored molecule, since Figures 2-3 screen CRUDE reaction mixtures (D-3)"
+ ]
+}

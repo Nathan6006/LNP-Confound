@@ -1,0 +1,372 @@
+{
+ "_what": "cluster -> montage slot, with the sha256 of the representative's normalised bitmap. The label file is keyed on this fingerprint so a label can never drift onto a different shape.",
+ "cols": 6,
+ "cell_px": [
+  360,
+  180
+ ],
+ "max_intra": 0.0,
+ "min_inter": 2.2356793613672608,
+ "clusters": [
+  {
+   "slot": 0,
+   "cluster": 10,
+   "n": 256,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "1bf2efaa75d078b0"
+  },
+  {
+   "slot": 1,
+   "cluster": 16,
+   "n": 255,
+   "native_h": 2,
+   "native_w": 3,
+   "fingerprint": "63fc18390dfa3a76"
+  },
+  {
+   "slot": 2,
+   "cluster": 7,
+   "n": 250,
+   "native_h": 15,
+   "native_w": 10,
+   "fingerprint": "57622348325af470"
+  },
+  {
+   "slot": 3,
+   "cluster": 12,
+   "n": 250,
+   "native_h": 10,
+   "native_w": 12,
+   "fingerprint": "a78a2f5f115eea5b"
+  },
+  {
+   "slot": 4,
+   "cluster": 13,
+   "n": 193,
+   "native_h": 15,
+   "native_w": 9,
+   "fingerprint": "0df50c416a71bfb4"
+  },
+  {
+   "slot": 5,
+   "cluster": 1,
+   "n": 190,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "e217a3f2c680766c"
+  },
+  {
+   "slot": 6,
+   "cluster": 37,
+   "n": 100,
+   "native_h": 2,
+   "native_w": 7,
+   "fingerprint": "a00e60849fffe64d"
+  },
+  {
+   "slot": 7,
+   "cluster": 5,
+   "n": 80,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "cbea4358aedd8882"
+  },
+  {
+   "slot": 8,
+   "cluster": 11,
+   "n": 79,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "06de4230c94a2121"
+  },
+  {
+   "slot": 9,
+   "cluster": 30,
+   "n": 78,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "e6cf2bc665cc7c7e"
+  },
+  {
+   "slot": 10,
+   "cluster": 9,
+   "n": 64,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "891d11f8b893fd3b"
+  },
+  {
+   "slot": 11,
+   "cluster": 6,
+   "n": 58,
+   "native_h": 15,
+   "native_w": 12,
+   "fingerprint": "2ab20f8d71b4e7ef"
+  },
+  {
+   "slot": 12,
+   "cluster": 8,
+   "n": 56,
+   "native_h": 15,
+   "native_w": 10,
+   "fingerprint": "dbbad16d63bdc4df"
+  },
+  {
+   "slot": 13,
+   "cluster": 2,
+   "n": 54,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "d4c592f2f4a13017"
+  },
+  {
+   "slot": 14,
+   "cluster": 35,
+   "n": 50,
+   "native_h": 15,
+   "native_w": 27,
+   "fingerprint": "064285d0ddeb514d"
+  },
+  {
+   "slot": 15,
+   "cluster": 17,
+   "n": 49,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "e714688d85e5380c"
+  },
+  {
+   "slot": 16,
+   "cluster": 4,
+   "n": 46,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "5181e4f06cc06a67"
+  },
+  {
+   "slot": 17,
+   "cluster": 3,
+   "n": 32,
+   "native_h": 15,
+   "native_w": 11,
+   "fingerprint": "4e6257b62a5e3113"
+  },
+  {
+   "slot": 18,
+   "cluster": 14,
+   "n": 25,
+   "native_h": 15,
+   "native_w": 3,
+   "fingerprint": "5af52c24c274af42"
+  },
+  {
+   "slot": 19,
+   "cluster": 28,
+   "n": 11,
+   "native_h": 15,
+   "native_w": 23,
+   "fingerprint": "4bcfa00958a8fcb8"
+  },
+  {
+   "slot": 20,
+   "cluster": 36,
+   "n": 11,
+   "native_h": 15,
+   "native_w": 29,
+   "fingerprint": "3efa3552e8ef430b"
+  },
+  {
+   "slot": 21,
+   "cluster": 23,
+   "n": 8,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "6d53f056e62021e8"
+  },
+  {
+   "slot": 22,
+   "cluster": 15,
+   "n": 6,
+   "native_h": 15,
+   "native_w": 12,
+   "fingerprint": "c349c17467406cb4"
+  },
+  {
+   "slot": 23,
+   "cluster": 25,
+   "n": 6,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "3852ead613b979e2"
+  },
+  {
+   "slot": 24,
+   "cluster": 34,
+   "n": 6,
+   "native_h": 15,
+   "native_w": 25,
+   "fingerprint": "b1c9009c1004ce35"
+  },
+  {
+   "slot": 25,
+   "cluster": 40,
+   "n": 6,
+   "native_h": 15,
+   "native_w": 33,
+   "fingerprint": "20437e32a2bc04f7"
+  },
+  {
+   "slot": 26,
+   "cluster": 24,
+   "n": 5,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "71a52d27fdbe5fdc"
+  },
+  {
+   "slot": 27,
+   "cluster": 29,
+   "n": 2,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "1ff6210523c49c69"
+  },
+  {
+   "slot": 28,
+   "cluster": 18,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "aa58e7a4ca222c1b"
+  },
+  {
+   "slot": 29,
+   "cluster": 19,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "5a95af6d1ff31681"
+  },
+  {
+   "slot": 30,
+   "cluster": 20,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 21,
+   "fingerprint": "60b10799170f8679"
+  },
+  {
+   "slot": 31,
+   "cluster": 21,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 21,
+   "fingerprint": "f9bbae828ec820e2"
+  },
+  {
+   "slot": 32,
+   "cluster": 22,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 21,
+   "fingerprint": "be9d9f5ac6c9598d"
+  },
+  {
+   "slot": 33,
+   "cluster": 26,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "e9154e4542e0679d"
+  },
+  {
+   "slot": 34,
+   "cluster": 27,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "621b97839af18f5b"
+  },
+  {
+   "slot": 35,
+   "cluster": 31,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "5025b22c2c75e457"
+  },
+  {
+   "slot": 36,
+   "cluster": 32,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "c1d11d46ce5f32d5"
+  },
+  {
+   "slot": 37,
+   "cluster": 33,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "e56750fa663074f3"
+  },
+  {
+   "slot": 38,
+   "cluster": 38,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 33,
+   "fingerprint": "6e0eda83fa2b79e7"
+  },
+  {
+   "slot": 39,
+   "cluster": 39,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 33,
+   "fingerprint": "63d60c9225fcdcee"
+  },
+  {
+   "slot": 40,
+   "cluster": 41,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 33,
+   "fingerprint": "69ef6c787bf96c0e"
+  },
+  {
+   "slot": 41,
+   "cluster": 42,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 33,
+   "fingerprint": "ca55c83adc9a4493"
+  },
+  {
+   "slot": 42,
+   "cluster": 43,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 32,
+   "fingerprint": "926e1e49b657d631"
+  },
+  {
+   "slot": 43,
+   "cluster": 44,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 33,
+   "fingerprint": "58121276f7170af2"
+  },
+  {
+   "slot": 44,
+   "cluster": 45,
+   "n": 1,
+   "native_h": 15,
+   "native_w": 22,
+   "fingerprint": "f4b633589354e90f"
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+panel,IL_name,FH,EB,T,lnp_type,route,readout,unit,value,band_lo,band_hi,value_is_bound,swatch_distance
+Fig S2c,FH-1-EB-5T-1,FH-1,EB-5,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,163.5,163.5,163.5,,1.0
+Fig S2c,FH-2-EB-5T-1,FH-2,EB-5,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-3-EB-5T-1,FH-3,EB-5,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1084.34,1071.07,1097.76,,1.0
+Fig S2c,FH-4-EB-5T-1,FH-4,EB-5,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,377.04,377.04,377.04,,1.0
+Fig S2c,FH-5-EB-5T-1,FH-5,EB-5,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,2098.72,2085.42,2112.11,,0.0
+Fig S2c,FH-6-EB-5T-1,FH-6,EB-5,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,637.27,630.63,643.98,,0.0
+Fig S2c,FH-1-EB-6T-1,FH-1,EB-6,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-2-EB-6T-1,FH-2,EB-6,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-3-EB-6T-1,FH-3,EB-6,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1111.11,1111.11,1111.11,,1.0
+Fig S2c,FH-4-EB-6T-1,FH-4,EB-6,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1010.99,1004.34,1017.68,,1.0
+Fig S2c,FH-5-EB-6T-1,FH-5,EB-6,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,2172.16,2165.5,2178.85,,0.0
+Fig S2c,FH-6-EB-6T-1,FH-6,EB-6,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,263.51,256.92,270.27,,1.0
+Fig S2c,FH-1-EB-7T-1,FH-1,EB-7,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,76.45,70.07,83.42,,1.0
+Fig S2c,FH-2-EB-7T-1,FH-2,EB-7,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-3-EB-7T-1,FH-3,EB-7,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1151.07,1137.8,1164.5,,1.0
+Fig S2c,FH-4-EB-7T-1,FH-4,EB-7,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,96.76,96.76,96.76,,1.0
+Fig S2c,FH-5-EB-7T-1,FH-5,EB-7,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1851.84,1845.18,1858.53,,0.0
+Fig S2c,FH-6-EB-7T-1,FH-6,EB-7,T-1,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,403.52,390.39,417.08,,1.0
+Fig S2c,FH-1-EB-5T-2,FH-1,EB-5,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-2-EB-5T-2,FH-2,EB-5,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-3-EB-5T-2,FH-3,EB-5,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,663.96,657.32,670.67,,0.0
+Fig S2c,FH-4-EB-5T-2,FH-4,EB-5,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1411.4,1404.74,1418.08,,0.0
+Fig S2c,FH-5-EB-5T-2,FH-5,EB-5,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1177.84,1177.84,1177.84,,1.0
+Fig S2c,FH-6-EB-5T-2,FH-6,EB-5,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,477.1,470.47,483.82,,0.0
+Fig S2c,FH-1-EB-6T-2,FH-1,EB-6,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,76.45,70.07,83.42,,1.0
+Fig S2c,FH-2-EB-6T-2,FH-2,EB-6,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-3-EB-6T-2,FH-3,EB-6,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,690.66,684.02,697.36,,0.0
+Fig S2c,FH-4-EB-6T-2,FH-4,EB-6,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,2205.5,2192.19,2218.89,,0.0
+Fig S2c,FH-5-EB-6T-2,FH-5,EB-6,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1111.11,1111.11,1111.11,,1.0
+Fig S2c,FH-6-EB-6T-2,FH-6,EB-6,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,189.72,176.84,203.54,,1.0
+Fig S2c,FH-1-EB-7T-2,FH-1,EB-7,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.0
+Fig S2c,FH-2-EB-7T-2,FH-2,EB-7,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,56.72,0.0,56.72,upper,1.732
+Fig S2c,FH-3-EB-7T-2,FH-3,EB-7,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,356.96,350.35,363.7,,1.0
+Fig S2c,FH-4-EB-7T-2,FH-4,EB-7,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,263.51,256.92,270.27,,1.0
+Fig S2c,FH-5-EB-7T-2,FH-5,EB-7,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1998.65,1991.99,2005.34,,0.0
+Fig S2c,FH-6-EB-7T-2,FH-6,EB-7,T-2,1,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,497.16,497.16,497.16,,0.0
+Fig S2e,FH-1-EB-5T-1,FH-1,EB-5,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,72.69,66.36,79.63,,1.0
+Fig S2e,FH-2-EB-5T-1,FH-2,EB-5,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,72.69,66.36,79.63,,1.0
+Fig S2e,FH-3-EB-5T-1,FH-3,EB-5,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,305.24,305.24,305.24,,1.0
+Fig S2e,FH-4-EB-5T-1,FH-4,EB-5,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1055.06,1048.44,1061.71,,1.0
+Fig S2e,FH-5-EB-5T-1,FH-5,EB-5,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1619.11,1619.11,1619.11,,1.0
+Fig S2e,FH-6-EB-5T-1,FH-6,EB-5,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1333.76,1327.14,1340.41,,0.0
+Fig S2e,FH-1-EB-6T-1,FH-1,EB-6,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,72.69,66.36,79.63,,1.0
+Fig S2e,FH-2-EB-6T-1,FH-2,EB-6,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,72.69,66.36,79.63,,1.0
+Fig S2e,FH-3-EB-6T-1,FH-3,EB-6,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,491.04,491.04,491.04,,0.0
+Fig S2e,FH-4-EB-6T-1,FH-4,EB-6,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1426.66,1420.04,1433.31,,0.0
+Fig S2e,FH-5-EB-6T-1,FH-5,EB-6,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1333.76,1327.14,1340.41,,0.0
+Fig S2e,FH-6-EB-6T-1,FH-6,EB-6,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,590.54,583.94,597.21,,0.0
+Fig S2e,FH-1-EB-7T-1,FH-1,EB-7,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,53.09,0.0,53.09,upper,1.0
+Fig S2e,FH-2-EB-7T-1,FH-2,EB-7,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,118.7,106.17,132.71,,1.0
+Fig S2e,FH-3-EB-7T-1,FH-3,EB-7,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,842.71,836.1,849.37,,1.0
+Fig S2e,FH-4-EB-7T-1,FH-4,EB-7,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,2488.38,2481.75,2495.02,,1.0
+Fig S2e,FH-5-EB-7T-1,FH-5,EB-7,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1313.87,1313.87,1313.87,,0.0
+Fig S2e,FH-6-EB-7T-1,FH-6,EB-7,T-1,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,232.15,225.61,238.89,,1.0
+Fig S2e,FH-1-EB-5T-2,FH-1,EB-5,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,92.9,92.9,92.9,,1.0
+Fig S2e,FH-2-EB-5T-2,FH-2,EB-5,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,53.09,0.0,53.09,upper,1.732
+Fig S2e,FH-3-EB-5T-2,FH-3,EB-5,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1008.54,995.36,1021.9,,1.0
+Fig S2e,FH-4-EB-5T-2,FH-4,EB-5,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1101.53,1101.53,1101.53,,1.0
+Fig S2e,FH-5-EB-5T-2,FH-5,EB-5,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,4426.01,4419.38,4432.65,,0.0
+Fig S2e,FH-6-EB-5T-2,FH-6,EB-5,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1519.56,1512.94,1526.21,,1.0
+Fig S2e,FH-1-EB-6T-2,FH-1,EB-6,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,72.69,66.36,79.63,,1.0
+Fig S2e,FH-2-EB-6T-2,FH-2,EB-6,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,72.69,66.36,79.63,,1.0
+Fig S2e,FH-3-EB-6T-2,FH-3,EB-6,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1240.86,1234.24,1247.51,,1.0
+Fig S2e,FH-4-EB-6T-2,FH-4,EB-6,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1944.25,1937.62,1950.9,,0.0
+Fig S2e,FH-5-EB-6T-2,FH-5,EB-6,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1599.19,1592.57,1605.84,,1.0
+Fig S2e,FH-6-EB-6T-2,FH-6,EB-6,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,703.38,703.38,703.38,,0.0
+Fig S2e,FH-1-EB-7T-2,FH-1,EB-7,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,92.9,92.9,92.9,,1.0
+Fig S2e,FH-2-EB-7T-2,FH-2,EB-7,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,53.09,0.0,53.09,upper,1.0
+Fig S2e,FH-3-EB-7T-2,FH-3,EB-7,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1274.05,1274.05,1274.05,,0.0
+Fig S2e,FH-4-EB-7T-2,FH-4,EB-7,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1970.79,1964.17,1977.44,,0.0
+Fig S2e,FH-5-EB-7T-2,FH-5,EB-7,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,4266.75,4260.12,4273.39,,0.0
+Fig S2e,FH-6-EB-7T-2,FH-6,EB-7,T-2,4,intradermal,Renilla luciferase relative expression (I.D.),fold change vs Nil group,1174.5,1167.88,1181.15,,1.0
+Fig 4b,FH-1-EB-5T-1,FH-1,EB-5,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,0.99,0.99,0.99,,0.0
+Fig 4b,FH-2-EB-5T-1,FH-2,EB-5,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.04,1.03,1.05,,0.0
+Fig 4b,FH-3-EB-5T-1,FH-3,EB-5,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,2.11,2.11,2.11,,0.0
+Fig 4b,FH-4-EB-5T-1,FH-4,EB-5,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,2.65,2.64,2.65,,0.0
+Fig 4b,FH-5-EB-5T-1,FH-5,EB-5,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.63,4.63,4.63,,0.0
+Fig 4b,FH-6-EB-5T-1,FH-6,EB-5,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,5.14,5.14,5.14,,0.0
+Fig 4b,FH-1-EB-6T-1,FH-1,EB-6,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.08,1.07,1.09,,0.0
+Fig 4b,FH-2-EB-6T-1,FH-2,EB-6,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.04,1.03,1.05,,0.0
+Fig 4b,FH-3-EB-6T-1,FH-3,EB-6,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,3.21,3.2,3.22,,0.0
+Fig 4b,FH-4-EB-6T-1,FH-4,EB-6,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,2.65,2.64,2.65,,0.0
+Fig 4b,FH-5-EB-6T-1,FH-5,EB-6,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,5.67,5.63,5.71,,0.0
+Fig 4b,FH-6-EB-6T-1,FH-6,EB-6,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,7.16,7.14,7.18,,0.0
+Fig 4b,FH-1-EB-7T-1,FH-1,EB-7,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.04,1.03,1.05,,0.0
+Fig 4b,FH-2-EB-7T-1,FH-2,EB-7,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.23,1.2,1.26,,0.0
+Fig 4b,FH-3-EB-7T-1,FH-3,EB-7,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,3.14,3.13,3.16,,0.0
+Fig 4b,FH-4-EB-7T-1,FH-4,EB-7,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,2.65,2.64,2.65,,0.0
+Fig 4b,FH-5-EB-7T-1,FH-5,EB-7,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.29,4.26,4.32,,0.0
+Fig 4b,FH-6-EB-7T-1,FH-6,EB-7,T-1,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,8.87,8.83,8.91,,0.0
+Fig 4b,FH-1-EB-5T-2,FH-1,EB-5,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.08,1.07,1.09,,0.0
+Fig 4b,FH-2-EB-5T-2,FH-2,EB-5,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.11,1.11,1.11,,0.0
+Fig 4b,FH-3-EB-5T-2,FH-3,EB-5,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.14,4.12,4.16,,0.0
+Fig 4b,FH-4-EB-5T-2,FH-4,EB-5,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,2.37,2.36,2.38,,0.0
+Fig 4b,FH-5-EB-5T-2,FH-5,EB-5,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,6.35,6.34,6.36,,0.0
+Fig 4b,FH-6-EB-5T-2,FH-6,EB-5,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.72,4.71,4.73,,0.0
+Fig 4b,FH-1-EB-6T-2,FH-1,EB-6,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.11,1.11,1.11,,0.0
+Fig 4b,FH-2-EB-6T-2,FH-2,EB-6,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.23,1.2,1.26,,0.0
+Fig 4b,FH-3-EB-6T-2,FH-3,EB-6,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.22,4.2,4.24,,0.0
+Fig 4b,FH-4-EB-6T-2,FH-4,EB-6,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.57,1.54,1.6,,0.0
+Fig 4b,FH-5-EB-6T-2,FH-5,EB-6,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.88,4.87,4.89,,0.0
+Fig 4b,FH-6-EB-6T-2,FH-6,EB-6,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,6.51,6.5,6.53,,0.0
+Fig 4b,FH-1-EB-7T-2,FH-1,EB-7,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.04,1.03,1.05,,0.0
+Fig 4b,FH-2-EB-7T-2,FH-2,EB-7,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.04,1.03,1.05,,0.0
+Fig 4b,FH-3-EB-7T-2,FH-3,EB-7,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,3.04,3.03,3.05,,0.707
+Fig 4b,FH-4-EB-7T-2,FH-4,EB-7,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,1.81,1.81,1.81,,0.0
+Fig 4b,FH-5-EB-7T-2,FH-5,EB-7,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,5.77,5.77,5.77,,0.0
+Fig 4b,FH-6-EB-7T-2,FH-6,EB-7,T-2,4,intramuscular,"human EPO relative expression (I.M., serum, 6 h)",fold change vs Nil group,4.22,4.2,4.24,,0.0

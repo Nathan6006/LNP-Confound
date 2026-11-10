@@ -1,0 +1,107 @@
+{
+  "curation": "songx_39664425",
+  "pmid": "39664425",
+  "date": "2026-11-10",
+  "outcome": "0 rows emittable - article is a Highlight commentary with no original data",
+  "gate": {
+    "script": "verify.py",
+    "invocation": "python3 -I verify.py",
+    "clean_run": {
+      "agreement_count": "17/17",
+      "exit_code": 0,
+      "exit_code_read_from": "the process return code via subprocess.run(...).returncode and shell $? - NOT through a pipe"
+    },
+    "checks": [
+      {"name": "pmid", "observed": "39664425", "expected": "39664425", "pass": true},
+      {"name": "pmcid", "observed": "PMC11628822", "expected": "PMC11628822", "pass": true},
+      {"name": "article_type", "observed": "letter", "expected": "letter", "pass": true},
+      {"name": "subject_heading", "observed": "Highlight", "expected": "Highlight", "pass": true},
+      {"name": "n_table_wrap", "observed": 0, "expected": 0, "pass": true},
+      {"name": "n_html_table", "observed": 0, "expected": 0, "pass": true},
+      {"name": "n_supplementary_material", "observed": 0, "expected": 0, "pass": true},
+      {"name": "has_suppl", "observed": "N", "expected": "N", "pass": true},
+      {"name": "n_fig", "observed": 1, "expected": 1, "pass": true},
+      {"name": "n_graphic", "observed": 1, "expected": 1, "pass": true},
+      {"name": "caption_reprint_xref_to_bib1", "observed": true, "expected": true, "pass": true},
+      {"name": "primary_paper_pmid", "observed": "38740955", "expected": "38740955", "pass": true},
+      {"name": "primary_research_sections_present", "observed": [], "expected": [], "pass": true},
+      {"name": "figure_md5", "observed": "8cca629044a5e7ffee0f9d91f7c320c6", "expected": "8cca629044a5e7ffee0f9d91f7c320c6", "pass": true},
+      {"name": "emitted_rows:03_enumerated.csv", "observed": 0, "expected": 0, "pass": true},
+      {"name": "emitted_rows:05_values.csv", "observed": 0, "expected": 0, "pass": true},
+      {"name": "emitted_rows:06_rows.csv", "observed": 0, "expected": 0, "pass": true}
+    ],
+    "seeded_mutations": {
+      "rule_applied": "A NEW CHECK IS NOT DONE UNTIL IT HAS BEEN MADE TO FAIL ON PURPOSE (CLAUDE.md section 6). A seed is credited only if the AGREEMENT COUNT MOVES; a seed that merely raises is a no-op and is not credited.",
+      "control": {"seed": "s0_CONTROL_unmodified", "agreement": "17/17", "exit_code": 0, "moved": false},
+      "seeds": [
+        {"seed": "s1_insert_table_wrap", "mutation": "inserted a <table-wrap> containing a numeric cell into the JATS body", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s2_article_type_research", "mutation": "article-type letter -> research-article", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s3_bib1_pmid_changed", "mutation": "bib1 pmid 38740955 -> 99999999", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s4_reprint_attribution_removed", "mutation": "caption 'Reprinted with the permission from Ref.' -> 'Data from this work.'", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s5_hasSuppl_Y", "mutation": "Europe PMC core hasSuppl N -> Y", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s6_methods_section", "mutation": "added a <sec><title>Methods</title> section", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s7_figure_bytes_changed", "mutation": "flipped the last byte of gr1.jpg", "agreement": "16/17", "exit_code": 1, "moved": true},
+        {"seed": "s8_emitted_row", "mutation": "wrote a 1-row 06_rows.csv", "agreement": "16/17", "exit_code": 1, "moved": true, "restored": {"agreement": "17/17", "exit_code": 0}}
+      ],
+      "seeds_credited": 8,
+      "seeds_that_were_no_ops": 0,
+      "note": "The gate also caught a real defect in its own first version: the hand-transcribed prose expectation 'Reprinted with the permission from Ref. 1' did not match the source bytes, because the source has a non-breaking space (U+00A0) after 'Ref.' and the '1' is an <xref rid=\"bib1\"> element, not a literal. The check was rewritten to assert the MARKUP fact (the caption's Ref. is followed by an xref pointing at bib1), which is strictly stronger than the prose match it replaced: it ties the reprinted figure to reference 1 mechanically."
+    }
+  },
+  "mass_checks": {
+    "performed": false,
+    "reason": "No structures and no HRMS. The article contains no mass, no formula, no NMR and no HRMS of any kind - it is a commentary. Per the brief: the test is UNAVAILABLE and is reported as such rather than manufactured.",
+    "monoisotopic_vs_average": "not applicable - the article prints no 'Calc.' value to classify"
+  },
+  "linker_checks": {
+    "performed": false,
+    "reason": "No structure was assigned by this curation, so there is no linker to disambiguate. The article has no 13C, no 1H and no HRMS; searched the JATS record for 'NMR', 'HRMS', 'ppm', 'calcd' - zero occurrences. Test UNAVAILABLE, not manufactured."
+  },
+  "geometry_checks": {
+    "performed": false,
+    "reason": "No value was digitised. Figure 1 panel 4 does carry calibratable axes, but it is a licensed reprint of PMID 38740955 (already curated as BL_2024), so digitising it was REFUSED on provenance grounds rather than attempted. See DECISIONS.md D-1.",
+    "axis_calibrate_loo_residuals": "not run - no axis was calibrated"
+  },
+  "tier_4b_vector_geometry": {
+    "performed": false,
+    "finding": "UNAVAILABLE for a structural reason. The sole figure is served as a single flattened JPEG from two independent routes which are byte-identical (md5 8cca629044a5e7ffee0f9d91f7c320c6, 548920 bytes, 740x917 px): the PMC CDN blob route and the Europe PMC api/fulltextRepo route (mimeType=image/jpeg, HTTP 200 on both). A flattened raster exposes no vector drawing items. No PDF with a vector layer was obtained; the publisher route recorded in 00_acquisition_raw.json returned an Elsevier redirect page with 0 assets.",
+    "reported_as": "zero vector items, one flattened JPEG per figure"
+  },
+  "corpus_cross_check": {
+    "name": "584 stated library size vs 560 BL_2024 corpus rows",
+    "result": "RESOLVED EXACTLY, residual 0",
+    "numbers": {
+      "stated_in_commentary": 584,
+      "corpus_BL_2024_vitro_rows": 560,
+      "corpus_BL_2024_unique_IL_name": 560,
+      "corpus_BL_2024_unique_IL_SMILES": 560,
+      "corpus_BL_2024_duplicated_SMILES": 0,
+      "distinct_prefixes": 128,
+      "library_A_prefixes_x_members": "128 x 3 = 384",
+      "library_B_prefixes_x_members": "8 x 25 = 200",
+      "naive_sum": 584,
+      "double_counted_overlap": "8 x 3 = 24",
+      "584_minus_24": 560
+    },
+    "boolean_verifications": {
+      "all_120_non_B_prefixes_have_member_set_exactly_{9,22,23}": true,
+      "all_8_B_prefixes_have_member_set_exactly_{1..25}": true,
+      "{9,22,23}_is_a_subset_of_every_B_prefix": true,
+      "every_BL_2024_vivo_IL_name_is_also_a_vitro_IL_name": "51/51 true"
+    },
+    "conclusion": "584 counts screen memberships across two overlapping screens; 560 counts distinct lipids. BL_2024 is correct. The tracker's attribution of '584 ionizable lipids' to PMID 39664425 is wrong on two counts: wrong paper, and wrong kind of number.",
+    "action": "REPORT ONLY - no file outside this folder was modified"
+  },
+  "files_written": [
+    "00_value_sources.json", "01_blocks.csv (header only, 0 rows)",
+    "02_corpus_overlap.json", "03_enumerated.csv (header only, 0 rows)",
+    "05_values.csv (header only, 0 rows)", "06_rows.csv (header only, 0 rows)",
+    "07_qc.json", "08_contradictions.csv", "DECISIONS.md", "PROVENANCE.md",
+    "reference_structures.csv", "verify.py",
+    "source/europepmc_PMC11628822_fullTextXML.xml",
+    "source/europepmc_core_39664425.json", "source/gr1.jpg"
+  ],
+  "files_modified_outside_this_folder": [],
+  "emit_rows_called": false,
+  "emit_note": "emit.emit_rows was deliberately NOT called: with zero rows it could only succeed, and a code path that can only pass is the anti-pattern CLAUDE.md section 6 names explicitly. The per-item-callable requirement (a hard-coded literal confidence must raise, F-011) is therefore untested here because it is unreachable, and that is stated rather than papered over."
+}

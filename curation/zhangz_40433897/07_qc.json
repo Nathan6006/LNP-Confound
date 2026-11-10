@@ -1,0 +1,866 @@
+{
+ "checks": [
+  {
+   "id": "A_table_s2_parse",
+   "what": "Table S2 recovers 60 LNP rows from the PDF text layer (tier 2)",
+   "n_rows": 60,
+   "expected": 60,
+   "pass": true
+  },
+  {
+   "id": "B_mol_percent_sums_to_100",
+   "what": "every Table S2 prescription's four mol% sum to exactly 100",
+   "n_rows": 60,
+   "n_within_0.02": 60,
+   "worst_abs_deviation": 0.0,
+   "offenders": {},
+   "pass": true
+  },
+  {
+   "id": "C_fig_s4b_correlation_table",
+   "what": "reproduce the four coefficients printed in Fig S4b's inset from Table S2 mol% (PDF text layer, tier 2) against our digitised bars (tier 5). Neither side of this comparison is derived from the other.",
+   "metric_note": "The table prints 'r' and never says which correlation. SPEARMAN reproduces three of four to |delta| <= 0.016 and the fourth to 0.013 IN MAGNITUDE with the sign inverted; Pearson does not. The metric is therefore Spearman, which the paper does not state.",
+   "n_lnps_used": 58,
+   "n_lnps_unread": 2,
+   "per_factor": {
+    "VN2C2": {
+     "printed_r": -0.636,
+     "our_spearman": -0.6275,
+     "our_pearson": -0.623,
+     "spearman_delta_signed": 0.0085,
+     "spearman_delta_on_magnitude": 0.0085,
+     "pearson_delta_signed": 0.013,
+     "sign_agrees": true,
+     "our_spearman_p": 1.356798036779624e-07,
+     "printed_p": 0.0
+    },
+    "DDAB": {
+     "printed_r": -0.501,
+     "our_spearman": -0.517,
+     "our_pearson": -0.3909,
+     "spearman_delta_signed": -0.016,
+     "spearman_delta_on_magnitude": 0.016,
+     "pearson_delta_signed": 0.1101,
+     "sign_agrees": true,
+     "our_spearman_p": 3.2565060553544666e-05,
+     "printed_p": 0.0
+    },
+    "Chol": {
+     "printed_r": 0.727,
+     "our_spearman": 0.7215,
+     "our_pearson": 0.7597,
+     "spearman_delta_signed": -0.0055,
+     "spearman_delta_on_magnitude": 0.0055,
+     "pearson_delta_signed": 0.0327,
+     "sign_agrees": true,
+     "our_spearman_p": 1.6590998422378093e-10,
+     "printed_p": 0.0
+    },
+    "DMG-PEG": {
+     "printed_r": -0.519,
+     "our_spearman": 0.5324,
+     "our_pearson": 0.5811,
+     "spearman_delta_signed": 1.0514,
+     "spearman_delta_on_magnitude": 0.0134,
+     "pearson_delta_signed": 1.1001,
+     "sign_agrees": false,
+     "our_spearman_p": 1.6945374301419433e-05,
+     "printed_p": 0.0
+    }
+   },
+   "n_spearman_agree_signed_within_0.05": 3,
+   "n_pearson_agree_signed_within_0.05": 2,
+   "n_spearman_agree_on_MAGNITUDE_within_0.02": 4,
+   "n_sign_agree": 3,
+   "worst_spearman_magnitude_delta": 0.016,
+   "pass": true,
+   "open_contradiction": "DMG-PEG is printed as -0.519 and measures +0.532. No parameterisation of Table S2 gives it a negative coefficient: mol% +0.532, rank +0.532, share-of-block +0.299, Chol/DMG-PEG ratio -0.296 (wrong magnitude). See 08_contradictions.csv."
+  },
+  {
+   "id": "D_drawn_red_black_grouping",
+   "what": "Fig S4b draws some bars red and some black and never says why. If our values are right, one threshold separates them.",
+   "result": {
+    "n_red": 21,
+    "n_black": 37,
+    "red_range": [
+     41.59,
+     47.41
+    ],
+    "black_range": [
+     49.6,
+     92.57
+    ],
+    "separable_by_one_threshold": true,
+    "margin": 2.185,
+    "threshold_midpoint": 48.507
+   },
+   "pass": true
+  },
+  {
+   "id": "E_hrms_internal",
+   "what": "each Figure S2 HRMS pair: |found - calc|, and our independent recomputation of calc from the printed formula",
+   "n_pairs": 8,
+   "worst_found_minus_calc_Da": 0.0096,
+   "worst_our_calc_minus_printed_calc_mDa": 0.08,
+   "per_panel": [
+    {
+     "panel": "a",
+     "label": "VE-AC",
+     "formula": "C32H52O3Na",
+     "found_minus_calc_mDa": null,
+     "our_calc_minus_printed_mDa": null
+    },
+    {
+     "panel": "b",
+     "label": "VN3C2O",
+     "formula": "C71H123N2O8",
+     "found_minus_calc_mDa": 7.5,
+     "our_calc_minus_printed_mDa": -0.0
+    },
+    {
+     "panel": "c",
+     "label": "VN2C4",
+     "formula": "C70H119N2O6",
+     "found_minus_calc_mDa": -1.0,
+     "our_calc_minus_printed_mDa": -0.03
+    },
+    {
+     "panel": "d",
+     "label": "VN2C2",
+     "formula": "C70H121N2O6",
+     "found_minus_calc_mDa": 9.6,
+     "our_calc_minus_printed_mDa": -0.08
+    },
+    {
+     "panel": "e",
+     "label": "VN3C2",
+     "formula": "C71H123N2O6",
+     "found_minus_calc_mDa": -1.4,
+     "our_calc_minus_printed_mDa": -0.03
+    },
+    {
+     "panel": "f",
+     "label": "VN3C1",
+     "formula": "C69H119N2O6",
+     "found_minus_calc_mDa": -0.1,
+     "our_calc_minus_printed_mDa": -0.03
+    },
+    {
+     "panel": "g",
+     "label": "VN3C2",
+     "formula": "C71H121N2O6",
+     "found_minus_calc_mDa": -0.5,
+     "our_calc_minus_printed_mDa": -0.08
+    },
+    {
+     "panel": "h",
+     "label": "VN2C1",
+     "formula": "C68H117N2O6",
+     "found_minus_calc_mDa": -0.5,
+     "our_calc_minus_printed_mDa": -0.08
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "F_ch2_ladder_unprinted",
+   "what": "the paper never states that VN2 -> VN3 is a one-carbon step. Its own calc masses say so: three independent pairs.",
+   "pairs": [
+    {
+     "low": "VN2C1 (panel h)",
+     "high": "VN3C1 (panel f)",
+     "delta": 14.0156,
+     "minus_CH2_mDa": -0.05
+    },
+    {
+     "low": "VN2C2 (panel d)",
+     "high": "VN3C2 (panel e)",
+     "delta": 14.0156,
+     "minus_CH2_mDa": -0.05
+    },
+    {
+     "low": "VN2C4 (panel c)",
+     "high": "VN3C2 (panel g)",
+     "delta": 14.0157,
+     "minus_CH2_mDa": 0.05
+    }
+   ],
+   "worst_abs_mDa": 0.05,
+   "pass": true
+  },
+  {
+   "id": "G_axis_calibration",
+   "what": "tick-fit residual, leave-one-out residual, and the unprinted requirement that the ZERO TICK sit on the drawn baseline",
+   "per_panel": {
+    "FigS5a": {
+     "native_dpi": [
+      219.9,
+      219.5
+     ],
+     "tick_residual_px": 0.3,
+     "worst_loo_px_native": 0.4286,
+     "worst_loo_px_600dpi_equivalent": 1.1703,
+     "loo_tol_native_px": 4.096,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.0
+    },
+    "FigS5b": {
+     "native_dpi": [
+      219.9,
+      219.5
+     ],
+     "tick_residual_px": 0.1952,
+     "worst_loo_px_native": 0.277,
+     "worst_loo_px_600dpi_equivalent": 0.7565,
+     "loo_tol_native_px": 4.096,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.5
+    },
+    "FigS4b": {
+     "native_dpi": [
+      219.9,
+      219.9
+     ],
+     "tick_residual_px": 0.2,
+     "worst_loo_px_native": 0.5,
+     "worst_loo_px_600dpi_equivalent": 1.364,
+     "loo_tol_native_px": 4.092,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.0
+    },
+    "FigS7": {
+     "native_dpi": [
+      219.5,
+      219.6
+     ],
+     "tick_residual_px": 0.0,
+     "worst_loo_px_native": 0.0,
+     "worst_loo_px_600dpi_equivalent": 0.0,
+     "loo_tol_native_px": 4.099,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.0
+    },
+    "FigS8a": {
+     "native_dpi": [
+      216.2,
+      216.2
+     ],
+     "tick_residual_px": 0.3,
+     "worst_loo_px_native": 0.5,
+     "worst_loo_px_600dpi_equivalent": 1.3875,
+     "loo_tol_native_px": 4.163,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.0
+    },
+    "FigS8b": {
+     "native_dpi": [
+      216.2,
+      216.2
+     ],
+     "tick_residual_px": 0.15,
+     "worst_loo_px_native": 0.25,
+     "worst_loo_px_600dpi_equivalent": 0.6938,
+     "loo_tol_native_px": 4.163,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.0
+    },
+    "FigS13b": {
+     "native_dpi": [
+      189.9,
+      190.0
+     ],
+     "tick_residual_px": 0.2,
+     "worst_loo_px_native": 0.5,
+     "worst_loo_px_600dpi_equivalent": 1.5798,
+     "loo_tol_native_px": 4.739,
+     "loo_tol_600dpi_px": 1.5,
+     "passes_rescaled": true,
+     "passes_unrescaled": true,
+     "zero_tick_minus_baseline_px": 0.0
+    }
+   },
+   "worst_zero_tick_offset_px": 0.5,
+   "n_panels_passing_unrescaled_loo": 7,
+   "n_panels": 7,
+   "pass": true
+  },
+  {
+   "id": "H_within_panel_colour_order",
+   "what": "each bar's measured pen colour matches the legend swatch of its x-position, with swatches sampled IN THE SAME PANEL. Colours are never matched across panels.",
+   "per_panel": {
+    "FigS5a": {
+     "agreement": "16/16",
+     "worst_nearest_dist": 48.65,
+     "best_runner_up": 46.06,
+     "worst_ratio": 0.756
+    },
+    "FigS5b": {
+     "agreement": "18/18",
+     "worst_nearest_dist": 47.53,
+     "best_runner_up": 45.39,
+     "worst_ratio": 0.626
+    }
+   },
+   "pass": true
+  },
+  {
+   "id": "I_detector_accounting",
+   "what": "every bar is read, refused, or relaxed - and the three sum",
+   "per_panel": {
+    "FigS5a": {
+     "n_bars": 18,
+     "n_read": 16,
+     "n_refused": 2,
+     "halo_columns_trimmed": 6,
+     "rule_thickness_rows": 5,
+     "nrow_relaxed_bars": 0
+    },
+    "FigS5b": {
+     "n_bars": 18,
+     "n_read": 18,
+     "n_refused": 0,
+     "halo_columns_trimmed": 4,
+     "rule_thickness_rows": 4,
+     "nrow_relaxed_bars": 0
+    },
+    "FigS4b": {
+     "n_bars": 62,
+     "n_read": 60,
+     "n_refused": 2,
+     "halo_columns_trimmed": 24,
+     "rule_thickness_rows": 3,
+     "nrow_relaxed_bars": 10
+    },
+    "FigS7": {
+     "n_bars": 7,
+     "n_read": 6,
+     "n_refused": 1,
+     "halo_columns_trimmed": 3,
+     "rule_thickness_rows": 5,
+     "nrow_relaxed_bars": 0
+    },
+    "FigS8a": {
+     "n_bars": 5,
+     "n_read": 3,
+     "n_refused": 2,
+     "halo_columns_trimmed": 0,
+     "rule_thickness_rows": 3,
+     "nrow_relaxed_bars": 0
+    },
+    "FigS8b": {
+     "n_bars": 5,
+     "n_read": 4,
+     "n_refused": 1,
+     "halo_columns_trimmed": 0,
+     "rule_thickness_rows": 4,
+     "nrow_relaxed_bars": 1
+    },
+    "FigS13b": {
+     "n_bars": 3,
+     "n_read": 2,
+     "n_refused": 1,
+     "halo_columns_trimmed": 2,
+     "rule_thickness_rows": 3,
+     "nrow_relaxed_bars": 0
+    }
+   },
+   "totals": {
+    "bars": 118,
+    "read": 109,
+    "refused": 9,
+    "relaxed": 11
+   },
+   "pass": true
+  },
+  {
+   "id": "J_repeats_across_rounds",
+   "what": "every series measured in more than one panel, and the ratio where one is computable",
+   "result": {
+    "within_one_cell_line_repeats": [],
+    "cross_panel_shared_series": {
+     "Lip3000": [
+      {
+       "panel": "FigS4b",
+       "group": "",
+       "value": 102.039
+      },
+      {
+       "panel": "FigS7",
+       "group": "",
+       "value": null
+      },
+      {
+       "panel": "FigS8a",
+       "group": "",
+       "value": null
+      }
+     ],
+     "PBS": [
+      {
+       "panel": "FigS8a",
+       "group": "",
+       "value": 11737.452
+      },
+      {
+       "panel": "FigS8b",
+       "group": "",
+       "value": 8957.529
+      },
+      {
+       "panel": "FigS13b",
+       "group": "",
+       "value": null
+      }
+     ],
+     "VN2C1": [
+      {
+       "panel": "FigS8a",
+       "group": "",
+       "value": null
+      },
+      {
+       "panel": "FigS8b",
+       "group": "",
+       "value": 583474.903
+      }
+     ],
+     "VN2C2": [
+      {
+       "panel": "FigS5a",
+       "group": "PEG-0.5",
+       "value": 67.339
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-1",
+       "value": null
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-2",
+       "value": 34.924
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-0.5",
+       "value": 3.33
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-1",
+       "value": 2.799
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-2",
+       "value": 2.003
+      }
+     ],
+     "VN2C3": [
+      {
+       "panel": "FigS5a",
+       "group": "PEG-0.5",
+       "value": null
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-1",
+       "value": 57.554
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-2",
+       "value": 72.232
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-0.5",
+       "value": 2.799
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-1",
+       "value": 2.533
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-2",
+       "value": 2.533
+      }
+     ],
+     "VN2C4": [
+      {
+       "panel": "FigS5a",
+       "group": "PEG-0.5",
+       "value": 66.728
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-1",
+       "value": 83.242
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-2",
+       "value": 35.535
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-0.5",
+       "value": 9.963
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-1",
+       "value": 1.737
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-2",
+       "value": 2.268
+      }
+     ],
+     "VN3C1": [
+      {
+       "panel": "FigS5a",
+       "group": "PEG-0.5",
+       "value": 41.04
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-1",
+       "value": 66.116
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-2",
+       "value": 76.514
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-0.5",
+       "value": 2.003
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-1",
+       "value": 36.764
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-2",
+       "value": 3.064
+      }
+     ],
+     "VN3C2": [
+      {
+       "panel": "FigS5a",
+       "group": "PEG-0.5",
+       "value": 58.165
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-1",
+       "value": 82.63
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-2",
+       "value": 86.3
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-0.5",
+       "value": 2.003
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-1",
+       "value": 2.268
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-2",
+       "value": 1.207
+      }
+     ],
+     "VN3C2O": [
+      {
+       "panel": "FigS5a",
+       "group": "PEG-0.5",
+       "value": 93.028
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-1",
+       "value": 42.875
+      },
+      {
+       "panel": "FigS5a",
+       "group": "PEG-2",
+       "value": 48.379
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-0.5",
+       "value": 7.575
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-1",
+       "value": 24.027
+      },
+      {
+       "panel": "FigS5b",
+       "group": "PEG-2",
+       "value": 11.025
+      }
+     ]
+    },
+    "VN2C1_S8a_vs_S8b": {
+     "S8a": null,
+     "S8b": 583474.903,
+     "ratio": null,
+     "note": "Same compound, same y-axis (0-8x10^5 RLU), same figure, two panels. The S8a bar is REFUSED by bars.bar_top (a replicate dot cluster spans its whole right flank), so the ratio is NOT computable and is reported as such rather than estimated."
+    },
+    "S5a_vs_S5b_cross_cell": {
+     "n_pairs": 16,
+     "spearman": -0.0886,
+     "pearson": -0.1078,
+     "note": "Same lipids, same lab, same cargo, same formulations - only the target cell changes (4T1-Luc vs MC38-Luc). This is the within-lab cross-context concordance rung that CLAUDE.md section 8 raises for molea.csv. The two panels also use DIFFERENT y-axis ranges (0-120 vs 0-50) and different readout wording, so they are NOT replicates.",
+     "pairs": [
+      {
+       "group": "PEG-0.5",
+       "series": "VN3C2O",
+       "4T1_Luc": 93.028,
+       "MC38_Luc": 7.575
+      },
+      {
+       "group": "PEG-0.5",
+       "series": "VN2C4",
+       "4T1_Luc": 66.728,
+       "MC38_Luc": 9.963
+      },
+      {
+       "group": "PEG-0.5",
+       "series": "VN2C2",
+       "4T1_Luc": 67.339,
+       "MC38_Luc": 3.33
+      },
+      {
+       "group": "PEG-0.5",
+       "series": "VN3C2",
+       "4T1_Luc": 58.165,
+       "MC38_Luc": 2.003
+      },
+      {
+       "group": "PEG-0.5",
+       "series": "VN3C1",
+       "4T1_Luc": 41.04,
+       "MC38_Luc": 2.003
+      },
+      {
+       "group": "PEG-1",
+       "series": "VN3C2O",
+       "4T1_Luc": 42.875,
+       "MC38_Luc": 24.027
+      },
+      {
+       "group": "PEG-1",
+       "series": "VN2C4",
+       "4T1_Luc": 83.242,
+       "MC38_Luc": 1.737
+      },
+      {
+       "group": "PEG-1",
+       "series": "VN3C2",
+       "4T1_Luc": 82.63,
+       "MC38_Luc": 2.268
+      },
+      {
+       "group": "PEG-1",
+       "series": "VN3C1",
+       "4T1_Luc": 66.116,
+       "MC38_Luc": 36.764
+      },
+      {
+       "group": "PEG-1",
+       "series": "VN2C3",
+       "4T1_Luc": 57.554,
+       "MC38_Luc": 2.533
+      },
+      {
+       "group": "PEG-2",
+       "series": "VN3C2O",
+       "4T1_Luc": 48.379,
+       "MC38_Luc": 11.025
+      },
+      {
+       "group": "PEG-2",
+       "series": "VN2C4",
+       "4T1_Luc": 35.535,
+       "MC38_Luc": 2.268
+      },
+      {
+       "group": "PEG-2",
+       "series": "VN2C2",
+       "4T1_Luc": 34.924,
+       "MC38_Luc": 2.003
+      },
+      {
+       "group": "PEG-2",
+       "series": "VN3C2",
+       "4T1_Luc": 86.3,
+       "MC38_Luc": 1.207
+      },
+      {
+       "group": "PEG-2",
+       "series": "VN3C1",
+       "4T1_Luc": 76.514,
+       "MC38_Luc": 3.064
+      },
+      {
+       "group": "PEG-2",
+       "series": "VN2C3",
+       "4T1_Luc": 72.232,
+       "MC38_Luc": 2.533
+      }
+     ]
+    }
+   },
+   "pass": true
+  }
+ ],
+ "seeds": [
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "seed +4.00 px -> worst LOO 5.000 native px (tol 4.100, unrescaled tol 1.5) -> FAIL",
+    "seed +5.00 px -> worst LOO 6.333 native px (tol 4.100, unrescaled tol 1.5) -> FAIL",
+    "seed +6.00 px -> worst LOO 7.667 native px (tol 4.100, unrescaled tol 1.5) -> FAIL",
+    "control worst LOO 0.4286 ; seeded +5.0px worst LOO 6.3333 ; largest displacement that still slips through: 3.25 px"
+   ],
+   "stderr_tail": [],
+   "seed": "G_axis_loo_native_tolerance",
+   "what": "axis.loo_residuals at the RESCALED tolerance still rejects a displaced tick",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "clean row 40, seeded row 40 -> marker ignored, count unmoved"
+   ],
+   "stderr_tail": [],
+   "seed": "bars_class32_centred_marker",
+   "what": "a centred replicate blob 6 px above the top rule is still rejected at the RELAXED nrow=2",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "without strip row=20 ; with strip row=60 ; pixels cleared=960"
+   ],
+   "stderr_tail": [],
+   "seed": "furniture_long_rule",
+   "what": "a 300 px table rule crossing a bar window is removed; without the strip it is read as the bar top",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "REFUSED as intended: emit: confidence='high' is a LITERAL."
+   ],
+   "stderr_tail": [],
+   "seed": "emit_literal_confidence",
+   "what": "a hard-coded confidence literal raises (F-011 / F-025 / F-046)",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "REFUSED as intended: emit_rows('seed') item 'a': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='', value_is_bound='') and its curation_note is empty."
+   ],
+   "stderr_tail": [],
+   "seed": "emit_caveat_without_note",
+   "what": "a low-confidence row with an empty note raises",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "baseline agree=4 ; x1.10 agree=4 ; rank-perturbed agree=0"
+   ],
+   "stderr_tail": [],
+   "seed": "C_correlation_moves_with_bars",
+   "what": "scaling every FigS4b bar by 1.10 must break the Spearman magnitude agreement count (if it does not, the check is not testing the bars)",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "control: red max 47.41 < black min 49.60 -> True (margin 2.190)",
+    "seeded : red max 54.60 < black min 49.60 -> False"
+   ],
+   "stderr_tail": [],
+   "seed": "D_red_black_separation",
+   "what": "swapping two bars across the colour boundary destroys the single-threshold separation",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "correct core: 0.08 mDa ; core + one CH2: 14015.57 mDa"
+   ],
+   "stderr_tail": [],
+   "seed": "EF_mass_arithmetic",
+   "what": "a one-CH2 error in the proposed core breaks the HRMS agreement",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "formula  good C32H52O3  seeded C32H52O3",
+    "mass     good 484.3916  seeded 484.3916  delta 0.000000",
+    "seeded make_reference.py returncode = 1",
+    "make_reference: the acrylate is not written as an aryl ester (0 matches). A reversed O-C(=O) has the same formula and the same exact mass."
+   ],
+   "stderr_tail": [],
+   "seed": "anchor_direction_gate",
+   "what": "a reversed ester in the anchor - same formula, same exact mass - must make make_reference.py exit 1",
+   "credited": true,
+   "verdict_from": "returncode"
+  },
+  {
+   "returncode": 1,
+   "stdout_tail": [
+    "registry BGNVBNJYBVCBJH-UHFFFAOYSA-N ; from memory YSXJCHNEZHHJJX-UHFFFAOYSA-N"
+   ],
+   "stderr_tail": [],
+   "seed": "overlap_benchmark_arm",
+   "what": "a benchmark SMILES written from memory fails the corpus key check - which is how my first three were caught",
+   "credited": true,
+   "verdict_from": "returncode"
+  }
+ ],
+ "seeds_summary": "10/10 seeded defects were caught"
+}

@@ -1,0 +1,21 @@
+{
+ "_what": "Stage 06. Values joined to structures; quality columns written by curation/lib/emit, the single writer.",
+ "n_values_total": 87,
+ "n_emitted": 29,
+ "n_skipped": 58,
+ "skipped_by_reason": {
+  "crude one-pot mixture AND the amine head is unknown; see 03_": 36,
+  "crude one-pot mixture; see 03_not_determinable.csv and DECIS": 12,
+  "Lipofectamine 2000: a proprietary commercial mixture with no": 6,
+  "a blend of two ionizable lipids; no single IL_SMILES.": 4
+ },
+ "rows_with_a_caveat": 1,
+ "confidence_distribution": {
+  "high": 29
+ },
+ "value_is_bound_distribution": {
+  "(none)": 28,
+  "upper": 1
+ },
+ "NOT_MERGED": "This curation does NOT merge into data/. Two required corpus fields are unresolved: Model_target/Model_type (the cell line is not in the SI, D-2) and the standardisation convention (D-5). build_dataset.py would refuse the folder anyway while DECISIONS.md carries an OPEN entry, which is the gate working."
+}

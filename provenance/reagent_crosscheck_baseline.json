@@ -1,0 +1,15 @@
+{
+ "_what": "C17's accepted cross-experiment reagent contradictions, each WITH THE REASON it is accepted. Same posture as audit_baseline.json: a departure in EITHER direction fails. A known contradiction vanishing without anyone editing this file is how a check that stopped looking announces itself.",
+
+ "_rule": "Do not add an entry to make the gate green. An entry here is a statement that the contradiction is understood and that acting on it is blocked on something named in `why` -- not that it is acceptable. Decide WHICH HALF is wrong before repairing: in AC_2025 the NAMES were wrong and the structures were right, and repairing it the other way would have moved 419 measured values onto the wrong molecules.",
+
+ "accepted": {
+  "PEG_name:DMPE-PEG2000": {
+   "why": "OPEN FINDING F-049, found by C17 on its first run, 2026-11-09. JW_2024 (1,873 rows, PMID 37985700) is the ONLY experiment that calls its PEG-lipid `DMPE-PEG2000`. The SMILES it carries is byte-identical to the one 41 other experiments call `DMG-PEG2000` and BL_2023_3CR calls `C14-PEG2000` -- a dimyristoyl-GLYCEROL PEG, with no nitrogen and no phosphorus. A real DMPE-PEG carries a phosphoethanolamine head: the 8 experiments on the other side of this collision hold C122H242NO53P, JW_2024 holds C122H242O50. Both are C122H242, which is why no descriptor or mass check ever flagged it.",
+   "which_half_is_wrong": "UNDECIDED, and this is the AC_2025 question. If JW_2024's paper used DMG-PEG2000 then only the NAME is wrong on 1,873 rows and no measured value is on the wrong molecule. If it used DMPE-PEG2000 then the STRUCTURE is wrong on 1,873 rows. The corpus cannot settle it: 41-to-1 says the structure is the corpus-standard DMG-PEG string, but a majority is not evidence about what one lab formulated.",
+   "evidence_needed": "The Materials or Methods section of PMID 37985700. Until then this is queued, not repaired.",
+   "blocks": "nothing in data/. No row is changed on the strength of a count.",
+   "opened": "2026-11-09"
+  }
+ }
+}

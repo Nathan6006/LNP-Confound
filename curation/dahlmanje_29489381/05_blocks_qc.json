@@ -1,0 +1,77 @@
+{
+ "formula_checks": [
+  {
+   "block": "Spermine Free Base",
+   "expected": "C10H26N4",
+   "got": "C10H26N4",
+   "match": true
+  },
+  {
+   "block": "Spermidine",
+   "expected": "C7H19N3",
+   "got": "C7H19N3",
+   "match": true
+  },
+  {
+   "block": "Triethylenetetramine",
+   "expected": "C6H18N4",
+   "got": "C6H18N4",
+   "match": true
+  },
+  {
+   "block": "1,4,8,12-Tetraazacyclopentadecane",
+   "expected": "C11H26N4",
+   "got": "C11H26N4",
+   "match": true
+  },
+  {
+   "block": "C12 Epoxy",
+   "expected": "C12H24O",
+   "got": "C12H24O",
+   "match": true
+  },
+  {
+   "block": "C15 Epoxy",
+   "expected": "C15H30O",
+   "got": "C15H30O",
+   "match": true
+  },
+  {
+   "block": "Lauryl Acrylate",
+   "expected": "C15H28O2",
+   "got": "C15H28O2",
+   "match": true
+  },
+  {
+   "block": "Stearyl Methacrylate",
+   "expected": "C22H42O2",
+   "got": "C22H42O2",
+   "match": true
+  }
+ ],
+ "failures": [],
+ "macrocycle": {
+  "ring_size": 15,
+  "n_positions_measured": [
+   1,
+   4,
+   8,
+   12
+  ],
+  "n_positions_required_by_name": [
+   1,
+   4,
+   8,
+   12
+  ],
+  "match": true
+ },
+ "n_blocks": 10,
+ "n_blocks_with_a_structure": 8,
+ "n_blocks_without_a_structure": 2,
+ "n_lipomers": 15,
+ "n_lipomers_with_a_product_SMILES": 0,
+ "n_lipomers_blocked_by_polymer_amine": 7,
+ "n_lipomers_blocked_by_unstated_substitution": 8,
+ "n_formulations_covered": 564
+}

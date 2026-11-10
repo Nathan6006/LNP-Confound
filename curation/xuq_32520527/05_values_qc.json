@@ -1,0 +1,802 @@
+{
+ "_what": "stage 05 QC for XQ_2020: Figure 5 geometry and the 36 bar measurements it yields.",
+ "image": {
+  "file": "source/nihms-1799810-f0005.jpg",
+  "shape_hw": [
+   439,
+   1050
+  ]
+ },
+ "y_axis": {
+  "spine_x": 92,
+  "baseline_y_top_of_rule": 349,
+  "baseline_rule_thickness_px": 3,
+  "tick_length_probe": {
+   "probe_rows": [
+    27.41,
+    73.5,
+    119.5,
+    165.5,
+    211.64,
+    257.58,
+    303.64,
+    350.0
+   ],
+   "right_edge_x_excluding_the_baseline_tick": [
+    96,
+    99,
+    96,
+    99,
+    96,
+    99,
+    96
+   ],
+   "long": 99,
+   "short": 96,
+   "strip_px": [
+    97,
+    99
+   ]
+  },
+  "tick_rows_px": [
+   73.5,
+   165.5,
+   257.627,
+   350.004
+  ],
+  "tick_values": [
+   90,
+   60,
+   30,
+   0
+  ],
+  "px_per_percent": 3.0721,
+  "origin": "90.0 @ 73.41 px",
+  "max_residual_px": 0.1125,
+  "loo_residuals_px": [
+   0.293,
+   0.108,
+   0.161,
+   0.334
+  ],
+  "worst_loo_residual_px": 0.334,
+  "loo_tol_px": 1.5,
+  "why_loo_is_reported": "axis.calibrate's max-residual test is weak against a SINGLE bad tick -- least squares drags the line toward the outlier. A leave-one-out residual has no leverage masking.",
+  "baseline_vs_zero_tick_px": 0.903,
+  "zero_tick_lands_on_the_drawn_baseline": true
+ },
+ "library_region_px": [
+  94,
+  888
+ ],
+ "how_the_library_region_was_bounded": "the right-hand end of the red/blue footprint on the baseline row; red and blue mark the two helper-lipid formulations and never appear on a control bar. The widest-gap rule was tried first and was wrong -- see the comment in stage05_values.py.",
+ "legend_band_excluded_rows": [
+  0,
+  30
+ ],
+ "series_geometry": {
+  "black": {
+   "n_windows": 11,
+   "widths_px": [
+    20,
+    20,
+    20,
+    20,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19
+   ],
+   "pitch_px": [
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73
+   ],
+   "windows": [
+    [
+     99,
+     119
+    ],
+    [
+     172,
+     192
+    ],
+    [
+     245,
+     265
+    ],
+    [
+     318,
+     338
+    ],
+    [
+     391,
+     410
+    ],
+    [
+     464,
+     483
+    ],
+    [
+     537,
+     556
+    ],
+    [
+     610,
+     629
+    ],
+    [
+     683,
+     702
+    ],
+    [
+     756,
+     775
+    ],
+    [
+     829,
+     848
+    ]
+   ],
+   "flank_deltas_px": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "worst_flank_delta_px": 1.0,
+   "n_refused": 0,
+   "refusals": {}
+  },
+  "red": {
+   "n_windows": 11,
+   "widths_px": [
+    19,
+    19,
+    19,
+    19,
+    19,
+    20,
+    20,
+    19,
+    19,
+    19,
+    19
+   ],
+   "pitch_px": [
+    73,
+    73,
+    73,
+    73,
+    72,
+    73,
+    73,
+    73,
+    73,
+    73
+   ],
+   "windows": [
+    [
+     119,
+     138
+    ],
+    [
+     192,
+     211
+    ],
+    [
+     265,
+     284
+    ],
+    [
+     338,
+     357
+    ],
+    [
+     411,
+     430
+    ],
+    [
+     483,
+     503
+    ],
+    [
+     556,
+     576
+    ],
+    [
+     629,
+     648
+    ],
+    [
+     702,
+     721
+    ],
+    [
+     775,
+     794
+    ],
+    [
+     848,
+     867
+    ]
+   ],
+   "flank_deltas_px": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0
+   ],
+   "worst_flank_delta_px": 1.0,
+   "n_refused": 0,
+   "refusals": {}
+  },
+  "blue": {
+   "n_windows": 11,
+   "widths_px": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+   ],
+   "pitch_px": [
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73,
+    73
+   ],
+   "windows": [
+    [
+     138,
+     158
+    ],
+    [
+     211,
+     231
+    ],
+    [
+     284,
+     304
+    ],
+    [
+     357,
+     377
+    ],
+    [
+     430,
+     450
+    ],
+    [
+     503,
+     523
+    ],
+    [
+     576,
+     596
+    ],
+    [
+     649,
+     669
+    ],
+    [
+     722,
+     742
+    ],
+    [
+     795,
+     815
+    ],
+    [
+     868,
+     888
+    ]
+   ],
+   "flank_deltas_px": [
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "worst_flank_delta_px": 1.0,
+   "n_refused": 0,
+   "refusals": {}
+  }
+ },
+ "controls_right_of_the_axis_break": {
+  "_what": "Untreated, naked mRNA and Lpf2k. These are NOT corpus rows: Lpf2k is a commercial transfection reagent, not a library member, and the other two are blanks. They are measured only so the Lpf2k bar can test the calibration against the printed '~91% GFP+ cells'.",
+  "measured": {
+   "grey@931-953": {
+    "refused": "bar_top: no row in [30,349) reaches 0.90 coverage of the full 22px bar for 3 contiguous rows."
+   },
+   "grey@954-970": {
+    "refused": "bar_top: no row in [30,349) reaches 0.90 coverage of the full 16px bar for 3 contiguous rows."
+   },
+   "grey@971-993": {
+    "refused": "bar_top: full-width rule fired at row 346 but the left 7px flank has no covered row at all. A bar's top rule spans the full width, so it is present in both flanks; something present only in the middle is a replicate dot cluster, a whisker cap or a mean marker. That is error class 32 (F-018, F-020)."
+   },
+   "grey@1011-1033": {
+    "value_pct": 91.436,
+    "row": 69,
+    "flank_delta_px": 0.0
+   }
+  },
+  "untreated_and_mRNA": "the paper states both are <1% GFP+. At 3.07 px per percentage point those bars are ~3 px tall and bars.bar_top refuses them as baseline-adjacent, which is the correct answer: a refusal, not a zero."
+ },
+ "n_values": 33,
+ "rows_with_a_caveat": 3,
+ "measurements": {
+  "75-O16CBA": {
+   "item": "75-O16CBA",
+   "colour": "black",
+   "group": "75",
+   "window_px": [
+    99,
+    119
+   ],
+   "row_px": 330,
+   "coverage": 0.9667,
+   "flank_delta_px": 0.0,
+   "value_pct": 6.479
+  },
+  "76-O16CBA": {
+   "item": "76-O16CBA",
+   "colour": "black",
+   "group": "76",
+   "window_px": [
+    172,
+    192
+   ],
+   "row_px": 321,
+   "coverage": 0.9833,
+   "flank_delta_px": 1.0,
+   "value_pct": 9.408
+  },
+  "77-O16CBA": {
+   "item": "77-O16CBA",
+   "colour": "black",
+   "group": "77",
+   "window_px": [
+    245,
+    265
+   ],
+   "row_px": 328,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 7.13
+  },
+  "78-O16CBA": {
+   "item": "78-O16CBA",
+   "colour": "black",
+   "group": "78",
+   "window_px": [
+    318,
+    338
+   ],
+   "row_px": 310,
+   "coverage": 0.9833,
+   "flank_delta_px": 1.0,
+   "value_pct": 12.989
+  },
+  "80-O16CBA": {
+   "item": "80-O16CBA",
+   "colour": "black",
+   "group": "80",
+   "window_px": [
+    391,
+    410
+   ],
+   "row_px": 331,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 6.153
+  },
+  "81-O16CBA": {
+   "item": "81-O16CBA",
+   "colour": "black",
+   "group": "81",
+   "window_px": [
+    464,
+    483
+   ],
+   "row_px": 324,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 8.432
+  },
+  "82-O16CBA": {
+   "item": "82-O16CBA",
+   "colour": "black",
+   "group": "82",
+   "window_px": [
+    537,
+    556
+   ],
+   "row_px": 325,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 8.106
+  },
+  "93-O16CBA": {
+   "item": "93-O16CBA",
+   "colour": "black",
+   "group": "93",
+   "window_px": [
+    610,
+    629
+   ],
+   "row_px": 332,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 5.828
+  },
+  "113-O16CBA": {
+   "item": "113-O16CBA",
+   "colour": "black",
+   "group": "113",
+   "window_px": [
+    683,
+    702
+   ],
+   "row_px": 261,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 28.939
+  },
+  "306-O16CBA": {
+   "item": "306-O16CBA",
+   "colour": "black",
+   "group": "306",
+   "window_px": [
+    756,
+    775
+   ],
+   "row_px": 216,
+   "coverage": 0.9825,
+   "flank_delta_px": 1.0,
+   "value_pct": 43.587
+  },
+  "400-O16CBA": {
+   "item": "400-O16CBA",
+   "colour": "black",
+   "group": "400",
+   "window_px": [
+    829,
+    848
+   ],
+   "row_px": 143,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 67.349
+  },
+  "75-O16CBA-F1": {
+   "item": "75-O16CBA-F1",
+   "colour": "red",
+   "group": "75",
+   "window_px": [
+    119,
+    138
+   ],
+   "row_px": 187,
+   "coverage": 0.9825,
+   "flank_delta_px": 1.0,
+   "value_pct": 53.026
+  },
+  "76-O16CBA-F1": {
+   "item": "76-O16CBA-F1",
+   "colour": "red",
+   "group": "76",
+   "window_px": [
+    192,
+    211
+   ],
+   "row_px": 89,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 84.926
+  },
+  "77-O16CBA-F1": {
+   "item": "77-O16CBA-F1",
+   "colour": "red",
+   "group": "77",
+   "window_px": [
+    265,
+    284
+   ],
+   "row_px": 78,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 88.507
+  },
+  "78-O16CBA-F1": {
+   "item": "78-O16CBA-F1",
+   "colour": "red",
+   "group": "78",
+   "window_px": [
+    338,
+    357
+   ],
+   "row_px": 221,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 41.959
+  },
+  "80-O16CBA-F1": {
+   "item": "80-O16CBA-F1",
+   "colour": "red",
+   "group": "80",
+   "window_px": [
+    411,
+    430
+   ],
+   "row_px": 88,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 85.251
+  },
+  "81-O16CBA-F1": {
+   "item": "81-O16CBA-F1",
+   "colour": "red",
+   "group": "81",
+   "window_px": [
+    483,
+    503
+   ],
+   "row_px": 66,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 92.413
+  },
+  "82-O16CBA-F1": {
+   "item": "82-O16CBA-F1",
+   "colour": "red",
+   "group": "82",
+   "window_px": [
+    556,
+    576
+   ],
+   "row_px": 111,
+   "coverage": 0.9833,
+   "flank_delta_px": 1.0,
+   "value_pct": 77.765
+  },
+  "93-O16CBA-F1": {
+   "item": "93-O16CBA-F1",
+   "colour": "red",
+   "group": "93",
+   "window_px": [
+    629,
+    648
+   ],
+   "row_px": 343,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 2.247
+  },
+  "113-O16CBA-F1": {
+   "item": "113-O16CBA-F1",
+   "colour": "red",
+   "group": "113",
+   "window_px": [
+    702,
+    721
+   ],
+   "row_px": 105,
+   "coverage": 0.9825,
+   "flank_delta_px": 1.0,
+   "value_pct": 79.718
+  },
+  "306-O16CBA-F1": {
+   "item": "306-O16CBA-F1",
+   "colour": "red",
+   "group": "306",
+   "window_px": [
+    775,
+    794
+   ],
+   "row_px": 97,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 82.322
+  },
+  "400-O16CBA-F1": {
+   "item": "400-O16CBA-F1",
+   "colour": "red",
+   "group": "400",
+   "window_px": [
+    848,
+    867
+   ],
+   "row_px": 110,
+   "coverage": 0.9825,
+   "flank_delta_px": 1.0,
+   "value_pct": 78.09
+  },
+  "75-O16CBA-F2": {
+   "item": "75-O16CBA-F2",
+   "colour": "blue",
+   "group": "75",
+   "window_px": [
+    138,
+    158
+   ],
+   "row_px": 175,
+   "coverage": 0.9833,
+   "flank_delta_px": 1.0,
+   "value_pct": 56.932
+  },
+  "76-O16CBA-F2": {
+   "item": "76-O16CBA-F2",
+   "colour": "blue",
+   "group": "76",
+   "window_px": [
+    211,
+    231
+   ],
+   "row_px": 145,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 66.698
+  },
+  "77-O16CBA-F2": {
+   "item": "77-O16CBA-F2",
+   "colour": "blue",
+   "group": "77",
+   "window_px": [
+    284,
+    304
+   ],
+   "row_px": 122,
+   "coverage": 0.9833,
+   "flank_delta_px": 1.0,
+   "value_pct": 74.184
+  },
+  "78-O16CBA-F2": {
+   "item": "78-O16CBA-F2",
+   "colour": "blue",
+   "group": "78",
+   "window_px": [
+    357,
+    377
+   ],
+   "row_px": 160,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 61.815
+  },
+  "80-O16CBA-F2": {
+   "item": "80-O16CBA-F2",
+   "colour": "blue",
+   "group": "80",
+   "window_px": [
+    430,
+    450
+   ],
+   "row_px": 138,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 68.976
+  },
+  "81-O16CBA-F2": {
+   "item": "81-O16CBA-F2",
+   "colour": "blue",
+   "group": "81",
+   "window_px": [
+    503,
+    523
+   ],
+   "row_px": 112,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 77.439
+  },
+  "82-O16CBA-F2": {
+   "item": "82-O16CBA-F2",
+   "colour": "blue",
+   "group": "82",
+   "window_px": [
+    576,
+    596
+   ],
+   "row_px": 206,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 46.842
+  },
+  "93-O16CBA-F2": {
+   "item": "93-O16CBA-F2",
+   "colour": "blue",
+   "group": "93",
+   "window_px": [
+    649,
+    669
+   ],
+   "row_px": 345,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 1.596
+  },
+  "113-O16CBA-F2": {
+   "item": "113-O16CBA-F2",
+   "colour": "blue",
+   "group": "113",
+   "window_px": [
+    722,
+    742
+   ],
+   "row_px": 125,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 73.208
+  },
+  "306-O16CBA-F2": {
+   "item": "306-O16CBA-F2",
+   "colour": "blue",
+   "group": "306",
+   "window_px": [
+    795,
+    815
+   ],
+   "row_px": 151,
+   "coverage": 0.9833,
+   "flank_delta_px": 1.0,
+   "value_pct": 64.745
+  },
+  "400-O16CBA-F2": {
+   "item": "400-O16CBA-F2",
+   "colour": "blue",
+   "group": "400",
+   "window_px": [
+    868,
+    888
+   ],
+   "row_px": 174,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "value_pct": 57.258
+  }
+ }
+}

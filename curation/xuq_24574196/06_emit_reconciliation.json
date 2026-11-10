@@ -1,0 +1,56 @@
+{
+ "_what": "emit reconciliation for curation/xuq_24574196",
+ "values_total": 14,
+ "values_corpus_admissible": 0,
+ "values_not_admissible": 14,
+ "rows_written_to_06_rows_csv": 0,
+ "counts_sum": true,
+ "rows_equal_admissible": true,
+ "reason_zero_rows": "The SI carries no delivery measurement (6 viability bars, 2 ESI-MS masses, TEM micrographs, NMR spectra) and the main article, which holds every knockdown panel, is closed access with no PMC deposit, no OA repository copy and a Cloudflare interstitial on the publisher page. Browser acquisition was out of scope for this run and no bypass was attempted.",
+ "literal_confidence_refused": true,
+ "refusal_message_first_line": "emit: confidence='high' is a LITERAL.",
+ "structures_carried_with_validated_flags": 4,
+ "flag_preview": [
+  {
+   "name": "1-O14B",
+   "positional_ambiguity": "",
+   "structure_assumed": 1,
+   "value_is_bound": "",
+   "value_normalization_unit": "",
+   "Experiment_value_within_model": "",
+   "confidence": "medium",
+   "curation_note": "NAME ONLY (SI p.2). Alkyl extrapolated from O16B by the chain-heavy-atom convention; no formula, NMR or structure is printed for this acrylate."
+  },
+  {
+   "name": "1-O16B",
+   "positional_ambiguity": "",
+   "structure_assumed": 0,
+   "value_is_bound": "",
+   "value_normalization_unit": "",
+   "Experiment_value_within_model": "",
+   "confidence": "high",
+   "curation_note": "1H NMR + ESI-MS formula, SI p.3"
+  },
+  {
+   "name": "1-O18B",
+   "positional_ambiguity": "",
+   "structure_assumed": 1,
+   "value_is_bound": "",
+   "value_normalization_unit": "",
+   "Experiment_value_within_model": "",
+   "confidence": "medium",
+   "curation_note": "NAME ONLY (SI p.2). Alkyl extrapolated from O16B by the chain-heavy-atom convention; no formula, NMR or structure is printed for this acrylate."
+  },
+  {
+   "name": "1-O16",
+   "positional_ambiguity": "",
+   "structure_assumed": 0,
+   "value_is_bound": "",
+   "value_normalization_unit": "",
+   "Experiment_value_within_model": "",
+   "confidence": "high",
+   "curation_note": "1H NMR + ESI-MS formula, SI p.3"
+  }
+ ],
+ "rows_with_a_caveat_if_values_ever_arrive": 2
+}

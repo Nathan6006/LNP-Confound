@@ -1,0 +1,17 @@
+block_role,block_name,block_SMILES,source_in_SI,group_formula
+tail,linoleyl,CCCCC/C=C\C/C=C\CCCCCCC[CH2:1],"linoleyl alcohol via linoleic aldehyde, SI p.16",C18H33
+tail,heptyl_decanoate,CCCCCCCCCC(=O)OCCCCCC[CH2:1],"7-oxoheptyl decanoate, SI p.6-7",C17H33O2
+tail,hexanoate_non2enyl,CCCCCC/C=C\COC(=O)CCCC[CH2:1],"cis-2-nonen-1-ol hexanoate arm, SI p.10-12",C15H27O2
+tail,hexanoate_non3enyl,CCCCC/C=C\CCOC(=O)CCCC[CH2:1],"cis-3-nonen-1-ol hexanoate arm, SI p.29-31",C15H27O2
+tail,decanoate_tridecan7yl,CCCCCCC(CCCCCC)OC(=O)CCCCCCCC[CH2:1],"tridecan-7-yl 10-oxodecanoate, SI p.19-20",C23H45O2
+tail,octyl_2hexyldecanoate,CCCCCCCCC(CCCCCC)C(=O)OCCCCCCC[CH2:1],"8-oxooctyl 2-hexyldecanoate, SI p.33-35",C24H47O2
+tail,hexyl_2hexyldecanoate,CCCCCCCCC(CCCCCC)C(=O)OCCCCC[CH2:1],"hexane-6,1-diyl 2-hexyldecanoate arm, SI p.13-15",C22H43O2
+head,DMBA_acyl,O=[C:1]CCCN(C)C,"N,N-dimethylaminobutyric acid, used throughout",
+head,DMBA_acid,CN(C)CCCC(=O)O,4-(dimethylamino)butanoic acid,
+head,MPzP_acyl,O=[C:1]CCN1CCN(C)CC1,"N-methyl piperazine propionic acid, SI p.5",
+head,MPzP_acid,CN1CCN(CCC(=O)O)CC1,"N-methyl piperazine propionic acid, SI p.5",
+head,DMAE,CN(C)C[CH2:1],"dimethylaminoethyl hydrazine, SI p.7 / p.14",
+head,DMAB,CN(C)CCC[CH2:1],"4-(dimethylamino)butan-1-ol, SI p.27",
+scaffold,hydrazine,[NH2:2]N,named starting material,
+scaffold,hydroxylamine,[NH2:2]O,named starting material,
+scaffold,ethanolamine,[NH2:2]CCO,named starting material,

@@ -1,0 +1,107 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). Written BEFORE any digitiser was written, and no digitiser was written: every emitted value in this curation comes from tier 3 (the authors' own GitHub repository). Each entry names the tier as a sentence a reviewer can check.",
+  "paper": {
+    "pmid": "39375194",
+    "pmcid": "PMC11512640",
+    "doi": "10.1021/acsnano.4c07615",
+    "title_full_as_published": "Machine Learning Elucidates Design Features of Plasmid Deoxyribonucleic Acid Lipid Nanoparticles for Cell Type-Preferential Transfection",
+    "title_note": "Europe PMC's core record gives the full published title with 'Deoxyribonucleic Acid' spelled out; the task brief and the SI title page both abbreviate it to 'Plasmid DNA'. The SI running title is 'Machine Learning Elucidates Design Features of Plasmid DNA Lipid Nanoparticles for Cell Type-Preferential Transfection'.",
+    "journal": "ACS Nano 2024, 18(42)",
+    "epmc_abstractText_length_chars": 1770,
+    "has_methods_and_results": true,
+    "original_data_paper": "YES. abstractText is 1770 chars (not 0) and the JATS full text carries METHODS (Preparation and characterization of pDNA LNPs; In Vitro Transfection and Luciferase Assay; Helper Lipid Parameterization; Data Preprocessing; Model Development and Evaluation) and a RESULTS AND DISCUSSION section with four named subsections. This is the discriminator stated in the brief, not pubType.",
+    "endpoint": "in vitro firefly-luciferase reporter expression from plasmid DNA (pDNA) LNPs, read as relative light units (RLU) on a luminometer 48 h after dosing, in six monolayer cell lines (HepG2, HEK293T, B16F10, PC3, Neuro2a, ARPE-19). Stored in the repository as the natural log of the mean RLU.",
+    "cargo_as_published": "firefly luciferase pDNA (Aldevron) -- plasmid DNA, NOT mRNA"
+  },
+  "tiers": {
+    "1_publisher_source_data": {
+      "used": false,
+      "why_not": "ACS Nano published one supplementary file for this article, nn4c07615_si_001.pdf. It is a PDF, not a Source Data workbook; ACS served no .xlsx/.csv asset for this article. Checked the article's supporting-information listing and the single SI file we hold."
+    },
+    "2_si_tables": {
+      "used": "FOR VERIFICATION ONLY, not for values",
+      "detail": "The SI holds six supplementary tables and no table of per-formulation measurements. Supplementary Table 1 lists the composition parameter LEVELS, Table 2 the lipid roles and drawn structures, Table 3 the helper-lipid chemical descriptors, Table 4 the hyperparameter grid, Table 5 model performance, Table 6 the de-novo validation levels. Tables 1, 3 and 6 are used as independent cross-checks on the repository file; none supplies a transfection value.",
+      "recovery_note": "triage.py reported table_pages=[] and native_tables n=0 while flagging 3 ruled tables (p2 16x6, p4 9x5, p5 8x9) whose rules are filled rects. Re-read with horizontal_strategy='explicit' -- see 07_qc.json check 'si_ruled_table_recovery'. pdfplumber's plain extract_text() already yields these tables' content as readable text, so the explicit-rect recovery is a confirmation, not the access path."
+    },
+    "3_author_repository": {
+      "used": true,
+      "THIS_IS_THE_SOURCE_OF_EVERY_EMITTED_VALUE": true,
+      "repo": "https://github.com/MaoResearchGroup/ml_lnp_design_rules",
+      "confirmed_how": "Named in the article's Data Availability/Associated Content and reachable; its README links back to https://pubs.acs.org/doi/full/10.1021/acsnano.4c07615 and names the exact run directory that produced the main-text figures. The README's description of the training file ('columns represent features and rows represent unique datapoints', target column = target_prefix + cell name, 'natural log was used in manuscript') matches the file's header and value scale exactly.",
+      "commit": "82cee58057a6168b61739c5863c6ac8a4ff19a7e",
+      "commit_date": "2024-10-31 14:22:46 -0400",
+      "commit_subject": "updated HL-1",
+      "clone_posture": "Cloned --depth 1 into its own new empty directory outside the curation folder (session scratchpad). Nothing in the clone was executed; its two data files were copied, byte-identical by md5, into source/github/ for provenance. Every script in this curation lives in curation/maohq_39375194/scripts/ -- a different directory from the clone -- takes its input path as an argument, and is run with python3 -I.",
+      "files": [
+        {
+          "path": "Raw_Data/1080_LNP_OHE.csv",
+          "local_copy": "source/github/1080_LNP_OHE.csv",
+          "md5": "98baa22d8d8e9a92648e1c9b9904198f",
+          "sha256": "f97d94fef9acdb08ffdf651b74ad3cc27ac8ea979032ad85c229994297702755",
+          "bytes": 167602,
+          "shape": "1080 rows x 32 columns",
+          "what": "the training library. ONE ionizable lipid (DLin-MC3-DMA) x 6 helper lipids x 5 HL/(IL+HL) x 4 (IL+HL) x 3 PEG/(Chol+PEG) x 3 N/P = 1080 FORMULATIONS. Six RLU_<cell> target columns plus Size/Zeta/PDI.",
+          "target_columns_delivery": ["RLU_HepG2", "RLU_N2a", "RLU_ARPE19", "RLU_HEK293", "RLU_B16", "RLU_PC3"],
+          "target_columns_physicochemical_NOT_delivery": ["Size", "Zeta", "PDI"]
+        },
+        {
+          "path": "Raw_Data/Compiled_validation.xlsx",
+          "local_copy": "source/github/Compiled_validation.xlsx",
+          "md5": "5e1ea0cd1e8f7c114ff355d58c4206b4",
+          "sha256": "ddcc853ac97b42cae8951157d78a58eafc65dc0ad1b53375df8d156af3fbd348",
+          "bytes": 26148,
+          "shape": "Sheet1, 73 rows x 30 columns = header + 72 formulations",
+          "what": "the de-novo in vitro validation library (n = 72), same single ionizable lipid and same 6 helper lipids, at composition levels deliberately ABSENT from the training library. Same six RLU_<cell> targets, at full float precision rather than the training file's 3 decimals.",
+          "found_how": "find_screens.py printed nothing on this workbook, so the sheet was dumped directly with openpyxl (scripts/_xlsx.py). A silent tool is not an absent screen -- this is a 72-row library screen it did not flag."
+        }
+      ],
+      "repo_items_checked_for": {
+        "formulation_table": "PRESENT but as encoded columns, not as a mol% table. The four composition columns are ratios/percentages, not the four molar percents the corpus schema wants; the mol% of each of the four lipid components is DERIVED in scripts/stage01_invert.py and the derivation is checked by the sum-to-exactly-100 invariant (07_qc.json).",
+          "target_column_dictionary": "NO data dictionary file exists in the repo. The column meanings were reconstructed from (a) the README's formatting section, (b) utilities.py's select_input_params() which the README names as the authority on feature names, and (c) SI Tables 1 and 3. utilities.py was READ, never executed.",
+        "readme_stating_how_values_were_computed": "PARTIAL. The README states only 'raw luciferase readings should be preprocessed using a log transformation (e.g. natural log was used in manuscript)'. It does NOT state the floor or the min-max step. Those come from the paper's Data Preprocessing section, and the file is on the ln scale BEFORE both of them -- established by measurement, not by the README (07_qc.json check 'scale_is_ln_not_minmax')."
+      }
+    },
+    "4_pdfplumber_text_table": {
+      "used": "FOR VERIFICATION ONLY",
+      "detail": "SI Tables 1, 3 and 6 were read as pdfplumber text and used to cross-check the repository file's levels and helper-lipid descriptors. No transfection value exists in any text table in this paper."
+    },
+    "5_pixels": {
+      "used": false,
+      "why_not": "Not needed and therefore not permitted here. Every transfection value in this curation comes from tier 3, at the authors' own precision. The main-text figures (heatmaps of normalized transfection, SHAP summary plots) would at best re-digitise a transformation of the tier-3 numbers we already hold, so a pixel read could only add error. No page was rendered for extraction; SI page 2 was rendered ONLY to read the drawn lipid structures for the C10 anchors, which is a structure read, not a value read."
+    }
+  },
+  "licences": {
+    "article": {
+      "state": "CLOSED / subscription",
+      "evidence": "Europe PMC core record: isOpenAccess = 'N', license = null, fullTextUrlList gives the DOI as 'Subscription required'. The PMC deposit PMC11512640 is an NIH-manuscript (author manuscript nihms-2029282) under the NIH Public Access policy; its JATS <permissions> reads 'This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.' That is NOT a CC licence.",
+      "cc0_or_ccby_compatible": false
+    },
+    "github_repo": {
+      "state": "GNU General Public License v3.0",
+      "evidence": "LICENSE at the repository root is the verbatim GPL-3.0 text (29 June 2007).",
+      "cc0_or_ccby_compatible": false,
+      "note": "GPL-3.0 is a copyleft SOFTWARE licence. It is not CC0/CC-BY and is not a permissive data licence; applied to the Raw_Data tables it would require derivative distributions to be GPL-3.0. CLAUDE.md section 8 requires every constituent source to be CC0/CC-BY-compatible before corpus release, and this source satisfies neither the article side nor the repo side. See DECISIONS.md D-1 -- this is a release blocker, not a curation blocker."
+    }
+  },
+  "methods_facts_for_the_rows": {
+    "cargo": "pDNA",
+    "cargo_detail_as_published": "firefly luciferase pDNA (Aldevron)",
+    "cargo_pooling_rule": "Do NOT pool with mRNA rows. The corpus already carries 1,192 pDNA rows in data_vitro.csv, so pDNA is an accepted Cargo value, but it is a different cargo class from the 24,690 mRNA rows.",
+    "dose": "1 ug pDNA/mL final in the well (4 uL of a 25 ug pDNA/mL suspension into 100 uL of medium) = 0.1 ug pDNA per well",
+    "timepoint": "48 h incubation before lysis",
+    "cells_seeded": "10,000 cells per well, 96-well plate, seeded one day prior",
+    "assay": "luciferase, luminometer, RLU",
+    "replicates": "DLS size/PDI/zeta measured in triplicate per sample; the stored RLU is a mean (the ln values land on ln of half-integers, e.g. 0.405 = ln 1.5)",
+    "cell_lines_atcc": {
+      "HepG2": "ATCC HB-8065",
+      "HEK293T": "ATCC CRL-3216",
+      "B16F10": "ATCC CRL-6475",
+      "PC3": "ATCC CRL-1435",
+      "Neuro2a": "ATCC CCL-131",
+      "ARPE-19": "ATCC CRL-2302"
+    },
+    "column_to_cell_line_caveat": "The data files' column is RLU_HEK293 but the Methods name the line HEK293T (ATCC CRL-3216, which IS HEK293T). RLU_B16 is B16F10; RLU_N2a is Neuro2a; RLU_ARPE19 is ARPE-19. Model_type is written from the Methods identity, not from the column label.",
+    "formulation": "DLin-MC3-DMA (MedKoo), cholesterol (Sigma-Aldrich), DMG-PEG2000 (NOF America), one of six helper lipids (all Avanti Polar Lipids). Aqueous phase 25 mM magnesium acetate pH 4.0; aqueous:ethanol 3:1; pipette mixing in 96-well U-bottom plates; NO purification and NO dialysis.",
+    "stored_scale": "ln(mean raw RLU), rounded to 3 decimals in the CSV and at full float in the xlsx. The paper's floor (at ~e^1.5) and per-cell-type min-max rescaling to [0,1] are applied DOWNSTREAM in the pipeline code and are NOT present in these files -- see 07_qc.json."
+  }
+}

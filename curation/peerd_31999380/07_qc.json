@@ -1,0 +1,775 @@
+{
+ "paper": "Ramishetti et al., Adv Mater 2020, PMID 31999380",
+ "n_lipids": 14,
+ "checks": {
+  "P1_ESI_MS_mass_three_ways": {
+   "note": "Found m/z vs monoisotopic [M+H]+, AVERAGE [M+H]+ and nominal [M+H]+. THE SI PRINTS NO 'Calc.' COLUMN ANYWHERE -- only found m/z from a low-resolution ESI instrument -- so which theoretical mass each value means had to be determined here, not read. It is MIXED: some lipids sit on the monoisotopic value and some on the average, which is why the tolerance is 1 Da and why this check confirms FORMULA only.",
+   "agreed": 14,
+   "of": 14,
+   "seed_target": "L7",
+   "seeded_agreed": 13,
+   "seed_moved_the_agreement_count": true,
+   "credited": true,
+   "rows": [
+    {
+     "lipid_id": "L1",
+     "formula": "C42H79N3O",
+     "esi_found_mz": 642.6,
+     "monoisotopic_MH": 642.6296,
+     "average_MH": 643.122,
+     "nominal_MH": 642,
+     "dev_monoisotopic": -0.03,
+     "dev_average": -0.522,
+     "dev_nominal": 0.6,
+     "closest_interpretation": "monoisotopic_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L2",
+     "formula": "C44H82N4O",
+     "esi_found_mz": 683.7,
+     "monoisotopic_MH": 683.6561,
+     "average_MH": 684.175,
+     "nominal_MH": 683,
+     "dev_monoisotopic": 0.044,
+     "dev_average": -0.475,
+     "dev_nominal": 0.7,
+     "closest_interpretation": "monoisotopic_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L3",
+     "formula": "C38H77N3O4",
+     "esi_found_mz": 640.0,
+     "monoisotopic_MH": 640.5987,
+     "average_MH": 641.059,
+     "nominal_MH": 640,
+     "dev_monoisotopic": -0.599,
+     "dev_average": -1.059,
+     "dev_nominal": 0.0,
+     "closest_interpretation": "nominal_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L4",
+     "formula": "C36H67N3O5",
+     "esi_found_mz": 622.6,
+     "monoisotopic_MH": 622.5153,
+     "average_MH": 622.956,
+     "nominal_MH": 622,
+     "dev_monoisotopic": 0.085,
+     "dev_average": -0.356,
+     "dev_nominal": 0.6,
+     "closest_interpretation": "monoisotopic_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L5",
+     "formula": "C48H97N3O4",
+     "esi_found_mz": 780.0,
+     "monoisotopic_MH": 780.7552,
+     "average_MH": 781.329,
+     "nominal_MH": 780,
+     "dev_monoisotopic": -0.755,
+     "dev_average": -1.329,
+     "dev_nominal": 0.0,
+     "closest_interpretation": "nominal_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L6",
+     "formula": "C42H78N2O2",
+     "esi_found_mz": 644.1,
+     "monoisotopic_MH": 643.6136,
+     "average_MH": 644.106,
+     "nominal_MH": 643,
+     "dev_monoisotopic": 0.486,
+     "dev_average": -0.006,
+     "dev_nominal": 1.1,
+     "closest_interpretation": "average_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L7",
+     "formula": "C52H102N2O6",
+     "esi_found_mz": 852.2,
+     "monoisotopic_MH": 851.7811,
+     "average_MH": 852.404,
+     "nominal_MH": 851,
+     "dev_monoisotopic": 0.419,
+     "dev_average": -0.204,
+     "dev_nominal": 1.2,
+     "closest_interpretation": "average_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L8",
+     "formula": "C44H82N2O2",
+     "esi_found_mz": 672.0,
+     "monoisotopic_MH": 671.6449,
+     "average_MH": 672.16,
+     "nominal_MH": 671,
+     "dev_monoisotopic": 0.355,
+     "dev_average": -0.16,
+     "dev_nominal": 1.0,
+     "closest_interpretation": "average_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L9",
+     "formula": "C44H84N2O",
+     "esi_found_mz": 658.0,
+     "monoisotopic_MH": 657.6656,
+     "average_MH": 658.177,
+     "nominal_MH": 657,
+     "dev_monoisotopic": 0.334,
+     "dev_average": -0.177,
+     "dev_nominal": 1.0,
+     "closest_interpretation": "average_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L10",
+     "formula": "C46H85N3O2",
+     "esi_found_mz": 712.0,
+     "monoisotopic_MH": 712.6715,
+     "average_MH": 713.213,
+     "nominal_MH": 712,
+     "dev_monoisotopic": -0.671,
+     "dev_average": -1.213,
+     "dev_nominal": 0.0,
+     "closest_interpretation": "nominal_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L11",
+     "formula": "C42H82N2O6",
+     "esi_found_mz": 711.0,
+     "monoisotopic_MH": 711.6246,
+     "average_MH": 712.134,
+     "nominal_MH": 711,
+     "dev_monoisotopic": -0.625,
+     "dev_average": -1.134,
+     "dev_nominal": 0.0,
+     "closest_interpretation": "nominal_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L12",
+     "formula": "C38H70N2O6",
+     "esi_found_mz": 651.8,
+     "monoisotopic_MH": 651.5307,
+     "average_MH": 651.994,
+     "nominal_MH": 651,
+     "dev_monoisotopic": 0.269,
+     "dev_average": -0.194,
+     "dev_nominal": 0.8,
+     "closest_interpretation": "average_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L13",
+     "formula": "C54H106N2O6",
+     "esi_found_mz": 880.12,
+     "monoisotopic_MH": 879.8124,
+     "average_MH": 880.458,
+     "nominal_MH": 879,
+     "dev_monoisotopic": 0.308,
+     "dev_average": -0.338,
+     "dev_nominal": 1.12,
+     "closest_interpretation": "monoisotopic_MH",
+     "within_1_Da": true
+    },
+    {
+     "lipid_id": "L14",
+     "formula": "C56H110N2O6",
+     "esi_found_mz": 908.3,
+     "monoisotopic_MH": 907.8437,
+     "average_MH": 908.512,
+     "nominal_MH": 907,
+     "dev_monoisotopic": 0.456,
+     "dev_average": -0.212,
+     "dev_nominal": 1.3,
+     "closest_interpretation": "average_MH",
+     "within_1_Da": true
+    }
+   ]
+  },
+  "P2_doubly_charged_ion": {
+   "note": "Where the SI prints an [M/2+1]+, does it agree with its own [M+1]+? self_inconsistency_Da is the paper against itself and involves no structure of ours.",
+   "agreed": 3,
+   "of": 4,
+   "seed_target": "L2",
+   "seeded_agreed": 2,
+   "seed_moved_the_agreement_count": true,
+   "credited": true,
+   "rows": [
+    {
+     "lipid_id": "L2",
+     "half_found": 342.3,
+     "half_predicted_M2H_over_2": 342.332,
+     "dev": -0.032,
+     "within_1_Da": true,
+     "M_implied_by_half": 682.59,
+     "M_implied_by_singly_charged": 682.69,
+     "self_inconsistency_Da": -0.11
+    },
+    {
+     "lipid_id": "L9",
+     "half_found": 329.5,
+     "half_predicted_M2H_over_2": 329.336,
+     "dev": 0.164,
+     "within_1_Da": true,
+     "M_implied_by_half": 656.99,
+     "M_implied_by_singly_charged": 656.99,
+     "self_inconsistency_Da": -0.01
+    },
+    {
+     "lipid_id": "L12",
+     "half_found": 326.6,
+     "half_predicted_M2H_over_2": 326.269,
+     "dev": 0.331,
+     "within_1_Da": true,
+     "M_implied_by_half": 651.19,
+     "M_implied_by_singly_charged": 650.79,
+     "self_inconsistency_Da": 0.39
+    },
+    {
+     "lipid_id": "L13",
+     "half_found": 441.75,
+     "half_predicted_M2H_over_2": 440.41,
+     "dev": 1.34,
+     "within_1_Da": false,
+     "M_implied_by_half": 881.49,
+     "M_implied_by_singly_charged": 879.11,
+     "self_inconsistency_Da": 2.37
+    }
+   ]
+  },
+  "P3_NMR_total_integral": {
+   "note": "Sum of every reported 1H multiplet vs the structure's hydrogen count, allowing 1 H for an unintegrated exchangeable N-H. Parsed from the PDF text anchored on each lipid's own ESI-MS string, so the NMR and the mass come from the same paragraph.",
+   "agreed": 7,
+   "of": 14,
+   "seed_target": "L1",
+   "seeded_agreed": 6,
+   "seed_moved_the_agreement_count": true,
+   "credited": true,
+   "rows": [
+    {
+     "lipid_id": "L1",
+     "n_multiplets": 9,
+     "nmr_total_H": 79,
+     "formula_H": 79,
+     "delta": 0,
+     "within_1H": true
+    },
+    {
+     "lipid_id": "L2",
+     "n_multiplets": 11,
+     "nmr_total_H": 78,
+     "formula_H": 82,
+     "delta": -4,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L3",
+     "n_multiplets": 10,
+     "nmr_total_H": 56,
+     "formula_H": 77,
+     "delta": -21,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L4",
+     "n_multiplets": 15,
+     "nmr_total_H": 66,
+     "formula_H": 67,
+     "delta": -1,
+     "within_1H": true
+    },
+    {
+     "lipid_id": "L5",
+     "n_multiplets": 9,
+     "nmr_total_H": 96,
+     "formula_H": 97,
+     "delta": -1,
+     "within_1H": true
+    },
+    {
+     "lipid_id": "L6",
+     "n_multiplets": 10,
+     "nmr_total_H": 86,
+     "formula_H": 78,
+     "delta": 8,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L7",
+     "n_multiplets": 10,
+     "nmr_total_H": 102,
+     "formula_H": 102,
+     "delta": 0,
+     "within_1H": true
+    },
+    {
+     "lipid_id": "L8",
+     "n_multiplets": 11,
+     "nmr_total_H": 84,
+     "formula_H": 82,
+     "delta": 2,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L9",
+     "n_multiplets": 13,
+     "nmr_total_H": 84,
+     "formula_H": 84,
+     "delta": 0,
+     "within_1H": true
+    },
+    {
+     "lipid_id": "L10",
+     "n_multiplets": 10,
+     "nmr_total_H": 77,
+     "formula_H": 85,
+     "delta": -8,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L11",
+     "n_multiplets": 12,
+     "nmr_total_H": 80,
+     "formula_H": 82,
+     "delta": -2,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L12",
+     "n_multiplets": 14,
+     "nmr_total_H": 70,
+     "formula_H": 70,
+     "delta": 0,
+     "within_1H": true
+    },
+    {
+     "lipid_id": "L13",
+     "n_multiplets": 13,
+     "nmr_total_H": 108,
+     "formula_H": 106,
+     "delta": 2,
+     "within_1H": false
+    },
+    {
+     "lipid_id": "L14",
+     "n_multiplets": 11,
+     "nmr_total_H": 110,
+     "formula_H": 110,
+     "delta": 0,
+     "within_1H": true
+    }
+   ]
+  },
+  "P4_olefinic_integral_vs_CC_count": {
+   "note": "Protons reported at delta 5.2-5.8 vs 2x the number of C=C bonds. INDEPENDENT OF MASS: it counts sp2 C-H. Blind to double-bond POSITION, which separates Lipid 4 (non-2-enyl) from Lipid 12 (non-3-enyl) and is taken from the SI's prose, not measured.",
+   "agreed": 7,
+   "of": 8,
+   "seed_target": "L6",
+   "seeded_agreed": 6,
+   "seed_moved_the_agreement_count": true,
+   "credited": true,
+   "rows": [
+    {
+     "lipid_id": "L1",
+     "n_CC_double_bonds": 4,
+     "expected_vinyl_H": 8,
+     "reported_vinyl_H": 8,
+     "exact": true
+    },
+    {
+     "lipid_id": "L2",
+     "n_CC_double_bonds": 4,
+     "expected_vinyl_H": 8,
+     "reported_vinyl_H": 8,
+     "exact": true
+    },
+    {
+     "lipid_id": "L4",
+     "n_CC_double_bonds": 2,
+     "expected_vinyl_H": 4,
+     "reported_vinyl_H": 8,
+     "exact": false
+    },
+    {
+     "lipid_id": "L6",
+     "n_CC_double_bonds": 4,
+     "expected_vinyl_H": 8,
+     "reported_vinyl_H": 8,
+     "exact": true
+    },
+    {
+     "lipid_id": "L8",
+     "n_CC_double_bonds": 4,
+     "expected_vinyl_H": 8,
+     "reported_vinyl_H": 8,
+     "exact": true
+    },
+    {
+     "lipid_id": "L9",
+     "n_CC_double_bonds": 4,
+     "expected_vinyl_H": 8,
+     "reported_vinyl_H": 8,
+     "exact": true
+    },
+    {
+     "lipid_id": "L10",
+     "n_CC_double_bonds": 4,
+     "expected_vinyl_H": 8,
+     "reported_vinyl_H": 8,
+     "exact": true
+    },
+    {
+     "lipid_id": "L12",
+     "n_CC_double_bonds": 2,
+     "expected_vinyl_H": 4,
+     "reported_vinyl_H": 4,
+     "exact": true
+    }
+   ]
+  },
+  "P5_structure_sanity": {
+   "note": "Parses, zero radical electrons, stored SMILES is RDKit-canonical, and every C=C carries an assigned geometry (212 corpus rows currently have an unassigned stereogenic C=C; these add none).",
+   "agreed": 14,
+   "of": 14,
+   "seed_target": "L2",
+   "seeded_agreed": 13,
+   "seed_moved_the_agreement_count": true,
+   "credited": true,
+   "rows": [
+    {
+     "lipid_id": "L1",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 4,
+     "n_assigned_cis": 4,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L2",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 4,
+     "n_assigned_cis": 4,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L3",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 0,
+     "n_assigned_cis": 0,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L4",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 2,
+     "n_assigned_cis": 2,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L5",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 0,
+     "n_assigned_cis": 0,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L6",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 4,
+     "n_assigned_cis": 4,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L7",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 0,
+     "n_assigned_cis": 0,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L8",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 4,
+     "n_assigned_cis": 4,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L9",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 4,
+     "n_assigned_cis": 4,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L10",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 4,
+     "n_assigned_cis": 4,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L11",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 0,
+     "n_assigned_cis": 0,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L12",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 2,
+     "n_assigned_cis": 2,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L13",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 0,
+     "n_assigned_cis": 0,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    },
+    {
+     "lipid_id": "L14",
+     "parses": true,
+     "radical_electrons": 0,
+     "is_canonical": true,
+     "n_CC_double": 0,
+     "n_assigned_cis": 0,
+     "all_double_bonds_have_geometry": true,
+     "ok": true
+    }
+   ]
+  },
+  "P6_axis_calibration": {
+   "note": "Scale AND origin fitted from detected ticks only (axis.py). loo_worst is the leave-one-out residual the brief asked for: calibrate's max-residual test is weak against a SINGLE bad tick (a +6 px error passes at 1.87 px while LOO fires at 5.35 px), so the LOO number is the one to read.",
+   "S2": {
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 4.2394,
+     "origin_px": 68.512,
+     "origin_value": 150.0,
+     "tick_step_units": -25.0,
+     "n_ticks": 7,
+     "tick_fit_residual_px": 0.2536,
+     "tick_residual_tol_px": 2.5
+    },
+    "loo_worst_px": 0.355,
+    "loo_tol_px": 1.5,
+    "loo_verdict": "PASS"
+   },
+   "S4": {
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 3.2316,
+     "origin_px": 275.057,
+     "origin_value": 150.0,
+     "tick_step_units": -25.0,
+     "n_ticks": 7,
+     "tick_fit_residual_px": 0.3225,
+     "tick_residual_tol_px": 2.5
+    },
+    "loo_worst_px": 0.54,
+    "loo_tol_px": 1.5,
+    "loo_verdict": "PASS"
+   },
+   "credited": true,
+   "seeded_by": "axis.calibrate's own tolerance, exercised in provenance/test_lib.py; not re-seeded here."
+  },
+  "P7_bar_detection": {
+   "note": "bars.bar_top refuses unless a full-width top rule is present in BOTH flanks (error class 32, F-018/F-020).",
+   "S2_bars": 16,
+   "S2_refused": 0,
+   "S4_bars": 12,
+   "S4_refused": 0,
+   "S2_max_flank_delta_px": 0.0,
+   "S4_max_flank_delta_px": 2.0,
+   "credited": true
+  },
+  "P8_colour_assignment": {
+   "note": "Each S4 bar assigned to a lipid by heatmap.match against S4's OWN legend swatches sampled from the same raster. Max distance above ~5 would mean the geometry is wrong.",
+   "qc": {
+    "n_cells": 12,
+    "max_nearest_swatch_distance": 4.123,
+    "n_ambiguous": 0,
+    "assignment_agrees_with_mask": true,
+    "assigned": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     11,
+     12,
+     13,
+     14
+    ],
+    "expected": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     11,
+     12,
+     13,
+     14
+    ]
+   },
+   "column_runs_per_colour": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "9": 5,
+    "11": 5,
+    "12": 5,
+    "13": 5,
+    "14": 5
+   },
+   "credited": true
+  },
+  "P9_UT_equals_100_anchor": {
+   "note": "Figure S2 normalises to untreated cells, so the UT bar must sit at exactly 100%. The authors never PRINT 100 -- it is a round number they drew. PIPELINE_V2 section 3 calls this the better kind of anchor because it is external to our pipeline in a way a recomputed marginal is not.",
+   "UT_measured_pct": 100.11,
+   "expected_pct": 100.0,
+   "error_pp": 0.11,
+   "credited": true
+  },
+  "P10_cross_panel_agreement": {
+   "note": "Figures S2 and S4@0.06uM are the SAME condition. See 08_contradictions.csv C-04.",
+   "result": {
+    "claim": "Figure S2 (NC-siRNA, 0.06 uM, 72 h, U266, XTT) and Figure S4's 0.06 uM group (siNC, 72 h, U266, XTT) are the same condition and must agree.",
+    "n_shared_lipids": 12,
+    "shared": [
+     "Lipid 1",
+     "Lipid 2",
+     "Lipid 3",
+     "Lipid 4",
+     "Lipid 5",
+     "Lipid 6",
+     "Lipid 7",
+     "Lipid 9",
+     "Lipid 11",
+     "Lipid 12",
+     "Lipid 13",
+     "Lipid 14"
+    ],
+    "S2_values": [
+     100.11,
+     103.65,
+     93.75,
+     106.01,
+     95.87,
+     105.54,
+     104.83,
+     89.03,
+     93.98,
+     93.75,
+     102.94,
+     94.92
+    ],
+    "S4_values": [
+     99.89,
+     97.72,
+     123.1,
+     110.72,
+     106.39,
+     105.77,
+     104.53,
+     89.06,
+     94.01,
+     94.01,
+     103.29,
+     94.94
+    ],
+    "ratio_S4_over_S2": [
+     0.9978,
+     0.9428,
+     1.3131,
+     1.0444,
+     1.1097,
+     1.0022,
+     0.9971,
+     1.0003,
+     1.0003,
+     1.0028,
+     1.0034,
+     1.0002
+    ],
+    "ratio_mean": 1.0345,
+    "ratio_sd": 0.0918,
+    "ratio_min": 0.9428,
+    "ratio_max": 1.3131,
+    "max_abs_difference_pp": 29.35,
+    "mean_abs_difference_pp": 4.33,
+    "spearman_rank_corr": 0.4825
+   },
+   "credited": true
+  }
+ },
+ "summary": {
+  "P1_mass_within_1Da": "14/14",
+  "P2_doubly_charged_within_1Da": "3/4",
+  "P3_NMR_total_within_1H": "7/14",
+  "P4_olefinic_exact": "7/8",
+  "P5_structure_sanity": "14/14",
+  "all_seeds_moved": true
+ },
+ "failures": []
+}

@@ -1,0 +1,88 @@
+{
+ "paper": {
+  "title": "A combinatorial synthetic strategy for developing genome-editing protein-delivery agents targeting mouse retina",
+  "journal": "Nature Communications",
+  "year": 2026,
+  "pmid": "41654520",
+  "pmcid": "PMC12992809",
+  "doi": "10.1038/s41467-026-69077-w",
+  "corresponding": [
+   "gpt6@case.edu (Tochtrop)",
+   "kpalczew@uci.edu (Palczewski)"
+  ],
+  "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) -- stated in the JATS <license> block of PMC12992809; CC-BY is compatible with the CLAUDE.md section 8 release requirement."
+ },
+ "retrieved_utc": "2026-11-10T05:27:23Z",
+ "pmc_retrieved_utc": "2026-11-10T06:56:51Z",
+ "springer_asset_enumeration": {
+  "pattern": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM<n>_ESM.<ext>",
+  "probed": "n = 1..14 x {xlsx, pdf}, 28 requests",
+  "kept_rule": "magic bytes PK (xlsx) or %PDF (pdf). NO SIZE FLOOR -- MOESM3 is 13,677 B and is a real workbook.",
+  "result": "6 assets exist (n=1,2,4,5 pdf; n=3,6 xlsx). n=7..14 return HTTP 403 with a 465-467 B XML error body on BOTH extensions, as do the wrong-extension probes for n=1..6. So the asset list is complete at 6."
+ },
+ "files": [
+  {
+   "file": "41467_2026_69077_MOESM1_ESM.pdf",
+   "bytes": 3049291,
+   "sha256": "be82fe927ebdd6b42fe055a969b6721d805ff904918f9ac61937161e290d1933",
+   "magic": "%PDF",
+   "what": "Supplementary Information (50 pp): Supplementary Figs 1-16 + 'Synthesis of CBB intermediates and lipidoids' (pp 18-50) with full IUPAC name, 1H/13C NMR and HRMS for every compound.",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM1_ESM.pdf",
+   "sha256_matches_download_record": true
+  },
+  {
+   "file": "41467_2026_69077_MOESM2_ESM.pdf",
+   "bytes": 4797,
+   "sha256": "3c8eaf6f1068c023b1166014b9e8c2693710e0db0ea5ee30a24fda172b9ba5b1",
+   "magic": "%PDF",
+   "what": "Description of Additional Supplementary Files (1 pp). Names Supplementary Data 1 only.",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM2_ESM.pdf",
+   "sha256_matches_download_record": true
+  },
+  {
+   "file": "41467_2026_69077_MOESM3_ESM.xlsx",
+   "bytes": 13677,
+   "sha256": "5dc3f0a82c553b6ff41e321239830b611cfaf8cb50006e04e4df60b4def99758",
+   "magic": "PK\u0003\u0004",
+   "what": "Supplementary Data 1: on-target/off-target loci and oligonucleotides. 3 sheets, no delivery values.",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM3_ESM.xlsx",
+   "sha256_matches_download_record": true
+  },
+  {
+   "file": "41467_2026_69077_MOESM4_ESM.pdf",
+   "bytes": 3492061,
+   "sha256": "c07e4483857c49eda0c81bbd88440b1c8dfa28c5174a1dbc13ce969c2618fbe5",
+   "magic": "%PDF",
+   "what": "Reporting Summary (4 pp, image-only).",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM4_ESM.pdf",
+   "sha256_matches_download_record": true
+  },
+  {
+   "file": "41467_2026_69077_MOESM5_ESM.pdf",
+   "bytes": 2921852,
+   "sha256": "ec1d21fd06a23b704a0dfb68d3d5b1ecf712e8b30fff7f802da227d8a2aee55a",
+   "magic": "%PDF",
+   "what": "Peer Review File (49 pp).",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM5_ESM.pdf",
+   "sha256_matches_download_record": true
+  },
+  {
+   "file": "41467_2026_69077_MOESM6_ESM.xlsx",
+   "bytes": 12889717,
+   "sha256": "92429d64d8b70ae53feeb358bafb183d6b093b0b7219fd3d7a5055a2d6da9a06",
+   "magic": "PK\u0003\u0004",
+   "what": "SOURCE DATA workbook, 15 sheets. Per-compound per-replicate delivery values for Figs 2c/2d/4c/4d and in vivo Figs 5-6.",
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-69077-w/MediaObjects/41467_2026_69077_MOESM6_ESM.xlsx",
+   "sha256_matches_download_record": true
+  },
+  {
+   "file": "PMC12992809.jats.xml",
+   "bytes": 192179,
+   "sha256": "ada8b852a6a1a898e66d8e112b36eea451fbe9eda043dc72ddf07c6eac2c15e4",
+   "magic": "<?xm",
+   "what": "Full JATS XML of the article (open access). Carries the complete main-text Results and every figure legend. 0 <table-wrap> elements.",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml&id=12992809"
+  }
+ ],
+ "pmc_bin_supplementary_download": "FAILED for all 13 declared items -- pmc.ncbi.nlm.nih.gov/articles/PMC12992809/bin/<name> served a ~21 kB HTML error page for every one. Immaterial: all 6 supplementary assets were already held from static-content.springer.com, and the JATS XML (the reason to call PMC) came through."
+}

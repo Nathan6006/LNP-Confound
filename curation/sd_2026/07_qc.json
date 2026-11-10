@@ -1,0 +1,907 @@
+{
+ "P1_axis_calibration": {
+  "_what": "Scale AND origin fitted together from detected tick marks (curation/lib/axis.calibrate). The tick POSITIONS are stroked segments in the PDF's vector layer and the tick VALUES are PDF text spans; neither is a pixel read.",
+  "panels": {
+   "Fig_1n": {
+    "n_ticks_detected": 5,
+    "n_ticks_in_fit": 5,
+    "tick_fit_residual_px": 0.0,
+    "px_per_decade": 10.6643,
+    "held_out": []
+   },
+   "Fig_1o": {
+    "n_ticks_detected": 5,
+    "n_ticks_in_fit": 5,
+    "tick_fit_residual_px": 0.0001,
+    "px_per_decade": 10.9397,
+    "held_out": []
+   },
+   "Fig_1p": {
+    "n_ticks_detected": 4,
+    "n_ticks_in_fit": 3,
+    "tick_fit_residual_px": 0.0001,
+    "px_per_decade": 10.9305,
+    "held_out": [
+     {
+      "label": "105",
+      "value_log10": 5.0,
+      "pixel": 522.744,
+      "predicted_log10": 5.0,
+      "error_decades": 0.0,
+      "error_px": 0.0
+     }
+    ]
+   }
+  },
+  "seed": {
+   "middle_tick_+3px": {
+    "metric": "tick_fit_residual_px",
+    "clean": 0.0004,
+    "seeded": 2.4,
+    "raised": false,
+    "metric_moved": true
+   },
+   "middle_tick_+6px": {
+    "metric": "tick_fit_residual_px",
+    "clean": 0.0004,
+    "seeded": 4.8,
+    "raised": true,
+    "metric_moved": true
+   },
+   "middle_tick_+10px": {
+    "metric": "tick_fit_residual_px",
+    "clean": 0.0004,
+    "seeded": 8.0,
+    "raised": true,
+    "metric_moved": true
+   }
+  },
+  "seed_sensitivity_finding": "A single tick displaced by +3 px on a FIVE-tick fit produces a residual of about 2.4 px, which is INSIDE axis.calibrate's 2.5 px tolerance -- least squares spreads the error over the other four points, and the middle point of five equally spaced has leverage 0.2, so the residual is about 0.8 x the displacement. The metric moves (0.0 -> 2.4) but the gate does not trip until roughly +3.2 px. Recorded because a tolerance that is quoted without its leverage is a tolerance nobody has measured; on these panels it does not matter, since the observed residuals are 0.0000-0.0001 px.",
+  "held_out_tick_note": "Fig. 1p's 10^6 tick is ABSENT from the vector layer, so that panel is fitted on its three contiguous ticks and the 10^5 tick is held out and predicted. It is a round number the authors DREW and the fit never saw."
+ },
+ "P2_heldout_tick": {
+  "_what": "Fig. 1p's 10^5 tick, predicted by a fit that never saw it. Tolerance 0.02 decades.",
+  "metric": "|predicted - 10^5| in decades",
+  "clean": 0.0,
+  "seed_exponents_off_by_one": {
+   "seeded": 1.0,
+   "metric_moved": true
+  },
+  "seed_scale_compressed_10pct": {
+   "seeded": 0.4445,
+   "metric_moved": true
+  }
+ },
+ "P3_category_label_mapping": {
+  "_what": "Fig. 1n's two significance brackets end on group centres. The legend names the comparisons, so this is a second, independent witness to which x position is which lipid -- the rotated text spans are the first.",
+  "group_x_spacing_pt": 11.2142,
+  "n_brackets": 2,
+  "bracket_ends": [
+   {
+    "bracket_end_pt": 159.89,
+    "nearest_group": "ALC-0315",
+    "group_centre_pt": 159.89,
+    "offset_pt": 0.005
+   },
+   {
+    "bracket_end_pt": 237.65,
+    "nearest_group": "LC-1",
+    "group_centre_pt": 238.38,
+    "offset_pt": -0.735
+   },
+   {
+    "bracket_end_pt": 239.12,
+    "nearest_group": "LC-1",
+    "group_centre_pt": 238.38,
+    "offset_pt": 0.735
+   },
+   {
+    "bracket_end_pt": 283.24,
+    "nearest_group": "LC-5",
+    "group_centre_pt": 283.24,
+    "offset_pt": -0.002
+   }
+  ],
+  "legend_vs_drawn": "the legend prints two P values for this panel, P(LC-1 vs ALC-0315) and P(LC-1 vs LP-01), both < 1e-15; the two brackets DRAWN run ALC-0315 -> LC-1 and LC-1 -> LC-5, so the second bracket's right end is LC-5 and not LP-01. That mismatch is recorded in 08_contradictions.csv and does not affect the x -> name mapping, which both the rotated text spans and the bracket endpoints agree on.",
+  "metric": "max |bracket end - nearest group centre| in pt",
+  "clean": 0.735,
+  "seed": {
+   "what": "label list rotated by one position",
+   "metric": "|first bracket end - x(ALC-0315)| in pt",
+   "clean": 0.005,
+   "seeded": 123.352,
+   "metric_moved": true
+  }
+ },
+ "P4_markers_vs_drawn_mean": {
+  "_what": "Each group's five mice are drawn as 1.61 pt white circles. We EMIT the mean rule the figure draws, not an average of these -- jittered markers that coincide exactly collapse into one path, so a marker average is biased by whichever dots happen to be separable.",
+  "n_markers_separable": 55,
+  "n_markers_expected": 60,
+  "why_fewer": "markers at identical coordinates are one path; this is why the drawn mean is used instead",
+  "mean_lies_between_its_own_sd_caps_all_groups": true,
+  "per_group": [
+   {
+    "lipid": "ALC-0315",
+    "n_markers_found": 5,
+    "marker_log10_mean": 8.7885,
+    "drawn_mean_log10": 8.8052,
+    "delta_decades": -0.0167,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "LP-01",
+    "n_markers_found": 5,
+    "marker_log10_mean": 8.3982,
+    "drawn_mean_log10": 8.447,
+    "delta_decades": -0.0488,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "SC-1",
+    "n_markers_found": 4,
+    "marker_log10_mean": 8.2765,
+    "drawn_mean_log10": 8.4126,
+    "delta_decades": -0.1361,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "SC-2",
+    "n_markers_found": 4,
+    "marker_log10_mean": 8.1633,
+    "drawn_mean_log10": 8.2665,
+    "delta_decades": -0.1032,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "SC-3",
+    "n_markers_found": 5,
+    "marker_log10_mean": 8.0458,
+    "drawn_mean_log10": 8.0774,
+    "delta_decades": -0.0316,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "SC-4",
+    "n_markers_found": 4,
+    "marker_log10_mean": 7.995,
+    "drawn_mean_log10": 7.9885,
+    "delta_decades": 0.0064,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "SC-5",
+    "n_markers_found": 5,
+    "marker_log10_mean": 7.9833,
+    "drawn_mean_log10": 8.0057,
+    "delta_decades": -0.0224,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "LC-1",
+    "n_markers_found": 5,
+    "marker_log10_mean": 10.0894,
+    "drawn_mean_log10": 10.106,
+    "delta_decades": -0.0167,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "LC-2",
+    "n_markers_found": 3,
+    "marker_log10_mean": 8.9914,
+    "drawn_mean_log10": 9.0377,
+    "delta_decades": -0.0463,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "LC-3",
+    "n_markers_found": 5,
+    "marker_log10_mean": 8.5111,
+    "drawn_mean_log10": 8.5897,
+    "delta_decades": -0.0785,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "LC-4",
+    "n_markers_found": 5,
+    "marker_log10_mean": 8.7278,
+    "drawn_mean_log10": 8.8295,
+    "delta_decades": -0.1018,
+    "markers_straddle_the_drawn_mean": true
+   },
+   {
+    "lipid": "LC-5",
+    "n_markers_found": 5,
+    "marker_log10_mean": 8.7197,
+    "drawn_mean_log10": 8.8179,
+    "delta_decades": -0.0981,
+    "markers_straddle_the_drawn_mean": true
+   }
+  ],
+  "metric": "max |marker mean - drawn mean| in decades",
+  "clean": 0.1361
+ },
+ "P5_chain_lengths": {
+  "_what": "Every long chain is measured with curation/lib/chains.raster_chain_length over a Douglas-Peucker sweep; a count that holds at only one tolerance is refused by stage01's _stable().",
+  "carbons": {
+   "Ta1": 14,
+   "Ta2": 16,
+   "Ta3": 18,
+   "Tb2": 18,
+   "Tb1_hexyl": 8,
+   "Ta4": 18
+  },
+  "eps_sweep": {
+   "Ta1": {
+    "0.8": 14,
+    "1.0": 14,
+    "1.2": 14,
+    "1.5": 14,
+    "1.8": 14,
+    "2.0": 14,
+    "2.5": 14,
+    "3.0": 14
+   },
+   "Ta2": {
+    "0.8": 16,
+    "1.0": 16,
+    "1.2": 16,
+    "1.5": 16,
+    "1.8": 16,
+    "2.0": 16,
+    "2.5": 16,
+    "3.0": 16
+   },
+   "Ta3": {
+    "0.8": 18,
+    "1.0": 18,
+    "1.2": 18,
+    "1.5": 18,
+    "1.8": 18,
+    "2.0": 18,
+    "2.5": 18,
+    "3.0": 18
+   },
+   "Tb2": {
+    "0.8": 18,
+    "1.0": 18,
+    "1.2": 18,
+    "1.5": 18,
+    "1.8": 18,
+    "2.0": 18,
+    "2.5": 18,
+    "3.0": 18
+   },
+   "Tb1_hexyl": {
+    "0.8": 8,
+    "1.0": 8,
+    "1.2": 8,
+    "1.5": 8,
+    "1.8": 8,
+    "2.0": 8,
+    "2.5": 8,
+    "3.0": 8
+   },
+   "Ta4": {
+    "0.8": 9,
+    "1.0": 9,
+    "1.2": 9,
+    "1.5": 9,
+    "1.8": 9,
+    "2.0": 9,
+    "2.5": 9,
+    "3.0": 9
+   }
+  },
+  "seed": {
+   "what": "revert the centreline to an unweighted binary row mean (what this file did first)",
+   "metric": "Ta3 vertex count across the eps sweep",
+   "clean": {
+    "0.8": 18,
+    "1.0": 18,
+    "1.2": 18,
+    "1.5": 18,
+    "1.8": 18,
+    "2.0": 18,
+    "2.5": 18,
+    "3.0": 18
+   },
+   "seeded": {
+    "0.8": 20,
+    "1.0": 19,
+    "1.2": 18,
+    "1.5": 18,
+    "2.0": 18,
+    "2.5": 18,
+    "3.0": 18
+   },
+   "metric_moved": true,
+   "note": "this is the historical failure, not a synthetic one: the first run of stage01 refused on exactly this, reporting Ta3 = 19 at eps = 1.0 px and 18 elsewhere."
+  }
+ },
+ "P6_label_end_cost": {
+  "_what": "A trace that begins or ends at a drawn 'CN' or 'O' label gains one Douglas-Peucker vertex that is not an atom. Tb1's hexyl is 6 carbons by Supplementary Table 5 (6-amino-1-hexanol, CAS 4048-33-3) and runs label to label, so it measures that cost instead of assuming it.",
+  "tb1_hexyl_vertices": 8,
+  "carbons_from_table5": 6,
+  "metric": "vertices - carbons, over two label ends",
+  "clean": 2,
+  "expected": 2,
+  "seed": {
+   "what": "read Table 5's 6-amino-1-hexanol as a heptanol",
+   "metric": "label end cost",
+   "seeded": 1,
+   "metric_moved": true
+  },
+  "second_witness": {
+   "_what": "the bond pitch, independently",
+   "ta_mean_px_per_bond": 14.769,
+   "tb2_carbons": 17,
+   "note": "one carbon either way moves Tb2's implied pitch by about 0.9 px against the Ta chains' 14.8."
+  }
+ },
+ "P7_si_printed_formulas": {
+  "_what": "The SI prints a molecular formula and an MW for each of the ten lipids the paper carried forward. Each must be realised by a member of the enumerated library.",
+  "metric": "number of the SI's 10 printed formulas realised (an EXISTENCE check -- see the sensitivity finding)",
+  "clean": 10,
+  "members_per_formula": {
+   "SC-lipid-1": 3,
+   "SC-lipid-2": 4,
+   "SC-lipid-3": 3,
+   "SC-lipid-4": 2,
+   "SC-lipid-5": 4,
+   "LC-lipid-1": 11,
+   "LC-lipid-2": 7,
+   "LC-lipid-3": 7,
+   "LC-lipid-4": 12,
+   "LC-lipid-5": 7
+  },
+  "seed_A_block_inventory_sensitivity": {
+   "what": "each block perturbed by one carbon (or one oxygen) in turn; metric = how many of the SI's 10 printed formulas are still realised",
+   "clean": 10,
+   "seeded_per_mutation": {
+    "Ta1 C14 -> C13": 10,
+    "Ta2 C16 -> C15": 10,
+    "Ta3 C18 -> C17": 10,
+    "Ta4 C18:1 -> C17:1": 10,
+    "Tb2 C17 -> C16": 10,
+    "Tb2 C17 -> C18": 10,
+    "Tb1 hexyl -> heptyl": 8,
+    "H4 pyrrolidine -> piperidine": 10,
+    "L4 pivaldehyde -> isobutyraldehyde": 10,
+    "H9 loses one hydroxyethyl O": 10
+   },
+   "n_mutations_the_check_catches": 1,
+   "n_mutations_tried": 10,
+   "metric_moved": true,
+   "FINDING": "This check is nearly BLIND. Nine of ten one-carbon mutations leave all ten printed formulas realised, because the library spans a wide range of CH2 counts and moving one block by a methylene merely reshuffles which member carries a given formula. Only the Tb1 mutation is caught (10 -> 8), and only because Tb1 is the sole block carrying extra oxygens, so it constrains the O-count combinations. The existence check is therefore NOT what pins the block inventory. What pins it is (a) Supplementary Table 5's four CAS numbers and molecular weights, re-derived in 01_blocks_qc.json to within 0.024, which moves by 14 per carbon and so is sharp; (b) the Douglas-Peucker chain traces with their bond-pitch cross-check; and (c) for LC-1 only, the point check below."
+  },
+  "seed_B_connectivity_THIS_CHECK_IS_BLIND": {
+   "what": "LC-1's headgroup swapped H4 -> H3 (3-(pyrrolidin-1-yl)propylamine -> 2-(piperidin-1-yl)ethylamine)",
+   "metric": "molecular formula",
+   "clean": "C50H97N3O4",
+   "seeded": "C50H97N3O4",
+   "metric_moved": false,
+   "inchikey_clean": "GFWACCDGFPQKTE-UHFFFAOYSA-N",
+   "inchikey_seeded": "PIFFKHUIMUSBJX-UHFFFAOYSA-N",
+   "inchikey_skeleton_moved": true,
+   "conclusion": "The formula is IDENTICAL and the check does not fire. Mass cannot see connectivity. This is recorded as a check that is necessary and NOT sufficient, and it is why reference_structures.csv (C10) exists: the InChIKey skeleton DOES move, and the anchor compares skeletons against the structure Fig. 1l draws."
+  },
+  "seed_C_mass_visible": {
+   "what": "LC-1's tail Ta1 changed C14 -> C13",
+   "metric": "molecular formula",
+   "clean": "C50H97N3O4",
+   "seeded": "C49H95N3O4",
+   "metric_moved": true
+  }
+ },
+ "P8_printed_statistics": {
+  "_what": "Statistics the paper prints, recomputed. Necessary, not sufficient: QL_2026 reproduced every printed hit rate on bars up to 28% too high.",
+  "supplementary_table_4": {
+   "_what": "lamellar % + inverse-hexagonal % per LNP/pH/mRNA",
+   "n_pairs": 18,
+   "pairs": [
+    [
+     95.2,
+     4.8
+    ],
+    [
+     81.5,
+     16.5
+    ],
+    [
+     64.2,
+     35.8
+    ],
+    [
+     57.4,
+     42.6
+    ],
+    [
+     44.8,
+     55.2
+    ],
+    [
+     24.2,
+     75.8
+    ],
+    [
+     94.6,
+     5.4
+    ],
+    [
+     92.8,
+     7.2
+    ],
+    [
+     72.5,
+     27.5
+    ],
+    [
+     75.7,
+     24.3
+    ],
+    [
+     59.2,
+     40.8
+    ],
+    [
+     40.4,
+     59.6
+    ],
+    [
+     72.5,
+     27.5
+    ],
+    [
+     75.7,
+     24.3
+    ],
+    [
+     89.2,
+     10.8
+    ],
+    [
+     40.4,
+     59.6
+    ],
+    [
+     45.2,
+     54.8
+    ],
+    [
+     64.3,
+     35.7
+    ]
+   ],
+   "metric": "max |lamellar + hexagonal - 100|",
+   "clean": 2.0,
+   "seed": {
+    "what": "subtract 7.0 from the last pair's sum",
+    "seeded": 7.0,
+    "metric_moved": true
+   }
+  },
+  "fig1_radar_percentages": {
+   "_what": "Fig. 1e,f,j,k print the motif composition of each hit set as integer percentages. Read as PDF text.",
+   "n_percent_labels_found": 44,
+   "note": "these are marginals of a hit set whose membership is not published, so they can be checked for internal consistency but cannot be reproduced from data we hold. They are NOT emitted as values."
+  }
+ },
+ "P9_enumeration": {
+  "_what": "The enumerated library's own invariants.",
+  "n_rows": 384,
+  "stated_by_paper": 384,
+  "n_distinct_canonical_smiles": 384,
+  "n_unparseable": 0,
+  "n_non_canonical": 0,
+  "members_with_a_ring_stereocentre_from_H8_or_H11": 64,
+  "members_where_the_ugi_creates_a_stereocentre": 288,
+  "stereo_note": "384 - 96 = 288 members carry a new stereocentre at the linker-derived carbon (every linker but L1, formaldehyde). The Ugi is not stereoselective and the paper reports no resolution, so these are stored flat and say so on the row.",
+  "metric": "n_distinct_canonical_smiles",
+  "clean": 384,
+  "seed": {
+   "what": "if two blocks were accidentally identical the distinct count would fall below 384",
+   "seeded": 383,
+   "metric_moved": true
+  }
+ },
+ "P10_nmr_integrals_vs_formula": {
+  "_what": "For each of the ten named lipids the SI prints both a molecular formula and a full 1H NMR integral list. They must agree. Both numbers are the authors'; this curation contributes neither.",
+  "metric": "number of the 10 whose integral sum equals the formula's H count",
+  "clean": 9,
+  "of": 10,
+  "max_abs_delta": 2,
+  "per_lipid": {
+   "SC-lipid-1": {
+    "formula_H": 93,
+    "integrals": [
+     2,
+     1,
+     7,
+     9,
+     7,
+     9,
+     49,
+     9
+    ],
+    "integral_sum": 93,
+    "delta": 0,
+    "n_integral_groups": 8,
+    "tert_butyl_9H_singlet_near_1ppm": false
+   },
+   "SC-lipid-2": {
+    "formula_H": 98,
+    "integrals": [
+     2,
+     4,
+     2,
+     9,
+     4,
+     6,
+     62,
+     9
+    ],
+    "integral_sum": 98,
+    "delta": 0,
+    "n_integral_groups": 8,
+    "tert_butyl_9H_singlet_near_1ppm": false
+   },
+   "SC-lipid-3": {
+    "formula_H": 97,
+    "integrals": [
+     2,
+     2,
+     4,
+     2,
+     2,
+     9,
+     2,
+     4,
+     61,
+     9
+    ],
+    "integral_sum": 97,
+    "delta": 0,
+    "n_integral_groups": 10,
+    "tert_butyl_9H_singlet_near_1ppm": false
+   },
+   "SC-lipid-4": {
+    "formula_H": 93,
+    "integrals": [
+     2,
+     2,
+     4,
+     2,
+     2,
+     6,
+     3,
+     2,
+     7,
+     54,
+     9
+    ],
+    "integral_sum": 93,
+    "delta": 0,
+    "n_integral_groups": 11,
+    "tert_butyl_9H_singlet_near_1ppm": false
+   },
+   "SC-lipid-5": {
+    "formula_H": 95,
+    "integrals": [
+     2,
+     2,
+     6,
+     1,
+     1,
+     3,
+     60,
+     11,
+     9
+    ],
+    "integral_sum": 95,
+    "delta": 0,
+    "n_integral_groups": 9,
+    "tert_butyl_9H_singlet_near_1ppm": false
+   },
+   "LC-lipid-1": {
+    "formula_H": 97,
+    "integrals": [
+     2,
+     1,
+     4,
+     4,
+     2,
+     3,
+     4,
+     7,
+     52,
+     9,
+     9
+    ],
+    "integral_sum": 97,
+    "delta": 0,
+    "n_integral_groups": 11,
+    "tert_butyl_9H_singlet_near_1ppm": true
+   },
+   "LC-lipid-2": {
+    "formula_H": 99,
+    "integrals": [
+     2,
+     1,
+     11,
+     11,
+     56,
+     9,
+     9
+    ],
+    "integral_sum": 99,
+    "delta": 0,
+    "n_integral_groups": 7,
+    "tert_butyl_9H_singlet_near_1ppm": true
+   },
+   "LC-lipid-3": {
+    "formula_H": 105,
+    "integrals": [
+     2,
+     1,
+     13,
+     17,
+     54,
+     9,
+     9
+    ],
+    "integral_sum": 105,
+    "delta": 0,
+    "n_integral_groups": 7,
+    "tert_butyl_9H_singlet_near_1ppm": true
+   },
+   "LC-lipid-4": {
+    "formula_H": 101,
+    "integrals": [
+     2,
+     1,
+     3,
+     8,
+     69,
+     18
+    ],
+    "integral_sum": 101,
+    "delta": 0,
+    "n_integral_groups": 6,
+    "tert_butyl_9H_singlet_near_1ppm": false
+   },
+   "LC-lipid-5": {
+    "formula_H": 105,
+    "integrals": [
+     2,
+     2,
+     10,
+     21,
+     54,
+     9,
+     9
+    ],
+    "integral_sum": 107,
+    "delta": 2,
+    "n_integral_groups": 7,
+    "tert_butyl_9H_singlet_near_1ppm": true
+   }
+  },
+  "seed": {
+   "what": "remove 1H from one integral list",
+   "metric": "n exact",
+   "clean": 9,
+   "seeded": 8,
+   "metric_moved": true
+  },
+  "FINDING": "9 of 10 agree exactly. LC-lipid-5's integrals sum to 107 against a printed C54H105 -- the paper is internally inconsistent by 2H on that one compound. Recorded in 08_contradictions.csv; it changes nothing we emit, because no SC/LC lipid is mapped onto a specific enumerated member except LC-1."
+ },
+ "P11_oxygen_count_forces_the_subtail": {
+  "_what": "O2 forces Tb2, O4 and O5 force Tb1. Cross-checked against the number of protons the SI reports in the 0.85-0.89 ppm terminal-methyl region.",
+  "per_lipid": {
+   "SC-lipid-1": {
+    "formula": "C48H93N3O2",
+    "oxygens": 2,
+    "subtails_compatible": [
+     "Tb2"
+    ],
+    "methyl_counts_among_compatible_members": [
+     2,
+     3
+    ],
+    "n_compatible_members": 3,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "SC-lipid-2": {
+    "formula": "C50H98N4O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4
+    ],
+    "n_compatible_members": 4,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "SC-lipid-3": {
+    "formula": "C50H97N3O5",
+    "oxygens": 5,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4
+    ],
+    "n_compatible_members": 3,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "SC-lipid-4": {
+    "formula": "C48H93N3O5",
+    "oxygens": 5,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4
+    ],
+    "n_compatible_members": 2,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "SC-lipid-5": {
+    "formula": "C48H95N3O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     5,
+     6
+    ],
+    "n_compatible_members": 4,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "LC-lipid-1": {
+    "formula": "C50H97N3O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4,
+     5
+    ],
+    "n_compatible_members": 11,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "LC-lipid-2": {
+    "formula": "C50H99N3O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "n_compatible_members": 7,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "LC-lipid-3": {
+    "formula": "C54H105N3O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "n_compatible_members": 7,
+    "terminal_methyl_region_0p8ppm_H": 9
+   },
+   "LC-lipid-4": {
+    "formula": "C52H101N3O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "n_compatible_members": 12,
+    "terminal_methyl_region_0p8ppm_H": 18
+   },
+   "LC-lipid-5": {
+    "formula": "C54H105N3O4",
+    "oxygens": 4,
+    "subtails_compatible": [
+     "Tb1"
+    ],
+    "methyl_counts_among_compatible_members": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "n_compatible_members": 7,
+    "terminal_methyl_region_0p8ppm_H": 9
+   }
+  },
+  "lipids_where_the_two_disagree": [],
+  "metric": "number of named lipids whose 0.88 ppm integral is not 3x a methyl count available at that formula",
+  "clean": 0,
+  "FINDING": "All ten agree: for every named lipid, the protons the SI reports in the 0.85-0.89 ppm region are 3x a methyl count that is available at that formula. In particular SC-lipid-1 (C48H93N3O2) must carry the non-ester subtail Tb2, and the Tb2 members at that formula offer 2 or 3 terminal chain methyls, which covers the reported 9H.",
+  "A_CHECK_THAT_WAS_WRONG_BEFORE_IT_WAS_RIGHT": "The first version of this check counted methyls with a bare [CH3X4] SMARTS. That counts a pivaldehyde tert-butyl's three methyls, which resonate near 1.0 ppm and are NOT in the 0.88 ppm region, and it reported five of ten lipids as inconsistent -- including a confident paragraph about SC-lipid-1 that was simply an artefact of the wrong SMARTS. Recorded rather than quietly deleted: a check that fires is not thereby correct, and this one had to be made to agree with chemistry before its disagreement meant anything."
+ },
+ "P12_anchor_independence": {
+  "_what": "Whether the C10 anchor in reference_structures.csv was built by a route that shares anything with the enumerator. The test is on the GENERATOR'S fragments, not on the emitted string.",
+  "anchor_smiles": "CCCCCCCCCCCCCC(=O)N(CCCN1CCCC1)C(C(=O)NCCCCCCOC(=O)C(CCCCCC)CCCCCCCCC)C(C)(C)C",
+  "enumeration_smiles": "CCCCCCCCCCCCCC(=O)N(CCCN1CCCC1)C(C(=O)NCCCCCCOC(=O)C(CCCCCC)CCCCCCCCC)C(C)(C)C",
+  "emitted_anchor_is_byte_identical": true,
+  "why_that_is_fine": "both are canonical SMILES of the same molecule; a correct re-derivation MUST be byte-identical once canonicalised, which is exactly why C10's own anchor_may_be_a_copy missed F-037.",
+  "generator_fragments": {
+   "acid_2_hexylundecanoic": {
+    "fragment": "CCCCCCCCCC(CCCCCC)C(=O)O",
+    "len": 24,
+    "longest_common_substring_with_enumeration": 11
+   },
+   "half_isocyanide_side": {
+    "fragment": "CC(C)(C)[CH2:2]C(=O)NCCCCCCO",
+    "len": 22,
+    "longest_common_substring_with_enumeration": 13
+   },
+   "half_amine_side": {
+    "fragment": "CCCCCCCCCCCCCC(=O)[N:1]CCCN1CCCC1",
+    "len": 29,
+    "longest_common_substring_with_enumeration": 19
+   }
+  },
+  "metric": "longest common substring between any generator fragment and the enumeration's canonical SMILES, in characters",
+  "clean": 19,
+  "f_037_was": 141,
+  "interpretation": "The longest shared run is a plain alkyl chain ('C' repeated) plus an amide, which any correct representation of a C14 acyl group must contain. No fragment here is a slice of the enumeration: the decomposition, the strings' source, the machinery and the order all differ (see make_reference.py's docstring).",
+  "anchor_catches_what_mass_cannot": {
+   "seed": "LC-1's headgroup swapped H4 -> H3 in the ENUMERATOR only",
+   "formula_moves": false,
+   "anchor_skeleton_inchikey": "GFWACCDGFPQKTE",
+   "clean_enumeration_skeleton": "GFWACCDGFPQKTE",
+   "seeded_enumeration_skeleton": "PIFFKHUIMUSBJX",
+   "anchor_matches_clean": true,
+   "anchor_matches_seeded": false,
+   "metric_moved": true
+  }
+ },
+ "_what": "Stage 07 QC for SD_2026. Every check carries its number and a seeded defect that MOVES that number. One check (P7 seed B) is recorded as NOT firing, on purpose.",
+ "_seed_summary": {
+  "P1_axis_calibration.seed.middle_tick_+3px": true,
+  "P1_axis_calibration.seed.middle_tick_+6px": true,
+  "P1_axis_calibration.seed.middle_tick_+10px": true,
+  "P2_heldout_tick.seed_exponents_off_by_one": true,
+  "P2_heldout_tick.seed_scale_compressed_10pct": true,
+  "P3_category_label_mapping.seed": true,
+  "P5_chain_lengths.seed": true,
+  "P6_label_end_cost.seed": true,
+  "P7_si_printed_formulas.seed_A_block_inventory_sensitivity": true,
+  "P7_si_printed_formulas.seed_B_connectivity_THIS_CHECK_IS_BLIND": false,
+  "P7_si_printed_formulas.seed_C_mass_visible": true,
+  "P8_printed_statistics.supplementary_table_4.seed": true,
+  "P9_enumeration.seed": true,
+  "P10_nmr_integrals_vs_formula.seed": true,
+  "P12_anchor_independence.anchor_catches_what_mass_cannot": true,
+  "_deliberately_false": [
+   "P7_si_printed_formulas.seed_B_connectivity_THIS_CHECK_IS_BLIND -- swapping LC-1's headgroup H4 -> H3 leaves the molecular formula identical, so the formula check cannot see it. The InChIKey skeleton DOES move, which is what the C10 anchor compares."
+  ]
+ }
+}

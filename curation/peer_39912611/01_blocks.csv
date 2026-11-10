@@ -1,0 +1,10 @@
+block_role,block_name,block_SMILES,source,n_members_using_it
+tail,T,CCCCCCCCOC(=O)C(CCCCCC)CCCCCCCC,SI p.17 Supp Fig 15 'R = 8-oxooctyl 2-hexyldecanoate'; SI p.18 names aldehyde 1,12
+head,N (dimethylamine),CN(C)C,SI pp.21-29 reagent names,6
+head,P (N-methylpiperazine),CN1CCNCC1,SI pp.31-41 reagent names,6
+linker,ester,,SI p.17 Supp Fig 15,2
+linker,reverse-ester,,SI p.17 Supp Fig 15,2
+linker,carbonate,,SI p.17 Supp Fig 15,2
+linker,amide,,SI p.17 Supp Fig 15,2
+linker,urea,,SI p.17 Supp Fig 15,2
+linker,reverse-amide,,SI p.17 Supp Fig 15,2

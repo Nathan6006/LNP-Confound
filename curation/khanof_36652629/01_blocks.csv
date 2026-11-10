@@ -1,0 +1,11 @@
+block_type,block_id,reagent,fragment_SMILES,source
+core_amine,C3,n-propylamine,CCC[NH2:1],"SI Supplementary Methods, pages 9/13/15"
+core_amine,OC2,"2-amino-1-ethanol (used TBS-protected, then deprotected)",OCC[NH2:1],"SI Supplementary Methods, pages 9/13/15"
+core_amine,OC3,"3-amino-1-propanol (used TBS-protected, then deprotected)",OCCC[NH2:1],"SI Supplementary Methods, pages 9/13/15"
+linker_diamine,K2,ethylenediamine,[CH3:5]C[NH2:6],"SI pages 10/12; 2-carbon bridge, token K2"
+linker_diamine,K3,"1,3-diaminopropane",[CH3:5]CC[NH2:6],"SI pages 10/12; 3-carbon bridge, token K3"
+tail,E10,"1,2-epoxydecane",[CH3:9]C(O)CCCCCCCC,SI; 10 carbons; epoxide ring-opening
+tail,E14,"1,2-epoxytetradecane",[CH3:9]C(O)CCCCCCCCCCCC,SI; 14 carbons; epoxide ring-opening
+tail,E15,"1,2-epoxypentadecane",[CH3:9]C(O)CCCCCCCCCCCCC,SI; 15 carbons; epoxide ring-opening
+tail,A10,1-bromodecane,[CH3:9]CCCCCCCCC,SI; 10 carbons; N-alkylation with DIPEA
+tail,A14,tetradecanal,[CH3:9]CCCCCCCCCCCCC,SI; 14 carbons; reductive amination (STAB/AcOH)

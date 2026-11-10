@@ -1,0 +1,300 @@
+{
+ "_what": "Quality control for curation/liu_41162324 (Liu et al., JACS 2025, PMID 41162324, DOI 10.1021/jacs.5c13982). Structures only: this curation emits NO Experiment_value rows. See 00_value_sources.json.",
+ "paper": {
+  "pmid": 41162324,
+  "doi": "10.1021/jacs.5c13982",
+  "journal": "J Am Chem Soc 147(45), 2025",
+  "source_held": "ja5c13982_si_001.pdf only (100 pages); the article PDF was not supplied and is not open access"
+ },
+ "P1_P2_P3_hrms": {
+  "n_lipids_enumerated": 74,
+  "n_with_an_SI_HRMS_record": 42,
+  "n_without_any_SI_record": 32,
+  "P1_formula_agrees": "34/42",
+  "P2_mh_plus_within_0.05_Da": "34/42",
+  "P1_and_P2_both": "32/42",
+  "P3_SI_formula_agrees_with_SI_own_mz": "36/42",
+  "P3_note": "Entirely internal to the SI: the printed formula's monoisotopic [M+H]+ against the printed [M+H]+. Where these disagree the HRMS line is not evidence about anything, which is how 5 of the 8 structural disagreements below are adjudicated.",
+  "lipids_failing_P1_or_P2": [
+   "SSC4F7",
+   "SSC5F7",
+   "SSCOF7",
+   "SSCPF1",
+   "SSCPF3",
+   "SSCPF5",
+   "SSCPF7",
+   "SSCB2F7",
+   "SSCB4F7",
+   "SSC7F5"
+  ],
+  "lipids_where_NEITHER_SI_locus_confirms_us": [
+   "SSCOF7",
+   "SSCPF1",
+   "SSCPF3",
+   "SSCPF5",
+   "SSCPF7",
+   "SSCB4F7"
+  ],
+  "max_abs_mh_delta_over_passing": 0.0118
+ },
+ "P4_roster_drawn_in_figure_S51": {
+  "n_ticks_full_width": 75,
+  "n_runs_total": 76,
+  "partial_runs_rejected": [
+   3
+  ],
+  "tick_pitch_px_mean": 41.689,
+  "tick_pitch_px_sd": 1.1587,
+  "tick_pitch_cv": 0.02779,
+  "interpretation": "75 ticks = 1 benchmark (SM102) + 74 FILs",
+  "n_FILs_drawn": 74,
+  "n_FILs_enumerated": 74,
+  "agrees_with_enumeration": true,
+  "abstract_claims": 315,
+  "reconciles_with_abstract": false,
+  "why": "The string '315' occurs nowhere in the 100-page SI, nor do 'library', 'combinatorial' or 'total of'. The SI's own roster -- the x-axis of Figures S48-S51, the synthesis headings of section 3.2, and the NMR/MS figure captions S12-S47 -- is 74 FILs. The abstract's 315 cannot be reconciled from the material held; it needs the article text. Open: DECISIONS.md D-1."
+ },
+ "P5_name_tokens": {
+  "P5_Cn_token_equals_measured_chain": "37/37",
+  "P5_mismatches": [],
+  "P5_tokens_that_are_NOT_chain_lengths": {
+   "token 'O' is not a chain length: an ether-containing linker": 8,
+   "token 'P' is not a chain length: a benzylic/para-phenylene linker": 8,
+   "token 'B2' is not a chain length: a branch size at the N-side ester carbon": 10,
+   "token 'B4' is not a chain length: a branch size at the N-side ester carbon": 8,
+   "token 'B1' is not a chain length: a branch size at the N-side ester carbon": 3
+  }
+ },
+ "P7_fluorine": {
+  "P7_F_subscript_agrees_with_built_F_count": "42/42",
+  "P7_disagreements": [],
+  "P7_Fn_token_to_built_F_count": {
+   "F1": [
+    1
+   ],
+   "F3": [
+    3
+   ],
+   "F5": [
+    5
+   ],
+   "F7": [
+    7
+   ]
+  },
+  "P7_all_four_tails_are_four_carbons": true,
+  "P7_what_it_cannot_see": "fluorine POSITION -- 3,3,4,4,4- and 2,2,3,3,4- pentafluorobutyl have the same formula and the same exact mass. Position rests on the Materials list's IUPAC reagent names alone."
+ },
+ "P9_C10_anchors": [
+  {
+   "lipid": "SSC4F1",
+   "inchikey_anchor": "MWAGYSPYRXPCKE-UHFFFAOYSA-N",
+   "inchikey_enumerated": "MWAGYSPYRXPCKE-UHFFFAOYSA-N",
+   "exact_match": true,
+   "source": "SI PDF p.25, reaction scheme under heading 3.2.1.2 (embedded raster 1153x107 px, read at 7x)"
+  },
+  {
+   "lipid": "SSC6F5",
+   "inchikey_anchor": "BIGCFAHQGUUHQC-UHFFFAOYSA-N",
+   "inchikey_enumerated": "BIGCFAHQGUUHQC-UHFFFAOYSA-N",
+   "exact_match": true,
+   "source": "SI PDF p.31, reaction scheme under heading 3.2.1.20 (embedded raster 1152x114 px, read at 7x)"
+  }
+ ],
+ "P10_P11_structures": {
+  "P10_unique_canonical_SMILES": "74/74",
+  "P10_duplicate_structures": {},
+  "P11_distinct_structures_sharing_formula_AND_exact_mass": {
+   "C41H78FNO7 / 715.57623": [
+    "SSC3F1",
+    "SPC4F1"
+   ],
+   "C42H80FNO7 / 729.59188": [
+    "SSC4F1",
+    "SPC5F1"
+   ],
+   "C43H82FNO7 / 743.60753": [
+    "SSC5F1",
+    "SPC6F1",
+    "SPCB2F1"
+   ],
+   "C44H84FNO7 / 757.62318": [
+    "SSC6F1",
+    "SSCB2F1"
+   ],
+   "C41H76F3NO7 / 751.55739": [
+    "SSC3F3",
+    "SPC4F3",
+    "ALC4F3",
+    "ASC4F3"
+   ],
+   "C42H78F3NO7 / 765.57304": [
+    "SSC4F3",
+    "SPC5F3"
+   ],
+   "C43H80F3NO7 / 779.58869": [
+    "SSC5F3",
+    "SPC6F3",
+    "SPCB2F3"
+   ],
+   "C44H82F3NO7 / 793.60434": [
+    "SSC6F3",
+    "SSCB2F3"
+   ],
+   "C41H74F5NO7 / 787.53854": [
+    "SSC3F5",
+    "SPC4F5"
+   ],
+   "C42H76F5NO7 / 801.55419": [
+    "SSC4F5",
+    "SPC5F5",
+    "ALCB1F5",
+    "ASCB1F5"
+   ],
+   "C43H78F5NO7 / 815.56984": [
+    "SSC5F5",
+    "SPC6F5",
+    "SPCB2F5",
+    "SSCB1F5",
+    "ALC6F5",
+    "ASC6F5",
+    "ALCB2F5",
+    "ASCB2F5"
+   ],
+   "C44H80F5NO7 / 829.5855": [
+    "SSC6F5",
+    "SSCB2F5"
+   ],
+   "C41H72F7NO7 / 823.5197": [
+    "SSC3F7",
+    "SPC4F7"
+   ],
+   "C42H74F7NO7 / 837.53535": [
+    "SSC4F7",
+    "SPC5F7"
+   ],
+   "C43H76F7NO7 / 851.551": [
+    "SSC5F7",
+    "SPC6F7",
+    "SPCB2F7"
+   ],
+   "C44H78F7NO7 / 865.56665": [
+    "SSC6F7",
+    "SSCB2F7"
+   ],
+   "C45H82F5NO7 / 843.60115": [
+    "SPCB4F5",
+    "SSC7F5"
+   ]
+  },
+  "P11_note": "Mass cannot see connectivity, demonstrated inside this one library: these pairs are different molecules with identical formula and identical exact mass to every decimal, so no HRMS line in the SI can tell them apart. AL vs AS is the clean case -- 2-hexyldecanoate against 2-heptylnonanoate -- and the SI prints the SAME calculated m/z for both members of each pair."
+ },
+ "seeded_mutations": [
+  {
+   "seeded": "P1/P2: lengthen the C4 arm template by one CH2",
+   "expect": "the C4 members' built formula and [M+H]+ stop matching the SI, and the main-chain assertion contradicts LINKER_MAIN_CHAIN",
+   "stage03_raised": true,
+   "message": "StructureError: SSC4F1: the arm template's main chain measures 5 atoms but LINKER_MAIN_CHAIN says 4. One of the two is wrong; neither is allowed to win silently.",
+   "agreement_before": [
+    34,
+    34
+   ],
+   "agreement_after": null,
+   "agreement_dropped": false,
+   "teeth": true,
+   "caught_by": "an assertion in stage03"
+  },
+  {
+   "seeded": "P5: set LINKER_MAIN_CHAIN['C5'] to 9",
+   "expect": "stage03 refuses: a hand-counted expectation and the measured structure disagree, and neither is allowed to win silently",
+   "stage03_raised": true,
+   "message": "StructureError: SSC5F1: the arm template's main chain measures 5 atoms but LINKER_MAIN_CHAIN says 9. One of the two is wrong; neither is allowed to win silently.",
+   "agreement_before": [
+    34,
+    34
+   ],
+   "agreement_after": null,
+   "agreement_dropped": false,
+   "teeth": true,
+   "caught_by": "an assertion in stage03"
+  },
+  {
+   "seeded": "P7: build every F5 member with the F3 tail (same 4 carbons, two fluorines fewer)",
+   "expect": "the F5 members' formula and [M+H]+ stop matching the SI -- the defect a chain-length count is blind to",
+   "stage03_raised": false,
+   "message": "",
+   "agreement_before": [
+    34,
+    34
+   ],
+   "agreement_after": [
+    20,
+    19
+   ],
+   "agreement_dropped": true,
+   "teeth": true,
+   "caught_by": "the formula/mass agreement counts falling"
+  },
+  {
+   "seeded": "P6: put a ring-closure digit in the F1 tail",
+   "expect": "_check_no_ring_digit_collision refuses before anything parses",
+   "stage03_raised": true,
+   "message": "StructureError: stage03: ring-closure digit(s) ['1'] appear in both the arm template and the tail. Concatenating them would fuse the fragments through a ring closure -- the defect that fused piper",
+   "agreement_before": [
+    34,
+    34
+   ],
+   "agreement_after": null,
+   "agreement_dropped": false,
+   "teeth": true,
+   "caught_by": "an assertion in stage03"
+  },
+  {
+   "seeded": "P8: lengthen the SM-102 shared fragment by one CH2",
+   "expect": "make_reference.py refuses: the registry's SM-102 no longer contains the fragment this library is built on",
+   "fired": true,
+   "message": "make_reference: the registry's SM-102 does not contain the fragment this library is built on. Either the registry entry or this file's reading of the SS core is wrong; neither may win silently.",
+   "teeth": true
+  },
+  {
+   "seeded": "P4: erase one x-axis tick from the Figure S51 raster",
+   "expect": "the tick count drops by exactly 1",
+   "n_ticks_after": 74,
+   "fired": true,
+   "teeth": true
+  },
+  {
+   "seeded": "C16 (provenance/check_anchor_independence.py) on the first version of make_reference.py",
+   "expect": "C16 names the transcribed literal",
+   "fired": true,
+   "teeth": true,
+   "message": "Not a hypothetical: the first version of this folder's make_reference.py typed SM102_SHARED nitrogen-tail-first and C16 reported '1 TEMPLATE(S) APPEAR TO BE TRANSCRIBED FROM THE ENUMERATION: curation/liu_41162324/make_reference.py:SM102_SHARED'. Re-typed hydroxyl-first; C16 now reports 'all derived'. The alarm was observed to fire on this folder before it was trusted on it."
+  }
+ ],
+ "what_these_checks_CANNOT_see": [
+  "Connectivity. P1/P2/P3 are atom counts; a molecule with the right formula and the wrong wiring passes all three. Only P9 tests topology against the paper, and it covers 2 of 74 lipids.",
+  "Which nitrogen is alkylated -- there is only one N-H in each amine intermediate, so this is pinned by the SI's name for that intermediate rather than by any measurement here.",
+  "The SP series entirely: 32 of 74 lipids have no formula, no m/z, no individual synthesis paragraph and no drawn scheme anywhere in the SI, and the SI names their core alcohol two different ways.",
+  "Any transfection value. None is held; see 00_value_sources.json.",
+  "Whether Figure S51's bar ORDER matches its label order -- the labels were read, the bars were not paired to them, because no value from that panel is emitted."
+ ],
+ "flags_on_the_row": {
+  "columns": [
+   "Experiment_value_within_model",
+   "value_normalization_unit",
+   "confidence",
+   "positional_ambiguity",
+   "structure_assumed",
+   "value_is_bound",
+   "curation_note"
+  ],
+  "rows_with_a_caveat": 42,
+  "confidence_counts": {
+   "high": 32,
+   "medium": 5,
+   "low": 37
+  },
+  "structure_assumed_1": 37,
+  "note": "Written by curation/lib/emit.emit_rows, which refuses a literal confidence (error class 29) and refuses a caveat with no note. No value row is emitted by this curation, so value_is_bound and value_normalization_unit are left blank -- 'not stated', which the schema defines as an absence of information rather than an assurance."
+ }
+}

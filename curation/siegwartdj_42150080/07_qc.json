@@ -1,0 +1,321 @@
+{
+ "q1_our_formula_vs_SI_printed_string": {
+  "_compares": "the structure the corpus stores for 6A1-SC8, against the formula STRING printed in the Fig S1 caption",
+  "ours": "C110H203N5O24S6",
+  "SI_string": "C110H203N5O24S6",
+  "per_element": {
+   "C": {
+    "ours": 110,
+    "SI_string": 110,
+    "agree": true
+   },
+   "H": {
+    "ours": 203,
+    "SI_string": 203,
+    "agree": true
+   },
+   "N": {
+    "ours": 5,
+    "SI_string": 5,
+    "agree": true
+   },
+   "O": {
+    "ours": 24,
+    "SI_string": 24,
+    "agree": true
+   },
+   "S": {
+    "ours": 6,
+    "SI_string": 6,
+    "agree": true
+   }
+  },
+  "n_elements": 5,
+  "agreement_count": 5,
+  "pass": true
+ },
+ "q2_SI_string_vs_SI_printed_calc": {
+  "_compares": "the SI's OWN formula string against the SI's OWN printed 'Calc.' m/z -- an internal consistency check on the caption, in which we take no part",
+  "monoisotopic_of_SI_string": 2170.3142,
+  "SI_printed_calc_mz": 2170.31,
+  "abs_delta_Da": 0.0042,
+  "tol_Da": 0.005,
+  "tol_why": "the caption prints 2 decimals, so |delta| <= 0.005 is pure rounding and anything larger is a real disagreement",
+  "pass": true
+ },
+ "q3_our_formula_vs_SI_printed_found": {
+  "_compares": "our monoisotopic mass against the SI's printed 'found' value, which is a DECONVOLUTED neutral mass, not an observed m/z (see q4)",
+  "ours_monoisotopic": 2170.3142,
+  "SI_printed_found_mz": 2170.3,
+  "abs_delta_Da": 0.0142,
+  "tol_Da": 0.05,
+  "tol_why": "the caption prints 1 decimal for 'found', so the printed value itself carries +/-0.05 Da of quantisation",
+  "pass": true
+ },
+ "q4_our_formula_vs_the_labels_DRAWN_in_Fig_S1B": {
+  "_compares": "our formula's predicted [M+2H]2+ isotope ladder against the m/z labels printed inside the spectrum itself. The caption plays no part in this check.",
+  "labels_read_from": "embedded raster in SI p.4, read by eye at 900 dpi",
+  "printed_labels": [
+   1086.1679,
+   1086.6692,
+   1087.1695,
+   1087.67,
+   1088.1705
+  ],
+  "label_spacings_Da": [
+   0.5013,
+   0.5003,
+   0.5005,
+   0.5005
+  ],
+  "mean_spacing_Da": 0.5006,
+  "charge_state_implied": 2,
+  "charge_state_stated_in_caption": null,
+  "charge_state_note": "z=2 is derived from the 0.5 Da spacing. The caption's '2170.3 Da found' is therefore a deconvoluted neutral mass; no 2170 ion was observed.",
+  "predicted_mz": [
+   1086.1644,
+   1086.6661,
+   1087.1677,
+   1087.6694,
+   1088.1711
+  ],
+  "ppm_error_per_label": [
+   3.23,
+   2.88,
+   1.61,
+   0.53,
+   0.55
+  ],
+  "worst_ppm": 3.23,
+  "tol_ppm": 10.0,
+  "n_labels": 5,
+  "agreement_count": 5,
+  "neutral_mass_back_derived_from_label_1": 2170.3212,
+  "pass": true
+ },
+ "q5_nmr_ppm_axis": {
+  "_compares": "nothing yet -- this is the calibration the integral assignment in q6 rests on",
+  "n_tick_labels_used": 19,
+  "tick_values": [
+   9.5,
+   9.0,
+   8.5,
+   8.0,
+   7.5,
+   7.0,
+   6.5,
+   6.0,
+   5.5,
+   5.0,
+   4.5,
+   4.0,
+   3.5,
+   3.0,
+   2.5,
+   2.0,
+   1.5,
+   1.0,
+   0.5
+  ],
+  "excluded": "the two outermost labels, clipped by the panel frame, so their glyph centroids are not on their ticks",
+  "caveat": "these are text-layer LABEL centroids, not detected tick marks. A label typeset off its tick is error class 20; the LOO residuals below are what would expose it.",
+  "calibration": {
+   "kind": "linear",
+   "px_per_unit": 35.5599,
+   "origin_px": 137.558,
+   "origin_value": 9.5,
+   "tick_step_units": -0.5,
+   "n_ticks": 19,
+   "tick_fit_residual_px": 0.0007,
+   "tick_residual_tol_px": 2.5
+  },
+  "loo_residual_px_worst": 0.0008,
+  "loo_residual_px_all": [
+   0.0003,
+   0.0,
+   0.0004,
+   0.0007,
+   0.0007,
+   0.0003,
+   0.0,
+   0.0003,
+   0.0007,
+   0.0007,
+   0.0004,
+   0.0001,
+   0.0002,
+   0.0006,
+   0.0008,
+   0.0005,
+   0.0001,
+   0.0003,
+   0.0006
+  ],
+  "loo_tol_px": 1.5,
+  "pass": true
+ },
+ "q6_nmr_integral_ratios": {
+  "_compares": "integral RATIOS against the corpus structure's own H counts. Ratios, not absolute integrals: the 0.87 ppm methyl is the spectrum's reference and is set to 18.00 by the operator, so comparing it to 18 is circular and is NOT counted as a check.",
+  "n_arms_from_S_count": 6,
+  "regions": {
+   "ester_glycol_OCH2CH2O": {
+    "ppm_window": [
+     4.0,
+     4.6
+    ],
+    "integrals_found": [
+     {
+      "ppm": 4.29,
+      "integral": 24.19
+     }
+    ],
+    "integral_sum": 24.19,
+    "predicted_H": 24
+   },
+   "octyl_beta_to_S_CH2": {
+    "ppm_window": [
+     1.45,
+     1.7
+    ],
+    "integrals_found": [
+     {
+      "ppm": 1.554,
+      "integral": 12.42
+     }
+    ],
+    "integral_sum": 12.42,
+    "predicted_H": 12
+   },
+   "octyl_omega_CH3": {
+    "ppm_window": [
+     0.75,
+     1.0
+    ],
+    "integrals_found": [
+     {
+      "ppm": 0.871,
+      "integral": 18.0
+     }
+    ],
+    "integral_sum": 18.0,
+    "predicted_H": 18
+   }
+  },
+  "checks": [
+   {
+    "region": "ester_glycol_OCH2CH2O",
+    "observed_ratio_to_omega_CH3": 1.3439,
+    "predicted_ratio": 1.3333,
+    "rel_error": 0.0079,
+    "within_tol": true
+   },
+   {
+    "region": "octyl_beta_to_S_CH2",
+    "observed_ratio_to_omega_CH3": 0.69,
+    "predicted_ratio": 0.6667,
+    "rel_error": 0.035,
+    "within_tol": true
+   }
+  ],
+  "tol_rel": 0.05,
+  "n_checks": 2,
+  "agreement_count": 2,
+  "pass": true,
+  "what_it_cannot_see": "arm REGIOCHEMISTRY. The ratios fix one glycol diester and one octyl thioether per arm; they are blind to which core nitrogen each arm is on."
+ },
+ "_selftest": {
+  "all_seeded_defects_moved_their_agreement_count": true,
+  "value_checks": [
+   {
+    "check": "q1",
+    "mutation": "drop one CH2 from one tail",
+    "agreement_count_clean": 5,
+    "agreement_count_seeded": 3,
+    "moved": true,
+    "note": "C and H counts must both stop matching"
+   },
+   {
+    "check": "q2",
+    "mutation": "typo O24 -> O23 in the printed string",
+    "abs_delta_Da_clean": 0.0042,
+    "abs_delta_Da_seeded": 15.9907,
+    "moved": true,
+    "note": "this is the published-typo case the three-way split exists for"
+   },
+   {
+    "check": "q4",
+    "mutation": "shift the drawn labels by +7.0078 (one CH2 at z=2)",
+    "agreement_count_clean": 5,
+    "agreement_count_seeded": 0,
+    "moved": true,
+    "note": "5 -> 0"
+   },
+   {
+    "check": "q4",
+    "mutation": "1.0 Da spacing (z=1) instead of 0.5",
+    "agreement_count_clean": 5,
+    "agreement_count_seeded": 0,
+    "moved": true,
+    "note": "charge state is derived, not assumed, so this must move"
+   },
+   {
+    "check": "q6",
+    "mutation": "move the glycol window to 5.8-6.4 ppm (empty)",
+    "agreement_count_clean": 2,
+    "agreement_count_seeded": 1,
+    "moved": true,
+    "note": "2 -> 1"
+   }
+  ],
+  "01_blocks_subprocess": [
+   {
+    "mutation": "point the extractor at a page with no category axis",
+    "exit_code": 1,
+    "stderr_first_line": "01_blocks: expected 3 category axes on SI p.3 (Fig S2A, S2B, S3), found 0. Refusing to emit.",
+    "fired": true
+   },
+   {
+    "mutation": "stop accepting the '50 mol%' level, splitting every axis",
+    "exit_code": 1,
+    "stderr_first_line": "01_blocks: expected 3 category axes on SI p.5 (Fig S2A, S2B, S3), found 9. Refusing to emit.",
+    "fired": true
+   },
+   {
+    "mutation": "CONTROL (unmutated)",
+    "exit_code": 0,
+    "fired": false
+   }
+  ],
+  "make_reference_subprocess": [
+   {
+    "mutation": "inject a caption announcing a drawn structure",
+    "exit_code": 1,
+    "fired": true,
+    "stderr_first_line": "make_reference: a caption announces drawn chemistry, so the premise of this file (an EMPTY anchor) is wrong. Build the anchor from that figure instead."
+   },
+   {
+    "mutation": "03_enumerated.csv appears in the folder",
+    "exit_code": 1,
+    "fired": true,
+    "stderr_first_line": "make_reference: 03_enumerated.csv exists. This file's claim of independence rests on there being NO enumerator in the folder. Rewrite the anchor by a genuinely separate route before trusting C10 here."
+   },
+   {
+    "mutation": "CONTROL (unmutated)",
+    "exit_code": 0,
+    "fired": false
+   }
+  ]
+ },
+ "_meta": {
+  "paper": "Sun et al., PNAS 2026, 10.1073/pnas.2528477123, PMID 42150080",
+  "rows_emitted_to_the_corpus": 0,
+  "why": "see 00_value_sources.json -- there is no per-member value source in any held file. These checks validate the ONE thing the SI does supply: an external mass/NMR anchor on 6A1-SC8, which the corpus already carries from KZ_2016.",
+  "emit_rows_called": false,
+  "emit_rows_why_not": "curation/lib/emit.emit_rows writes the quality columns of corpus rows. There are no corpus rows to write, so calling it would mean inventing one. Skipped, and said so."
+ },
+ "_gate": {
+  "checks_run": 6,
+  "failed": [],
+  "selftest_ok": true
+ }
+}

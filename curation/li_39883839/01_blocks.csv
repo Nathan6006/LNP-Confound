@@ -1,0 +1,21 @@
+block,role,si_name,smiles,formula,source
+H1,head_acid,"N,N-dimethylglycine",CN(C)CC(=O)O,C4H9NO2,SI Fig S1 caption + drawn head group
+H2,head_acid,3-(dimethylamino)propanoic acid,CN(C)CCC(=O)O,C5H11NO2,SI Fig S2 caption
+H3,head_acid,"N,N-diethylglycine",CCN(CC)CC(=O)O,C6H13NO2,"SI Fig S3 DRAWN head group (its caption misreads 'dimethylglycine', which is H1's name -- see 08_contradictions.csv C-01)"
+H4,head_acid,1-methylpiperidine-4-carboxylic acid,CN1CCC(C(=O)O)CC1,C7H13NO2,SI Fig S4 caption
+H5,head_acid,3-(piperidin-1-yl)propanoic acid,O=C(O)CCN1CCCCC1,C8H15NO2,SI Fig S5 caption
+H6,head_acid,3-(pyrrolidin-1-yl)propanoic acid,O=C(O)CCN1CCCC1,C7H13NO2,SI Fig S6 caption
+H7,head_acid,4-(dimethylamino)benzoic acid,CN(C)c1ccc(C(=O)O)cc1,C9H11NO2,SI Fig S7 caption
+H8,head_acid,4-(diethylamino)benzoic acid,CCN(CC)c1ccc(C(=O)O)cc1,C11H15NO2,SI Fig S8 caption
+H9,head_acid,4-(4-methylpiperazin-1-yl)benzoic acid,CN1CCN(c2ccc(C(=O)O)cc2)CC1,C12H16N2O2,SI Fig S9 caption
+S3,head_acid,4-(dimethylamino)butanoic acid,CN(C)CCCC(=O)O,C6H13NO2,"SI p.5, A4B4-S3 synthesis"
+S4,head_acid,5-(dimethylamino)pentanoic acid,CN(C)CCCCC(=O)O,C7H15NO2,"SI p.5, A4B4-S4 synthesis"
+A1,tailA_isocyanide,1-isocyanoundecane,CCCCCCCCCCCN[CH:1]=O,C12H25NO (as the N-alkylformamide precursor),SI p.3
+A2,tailA_isocyanide,1-isocyanododecane,CCCCCCCCCCCCN[CH:1]=O,C13H27NO (as the N-alkylformamide precursor),SI p.3
+A3,tailA_isocyanide,1-isocyanohexadecane,CCCCCCCCCCCCCCCCN[CH:1]=O,C17H35NO (as the N-alkylformamide precursor),SI p.3
+A4,tailA_isocyanide,(Z)-1-isocyanooctadec-9-ene,CCCCCCCC/C=C\CCCCCCCCN[CH:1]=O,C19H37NO (as the N-alkylformamide precursor),SI p.3
+B1,tailB_aldehyde,decanal,CCCCCCCCC[CH2:2]O,C10H22O (as the primary-alcohol precursor),SI p.3
+B2,tailB_aldehyde,olealdehyde ((Z)-octadec-9-enal),CCCCCCCC/C=C\CCCCCCC[CH2:2]O,C18H36O (as the primary-alcohol precursor),SI p.3
+B3,tailB_aldehyde,6-oxohexyl dodecanoate,CCCCCCCCCCCC(=O)OCCCCC[CH2:2]O,C18H36O3 (as the primary-alcohol precursor),SI pp.3-4
+B4,tailB_aldehyde,6-oxohexyl 2-hexyldecanoate,CCCCCCCCC(CCCCCC)C(=O)OCCCCC[CH2:2]O,C22H44O3 (as the primary-alcohol precursor),SI p.4
+Bbu,tailB_aldehyde,6-oxohexyl 2-butyloctanoate,CCCCCCC(CCCC)C(=O)OCCCCC[CH2:2]O,C18H36O3 (as the primary-alcohol precursor),SI p.4

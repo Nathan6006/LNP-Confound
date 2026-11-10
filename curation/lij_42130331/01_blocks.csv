@@ -1,0 +1,22 @@
+block_type,block_id,reagent,SMILES,n_primary_NH2,n_secondary_NH,name_token_carbons,measured_carbons,name_token_matches,how_measured
+amine,70,,CN(C)CCN,1,0,,,,"row1 #0: 2 carbons, both routes agree"
+amine,75,,CCN(CC)CCN,1,0,,,,"row1 #1/#2/#3: ethylene arm 2 C, two N-ethyls"
+amine,80,,CN(C)CCCN,1,0,,,,"row1 #5: 3 carbons, both routes agree"
+amine,96,,CNCCCN,1,1,,,,row1 #7: 3 carbons; the N-H is drawn explicitly
+amine,400,,CN(C)CCCNCCCN,1,1,,,,row1 #8/#9: 3 and 3 carbons
+amine,113,,CN(CCN)CCN,2,0,,,,"row2 #0/#1: 2 and 2, both routes agree"
+amine,414,,CN(CCCCN)CCCCN,2,0,,,,"row2 #2/#3: 4 and 4, both routes agree"
+amine,616,,CN(CCCCCCN)CCCCCCN,2,0,,,,row2 #4/#5: 6 and 6
+amine,110,,NCCN(CCN)CCN,3,0,,,,"row3 #0/#2/#3: 2, 2, 2 -- tris(2-aminoethyl)amine"
+amine,T3A,,NCCCN(CCCN)CCCN,3,0,,,,"row3 #1/#4/#5: 3, 3, 3 -- tris(3-aminopropyl)amine"
+epoxide_R,C8,"1,2-epoxyoctane",CCCCCC,,,8,6,FALSE -- see note,"legend #0: 6 carbons after the squiggle, both routes agree"
+epoxide_R,C10,"1,2-epoxydecane",CCCCCCCC,,,10,8,FALSE -- see note,"legend #1: 8, by the measured +2-carbon step from C8"
+epoxide_R,C12,"1,2-epoxydodecane",CCCCCCCCCC,,,12,10,FALSE -- see note,"legend #2: 10, same step"
+epoxide_R,C14,"1,2-epoxytetradecane",CCCCCCCCCCCC,,,14,12,FALSE -- see note,"legend #3: 12, both routes agree"
+epoxide_R,OG8,2-ethylhexyl glycidyl ether,COCC(CC)CCCC,,,11,8,FALSE -- see note,"legend #4/#5: CH2-O-CH2-CH(ethyl)-butyl, read at 2000 dpi"
+acyl,Cl6,"hexanoic acid, the acyl donor used for assembly (the paper's reagent is hexanoyl chloride; the acyl group transferred is the same)",CCCCCC(=O)O,,,6,6,TRUE,printed in the Fig. S2 legend as n = 3
+acyl,Cl8,"octanoic acid, the acyl donor used for assembly (the paper's reagent is octanoyl chloride; the acyl group transferred is the same)",CCCCCCCC(=O)O,,,8,8,TRUE,printed in the Fig. S2 legend as n = 5
+acyl,Cl10,"decanoic acid, the acyl donor used for assembly (the paper's reagent is decanoyl chloride; the acyl group transferred is the same)",CCCCCCCCCC(=O)O,,,10,10,TRUE,printed in the Fig. S2 legend as n = 7
+acyl,Cl12,"dodecanoic acid, the acyl donor used for assembly (the paper's reagent is dodecanoyl chloride; the acyl group transferred is the same)",CCCCCCCCCCCC(=O)O,,,12,12,TRUE,printed in the Fig. S2 legend as n = 9
+acyl,Cl14,"tetradecanoic acid, the acyl donor used for assembly (the paper's reagent is tetradecanoyl chloride; the acyl group transferred is the same)",CCCCCCCCCCCCCC(=O)O,,,14,14,TRUE,printed in the Fig. S2 legend as n = 11
+thiolactone,AA,N-acetyl-DL-homocysteine thiolactone,CC(=O)NC1CCSC1=O,,,,,,"Fig. S1B, drawn in full"

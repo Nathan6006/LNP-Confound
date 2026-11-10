@@ -1,0 +1,73 @@
+{
+ "core_smiles": "OCCN(CCO)CCN(CCO)CCO",
+ "n_built": 15,
+ "hrms": {
+  "n_compared": 10,
+  "ours_vs_their_calc": [
+   -0.038,
+   0.031,
+   -0.034,
+   0.075,
+   0.064,
+   0.061,
+   0.003,
+   0.026,
+   0.04,
+   0.022
+  ],
+  "their_calc_vs_their_found": [
+   5.67,
+   4.147,
+   4.306,
+   2.598,
+   5.076,
+   5.156,
+   5.448,
+   6.334,
+   5.663,
+   2.433
+  ],
+  "ours_vs_their_found": [
+   -5.708,
+   -4.116,
+   -4.34,
+   -2.523,
+   -5.012,
+   -5.095,
+   -5.445,
+   -6.307,
+   -5.623,
+   -2.411
+  ],
+  "ours_vs_their_calc_max_abs_ppm": 0.075,
+  "their_calc_vs_their_found_max_abs_ppm": 6.334,
+  "ours_vs_their_found_max_abs_ppm": 6.307
+ },
+ "linkage_evidence": {
+  "13C_carbonyl_ppm": 155.16,
+  "13C_source": "Figure S12, SI p.24 (A5-CE-C7-6, CDCl3)",
+  "dialkyl_carbonate_expected_ppm": "~155",
+  "aliphatic_ester_expected_ppm": "~173",
+  "peak_near_173_present": false,
+  "13C_OCH_ppm": 79.32,
+  "regiochemistry_peaks_ppm": [
+   52.93,
+   52.67
+  ],
+  "regiochemistry_claim_in_caption": "2 peaks at around 53 ppm indicated that the hydrophobic tails were linked to both amine group sides"
+ },
+ "carbonate_minus_carboxylate_Da": {
+  "A5-CE-C10 - A5-C10": {
+   "observed_Da": 47.9848,
+   "n_tails": 3,
+   "expected_n_O_x_15.9949": 47.9847,
+   "residual_mDa": 0.056
+  },
+  "A5-CE-C7-6 - A5-C7-6": {
+   "observed_Da": 31.9898,
+   "n_tails": 2,
+   "expected_n_O_x_15.9949": 31.9898,
+   "residual_mDa": -0.029
+  }
+ }
+}

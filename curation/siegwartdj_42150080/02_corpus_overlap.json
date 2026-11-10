@@ -1,0 +1,127 @@
+{
+ "_what": "Corpus overlap for Sun 2026 PNAS (PMID 42150080). Report only - nothing in data/ was read for writing and nothing was merged.",
+ "corpus": {
+  "vitro": {
+   "path": "../../data/data_vitro.csv",
+   "rows": 29195,
+   "experiments": 43
+  },
+  "vivo": {
+   "path": "../../data/data_vivo.csv",
+   "rows": 1803,
+   "experiments": 20
+  }
+ },
+ "il_name_overlap": [
+  {
+   "paper_IL_name": "6A1-SC8",
+   "hits": [
+    {
+     "pool": "vitro",
+     "Experiment_ID": "KZ_2016",
+     "Publication_PMID": "26729861",
+     "Model_target": "in_vitro",
+     "Model_type": "HeLa",
+     "Route_of_administration": "in_vitro",
+     "Cargo": "siRNA",
+     "Experiment_value": 2.185099711,
+     "inchikey_full": "CZPQUMASBKZWQS-UHFFFAOYSA-N",
+     "inchikey_skeleton": "CZPQUMASBKZWQS",
+     "formula": "C110H203N5O24S6",
+     "canonical_SMILES": "CCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCNCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC"
+    },
+    {
+     "pool": "vivo",
+     "Experiment_ID": "KZ_2016",
+     "Publication_PMID": "26729861",
+     "Model_target": "liver",
+     "Model_type": "Mouse_B6",
+     "Route_of_administration": "intravenous",
+     "Cargo": "siRNA",
+     "Experiment_value": 0.441750048,
+     "inchikey_full": "CZPQUMASBKZWQS-UHFFFAOYSA-N",
+     "inchikey_skeleton": "CZPQUMASBKZWQS",
+     "formula": "C110H203N5O24S6",
+     "canonical_SMILES": "CCCCCCCCSCC(C)C(=O)OCCOC(=O)CCN(CCNCCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCN(CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC)CCC(=O)OCCOC(=O)C(C)CSCCCCCCCC"
+    }
+   ],
+   "n_hits": 2,
+   "n_distinct_full_inchikeys_under_this_name": 1,
+   "name_is_unambiguous_in_corpus": true
+  }
+ ],
+ "helper_lipid_overlap": {
+  "18:1 TAP (DOTAP)": {
+   "vitro": {
+    "HL_name": 2526
+   },
+   "vivo": {
+    "HL_name": 38
+   }
+  },
+  "18:1 DAP (DODAP)": {
+   "vitro": {
+    "fifthcomponent_name": 486
+   },
+   "vivo": {
+    "fifthcomponent_name": 51
+   }
+  },
+  "18:1 PA (DOPA)": "absent from the corpus"
+ },
+ "verdict": "1/1 named ionizable library member(s) of this paper are ALREADY in the corpus. 6A1-SC8 -> KZ_2016. Reported, not acted on: no row was added, changed or removed.",
+ "same_series_names_in_corpus": {
+  "vitro": [
+   "6A1-SC1",
+   "6A1-SC10",
+   "6A1-SC11",
+   "6A1-SC12",
+   "6A1-SC14",
+   "6A1-SC16",
+   "6A1-SC18",
+   "6A1-SC19",
+   "6A1-SC2",
+   "6A1-SC3",
+   "6A1-SC4",
+   "6A1-SC5",
+   "6A1-SC6",
+   "6A1-SC7",
+   "6A1-SC8",
+   "6A1-SC9",
+   "6A1-SCC-10",
+   "6A1-SCC-12",
+   "6A1-SCC-14",
+   "6A1-SCC-4",
+   "6A1-SCC-8",
+   "6A1-SCC-BO",
+   "6A1-SCC-EH",
+   "6A1-SCC-PH",
+   "6A1-SN1",
+   "6A1-SN10",
+   "6A1-SN11",
+   "6A1-SN2",
+   "6A1-SN3",
+   "6A1-SN4",
+   "6A1-SN5",
+   "6A1-SN6",
+   "6A1-SN7",
+   "6A1-SN8",
+   "6A1-SN9",
+   "6A1-SO1",
+   "6A1-SO2",
+   "6A1-SO3",
+   "6A1-SO4",
+   "6A1-SO5",
+   "6A1-SO6",
+   "6A1-SO7",
+   "6A1-SO8",
+   "6A1-SO9"
+  ],
+  "vivo": [
+   "6A1-SC10",
+   "6A1-SC12",
+   "6A1-SC8",
+   "6A1-SCC-10"
+  ]
+ }
+}

@@ -1,0 +1,197 @@
+{
+ "checks": [
+  {
+   "id": "P1",
+   "kind": "PRINTED-TEXT",
+   "what": "Library size: the article states 'a combinatorial library of 100 unique ionizable lipids (AMG) by combining 10 amine headgroups (Am), 9 glycidyl esters and 1 epoxy-ester tails (G)' and 'we then synthesized and purified (>90% purity) all 100'.",
+   "result": "PASS",
+   "stated": 100,
+   "enumerated": 100,
+   "drawn_in_SI": 96,
+   "enumerated_from_blocks_only": [
+    "AMG41",
+    "AMG43",
+    "AMG73",
+    "AMG83"
+   ]
+  },
+  {
+   "id": "P2",
+   "kind": "EXTERNAL-MASS",
+   "what": "Each reconstructed structure against the HRMS m/z printed beside it in the SI, as [M+H]+ or [M+2H]2+, gate 25 ppm.",
+   "result": "REPORTED",
+   "n_pass": 127,
+   "n_fail": 11,
+   "n_without_printed_HRMS": 6,
+   "median_abs_ppm": 1.6,
+   "failures": [
+    "AMG1041-OHD",
+    "AMG1041R",
+    "AMG1041S",
+    "AMG106",
+    "AMG1061",
+    "AMG1441",
+    "AMG1541-OHD",
+    "AMG1541R",
+    "AMG1541S",
+    "AMG1554",
+    "AMG1559"
+   ]
+  },
+  {
+   "id": "P3",
+   "kind": "INTERNAL-GRAPH",
+   "what": "Each building block is re-derived independently from every lipid that contains it; all reads of one block must give the same graph.",
+   "result": "PASS",
+   "n_blocks": 43,
+   "n_disagreeing": 0,
+   "max_independent_reads": 27,
+   "median_independent_reads": 2
+  },
+  {
+   "id": "P4",
+   "kind": "INTERNAL-GRAPH",
+   "what": "Blocks re-assembled with curation/lib/assemble must reproduce the drawn molecule exactly (canonical SMILES identity).",
+   "result": "PASS",
+   "n_match": 120,
+   "n_differ": 0,
+   "differ": [],
+   "stereo_waivers": 40,
+   "stereo_waiver_reason": "assemble.check_stereo_preserved refuses a bond that CREATES a stereocentre; waived only where neither fragment nor product carries a single ASSIGNED centre, so nothing can be inverted"
+  },
+  {
+   "id": "P5a",
+   "kind": "PRINTED-TEXT",
+   "what": "'AMG1541 ... features a hexacyclen headgroup (Am15)' (Conclusions). Am15 is derived here only from AMG1541's and AMG15L-41's drawings.",
+   "result": "PASS",
+   "Am15_as_derived": "C1CNCCNCCNCCNCCNCCN1",
+   "hexacyclen_written_from_its_name": "C1CNCCNCCNCCNCCNCCN1"
+  },
+  {
+   "id": "P5b",
+   "kind": "PRINTED-TEXT",
+   "what": "'... and monounsaturated 12 carbon tails' (Conclusions). G41's acyl chain, counted from the graph, not from the name token '41'.",
+   "result": "PASS",
+   "acyl_carbons": 12,
+   "n_CC_double_bonds": 1
+  },
+  {
+   "id": "P5c",
+   "kind": "PRINTED-TEXT",
+   "what": "'Within the tails we included Z-alkenes ...' (Results). Geometry read from the drawing's own coordinates, not assumed.",
+   "result": "PASS",
+   "n_CC_double_bonds_in_tail_blocks": 28,
+   "n_Z": 28,
+   "n_E": 0
+  },
+  {
+   "id": "P5d",
+   "kind": "PRINTED-TEXT",
+   "what": "'... 9 glycidyl esters and 1 epoxy-ester tails (G)'. A glycidyl ester opens at the glycidyl CH2, so its arm reads CH2-CH(OH)-CH2-O-C(=O); the epoxy ester does not.",
+   "result": "PASS",
+   "n_glycidyl": 9,
+   "n_epoxy_ester": 1,
+   "the_epoxy_ester": [
+    "G6"
+   ]
+  },
+  {
+   "id": "P6a",
+   "kind": "PRINTED-TEXT",
+   "what": "'AMG1541 LNPs exhibit 8.3-fold lower expression in the liver (Figure 2f)'. Figure 2f's two Source Data columns are UNLABELLED; the ratio identifies them -- column 1 / column 2 = the printed value, so column 1 is SM-102 and column 2 is AMG1541.",
+   "result": "PASS",
+   "recomputed": 8.337,
+   "printed": 8.3,
+   "cells": "MOESM4 'Figure 2' B38:C40"
+  },
+  {
+   "id": "P6b",
+   "kind": "PRINTED-TEXT",
+   "what": "'... 3.5-fold higher expression at the injection site relative to SM-102 (Figure 2c)'.",
+   "result": "PASS",
+   "recomputed": 3.538,
+   "printed": 3.5,
+   "cells": "MOESM4 'Figure 2' B15:B17 and E15:E21"
+  },
+  {
+   "id": "P6c",
+   "kind": "PRINTED-TEXT",
+   "what": "'Systematic optimization ... identified AMG1541 which gave 4.5-fold higher mRNA expression than our initial hit, AMG104'. Figure 5c's own 'Fold Luciferase (AMG 104)' column.",
+   "result": "PASS",
+   "source_data_value": 4.5,
+   "printed": 4.5,
+   "cells": "MOESM7 'Figure 5' C31"
+  },
+  {
+   "id": "P6d",
+   "kind": "PRINTED-TEXT",
+   "what": "'LNPs formulated with AMG1541-OHD exhibited ~100-fold loss in IM FLuc expression (Figure 5f)'.",
+   "result": "PASS",
+   "recomputed": 113.5,
+   "printed": "~100",
+   "cells": "MOESM7 'Figure 5' B49:D49 and F49:H49"
+  },
+  {
+   "id": "P6e",
+   "kind": "PRINTED-TEXT",
+   "what": "'AMG1559 ... showed a dramatic 34-fold drop in transfection (Extended Figure 5d)'.",
+   "result": "PASS",
+   "recomputed": 33.98,
+   "printed": 34,
+   "cells": "MOESM12 'Extended Figure 5' B21:C23"
+  },
+  {
+   "id": "P7",
+   "kind": "PRINTED-TEXT",
+   "what": "The per-lipid n printed in each figure legend against the number of values the publisher's Source Data actually contains for that lipid. 27 statements, each naming a specific lipid.",
+   "result": "PASS",
+   "n_agree": 27,
+   "n_disagree": 0,
+   "disagreements": []
+  },
+  {
+   "id": "P8",
+   "kind": "PRINTED-TEXT",
+   "what": "'The purity of all AMG lipids was >=90% as judged by LC-MS' (SI p.5) against every 'LC-MS purity' value printed in the SI.",
+   "result": "FAIL",
+   "n_values": 146,
+   "min": 85.0,
+   "median": 96.0
+  },
+  {
+   "id": "P9",
+   "kind": "PRINTED-TEXT",
+   "what": "'We found that >80 LNPs showed strong in vitro transfection' (Extended Figure 1). The article gives no threshold, so the count is reported against several and the claim is NOT scored.",
+   "result": "UNSCORED",
+   "n_lipids": 100,
+   "counts_at_RFU_threshold": {
+    "10000.0": 70,
+    "20000.0": 67,
+    "50000.0": 46,
+    "100000.0": 32
+   }
+  },
+  {
+   "id": "P10",
+   "kind": "PRINTED-TEXT",
+   "what": "'We chose to generate batches based on the tail structure, as this had the largest effect on mRNA delivery in vitro (Extended Figure 1)'. One-way variance explained in log10(RFU) by the tail and by the headgroup. This is also the ORIENTATION check on the 10 x 10 matrix: transposing rows and columns would put all 100 values on the wrong lipids and would swap these two numbers, and nothing else here would notice.",
+   "result": "PASS",
+   "variance_explained_by_tail_G": 0.427,
+   "variance_explained_by_headgroup_Am": 0.106,
+   "n_cells_used": 98,
+   "n_cells_excluded_zero_RFU": 2
+  }
+ ],
+ "counts": {
+  "AMG labels characterised in the SI": 144,
+  "HRMS values printed in the SI": 141,
+  "structures reconstructed from the drawings": 144,
+  "lipids with a usable structure": 133,
+  "amine blocks": 15,
+  "tail blocks": 28,
+  "per-lipid values (tier 1, publisher Source Data)": 138,
+  "in vitro values": 100,
+  "in vivo values": 38
+ },
+ "value_tier": "1_publisher_source_data for every value; no pixel was read anywhere in this curation"
+}

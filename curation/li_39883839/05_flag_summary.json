@@ -1,0 +1,11 @@
+{
+ "n_rows": 13,
+ "rows_with_a_caveat": 5,
+ "by_confidence": {
+  "high": 11,
+  "medium": 2,
+  "low": 0,
+  "": 0
+ },
+ "value_is_bound_upper": 2
+}

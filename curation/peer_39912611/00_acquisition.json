@@ -1,0 +1,119 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "scaffolded": "2026-11-10",
+ "routes_that_FAILED_and_why": [
+  {
+   "route": "PMC /articles/PMC11841047/bin/<name> (pmc_fetch.py's figure route)",
+   "result": "HTML error page, 48716 B, for all 10 declared assets including the SI PDF",
+   "conclusion": "the sibling reports of this route serving error pages are reproduced here exactly"
+  },
+  {
+   "route": "PMC /articles/PMC11841047/pdf/ (the article PDF)",
+   "result": "HTTP 200, 1817 B, text/html -- a 'Preparing to download ...' page carrying a proof-of-work challenge (POW_CHALLENGE / POW_DIFFICULTY=4, cookie cloudpmc-viewer-pow)",
+   "conclusion": "this is a bot check. NOT bypassed. The article PDF's embedded image streams, the fallback the task suggested, are therefore unavailable."
+  },
+  {
+   "route": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC11841047",
+   "result": "HTTP 404",
+   "conclusion": "the legacy OA service is retired, as pmc_fetch.py's docstring already records"
+  },
+  {
+   "route": "https://europepmc.org/articles/PMC11841047/bin/nn4c18636_0002.jpg",
+   "result": "HTTP 403",
+   "conclusion": "not the right Europe PMC endpoint"
+  },
+  {
+   "route": "europepmc.org/api/fulltextRepo?...&fileName=X WITHOUT &mimeType",
+   "result": "HTTP 500, 55 B JSON",
+   "conclusion": "the mimeType parameter is mandatory; WITH it the same URL returns the figure"
+  },
+  {
+   "route": "pubs.acs.org (the publisher's own large rasters)",
+   "result": "NOT ATTEMPTED",
+   "conclusion": "provenance/BROWSER_ACQUISITION.md measures ACS at 403 to a plain client and 200 only from a browser on a second navigation. This run is restricted to plain clients, so the publisher's higher-resolution assets are out of reach and 700 px is the best raster available. This is the resolution limit recorded in 07_qc.json, not an oversight."
+  }
+ ],
+ "files": [
+  {
+   "path": "curation/peer_39912611/source/nn4c18636_si_001.pdf",
+   "sha256": "65159645227a0d3681ae9e40fb570c1b1faa7b43d8dd144737864556a707c636",
+   "bytes": 2763443,
+   "retrieved_from": "https://pubs.acs.org/doi/suppl/10.1021/acsnano.4c18636/suppl_file/nn4c18636_si_001.pdf",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "supplied with the task; the file's own page footer stamps 'Downloaded from pubs.acs.org/ancac3/article-supplement/3753542/pdf/nn4c18636_si_001/ by PHILLIPS EXETER ACADEMY user on 10 November 2026'"
+  },
+  {
+   "path": "curation/peer_39912611/source/PMC11841047.jats.xml",
+   "sha256": "85b52786b5e174ac1a31ccb30a0e42991b5dbf9cc38649b1b69fb4199efbdec8",
+   "bytes": 168528,
+   "retrieved_from": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml&id=11841047",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "provenance/../scratchpad tools/pmc_fetch.py PMC11841047"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0001.jpg",
+   "sha256": "92bd5d46e47fda5c839f8e5ce3dbd213c46b13ca1c8f31c21892a77170caf466",
+   "bytes": 154190,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0001.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0002.jpg",
+   "sha256": "50b36d6154181cd5982d34e1a33c4a654715c0a3606ce5c8a7dad823cf64cc57",
+   "bytes": 289560,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0002.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0003.jpg",
+   "sha256": "e5708589016042f58efd3b063cbcbeed3373d9870df5653af42d39ce34946a84",
+   "bytes": 231995,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0003.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0004.jpg",
+   "sha256": "c0707bc4a50f9a933a874c0f916bb4e925c06f1b70c2f7f8911d41d59460953c",
+   "bytes": 116439,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0004.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0005.jpg",
+   "sha256": "d581b5662636d73a8b960985922114bd33aac51154b2cabf3f657371bc7e1399",
+   "bytes": 346229,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0005.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0006.jpg",
+   "sha256": "4d71fd83dd055d9043222282988365b08396d765010765327caed9e14012e0b1",
+   "bytes": 139551,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0006.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  },
+  {
+   "path": "curation/peer_39912611/source/figs/nn4c18636_0007.jpg",
+   "sha256": "9457bdcb0b1e1ea8995e9316a601a8bd8ca32012566f2c855ce470666e339ece",
+   "bytes": 98255,
+   "retrieved_from": "https://europepmc.org/api/fulltextRepo?pprId=PMC11841047&type=FILE&fileName=nn4c18636_0007.jpg&mimeType=image/jpeg",
+   "retrieved_utc": "2026-11-10T07:42:26Z",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from the article's own <permissions> block in the JATS: '(c) 2025 The Authors. Published by American Chemical Society'",
+   "note": "plain curl, no session, no bot-check bypass"
+  }
+ ]
+}

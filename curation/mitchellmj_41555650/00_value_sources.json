@@ -1,0 +1,119 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). For every panel or table that supplies a VALUE, the tier it came from. Written BEFORE any digitiser was opened. Tiers: 1_publisher_source_data > 2_si_tables > 3_author_repository > 4_pdf_text_table > 5_pixels. Anything at 5_pixels must say why 1-4 failed in a sentence a reviewer can check.",
+
+  "paper": {
+    "title_FULL_resolved": "High-Throughput In Vivo Screening Identifies Structural Factors Driving mRNA Lipid Nanoparticle Delivery to the Brain",
+    "title_in_tracker_was_truncated_at": "High-Throughput In Vivo Screening Identifies Structu…",
+    "resolved_how": "Europe PMC REST core record, EXT_ID:41555650 AND SRC:MED, single call, 2026-11-10. abstractText length 1775 and a full Methods/Results-bearing SI are both present, so this is NOT a no-original-data item.",
+    "pmid": "41555650",
+    "pmcid": null,
+    "pmcid_checked_how": "NCBI elink dbfrom=pubmed&db=pmc&id=41555650 returns ONLY linksetdb 'pubmed_pmc_refs' (4 ids: 13690977, 13676512, 13255529, 13171417). There is NO 'pubmed_pmc' SELF-link, so no PMC deposit of THIS article exists and there is no PMCID to take. pmc_fetch.py was therefore not run.",
+    "doi": "10.1021/acsnano.5c19138",
+    "journal": "ACS Nano",
+    "pub_year": "2026",
+    "first_publication_date": "2026-01-19",
+    "authors": "Han EL, Kim D, Murray AM, Mrksich K, Hamilton AG, Tang S, Yoo S, Zhu AT, Tong ER, Palanki R, Hall ML, Bedingfield SK, Mitchell MJ",
+    "lab": "Michael J. Mitchell (University of Pennsylvania). Corresponding mjmitch@seas.upenn.edu. Co-authors Hall & Bedingfield are Lilly Institute of Genetic Medicine.",
+    "LAB_ATTRIBUTION_CORRECTION": "The extraction brief named this a Dahlman-lab paper and asked for folder 'curation/dahlmanje_41555650'. It is NOT Dahlman. It is Mitchell. The brief's own instruction to pass '--author Dahlman' to find_repo.py would have produced a false zero. Recorded here so the correction is on the record; folder is curation/mitchellmj_41555650.",
+    "proposed_experiment_id": "EH_2026",
+    "proposed_experiment_id_basis": "First author Emily L. Han -> EH, year 2026. CLAUDE.md section 3 convention INITIALS_YEAR. NOT YET RESERVED - see DECISIONS.md D-4."
+  },
+
+  "ENDPOINT": {
+    "one_line": "mRNA (nucleic-acid) delivery: luciferase/Cre mRNA LNPs given IV to mice, read out as mRNA-barcode deep-sequencing counts for the pooled screen and as IVIS luciferase luminescence / tdTomato recombination for the single-LNP validation. This IS a nucleic-acid delivery endpoint, so the extraction proceeds.",
+    "not_an_antimicrobial_or_non_delivery_endpoint": true,
+    "organ_qualifier_in_title": "'to the Brain' - the endpoint qualifier is the ORGAN, and brain is not currently an organ the in-vivo corpus is rich in. Secondary endpoint is REDUCED liver transfection."
+  },
+
+  "ACQUISITION_STATE": {
+    "main_article_pdf": "NOT ACQUIRED.",
+    "why_not": "ACS (pubs.acs.org) returns a Cloudflare interstitial ('Just a moment...') to a plain client; provenance/tools/fetch_paper.py enumerated 0 assets and read that title. BROWSER_ACQUISITION.md records exactly this (ACS: curl 403, Playwright 200, 'resolved on the 2nd navigation'). The extraction brief forbids using the shared Playwright browser, and a further attempt to probe ACS supplementary URLs with curl was refused by the sandbox as bot-check circumvention. I did not bypass it. CONSEQUENCE: main-article Figures 1-5 are unavailable, and those are where the screen's delivery values live.",
+    "si_pdf": "PRESENT, pre-staged in source/ before this run began.",
+    "si_file": "source/nn5c19138_si_001.pdf",
+    "si_sha256": "c9206958b9debb76fdbb63d81b10e1d6777fa5aa7c2f3f58c616a9509f8e1ba5",
+    "si_md5": "c4cbe865e34aa6d9e3d5a5d3c64802da",
+    "si_bytes": 9108406,
+    "si_pages": 28,
+    "si_magic_bytes_verified": "%PDF-1.3 - a real PDF, not an HTML error page saved with a .pdf extension",
+    "si_watermark": "Every page footer reads 'Downloaded from pubs.acs.org/ancac3/article-supplement/5151610/pdf/nn5c19138_si_001/ by PHILLIPS EXETER ACADEMY user on 10 November 2026'. The file was obtained through an entitled session that is not mine. Recorded, not relied on.",
+    "second_si_file": "UNKNOWN - could not be tested. The probe for nn5c19138_si_002.* was the request the sandbox refused."
+  },
+
+  "TIER_3_AUTHOR_REPOSITORY": {
+    "result": "NONE FOUND",
+    "how": "python3 -I provenance/tools/find_repo.py --pmid 41555650 --title 'mRNA barcoding brain LNP' --author Mitchell. Code search on DOI and PMID: 0 hits. Short repo-name queries ('Mitchell LNP', 'mRNA barcoding brain', 'mRNA barcoding lipid'): 0 hits each. 12 candidates relevance-filtered out, all unrelated (3DMol, VoynaSlov, trading repos). repo_hits = [].",
+    "note": "The brief's --author Dahlman would have been wrong here; --author Mitchell was used. Both return 0 for this paper, but the zero from the correct author term is the one that means something."
+  },
+
+  "TIER_1_PUBLISHER_SOURCE_DATA": {
+    "result": "NONE. ACS Nano does not publish machine-readable Source Data for this article, and the article page could not be read to confirm otherwise. Treat as 'not established' rather than 'absent'."
+  },
+
+  "value_panels": [
+    {
+      "panel": "Table S1 (SI pp. 22-24)",
+      "quantity": "Formulation: ionizable-lipid identity and molar ratio IL / DOPE / Chol / C14-PEG2k for each of the b-LNP library members, plus three benchmark formulations with their own excipient sets",
+      "tier": "4_pdf_text_table",
+      "n_values": "93 formulation rows x 4 molar-ratio columns",
+      "why_not_tier_1_2_3": "Tiers 1 and 3 do not exist for this article (above). This IS an SI table, but it is an SI table inside the SI PDF with no separate machine-readable file, so it is recorded at tier 4 (pdfplumber text) rather than tier 2, and read with pdfplumber.find_tables() which reports a real native 33x6 / 39x6 / 26x6 grid on these pages.",
+      "role": "FORMULATION, not a delivery value. Needed to define what each b-LNP number means."
+    },
+    {
+      "panel": "Table S2 (SI pp. 25-27)",
+      "quantity": "Size (nm), PDI, encapsulation efficiency (%), mRNA concentration (ng/uL) per b-LNP",
+      "tier": "4_pdf_text_table",
+      "n_values": "93 rows x 4 columns",
+      "role": "PHYSICOCHEMICAL CHARACTERISATION. Explicitly NOT delivery. data/'s Experiment_method vocabulary is delivery-only; size/PDI/EE are the exact panel types a sibling curation correctly ruled inadmissible. Extracted because it carries the paper's own inclusion criteria, which are what make the pool membership recoverable."
+    },
+    {
+      "panel": "Table S3 (SI p. 28)",
+      "quantity": "Coefficients of variation (%) for the in-vivo single-LNP validation data of main-article Figure 3C-3H, for b-LNPs 13, 14, 70, 96, 97, 98, 45, 102",
+      "tier": "4_pdf_text_table",
+      "n_values": "48 (8 LNPs x 6 panels)",
+      "role": "NOT a delivery value - a CV carries no mean. Its real value is that it NAMES the single-LNP validation cohort exactly, which is how the admissible subset was identified at all, and that it would VERIFY any digitisation of Figure 3 (CV = SD/mean is a dimensionless check immune to axis-calibration error)."
+    },
+    {
+      "panel": "Table S4 (SI p. 28)",
+      "quantity": "Coefficients of variation (%) for flow-cytometry data of main-article Figure 4A-4D, for PBS, 13, 14, 97, 45, 102",
+      "tier": "4_pdf_text_table",
+      "n_values": 24,
+      "role": "Same as Table S3. Names the flow cohort (6 groups incl. PBS)."
+    },
+    {
+      "panel": "MAIN ARTICLE Figures 1-5",
+      "quantity": "The mRNA-barcode pooled screen (normalised delivery per b-LNP per organ) AND the single-LNP validation luminescence (Fig 3C-3H)",
+      "tier": "UNAVAILABLE",
+      "why": "Main article PDF not acquired - ACS Cloudflare, shared browser forbidden, bot-check probe refused. See ACQUISITION_STATE.",
+      "consequence": "No value from the pooled screen and no value from Figure 3 is extracted in this curation. This is the binding constraint on the whole extraction, not a judgement about admissibility."
+    },
+    {
+      "panel": "SI Figures S1, S2, S5, S7, S8, S9",
+      "quantity": "S1 = luminescence and DiR as % of total organ signal; S2 = RAW luminescence and DiR per organ; S5 = brain luminescence and DiR at 24 h (PBS-subtracted relative total flux); S7 = anti-luciferase MFI by brain cell type; S8 = cell viability; S9 = tdTomato Cre recombination in brain",
+      "tier": "5_pixels",
+      "why_tiers_1_to_4_failed": "Tier 1 and 3 do not exist for this article. Tier 2/4 fail for a checkable reason I measured: SI pages 13-21 carry page.get_drawings() == 0 and exactly ONE embedded raster image each, so there is no vector geometry and no text layer inside any SI figure - the numbers are not present in the file in any symbolic form.",
+      "native_dpi_measured": {
+        "method": "image pixel width / image bbox width in pt * 72, from PyMuPDF get_image_info(xrefs=True)",
+        "S1_p13": 220.2, "S2_p14": 355.7, "S3_p15": 256.7, "S4_p16": 258.0,
+        "S5_p17": 266.7, "S6_p18": 294.3, "S7_p19": 338.8, "S8_p20": 369.0, "S9_p21": 205.2
+      },
+      "status": "NOT DIGITISED IN THIS CURATION - see DECISIONS.md D-2 and D-3. S2A was the one candidate admissible delivery panel; the reason it was not emitted is recorded there and in 07_qc.json, and it is a refusal, not an omission."
+    }
+  ],
+
+  "structure_sources": [
+    {
+      "what": "All 15 ionizable-lipid structures",
+      "tier": "2_si_tables",
+      "locus": "SI 'Ionizable Lipid Synthesis', pp. 2-4: a FULL systematic IUPAC name for every one of the 15 lipids, each with the amine-core mass/mmol/equivalents and the epoxide mass/mmol/equivalents.",
+      "why_this_is_strong": "The structures are NOT digitised and NOT inferred from a drawing. They are parsed from the authors' own systematic names, and then the amine core is independently pinned by the paper's own stoichiometry (see 07_qc.json check P1): amine mg/mmol reproduces the derived free-base MW to <=0.16% for all five cores once the true mmol is recovered from the printed epoxide equivalents.",
+      "no_pixels_involved": true
+    }
+  ],
+
+  "what_is_NOT_in_this_curation": [
+    "Any value from the pooled mRNA-barcode screen (main article; unavailable AND see D-1 on admissibility).",
+    "Any value from main-article Figure 3 (unavailable).",
+    "Any digitised SI figure value (refused - D-2, D-3).",
+    "Any merge into data/ (out of scope by instruction)."
+  ]
+}

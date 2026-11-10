@@ -1,0 +1,79 @@
+{
+ "rows": 45,
+ "distinct_structure_names": 43,
+ "repeated_structure_names": {
+  "T16-PY18-A13": [
+   [
+    "L17",
+    57
+   ],
+   [
+    "L18",
+    57
+   ],
+   [
+    "L26",
+    50
+   ]
+  ]
+ },
+ "rows_with_a_determined_structure": 5,
+ "determined_lipidoids": [
+  [
+   "L1",
+   "T18U-PY16-A1",
+   95
+  ],
+  [
+   "L11",
+   "T16-PY12-A1",
+   68
+  ],
+  [
+   "L31",
+   "T18-PY18-A5",
+   50
+  ],
+  [
+   "L35",
+   "T18-PY18-A1",
+   47
+  ],
+  [
+   "L44",
+   "T18U-PY16-A5",
+   40
+  ]
+ ],
+ "value_range": [
+  40,
+  95
+ ],
+ "amines_used": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6",
+  "A7",
+  "A8",
+  "A9",
+  "A11",
+  "A13",
+  "A14",
+  "A15",
+  "A17"
+ ],
+ "thiolactones_used": [
+  "T14",
+  "T16",
+  "T18",
+  "T18U"
+ ],
+ "disulfides_used": [
+  "PY12",
+  "PY14",
+  "PY16",
+  "PY18"
+ ]
+}

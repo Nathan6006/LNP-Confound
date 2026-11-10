@@ -1,0 +1,81 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2.md section 3, Stage 00b). Every panel or table that supplies a VALUE, with the tier it came from. Anything at 5_pixels must carry a reason tiers 1-4 failed that a reviewer can check by running a command.",
+  "_tiers": "1 publisher Source Data | 2 SI tables (text) | 3 author repo / Zenodo / Dryad | 4 pdfplumber text table | 5 pixels",
+  "_tier_1_to_4_sweep": {
+    "tier_1_publisher_source_data": "NONE. ACS Bioconjugate Chemistry 2018 published one supplementary file, bc8b00007_si_001.pdf. ACS did not offer Source Data workbooks for this title in 2018 and the article page lists a single SI item (the SI filename is _si_001 with no sibling). No .xlsx/.csv exists to fetch.",
+    "tier_2_si_tables": "The SI contains exactly two tables, Table S1 (p.16) and Table S2 (p.17). BOTH ARE RASTER IMAGES pasted from a spreadsheet, not PDF tables. Checkable: `python3 -I -c \"import pdfplumber; d=pdfplumber.open('source/bc8b00007_si_001.pdf'); print(len(d.pages[16].find_tables()), [w['text'] for w in d.pages[16].extract_words()])\"` -> 0 tables, and the only 52 words on p.17 are the Figure S3 caption and the Table S2 caption. Not one cell of Table S2 is a text object.",
+    "tier_3_author_repo": "NONE. find_repo.py 2026-11-10: 0 repo hits for the DOI, the PMID, 'Levkin LNP', 'Levkin lipid nanoparticle', 'Thiolactone lipid library'. The two GitHub CODE queries were rate-limited (HTTP 429) and are recorded as incomplete, not as negative.",
+    "tier_4_pdfplumber_text_table": "FAILS for the same reason as tier 2: find_tables() returns 0 on every page of the SI, and extract_words() on p.16 and p.17 returns only captions. pdfplumber WAS tried hard and it is what read the whole synthetic section, the NMR/HRMS block and every axis label -- those ARE tier 4 and are used as tier 4 below. It is only the two spreadsheet tables that are images."
+  },
+  "value_sources": [
+    {
+      "id": "VS-1",
+      "locus": "Table S2, SI p.17 (raster image, lower half of the page)",
+      "quantity": "%TE -- percent transfection efficiency, HEK293T, 100% eGFP plasmid DNA, flow cytometry (Guava easyCyte HT)",
+      "unit": "percent of cells GFP-positive, AS PRINTED. Integers 40-95. NOT converted, NOT normalised, NOT logged.",
+      "n_values": 45,
+      "tier": "5_pixels",
+      "subtype": "PRINTED NUMERALS in a rasterised spreadsheet table -- the best case inside tier 5. CLAUDE.md section 5 ranks printed numerals above every colour or length read: there is no estimation step, only a glyph read.",
+      "why_tiers_1_to_4_failed": "See _tier_1_to_4_sweep. The one-line check: p.17 carries 52 text words, all of them caption; pdfplumber.find_tables() returns 0; the table is drawn as 1-pixel-tall image strips (pymupdf get_image_info reports ~1380 strips of height 1 on the comparable p.13).",
+      "how_read": "pymupdf render at 600 dpi (5100x6600 px), table borders located by ink projection (horizontal rules at y=3297/3403/5756, vertical rules at x=814/1343/2017/2522 left and 2635/3163/3766/4306 right), rows cropped at those detected boundaries and read visually at native resolution. Read TWICE with DIFFERENT crop geometry (a half-scale whole-table read and a native-resolution 8-chunk read); the two transcriptions agree on 45/45 names and 45/45 values.",
+      "defects_to_watch": "none of the digitisation classes apply -- no axis, no colour ramp, no bar. The residual risk is a glyph misread, which is why it was read twice with different crops."
+    },
+    {
+      "id": "VS-2",
+      "locus": "Figure S3, SI p.17 (raster bar chart, upper half)",
+      "quantity": "Relative Transfection Efficiency, HEK293T, same experiment as VS-1, L45..L1 then SFA then L2K",
+      "unit": "dimensionless ratio, axis 0.0-1.2",
+      "n_values": 47,
+      "tier": "5_pixels",
+      "role": "VERIFICATION ONLY, NOT EXTRACTION. PIPELINE_V2.md section 3: once numbers are in hand, the figure is used to confirm them. These bars are never emitted; they test VS-1's transcription geometrically and supply the drawn-round-number check (the L2K positive-control bar should land on exactly 1.000).",
+      "why_tiers_1_to_4_failed": "same as VS-1"
+    },
+    {
+      "id": "VS-3",
+      "locus": "Figure S8, SI p.20 (bar chart; axis labels ARE text, bars are drawing objects)",
+      "quantity": "% Transfection Efficiency in HepG2 cells, top eleven lipidoids",
+      "unit": "percent, axis 0-30",
+      "n_values": 12,
+      "tier": "5_pixels",
+      "status": "NOT DIGITISED by this curation. The eleven lipidoid identities are tier-4 text (pdfplumber recovers them from the rotated axis labels) but the bar heights are not, and the same eleven lipidoids' HEK293T values are already in VS-1 at tier 5-with-numerals. A second cell line would be worth the pixels ONLY if the structures were determinable; with 40/45 head groups unknown (D-1) it would add 11 unusable rows. Recorded so the omission is visible, not silent.",
+      "why_tiers_1_to_4_failed": "no source data, no repo, bars are not text"
+    },
+    {
+      "id": "VS-4",
+      "locus": "Figure S6, SI p.19",
+      "quantity": "% Relative Transfection Efficiency, HEK293T, 10% eGFP + 90% LacZ vector",
+      "unit": "dimensionless, axis 0.0-1.4",
+      "n_values": 12,
+      "tier": "5_pixels",
+      "status": "NOT DIGITISED -- same reasoning as VS-3, and this is a DIFFERENT payload mixture from VS-1, so it is not poolable with it without a second normalisation decision (D-5)."
+    },
+    {
+      "id": "VS-5",
+      "locus": "Table S1, SI p.16 (raster image)",
+      "quantity": "liposome and lipoplex hydrodynamic size and zeta potential, 12 lipidoids",
+      "tier": "5_pixels",
+      "status": "NOT DIGITISED. These are formulation characterisation, not a delivery endpoint; LNPDB's in-vitro corpus excludes diameter/zeta rows by its own definition (CLAUDE.md section 9, 2026-07-23)."
+    },
+    {
+      "id": "VS-6",
+      "locus": "Figures S9/S10/S11, SI pp.21-22",
+      "quantity": "% cell viability at 90/180/270 ug/mL, HEK293T / HepG2 / HeLa",
+      "tier": "5_pixels",
+      "status": "NOT DIGITISED. Viability, not delivery."
+    },
+    {
+      "id": "VS-7",
+      "locus": "SI pp.2-6 synthetic section; SI p.7 Scheme S2; SI pp.15 Figure S1; SI p.2 Scheme S1",
+      "quantity": "STRUCTURE evidence, not values: HRMS formulae and masses for 4 thiolactones and 4 pyridyl disulfides, MALDI-ToF formulae for 3 lipidoids, the library's 4x4x18=288 arithmetic, the ring-opening mechanism, and two fully drawn amines",
+      "tier": "4_pdfplumber_text",
+      "note": "This is the one place the SI is genuinely tier 4, and it is what pins the chemistry. Chain lengths were NOT taken from these names -- see 02_chain_counts.json, which measures them from the PDF's own bond coordinates."
+    }
+  ],
+  "readout_recorded_verbatim": {
+    "printed_header": "%TE",
+    "caption": "Figure S3: Starting from top performing lipidoid, 45 lipidoids which have transfection efficiency >= 40% in HEK293T cells are listed in this figure. See table below for absolute value and head-tail information.",
+    "assay": "eGFP plasmid DNA (100% eGFP) lipoplex, HEK293T, 24 h, PI counterstain, flow cytometry (Guava easyCyte HT)",
+    "NOT_luminescence": "This is a 2018 paper and the endpoint is a FLOW-CYTOMETRY PERCENTAGE OF GFP-POSITIVE CELLS, not luminescence and not knockdown. It is stored as printed and is not log-transformed or z-scored by this curation.",
+    "selection_bias_ON_THE_FACE_OF_IT": "Table S2 lists only the 45 lipidoids with %TE >= 40%. The other 243 of the 288 were measured and are not reported anywhere in the SI. Any per-experiment standardisation computed on these 45 is computed on a TRUNCATED, TOP-TAIL-ONLY sample -- see DECISIONS.md D-4."
+  }
+}

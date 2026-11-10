@@ -1,0 +1,896 @@
+{
+ "_what": "stage 07 QC for XQ_2020. Every check carries its NUMBERS. `gating` checks set the exit code; a non-gating check is one whose failure is a statement about the PAPER, and it names the row of 08_contradictions.csv that records it.",
+ "_how_to_verify_the_gate": "python3 -I stage07_qc.py; echo $?  -- directly, never through a pipe, because `cmd | tail` reports tail's exit status.",
+ "seeds_applied": [],
+ "n_checks": 30,
+ "n_pass": 29,
+ "n_gating_failures": 0,
+ "gating_failures": [],
+ "non_gating_failures": [
+  "P6b"
+ ],
+ "checks": [
+  {
+   "id": "P1a",
+   "what": "our structure's [M+H]+ vs the m/z implied by the molecular FORMULA the authors print in Figure 2F",
+   "gating": true,
+   "measured": "max |delta| = 0.0000 Da",
+   "expected": "<= 0.01 Da (same formula => same mass)",
+   "pass": true,
+   "detail": [
+    {
+     "lipidoid": "75-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0005,
+     "C_ours_vs_their_observed_mz": -0.0405,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "76-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": 0.0039,
+     "C_ours_vs_their_observed_mz": -0.1461,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "77-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0005,
+     "C_ours_vs_their_observed_mz": -0.1305,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "78-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0018,
+     "C_ours_vs_their_observed_mz": -0.0718,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "80-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": 0.0039,
+     "C_ours_vs_their_observed_mz": -0.0561,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "81-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0048,
+     "C_ours_vs_their_observed_mz": -0.1148,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "82-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0005,
+     "C_ours_vs_their_observed_mz": -0.1305,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "93-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": 0.0035,
+     "C_ours_vs_their_observed_mz": -0.0765,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "113-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0048,
+     "C_ours_vs_their_observed_mz": -0.0848,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "306-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": -0.0035,
+     "C_ours_vs_their_observed_mz": 0.0365,
+     "our_formula_matches_theirs_atom_for_atom": true
+    },
+    {
+     "lipidoid": "400-O16CBA",
+     "A_ours_vs_their_formula_mz": 0.0,
+     "B_their_formula_vs_their_calc_mz": 0.0022,
+     "C_ours_vs_their_observed_mz": -0.0378,
+     "our_formula_matches_theirs_atom_for_atom": true
+    }
+   ]
+  },
+  {
+   "id": "P1b",
+   "what": "the authors' own printed FORMULA vs their own printed CALCULATED m/z -- a check on THEIR arithmetic, not ours",
+   "gating": true,
+   "measured": "max |delta| = 0.0048 Da",
+   "expected": "<= 0.02 Da",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P1c",
+   "what": "our structure's [M+H]+ vs the authors' OBSERVED m/z",
+   "gating": true,
+   "measured": "max |delta| = 0.1461 Da",
+   "expected": "<= 0.3 Da (Finnigan LTQ linear ion trap, unit resolution)",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P1d",
+   "what": "our molecular formula equals the authors' printed formula, atom for atom, for all eleven lipidoids",
+   "gating": true,
+   "measured": "11/11",
+   "expected": "11/11",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P2",
+   "what": "every reagent named in the Experimental Section: the MW implied by its own printed grams/millimoles vs the MW of the structure we assign it. Pins the hexyl chain with no pixel measurement.",
+   "gating": true,
+   "measured": "9/9 within 2.5%, worst 1.63%",
+   "expected": "9/9",
+   "pass": true,
+   "detail": [
+    {
+     "reagent": "4-hydroxy-2,6-dimethoxybenzaldehyde",
+     "grams": 5.1,
+     "mmol": 28.0,
+     "MW_implied_by_their_own_g_per_mmol": 182.14,
+     "MW_of_the_structure_we_assign": 182.17,
+     "deviation_pct": 0.02
+    },
+    {
+     "reagent": "potassium carbonate",
+     "grams": 4.6,
+     "mmol": 33.3,
+     "MW_implied_by_their_own_g_per_mmol": 138.14,
+     "MW_of_the_structure_we_assign": 138.21,
+     "deviation_pct": 0.05
+    },
+    {
+     "reagent": "1-bromohexane",
+     "grams": 6.8,
+     "mmol": 41.2,
+     "MW_implied_by_their_own_g_per_mmol": 165.05,
+     "MW_of_the_structure_we_assign": 165.07,
+     "deviation_pct": 0.02
+    },
+    {
+     "reagent": "HexDMBA (isolated)",
+     "grams": 5.2,
+     "mmol": 19.5,
+     "MW_implied_by_their_own_g_per_mmol": 266.67,
+     "MW_of_the_structure_we_assign": 266.34,
+     "deviation_pct": 0.12
+    },
+    {
+     "reagent": "1,1,1-tris(hydroxymethyl)ethane",
+     "grams": 6.7,
+     "mmol": 55.9,
+     "MW_implied_by_their_own_g_per_mmol": 119.86,
+     "MW_of_the_structure_we_assign": 120.15,
+     "deviation_pct": 0.24
+    },
+    {
+     "reagent": "p-toluenesulfonic acid",
+     "grams": 0.44,
+     "mmol": 2.56,
+     "MW_implied_by_their_own_g_per_mmol": 171.88,
+     "MW_of_the_structure_we_assign": 172.2,
+     "deviation_pct": 0.19
+    },
+    {
+     "reagent": "HexDMBAH (isolated)",
+     "grams": 5.4,
+     "mmol": 14.7,
+     "MW_implied_by_their_own_g_per_mmol": 367.35,
+     "MW_of_the_structure_we_assign": 368.47,
+     "deviation_pct": 0.3
+    },
+    {
+     "reagent": "triethylamine",
+     "grams": 2.2,
+     "mmol": 22.1,
+     "MW_implied_by_their_own_g_per_mmol": 99.55,
+     "MW_of_the_structure_we_assign": 101.19,
+     "deviation_pct": 1.63
+    },
+    {
+     "reagent": "acryloyl chloride",
+     "grams": 2.0,
+     "mmol": 22.1,
+     "MW_implied_by_their_own_g_per_mmol": 90.5,
+     "MW_of_the_structure_we_assign": 90.51,
+     "deviation_pct": 0.01
+    },
+    {
+     "reagent": "O16CBA (isolated)",
+     "note": "yield only, no mmol printed"
+    }
+   ]
+  },
+  {
+   "id": "P3",
+   "what": "the acid-degradation fragments. Each hydrolysed acetal releases one HexDMBA and takes up one water, so the fragment masses are an INDEPENDENT measure of how many tails a lipidoid has -- evidence the parent-ion mass alone cannot give.",
+   "gating": true,
+   "measured": "5/5 within 0.3 Da, worst 0.197",
+   "expected": "5/5",
+   "pass": true,
+   "detail": [
+    {
+     "fragment": "75-O16CBA-1",
+     "printed_mz": 713.55,
+     "our_mz": 713.458,
+     "delta": -0.092,
+     "where": "RESULTS, Figure 3E"
+    },
+    {
+     "fragment": "76-O16CBA-1",
+     "printed_mz": 711.64,
+     "our_mz": 711.443,
+     "delta": -0.197,
+     "where": "SI p. S6, Figure S5 label"
+    },
+    {
+     "fragment": "76-O16CBA-0",
+     "printed_mz": 463.36,
+     "our_mz": 463.301,
+     "delta": -0.059,
+     "where": "SI p. S6, Figure S5 label"
+    },
+    {
+     "fragment": "77-O16CBA-1",
+     "printed_mz": 725.64,
+     "our_mz": 725.458,
+     "delta": -0.182,
+     "where": "SI p. S7, Figure S6 label"
+    },
+    {
+     "fragment": "77-O16CBA-0",
+     "printed_mz": 477.45,
+     "our_mz": 477.317,
+     "delta": -0.133,
+     "where": "SI p. S7, Figure S6 label"
+    }
+   ]
+  },
+  {
+   "id": "P4",
+   "what": "our digitised bar heights against the seven values the RESULTS text prints in words. The prose rounds to whole percent and writes '~' on three of them, so 1.0 is the tightest honest tolerance.",
+   "gating": true,
+   "measured": "7/7 within 1.0 pp, worst 0.65 pp",
+   "expected": "7/7",
+   "pass": true,
+   "detail": [
+    {
+     "item": "113-O16CBA",
+     "printed": 29,
+     "ours": 28.94,
+     "delta": -0.06,
+     "where": "RESULTS: '113-O16CBA and 306-O16CBA, induced 29% and 44% GFP+ cells respectively'"
+    },
+    {
+     "item": "306-O16CBA",
+     "printed": 44,
+     "ours": 43.59,
+     "delta": -0.41,
+     "where": "same sentence"
+    },
+    {
+     "item": "400-O16CBA",
+     "printed": 68,
+     "ours": 67.35,
+     "delta": -0.65,
+     "where": "RESULTS: 'the most active 400-O16CBA induced 68% GFP+ cells'"
+    },
+    {
+     "item": "81-O16CBA-F1",
+     "printed": 93,
+     "ours": 92.41,
+     "delta": -0.59,
+     "where": "RESULTS: '81-O16CBA-F1 being the highest in producing ~93% GFP+ cells'"
+    },
+    {
+     "item": "93-O16CBA-F1",
+     "printed": 2,
+     "ours": 2.25,
+     "delta": 0.25,
+     "where": "RESULTS: 'all LNPs, except for 93-O16CBA-F1 (~2% GFP+ cells)'"
+    },
+    {
+     "item": "81-O16CBA-F2",
+     "printed": 78,
+     "ours": 77.44,
+     "delta": -0.56,
+     "where": "RESULTS: '81-O16CBA-F2 was determined to be the most efficient ... ~78% GFP+ cells'"
+    },
+    {
+     "item": "Lpf2k (positive control)",
+     "printed": 91,
+     "ours": 91.436,
+     "delta": 0.44,
+     "where": "RESULTS: 'Lpf2k was highly efficient ... ~91% GFP+ cells were recorded'"
+    }
+   ]
+  },
+  {
+   "id": "P5a",
+   "what": "'eight of the LNP formulations (75-O16CBA and 76-O16CBA etc.) had efficiencies below 15%' -- counted over the eleven helper-lipid-free bars",
+   "gating": true,
+   "measured": 8,
+   "expected": 8,
+   "pass": true,
+   "detail": [
+    "75",
+    "76",
+    "77",
+    "78",
+    "80",
+    "81",
+    "82",
+    "93"
+   ]
+  },
+  {
+   "id": "P5b",
+   "what": "'Nine of the R-O16CBA-F1 formulations had >50% delivery efficiency'",
+   "gating": true,
+   "measured": 9,
+   "expected": 9,
+   "pass": true,
+   "detail": [
+    "113",
+    "306",
+    "400",
+    "75",
+    "76",
+    "77",
+    "80",
+    "81",
+    "82"
+   ]
+  },
+  {
+   "id": "P6a",
+   "what": "'113-, 306-, and 400-O16CBA-F2 were still among the top LNPs, as their delivery efficacies were determined to be 57-73%'. BOTH endpoints are tested, not just containment.",
+   "gating": true,
+   "measured": "[57.26, 73.21]",
+   "expected": "[57, 73], both ends",
+   "pass": true,
+   "detail": {
+    "113": 73.21,
+    "306": 64.74,
+    "400": 57.26
+   }
+  },
+  {
+   "id": "P6b",
+   "what": "'Other top formulations such as 76-, 77-, 113-, 306-, and 400-O16CBA-F1 induced delivery efficacies of 78-83%'",
+   "gating": false,
+   "measured": "3/5 inside the printed band",
+   "expected": "5/5",
+   "pass": false,
+   "detail": {
+    "76": 84.93,
+    "77": 88.51,
+    "113": 79.72,
+    "306": 82.32,
+    "400": 78.09
+   }
+  },
+  {
+   "id": "P7a",
+   "what": "'81-O16CBA-F1 being the highest'",
+   "gating": true,
+   "measured": "81",
+   "expected": "81",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P7b",
+   "what": "'81-O16CBA-F2 was determined to be the most efficient in this formulated library'",
+   "gating": true,
+   "measured": "81",
+   "expected": "81",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P7c",
+   "what": "'the most active 400-O16CBA' among the helper-lipid-free LNPs",
+   "gating": true,
+   "measured": "400",
+   "expected": "400",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P8a",
+   "what": "'all LNPs, except for 93-O16CBA-F1, showed higher efficacies than their corresponding R-O16CBA formulations' -- 11 pairwise signs",
+   "gating": true,
+   "measured": [
+    "93"
+   ],
+   "expected": [
+    "93"
+   ],
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P8b",
+   "what": "'except for the 93-O16CBA-F2 and 400-O16CBA-F2, all other LNPs had higher efficacies than R-O16CBA'",
+   "gating": true,
+   "measured": [
+    "400",
+    "93"
+   ],
+   "expected": [
+    "400",
+    "93"
+   ],
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P8c",
+   "what": "'the delivery efficacies of R-O16CBA-F2 were slightly lower (except for 75- and 78-O16CBA-F2)'",
+   "gating": true,
+   "measured": [
+    "75",
+    "78"
+   ],
+   "expected": [
+    "75",
+    "78"
+   ],
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P9a",
+   "what": "y-axis tick fit: maximum residual of the four labelled ticks",
+   "gating": true,
+   "measured": "0.113 px",
+   "expected": "<= 2.5 px",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P9b",
+   "what": "y-axis LEAVE-ONE-OUT residuals. calibrate's max-residual test is weak against a single bad tick -- an end tick has leverage 0.2, so four fifths of its error is absorbed into the fit.",
+   "gating": true,
+   "measured": "worst 0.335 px",
+   "expected": "<= 1.5 px",
+   "pass": true,
+   "detail": [
+    0.294,
+    0.108,
+    0.161,
+    0.335
+   ]
+  },
+  {
+   "id": "P9c",
+   "what": "THE UNPRINTED ROUND NUMBER. The y axis carries four MINOR ticks that bear no label and were excluded from the fit: the scale is set only by the four long, labelled ticks. Predicting the minor ticks' values is therefore external to the calibration in the way a recomputed marginal is not. They should land on 15, 45, 75 and 105.",
+   "gating": true,
+   "measured": "[105.0, 75.03, 45.04, 15.09], worst deviation 0.091 percentage points",
+   "expected": "15.0, 45.0, 75.0, 105.0",
+   "pass": true,
+   "detail": {
+    "minor_tick_rows_px": [
+     27.41,
+     119.5,
+     211.64,
+     303.64
+    ],
+    "predicted_values": [
+     105.002,
+     75.027,
+     45.036,
+     15.091
+    ]
+   }
+  },
+  {
+   "id": "P9d",
+   "what": "the 0 tick predicted by the fit lands on the DRAWN baseline rule, which took no part in the fit",
+   "gating": true,
+   "measured": "0.903 px",
+   "expected": "< 2 px",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P9e",
+   "what": "bars.bar_top left/right FLANK AGREEMENT on all 33 library bars. The error bars on this figure are drawn in the BAR'S OWN COLOUR, so the colour mask alone does not separate them; the flank test is what makes an error-bar cap unreadable as a bar top (error class 32 / F-018).",
+   "gating": true,
+   "measured": "worst 1.0 px",
+   "expected": "<= 2.0 px",
+   "pass": true,
+   "detail": {
+    "black": [
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    "red": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0
+    ],
+    "blue": [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "id": "P9f",
+   "what": "every library bar detected, none refused",
+   "gating": true,
+   "measured": 33,
+   "expected": 33,
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P9g",
+   "what": "bar pitch and width uniform within each series",
+   "gating": true,
+   "measured": {
+    "black": {
+     "pitch": [
+      73
+     ],
+     "width": [
+      19,
+      20
+     ]
+    },
+    "red": {
+     "pitch": [
+      72,
+      73
+     ],
+     "width": [
+      19,
+      20
+     ]
+    },
+    "blue": {
+     "pitch": [
+      73
+     ],
+     "width": [
+      20
+     ]
+    }
+   },
+   "expected": "pitch spread <= 2 px, width spread <= 2 px",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P10a",
+   "what": "the regiochemistry of every lipidoid is FORCED: exhaustive enumeration of all ways to place the formula-derived number of Michael arms on the head's N-H sites returns exactly one distinct constitution",
+   "gating": true,
+   "measured": "11/11",
+   "expected": "11/11",
+   "pass": true,
+   "detail": {
+    "75": [
+     1,
+     1
+    ],
+    "76": [
+     1,
+     1
+    ],
+    "77": [
+     1,
+     1
+    ],
+    "78": [
+     1,
+     1
+    ],
+    "80": [
+     1,
+     1
+    ],
+    "81": [
+     1,
+     1
+    ],
+    "82": [
+     1,
+     1
+    ],
+    "93": [
+     1,
+     1
+    ],
+    "113": [
+     1,
+     2,
+     1
+    ],
+    "306": [
+     1,
+     2,
+     1
+    ],
+    "400": [
+     2,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "P10b",
+   "what": "the acetal ring closure is not a choice: the three CH2OH groups of 1,1,1-tris(hydroxymethyl)ethane have identical canonical rank, so all three pairings give one constitution",
+   "gating": true,
+   "measured": [
+    1,
+    1,
+    1
+   ],
+   "expected": "all equal",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P10c",
+   "what": "the Michael arm built by two routes that share no code (reduce O16CBA's alkene / esterify propanoic acid onto HexDMBAH) gives the same fragment",
+   "gating": true,
+   "measured": true,
+   "expected": true,
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P10d",
+   "what": "O16CBA rebuilt from its own named precursors equals the tail SMILES written by hand in stage 01",
+   "gating": true,
+   "measured": true,
+   "expected": true,
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P10e",
+   "what": "77-O16CBA and 82-O16CBA are constitutional isomers sharing one formula and one printed m/z -- our two SMILES must DIFFER while their masses agree. Mass cannot see connectivity.",
+   "gating": true,
+   "measured": {
+    "same_mass": true,
+    "different_structure": true
+   },
+   "expected": "same mass, different structure",
+   "pass": true,
+   "detail": null
+  },
+  {
+   "id": "P11",
+   "what": "four of the eleven amine heads are also used by QL_2026, a SEPARATELY curated paper that took them from a vendor catalogue by chemical name rather than from a drawing. Our structures, read off Figure 1C, must equal theirs.",
+   "gating": true,
+   "measured": "4/4",
+   "expected": "4/4",
+   "pass": true,
+   "detail": {
+    "source": "curation/ql_2026/liu2026_adhm202502225_blocks.csv rows H2, H3, H4, H5",
+    "agreeing": [
+     "75",
+     "80",
+     "113",
+     "400"
+    ]
+   }
+  }
+ ],
+ "three_way_mass_split": [
+  {
+   "lipidoid": "75-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0005,
+   "C_ours_vs_their_observed_mz": -0.0405,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "76-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": 0.0039,
+   "C_ours_vs_their_observed_mz": -0.1461,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "77-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0005,
+   "C_ours_vs_their_observed_mz": -0.1305,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "78-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0018,
+   "C_ours_vs_their_observed_mz": -0.0718,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "80-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": 0.0039,
+   "C_ours_vs_their_observed_mz": -0.0561,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "81-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0048,
+   "C_ours_vs_their_observed_mz": -0.1148,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "82-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0005,
+   "C_ours_vs_their_observed_mz": -0.1305,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "93-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": 0.0035,
+   "C_ours_vs_their_observed_mz": -0.0765,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "113-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0048,
+   "C_ours_vs_their_observed_mz": -0.0848,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "306-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": -0.0035,
+   "C_ours_vs_their_observed_mz": 0.0365,
+   "our_formula_matches_theirs_atom_for_atom": true
+  },
+  {
+   "lipidoid": "400-O16CBA",
+   "A_ours_vs_their_formula_mz": 0.0,
+   "B_their_formula_vs_their_calc_mz": 0.0022,
+   "C_ours_vs_their_observed_mz": -0.0378,
+   "our_formula_matches_theirs_atom_for_atom": true
+  }
+ ],
+ "degradation_fragments": [
+  {
+   "fragment": "75-O16CBA-1",
+   "printed_mz": 713.55,
+   "our_mz": 713.458,
+   "delta": -0.092,
+   "where": "RESULTS, Figure 3E"
+  },
+  {
+   "fragment": "76-O16CBA-1",
+   "printed_mz": 711.64,
+   "our_mz": 711.443,
+   "delta": -0.197,
+   "where": "SI p. S6, Figure S5 label"
+  },
+  {
+   "fragment": "76-O16CBA-0",
+   "printed_mz": 463.36,
+   "our_mz": 463.301,
+   "delta": -0.059,
+   "where": "SI p. S6, Figure S5 label"
+  },
+  {
+   "fragment": "77-O16CBA-1",
+   "printed_mz": 725.64,
+   "our_mz": 725.458,
+   "delta": -0.182,
+   "where": "SI p. S7, Figure S6 label"
+  },
+  {
+   "fragment": "77-O16CBA-0",
+   "printed_mz": 477.45,
+   "our_mz": 477.317,
+   "delta": -0.133,
+   "where": "SI p. S7, Figure S6 label"
+  }
+ ],
+ "printed_point_values": [
+  {
+   "item": "113-O16CBA",
+   "printed": 29,
+   "ours": 28.94,
+   "delta": -0.06,
+   "where": "RESULTS: '113-O16CBA and 306-O16CBA, induced 29% and 44% GFP+ cells respectively'"
+  },
+  {
+   "item": "306-O16CBA",
+   "printed": 44,
+   "ours": 43.59,
+   "delta": -0.41,
+   "where": "same sentence"
+  },
+  {
+   "item": "400-O16CBA",
+   "printed": 68,
+   "ours": 67.35,
+   "delta": -0.65,
+   "where": "RESULTS: 'the most active 400-O16CBA induced 68% GFP+ cells'"
+  },
+  {
+   "item": "81-O16CBA-F1",
+   "printed": 93,
+   "ours": 92.41,
+   "delta": -0.59,
+   "where": "RESULTS: '81-O16CBA-F1 being the highest in producing ~93% GFP+ cells'"
+  },
+  {
+   "item": "93-O16CBA-F1",
+   "printed": 2,
+   "ours": 2.25,
+   "delta": 0.25,
+   "where": "RESULTS: 'all LNPs, except for 93-O16CBA-F1 (~2% GFP+ cells)'"
+  },
+  {
+   "item": "81-O16CBA-F2",
+   "printed": 78,
+   "ours": 77.44,
+   "delta": -0.56,
+   "where": "RESULTS: '81-O16CBA-F2 was determined to be the most efficient ... ~78% GFP+ cells'"
+  },
+  {
+   "item": "Lpf2k (positive control)",
+   "printed": 91,
+   "ours": 91.436,
+   "delta": 0.44,
+   "where": "RESULTS: 'Lpf2k was highly efficient ... ~91% GFP+ cells were recorded'"
+  }
+ ],
+ "threshold_sensitivity": {
+  "_what": "stage05 moved the black/grey colour split from 120 to 85 so the Lpf2k control bar could be measured.",
+  "effect_on_the_33_library_values": "none -- the 05_values.csv columns formulation..log10_value were byte-identical before and after, verified by diff on 2026-11-10."
+ },
+ "what_the_automated_checks_CANNOT_see": [
+  "CONNECTIVITY. Every mass check above passes on any isomer. The regiochemistry is settled by P10a's enumeration (there is only one constitution) and by the synthesis the paper describes, not by any mass.",
+  "STEREOCHEMISTRY, twice over. (i) The cyclic benzylidene acetal has a C2/C5 cis-trans relationship that the paper never draws and never discusses, and the stored SMILES is flat. (ii) WORSE: assemble.stereocentres(), which is what assemble.attach's check_stereo_preserved relies on, returns {} for this tail, while Chem.FindPotentialStereo returns two unspecified centres. The library's stereo guard is blind to the one stereochemical feature this paper's chemistry turns on, so its passing is not evidence here. DECISIONS.md D-2.",
+  "WHETHER THE X-AXIS LABELS WERE READ CORRECTLY. The group order is read off a 1050 px raster by eye. P4/P5/P7/P8 constrain it hard -- five groups are identified by name in the prose and the remaining order is pinned by eleven sign statements -- but no check reads the glyphs.",
+  "WHETHER FIGURE 5 IS THE SAME DATA AS THE PROSE. If the authors typed a number that their own figure does not show, every check here would split rather than agree, which is exactly what P6b does."
+ ]
+}

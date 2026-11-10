@@ -1,0 +1,443 @@
+{
+ "paper": "Guo et al., ACS Nano 2026, 20(20):14602-14614, doi 10.1021/acsnano.6c00706, PMID 42130331",
+ "experiment_id": "QG_2026",
+ "P1_value_source_tier": {
+  "tier": "5_pixels, but printed numerals in the authors' own source-data tables, not a colour ramp or a bar height",
+  "why_not_tiers_1_to_4": "see 00_value_sources.json; each of the four is a reproducible observation, not an assertion",
+  "classes_structurally_inapplicable": [
+   16,
+   20,
+   23,
+   27,
+   32,
+   33,
+   43
+  ],
+  "reason": "there is no axis, no origin, no scale factor, no colormap and no bar in the read"
+ },
+ "P2_glyph_decoding": {
+  "glyphs": 2243,
+  "clusters": 45,
+  "max_intra_cluster_distance": 0.0,
+  "min_inter_cluster_distance": 2.2356793613672608,
+  "interpretation": "max intra-cluster distance is 0.000, i.e. every member of every cluster is a BYTE-IDENTICAL normalised bitmap; the nearest two clusters are 2.236 apart. The alphabet is 45 exact shapes over 2,243 glyphs.",
+  "cells_decoded": 390,
+  "underline_components_rejected": 0,
+  "note_on_underlines": "The height<=3 & width>=10 filter never fired: there are no underlines in either table. Recorded so that a future run in which it DOES fire is visible."
+ },
+ "P3_merged_glyph_independent_rederivation": {
+  "multi_character_clusters": 28,
+  "disagreeing": 3,
+  "residual_zero": 25,
+  "disagreements": [
+   {
+    "eye": "3A",
+    "derived": "3l4",
+    "residual_px": 90,
+    "ink_px": 169
+   },
+   {
+    "eye": "AA",
+    "derived": "47ll",
+    "residual_px": 159,
+    "ink_px": 181
+   },
+   {
+    "eye": "OG",
+    "derived": "lClC",
+    "residual_px": 98,
+    "ink_px": 190
+   }
+  ],
+  "interpretation": "25 of 28 merged clusters are reconstructed EXACTLY (residual 0 px) from the single-character templates by a dynamic programme that never sees the eye label. The three that are not -- AA, OG, 3A -- are the only clusters containing A, O or G, letters that occur nowhere in isolation in either table, so the template alphabet cannot spell them; their residuals are 90-159 px against 0 for every confirmed one. All three occur ONLY in name cells (AA in all 50 Table S2 headers, OG in OG8, 3A in T3A) and each is printed independently in Fig. S1B, Fig. S2 and Fig. S3, so no VALUE depends on them."
+ },
+ "P4_table_geometry": {
+  "S1": {
+   "shape": [
+    193,
+    1422
+   ],
+   "h_rules": 7,
+   "v_rules": 12,
+   "blocks": 1
+  },
+  "S2": {
+   "shape": [
+    1126,
+    1421
+   ],
+   "h_rules": 35,
+   "v_rules": 12,
+   "blocks": 5
+  },
+  "interpretation": "The cell grid is the table's own ruled lines, detected as rows/columns above 0.6 ink fraction. Table S1: 7 horizontal rules x 12 vertical = 6 x 11 cells. Table S2: 35 horizontal rules (5 blocks x 7) x 12 vertical. No grid position is inferred or interpolated."
+ },
+ "P5_values": {
+  "n_values": 300,
+  "n_library_1": 50,
+  "n_library_2": 250,
+  "duplicate_names": 0,
+  "values_with_no_enumerated_structure": [],
+  "enumerated_structures_with_no_value": [],
+  "lead_compound_named_by_the_paper": "113-AA-C8C14",
+  "library_2_maximum": {
+   "name": "113-AA-C8C14",
+   "value": 98000.0,
+   "cell": "row 19 (Cl14) x col 6 (113-AA-C8)",
+   "is_unique": true
+  },
+  "lead_is_the_maximum": true,
+  "library_1_range": [
+   17.0,
+   1980.0
+  ],
+  "library_2_range": [
+   150.0,
+   98000.0
+  ],
+  "library_1_median": 380.0,
+  "library_2_median": 1100.0
+ },
+ "P5b_amine_column_order_S1_vs_S2": {
+  "table_S1_header": [
+   "70",
+   "75",
+   "80",
+   "400",
+   "96",
+   "113",
+   "414",
+   "616",
+   "110",
+   "T3A"
+  ],
+  "table_S2_block_headers": [
+   "70",
+   "75",
+   "80",
+   "96",
+   "400",
+   "113",
+   "414",
+   "616",
+   "110",
+   "T3A"
+  ],
+  "orders_agree": false,
+  "difference": [
+   3,
+   4
+  ],
+  "why_it_costs_nothing_here": "Every column in both tables is labelled with the full compound name, and the decoder keys on the label, never on position. The finding is recorded because a read that assumed the two tables share a column order would swap 96 and 400 -- ten values in Table S1 -- and nothing downstream would notice."
+ },
+ "P6_lead_compound_external_check": {
+  "claim": "The paper names 113-AA-C8C14 as its lead compound throughout (title-level claim; Fig. S4, S8-S17, S20-S24 captions).",
+  "test": "That name decomposes to Table S2 column `113-AA-C8` and row `Cl14`. Nothing in the decoding knows which cell is supposed to win.",
+  "result": {
+   "name": "113-AA-C8C14",
+   "value": 98000.0,
+   "cell": "row 19 (Cl14) x col 6 (113-AA-C8)",
+   "is_unique": true
+  },
+  "passes": true,
+  "runner_up": "113-AA-C8C12 at 9.3E+04, i.e. the maximum is unique and the second-highest value is the same column",
+  "seeded_failure": "ROW_TO_ACYL rotated by one (an off-by-one row) -> the check REFUSED with 'the maximum is 113-AA-C8C6'. Confirmed 2026-11-10. A NEW CHECK IS NOT DONE UNTIL IT HAS BEEN MADE TO FAIL ON PURPOSE."
+ },
+ "P7_library_size": {
+  "stated_in_abstract": 300,
+  "enumerated": 300,
+  "library_1": 50,
+  "library_2": 250,
+  "unique_canonical_SMILES": 300,
+  "values_present_for": 300,
+  "interpretation": "10 amines x 5 epoxides = 50 (Library 1, Table S1) and 50 x 5 acyl chlorides = 250 (Library 2, Table S2) = 300, which is the number the abstract states. Every one of the 300 has both a structure and a value, with no leftovers in either direction."
+ },
+ "P8_chain_counts": {
+  "vector_route_unavailable": "page.get_drawings() returns 0 paths on every page of this SI; each figure page holds exactly one image object. The figures are fully flattened, so chains' vector path (the PDF's own bond coordinates) does not exist here. stage02's render() asserts this.",
+  "methods": "A = chains.raster_chain_length (skeletonise, trace, Douglas-Peucker). B = arc length / the bond length measured from the region's own longest chain, with the label clearance added back. C = per-column ink centroid turns, reported but NOT used for agreement: it is unreliable on these drawings because several arms contain near-vertical and near-horizontal bonds, for which y(x) is not single-valued or not turning.",
+  "regions": {
+   "figS1B_row1": {
+    "bond_length_px_measured": 71.39,
+    "components": [
+     {
+      "id": 0,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 4,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 1,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 4,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 2,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": 7,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 3,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": 4,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 4,
+      "carbons_A_rdp": 1,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": null,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 5,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 4,
+      "carbons_C_apex": 3,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 6,
+      "carbons_A_rdp": 1,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": 9,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 7,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 4,
+      "carbons_C_apex": 5,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 8,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 4,
+      "carbons_C_apex": 4,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 9,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 3,
+      "carbons_C_apex": 4,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 10,
+      "carbons_A_rdp": 1,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": 13,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 11,
+      "carbons_A_rdp": 1,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": 11,
+      "two_primary_methods_agree": true
+     }
+    ]
+   },
+   "figS1B_row2": {
+    "bond_length_px_measured": 68.88,
+    "components": [
+     {
+      "id": 0,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 3,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 1,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 3,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 2,
+      "carbons_A_rdp": 4,
+      "carbons_B_arc": 4,
+      "carbons_C_apex": 6,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 3,
+      "carbons_A_rdp": 4,
+      "carbons_B_arc": 4,
+      "carbons_C_apex": 6,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 4,
+      "carbons_A_rdp": 5,
+      "carbons_B_arc": 6,
+      "carbons_C_apex": 6,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 5,
+      "carbons_A_rdp": 6,
+      "carbons_B_arc": 6,
+      "carbons_C_apex": 6,
+      "two_primary_methods_agree": true
+     }
+    ]
+   },
+   "figS1B_row3": {
+    "bond_length_px_measured": 62.22,
+    "components": [
+     {
+      "id": 0,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 6,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 1,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 4,
+      "carbons_C_apex": 5,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 2,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 3,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 3,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 6,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 4,
+      "carbons_A_rdp": 2,
+      "carbons_B_arc": 2,
+      "carbons_C_apex": 4,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 5,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 3,
+      "carbons_C_apex": 5,
+      "two_primary_methods_agree": true
+     }
+    ]
+   },
+   "figS2_legend": {
+    "bond_length_px_measured": 79.86,
+    "components": [
+     {
+      "id": 0,
+      "carbons_A_rdp": 6,
+      "carbons_B_arc": 6,
+      "carbons_C_apex": 9,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 1,
+      "carbons_A_rdp": 9,
+      "carbons_B_arc": 9,
+      "carbons_C_apex": 16,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 2,
+      "carbons_A_rdp": 3,
+      "carbons_B_arc": 3,
+      "carbons_C_apex": 11,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 3,
+      "carbons_A_rdp": 13,
+      "carbons_B_arc": 13,
+      "carbons_C_apex": 13,
+      "two_primary_methods_agree": true
+     },
+     {
+      "id": 4,
+      "carbons_A_rdp": 6,
+      "carbons_B_arc": 5,
+      "carbons_C_apex": 8,
+      "two_primary_methods_agree": false
+     },
+     {
+      "id": 5,
+      "carbons_A_rdp": 1,
+      "carbons_B_arc": 1,
+      "carbons_C_apex": 7,
+      "two_primary_methods_agree": true
+     }
+    ]
+   }
+  },
+  "resolved_by_inspection": [
+   "figS1B_row1 #2/#3 (amine 75's two N-ethyls), #7 (amine 96's propylene) and #8 (one of amine 400's two propylenes), and figS1B_row3 #1 (one of T3A's three arms), where A and B differ by one. Each was read on a 2000 dpi render saved in 00_pages/ (zoom_amines_70_75_80.png, zoom_amines_96_400.png) and in every case the A count is the one the drawing shows. For T3A the other two arms measure 3 and 3 with both methods agreeing. THIS IS ERROR CLASS 48 EXPOSURE AND IT IS RECORDED RATHER THAN HIDDEN: five chain lengths in this curation rest on one automated method plus a human reading a render.",
+   "figS2_legend #4 (the branched 2-ethylhexyl of OG8), where both automated routes follow only the longest path and so miss the ethyl branch entirely. Read at 2000 dpi (zoom_R_OG8.png): CH2-O-CH2-CH(CH2CH3)-CH2CH2CH2CH3."
+  ],
+  "name_token_vs_measurement": "The epoxide name tokens are NOT chain lengths and the mismatch is the chemistry, not an error: `C8` is 1,2-epoxyoctane and leaves a SIX-carbon R on the carbinol carbon, measured as 6 with both routes agreeing. `OG8` is a 2-ethylhexyl glycidyl ether, 11 carbons in the reagent and 8 in the group the token names. The acyl tokens DO match, and they are not a measurement at all: Fig. S2 prints n = 3,5,7,9,11 against Cy = C6,C8,C10,C12,C14."
+ },
+ "P9_C10_anchors": {
+  "anchors": [
+   {
+    "lipid_name": "113-AA-C8C14",
+    "anchor_inchikey": "FQOKYYDZJAZLAN-UHFFFAOYSA-N",
+    "enumerated_inchikey": "FQOKYYDZJAZLAN-UHFFFAOYSA-N",
+    "full_inchikey_match": true,
+    "source_figure": "Fig. S2, structure 113-AA-CxCy, with R and n taken from the same figure's legend (Cx = C8, Cy = C14 i.e. n = 11)"
+   },
+   {
+    "lipid_name": "96-AA-C8C6",
+    "anchor_inchikey": "KYROFQAXRYHDDY-UHFFFAOYSA-N",
+    "enumerated_inchikey": "KYROFQAXRYHDDY-UHFFFAOYSA-N",
+    "full_inchikey_match": true,
+    "source_figure": "Fig. S2, structure 96-AA-CxCy, legend Cx = C8, Cy = C6 i.e. n = 3"
+   }
+  ],
+  "all_match": true,
+  "independence": "make_reference.py composes a SMILES string centre-out from the tertiary nitrogen and parses it once. It contains no RWMol, no AddBond, no RemoveAtom and no atom map, where the enumerator is built entirely on those. C16 examines the generator's COMPOSED templates and reports them as derived.",
+  "C16_seeded_failure": "TEMPLATE_113 was replaced by the enumeration's own canonical SMILES and C16 flagged it: '1 TEMPLATE(S) APPEAR TO BE TRANSCRIBED FROM THE ENUMERATION ... a 104-character SMILES literal is ... a substring of the enumerated structure'. Restored and re-run clean. Confirmed 2026-11-10.",
+  "what_the_anchors_do_NOT_prove": "They re-derive the DRAWING. They cannot test the drawing, because this paper publishes no HRMS, NMR table, SMILES, InChI or structure file against which the drawn connectivity could be checked. Mass cannot see connectivity and here there is not even a mass."
+ },
+ "P10_glyph_label_gate_seeded_failure": "One cluster's label was deleted from 04_glyph_labels.json and stage04_tables.py --read REFUSED: 'cluster 10 (n=256) has fingerprint 1bf2efaa75d078b0, which is not in 04_glyph_labels.json'. Exit 1, nothing written. Restored and re-run clean. Confirmed 2026-11-10.",
+ "P11_emitted_rows": {
+  "experiment_id": "QG_2026",
+  "rows": 300,
+  "columns": 79,
+  "pooled_z_across_both_libraries": true,
+  "normalisation": {
+   "": {
+    "n": 300,
+    "mean_log10": 3.0475810630353473,
+    "sd_log10_pop": 0.801603404875436
+   }
+  },
+  "rows_with_a_caveat": 300,
+  "z_mean": -2e-08,
+  "z_sd_pop": 1.000000011885,
+  "blank_Model_fields": "Model, Model_type, Model_target, Cargo and Experiment_method are blank because the SI never states the assay behind Fig. 1C/1E and the main text is paywalled (DECISIONS.md D-1). A blank is 'not stated', not 'clean'."
+ },
+ "what_is_NOT_checked": [
+  "The assay. Fig. 1C and Fig. 1E are never described in the SI and the main text is paywalled, so cell line, readout, units, dose, timepoint and even in vitro vs in vivo are unknown. Five of the 79 columns are blank for this reason. DECISIONS.md D-1.",
+  "Whether Library 1 and Library 2 share a measurement scale. They have no compound in common, so no anchor ties them. DECISIONS.md D-2.",
+  "The formulation used for the screen. Fig. S11 optimises the ionizable-lipid / DOPE / cholesterol ratio at constant DMG-PEG2000 for the LEAD compound only, which is downstream of the screen. DECISIONS.md D-3.",
+  "The drawn connectivity itself: no HRMS, no NMR table, no SMILES/InChI, no structure file anywhere in the SI (grep of the full extracted text for smiles|inchi|HRMS|ESI-MS|calcd returns 0). The only characterisation of any member is Fig. S9, a mass spectrum and a 1H NMR of the lead published as IMAGES, with no printed m/z or shift list.",
+  "Stereochemistry. The thiolactone is the DL reagent and no wedge is drawn anywhere in Fig. S1 or Fig. S2, so every structure has two or more unassigned stereocentres."
+ ]
+}

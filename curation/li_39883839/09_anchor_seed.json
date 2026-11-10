@@ -1,0 +1,16 @@
+{
+ "seed_template_is_a_copy": {
+  "template": "CCCCCCCC/C=C\\CCCCCCCCNC(=O)C(CCCCCOC(=O)C(CCCCCC)CCCCCCCC)OC(=O)CCCN(C)C",
+  "detected_as_copy": true,
+  "clean_run_detected_as_copy": false
+ },
+ "seed_connectivity_swap": {
+  "what": "head acid amidated and the isocyanide alkyl esterified -- the Passerini run backwards",
+  "same_molecular_formula": true,
+  "same_exact_mass_to_4dp": true,
+  "formula": "C47H90N2O5",
+  "InChIKey_anchor": "JBBSMSLXXPFXRD-MRCUWXFGSA-N",
+  "InChIKey_defect": "IMLLCXMYOUBAES-MRCUWXFGSA-N",
+  "C10_would_catch_it": true
+ }
+}

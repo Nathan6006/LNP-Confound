@@ -1,0 +1,1165 @@
+{
+ "_what": "Stage 07 QC for PMID 36652629. Every check with numbers.",
+ "checks": [
+  {
+   "check": "A_stroke_centreline_convention",
+   "per_panel": [
+    {
+     "panel": "S1b",
+     "baseline_band": [
+      590,
+      600
+     ],
+     "baseline_centre_px": 595.0,
+     "lowest_tick_centroid_px": 595.0,
+     "delta_px": 0.0
+    },
+    {
+     "panel": "S2b",
+     "baseline_band": [
+      583,
+      592
+     ],
+     "baseline_centre_px": 587.5,
+     "lowest_tick_centroid_px": 587.5,
+     "delta_px": 0.003
+    },
+    {
+     "panel": "S3b",
+     "baseline_band": [
+      638,
+      648
+     ],
+     "baseline_centre_px": 643.0,
+     "lowest_tick_centroid_px": 643.0,
+     "delta_px": 0.002
+    },
+    {
+     "panel": "S4b",
+     "baseline_band": [
+      576,
+      586
+     ],
+     "baseline_centre_px": 581.0,
+     "lowest_tick_centroid_px": 581.0,
+     "delta_px": 0.0
+    },
+    {
+     "panel": "S4c",
+     "baseline_band": [
+      576,
+      586
+     ],
+     "baseline_centre_px": 581.0,
+     "lowest_tick_centroid_px": 581.0,
+     "delta_px": 0.0
+    },
+    {
+     "panel": "S7a",
+     "baseline_band": [
+      727,
+      738
+     ],
+     "baseline_centre_px": 732.5,
+     "lowest_tick_centroid_px": 732.49,
+     "delta_px": 0.013
+    }
+   ],
+   "worst_delta_px": 0.013,
+   "tol_px": 1.5,
+   "pass_": true,
+   "what_it_proves": "The baseline rule and the lowest y tick are separate strokes drawn at the same value. Their agreement to 0.013 px means a stroke carries its value at its CENTRELINE, so a bar's value is its top rule's centre, not the rule's outer edge. Neither quantity comes from a bar, so this does not assume what it tests."
+  },
+  {
+   "check": "B_mass_three_ways",
+   "per_lipid": [
+    {
+     "IL_name": "C3-K2-E14",
+     "ion": "[M+H]+",
+     "SI_formula": "C69H141N5O6",
+     "our_formula": "C69H141N5O6",
+     "B1_formula_match": true,
+     "our_monoisotopic": 1136.0882,
+     "our_average": 1136.92,
+     "SI_calc": 1137.92,
+     "SI_found": 1137.09,
+     "calc_minus_our_monoisotopic": 0.825,
+     "calc_minus_our_average": -0.004,
+     "SI_calc_scale": "average",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": -0.005,
+     "found_minus_our_average": -0.834,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": false
+    },
+    {
+     "IL_name": "C3-K2-A14",
+     "ion": "[M+H]+",
+     "SI_formula": "C69H141N5O2",
+     "our_formula": "C69H141N5O2",
+     "B1_formula_match": true,
+     "our_monoisotopic": 1072.1085,
+     "our_average": 1072.92,
+     "SI_calc": 1073.11,
+     "SI_found": 1073.11,
+     "calc_minus_our_monoisotopic": -0.006,
+     "calc_minus_our_average": -0.818,
+     "SI_calc_scale": "monoisotopic",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": -0.006,
+     "found_minus_our_average": -0.818,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    },
+    {
+     "IL_name": "C3-K2-E15",
+     "ion": "[M+H]+",
+     "SI_formula": "C73H149N5O6",
+     "our_formula": "C73H149N5O6",
+     "B1_formula_match": true,
+     "our_monoisotopic": 1192.1508,
+     "our_average": 1193.02,
+     "SI_calc": 1193.15,
+     "SI_found": 1193.2,
+     "calc_minus_our_monoisotopic": -0.008,
+     "calc_minus_our_average": -0.882,
+     "SI_calc_scale": "monoisotopic",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": 0.042,
+     "found_minus_our_average": -0.832,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    },
+    {
+     "IL_name": "C3-K2-E10",
+     "ion": "[M]+",
+     "SI_formula": "C53H109N5O6",
+     "our_formula": "C53H109N5O6",
+     "B1_formula_match": true,
+     "our_monoisotopic": 911.8378,
+     "our_average": 912.48,
+     "SI_calc": 912.5,
+     "SI_found": 912.8,
+     "calc_minus_our_monoisotopic": 0.662,
+     "calc_minus_our_average": 0.016,
+     "SI_calc_scale": "average",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": 0.962,
+     "found_minus_our_average": 0.316,
+     "SI_found_scale": "average",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    },
+    {
+     "IL_name": "C3-K3-E10",
+     "ion": "[M+H]+",
+     "SI_formula": "C55H113N5O6",
+     "our_formula": "C55H113N5O6",
+     "B1_formula_match": true,
+     "our_monoisotopic": 939.8691,
+     "our_average": 940.54,
+     "SI_calc": 940.87,
+     "SI_found": 940.87,
+     "calc_minus_our_monoisotopic": -0.006,
+     "calc_minus_our_average": -0.676,
+     "SI_calc_scale": "monoisotopic",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": -0.006,
+     "found_minus_our_average": -0.676,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    },
+    {
+     "IL_name": "OC2-K3-E10",
+     "ion": "[M+H]+",
+     "SI_formula": "C54H111N5O7",
+     "our_formula": "C54H111N5O7",
+     "B1_formula_match": true,
+     "our_monoisotopic": 941.8484,
+     "our_average": 942.51,
+     "SI_calc": 942.85,
+     "SI_found": 942.85,
+     "calc_minus_our_monoisotopic": -0.006,
+     "calc_minus_our_average": -0.668,
+     "SI_calc_scale": "monoisotopic",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": -0.006,
+     "found_minus_our_average": -0.668,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    },
+    {
+     "IL_name": "OC3-K3-E10",
+     "ion": "[M+H]+",
+     "SI_formula": "C55H113N5O7",
+     "our_formula": "C55H113N5O7",
+     "B1_formula_match": true,
+     "our_monoisotopic": 955.864,
+     "our_average": 956.54,
+     "SI_calc": 956.86,
+     "SI_found": 956.88,
+     "calc_minus_our_monoisotopic": -0.011,
+     "calc_minus_our_average": -0.685,
+     "SI_calc_scale": "monoisotopic",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": 0.009,
+     "found_minus_our_average": -0.665,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    },
+    {
+     "IL_name": "OC2-K2-A10",
+     "ion": "[M+H]+",
+     "SI_formula": "C52H107N5O3",
+     "our_formula": "C52H107N5O3",
+     "B1_formula_match": true,
+     "our_monoisotopic": 849.8374,
+     "our_average": 850.46,
+     "SI_calc": 850.84,
+     "SI_found": 850.84,
+     "calc_minus_our_monoisotopic": -0.005,
+     "calc_minus_our_average": -0.628,
+     "SI_calc_scale": "monoisotopic",
+     "B2_calc_within_0p06": true,
+     "found_minus_our_monoisotopic": -0.005,
+     "found_minus_our_average": -0.628,
+     "SI_found_scale": "monoisotopic",
+     "B3_found_within_0p9": true,
+     "calc_and_found_same_scale": true
+    }
+   ],
+   "agreement": {
+    "B1": 8,
+    "B2_any": 8,
+    "B3": 8,
+    "n": 8
+   },
+   "SI_calc_scales_seen": [
+    "average",
+    "monoisotopic"
+   ],
+   "calc_and_found_on_different_scales": [
+    "C3-K2-E14"
+   ],
+   "note": "B1 is ours vs their FORMULA; B2 is their formula vs their own printed calc'd m/z; B3 is ours vs their found m/z. B2 is what reveals that the 'calc'd' column is not on one scale across the SI."
+  },
+  {
+   "check": "C_panel_to_formulation_mapping",
+   "table_S2_rows_parsed": 28,
+   "table_S2_rows_without_a_lipid_name": [],
+   "table_S2": [
+    {
+     "id": 1,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102",
+     "NP": 5.0,
+     "lipid_rna": 19.24,
+     "z": 84,
+     "pdi": 0.11,
+     "ee": 99,
+     "pka": 6.81
+    },
+    {
+     "id": 2,
+     "lipid": "C3-K2-A14",
+     "raw_mid": "C3-K2-A14",
+     "NP": 5.0,
+     "lipid_rna": 8.29,
+     "z": 116,
+     "pdi": 0.12,
+     "ee": 95,
+     "pka": 6.25
+    },
+    {
+     "id": 3,
+     "lipid": "C3-K2-E14",
+     "raw_mid": "C3-K2-E14",
+     "NP": 5.0,
+     "lipid_rna": 8.62,
+     "z": 86,
+     "pdi": 0.18,
+     "ee": 83,
+     "pka": 5.49
+    },
+    {
+     "id": 4,
+     "lipid": "C3-K2-E14",
+     "raw_mid": "C3-K2-E14",
+     "NP": 5.0,
+     "lipid_rna": 8.62,
+     "z": 148,
+     "pdi": 0.08,
+     "ee": 83,
+     "pka": 5.23
+    },
+    {
+     "id": 5,
+     "lipid": "C3-K2-E15",
+     "raw_mid": "C3-K2-E15",
+     "NP": 5.0,
+     "lipid_rna": 8.91,
+     "z": 152,
+     "pdi": 0.09,
+     "ee": 86,
+     "pka": 4.37
+    },
+    {
+     "id": 6,
+     "lipid": "C3-K2-E10",
+     "raw_mid": "C3-K2-E10",
+     "NP": 5.0,
+     "lipid_rna": 7.46,
+     "z": 173,
+     "pdi": 0.12,
+     "ee": 93,
+     "pka": 6.26
+    },
+    {
+     "id": 7,
+     "lipid": "C3-K2-E10",
+     "raw_mid": "C3-K2-E10",
+     "NP": 5.0,
+     "lipid_rna": 7.46,
+     "z": 124,
+     "pdi": 0.11,
+     "ee": 97,
+     "pka": 6.21
+    },
+    {
+     "id": 8,
+     "lipid": "C3-K3-E10",
+     "raw_mid": "C3-K3-E10",
+     "NP": 5.0,
+     "lipid_rna": 7.6,
+     "z": 95,
+     "pdi": 0.15,
+     "ee": 96,
+     "pka": 7.16
+    },
+    {
+     "id": 9,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102",
+     "NP": 5.0,
+     "lipid_rna": 19.24,
+     "z": 86,
+     "pdi": 0.17,
+     "ee": 96,
+     "pka": 6.61
+    },
+    {
+     "id": 10,
+     "lipid": "C3-K3-E10",
+     "raw_mid": "C3-K3-E10",
+     "NP": 5.0,
+     "lipid_rna": 7.6,
+     "z": 119,
+     "pdi": 0.13,
+     "ee": 96,
+     "pka": 6.87
+    },
+    {
+     "id": 11,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 5.0,
+     "lipid_rna": 7.61,
+     "z": 102,
+     "pdi": 0.12,
+     "ee": 97,
+     "pka": 6.76
+    },
+    {
+     "id": 12,
+     "lipid": "OC3-K3-E10",
+     "raw_mid": "",
+     "NP": 5.0,
+     "lipid_rna": 7.69,
+     "z": 102,
+     "pdi": 0.04,
+     "ee": 96,
+     "pka": 6.82
+    },
+    {
+     "id": 13,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102",
+     "NP": 5.0,
+     "lipid_rna": 19.24,
+     "z": 76,
+     "pdi": 0.08,
+     "ee": 98,
+     "pka": 6.72
+    },
+    {
+     "id": 14,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 5.0,
+     "lipid_rna": 7.61,
+     "z": 109,
+     "pdi": 0.04,
+     "ee": 95,
+     "pka": 6.88
+    },
+    {
+     "id": 15,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 10.0,
+     "lipid_rna": 15.2,
+     "z": 179,
+     "pdi": 0.04,
+     "ee": 97,
+     "pka": null
+    },
+    {
+     "id": 16,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 10.0,
+     "lipid_rna": 15.2,
+     "z": 191,
+     "pdi": 0.07,
+     "ee": 99,
+     "pka": null
+    },
+    {
+     "id": 17,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102 IVT Fluc RNA",
+     "NP": 5.0,
+     "lipid_rna": 19.26,
+     "z": 75,
+     "pdi": 0.12,
+     "ee": 100,
+     "pka": null
+    },
+    {
+     "id": 18,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "IVT Fluc RNA",
+     "NP": 5.0,
+     "lipid_rna": 7.62,
+     "z": 94,
+     "pdi": null,
+     "ee": 100,
+     "pka": null
+    },
+    {
+     "id": 19,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102",
+     "NP": 2.0,
+     "lipid_rna": 7.61,
+     "z": 90,
+     "pdi": 0.1,
+     "ee": 94,
+     "pka": 6.64
+    },
+    {
+     "id": 20,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102",
+     "NP": 2.0,
+     "lipid_rna": 7.61,
+     "z": 96,
+     "pdi": 0.18,
+     "ee": 99,
+     "pka": null
+    },
+    {
+     "id": 21,
+     "lipid": "SM-102",
+     "raw_mid": "SM-102",
+     "NP": 1.0,
+     "lipid_rna": 3.85,
+     "z": 109,
+     "pdi": 0.11,
+     "ee": 30,
+     "pka": 6.17
+    },
+    {
+     "id": 22,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 2.5,
+     "lipid_rna": 3.85,
+     "z": 180,
+     "pdi": 0.11,
+     "ee": 58,
+     "pka": 6.36
+    },
+    {
+     "id": 23,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 12.6,
+     "lipid_rna": 19.24,
+     "z": 186,
+     "pdi": 0.13,
+     "ee": 96,
+     "pka": 7.15
+    },
+    {
+     "id": 24,
+     "lipid": "OC2-K3-E10",
+     "raw_mid": "",
+     "NP": 12.6,
+     "lipid_rna": 19.24,
+     "z": 182,
+     "pdi": 0.08,
+     "ee": 100,
+     "pka": null
+    },
+    {
+     "id": 25,
+     "lipid": "DLin-MC3-DMA",
+     "raw_mid": "",
+     "NP": 1.1,
+     "lipid_rna": 3.85,
+     "z": 101,
+     "pdi": 0.1,
+     "ee": 3,
+     "pka": 6.24
+    },
+    {
+     "id": 26,
+     "lipid": "DLin-MC3-DMA",
+     "raw_mid": "",
+     "NP": 2.1,
+     "lipid_rna": 7.14,
+     "z": 90,
+     "pdi": 0.18,
+     "ee": 96,
+     "pka": 6.42
+    },
+    {
+     "id": 27,
+     "lipid": "DLin-MC3-DMA",
+     "raw_mid": "",
+     "NP": 5.3,
+     "lipid_rna": 19.24,
+     "z": 77,
+     "pdi": 0.07,
+     "ee": 100,
+     "pka": 6.3
+    },
+    {
+     "id": 28,
+     "lipid": "OC2-K2-A10",
+     "raw_mid": "",
+     "NP": 5.0,
+     "lipid_rna": 7.14,
+     "z": 109,
+     "pdi": 0.07,
+     "ee": 97,
+     "pka": 6.66
+    }
+   ],
+   "table_S2_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+   ],
+   "fig_S11_vs_table_S2": [
+    {
+     "fig_S11_lipid": "SM-102",
+     "resolved_to": "SM-102",
+     "fig_S11_pka": 6.61,
+     "table_S2_ids_for_lipid": [
+      1,
+      9,
+      13,
+      17,
+      19,
+      20,
+      21
+     ],
+     "table_S2_pkas": [
+      6.81,
+      6.61,
+      6.72,
+      null,
+      6.64,
+      null,
+      6.17
+     ],
+     "matched_formulation_ids": [
+      9
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "C3-K2-E14",
+     "resolved_to": "C3-K2-E14",
+     "fig_S11_pka": 5.49,
+     "table_S2_ids_for_lipid": [
+      3,
+      4
+     ],
+     "table_S2_pkas": [
+      5.49,
+      5.23
+     ],
+     "matched_formulation_ids": [
+      3
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "C3-K2-A14",
+     "resolved_to": "C3-K2-A14",
+     "fig_S11_pka": 6.25,
+     "table_S2_ids_for_lipid": [
+      2
+     ],
+     "table_S2_pkas": [
+      6.25
+     ],
+     "matched_formulation_ids": [
+      2
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "C3-K2-E10",
+     "resolved_to": "C3-K2-E10",
+     "fig_S11_pka": 6.26,
+     "table_S2_ids_for_lipid": [
+      6,
+      7
+     ],
+     "table_S2_pkas": [
+      6.26,
+      6.21
+     ],
+     "matched_formulation_ids": [
+      6
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "C3-K2-E15",
+     "resolved_to": "C3-K2-E15",
+     "fig_S11_pka": 4.37,
+     "table_S2_ids_for_lipid": [
+      5
+     ],
+     "table_S2_pkas": [
+      4.37
+     ],
+     "matched_formulation_ids": [
+      5
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "C3-K3-E10",
+     "resolved_to": "C3-K3-E10",
+     "fig_S11_pka": 6.87,
+     "table_S2_ids_for_lipid": [
+      8,
+      10
+     ],
+     "table_S2_pkas": [
+      7.16,
+      6.87
+     ],
+     "matched_formulation_ids": [
+      10
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "OC2-K3-E10",
+     "resolved_to": "OC2-K3-E10",
+     "fig_S11_pka": 6.76,
+     "table_S2_ids_for_lipid": [
+      11,
+      14,
+      15,
+      16,
+      18,
+      22,
+      23,
+      24
+     ],
+     "table_S2_pkas": [
+      6.76,
+      6.88,
+      null,
+      null,
+      null,
+      6.36,
+      7.15,
+      null
+     ],
+     "matched_formulation_ids": [
+      11
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "OC3-K3-E10",
+     "resolved_to": "OC3-K3-E10",
+     "fig_S11_pka": 6.82,
+     "table_S2_ids_for_lipid": [
+      12
+     ],
+     "table_S2_pkas": [
+      6.82
+     ],
+     "matched_formulation_ids": [
+      12
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "OC2-K2-A10",
+     "resolved_to": "OC2-K2-A10",
+     "fig_S11_pka": 6.66,
+     "table_S2_ids_for_lipid": [
+      28
+     ],
+     "table_S2_pkas": [
+      6.66
+     ],
+     "matched_formulation_ids": [
+      28
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "MC3",
+     "resolved_to": "DLin-MC3-DMA",
+     "fig_S11_pka": 6.3,
+     "table_S2_ids_for_lipid": [
+      25,
+      26,
+      27
+     ],
+     "table_S2_pkas": [
+      6.24,
+      6.42,
+      6.3
+     ],
+     "matched_formulation_ids": [
+      27
+     ],
+     "agrees": true
+    },
+    {
+     "fig_S11_lipid": "ALC-0315",
+     "resolved_to": "ALC-0315",
+     "fig_S11_pka": 6.27,
+     "table_S2_ids_for_lipid": [],
+     "table_S2_pkas": [],
+     "matched_formulation_ids": [],
+     "agrees": false
+    }
+   ],
+   "agreement": "10/11",
+   "lipids_formulated_more_than_once": {
+    "SM-102": [
+     1,
+     9,
+     13,
+     17,
+     19,
+     20,
+     21
+    ],
+    "C3-K2-E14": [
+     3,
+     4
+    ],
+    "C3-K2-E10": [
+     6,
+     7
+    ],
+    "C3-K3-E10": [
+     8,
+     10
+    ],
+    "OC2-K3-E10": [
+     11,
+     14,
+     15,
+     16,
+     18,
+     22,
+     23,
+     24
+    ],
+    "DLin-MC3-DMA": [
+     25,
+     26,
+     27
+    ]
+   },
+   "note": "Table S2 is the text layer (tier 4); Fig S11's pKa row is printed numerals inside a raster. They were typeset separately, so agreement is a real cross-check and it is what ties a drawn panel to a named batch."
+  },
+  {
+   "check": "D_cross_round_ratios",
+   "shared": [
+    {
+     "IL_name": "C3-K2-E10",
+     "n_panels": 2,
+     "panels": [
+      {
+       "panel": "S2b",
+       "round_id": "R2_tail_length",
+       "value": 426539.5293385479,
+       "cargo": "unmodified Fluc mRNA"
+      },
+      {
+       "panel": "S3b",
+       "round_id": "R3_linker",
+       "value": 448955.99049360235,
+       "cargo": "unmodified Fluc mRNA"
+      }
+     ],
+     "max_over_min": 1.053,
+     "log10_spread": 0.022
+    },
+    {
+     "IL_name": "C3-K2-E14",
+     "n_panels": 2,
+     "panels": [
+      {
+       "panel": "S1b",
+       "round_id": "R1_hbond",
+       "value": 1711171.1034138899,
+       "cargo": "unmodified Fluc mRNA"
+      },
+      {
+       "panel": "S2b",
+       "round_id": "R2_tail_length",
+       "value": 341475.7149159351,
+       "cargo": "unmodified Fluc mRNA"
+      }
+     ],
+     "max_over_min": 5.011,
+     "log10_spread": 0.7
+    },
+    {
+     "IL_name": "C3-K3-E10",
+     "n_panels": 2,
+     "panels": [
+      {
+       "panel": "S3b",
+       "round_id": "R3_linker",
+       "value": 2912403.046270237,
+       "cargo": "unmodified Fluc mRNA"
+      },
+      {
+       "panel": "S4b",
+       "round_id": "R4_core_unmod",
+       "value": 1565262.2042760698,
+       "cargo": "unmodified Fluc mRNA"
+      }
+     ],
+     "max_over_min": 1.861,
+     "log10_spread": 0.27
+    },
+    {
+     "IL_name": "OC2-K3-E10",
+     "n_panels": 3,
+     "panels": [
+      {
+       "panel": "S4b",
+       "round_id": "R4_core_unmod",
+       "value": 11350160.325453067,
+       "cargo": "unmodified Fluc mRNA"
+      },
+      {
+       "panel": "S4c",
+       "round_id": "R5_core_modmRNA",
+       "value": 19878444.317219853,
+       "cargo": "modified Fluc mRNA"
+      },
+      {
+       "panel": "S7a",
+       "round_id": "R6_NP5_benchmarks",
+       "value": 11843496.617546812,
+       "cargo": "unmodified Fluc mRNA"
+      }
+     ],
+     "max_over_min": 1.751,
+     "log10_spread": 0.243
+    },
+    {
+     "IL_name": "SM-102",
+     "n_panels": 4,
+     "panels": [
+      {
+       "panel": "S1b",
+       "round_id": "R1_hbond",
+       "value": 8486557.952231616,
+       "cargo": "unmodified Fluc mRNA"
+      },
+      {
+       "panel": "S4b",
+       "round_id": "R4_core_unmod",
+       "value": 11350160.325453067,
+       "cargo": "unmodified Fluc mRNA"
+      },
+      {
+       "panel": "S4c",
+       "round_id": "R5_core_modmRNA",
+       "value": 14108876.775161425,
+       "cargo": "modified Fluc mRNA"
+      },
+      {
+       "panel": "S7a",
+       "round_id": "R6_NP5_benchmarks",
+       "value": 10901850.94307254,
+       "cargo": "unmodified Fluc mRNA"
+      }
+     ],
+     "max_over_min": 1.662,
+     "log10_spread": 0.221
+    }
+   ],
+   "n_lipids_in_more_than_one_panel": 5,
+   "worst_ratio": 5.011
+  },
+  {
+   "check": "E_unprinted_fig_S9A_fold_increase",
+   "fig_S9A": {
+    "native_image_dpi": 220.04,
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 100.8669,
+     "origin_px": 139.389,
+     "origin_value": 6.0,
+     "tick_step_units": -2.0,
+     "n_ticks": 4,
+     "tick_fit_residual_px": 0.8045,
+     "tick_residual_tol_px": 2.5
+    },
+    "tick_rows": [
+     140.0,
+     340.32,
+     542.63,
+     745.01
+    ],
+    "loo_worst_px": 2.038,
+    "bars": [
+     {
+      "label": "Tails",
+      "x0": 117,
+      "x1": 250,
+      "wall_px": 17.5,
+      "outer_row": 528,
+      "value_row": 536.75,
+      "value": 2.0605
+     },
+     {
+      "label": "Core",
+      "x0": 319,
+      "x1": 452,
+      "wall_px": 17.5,
+      "outer_row": 138,
+      "value_row": 146.75,
+      "value": 5.927
+     }
+    ]
+   },
+   "comparisons": [
+    {
+     "comparison": "Tails",
+     "numerator": "C3-K2-E14",
+     "denominator": "C3-K2-A14",
+     "source_panel": "S1b",
+     "ours_fold": 3.162,
+     "drawn_in_fig_S9A": 2.0605,
+     "ratio_ours_over_drawn": 1.534,
+     "log10_gap": 0.186
+    },
+    {
+     "comparison": "Core",
+     "numerator": "OC2-K3-E10",
+     "denominator": "C3-K3-E10",
+     "source_panel": "S4b",
+     "ours_fold": 7.251,
+     "drawn_in_fig_S9A": 5.927,
+     "ratio_ours_over_drawn": 1.223,
+     "log10_gap": 0.088
+    }
+   ],
+   "note": "A ratio taken WITHIN one panel cancels any constant row offset and any calibration-origin error, so a disagreement here is about the scale or the individual bar tops -- it cannot be an origin problem."
+  },
+  {
+   "check": "G_significance_groupings_separate_on_one_threshold",
+   "comparisons": [
+    {
+     "panel": "S1b",
+     "reference": "SM-102",
+     "compared": "C3-K2-A14",
+     "printed": "sig",
+     "fold_from_our_reads": 15.6803,
+     "log10_fold": 1.1954
+    },
+    {
+     "panel": "S1b",
+     "reference": "SM-102",
+     "compared": "C3-K2-E14",
+     "printed": "sig",
+     "fold_from_our_reads": 4.9595,
+     "log10_fold": 0.6954
+    },
+    {
+     "panel": "S2b",
+     "reference": "C3-K2-E14",
+     "compared": "C3-K2-E10",
+     "printed": "ns",
+     "fold_from_our_reads": 1.2491,
+     "log10_fold": 0.0966
+    },
+    {
+     "panel": "S2b",
+     "reference": "C3-K2-E14",
+     "compared": "C3-K2-E15",
+     "printed": "ns",
+     "fold_from_our_reads": 1.5701,
+     "log10_fold": 0.1959
+    },
+    {
+     "panel": "S3b",
+     "reference": "C3-K2-E10",
+     "compared": "C3-K3-E10",
+     "printed": "sig",
+     "fold_from_our_reads": 6.4871,
+     "log10_fold": 0.812
+    },
+    {
+     "panel": "S4b",
+     "reference": "SM-102",
+     "compared": "C3-K3-E10",
+     "printed": "sig",
+     "fold_from_our_reads": 7.2513,
+     "log10_fold": 0.8604
+    },
+    {
+     "panel": "S4b",
+     "reference": "SM-102",
+     "compared": "OC2-K3-E10",
+     "printed": "ns",
+     "fold_from_our_reads": 1.0,
+     "log10_fold": 0.0
+    },
+    {
+     "panel": "S4b",
+     "reference": "SM-102",
+     "compared": "OC3-K3-E10",
+     "printed": "sig",
+     "fold_from_our_reads": 2.2125,
+     "log10_fold": 0.3449
+    },
+    {
+     "panel": "S4c",
+     "reference": "SM-102",
+     "compared": "OC2-K3-E10",
+     "printed": "ns",
+     "fold_from_our_reads": 1.4089,
+     "log10_fold": 0.1489
+    },
+    {
+     "panel": "S7a",
+     "reference": "OC2-K2-A10",
+     "compared": "DLin-MC3-DMA",
+     "printed": "ns",
+     "fold_from_our_reads": 1.945,
+     "log10_fold": 0.2889
+    },
+    {
+     "panel": "S7a",
+     "reference": "OC2-K2-A10",
+     "compared": "SM-102",
+     "printed": "ns",
+     "fold_from_our_reads": 1.2472,
+     "log10_fold": 0.0959
+    },
+    {
+     "panel": "S7a",
+     "reference": "OC2-K2-A10",
+     "compared": "OC2-K3-E10",
+     "printed": "ns",
+     "fold_from_our_reads": 1.1481,
+     "log10_fold": 0.06
+    }
+   ],
+   "n_ns": 7,
+   "n_sig": 5,
+   "largest_ns_fold": 1.945,
+   "smallest_sig_fold": 2.2125,
+   "separated_by_one_threshold": true,
+   "threshold_fold": 2.0744,
+   "margin_log10_decades": 0.056,
+   "n_correct": "12/12",
+   "what_it_proves": "The paper marks 12 pairwise comparisons across the six panels as significant or not significant. Those marks were never used to produce a single number here, and a t-test is not a function of the fold change alone. If one threshold sorts all 12 correctly, the bar tops are ordered and spaced the way the authors' own statistics say they are. This is the strongest unprinted check available in this paper."
+  },
+  {
+   "check": "F_seeded_mutations",
+   "seeds": [
+    {
+     "seed": "dots_on_both_top_corners",
+     "what": "Paste two saturated dots of the bar's own colour onto BOTH top corners of S1b's SM-102 bar, 25 px above the rule. This is the one shape bars.bar_top's flank test cannot see, because two symmetric dots agree with each other perfectly.",
+     "exit_code": 1,
+     "fired": true,
+     "message": "CAUGHT: dot row rejected; thickness 17 needed 12"
+    },
+    {
+     "seed": "tick_error_only_LOO_can_see",
+     "what": "This curation applies axis.LOO_TOL_PX in the pixels of the ORIGINAL 188-221 dpi raster, which is 4.07 render px on S4b rather than 1.5. That is a widened number and it has to be shown to still have teeth. The seed searches for the smallest single-tick displacement that the max-residual test PASSES and the leave-one-out test REJECTS, and requires such a displacement to exist and to fire.",
+     "exit_code": 1,
+     "fired": true,
+     "message": "CAUGHT: tick 0 moved -3.25 px passes the max-residual test and LOO rejects it"
+    },
+    {
+     "seed": "halo_widened_window",
+     "what": "Widen S3b's bar window by 8 px on each side, i.e. undo trim_to_walls. The top rule then covers less than 90 per cent of the inflated width and a flank must fail.",
+     "exit_code": 1,
+     "fired": true,
+     "message": "CAUGHT: bar_top: no row in [226,638) reaches 0.90 coverage of the full 134px bar for 3 contiguous rows."
+    }
+   ],
+   "n_fired": 3,
+   "n_seeds": 3,
+   "how_verified": "each seed ran as its own process and returncode was read from the Popen result, not from a shell pipe"
+  }
+ ]
+}

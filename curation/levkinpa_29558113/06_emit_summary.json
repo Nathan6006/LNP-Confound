@@ -1,0 +1,44 @@
+{
+ "rows_written": 45,
+ "rows_emittable_into_the_corpus": 5,
+ "rows_with_a_caveat (emit.caveat_count, F-024 definition)": 2,
+ "rows_carrying_any_flag": 5,
+ "emittable": [
+  {
+   "given_name": "L1",
+   "IL_name": "T18U-PY16-A1",
+   "value_raw_percent_TE": "95",
+   "confidence": "high",
+   "structure_assumed": "0"
+  },
+  {
+   "given_name": "L11",
+   "IL_name": "T16-PY12-A1",
+   "value_raw_percent_TE": "68",
+   "confidence": "high",
+   "structure_assumed": "0"
+  },
+  {
+   "given_name": "L31",
+   "IL_name": "T18-PY18-A5",
+   "value_raw_percent_TE": "50",
+   "confidence": "medium",
+   "structure_assumed": "1"
+  },
+  {
+   "given_name": "L35",
+   "IL_name": "T18-PY18-A1",
+   "value_raw_percent_TE": "47",
+   "confidence": "high",
+   "structure_assumed": "0"
+  },
+  {
+   "given_name": "L44",
+   "IL_name": "T18U-PY16-A5",
+   "value_raw_percent_TE": "40",
+   "confidence": "medium",
+   "structure_assumed": "1"
+  }
+ ],
+ "under_100_usable_rows": true
+}

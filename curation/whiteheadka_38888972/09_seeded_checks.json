@@ -1,0 +1,71 @@
+{
+ "cases": [
+  {
+   "case": "assigned stereocentre lost",
+   "defect": "the fragment list carries an assigned (S) centre that the product does not -- the F-013 shape",
+   "fired": true,
+   "expected": "StructureError",
+   "matched": true,
+   "message": "assemble.check_stereo_preserved('306O10 seeded'): the product's stereocentres are {'R': 0, 'S': 0, '?': 0}, the fragments' sum is {'R': 0, 'S': 1, '?': 0}."
+  },
+  {
+   "case": "401 pivot resolves (positive control)",
+   "defect": "none -- this one must NOT raise",
+   "fired": false,
+   "expected": "no exception",
+   "matched": true,
+   "message": "401O10 is marker-free and achiral, as the symmetric product must be"
+  },
+  {
+   "case": "wrong tail count",
+   "defect": "head 306 (4 N-H) declared as 3 N-H",
+   "fired": true,
+   "expected": "added 4 tails but the head has 3",
+   "matched": true,
+   "message": "306O10 seeded: added 4 tails but the head has 3 N-H. The substitution count IS the structural claim; refusing."
+  },
+  {
+   "case": "ester count vs tail count",
+   "defect": "the product's ester count is compared against a tail count of 3",
+   "fired": true,
+   "expected": "ester-count assertion",
+   "matched": true,
+   "message": "ester-count assertion: 4 esters for a claimed 3 tails"
+  },
+  {
+   "case": "literal confidence",
+   "defect": "confidence=\"high\" passed as a string instead of per-item",
+   "fired": true,
+   "expected": "EmitError",
+   "matched": true,
+   "message": "emit: confidence='high' is a LITERAL."
+  },
+  {
+   "case": "caveat without a note",
+   "defect": "structure_assumed=1 with an empty curation_note",
+   "fired": true,
+   "expected": "EmitError",
+   "matched": true,
+   "message": "emit_rows('seeded') item 'x': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='1', value_is_bound='') and its curation_note is empty."
+  },
+  {
+   "case": "Figure 2B label dropped",
+   "defect": "one x-axis label removed from the transcription",
+   "fired": true,
+   "expected": "x ticks but",
+   "matched": true,
+   "message": "fig2b: 51 x ticks but 50 labels transcribed. Refusing: a mismatch here shifts every value onto the wrong molecule, which is the AC_2025 failure mode."
+  },
+  {
+   "case": "anchor with 3 tails",
+   "defect": "the C10 anchor template is built with 3 tails instead of the 4 Figure 1A draws",
+   "fired": true,
+   "expected": "esters, Figure 1A draws 4",
+   "matched": true,
+   "message": "anchor: 3 esters, Figure 1A draws 4"
+  }
+ ],
+ "n": 8,
+ "n_fired": 7,
+ "n_matched": 8
+}

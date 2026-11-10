@@ -1,0 +1,136 @@
+{
+ "_what": "Stage 00b INTAKE GATE (PIPELINE_V2 section 3). Written BEFORE any chemistry or any digitiser. Tiers: 1 publisher Source Data, 2 SI tables, 3 author repo/Zenodo/Dryad, 4 pdfplumber/pymupdf text table or printed numerals, 5 pixels (last resort).",
+ "headline": "THE 144-MEMBER LIBRARY HAS NO PER-MEMBER DELIVERY VALUE ANYWHERE. All 144 lipids were screened POOLED: 9 mice carrying 16 LNPs each (batch 1), then 4 mice carrying 4 LNPs each (batch 2). Only 8 library-or-derived lipids plus 2 benchmarks were ever injected on their own. Delivery values for those 10 exist only as bar charts in the main figures -> tier 5.",
+ "tier_1_publisher_source_data": {
+  "available": false,
+  "checked": "PNAS article page and PMC supplementary-material list (7 declared assets = article PDF, SI PDF, 5 figure rasters). No data workbook of any kind.",
+  "data_availability_statement": "'All study data are included in the article and/or SI Appendix.'"
+ },
+ "tier_3_repo": {
+  "available": false,
+  "checked": "find_repo.py --doi 10.1073/pnas.2409572122 --pmid 39883839 --title 'Passerini ionizable lipids' --author Li",
+  "result": "0 plausible hits. Top candidates are unrelated (a React tutorial repo, an LNP-quantification imaging repo by a different group). The group's AGILE repo covers a different library and is not cited here as a data source."
+ },
+ "sources": [
+  {
+   "id": "TableS1",
+   "tier": "4_text_table",
+   "where": "SI Appendix pp. 19-22, Table S1",
+   "extraction": "pymupdf get_text(); the table is live text (0 images, vector rules only).",
+   "contents": "144 rows x {Name, Chemical Formula, Molecular Weight, Z-Ave (d.nm), PDI, EE%}",
+   "is_a_delivery_value": false,
+   "why_not": "Size / PDI / encapsulation efficiency are formulation QC, not a delivery endpoint. The corpus's in-vivo pool is defined delivery-only and explicitly excludes diameter/zeta/uptake (CLAUDE.md 2026-07-23 changelog). These rows cannot carry an Experiment_value.",
+   "what_it_IS_good_for": "A complete, symbolic roster of the library: 144 names plus 144 molecular formulas and MWs. This is the independent external check on the enumeration -- every enumerated structure's formula and MW must reproduce its Table S1 row."
+  },
+  {
+   "id": "Fig2D",
+   "tier": "5_pixels",
+   "where": "Figure 2D, 'Batch 1 (Classified by Headgroup)', 9 bars H1-H9",
+   "is_a_delivery_value": true,
+   "per_member": false,
+   "why_not_emittable": "Each bar is ONE mouse injected with a POOLED mixture of 16 LNPs (16 different ionizable lipids). The value belongs to a mixture, not to a lipid. Emitting it against any single lipid would invent 16 measurements from one.",
+   "n": 2,
+   "axis": "BROKEN y-axis (two segments)."
+  },
+  {
+   "id": "Fig2G",
+   "tier": "5_pixels",
+   "where": "Figure 2G, 'Batch 2 (Classified by tail A)', 4 bars A1-A4",
+   "is_a_delivery_value": true,
+   "per_member": false,
+   "why_not_emittable": "Same: each bar is a pooled mixture of 4 LNPs (H2A1Bx..H2A4Bx held at one tail A). Mixture, not lipid.",
+   "n": 2,
+   "axis": "BROKEN y-axis."
+  },
+  {
+   "id": "Fig2H",
+   "tier": "5_pixels",
+   "where": "Figure 2H, 'Batch 3 (Classified by tail B)', 4 bars B1-B4",
+   "is_a_delivery_value": true,
+   "per_member": true,
+   "members": [
+    "H2A4B1",
+    "H2A4B2",
+    "H2A4B3",
+    "H2A4B4"
+   ],
+   "why_tier_5": "Tiers 1-3 do not exist for this paper (see above). Tier 4 fails because the panel is a raster bar chart inside a flattened publisher figure: there is no text layer and no printed numeral for any bar. The only symbolic numbers on the panel are the axis tick labels, which calibrate the scale but do not state a bar value.",
+   "n": 2,
+   "axis": "single linear segment 0 to 1.5e8 (no break)",
+   "endpoint": "whole-animal IVIS total flux (p/s), 6 h post I.M."
+  },
+  {
+   "id": "Fig2K",
+   "tier": "5_pixels",
+   "where": "Figure 2K, 6 bars",
+   "is_a_delivery_value": true,
+   "per_member": true,
+   "members": [
+    "H2A4B3",
+    "H2A4B4",
+    "H2A4-Ole",
+    "H2A4-Butyl",
+    "DLin-MC3-DMA",
+    "SM-102"
+   ],
+   "why_tier_5": "As Fig2H. No printed per-bar numeral.",
+   "n": 3,
+   "axis": "BROKEN y-axis: lower segment 0 to 1e7, upper segment 4e7 to 1e8. Each segment must be calibrated on its OWN detected ticks.",
+   "endpoint": "whole-animal IVIS total flux (p/s), 6 h post I.M."
+  },
+  {
+   "id": "Fig3I",
+   "tier": "5_pixels",
+   "where": "Figure 3I, 3 bars",
+   "is_a_delivery_value": true,
+   "per_member": true,
+   "members": [
+    "H2A4B4",
+    "A4B4-S3",
+    "A4B4-S4"
+   ],
+   "why_tier_5": "As above.",
+   "n": 3,
+   "axis": "single linear segment 0.0 to 2.5e8, ticks at 0.0 / 5.0e7 / 1.0e8 / 1.5e8 / 2.0e8 / 2.5e8 -- the cleanest axis in the paper.",
+   "endpoint": "whole-animal IVIS total flux (p/s), 6 h post I.M.",
+   "EXTERNAL_CHECK": "Figure 3H carries three PRINTED ROI numerals burned into the IVIS screenshot -- ROI 1 = 3.008e+07, ROI 2 = 1.744e+08, ROI 3 = 4.092e+07 for H2A4B4 / A4B4-S3 / A4B4-S4. These are single representative mice, NOT the n=3 means, so they are not the value to emit; they are a number the authors DREW and never discussed, external to our pipeline, and each must land inside its own bar's scatter."
+  },
+  {
+   "id": "Fig5C_5D",
+   "tier": "5_pixels",
+   "where": "Figure 5C (image quantification) and 5D (flow cytometry, 7 sub-panels)",
+   "is_a_delivery_value": true,
+   "per_member": true,
+   "members": [
+    "SM-102",
+    "A4B4-S4",
+    "A4B4-S3"
+   ],
+   "endpoint": "% tdTomato+ cells after mCre LNP, retro-orbital, liver, per cell population",
+   "note": "A different endpoint and route from the mLuc panels, and only 3 lipids, 2 of them already covered by Fig3I. Carries two PRINTED STATISTICS in the running text (56 vs 48 percent CD45-/CD31-; 34 vs 28 percent immune cells) which are reproducible checks on the digitisation. Not proposed for emission; see DECISIONS D-3."
+  },
+  {
+   "id": "Fig5F",
+   "tier": "5_pixels",
+   "where": "Figure 5F, hEPO ELISA, 3 bars, n=8",
+   "members": [
+    "SM-102",
+    "A4B4-S4",
+    "A4B4-S3"
+   ],
+   "endpoint": "plasma hEPO (mIU/mL) 6 h after retro-orbital hEPO mRNA-LNP",
+   "note": "Third endpoint, same 3 lipids. Not proposed for emission; see DECISIONS D-3."
+  }
+ ],
+ "verdict": {
+  "distinct_ionizable_lipid_structures_synthesised": 148,
+  "of_which_in_the_combinatorial_library": 144,
+  "lnp_formulations_characterised": 144,
+  "lipids_with_an_INDIVIDUAL_delivery_value": 10,
+  "of_those_that_are_benchmarks": 2,
+  "measurements_available": 13,
+  "measurements_note": "13 = 4 (Fig2H) + 6 (Fig2K) + 3 (Fig3I) over 10 distinct structures; H2A4B4 appears in all three panels and H2A4B3 in two.",
+  "every_delivery_value_is_tier_5": true,
+  "stop_or_go": "GO, but small and qualified. This is not a 144-row curation and no amount of work will make it one. It is at most a 10-structure in-vivo set, and whether its three panels may share one z-score block is an OPEN question (D-1) because a lipid measured in two of them differs by ~25x between them."
+ }
+}

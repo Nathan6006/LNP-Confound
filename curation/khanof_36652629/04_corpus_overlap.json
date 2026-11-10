@@ -1,0 +1,135 @@
+{
+ "_what": "Stage 04 corpus overlap, three keys. Report only.",
+ "n_ours": 11,
+ "pools": {
+  "vitro": {
+   "file": "../../data/data_vitro.csv",
+   "rows": 29195,
+   "unique_full_inchikeys": 18720,
+   "n_ours_with_any_hit": 3,
+   "hits": [
+    {
+     "IL_name": "SM-102",
+     "full_inchikey_hit": [
+      "AC_2025",
+      "WT_2026"
+     ],
+     "skeleton_hit": [
+      "AC_2025",
+      "WT_2026"
+     ],
+     "name_hit": [
+      "AC_2025",
+      "WT_2026"
+     ]
+    },
+    {
+     "IL_name": "DLin-MC3-DMA",
+     "full_inchikey_hit": [
+      "AC_2025",
+      "SP_2020",
+      "WT_2026",
+      "YZ_2022",
+      "YZ_2024"
+     ],
+     "skeleton_hit": [
+      "AC_2025",
+      "SP_2020",
+      "WT_2026",
+      "YZ_2022",
+      "YZ_2024"
+     ],
+     "name_hit": [
+      "AC_2025",
+      "SP_2020",
+      "WT_2026",
+      "YZ_2022",
+      "YZ_2024"
+     ]
+    },
+    {
+     "IL_name": "ALC-0315",
+     "full_inchikey_hit": [
+      "AC_2025",
+      "LZ_2025"
+     ],
+     "skeleton_hit": [
+      "AC_2025",
+      "LZ_2025"
+     ],
+     "name_hit": [
+      "AC_2025",
+      "LZ_2025"
+     ]
+    }
+   ]
+  },
+  "vivo": {
+   "file": "../../data/data_vivo.csv",
+   "rows": 1803,
+   "unique_full_inchikeys": 1506,
+   "n_ours_with_any_hit": 3,
+   "hits": [
+    {
+     "IL_name": "SM-102",
+     "full_inchikey_hit": [
+      "SB_2024",
+      "SS_2018",
+      "SY_2025",
+      "XD_2026"
+     ],
+     "skeleton_hit": [
+      "SB_2024",
+      "SS_2018",
+      "SY_2025",
+      "XD_2026"
+     ],
+     "name_hit": [
+      "SB_2024",
+      "SS_2018",
+      "SY_2025",
+      "XD_2026"
+     ]
+    },
+    {
+     "IL_name": "DLin-MC3-DMA",
+     "full_inchikey_hit": [
+      "BL_2023",
+      "NG_2025_2",
+      "SB_2024",
+      "XD_2026",
+      "ZC_2023",
+      "ZH_2023"
+     ],
+     "skeleton_hit": [
+      "BL_2023",
+      "NG_2025_2",
+      "SB_2024",
+      "XD_2026",
+      "ZC_2023",
+      "ZH_2023"
+     ],
+     "name_hit": [
+      "BL_2023",
+      "NG_2025_2",
+      "XD_2026",
+      "ZC_2023",
+      "ZH_2023"
+     ]
+    },
+    {
+     "IL_name": "ALC-0315",
+     "full_inchikey_hit": [
+      "XD_2026"
+     ],
+     "skeleton_hit": [
+      "XD_2026"
+     ],
+     "name_hit": [
+      "XD_2026"
+     ]
+    }
+   ]
+  }
+ }
+}

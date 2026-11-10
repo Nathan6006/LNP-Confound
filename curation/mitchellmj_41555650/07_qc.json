@@ -1,0 +1,1337 @@
+{
+ "_paper": "Han et al., ACS Nano 2026, PMID 41555650, DOI 10.1021/acsnano.5c19138",
+ "_lab": "Michael J. Mitchell (UPenn). The extraction brief misattributed this to the Dahlman lab; the folder was corrected to curation/mitchellmj_41555650.",
+ "_endpoint": "mRNA delivery. Pooled mRNA-BARCODE screen (main article) + a separate SINGLE-LNP IVIS luciferase validation (Fig 3, SI Figs S1/S2/S5). Only the latter is corpus-admissible.",
+ "P1_amine_core_pinned_by_the_papers_own_stoichiometry": {
+  "per_core": {
+   "200": {
+    "derived_formula_MW": 215.345,
+    "MW_from_printed_amine_mmol": 214.88,
+    "dev_pct_printed": -0.218,
+    "MW_from_epoxide_equivalents": 215.47,
+    "dev_pct_via_equivalents": 0.058
+   },
+   "494": {
+    "derived_formula_MW": 303.451,
+    "MW_from_printed_amine_mmol": 303.03,
+    "dev_pct_printed": -0.139,
+    "MW_from_epoxide_equivalents": 303.41,
+    "dev_pct_via_equivalents": -0.012
+   },
+   "306": {
+    "derived_formula_MW": 145.25,
+    "MW_from_printed_amine_mmol": 145.33,
+    "dev_pct_printed": 0.057,
+    "MW_from_epoxide_equivalents": 145.33,
+    "dev_pct_via_equivalents": 0.057
+   },
+   "114": {
+    "derived_formula_MW": 103.169,
+    "MW_from_printed_amine_mmol": 103.0,
+    "dev_pct_printed": -0.164,
+    "MW_from_epoxide_equivalents": 103.0,
+    "dev_pct_via_equivalents": -0.164
+   },
+   "490": {
+    "derived_formula_MW": 331.505,
+    "MW_from_printed_amine_mmol": 333.33,
+    "dev_pct_printed": 0.552,
+    "MW_from_epoxide_equivalents": 331.44,
+    "dev_pct_via_equivalents": -0.02
+   }
+  },
+  "worst_dev_pct_printed": 0.552,
+  "worst_dev_pct_via_equivalents": 0.164,
+  "what": "Each amine core is DERIVED from the SI systematic name, then its formula is tested against the mass and moles the SI prints for that amine. Amine 490's printed mmol (0.0750) gives +0.55%, an outlier; the SI's own epoxide line gives 0.528 mmol at 7.0 equivalents, i.e. a true amine charge of 0.0754 mmol, and the deviation collapses to -0.02%. The equivalents column is a SECOND, independent statement of the same quantity and it is the one that is self-consistent.",
+  "SEEDED": {
+   "check": "P1 amine-core formula vs the paper's own stoichiometry",
+   "what": "one CH2 added to amine 306 (a plausible cataloguing slip)",
+   "clean_exit": 0,
+   "seeded_exit": 0,
+   "clean_metric": "5/5 cores within 0.5% (worst 0.1638%)",
+   "seeded_metric": "4/5 cores within 0.5% (worst 8.7544%)",
+   "agreement_count_moved": true,
+   "CREDITED": true,
+   "seeded_output_tail": "N_WITHIN_0p5_GOOD 5\nN_WITHIN_0p5_SEED 4\nWORST_GOOD 0.1638\nWORST_SEED 8.7544\n"
+  }
+ },
+ "P2_epoxide_reagent_MW_from_printed_mass_and_moles": {
+  "n": 15,
+  "worst_dev_pct": 0.322,
+  "median_dev_pct": 0.044,
+  "what": "All 15 epoxide charges reproduce the 2-alkyloxirane molecular weight, confirming the TAIL identity independently of the lipid name."
+ },
+ "P3_arms_built_vs_arms_in_IUPAC_name": {
+  "n": 15,
+  "n_agree": 15,
+  "per_core": {
+   "200": {
+    "core_n_NH": "5",
+    "built": "5",
+    "name_says": "5"
+   },
+   "494": {
+    "core_n_NH": "5",
+    "built": "5",
+    "name_says": "5"
+   },
+   "306": {
+    "core_n_NH": "4",
+    "built": "4",
+    "name_says": "4"
+   },
+   "114": {
+    "core_n_NH": "5",
+    "built": "5",
+    "name_says": "5"
+   },
+   "490": {
+    "core_n_NH": "5",
+    "built": "5",
+    "name_says": "5"
+   }
+  },
+  "what": "The builder attaches one arm per remaining N-H and COUNTS the result; the IUPAC name's 'tetrakis'/'bis' is transcribed separately and never read by the builder. Agreement is evidence.",
+  "SEEDED": {
+   "check": "P3 arms built (from N-H count) vs arms stated in the IUPAC name",
+   "what": "amine 114 mis-read as tris(2-aminoethyl)amine: 6 N-H, same 3 nitrogens",
+   "clean_exit": 0,
+   "seeded_exit": 0,
+   "clean_metric": "15/15 agree",
+   "seeded_metric": "12/15 agree",
+   "agreement_count_moved": true,
+   "CREDITED": true,
+   "seeded_output_tail": "AGREE_GOOD 15 of 15\nAGREE_SEED 12 of 15\n"
+  }
+ },
+ "P4_block_map_vs_printed_labels": {
+  "n_labels_anchored": 18,
+  "n_mismatched": 0,
+  "mismatches": [],
+  "what": "The IL column is sparse -- one label per 6-row block, placed wherever the cell's text box sits. The IL for each b-LNP is therefore derived from BLOCK STRUCTURE (15 ILs x 6 formulations, with the greyed-out numbers skipped), and every label pdfplumber did read must land in the block it was assigned to."
+ },
+ "P5_design_grid_matches_printed_molar_ratios": {
+  "n_checked": 90,
+  "n_mismatched": 0,
+  "mismatches": [],
+  "what": "Every block must run (35,2.5)(45,2.5)(55,2.5)(35,5)(45,5)(55,5). This is a 90-row test of the block map AND of the table read: a single mis-assigned b-LNP number breaks the pattern.",
+  "SEEDED": {
+   "check": "P5 design-grid vs printed molar ratios",
+   "what": "one b-LNP in the C12-200 block swapped for the excluded number 67",
+   "clean_exit": 0,
+   "seeded_exit": 0,
+   "clean_metric": "0 mismatches",
+   "seeded_metric": "1 mismatches",
+   "agreement_count_moved": true,
+   "CREDITED": true,
+   "seeded_output_tail": "MIS_GOOD 0\nMIS_SEED 1\n"
+  }
+ },
+ "P6_helper_and_sterol_constant_across_library": {
+  "DOPE_values": [
+   "16"
+  ],
+  "Chol_values": [
+   "46.5"
+  ],
+  "constant": true
+ },
+ "P7_molar_percents_sum_to_100": {
+  "n": 93,
+  "n_exactly_100": 18,
+  "distinct_sums": [
+   100.0,
+   102.5,
+   110.0,
+   112.5,
+   120.0,
+   122.5
+  ],
+  "offenders": {
+   "2": 110.0,
+   "3": 120.0,
+   "4": 102.5,
+   "5": 112.5,
+   "6": 122.5,
+   "8": 110.0,
+   "9": 120.0,
+   "10": 102.5,
+   "11": 112.5,
+   "12": 122.5,
+   "14": 110.0,
+   "15": 120.0,
+   "16": 102.5,
+   "17": 112.5,
+   "18": 122.5,
+   "21": 110.0,
+   "22": 120.0,
+   "23": 102.5,
+   "24": 112.5,
+   "25": 122.5,
+   "27": 110.0,
+   "28": 120.0,
+   "29": 102.5,
+   "30": 112.5,
+   "31": 122.5,
+   "33": 110.0,
+   "34": 120.0,
+   "35": 102.5,
+   "36": 112.5,
+   "37": 122.5,
+   "39": 110.0,
+   "40": 120.0,
+   "42": 102.5,
+   "43": 112.5,
+   "44": 122.5,
+   "46": 110.0,
+   "47": 120.0,
+   "48": 102.5,
+   "49": 112.5,
+   "50": 122.5,
+   "52": 110.0,
+   "53": 120.0,
+   "54": 102.5,
+   "58": 112.5,
+   "59": 122.5,
+   "61": 110.0,
+   "62": 120.0,
+   "63": 102.5,
+   "64": 112.5,
+   "65": 122.5,
+   "68": 110.0,
+   "69": 120.0,
+   "70": 102.5,
+   "71": 112.5,
+   "72": 122.5,
+   "74": 110.0,
+   "75": 120.0,
+   "76": 102.5,
+   "77": 112.5,
+   "78": 122.5,
+   "80": 110.0,
+   "81": 120.0,
+   "82": 102.5,
+   "83": 112.5,
+   "84": 122.5,
+   "86": 110.0,
+   "87": 120.0,
+   "88": 102.5,
+   "89": 112.5,
+   "90": 122.5,
+   "92": 110.0,
+   "94": 120.0,
+   "96": 102.5,
+   "97": 112.5,
+   "98": 122.5
+  },
+  "what": "The authors never print this. A molar-ratio table that does not sum to 100 has a transcription error in it."
+ },
+ "P8_axis_calibration": {
+  "S2A": {
+   "locus": "SI Figure S2A (p. 14)",
+   "quantity": "Total flux (p/s)",
+   "native_dpi_measured": 355.7,
+   "native_dpi_method": "image px width / image bbox pt width * 72",
+   "LOO_TOL_PX_at_600dpi": 1.5,
+   "LOO_TOL_PX_rescaled_to_native": 2.5302,
+   "TICK_RESIDUAL_PX_at_600dpi": 2.5,
+   "TICK_RESIDUAL_PX_rescaled_to_native": 4.217,
+   "n_ticks_detected": 7,
+   "n_ticks_expected": 7,
+   "tick_px": [
+    104.0,
+    191.5,
+    278.5,
+    366.5,
+    453.5,
+    541.0,
+    628.5
+   ],
+   "tick_gaps_px": [
+    87.5,
+    87.0,
+    88.0,
+    87.0,
+    87.5,
+    87.5
+   ],
+   "loo_worst_px": 0.3696,
+   "loo_passes_at_STRICT_600dpi_tol": true,
+   "loo_passes_at_native_tol": true,
+   "calibration_px_per_decade": 87.4107,
+   "drawn_baseline_rows": [
+    628,
+    629
+   ],
+   "lowest_tick_px": 628.5,
+   "baseline_centre_px": 628.5,
+   "lowest_tick_minus_drawn_baseline_px": 0.0,
+   "n_bars_read": 48,
+   "n_refusals": 0,
+   "refusals": {},
+   "P9_effect_of_mask_closing": {
+    "n_readable_from_raw_mask": 43,
+    "n_moved": 36,
+    "n_moved_upward": 36,
+    "n_moved_downward": 0,
+    "max_move_px": 96,
+    "moved": [
+     [
+      "Brain/70",
+      420,
+      418
+     ],
+     [
+      "Brain/97",
+      443,
+      442
+     ],
+     [
+      "Brain/98",
+      426,
+      425
+     ],
+     [
+      "Heart/13",
+      549,
+      517
+     ],
+     [
+      "Heart/14",
+      511,
+      501
+     ],
+     [
+      "Heart/70",
+      468,
+      458
+     ],
+     [
+      "Heart/96",
+      497,
+      496
+     ],
+     [
+      "Heart/97",
+      486,
+      485
+     ],
+     [
+      "Heart/98",
+      483,
+      472
+     ],
+     [
+      "Heart/102",
+      416,
+      415
+     ],
+     [
+      "Lungs/13",
+      444,
+      433
+     ],
+     [
+      "Lungs/70",
+      431,
+      394
+     ],
+     [
+      "Lungs/96",
+      449,
+      426
+     ],
+     [
+      "Lungs/97",
+      425,
+      414
+     ],
+     [
+      "Lungs/98",
+      437,
+      400
+     ],
+     [
+      "Lungs/45",
+      447,
+      438
+     ],
+     [
+      "Liver/13",
+      334,
+      322
+     ],
+     [
+      "Liver/70",
+      239,
+      222
+     ],
+     [
+      "Liver/96",
+      274,
+      238
+     ],
+     [
+      "Liver/97",
+      247,
+      225
+     ],
+     [
+      "Liver/98",
+      220,
+      210
+     ],
+     [
+      "Liver/45",
+      283,
+      262
+     ],
+     [
+      "Liver/102",
+      155,
+      154
+     ],
+     [
+      "Kidneys/13",
+      514,
+      503
+     ],
+     [
+      "Kidneys/14",
+      509,
+      492
+     ],
+     [
+      "Kidneys/96",
+      458,
+      438
+     ],
+     [
+      "Kidneys/98",
+      425,
+      407
+     ],
+     [
+      "Kidneys/102",
+      341,
+      340
+     ],
+     [
+      "Spleen/13",
+      473,
+      377
+     ],
+     [
+      "Spleen/14",
+      378,
+      365
+     ],
+     [
+      "Spleen/70",
+      428,
+      416
+     ],
+     [
+      "Spleen/96",
+      473,
+      459
+     ],
+     [
+      "Spleen/97",
+      437,
+      430
+     ],
+     [
+      "Spleen/98",
+      425,
+      424
+     ],
+     [
+      "Spleen/45",
+      469,
+      459
+     ],
+     [
+      "Spleen/102",
+      327,
+      303
+     ]
+    ],
+    "what": "The raw colour mask is occluded by the error-bar STEM, which GraphPad draws down the centre of the bar. EVERY move must be UPWARD: an occlusion can only make a detector under-read, so a single downward move would mean the closing is filling something that is not a bar. The uniform sign is the evidence that this is a fix and not a nudge."
+   },
+   "organ_order_matches_colour_LUT": true
+  },
+  "S1A": {
+   "locus": "SI Figure S1A (p. 13)",
+   "quantity": "% of total luminescence",
+   "native_dpi_measured": 220.2,
+   "native_dpi_method": "image px width / image bbox pt width * 72",
+   "LOO_TOL_PX_at_600dpi": 1.5,
+   "LOO_TOL_PX_rescaled_to_native": 4.0872,
+   "TICK_RESIDUAL_PX_at_600dpi": 2.5,
+   "TICK_RESIDUAL_PX_rescaled_to_native": 6.812,
+   "n_ticks_detected": 5,
+   "n_ticks_expected": 5,
+   "tick_px": [
+    39.0,
+    120.0,
+    200.0,
+    281.0,
+    362.0
+   ],
+   "tick_gaps_px": [
+    81.0,
+    80.0,
+    81.0,
+    81.0
+   ],
+   "loo_worst_px": 0.5,
+   "loo_passes_at_STRICT_600dpi_tol": true,
+   "loo_passes_at_native_tol": true,
+   "calibration_px_per_decade": 80.7,
+   "drawn_baseline_rows": [
+    362,
+    362
+   ],
+   "lowest_tick_px": 362.0,
+   "baseline_centre_px": 362.0,
+   "lowest_tick_minus_drawn_baseline_px": 0.0,
+   "n_bars_read": 46,
+   "n_refusals": 2,
+   "refusals": {
+    "Spleen/97": "bar_top: left flank first-covered row 250, right flank 227, delta 23.0 px > 2.0 px tolerance.\nA real top rule is at the same row in both flanks. Disagreement this large means the detection is tracking something that is not a horizontal rule -- a sloped edge, an overlapping neighbour bar, or a marker. Refusing rather than returning the better-looking flank.",
+    "Spleen/45": "bar_top: left flank first-covered row 223, right flank 229, delta 6.0 px > 2.0 px tolerance.\nA real top rule is at the same row in both flanks. Disagreement this large means the detection is tracking something that is not a horizontal rule -- a sloped edge, an overlapping neighbour bar, or a marker. Refusing rather than returning the better-looking flank."
+   },
+   "P9_effect_of_mask_closing": {
+    "n_readable_from_raw_mask": 20,
+    "n_moved": 12,
+    "n_moved_upward": 12,
+    "n_moved_downward": 0,
+    "max_move_px": 108,
+    "moved": [
+     [
+      "Brain/13",
+      231,
+      213
+     ],
+     [
+      "Brain/14",
+      205,
+      193
+     ],
+     [
+      "Brain/96",
+      326,
+      218
+     ],
+     [
+      "Brain/45",
+      243,
+      227
+     ],
+     [
+      "Brain/102",
+      270,
+      261
+     ],
+     [
+      "Heart/98",
+      290,
+      284
+     ],
+     [
+      "Lungs/97",
+      237,
+      212
+     ],
+     [
+      "Liver/98",
+      43,
+      42
+     ],
+     [
+      "Kidneys/96",
+      242,
+      219
+     ],
+     [
+      "Kidneys/97",
+      247,
+      228
+     ],
+     [
+      "Kidneys/45",
+      245,
+      226
+     ],
+     [
+      "Spleen/98",
+      248,
+      239
+     ]
+    ],
+    "what": "The raw colour mask is occluded by the error-bar STEM, which GraphPad draws down the centre of the bar. EVERY move must be UPWARD: an occlusion can only make a detector under-read, so a single downward move would mean the closing is filling something that is not a bar. The uniform sign is the evidence that this is a fix and not a nudge."
+   }
+  },
+  "SEEDED": {
+   "check": "P8 axis LOO at the WIDENED native tolerance, seeded in THIS panel's geometry",
+   "what": "one of the seven decade ticks displaced by 0 / 1 / 2 / 3.25 / 5.0 px",
+   "clean_exit": 0,
+   "seeded_exit": 0,
+   "clean_metric": "0.00 px seed -> passes",
+   "seeded_metric": "5.00 px seed -> CAUGHT",
+   "agreement_count_moved": true,
+   "CREDITED": true,
+   "seeded_output_tail": "SEED 0.00 px -> LOO 0.3696  strict=True native=True\nSEED 1.00 px -> LOO 1.3333  strict=True native=True\nSEED 2.00 px -> LOO 2.3333  strict=False native=True\nSEED 3.25 px -> LOO 3.5833  strict=False native=False\nSEED 5.00 px -> LOO 5.3333  strict=False native=False\nTOL_NATIVE 2.5302\n"
+  }
+ },
+ "P10_P11_P12_cross_panel": {
+  "_what": "SI Fig S1A states '% of total signal = (organ signal)/(total organ signal)*100'. So S1A is a CLOSED-FORM function of S2A. Neither panel was used to calibrate the other; the two were digitised from separate rasters at different dpi with separately sampled colour LUTs.",
+  "S1A_bars_refused": [
+   "97/Spleen",
+   "45/Spleen"
+  ],
+  "P11_S1A_vs_100xS2A_over_sum": {
+   "13": {
+    "S1A_sum_over_organs": 84.386,
+    "predicted": {
+     "Brain": 0.6312,
+     "Heart": 0.4482,
+     "Lungs": 4.0969,
+     "Liver": 76.2649,
+     "Kidneys": 0.6481,
+     "Spleen": 17.9106
+    },
+    "observed": {
+     "Brain": 0.698,
+     "Heart": 0.3945,
+     "Lungs": 4.094,
+     "Liver": 63.3483,
+     "Kidneys": 0.6408,
+     "Spleen": 15.2109
+    },
+    "obs_over_pred": {
+     "Brain": 1.1058,
+     "Heart": 0.8802,
+     "Lungs": 0.9993,
+     "Liver": 0.8306,
+     "Kidneys": 0.9887,
+     "Spleen": 0.8493
+    },
+    "worst_abs_log10_dev": 0.0806
+   },
+   "14": {
+    "S1A_sum_over_organs": 84.979,
+    "predicted": {
+     "Brain": 1.242,
+     "Heart": 1.1783,
+     "Lungs": 7.8512,
+     "Liver": 45.8599,
+     "Kidneys": 1.4935,
+     "Spleen": 42.3752
+    },
+    "observed": {
+     "Brain": 1.2351,
+     "Heart": 1.2003,
+     "Lungs": 7.4536,
+     "Liver": 37.9041,
+     "Kidneys": 1.3844,
+     "Spleen": 35.8017
+    },
+    "obs_over_pred": {
+     "Brain": 0.9944,
+     "Heart": 1.0187,
+     "Lungs": 0.9494,
+     "Liver": 0.8265,
+     "Kidneys": 0.927,
+     "Spleen": 0.8449
+    },
+    "worst_abs_log10_dev": 0.0827
+   },
+   "70": {
+    "S1A_sum_over_organs": 92.011,
+    "predicted": {
+     "Brain": 0.556,
+     "Heart": 0.1938,
+     "Lungs": 1.0462,
+     "Liver": 97.1305,
+     "Kidneys": 0.4874,
+     "Spleen": 0.5861
+    },
+    "observed": {
+     "Brain": 0.5556,
+     "Heart": 0.1933,
+     "Lungs": 0.983,
+     "Liver": 89.2141,
+     "Kidneys": 0.4422,
+     "Spleen": 0.6227
+    },
+    "obs_over_pred": {
+     "Brain": 0.9992,
+     "Heart": 0.9972,
+     "Lungs": 0.9396,
+     "Liver": 0.9185,
+     "Kidneys": 0.9073,
+     "Spleen": 1.0626
+    },
+    "worst_abs_log10_dev": 0.0423
+   },
+   "96": {
+    "S1A_sum_over_organs": 91.702,
+    "predicted": {
+     "Brain": 0.3682,
+     "Heart": 0.1096,
+     "Lungs": 0.6928,
+     "Liver": 98.0339,
+     "Kidneys": 0.505,
+     "Spleen": 0.2905
+    },
+    "observed": {
+     "Brain": 0.6052,
+     "Heart": 0.1826,
+     "Lungs": 0.7604,
+     "Liver": 89.2141,
+     "Kidneys": 0.5882,
+     "Spleen": 0.3519
+    },
+    "obs_over_pred": {
+     "Brain": 1.6439,
+     "Heart": 1.666,
+     "Lungs": 1.0976,
+     "Liver": 0.91,
+     "Kidneys": 1.1646,
+     "Spleen": 1.2117
+    },
+    "worst_abs_log10_dev": 0.2217
+   },
+   "97": {
+    "INCOMPLETE": true,
+    "missing": [
+     "Spleen"
+    ],
+    "obs_over_pred": {
+     "Brain": 1.0905,
+     "Heart": 1.0811,
+     "Lungs": 1.0643,
+     "Liver": 0.91,
+     "Kidneys": 1.0833
+    }
+   },
+   "98": {
+    "S1A_sum_over_organs": 93.635,
+    "predicted": {
+     "Brain": 0.3401,
+     "Heart": 0.0986,
+     "Lungs": 0.6571,
+     "Liver": 98.0086,
+     "Kidneys": 0.5464,
+     "Spleen": 0.3492
+    },
+    "observed": {
+     "Brain": 0.3324,
+     "Heart": 0.0921,
+     "Lungs": 0.5716,
+     "Liver": 91.7963,
+     "Kidneys": 0.51,
+     "Spleen": 0.3324
+    },
+    "obs_over_pred": {
+     "Brain": 0.9774,
+     "Heart": 0.9336,
+     "Lungs": 0.87,
+     "Liver": 0.9366,
+     "Kidneys": 0.9333,
+     "Spleen": 0.952
+    },
+    "worst_abs_log10_dev": 0.0605
+   },
+   "45": {
+    "INCOMPLETE": true,
+    "missing": [
+     "Spleen"
+    ],
+    "obs_over_pred": {
+     "Brain": 1.0376,
+     "Heart": 0.8296,
+     "Lungs": 0.9843,
+     "Liver": 0.9168,
+     "Kidneys": 0.9359
+    }
+   },
+   "102": {
+    "S1A_sum_over_organs": 89.842,
+    "predicted": {
+     "Brain": 0.1923,
+     "Heart": 0.0995,
+     "Lungs": 0.7564,
+     "Liver": 96.3324,
+     "Kidneys": 0.7176,
+     "Spleen": 1.9018
+    },
+    "observed": {
+     "Brain": 0.1774,
+     "Heart": 0.087,
+     "Lungs": 0.698,
+     "Liver": 86.7046,
+     "Kidneys": 0.6227,
+     "Spleen": 1.5518
+    },
+    "obs_over_pred": {
+     "Brain": 0.923,
+     "Heart": 0.8738,
+     "Lungs": 0.9228,
+     "Liver": 0.9001,
+     "Kidneys": 0.8678,
+     "Spleen": 0.8159
+    },
+    "worst_abs_log10_dev": 0.0883
+   }
+  },
+  "P11_summary": {
+   "n": 46,
+   "median_obs_over_pred": 0.9381,
+   "worst_obs_over_pred": 1.666,
+   "n_within_1pct": 4,
+   "n_within_5pct": 10,
+   "n_within_10pct": 31,
+   "n_within_20pct": 43
+  },
+  "P10_S1A_percentages_sum_to_100": {
+   "per_lnp": {
+    "13": 84.386,
+    "14": 84.979,
+    "70": 92.011,
+    "96": 91.702,
+    "98": 93.635,
+    "102": 89.842
+   },
+   "n_lnps_complete": 6,
+   "worst_abs_dev_from_100": 15.614,
+   "what": "The authors never print this. It is implied by their own definition of the quantity, and it tests the S1A read WITHOUT reference to S2A."
+  },
+  "P12_closing_improves_agreement_with_S1A": {
+   "n": 29,
+   "lnps_compared": [
+    "13",
+    "96",
+    "97",
+    "98",
+    "102"
+   ],
+   "lnps_excluded": [
+    "14",
+    "70",
+    "45"
+   ],
+   "why_excluded": "the raw, un-closed mask REFUSED at least one of that LNP's six organs, so no organ total can be formed for it from the raw read",
+   "closed": {
+    "median_abs_log10_dev": 0.04094,
+    "n_within_10pct": 17,
+    "n_within_20pct": 26
+   },
+   "raw_unclosed": {
+    "median_abs_log10_dev": 0.10172,
+    "n_within_10pct": 4,
+    "n_within_20pct": 13
+   },
+   "what": "THE AGREEMENT COUNT MUST MOVE. This is the seed for the mask-closing repair: the un-closed read is the defect, and S1A -- a different raster, different dpi, different colour LUT, different calibration -- is the external judge. If the two columns were equal, the closing would be unproven."
+  }
+ },
+ "benchmark_tops_the_screen": {
+  "per_organ": {
+   "Brain": {
+    "order": [
+     "102",
+     "70",
+     "98",
+     "97",
+     "96",
+     "45",
+     "14",
+     "13"
+    ],
+    "top": "102",
+    "benchmark_SM102_rank": 1,
+    "SM102_over_best_novel": 2.0909
+   },
+   "Heart": {
+    "order": [
+     "102",
+     "70",
+     "98",
+     "97",
+     "45",
+     "96",
+     "14",
+     "13"
+    ],
+    "top": "102",
+    "benchmark_SM102_rank": 1,
+    "SM102_over_best_novel": 3.1041
+   },
+   "Lungs": {
+    "order": [
+     "102",
+     "70",
+     "98",
+     "97",
+     "96",
+     "14",
+     "13",
+     "45"
+    ],
+    "top": "102",
+    "benchmark_SM102_rank": 1,
+    "SM102_over_best_novel": 4.3717
+   },
+   "Liver": {
+    "order": [
+     "102",
+     "98",
+     "70",
+     "97",
+     "96",
+     "45",
+     "13",
+     "14"
+    ],
+    "top": "102",
+    "benchmark_SM102_rank": 1,
+    "SM102_over_best_novel": 4.3717
+   },
+   "Kidneys": {
+    "order": [
+     "102",
+     "98",
+     "70",
+     "97",
+     "96",
+     "45",
+     "14",
+     "13"
+    ],
+    "top": "102",
+    "benchmark_SM102_rank": 1,
+    "SM102_over_best_novel": 5.8411
+   },
+   "Spleen": {
+    "order": [
+     "102",
+     "14",
+     "13",
+     "70",
+     "98",
+     "97",
+     "96",
+     "45"
+    ],
+    "top": "102",
+    "benchmark_SM102_rank": 1,
+    "SM102_over_best_novel": 5.1203
+   }
+  },
+  "answer": "YES, on absolute delivery. SM-102 (b-LNP 102) is ranked 1st of 8 in ALL SIX organs, including the brain, where it is 2.091x the best novel formulation (b-LNP 70, C12-200).",
+  "but": "The paper's claim is about SELECTIVITY, not absolute brain signal. Brain/liver ratio: b-LNP 14 (C14-306) = 0.0271 vs SM-102 = 0.0020, a 13.6x advantage. So the lead wins on the ratio while losing on every raw organ value.",
+  "brain_over_liver": {
+   "13": 0.00828,
+   "14": 0.02708,
+   "70": 0.00572,
+   "96": 0.00376,
+   "97": 0.00329,
+   "98": 0.00347,
+   "45": 0.00464,
+   "102": 0.002
+  },
+  "why_this_matters": "CLAUDE.md section 8 has an open decision on whether benchmark-only pairs belong in Stage 5's pooled concordance. This is a case where the universal positive control tops the screen outright in every organ, which is the pattern that can push cross-lab concordance toward +1 for reasons unrelated to transferable SAR."
+ },
+ "corpus_overlap": {
+  "summary": {
+   "n_ours": 15,
+   "n_full_inchikey_match": 3,
+   "n_skeleton_only_match": 0,
+   "n_no_match": 12
+  },
+  "exact_hits": [
+   {
+    "IL_name": "C12-200",
+    "InChIKey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+    "corpus_rows_skeleton": 518,
+    "corpus_experiments": [
+     "AC_2025",
+     "JW_2024"
+    ],
+    "corpus_names": [
+     "C12-200",
+     "other"
+    ]
+   },
+   {
+    "IL_name": "C12-114",
+    "InChIKey": "AQIQHLVHJDTOJT-UHFFFAOYSA-N",
+    "corpus_rows_skeleton": 1,
+    "corpus_experiments": [
+     "KL_2010"
+    ],
+    "corpus_names": [
+     "114C12"
+    ]
+   },
+   {
+    "IL_name": "C14-114",
+    "InChIKey": "OPKMZUVSLCEDFW-UHFFFAOYSA-N",
+    "corpus_rows_skeleton": 1,
+    "corpus_experiments": [
+     "KL_2010"
+    ],
+    "corpus_names": [
+     "114C14"
+    ]
+   }
+  ],
+  "near_miss_same_amine_core": {
+   "200": {
+    "near_miss_unique_structures_excluding_ours": 50,
+    "near_miss_rows": 59,
+    "near_miss_experiments": [
+     "BL_2023",
+     "JW_2024",
+     "KW_2014",
+     "LX_2024_2",
+     "NG_2025",
+     "NG_2025_2",
+     "XH_2025"
+    ]
+   },
+   "306": {
+    "near_miss_unique_structures_excluding_ours": 436,
+    "near_miss_rows": 576,
+    "near_miss_experiments": [
+     "BL_2023",
+     "JC_2023",
+     "JM_2016",
+     "JW_2024",
+     "KW_2014",
+     "KZ_2016",
+     "LL_2026_2",
+     "LX_2024",
+     "LX_2024_2",
+     "NC_2024",
+     "NG_2025",
+     "NG_2025_2",
+     "SL_2020",
+     "SL_2021",
+     "XH_2024_2",
+     "XH_2025",
+     "YX_2024",
+     "YX_2026_SDL",
+     "YY_2023",
+     "ZC_2023"
+    ]
+   },
+   "114": {
+    "near_miss_unique_structures_excluding_ours": 3125,
+    "near_miss_rows": 3488,
+    "near_miss_experiments": [
+     "AA_2008",
+     "AP_2025",
+     "BL_2023",
+     "BL_2023_3CR",
+     "BL_2024",
+     "FG_2026",
+     "JC_2023",
+     "JM_2016",
+     "JW_2024",
+     "KL_2010",
+     "KW_2014",
+     "KZ_2016",
+     "LL_2012",
+     "LL_2026",
+     "LL_2026_2",
+     "LR_2023",
+     "LX_2024",
+     "LX_2024_2",
+     "MO_2026",
+     "NC_2024",
+     "NG_2025",
+     "NG_2025_2",
+     "QL_2026",
+     "SL_2020",
+     "SL_2021",
+     "XH_2024_2",
+     "XH_2025",
+     "YR_2024",
+     "YX_2024",
+     "YX_2026",
+     "YX_2026_SDL",
+     "YY_2023",
+     "ZC_2023",
+     "ZH_2023"
+    ]
+   },
+   "494": {
+    "near_miss_unique_structures_excluding_ours": 15,
+    "near_miss_rows": 15,
+    "near_miss_experiments": [
+     "LX_2024_2"
+    ]
+   },
+   "490": {
+    "near_miss_unique_structures_excluding_ours": 15,
+    "near_miss_rows": 15,
+    "near_miss_experiments": [
+     "LX_2024_2"
+    ]
+   }
+  },
+  "superset_sweep": {
+   "SMARTS": "[NX3;!$(N=*)][CH2][CH1]([OX2H1])[CH2]",
+   "LABEL": "SUPERSET - NOT an identity match",
+   "why_superset": "This SMARTS matches ANY tertiary-amine 2-hydroxyalkyl motif, including lipidoids from unrelated libraries and any lipid that merely happens to carry an N-CH2-CH(OH)-CH2 fragment. It is reported as an upper bound on how much of the corpus is CHEMICALLY NEARBY, and must not be read as overlap.",
+   "unique_structures": 1517,
+   "rows": 2356,
+   "experiments": [
+    "AA_2008",
+    "AC_2025",
+    "BL_2023",
+    "JL_2024",
+    "JM_2016",
+    "JW_2024",
+    "KL_2010",
+    "LL_2025",
+    "LL_2026",
+    "LL_2026_2",
+    "LX_2024_3",
+    "RG_2023",
+    "SW_2024",
+    "SX_2025",
+    "XD_2026",
+    "XH_2024",
+    "ZT_2026"
+   ],
+   "rows_vitro": 2068,
+   "rows_vivo": 288
+  }
+ },
+ "P13_C10_anchor": {
+  "independence_checked_how": "ast.walk over this module at run time; see audit_independence()",
+  "independent": true,
+  "findings": [],
+  "forbidden_calls": [
+   "AddAtom",
+   "AddBond",
+   "CombineMols",
+   "RWMol",
+   "ReactionFromSmarts",
+   "RemoveAtom",
+   "ReplaceSubstructs",
+   "RunReactants",
+   "attach",
+   "esterify"
+  ],
+  "forbidden_imports": [
+   "assemble",
+   "curation.lib",
+   "curation.lib.assemble"
+  ],
+  "anchors": {
+   "C10-306": {
+    "anchor_formula": "C47H99N3O4",
+    "anchor_exact_mass": 769.76356,
+    "enumeration_formula": "C47H99N3O4",
+    "anchor_InChIKey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+    "enumeration_InChIKey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+    "skeleton_match": true,
+    "full_match": true,
+    "anchor_written_SMILES": "CCCCCCCCC(O)CN(CC(O)CCCCCCCC)CCCN(C)CCCN(CC(O)CCCCCCCC)CC(O)CCCCCCCC",
+    "anchor_canonical": "CCCCCCCCC(O)CN(CCCN(C)CCCN(CC(O)CCCCCCCC)CC(O)CCCCCCCC)CC(O)CCCCCCCC",
+    "enumeration_SMILES": "CCCCCCCCC(O)CN(CCCN(C)CCCN(CC(O)CCCCCCCC)CC(O)CCCCCCCC)CC(O)CCCCCCCC",
+    "written_string_is_byte_identical_to_enumeration": false,
+    "canonical_is_byte_identical_to_enumeration": true,
+    "byte_identity_note": "Byte-identity of the CANONICAL form is EXPECTED when both are right and is NOT evidence of copying (F-037). The written string above is what was authored; compare THAT."
+   },
+   "C14-200": {
+    "anchor_formula": "C80H165N5O5",
+    "anchor_exact_mass": 1276.28107,
+    "enumeration_formula": "C80H165N5O5",
+    "anchor_InChIKey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+    "enumeration_InChIKey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+    "skeleton_match": true,
+    "full_match": true,
+    "anchor_written_SMILES": "CCCCCCCCCCCCC(O)CN(CC(O)CCCCCCCCCCCC)CCN1CCN(CC1)CCN(CC(O)CCCCCCCCCCCC)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC",
+    "anchor_canonical": "CCCCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC",
+    "enumeration_SMILES": "CCCCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC",
+    "written_string_is_byte_identical_to_enumeration": false,
+    "canonical_is_byte_identical_to_enumeration": true,
+    "byte_identity_note": "Byte-identity of the CANONICAL form is EXPECTED when both are right and is NOT evidence of copying (F-037). The written string above is what was authored; compare THAT."
+   }
+  },
+  "SEEDED": {
+   "check": "C10 anchor (identical formula AND exact mass)",
+   "what": "an OH moved C2->C3 on one arm of C10-306",
+   "clean_exit": 0,
+   "seeded_exit": 1,
+   "clean_metric": "anchor==enum:True",
+   "seeded_metric": "anchor==enum:False (delta mass 0.0)",
+   "agreement_count_moved": true,
+   "CREDITED": true,
+   "seeded_output_tail": "formula  good/seed: C47H99N3O4 C47H99N3O4\nexactmass delta   : 0.0\nMATCHES_GOOD True\nMATCHES_SEED False\n"
+  }
+ },
+ "emitted_rows": {
+  "n_rows": 48,
+  "n_distinct_IL_structures": 5,
+  "n_distinct_formulations": 8,
+  "n_organs": 6,
+  "confidence_counts": {
+   "high": 48,
+   "medium": 0,
+   "low": 0,
+   "": 0
+  },
+  "rows_with_a_caveat_F024": 0,
+  "z_mean": 4.1667e-08,
+  "z_sd": 0.999999974,
+  "SEEDED_emit": [
+   {
+    "check": "emit.emit_rows refuses a LITERAL confidence (F-011)",
+    "what": "confidence=\"high\" passed as a string instead of a callable",
+    "clean_exit": 0,
+    "seeded_exit": 1,
+    "clean_metric": "callable accepted",
+    "seeded_metric": "literal REJECTED",
+    "agreement_count_moved": true,
+    "CREDITED": true,
+    "seeded_output_tail": "RAISED EmitError emit: confidence='high' is a LITERAL.\nEvery row would receive 'high' regardless of its own record. That is error class 29, and it has now been found three times (F-011, F-025, F-046). In F-011 it rela\n"
+   },
+   {
+    "check": "emit.emit_rows refuses a CAVEAT WITH NO NOTE (F-024)",
+    "what": "confidence=\"low\" with an empty curation_note",
+    "clean_exit": 0,
+    "seeded_exit": 1,
+    "clean_metric": "note present -> accepted",
+    "seeded_metric": "empty note REJECTED",
+    "agreement_count_moved": true,
+    "CREDITED": true,
+    "seeded_output_tail": "RAISED EmitError emit_rows('seed') item 'a': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='', value_is_bound='') and its curation_note\n"
+   },
+   {
+    "check": "conf_rule refuses to assign confidence from an assertion",
+    "what": "a record asserting an IUPAC structure with no stoichiometry evidence",
+    "clean_exit": 0,
+    "seeded_exit": 1,
+    "clean_metric": "evidence present -> high",
+    "seeded_metric": "evidence absent -> REFUSED",
+    "agreement_count_moved": true,
+    "CREDITED": true,
+    "seeded_output_tail": "REFUSED\n"
+   }
+  ]
+ },
+ "P14_pool_membership_from_text_COLOUR": {
+  "n_bLNP_numbers_assigned": 98,
+  "n_bLNP_rows_tabulated": 93,
+  "numbers_assigned_but_never_tabulated": [
+   19,
+   41,
+   55,
+   56,
+   57,
+   67,
+   93,
+   95
+  ],
+  "n_greyed_excluded_from_pool": 12,
+  "greyed_bLNPs": [
+   1,
+   2,
+   7,
+   20,
+   23,
+   33,
+   36,
+   51,
+   60,
+   63,
+   73,
+   74
+  ],
+  "n_in_pooled_administration": 78,
+  "P14_grey_vs_stated_criteria": {
+   "n_compared": 90,
+   "n_disagreeing": 0,
+   "disagreements": [],
+   "what": "The caption's four thresholds and the grey colouring are two independent statements of the same fact. Agreement validates both the colour read and the criteria transcription."
+  }
+ },
+ "pooled_screen_admissibility": {
+  "corrected": true,
+  "first_verdict": "inadmissible by design (a pooled value is competitive)",
+  "corrected_verdict": "ADMISSIBLE IN KIND. data/data_vivo.csv has an Experiment_batching column, vocabulary {barcoded, individual}; LR_2023 contributes 407 barcoded in-vivo rows over 383 unique ILs (protein_adundance_normalized, liver). Pooling alone is not disqualifying -- the corpus declares it on the row. The binding constraint is ACQUISITION.",
+  "pooled_values_emitted": 0,
+  "pooled_values_emitted_because": "main-article Figure 2 was not acquired",
+  "normalisation_residual_computed": false,
+  "normalisation_residual_not_computed_because": "the formula, the worked example and the values are all in the unacquired main article"
+ },
+ "sibling_same_lab_cross_check": {
+  "sibling": "curation/mitchellmj_38982196 (Wang et al., Nat Chem 2024, MW_2024)",
+  "same_lab": true,
+  "n_sibling_structures": 100,
+  "full_inchikey_overlap": 0,
+  "skeleton_inchikey_overlap": 0,
+  "sibling_chemistry": "amidine-incorporated degradable lipids; thioether-ester tails (e.g. CCCCCCCCCCNC(=N)CCCSCCC(=O)OCCCCCCCCC)",
+  "sibling_naming_grammar": "<amine index>T-O<tail index>, e.g. 1T-O9 .. 25T-O16",
+  "finding": "ZERO shared chemistry despite a shared lab, and the two amine catalogues are DIFFERENT AND LOCALLY SCOPED: MW_2024's amines are numbered 1-25 from its own building-block set, while this paper's 200/306/114/490/494 are the Anderson/Akinc lipidoid catalogue shared with KL_2010, KW_2014 and AC_2025. Same lab is not same numbering -- a leading token is not an identity."
+ },
+ "value_counts": {
+  "total": 910,
+  "admissible": 48,
+  "inadmissible": 862,
+  "by_locus": {
+   "SI Figure S2A (p. 14)": {
+    "total": 48,
+    "admissible": 48
+   },
+   "SI Figure S1A (p. 13)": {
+    "total": 46,
+    "admissible": 0
+   },
+   "SI Table S1 (pp. 22-24)": {
+    "total": 372,
+    "admissible": 0
+   },
+   "SI Table S2 (pp. 25-27)": {
+    "total": 372,
+    "admissible": 0
+   },
+   "SI Table S3 (p. 28)": {
+    "total": 48,
+    "admissible": 0
+   },
+   "SI Table S4 (p. 28)": {
+    "total": 24,
+    "admissible": 0
+   }
+  }
+ },
+ "seed_summary": {
+  "n_checks_seeded": 9,
+  "n_credited": 9,
+  "rule": "A check is credited only when the AGREEMENT COUNT MOVES under the seed, or a clean run exits 0 where the seeded run exits non-zero. One seed (P1) initially exited non-zero from an unrelated TypeError and was briefly credited; 07_seed_checks.py now refuses to credit a seed that did not reach its own metric."
+ },
+ "licence": {
+  "article": {
+   "journal": "ACS Nano (American Chemical Society)",
+   "isOpenAccess": "N",
+   "europepmc_license": null,
+   "fullTextUrl_availability": "Subscription required",
+   "verdict": "NOT CC0/CC-BY. Closed, subscription. CLAUDE.md section 8 requires CC0/CC-BY compatibility before corpus RELEASE; this source does not have it, and that is a release-time question recorded in DECISIONS.md D-6."
+  },
+  "si_pdf": {
+   "note": "Downloaded through an entitled institutional session (watermark: PHILLIPS EXETER ACADEMY, 10 November 2026) before this run began. No separate licence is stated on the file."
+  },
+  "repository": {
+   "exists": false,
+   "searched": "provenance/tools/find_repo.py, DOI + PMID code search + 3 repo-name queries, 0 hits"
+  }
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser was written.",
+ "_why": "The two curations that took their values from a publisher Source Data file (NG_2025) and from the authors' own repository (WT_2026) have ZERO digitisation defects between them. The four that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+
+ "_exhaustion_evidence": {
+  "tier_1": "The Europe PMC REST record for PMID 40644303 lists no data-availability or source-data item, and the article has no 'Supporting Information' entry other than the one SI PDF. CHECKABLE: `curl .../europepmc/webservices/rest/search?query=DOI:\"10.1021/acsbiomaterials.5c00463\"&resultType=core` -> hasSuppl=Y with exactly one supplement, NIHMS2133731-supplement-SI.pdf, which is the file in source/.",
+  "tier_2": "The SI has 28 pages and contains no xlsx/csv/docx. CHECKABLE: the only supplementary item in the JATS is `NIHMS2133731-supplement-SI.pdf`. Its structure is p1 TOC, p2 Figures S1-S2 (two rasters), p3 Figure S3 + S4 captions + the start of the NMR list, pp4-6 NMR peak lists, pp7-28 NMR spectra rasters.",
+  "tier_3": "find_repo.py run 2026-11-10 with --doi 10.1021/acsbiomaterials.5c00463 --pmid 40644303 --title 'Structure Activity Ionizable' --author Siegwart returned 0 candidate repositories; the 3 GitHub text hits are unrelated projects (an enzyme pH-optima repo, a packaging-foam page, and a different authors' JMP modelling repo).",
+  "tier_4": "The JATS XML has `table-wrap` count 0 -- the article contains no marked-up table at all. The SI DOES have one real text table (p3, Figure S3) and it is used, at tier 4, for every quantity it carries. It carries diameter, PDI, pKa and encapsulation efficiency; it carries NO luminescence and NO radiance, which is why the delivery endpoints fall to tier 5."
+ },
+
+ "_also": "Once the numbers are in hand from tiers 1-3, use the figure to VERIFY rather than to extract. Here there are no tiers 1-3 for any delivery endpoint, so the inverse was done: the tier-4 SI table (pKa and diameter for all 42 in-vivo lipids) is used to IDENTIFY the unlabelled points in Figures 4b and 5a, which then give two readings of the same 42 radiances that are independent of the bar charts.",
+
+ "panels": [
+  {
+   "panel": "Figure 1a, LOWER half-stripe of each cell (mRNA)",
+   "supplies": "465 in-vitro mRNA delivery values, IGROV-1, as a 3-level ordinal (log-transformed luminescence 0-1, 1-2, >2)",
+   "tier": "5_pixels",
+   "locator": "source/figures/fig1.jpg (1500x943), panel a, rows 3A1..6A3 x columns SC1..SO8",
+   "why_tiers_1_to_4_failed": "There is no Source Data file (the JATS lists one supplementary item and it is the SI PDF), no author repository (find_repo.py, 0 hits), no SI table of any kind beyond the 42-row physical-characterisation table on SI p3, and the article's JATS has table-wrap count 0. `pymupdf` text extraction over all 28 SI pages returns no luminescence number anywhere: the only numbers in the SI text layer are diameters, PDIs, pKas, E.E. percentages and NMR shifts/integrals. So no tier 1-4 artefact contains these 465 values in any form.",
+   "mitigation": "The readout is DISCRETE (three legend swatches per cargo), which is the best case for a pixel read: nearest-neighbour against swatches sampled from this same raster, with heatmap.match raising above colour distance 5. It is not a continuous ramp, so there is no scale to get wrong -- only a grid, and the grid is checked against 465 independently-known library members.",
+   "verified_against": "All 465 (core, tail) pairs are present in the corpus as KZ_2016 (Zhou et al., PNAS 2016, PMID 26729861), the library this screen was drawn from. 15 cores x 31 tails = 465 exactly, and 465/465 match a KZ_2016 IL_name. That fixes the row order, the column order and the panel extent without using any colour."
+  },
+  {
+   "panel": "Figure 1a, UPPER half-stripe of each cell (siRNA)",
+   "supplies": "465 siRNA knockdown values as a 3-level ordinal (0-25 / 25-70 / 70-100 % knockdown)",
+   "tier": "5_pixels",
+   "locator": "same panel, upper stripe",
+   "why_tiers_1_to_4_failed": "same as above",
+   "EMITTED": "NO",
+   "why_not_emitted": "This is not this paper's measurement. The main text says 'We analyzed the data from the prior siRNA screen and qualitatively classified...' -- i.e. the siRNA half is a RE-BINNING of reference 11 (Zhou et al., PNAS 2016, PMID 26729861), which is already in the corpus as KZ_2016 at 4 levels and 1,512 lipids. Emitting it would create a second Experiment_ID carrying the same laboratory's same measurements at coarser resolution, which is exactly the 'fabricate a lab' failure that kept XD_2026's LipidDB out. It IS read, and it is used as a check (see 07_qc.json, check Q6). Queued as D-2.",
+   "verified_against": "corpus KZ_2016 Experiment_value (4 discrete levels) -- monotone agreement is tested, not assumed."
+  },
+  {
+   "panel": "Figure 2b, 18 bars (3A4, 3A4V, 3A4V2 x SC5-SC10)",
+   "supplies": "18 in-vivo average liver radiance values, p/sec/cm2/sr, C57BL/6, 6 h, 0.25 mg/kg Luc mRNA",
+   "tier": "5_pixels",
+   "locator": "source/figures/fig2.jpg, panel b; linear y axis 0 to 1e6 with printed ticks at 0, 2e5, 4e5, 6e5, 8e5, 1e6",
+   "why_tiers_1_to_4_failed": "Same exhaustion as Figure 1a. The SI p3 text table carries diameter, PDI, pKa and E.E. for these same 18 lipids but no radiance; the article has no marked-up table; there is no repository.",
+   "verified_against": "Figure 4b left panel (radiance vs size) and Figure 5a left panel (radiance vs pKa) replot the SAME 18 values against quantities we hold EXACTLY from the tier-4 SI table, so each scatter point can be assigned to a named lipid by its x coordinate and its y read independently of the bars. Figure 5b additionally prints a regression slope, intercept and R-squared per core family, which constrains the ABSOLUTE y scale and not merely its shape."
+  },
+  {
+   "panel": "Figure 3b, 24 bars (4A3, 4A5, 5A4, 5A5 x SC5-SC10)",
+   "supplies": "24 in-vivo average liver radiance values, same assay",
+   "tier": "5_pixels",
+   "locator": "source/figures/fig3.jpg, panel b; linear y axis 0 to 6e7 with printed ticks at 0, 2e7, 4e7, 6e7",
+   "why_tiers_1_to_4_failed": "as above",
+   "verified_against": "Figure 4b centre and right panels, Figure 5a centre and right panels, Figure 5b panels 4A3 / 4A5 / 5A4 / 5A5.",
+   "WARNING": "Figure 2b's axis tops out at 1e6 and Figure 3b's at 6e7. The two panels are drawn on scales ~60x apart and share NO lipid and NO benchmark control, so whether they are one experiment is not decidable from the paper. See D-1."
+  },
+  {
+   "panel": "SI Figure S3 (SI p3) -- physical characterisation table",
+   "supplies": "Diameter (nm), PDI, pKa, E.E. (%) for all 42 in-vivo formulations",
+   "tier": "4_pdf_text_table",
+   "locator": "source/ab5c00463_si_001.pdf page 3, text layer (pymupdf get_text); two blocks, 18 lipids then 24 lipids, each block name-list then four value rows",
+   "why_tiers_1_to_4_failed": "",
+   "used_for": "NOT a corpus delivery endpoint (CLAUDE.md's in-vivo definition excludes diameter and zeta). Used (a) to identify the unlabelled scatter points in Figures 4b and 5a, and (b) as the independent x-vector for the Figure 5a reading. It is NEVER used to calibrate an axis it then validates (error class 27): axis calibration comes only from detected ticks, via curation/lib/axis.py, which has no API for supplying an origin."
+  },
+  {
+   "panel": "Figure 5b, 7 printed linear regressions (Y = m*X + b, R squared)",
+   "supplies": "21 printed statistics over the same 42 radiance values",
+   "tier": "4_pdf_text_table",
+   "locator": "source/figures/fig5.jpg, panel b, printed in-panel; transcribed in 07_qc.json check Q5",
+   "why_tiers_1_to_4_failed": "",
+   "used_for": "The only check available on the ABSOLUTE scale of the radiances. R-squared is invariant to any affine rescaling of y, so it tests shape only; the SLOPE and INTERCEPT are in absolute radiance units, so a uniform multiplicative error in our y read would move both by the same factor and be visible. CLAUDE.md: passing printed statistics is necessary and not sufficient -- so the geometric checks (Q2, Q3) are the primary ones and this is corroboration."
+  },
+  {
+   "panel": "SI Figures S1 and S2 (SI p2)",
+   "supplies": "cell viability of the 465 lipids in IGROV-1",
+   "tier": "5_pixels",
+   "locator": "source/ab5c00463_si_001.pdf page 2, two embedded rasters (1199x862 and 1333x816)",
+   "EMITTED": "NO",
+   "why_not_emitted": "Viability is not a delivery endpoint. The corpus's in-vitro definition excludes viability-class readouts (the 90 hemolysis_percent rows were trimmed out of LNPDB on exactly this ground). Read only to confirm the paper's own claim that >90% viability held for the majority of LNPs."
+  }
+ ]
+}

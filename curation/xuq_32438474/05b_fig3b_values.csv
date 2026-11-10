@@ -1,0 +1,49 @@
+panel,sample,series,unit,value,bar_top_row_px,bar_x0_px,bar_x1_px,coverage,flank_delta_px
+Fig 3B,75-OCholB,HeLa,percent_GFP_positive_cells,61.223,936,230,255,1.0,0.0
+Fig 3B,75-OCholB,B16F10,percent_GFP_positive_cells,62.083,932,256,277,0.9841,1.0
+Fig 3B,75-OCholB,HEK,percent_GFP_positive_cells,59.934,942,279,301,0.9848,1.0
+Fig 3B,75-OCholB,NIH 3T3,percent_GFP_positive_cells,53.054,974,304,324,1.0,0.0
+Fig 3B,76-OCholB,HeLa,percent_GFP_positive_cells,79.282,852,362,387,0.9867,1.0
+Fig 3B,76-OCholB,B16F10,percent_GFP_positive_cells,69.608,897,388,410,1.0,0.0
+Fig 3B,76-OCholB,HEK,percent_GFP_positive_cells,74.767,873,412,433,1.0,0.0
+Fig 3B,76-OCholB,NIH 3T3,percent_GFP_positive_cells,23.171,1113,437,457,0.9833,1.0
+Fig 3B,77-OCholB,HeLa,percent_GFP_positive_cells,72.833,882,495,520,1.0,0.0
+Fig 3B,77-OCholB,B16F10,percent_GFP_positive_cells,74.767,873,520,542,0.9697,0.0
+Fig 3B,77-OCholB,HEK,percent_GFP_positive_cells,69.393,898,544,566,0.9697,0.0
+Fig 3B,77-OCholB,NIH 3T3,percent_GFP_positive_cells,57.569,953,569,588,1.0,0.0
+Fig 3B,78-OCholB,HeLa,percent_GFP_positive_cells,66.598,911,627,652,0.9867,1.0
+Fig 3B,78-OCholB,B16F10,percent_GFP_positive_cells,62.513,930,653,674,1.0,0.0
+Fig 3B,78-OCholB,HEK,percent_GFP_positive_cells,51.764,980,676,698,1.0,0.0
+Fig 3B,78-OCholB,NIH 3T3,percent_GFP_positive_cells,49.399,991,702,722,0.9833,1.0
+Fig 3B,80-OCholB,HeLa,percent_GFP_positive_cells,54.989,965,760,784,1.0,0.0
+Fig 3B,80-OCholB,B16F10,percent_GFP_positive_cells,40.8,1031,785,806,0.9683,0.0
+Fig 3B,80-OCholB,HEK,percent_GFP_positive_cells,44.455,1014,809,831,0.9848,1.0
+Fig 3B,80-OCholB,NIH 3T3,percent_GFP_positive_cells,28.331,1089,834,854,0.9833,1.0
+Fig 3B,81-OCholB,HeLa,percent_GFP_positive_cells,50.904,984,892,917,1.0,0.0
+Fig 3B,81-OCholB,B16F10,percent_GFP_positive_cells,34.135,1062,918,939,0.9841,1.0
+Fig 3B,81-OCholB,HEK,percent_GFP_positive_cells,50.259,987,941,963,0.9848,1.0
+Fig 3B,81-OCholB,NIH 3T3,percent_GFP_positive_cells,30.91,1077,966,986,1.0,0.0
+Fig 3B,87-OCholB,HeLa,percent_GFP_positive_cells,5.542,1195,1025,1049,1.0,0.0
+Fig 3B,87-OCholB,B16F10,percent_GFP_positive_cells,2.532,1209,1050,1072,1.0,0.0
+Fig 3B,87-OCholB,HEK,percent_GFP_positive_cells,3.822,1203,1074,1095,0.9841,1.0
+Fig 3B,87-OCholB,NIH 3T3,percent_GFP_positive_cells,2.532,1209,1099,1119,1.0,0.0
+Fig 3B,90-OCholB,HeLa,percent_GFP_positive_cells,1.887,1212,1157,1182,1.0,0.0
+Fig 3B,90-OCholB,B16F10,percent_GFP_positive_cells,2.317,1210,1182,1204,0.9394,1.0
+Fig 3B,90-OCholB,HEK,percent_GFP_positive_cells,5.112,1197,1206,1228,0.9697,0.0
+Fig 3B,90-OCholB,NIH 3T3,percent_GFP_positive_cells,2.102,1211,1231,1251,1.0,0.0
+Fig 3B,304-OCholB,HeLa,percent_GFP_positive_cells,51.549,981,1289,1315,0.9872,1.0
+Fig 3B,304-OCholB,B16F10,percent_GFP_positive_cells,8.552,1181,1315,1337,0.9697,0.0
+Fig 3B,304-OCholB,HEK,percent_GFP_positive_cells,12.207,1164,1338,1360,0.9848,1.0
+Fig 3B,304-OCholB,NIH 3T3,percent_GFP_positive_cells,4.037,1202,1364,1384,0.9833,1.0
+Fig 3B,Lpf2k,HeLa,percent_GFP_positive_cells,97.556,767,1422,1446,1.0,0.0
+Fig 3B,Lpf2k,B16F10,percent_GFP_positive_cells,62.083,932,1447,1469,1.0,0.0
+Fig 3B,Lpf2k,HEK,percent_GFP_positive_cells,79.282,852,1471,1493,0.9394,2.0
+Fig 3B,Lpf2k,NIH 3T3,percent_GFP_positive_cells,68.963,900,1496,1516,1.0,0.0
+Fig 3B,mRNA,HeLa,percent_GFP_positive_cells,1.458,1214,1554,1579,0.9867,1.0
+Fig 3B,mRNA,B16F10,percent_GFP_positive_cells,2.317,1210,1580,1601,0.9524,0.0
+Fig 3B,mRNA,HEK,percent_GFP_positive_cells,4.897,1198,1603,1625,0.9848,1.0
+Fig 3B,mRNA,NIH 3T3,percent_GFP_positive_cells,1.243,1215,1628,1648,1.0,0.0
+Fig 3B,Control,HeLa,percent_GFP_positive_cells,1.028,1216,1687,1712,0.9867,0.0
+Fig 3B,Control,B16F10,percent_GFP_positive_cells,1.458,1214,1713,1734,0.9841,1.0
+Fig 3B,Control,HEK,percent_GFP_positive_cells,0.813,1217,1736,1757,1.0,0.0
+Fig 3B,Control,NIH 3T3,percent_GFP_positive_cells,0.598,1218,1761,1781,1.0,0.0

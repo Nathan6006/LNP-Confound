@@ -1,0 +1,93 @@
+{
+ "_gate": "THE INTAKE GATE (PIPELINE_V2.md section 3, Stage 00b). Filled BEFORE any digitiser was written. Every panel that supplies a value names its tier; anything at 5_pixels says why tiers 1-4 failed, in sentences a reviewer can re-run.",
+ "_tiers": ["1_publisher_source_data", "2_si_tables", "3_author_repository", "4_pdf_text_table", "4b_pdf_vector_geometry", "5_pixels"],
+
+ "paper": {
+  "title_as_published": "Iterative Design of Ionizable Lipids for Intramuscular mRNA Delivery",
+  "title_verified_against": "Europe PMC REST core record for PMID 36652629, queried 2026-11-10. Returned title verbatim as above, journal 'Journal of the American Chemical Society', pubYear 2023. The SI cover page (p1) prints the same title in sentence case. NOT truncated, and the endpoint named in the title is the real endpoint.",
+  "pmid": "36652629",
+  "doi": "10.1021/jacs.2c10670",
+  "journal": "J. Am. Chem. Soc. 2023",
+  "corresponding": "Omar F. Khan, University of Toronto (dr.khan@utoronto.ca)",
+  "first_authors": "Grayson Tilstra and Julien Couture-Senecal (equal contribution)"
+ },
+
+ "ENDPOINT": {
+  "what": "Total luminescent flux (p/s) produced by Firefly luciferase in the HINDLIMB MUSCLE of live C57BL/6 mice, 6 hours after INTRAMUSCULAR injection of mRNA-loaded LNPs, imaged on an IVIS Spectrum.",
+  "verified_how": "Read verbatim off the caption of every value panel: Fig S1B, S2B, S3B, S4B, S4C, S7A all say 'Total luminescent flux in the hindlimb muscle of C57BL/6 mice ... post-injection'. Fig S10A names the instrument ('as captured on an IVIS Spectrum') and its colour bar is labelled 'Luminescence (p/s/cm2/sr)'. Table S1 gives the Firefly Luciferase DNA template sequence. This is a DELIVERY endpoint, in vivo, and it is the same endpoint in every panel.",
+  "in_vivo": true,
+  "model_organism": "C57BL/6 mouse (Ai9 transgenic for the Fig S6 gene-editing panel only)",
+  "route": "intramuscular",
+  "organ": "hindlimb muscle",
+  "cargo": "Firefly luciferase mRNA (unmodified, or N1-methylpseudouridine-modified where the caption says 'Modified Fluc mRNA')",
+  "timepoint": "6 h post-injection",
+  "NOT_the_endpoint": [
+   "apparent pKa (TNS assay) -- Fig S1D, S2D, S3C, S11. Physicochemical.",
+   "predicted LogD -- Fig S2C, S12. Computed in MarvinSketch 21.18, not measured.",
+   "size / PDI / EE -- Fig S1C, S2E, S3E, S4D, S7C and Table S2. Physicochemical.",
+   "N-P contacts -- Fig S1F, S1G. Molecular-dynamics simulation.",
+   "tdTomato fluorescence -- Fig S6C. A gene-EDITING readout in Ai9 mice, different cargo (Cas9 mRNA + sgTOM), different units. Not pooled with flux.",
+   "mRNA copies per LNP -- Tables S5, S6. A particle property."
+  ]
+ },
+
+ "HEADLINE": "Every delivery value in this paper is drawn, never typeset. The SI text layer contains 43,853 characters and ZERO luminescent-flux numbers (measured, not asserted: stage00_scan_for_values.py Q1, 0 lines carrying flux vocabulary and a number in range). The values live in six bar/scatter panels that are FLATTENED RASTER images -- 0 filled paths and 0 rectangle items across all seven figure pages (Q2) -- so tier 4b does not apply and tier 5 is the only remaining route. What the text layer DOES give is Table S2, a 28-row formulation registry, and that is the backbone of this curation: it ties each drawn panel to a named batch and makes the round structure checkable rather than assumed.",
+
+ "value_bearing_panels": [
+  {"panel": "Fig S1B", "page": 2, "round": "R1_hbond", "n_bars": 3,
+   "lipids": ["SM-102", "C3-K2-A14", "C3-K2-E14"],
+   "tier": "5_pixels", "readout": "Total Flux (p/s)", "axis": "log10, decade ticks 10^3..10^8"},
+  {"panel": "Fig S2B", "page": 3, "round": "R2_tail_length", "n_bars": 3,
+   "lipids": ["C3-K2-E14", "C3-K2-E10", "C3-K2-E15"],
+   "tier": "5_pixels", "readout": "Total Flux (p/s)", "axis": "log10, decade ticks 10^3..10^6"},
+  {"panel": "Fig S3B", "page": 3, "round": "R3_linker", "n_bars": 2,
+   "lipids": ["C3-K2-E10", "C3-K3-E10"],
+   "tier": "5_pixels", "readout": "Total Flux (p/s)", "axis": "log10, decade ticks 10^3..10^7"},
+  {"panel": "Fig S4B", "page": 4, "round": "R4_core_unmod", "n_bars": 4,
+   "lipids": ["SM-102", "C3-K3-E10", "OC2-K3-E10", "OC3-K3-E10"],
+   "tier": "5_pixels", "readout": "Total Flux (p/s)", "axis": "log10, decade ticks 10^4..10^8"},
+  {"panel": "Fig S4C", "page": 4, "round": "R5_core_modmRNA", "n_bars": 2,
+   "lipids": ["SM-102", "OC2-K3-E10"], "cargo_differs": "N1-methylpseudouridine-modified Fluc mRNA",
+   "tier": "5_pixels", "readout": "Total Flux (p/s)", "axis": "log10, decade ticks 10^4..10^8"},
+  {"panel": "Fig S7A", "page": 7, "round": "R6_NP5_benchmarks", "n_bars": 4,
+   "lipids": ["DLin-MC3-DMA", "SM-102", "OC2-K3-E10", "OC2-K2-A10"],
+   "tier": "5_pixels", "readout": "Total flux (p/s)", "axis": "log10, decade ticks 10^5..10^8"},
+  {"panel": "Fig S8", "page": 7, "round": "R7_dose", "n_points": 8,
+   "lipids": ["OC2-K3-E10 (legend) / OC3-K3-E10 (caption) -- CONTRADICTORY, see 08_contradictions.csv", "SM-102"],
+   "tier": "5_pixels", "readout": "Total Flux (p/s) vs mRNA dose (ug)",
+   "note": "A dose-response SCATTER, not a bar chart. Four doses per lipid. Excluded from emission: the lipid identity of one of its two series is contradicted between caption and legend, and a dose series is not one measurement."},
+  {"panel": "Fig S9A", "page": 7, "n_bars": 2,
+   "tier": "DERIVED_NOT_EMITTED",
+   "what": "Fold increase in luminescence from adding hydroxyls in the Tails (C3-K2-A14 -> C3-K2-E14) or the Core (C3-K3-E10 -> OC2-K3-E10). A RATIO the authors computed from the panels above, on a LINEAR axis with ticks at 0/2/4/6.",
+   "why_it_matters": "This is the unprinted cross-check this curation leans on. The two bars are a quantity the authors derived from Fig S1B and Fig S4B; reproducing them from OUR independently digitised bar tops tests the digitisation against something external to it. It also tells us which panels the authors themselves treat as comparable: both ratios are WITHIN one panel."}
+ ],
+
+ "why_tier_5_and_not_1_to_4": {
+  "why_not_1_publisher_source_data": "ACS does not publish a Source Data product for JACS. Europe PMC core record for PMID 36652629 returns isOpenAccess=N, inEPMC=N, hasSuppl=N, pmcid=null, so there is no PMC-hosted asset set to enumerate either. Queried 2026-11-10. No paywall or bot-check bypass was attempted.",
+  "why_not_2_si_tables": "The SI has exactly six tables and none carries a flux value. S1 = Firefly luciferase DNA template + primers (sequence). S2 = characterisation of all 28 formulations (N/P, lipid:RNA wt/wt, Z-average, PDI, EE%, pKa). S3 = Cas9 mRNA coding sequence. S4 = sgTOM / PAM sequence. S5 = predicted mRNA copies/LNP for formulations 17 and 18. S6 = measured mRNA copies/LNP for the same two. Enumerated by reading every one of the 39 pages, not by sampling.",
+  "why_not_3_author_repository": "find_repo.py --doi 10.1021/jacs.2c10670 --pmid 36652629 --title 'iterative design ionizable lipids intramuscular' --author Khan returned repo_hits: [], 0 candidates, across 3 repository queries and the DOI/PMID code searches; 17 unrelated repositories were filtered out. The SI names no data-availability repository, Zenodo deposit or Dryad DOI anywhere in its 39 pages.",
+  "why_not_4_pdf_text_table": "Measured, re-runnable: python3 -I stage00_scan_for_values.py, question Q1. Across all 39 pages and 43,853 extracted characters there are ZERO lines carrying luminescence vocabulary together with a number in a plausible flux range. Every large numeric token in the text layer is an NMR shift, a coupling constant, a reagent mass, a percent yield or an HRMS m/z. The panels are images; they have no text layer at all.",
+  "why_not_4b_pdf_vector_geometry": "Checked explicitly because a sibling curation read 54 values straight out of filled-rectangle coordinates. It does NOT apply here. stage00_scan_for_values.py question Q2 reports, for each of the seven figure pages (2-8): 0 drawings, 0 rectangle items, 0 filled paths, and 1-3 embedded raster images totalling 0.6-2.2 megapixels per page. The panels were flattened before deposit. By contrast pages 9-17 (the synthesis schemes) DO carry vector line/curve geometry -- 12 to 83 paths per page -- which is why the STRUCTURES, unlike the values, are not a pixel problem."
+ },
+
+ "non_value_sources_actually_used": [
+  {"what": "Table S2 -- the 28-row formulation registry",
+   "where": "SI pages 36-37", "tier": "4_pdf_text_table",
+   "why_it_is_load_bearing": "It is the only place that distinguishes BATCHES. It shows the same ionizable lipid formulated more than once (C3-K2-E14 as IDs 3 and 4; C3-K2-E10 as 6 and 7; C3-K3-E10 as 8 and 10; SM-102 as 1, 9, 13, 17, 19, 20, 21; OC2-K3-E10 as 11, 14, 15, 16, 18, 22, 23, 24). That is what makes 'iterative design means several rounds' a measurable claim here rather than a guess."},
+  {"what": "Fig S11's printed pKa table (11 lipids) and Fig S12B's printed LogD table (8 lipids)",
+   "where": "SI page 8, inside the raster image but as printed NUMERALS",
+   "tier": "5_pixels_but_symbolic",
+   "why": "Printed numerals beat any pixel estimate (PIPELINE_V2: prefer symbolic over pixel). Not delivery values, but Fig S11's pKa column is an exact key back into Table S2's pKa column and is used in 07_qc.json to test the panel-to-formulation mapping."},
+  {"what": "8 drawn ionizable-lipid structures + their molecular formulae and HRMS m/z",
+   "where": "SI pages 9-17 (synthesis, NMR, MS) and the vector structure drawings on those same pages",
+   "tier": "4_pdf_text_table", "why": "Names, formulae and m/z are typeset. The structures are vector line drawings, not pixels."}
+ ],
+
+ "verify_claims": {
+  "command": "python3 -I stage00_scan_for_values.py",
+  "writes": "00_scan_for_values.json",
+  "answers": ["Q1 no printed flux value in the text layer (0 hits / 43,853 chars)",
+              "Q2 figure panels are flattened raster (0 filled paths on pages 2-8)",
+              "Q3 Table S2 is physicochemical only, 28 formulation IDs recovered"]
+ }
+}

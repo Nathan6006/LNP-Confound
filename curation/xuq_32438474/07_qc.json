@@ -1,0 +1,441 @@
+{
+ "_what": "every check for curation/xuq_32438474 (YL_2020), with numbers. Seeded results are in `seeds`.",
+ "generated": "2026-11-10",
+ "P1_structures_vs_SI_formula_tables": {
+  "what": "every enumerated structure's [M+H]+ formula against the SI's own tables (Figure S13 p.S25, Figure S16 p.S28, Figure S22E p.S34), transcribed from the PDF text layer",
+  "n": 18,
+  "agree": 18,
+  "max_abs_diff_our_avg_mass_vs_SI_Cal_Da": 0.963,
+  "note_on_Cal": "the SI's 'Cal.' column is an AVERAGE mass, not monoisotopic: C76H131N4O8S4 is 1357.14 average and 1355.885 monoisotopic, and the SI prints 1357.13.",
+  "max_abs_SI_obs_minus_SI_cal_Da": 1.72,
+  "worst_SI_obs_lipid": "76-OCholB",
+  "blind_to": "a molecular formula cannot see connectivity, which nitrogen an arm sits on, or stereochemistry (error class 14). See seedC."
+ },
+ "P2_distinct_structures": {
+  "n_rows": 18,
+  "n_distinct_full_inchikeys": 18,
+  "n_distinct_skeleton_inchikeys": 18,
+  "tail_counts": [
+   1,
+   2,
+   3
+  ],
+  "by_series": {
+   "full": 15,
+   "single_tail": 3
+  },
+  "formulations_not_structures": "75/76/77-OCholB-F are the SAME three structures as 75/76/77-OCholB, formulated 1/1 w/w with DOPE (SI p. S5). They are FORMULATIONS and are not counted as members. The paper never states a library size."
+ },
+ "P3_C10_anchors": {
+  "what": "structures the PAPER DRAWS, rebuilt by make_reference.py through a route with no RWMol, no AddBond, no RemoveAtom, no esterify and no attach -- string substitution on the registry's cholesterol plus one SMILES ring closure",
+  "n": 2,
+  "all_match_on_FULL_inchikey": true,
+  "anchors": {
+   "75-OCholB": {
+    "anchor_full_inchikey": "DJTQBUZZHGVRLY-VPFIMMEOSA-N",
+    "enumeration_full_inchikey": "DJTQBUZZHGVRLY-VPFIMMEOSA-N",
+    "full_match": true
+   },
+   "304-OCholB": {
+    "anchor_full_inchikey": "JCMMWCCNWNGDDV-NXFCNUGQSA-N",
+    "enumeration_full_inchikey": "JCMMWCCNWNGDDV-NXFCNUGQSA-N",
+    "full_match": true
+   }
+  },
+  "C16_module_level_smiles_templates": 0,
+  "C16_note": "make_reference.py exposes no module-level SMILES literal of 40+ characters; the sterol is fetched at call time from provenance/reagent_registry.py. F-037 was a generator whose template was the enumeration's canonical string with the sterol swapped for a placeholder."
+ },
+ "P4_corpus_overlap": {
+  "full_inchikey_hits": 0,
+  "skeleton_inchikey_hits": 0,
+  "il_name_hits": 0,
+  "experiments_hit": [],
+  "data_vitro_unique_IL_SMILES": 18720,
+  "data_vivo_unique_IL_SMILES": 1506
+ },
+ "P5_printed_statistics": {
+  "Lpf2k_HeLa_stated_98pct": {
+   "stated": 98.0,
+   "extracted": 97.56,
+   "abs_diff_pp": 0.444,
+   "locus": "Results: 'positive (98% GFP+ HeLa cells)'"
+  },
+  "naked_mRNA_HeLa_stated_2pct": {
+   "stated": 2.0,
+   "extracted": 1.46,
+   "abs_diff_pp": 0.542,
+   "locus": "Results: 'negative (2% GFP+ HeLa cells)'"
+  },
+  "S24C_six_of_nine_beat_Lpf2k": {
+   "stated": 6,
+   "extracted_at_100nM": 6,
+   "which": [
+    "75-OCholB",
+    "76-OCholB",
+    "77-OCholB",
+    "78-OCholB",
+    "80-OCholB",
+    "81-OCholB"
+   ],
+   "Lpf2k_100nM": 73.99,
+   "locus": "Results: 'Six out of the nine examined OCholB LNPs showed comparable or even higher transfection efficiency than Lpf2k'"
+  },
+  "S24F_six_of_nine_beat_Lpf2k": {
+   "stated": 6,
+   "extracted_at_100nM": 6,
+   "which": [
+    "75-OCholB",
+    "76-OCholB",
+    "77-OCholB",
+    "78-OCholB",
+    "80-OCholB",
+    "81-OCholB"
+   ],
+   "Lpf2k_100nM": 56.83
+  },
+  "S24E_76_has_the_highest_MFI": {
+   "stated": "76-OCholB resulted in dramatically higher MFI than Lpf2k and other OCholB LNPs",
+   "argmax": "76-OCholB",
+   "76_over_Lpf2k_fold": 13.0,
+   "76_over_next_OCholB_fold": 1.5
+  },
+  "S24F_dose_dependent_in_all_tested": {
+   "stated": "all the tested nanoparticles including Lpf2k showed a dose-dependent DsRed+ cell percentage pattern",
+   "monotone_non_decreasing": 8,
+   "of": 10,
+   "exceptions": {
+    "87-OCholB": [
+     0.88,
+     1.69,
+     1.63
+    ],
+    "90-OCholB": [
+     0.88,
+     2.09,
+     1.63
+    ]
+   }
+  }
+ },
+ "P6_unprinted_invariants": {
+  "_why": "a grouping the authors asserted in prose and never tabulated is external to our geometry in a way a recomputed marginal is not (CLAUDE.md s5).",
+  "consistent_across_all_four_cell_lines": {
+   "stated_set": [
+    "75-OCholB",
+    "77-OCholB",
+    "78-OCholB",
+    "80-OCholB",
+    "81-OCholB"
+   ],
+   "min_over_cells_in_set": 28.33,
+   "max_over_cells_outside_set": 23.17,
+   "separated_by_a_single_threshold": true,
+   "margin_pp": 5.16,
+   "note": "76-OCholB is the strongest lipid in HeLa (79.3%) and the authors still exclude it; the extracted matrix says why -- its NIH 3T3 value is 23.2%."
+  },
+  "consistently_ineffective": {
+   "stated_set": [
+    "87-OCholB",
+    "90-OCholB"
+   ],
+   "max_over_cells_in_set": 5.54,
+   "min_over_cells_outside_set": 50.9,
+   "separated_by_a_single_threshold": true,
+   "margin_pp": 45.36
+  },
+  "top_five_screened_in_vivo": {
+   "stated_set": [
+    "75-OCholB",
+    "76-OCholB",
+    "77-OCholB",
+    "78-OCholB",
+    "80-OCholB"
+   ],
+   "extracted_top5_by_mean_over_cells": [
+    "77-OCholB",
+    "76-OCholB",
+    "75-OCholB",
+    "78-OCholB",
+    "80-OCholB"
+   ],
+   "exact_match": true,
+   "margin_pp_between_5th_and_6th": 0.592,
+   "locus": "Results: 'we screened the top five OCholB LNPs (75-, 76-, 77-, 78-, and 80-OCholB)'"
+  },
+  "protein_delivery_vs_recombination_rank_agreement": {
+   "what": "'genome engineering efficiency resembled protein delivery efficiency' -- Spearman between S24C and S24F over the 27 library (lipid x dose) cells",
+   "spearman": 0.9455
+  }
+ },
+ "P7_geometry": {
+  "Fig3B": {
+   "y_axis": {
+    "ticks_px": [
+     801.954,
+     942.219,
+     1080.757,
+     1220.922
+    ],
+    "tick_values": [
+     90,
+     60,
+     30,
+     0
+    ],
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 4.6515,
+     "origin_px": 802.146,
+     "origin_value": 90.0,
+     "tick_step_units": -30.0,
+     "n_ticks": 4,
+     "tick_fit_residual_px": 0.5279,
+     "tick_residual_tol_px": 2.5
+    },
+    "leave_one_out_residuals_px": [
+     0.642,
+     0.754,
+     0.683,
+     0.476
+    ],
+    "max_leave_one_out_residual_px": 0.754,
+    "zero_tick_vs_baseline_px": -2.078
+   },
+   "x_grid_tick_fit_max_residual_px": 0.343,
+   "bars_read": 48,
+   "bars_expected": 48,
+   "refusals": {},
+   "min_bar_coverage": 0.9394,
+   "max_flank_delta_px": 2.0,
+   "ZERO_POINT_SYSTEMATIC": {
+    "fitted_zero_px": 1220.78,
+    "axis_rule_first_row_px": 1223,
+    "offset_px": 2.22,
+    "offset_pp": 0.477,
+    "status": "NOT CORRECTED. Correcting the scale so the printed 98% and 2% land exactly would be fitting the calibration onto its own validation target, which is error class 27 (F-006, a 1.1% bias hidden across all 48 of LL_2026's printed hit rates). Recorded as a bounded systematic and raised in DECISIONS.md D-2."
+   }
+  },
+  "SI_vector": {
+   "S24C": {
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 1.0055,
+     "origin_px": 249.744,
+     "origin_value": 90.0,
+     "tick_step_units": -30.0,
+     "n_ticks": 4,
+     "tick_fit_residual_px": 0.0192,
+     "tick_residual_tol_px": 2.5
+    },
+    "max_leave_one_out_residual_px": 0.0274,
+    "held_out_minor_ticks_px": [
+     234.617,
+     264.82,
+     294.959,
+     325.162
+    ],
+    "held_out_minor_predicted": [
+     105.044,
+     75.006,
+     45.031,
+     14.993
+    ],
+    "held_out_minor_expected": [
+     105.0,
+     75.0,
+     45.0,
+     15.0
+    ],
+    "held_out_minor_max_abs_error": 0.0441,
+    "n_bars": 36
+   },
+   "S24E": {
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 0.1249,
+     "origin_px": 410.649,
+     "origin_value": 800.0,
+     "tick_step_units": -200.0,
+     "n_ticks": 5,
+     "tick_fit_residual_px": 0.0248,
+     "tick_residual_tol_px": 2.5
+    },
+    "max_leave_one_out_residual_px": 0.0315,
+    "held_out_minor_ticks_px": [
+     423.154,
+     448.098,
+     473.108,
+     498.117
+    ],
+    "held_out_minor_predicted": [
+     699.921,
+     500.287,
+     300.126,
+     99.972
+    ],
+    "held_out_minor_expected": [
+     700.0,
+     500.0,
+     300.0,
+     100.0
+    ],
+    "held_out_minor_max_abs_error": 0.2873,
+    "n_bars": 12
+   },
+   "S24F": {
+    "calibration": {
+     "kind": "linear",
+     "px_per_unit": 1.106,
+     "origin_px": 411.228,
+     "origin_value": 90.0,
+     "tick_step_units": -30.0,
+     "n_ticks": 4,
+     "tick_fit_residual_px": 0.0193,
+     "tick_residual_tol_px": 2.5
+    },
+    "max_leave_one_out_residual_px": 0.0276,
+    "held_out_minor_ticks_px": [
+     427.78,
+     460.997,
+     494.149
+    ],
+    "held_out_minor_predicted": [
+     75.034,
+     44.999,
+     15.024
+    ],
+    "held_out_minor_expected": [
+     75.0,
+     45.0,
+     15.0
+    ],
+    "held_out_minor_max_abs_error": 0.0338,
+    "n_bars": 36
+   }
+  }
+ },
+ "P8_structure_seeds": {
+  "control": {
+   "agree": 18,
+   "total": 18,
+   "note": "unmutated run"
+  },
+  "seedA_304_as_piperazine": {
+   "agree": 17,
+   "total": 18,
+   "moved": true,
+   "what_changed": [
+    "304-OCholB"
+   ],
+   "note": "1,4-bis(2-(methylamino)ethyl)piperazine C10H24N4 instead of tris(2-(methylamino)ethyl)amine C9H24N4. This is the real ambiguity in Figure 2A: the drawing's two upper arms close visually into what looks like a hexagon."
+  },
+  "seedB_carbamate_N_reacts": {
+   "agree": 6,
+   "total": 18,
+   "moved": true,
+   "what_changed": [
+    "75-OCholB",
+    "75-OChol",
+    "76-OCholB",
+    "76-OChol",
+    "77-OCholB",
+    "77-OChol"
+   ],
+   "note": "drops the !$(N[CX3]=[OX1]) exclusion, so every OCholB/OChol carbamate N-H takes a tail as well."
+  },
+  "seedC_epicholesterol": {
+   "agree": 18,
+   "total": 18,
+   "moved": false,
+   "full_inchikeys_changed": 15,
+   "skeleton_inchikeys_unchanged": 18,
+   "note": "F-013's exact mechanism, as a measured blindness. The formula check does NOT move (18/18 still agree) and the InChIKey SKELETON block does not change on any affected structure. Only the FULL InChIKey moves. This is why 03_enumerated.csv stores the full key and why the C10 anchor in make_reference.py is required."
+  },
+  "_verdict": {
+   "seedA_moved": true,
+   "seedB_moved": true,
+   "seedC_moved_formula": false,
+   "seedC_moved_full_inchikey": true
+  }
+ },
+ "P9_o16b_chain_length": {
+  "what": "the O16B tail's alkyl chain, by two independent methods",
+  "from_the_SI_formula": "75-O16B is [M+H]+ C40H81N2O4S4 (Fig S13); with head 75 = C6H16N2 the acrylate is C17H32O2S2, so the alkyl is C12H25",
+  "from_the_drawn_bond_coordinates": "SI Figure S6 p.S18 is vector; the zig-zag between the terminal methyl and the sulfur has 12 vertices",
+  "carbons_formula": 12,
+  "carbons_drawn": 12,
+  "agree": true,
+  "name_token": "O16B -- the '16' is NOT the chain length. See 08_contradictions.csv."
+ },
+ "P10_not_machine_checkable": {
+  "figure_3B_category_labels": {
+   "how": "the 12 x-axis labels are rotated raster text and were READ BY EYE off the 300 dpi PMC figure: 75-, 76-, 77-, 78-, 80-, 81-, 87-, 90-, 304-OCholB, Lpf2k, mRNA, Control.",
+   "what_tests_it": "P6. All four of the paper's prose groupings (the consistent subset, the ineffective subset, the top five screened in vivo, and the two printed control percentages) are satisfied by this label order and would not survive a permutation of it."
+  },
+  "regiochemistry": "the SI's [M+H]+ formulas fix the NUMBER of tails (S4 -> 2, S6 -> 3) and nothing else. Which nitrogen each arm sits on is read from the stated chemistry and from the drawn heads; mass is blind to it (error class 14).",
+  "stereochemistry": "the 15 sterol-bearing structures each carry cholesterol's 8 centres, taken verbatim from provenance/reagent_registry.py. P8 seedC shows that substituting epicholesterol leaves all 18 formulas and all 18 skeleton InChIKeys unchanged and moves only the FULL InChIKey -- which is what the C10 anchors compare."
+ },
+ "P11_in_vivo": {
+  "extractable_values": 0,
+  "why": "every in-vivo result in Figures 5, 6, 7 and S27-S45 is the presence or absence of tdTomato signal in a micrograph or an IVIS image. No axis, no intensity scale, no table. Figure 7B is a GFAP/NeuN colocalisation percentage of tdTomato+ cells, a cell-type attribution rather than a delivery measurement.",
+  "qualitative_facts_recorded_not_digitised": [
+   "IM into gastrocnemius, Ai14: (-30)GFP-Cre/76-OCholB and Cre mRNA/76-OCholB both give tdTomato in the injected limb; protein > mRNA; no signal in heart, liver, spleen, lung, kidney",
+   "IV, Ai14, 2.5 mg/kg protein on days 1 and 5: tdTomato in LUNG for 80-OCholB and in SPLEEN for 76-OCholB; liver excluded",
+   "IV, Cre mRNA 0.5 mg/kg, 76-OCholB only: tdTomato in spleen",
+   "lateral-ventricle infusion of Cre mRNA, days 1-4, 75-/78-/80-OCholB: tdTomato in ependymal cells of the VL and in stratum oriens of CA1/CA2/CA3; >90% of tdTomato+ cells in Ammon's horn are NeuN+"
+  ]
+ },
+ "seeds": {
+  "control": {
+   "bars_accepted": 48,
+   "bars_expected": 48,
+   "refusals": 0
+  },
+  "seed1_y_top_inside_the_legend_band": {
+   "bars_accepted": 44,
+   "moved": true,
+   "refused": [
+    "75-OCholB/HeLa",
+    "76-OCholB/HeLa",
+    "78-OCholB/HEK",
+    "80-OCholB/HeLa"
+   ],
+   "what": "740 is inside the 'HeLa B16F10 HEK NIH 3T3' legend band (rows 732-760). This was the real first-run defect.",
+   "if_the_detector_had_returned_the_topmost_ink": "those bars would have been reported at about 103%."
+  },
+  "seed2_heal_black_bars_too": {
+   "bars_accepted": 45,
+   "moved": true,
+   "refused": [
+    "75-OCholB/HeLa",
+    "77-OCholB/HeLa",
+    "mRNA/HeLa"
+   ],
+   "what": "removes the 'never heal a black bar' rule. The black error bar is then bridged to the black top-outline of the red bar that overlaps this one's right edge, and the right flank fires 3-5 px high -- about +0.6 to +1.1 percentage points."
+  },
+  "seed3_ink_mask_instead_of_the_bar_colour": {
+   "bars_accepted": 41,
+   "moved": true,
+   "refused": [
+    "304-OCholB/B16F10",
+    "76-OCholB/B16F10",
+    "78-OCholB/B16F10",
+    "80-OCholB/B16F10",
+    "81-OCholB/B16F10",
+    "87-OCholB/B16F10",
+    "Lpf2k/B16F10"
+   ],
+   "what": "an ink mask cannot separate a bar from the taller neighbour it is drawn over. Adjacent bars overlap by about 6 px: the black HeLa bar runs to x=393 while the red B16F10 bar drawn over it starts at x=387."
+  },
+  "seed4_one_y_tick_moved_6px": {
+   "clean_max_residual_px": 0.53,
+   "clean_max_leave_one_out_px": 0.757,
+   "seeded_max_residual_px": 1.87,
+   "seeded_calibrate_raised": false,
+   "seeded_max_leave_one_out_px": 5.35,
+   "moved": true,
+   "what": "THE BRIEF'S NAMED WEAKNESS. Least squares spreads one bad tick across the fit, so calibrate's max-residual test does NOT fire (1.87 px against a 2.5 px tolerance). The leave-one-out residual does, at 5.35 px. Both are reported in P7 for every panel so a reviewer can see which test is doing the work.",
+   "this_curation_max_LOO_over_all_four_panels": 0.757
+  }
+ }
+}

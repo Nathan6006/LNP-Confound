@@ -1,0 +1,16 @@
+{
+ "rows_previewed": 104,
+ "rows_merged_into_data": 0,
+ "why_zero_merged": "DECISIONS.md D-1 is OPEN: the endpoint is antibacterial growth inhibition of Bacillus subtilis, not nucleic-acid delivery, and build_dataset.py refuses a folder with an OPEN entry.",
+ "rows_with_a_caveat": 78,
+ "rows_carrying_any_flag": 104,
+ "by_flag": {
+  "confidence_medium": 24,
+  "confidence_high": 80,
+  "structure_assumed_1": 24,
+  "value_is_bound_upper": 15,
+  "value_is_bound_lower": 51,
+  "positional_ambiguity_1": 0
+ },
+ "bound_rows_resolved_by_a_measured_MIC": 21
+}

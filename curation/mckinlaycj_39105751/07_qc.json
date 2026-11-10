@@ -1,0 +1,197 @@
+{
+ "_what": "Every check this curation makes, with numbers, and a seeded defect for each that is credited only if an agreement count MOVES.",
+ "checks": {
+  "exact_mass_vs_paper_calculated": {
+   "what": "enumerated structure's monoisotopic mass vs SI Table S9's printed Calculated Exact Mass",
+   "result": "44/44",
+   "tolerance_Da": 0.005,
+   "blind_to": "monomer ORDER. 236/237/259/264/266 all read 1275.09."
+  },
+  "table_s4_carbon_arithmetic": {
+   "what": "lipid monomer count, total lipid carbons and branched/unsaturated count recomputed from blocks.py and compared to SI Table S4's three printed columns",
+   "result": "34/34 peptoids agree on all three columns",
+   "why_it_matters": "34 equations over 6 unknown chain lengths. This, not the three-letter code, is what pins Hex/Oct/Dec/Dod at 6/8/10/12."
+  },
+  "vector_chain_lengths": {
+   "what": "Dod and Ehx measured from the PDF's own stroked bond coordinates on SI page 20 (curation/lib chains)",
+   "result": {
+    "Dod": "12 segments -> 13 vertices -> 12 C",
+    "Ehx": "8 segments -> 9 vertices -> 8 C"
+   },
+   "agrees_with_blocks_py": true,
+   "convention": "carbons = vertices - 1; the first vertex is the attachment point. DERIVED: it is the only convention that fits both chains, and they differ in length."
+  },
+  "table_s4_vs_s9_sequences": {
+   "what": "the same 34 sequences printed in two different SI tables",
+   "result": "34/34 identical",
+   "why_it_matters": "the only check on monomer ORDER that does not depend on the drawing."
+  },
+  "c10_anchor": {
+   "what": "peptoids 236 and 266 rebuilt from SI Figure S7A's DRAWING (fill colour + x centre of the side-chain boxes), C-terminus to N-terminus, by string composition, and compared to the Table-S9 enumeration",
+   "result": "2/2 canonical SMILES identical",
+   "independence": "different input (drawing geometry vs text table), different traversal (C->N vs N->C), different construction (string vs assemble.attach atom maps), blocks.py not imported by make_reference.py",
+   "box_spacing_pt": "the six boxes of each structure are evenly spaced in x to within 2 pt, asserted before composing"
+  },
+  "found_minus_calculated_is_a_proton": {
+   "n_rows": 45,
+   "n_at_plus_one_proton": 35,
+   "mean_delta": 1.0089,
+   "sd_delta": 0.0062,
+   "proton_mass": 1.00728,
+   "outliers": [
+    [
+     228,
+     54.07
+    ],
+    [
+     231,
+     2.14
+    ],
+    [
+     232,
+     19.05
+    ],
+    [
+     241,
+     2.01
+    ],
+    [
+     242,
+     2.01
+    ],
+    [
+     248,
+     -299.2
+    ],
+    [
+     249,
+     2.03
+    ],
+    [
+     250,
+     2.37
+    ],
+    [
+     253,
+     171.11
+    ],
+    [
+     262,
+     -1385.22
+    ]
+   ],
+   "what": "A ROUND NUMBER THE AUTHORS DREW BUT NEVER PRINTED. SI Table S9 never says what species 'Found Exact Mass' is. The difference is the proton, on 35 of 45 rows, to within 0.02 Da.",
+   "what_the_misses_are": "the paper's own data-entry errors, not ours -- 253's found mass is byte-identical to 245's and 255's, and 262's is printed as '2.00'. See 08_contradictions.csv. None of them touches a structure we emit, because we use the CALCULATED column."
+  },
+  "table1_superscript": {
+   "what": "all five Table 1 values parsed with an explicit <sup> exponent and within a factor of 10 of their magnitude",
+   "result": "5/5"
+  },
+  "z_score_round_trip": {
+   "what": "the stored z recomputed from the stored raw value",
+   "result": "max |residual| = 4.89e-07",
+   "mean_z": -0.0,
+   "sd_z": 1.000000154767,
+   "n": 5,
+   "caveat": "n = 5. A five-point z-score is a legitimate application of the corpus convention and a thin one; see DECISIONS.md D-2."
+  },
+  "flags_on_the_row": {
+   "what": "quality columns written by curation/lib emit.emit_rows, never by this folder",
+   "rows": 5,
+   "rows_with_a_caveat_F024": 0,
+   "confidence_rule_distinct_outputs": "3/3",
+   "confidence_rule_probe": {
+    "all_drawn": "high",
+    "has_name_only_monomer": "medium",
+    "has_unresolved_monomer": "low"
+   },
+   "note": "0 caveats is the correct answer for these five: every monomer they use is drawn in Figure 1B, the sequences are confirmed by two tables, the masses by a third, and 236 by the drawing. The rule still discriminates -- see the probe and seed 6."
+  }
+ },
+ "seeded_defects": [
+  {
+   "seed": "dod_loses_one_carbon",
+   "defect": "blocks.py Dod side chain shortened from C12 to C11 (-14.016 Da)",
+   "metric_before": "44/44",
+   "metric_after": "19/44",
+   "raised": null,
+   "metric_after_restore": "44/44",
+   "outcome_moved": true,
+   "verdict": "the check has teeth"
+  },
+  {
+   "seed": "hex_carbon_count_off_by_one",
+   "defect": "blocks.py Hex n_carbons 6 -> 7",
+   "metric_before": "34/34",
+   "metric_after": "24/34",
+   "raised": null,
+   "metric_after_restore": "34/34",
+   "outcome_moved": true,
+   "verdict": "the check has teeth"
+  },
+  {
+   "seed": "anchor_monomer_order_transposed",
+   "defect": "two side chains swapped in the order read off SI p20's drawing; molecular formula and exact mass are IDENTICAL either way",
+   "metric_before": "2/2",
+   "metric_after": "0/2",
+   "raised": null,
+   "metric_after_restore": "2/2",
+   "outcome_moved": true,
+   "verdict": "the check has teeth",
+   "mass_is_blind_to_this": {
+    "same_structure": false,
+    "exact_mass_correct_order": 1275.09,
+    "exact_mass_transposed": 1275.09,
+    "comment": "identical mass, different molecule. This is why the C10 anchor exists and why 'HRMS passes' is not an answer."
+   }
+  },
+  {
+   "seed": "si_watermark_column_readmitted",
+   "defect": "seqtables.X_TABLE_MAX raised so the right-margin download watermark rejoins the rows -- the ACTUAL defect found on this curation's first run, which made peptoid 246 parse as the single monomer 'Hex'",
+   "metric_before": "34/34",
+   "metric_after": "check refused to run",
+   "raised": "SeqParseError: peptoid 246: parsed 1 monomers ['Hex'] but the row prints 8 lipid monomers, so 9 were expected (one headgroup + the lipid block). The wrapped sequence cell was ",
+   "metric_after_restore": "34/34",
+   "outcome_moved": true,
+   "verdict": "the check has teeth"
+  },
+  {
+   "seed": "superscript_flattened",
+   "defect": "Table 1 value cells read with itertext(), which turns '2.46 +/- 0.55 x 10<sup>7</sup>' into '... x 107'",
+   "metric_before": "5/5",
+   "metric_after": "0/5",
+   "raised": null,
+   "metric_after_restore": "5/5",
+   "outcome_moved": true,
+   "verdict": "the check has teeth",
+   "note": "the metric is 'values within a factor of 10 of the truth', not 'it raised' -- the flattened read produces a perfectly well-formed number that is wrong by 14 orders of magnitude."
+  },
+  {
+   "seed": "confidence_rule_replaced_by_a_constant",
+   "defect": "_confidence replaced by a function that returns 'high' for every record -- a derived constant, which emit.emit_rows CANNOT distinguish from a correct rule because it is a callable",
+   "metric_before": "3/3 distinct values over the probe set",
+   "metric_after": "1/3 distinct values over the probe set",
+   "raised": null,
+   "metric_after_restore": "3/3 distinct values",
+   "outcome_moved": true,
+   "verdict": "the check has teeth",
+   "probe_results": {
+    "all_drawn": "high",
+    "has_name_only_monomer": "medium",
+    "has_unresolved_monomer": "low"
+   },
+   "note": "emit.emit_rows refuses a LITERAL confidence (error class 29, found three times). It cannot refuse a callable that ignores its argument. This probe is what closes that gap."
+  },
+  {
+   "seed": "emit_literal_confidence",
+   "defect": "confidence passed to emit.emit_rows as the string 'high'",
+   "metric_before": "1/1 rows emitted with a derived confidence",
+   "metric_after": "0/1 rows emitted",
+   "raised": "EmitError",
+   "metric_after_restore": "1/1 rows emitted",
+   "outcome_moved": true,
+   "verdict": "the check has teeth"
+  }
+ ],
+ "all_seeds_moved": true
+}

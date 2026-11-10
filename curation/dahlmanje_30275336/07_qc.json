@@ -1,0 +1,378 @@
+{
+ "paper": {
+  "pmid": "30275336",
+  "pmcid": "PMC6196543",
+  "doi": "10.1073/pnas.1811276115",
+  "title": "High-throughput in vivo screen of functional mRNA delivery identifies nanoparticles for endothelial cell gene editing.",
+  "licence": "CC BY-NC-ND 4.0 (NOT CC0/CC-BY compatible)"
+ },
+ "readout_reconstruction": {
+  "what": "Reconstruct the paper's own definition of 'normalized delivery' from its worked example (SI Fig S1b, p.2) and reproduce every printed cell.",
+  "control": {
+   "rc": 0,
+   "step1_totals": "6/6",
+   "step2_cells": "18/18",
+   "step3_cells": "18/18",
+   "max_residual_from_100": 0.0
+  },
+  "FORMULA": "normalized_delivery_i = [ (count_i / SUM_j count_j) / (input_i / SUM_j input_j) ] / SUM_k[ same ] x 100%.  It is a COMPOSITIONAL share: it sums to 100% over the members of the pool, so every LNP's value is a function of which other LNPs were co-injected with it.",
+  "seeds": {
+   "none": {
+    "rc": 0,
+    "step1_totals": "6/6",
+    "step2_cells": "18/18",
+    "step3_cells": "18/18",
+    "max_residual_from_100": 0.0
+   },
+   "wrong_raw_count": {
+    "rc": 0,
+    "step1_totals": "5/6",
+    "step2_cells": "15/18",
+    "step3_cells": "15/18",
+    "max_residual_from_100": 0.0
+   },
+   "drop_input_normalisation": {
+    "rc": 0,
+    "step1_totals": "6/6",
+    "step2_cells": "18/18",
+    "step3_cells": "1/18",
+    "max_residual_from_100": 0.0
+   },
+   "no_renormalisation": {
+    "rc": 0,
+    "step1_totals": "6/6",
+    "step2_cells": "18/18",
+    "step3_cells": "0/18",
+    "max_residual_from_100": 213.372093023256
+   }
+  },
+  "seed_verdict": {
+   "wrong_raw_count": {
+    "agreement_moved": true
+   },
+   "drop_input_normalisation": {
+    "agreement_moved": true
+   },
+   "no_renormalisation": {
+    "agreement_moved": true
+   }
+  },
+  "THE_FREE_CHECK": "The authors DREW 'Total (%) = 100' under both normalised tables and never computed it. The unrounded reconstruction gives column sums of exactly 100.000000, residual 0.0. The readout is a COMPOSITIONAL share of its pool."
+ },
+ "formulation_tables": {
+  "tier": "4_pdfplumber_native_text_cells (no pixels)",
+  "n_formulations": 425,
+  "per_library": {
+   "invitro_54": {
+    "n": 54,
+    "lnp_numbers": "1..54",
+    "contiguous": true
+   },
+   "screen1_112": {
+    "n": 112,
+    "lnp_numbers": "1..112",
+    "contiguous": true
+   },
+   "screen2": {
+    "n": 102,
+    "lnp_numbers": "1..102",
+    "contiguous": true
+   },
+   "screen3": {
+    "n": 157,
+    "lnp_numbers": "1..157",
+    "contiguous": true
+   }
+  },
+  "compounds_seen": [
+   "73",
+   "78",
+   "7C1",
+   "80",
+   "83",
+   "88",
+   "90",
+   "92"
+  ],
+  "peg_types_seen": [
+   "C14PEG",
+   "C16PEG",
+   "C18PEG"
+  ],
+  "helper_types_seen": [
+   "18:1 Lyso",
+   "18:1 Lyso PC",
+   "DOPC",
+   "DOPE",
+   "DSPC"
+  ],
+  "MOLPCT_SUMS_TO_100": {
+   "this_is_the_free_check": "A composition must sum to 100. The paper prints no such sum anywhere; the stacked-bar panels Fig 2C and SI Fig S1i draw it reaching exactly 100.",
+   "n_checked": 424,
+   "n_exactly_100": 418,
+   "n_off": 7,
+   "offenders": [
+    [
+     "invitro_54",
+     1,
+     101.5
+    ],
+    [
+     "screen3",
+     65,
+     101.0
+    ],
+    [
+     "screen3",
+     81,
+     101.0
+    ],
+    [
+     "screen3",
+     97,
+     101.0
+    ],
+    [
+     "screen3",
+     113,
+     101.0
+    ],
+    [
+     "screen3",
+     141,
+     "non-numeric"
+    ],
+    [
+     "screen3",
+     143,
+     99.0
+    ]
+   ],
+   "verdict": "418/424 exact. The 7 exceptions are the paper's, not the extraction's: pdfplumber's table grid and an independent extract_text() read of the same page return identical digits. See 08_contradictions.csv C-4 and C-5."
+  }
+ },
+ "chain_check": {
+  "what": "The PEG column's token is C14PEG. 'A name token is not a chain length', so the drawn chain is measured.",
+  "mode": "the shared curation/lib/chains.vector_bonds REFUSED in its default stroked-only mode and chains.vector_chain_length raised -- correctly. This page is a second measured instance of the class that module documents from andersondg_41203968: every bond is a FILLED polygon with width=None (603 of page 7's 915 paths). The refusal was respected, not widened silently; the measurement instead counts the PDF's own path bounding boxes under an explicit uniformity gate.",
+  "control": {
+   "rc": 0,
+   "bond_quads": 13,
+   "CARBONS": 14,
+   "contiguous": true,
+   "token_matches": true
+  },
+  "seeds": {
+   "none": {
+    "rc": 0,
+    "bond_quads": 13,
+    "CARBONS": 14,
+    "contiguous": true,
+    "token_matches": true
+   },
+   "drop_a_real_bond": {
+    "rc": 0,
+    "bond_quads": 12,
+    "CARBONS": 13,
+    "contiguous": false,
+    "token_matches": false
+   },
+   "inject_a_bond_sized_glyph": {
+    "rc": 0,
+    "bond_quads": 14,
+    "CARBONS": 15,
+    "contiguous": false,
+    "token_matches": false
+   },
+   "inject_a_small_glyph": {
+    "rc": 0,
+    "bond_quads": 13,
+    "CARBONS": 14,
+    "contiguous": true,
+    "token_matches": true
+   }
+  },
+  "seed_history": "THE FIRST TWO SEEDS WRITTEN HERE WERE NO-OPS and both printed a clean 14: paths[:-1] dropped the short carbonyl-to-oxygen stub rather than a bond, and a small glyph stub is SUPPOSED to be excluded. They were replaced with seeds that move the count. inject_a_small_glyph is kept as the negative control.",
+  "seed_verdict": {
+   "drop_a_real_bond": {
+    "CARBONS_moved": true,
+    "expected_to_move": true
+   },
+   "inject_a_bond_sized_glyph": {
+    "CARBONS_moved": true,
+    "expected_to_move": true
+   },
+   "inject_a_small_glyph": {
+    "CARBONS_moved": false,
+    "expected_to_move": false
+   }
+  },
+  "RESULT": "14 carbons including the carbonyl = myristoyl; the C14 token is validated. Combined with the drawn phosphoethanolamine-carbamate head, the PEG-lipid is 14:0 PEG2000 PE (DMPE-PEG2000), which is NOT what the corpus stores under the name 'C14-PEG2000'. C-6."
+ },
+ "c10_anchors": {
+  "ionizable_anchors_with_a_SMILES": 0,
+  "ionizable_anchors_EMPTY_ON_PURPOSE": 8,
+  "why_empty": "The paper draws no complete ionizable-lipid structure - only a single repeat-unit cartoon with the backbone truncated. CLAUDE.md section 5: store an empty reference_SMILES so the ABSENCE of an anchor is visible.",
+  "excipient_anchors_built": [
+   "Cholesterol",
+   "DOPE"
+  ],
+  "independence_method": "AST walk of make_reference.py at run time. NOT a substring scan - a sibling's substring scan flagged its own docstring, and this module's docstring names every banned function. NOT byte-identity either: that is the F-037 trap, because a correct re-derivation canonicalises to the same bytes as a correct enumeration -- and it did here (canonical_SMILES_byte_identical = true for both anchors, which is the expected outcome and proves nothing on its own).",
+  "control": {
+   "AST_CLEAN": true,
+   "banned_calls": [],
+   "CHOL_full_InChIKey_match": true,
+   "CHOL_skeleton_match": true,
+   "CHOL_formula_match": true,
+   "CHOL_exact_mass_match": true,
+   "DOPE_full_InChIKey_match": true
+  },
+  "seeds": {
+   "none": {
+    "AST_CLEAN": true,
+    "banned_calls": [],
+    "CHOL_full_InChIKey_match": true,
+    "CHOL_skeleton_match": true,
+    "CHOL_formula_match": true,
+    "CHOL_exact_mass_match": true,
+    "DOPE_full_InChIKey_match": true
+   },
+   "seed_epimer": {
+    "AST_CLEAN": true,
+    "banned_calls": [],
+    "CHOL_full_InChIKey_match": false,
+    "CHOL_skeleton_match": true,
+    "CHOL_formula_match": true,
+    "CHOL_exact_mass_match": true,
+    "DOPE_full_InChIKey_match": true
+   },
+   "seed_banned_call": {
+    "AST_CLEAN": false,
+    "banned_calls": [
+     "RWMol"
+    ],
+    "CHOL_full_InChIKey_match": true,
+    "CHOL_skeleton_match": true,
+    "CHOL_formula_match": true,
+    "CHOL_exact_mass_match": true,
+    "DOPE_full_InChIKey_match": true
+   }
+  },
+  "seed_verdict": {
+   "seed_epimer": {
+    "fires": true,
+    "and_crucially": "formula_match=True, exact_mass_match=True, skeleton_match=True ALL REMAIN TRUE. The seeded defect has an IDENTICAL molecular formula (C27H46O) and an IDENTICAL exact mass (386.3549). This is F-013 exactly -- epicholesterol on 537 rows -- and only the FULL InChIKey sees it."
+   },
+   "seed_banned_call": {
+    "fires": true
+   }
+  }
+ },
+ "emit": {
+  "n_rows_emitted": 0,
+  "why_zero": "No compound in this paper has a determinable structure (03_enumerated.csv: 8 compounds, 0 with a SMILES) and the corpus has 0 blank IL_SMILES in 30,998 rows. See D-2.",
+  "guard_tests": {
+   "callable_confidence_accepted": {
+    "raised": false,
+    "confidence": "low",
+    "note_nonempty": true,
+    "caveat_count": 1
+   },
+   "literal_confidence_raises": {
+    "raised": true,
+    "exception": "EmitError",
+    "message_head": "emit: confidence='high' is a LITERAL.",
+    "VERDICT": "PASS"
+   },
+   "caveat_without_note_raises": {
+    "raised": true,
+    "exception": "EmitError",
+    "message_head": "emit_rows('seed_caveat_without_note') item '7C3': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='', value_is_bound='') and its curation_note is empty.",
+    "VERDICT": "PASS"
+   },
+   "out_of_vocabulary_raises": {
+    "raised": true,
+    "exception": "EmitError",
+    "message_head": "emit_rows('seed_bad_vocabulary') item '7C3': confidence='probably' is not in the schema's allowed set ['high', 'medium', 'low', '']. The vocabulary lives in provenance/schema_quality.json; audit.py C13 enforces the same set, so an out-of-vocabulary value would fail the build after the merge instead of here.",
+    "VERDICT": "PASS"
+   }
+  },
+  "06_rows_header": [
+   "Experiment_ID",
+   "IL_name",
+   "IL_SMILES",
+   "HL_name",
+   "HL_molratio",
+   "CHL_name",
+   "CHL_molratio",
+   "PEG_name",
+   "PEG_molratio",
+   "Model",
+   "Model_type",
+   "Model_target",
+   "Route_of_administration",
+   "Cargo",
+   "Cargo_type",
+   "Dose_ug_nucleicacid",
+   "Experiment_method",
+   "Experiment_batching",
+   "Experiment_value",
+   "Publication_DOI",
+   "Publication_PMID",
+   "Experiment_value_within_model",
+   "value_normalization_unit",
+   "confidence",
+   "positional_ambiguity",
+   "structure_assumed",
+   "value_is_bound",
+   "curation_note"
+  ],
+  "n_quality_columns_from_schema": 7
+ },
+ "values_ledger": {
+  "total_rows_in_05_values": 29,
+  "by_tier": {
+   "2_SI_table": 14,
+   "2_printed_prose": 11,
+   "NOT_EXTRACTED": 4
+  },
+  "numeric_values_extracted": 25,
+  "of_which_duplicates_of_another_row": 4,
+  "distinct_numerals": 21,
+  "individually_measured": {
+   "yes": 25,
+   "no": 4
+  },
+  "corpus_admissible": {
+   "no": 29
+  },
+  "COUNTS_SUM": true
+ },
+ "THE_THREE_NUMBERS": {
+  "distinct_ionizable_STRUCTURES": {
+   "named_in_the_paper": 8,
+   "with_a_determinable_SMILES": 0,
+   "note": "8 compounds are NAMED (7C1, 73, 78, 80, 83, 88, 90, 92). ZERO have a determinable structure. Four are PEI600/PEI1200 conjugates (polydisperse branched polymers), three are triethylenetetramine conjugates and one a macrocyclic-tetraamine conjugate, every one drawn as a truncated repeat unit with no stated degree of substitution."
+  },
+  "distinct_FORMULATIONS": {
+   "tabulated_in_the_SI": 425,
+   "per_library": {
+    "invitro_54": 54,
+    "screen1_112": 112,
+    "screen2": 102,
+    "screen3": 157
+   },
+   "note": "Fully recoverable, tier 4, mol% verified. Formulations are the one thing this paper documents completely."
+  },
+  "INDIVIDUALLY_MEASURED": {
+   "LNPs": 2,
+   "which": [
+    "7C2",
+    "7C3"
+   ],
+   "ionizable_compound_they_share": "7C1 (both; they differ only in helper lipid and mol ratio, so the ionizable structural variance across the individually-measured set is ZERO)",
+   "printed_values": 25,
+   "note": "Out of 425 tabulated formulations and 255 pooled in vivo, exactly 2 LNPs were measured individually, and they share one compound."
+  },
+  "WHAT_THE_BARCODE_DESIGN_CAN_SUPPORT": "A pooled competitive design can in principle support a per-LNP value for every pooled member -- 255 in vivo plus 54 in vitro. It does NOT here, because the paper publishes those values only as unlabelled points and an unlabelled clustered heat map. The design supports 309 values; the publication attributes 0 of them."
+ }
+}
