@@ -1,0 +1,65 @@
+{
+  "_what": "How every source byte in this folder was obtained, and under what licence.",
+  "paper": {
+    "title": "Glycolipid nanoparticles target the spleen and detarget the liver without charge",
+    "authors_first_to_last": "Gentry K, Lian L, Kim H, Celik O, Jones C, Podilapu AR, Shakked A, Loughrey D, Zenhausern R, Jang B, Doan J, Rudden S, Dahlman JE",
+    "first_author": "Kara Gentry",
+    "corresponding": "James E. Dahlman (james.dahlman@emory.edu)",
+    "affiliation_all_authors": "Wallace H. Coulter Department of Biomedical Engineering, Georgia Institute of Technology and Emory University School of Medicine, Atlanta, GA 30332",
+    "lab_verification": "Europe PMC REST core record for EXT_ID:41183194, authorList with per-author affiliations. All 13 authors share one affiliation and Dahlman is the sole corresponding author. The folder name dahlmanje_* names the PI correctly; Experiment_ID derives from the FIRST author and is KG_2025.",
+    "journal": "Proc Natl Acad Sci U S A 122(45) e2409569122",
+    "pmid": "41183194",
+    "pmcid": "PMC12625924",
+    "doi": "10.1073/pnas.2409569122",
+    "pub_year": 2025,
+    "received": "2024-08-07",
+    "accepted": "2024-12-20",
+    "epub": "2025-11-03"
+  },
+  "licence": {
+    "article": "CC BY-NC-ND 4.0",
+    "read_from": "Europe PMC REST core record, field `license` = 'cc by-nc-nd'; independently corroborated by the JATS permissions block in the fullTextXML, which carries https://creativecommons.org/licenses/by-nc-nd/4.0/ and the string 'Creative Commons Attribution-NonCommercial-NoDerivatives License 4.0 (CC BY-NC-ND)'. Read off the Europe PMC record, not the publisher landing page.",
+    "repository": "none exists",
+    "verdict_against_CLAUDE_md_section_8": "FAILS, on two independent counts: NonCommercial and NoDerivatives. See DECISIONS D-9."
+  },
+  "acquisition": {
+    "utc": "2026-11-10T17:42:26Z",
+    "si_appendix": {
+      "file": "source/pnas.2409569122.sapp.pdf",
+      "how": "Already present in source/ when this curation began. VERIFIED to be the publisher's copy: the Europe PMC supplementaryFiles archive for PMC12625924 contains a member of the same name whose md5 is identical (2cc017f11f6052cc887002a0500c0c8e).",
+      "md5": "2cc017f11f6052cc887002a0500c0c8e",
+      "sha256": "e63366147fbcb60f0959cec772a41e88096c3fd0b0a91706dcbc6165cc2cced1",
+      "bytes": 1795416
+    },
+    "figures": {
+      "how": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12625924/supplementaryFiles?includeInlineImage=true -> application/zip, 2271106 bytes, 11 members. Extracted into its own empty directory. Validated as a real ZIP by zipfile, and each member validated by magic bytes before use (the first fetch of the same URL without includeInlineImage returned a TRUNCATED archive, 241664 bytes, whose end-of-central-directory signature was missing -- caught by the magic-byte/structure check and re-fetched, not worked around).",
+      "members": "pnas.2409569122.sapp.pdf, fig01-05 as .jpg and .gif",
+      "files_kept": {
+        "pnas.2409569122fig01.jpg": {"sha256": "c50a55ec542f2ad94dc3b8ad31ba8e9595572ca23cdaf95084bd72f50f599563", "md5": "8db5f620f60e94473b1af5c858529ab7", "bytes": 134113, "px": "708x720"},
+        "pnas.2409569122fig02.jpg": {"sha256": "21be3d59c0519e8006abefab7a8b8d7c3a442a002b2cf8d468553610a120df5f", "md5": "86d8894ea9e9923d7ad72bb2815ff089", "bytes": 170237, "px": "786x1037"},
+        "pnas.2409569122fig03.jpg": {"sha256": "074690565ecb8b549ca19f49ade37436acb5747a7edd88b343e404f7cb9cc523", "md5": "2d3a21661ea9711f505148cdfea55cdf", "bytes": 151708, "px": "796x671"},
+        "pnas.2409569122fig04.jpg": {"sha256": "17438560b6b23c57c7b05f2f1558cfbaaef09bdf48e9669d6c6c21f6c77253f6", "md5": "70e9be124b594d57c391e66015154f04", "bytes": 131446, "px": "704x656"},
+        "pnas.2409569122fig05.jpg": {"sha256": "b825bee38e7d7863bcab342531206b3d3206dba22d34e1af200658d9ee9988aa", "md5": "61895a0f8e4aa7c7afa248232f9b68c9", "bytes": 115109, "px": "708x599"}
+      }
+    },
+    "full_text": {
+      "how": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12625924/fullTextXML (JATS, 111976 bytes). Used for the Results and Methods prose and for every printed numeral quoted in 05_values.csv and 08_contradictions.csv. Not stored in source/ because it is regenerable from a stable REST endpoint keyed on the PMCID.",
+      "note": "No article PDF is served: .../PMC12625924/fullTextPDF returns HTTP 404. The PMC asset route https://pmc.ncbi.nlm.nih.gov/articles/instance/12625924/bin/<name> was tried at 35 s pacing and returns byte-identical 796x671 JPEGs, so 796x671 IS the publisher deposit resolution and no higher-resolution raster exists. No bot check was encountered and none was bypassed."
+    }
+  },
+  "native_resolution_measured": {
+    "_what": "px / rect_pt * 72 for every SI figure, measured rather than assumed.",
+    "method": "pymupdf get_image_info(xrefs=True) bbox against the embedded pixel dimensions",
+    "FigS1": 220.3, "FigS2": 382.8, "FigS3": 220.0, "FigS4": 219.8,
+    "FigS5": 219.8, "FigS6": 220.2, "FigS7": 219.6, "FigS8": 220.4,
+    "FigS9": 220.3, "FigS10": 364.9, "FigS11": 279.2,
+    "main_figures": "Standalone JPEGs with no PDF rect, so no px/pt measurement is possible. The JFIF header declares 300x300 dpi, which is a DECLARATION and not a measurement; the figures were therefore handled by their measured per-panel resolution in data units instead -- 0.5666 and 0.5682 percent per pixel for Fig. 2B's two panels, 0.5207 for Fig. 3D."
+  },
+  "deposits": {
+    "repository_search": "provenance/tools/find_repo.py --pmid 41183194 --title 'Glycolipid nanoparticles spleen detarget liver' --author Gentry: 5 queries, 0 repo hits, 0 candidates, 15 filtered out as unrelated.",
+    "declared": "SRA PRJNA1150220, runs SRR30315640-44.",
+    "what_the_deposit_actually_contains": "Unaligned scRNA-seq reads from the splenic single-cell experiment. No barcode count table, no normalized delivery value, no LNP identity mapping. An accession is not a delivery value.",
+    "publisher_source_data": "NONE. The Europe PMC supplementary archive holds the SI PDF and the five figure rasters and nothing else.",
+    "data_availability_statement": "All other data are included in the article and/or SI Appendix."
+  }
+}

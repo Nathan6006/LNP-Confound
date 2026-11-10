@@ -1,0 +1,77 @@
+{
+ "_what": "Fig. 3D, read to test Fig. 3A/3C against it. NOT EMITTED.",
+ "ticks_px": [
+  384.032,
+  480.0,
+  576.077
+ ],
+ "tick_values": [
+  100,
+  50,
+  0
+ ],
+ "loo_residual_px_max": 0.1092,
+ "loo_tolerance_px_STRICT": 1.5,
+ "percent_per_px": 0.5207,
+ "bar_tops": {
+  "Control LNP61 0.8 mpk": {
+   "row": 487,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "percent": 46.37
+  },
+  "GlycoLNP61 0.8 mpk": {
+   "row": 407,
+   "coverage": 0.968,
+   "flank_delta_px": 0.0,
+   "percent": 88.03
+  },
+  "GlycoLNP61 0.4 mpk": {
+   "row": 428,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "percent": 77.1
+  },
+  "GlycoLNP61 0.2 mpk": {
+   "row": 525,
+   "coverage": 1.0,
+   "flank_delta_px": 0.0,
+   "percent": 26.59
+  }
+ },
+ "refusals": {},
+ "vs_fig3C": {
+  "GlycoLNP61 0.8 mpk": {
+   "fig3C_printed": 78.0,
+   "fig3D_digitised": 88.03,
+   "delta_points": 10.03,
+   "ratio_3D_over_3C": 1.1286
+  },
+  "Control LNP61 0.8 mpk": {
+   "fig3C_printed": 66.0,
+   "fig3D_digitised": 46.37,
+   "delta_points": -19.63,
+   "ratio_3D_over_3C": 0.7026
+  }
+ },
+ "glyco_over_control": {
+  "_what": "The paper's own effect size, computed twice from two panels reporting the same two formulations at the same dose, organ, cell type and timepoint.",
+  "from_fig3C_printed": 1.1818,
+  "from_fig3D_digitised": 1.8984,
+  "ratio_of_ratios": 1.6064
+ },
+ "monotone_dose_response": {
+  "doses_mg_per_kg": [
+   0.8,
+   0.4,
+   0.2
+  ],
+  "percent": [
+   88.03,
+   77.1,
+   26.59
+  ],
+  "strictly_decreasing": true,
+  "_what": "An internal consistency test the panel must pass and that nothing in this curation imposed: delivery should fall with dose."
+ }
+}

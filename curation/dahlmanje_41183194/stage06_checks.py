@@ -138,13 +138,25 @@ def main():
              "GlycoLNP59": 0.14, "GlycoLNP60": 0.22}
     figs5 = {"GlycoLNP61": 0.08, "GlycoLNP62": 0.01, "GlycoLNP45": 0.3,
              "GlycoLNP59": 0.1, "GlycoLNP60": 0.2}
-    rnd = {k: (round(v, 1) == figs5[k]) for k, v in fig2a.items()}
+    def sig1(x):
+        """Round to ONE significant figure."""
+        if x == 0:
+            return 0.0
+        e = math.floor(math.log10(abs(x)))
+        return round(round(x, -e), max(0, -e))
+
+    rnd = {k: (abs(sig1(v) - figs5[k]) < 1e-9) for k, v in fig2a.items()}
     C["P5_PDI_two_precisions"] = {
         "_what": "Fig. 2A and Fig. S5 print the SAME five PDIs at different "
-                 "precisions. Rounding Fig. 2A to Fig. S5's precision must "
-                 "reproduce it exactly -- a cross-figure consistency test "
-                 "neither figure can pass by accident on five values.",
-        "Fig2A": fig2a, "FigS5": figs5, "rounds_correctly": rnd,
+                 "precisions. The rule is ONE SIGNIFICANT FIGURE, not one "
+                 "decimal place: Fig. S5 shows 0.3 / 0.1 / 0.2 for LNPs 45 / "
+                 "59 / 60 but 0.08 and 0.01 for 61 and 62. A one-decimal rule "
+                 "was tried first and scored 3/5; it was the RULE that was "
+                 "wrong, not the transcription, and the two failures were "
+                 "exactly the two values below 0.1.",
+        "Fig2A": fig2a, "FigS5": figs5,
+        "Fig2A_to_1_significant_figure": {k: sig1(v) for k, v in fig2a.items()},
+        "rounds_correctly": rnd,
         "n_consistent": sum(rnd.values()), "n": len(rnd),
         "Dh_and_EE_identical_in_both": True,
     }
@@ -264,9 +276,14 @@ def main():
             for r in emitted),
         "why": "Model_type is Mouse_B6 on all 10 rows, so re-standardising "
                "inside (experiment x Model_type) is the identity.",
+        # sorted(), not a raw set: a dict comprehension over a set of strings
+        # iterates in PYTHONHASHSEED order, so 07_qc.json was not byte-identical
+        # across two runs. Caught by running the whole folder twice and
+        # diffing, which is the only way this class shows up.
         "confidence_counts": {c: sum(1 for r in emitted
                                      if r["confidence"] == c)
-                              for c in {r["confidence"] for r in emitted}},
+                              for c in sorted({r["confidence"]
+                                               for r in emitted})},
         "structure_assumed_count": sum(1 for r in emitted
                                        if r["structure_assumed"] == "1"),
         "rows_with_a_caveat": sum(1 for r in emitted
@@ -313,6 +330,53 @@ def main():
             "token_pattern_verdict": overlap["token_pattern_test"]["verdict"],
             "glycolipids_absent_from_corpus": True,
         }
+
+    # ---- P14: Fig. 3D vs Fig. 3A/3C on the SAME condition ----------------
+    f3d = jload("07_fig3d.json")
+    if f3d:
+        C["P14_fig3D_vs_fig3C_same_condition"] = {
+            "_what": "CLAUDE.md's trap list: if two sources share a member, "
+                     "measure the ratio. Fig. 3A/3C and Fig. 3D report the "
+                     "same quantity for the same two formulations at the same "
+                     "0.8 mg/kg dose, organ, cell type and timepoint.",
+            "calibration": {
+                "ticks_px": f3d["ticks_px"],
+                "loo_residual_px": f3d["loo_residual_px_max"],
+                "loo_tolerance_px_STRICT": f3d["loo_tolerance_px_STRICT"],
+                "percent_per_px": f3d["percent_per_px"]},
+            "vs_fig3C": f3d["vs_fig3C"],
+            "effect_size_two_ways": f3d["glyco_over_control"],
+            "internal_consistency": f3d["monotone_dose_response"],
+            "refusals": f3d["refusals"],
+            "VERDICT": "The two panels DISAGREE, in opposite directions, by "
+                       "x1.129 (GlycoLNP61) and x0.703 (Control LNP61), "
+                       "moving the paper's own effect size from 1.1818 to "
+                       "1.8984. The digitisation is sound -- LOO 0.109 px, "
+                       "every bar clean with flank delta 0.0, and the panel's "
+                       "own dose response strictly decreasing -- so this is a "
+                       "property of the paper (different cohorts: ~12 points "
+                       "per bar in Fig. 3A, 3 in Fig. 3D). The printed Fig. "
+                       "3C values are emitted and the two were NOT averaged. "
+                       "See 08_contradictions.csv and DECISIONS D-4.",
+        }
+
+    # ---- P15: the emitter holds no SMILES literal for the glycolipid ------
+    emit_src = open(os.path.join(HERE, "stage05_emit.py")).read()
+    ref_src = open(os.path.join(HERE, "make_reference.py")).read()
+    frag_tokens = ["OC[C@H]1O[C@H](O)", "/C=C/CCCCCCCCCCCCC",
+                   "C(=O)CCCCCCCCCCCCCCC"]
+    C["P15_emitter_has_no_glycolipid_literal"] = {
+        "_what": "The independence claim in PROVENANCE.md section 2, checked "
+                 "mechanically rather than asserted. The emitter READS the "
+                 "glycolipid from reference_structures.csv; it must contain "
+                 "no fragment literal of its own.",
+        "fragment_tokens_tested": frag_tokens,
+        "present_in_make_reference": {t: (t in ref_src) for t in frag_tokens},
+        "present_in_stage05_emit": {t: (t in emit_src) for t in frag_tokens},
+        "emitter_is_literal_free": not any(t in emit_src for t in frag_tokens),
+        "emitter_reads_the_anchor_file":
+            "reference_structures.csv" in emit_src,
+    }
 
     print(json.dumps(qc, indent=1))
     with open(os.path.join(HERE, "07_qc.json"), "w") as fh:
