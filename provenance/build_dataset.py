@@ -81,6 +81,29 @@ OUT_QC = os.path.join(HERE, "dataset_validation.json")
 # is NOT renormalized again - only the 5 extra descriptors are computed and the
 # rows are routed to vitro/vivo by their Model column.
 MERGE = [os.path.join(HERE, "..", "curation", "new_curation.csv"),
+         # Gong et al., Nat Biomed Eng 2025 (PMID 40910568-era record; DOI
+         # 10.1038/s41551-025-01422-8). 333 rows: NG_2025, 310 in vitro on MC38
+         # -- a Model_type new to the corpus -- and NG_2025_2, 23 in vivo in two
+         # endpoint blocks, liver after IV and muscle after IM.
+         #
+         # Merged 2026-11-09 after a Tier-2 adversarial review (MERGE WITH
+         # FIXES; report in provenance/review/round_2026-11-07/report_NG_2025.md).
+         # The reviewer re-derived both z-vectors from the publisher's Source
+         # Data workbook -- in vitro to max |delta| 5e-7, both in vivo blocks
+         # EXACTLY -- and independently pinned the workbook-to-lipid mapping by
+         # reducing each heat-map panel's vector fill colours to one principal
+         # component and testing every column permutation (identity wins at
+         # |rho| 0.998-0.9999 against a best competitor of 0.64-0.91). No
+         # emitted structure and no emitted value was found wrong.
+         #
+         # It merges the output of stage11_quality.py, not stage07's, because
+         # the folder was built against the 72-column schema: that stage adds
+         # the 7 quality columns and repairs the Formulation_ID prefix on the 23
+         # in-vivo rows. One row is deliberately held back by the curation (the
+         # Fig. 1p benchmark, whose axis label and Source Data header name
+         # different molecules).
+         os.path.join(HERE, "..", "curation", "ng_2025",
+                      "08_NG_2025_merge.csv"),
          os.path.join(HERE, "..", "curation", "lin_aromatic_2026",
                       "10_LL_2026_rows.csv"),
          os.path.join(HERE, "..", "curation", "lin_aromatic_2026",

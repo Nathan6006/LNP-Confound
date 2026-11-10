@@ -1,7 +1,7 @@
 {
  "columns": 79,
- "vitro_rows": 28885,
- "vivo_rows": 1780,
+ "vitro_rows": 29195,
+ "vivo_rows": 1803,
  "row_provenance": {
   "processed": 15701,
   "processed_only(BowenLi)": 6293,
@@ -9,7 +9,7 @@
   "restored_from_V:YX_2024": 2400,
   "restored_from_V:ZC_2023": 100
  },
- "experiments": 42,
+ "experiments": 43,
  "rows_per_experiment": {
   "AA_2008": 497,
   "AC_2025": 1978,
@@ -35,6 +35,7 @@
   "LZ_2025": 96,
   "MO_2026": 1152,
   "NC_2024": 260,
+  "NG_2025": 310,
   "QL_2026": 344,
   "SL_2020": 91,
   "SL_2021": 572,
@@ -81,6 +82,7 @@
     "HepG2": 2513,
     "mouse_hepatocyte_primary": 1152,
     "BeWo_b30": 260,
+    "MC38": 310,
     "Ramos": 959,
     "THP-1": 409,
     "INS-1E": 123,
@@ -223,6 +225,11 @@
    1.0,
    260
   ],
+  "NG_2025": [
+   -0.0,
+   1.0,
+   310
+  ],
   "QL_2026": [
    -0.0,
    1.0,
@@ -347,6 +354,7 @@
   "KZ_2016": 26,
   "LL_2025": 8,
   "LR_2023": 407,
+  "NG_2025_2": 23,
   "RG_2023": 260,
   "SB_2024": 24,
   "SS_2018": 10,
@@ -649,6 +657,10 @@
    "ZT_2026/in_vitro": 486,
    "ZT_2026/in_vivo": 51
   },
+  "08_NG_2025_merge.csv": {
+   "NG_2025/in_vitro": 310,
+   "NG_2025_2/in_vivo": 23
+  },
   "10_LL_2026_rows.csv": {
    "LL_2026/in_vitro": 840
   },
@@ -740,9 +752,9 @@
  },
  "quality_columns": {
   "vitro": {
-   "experiments_on_zscore_scale": 42,
+   "experiments_on_zscore_scale": 43,
    "experiments_not_zscores": [],
-   "within_model_populated": 28885,
+   "within_model_populated": 29195,
    "declared_units": {
     "LZ_2025": "experiment_x_model_type",
     "YX_2024": "experiment_x_model_type"
@@ -750,12 +762,12 @@
    "bad_values": []
   },
   "vivo": {
-   "experiments_on_zscore_scale": 17,
+   "experiments_on_zscore_scale": 18,
    "experiments_not_zscores": [
     "SB_2024",
     "SY_2025"
    ],
-   "within_model_populated": 1720,
+   "within_model_populated": 1743,
    "declared_units": {},
    "bad_values": []
   }

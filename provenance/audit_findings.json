@@ -1,6 +1,6 @@
 {
  "vitro": {
-  "rows": 28885,
+  "rows": 29195,
   "C1_smiles": {
    "unparseable": 0,
    "non_canonical": 0,
@@ -10,7 +10,7 @@
    "radical_by_experiment": {}
   },
   "C2_mass_monotonicity": {
-   "series_examined": 1932,
+   "series_examined": 1954,
    "series_checked": 634,
    "series_skipped_token_not_a_length": {
     "KS_2024": 14,
@@ -32,6 +32,7 @@
     "JW_2024": 8,
     "KZ_2016": 84,
     "NC_2024": 20,
+    "NG_2025": 22,
     "XH_2025": 50
    },
    "violations": 0,
@@ -127,7 +128,7 @@
    "wrong_Model": 0,
    "wrong_Route": 0,
    "cargo_pairs": {
-    "mRNA|FLuc": 24380,
+    "mRNA|FLuc": 24690,
     "siRNA|FLuc": 3313,
     "pDNA|FLuc": 1080,
     "pDNA|GFP": 112
@@ -137,8 +138,8 @@
    "padded_columns": {}
   },
   "C8_descriptors": {
-   "rows_checked": 28885,
-   "unique_lipids": 18410,
+   "rows_checked": 29195,
+   "unique_lipids": 18720,
    "rows_disagreeing": 0,
    "columns_checked": 14,
    "by_column": {}
@@ -191,9 +192,9 @@
   "C13_quality_vocabulary": {
    "bad_values": 0,
    "examples": [],
-   "rows_carrying_a_flag": 1524,
-   "rows_with_a_caveat": 1038,
-   "rows_with_a_note": 4150,
+   "rows_carrying_a_flag": 1834,
+   "rows_with_a_caveat": 1348,
+   "rows_with_a_note": 4460,
    "rows_with_only_a_note": 616,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0
@@ -211,7 +212,7 @@
   }
  },
  "vivo": {
-  "rows": 1780,
+  "rows": 1803,
   "C1_smiles": {
    "unparseable": 0,
    "non_canonical": 0,
@@ -221,7 +222,7 @@
    "radical_by_experiment": {}
   },
   "C2_mass_monotonicity": {
-   "series_examined": 235,
+   "series_examined": 238,
    "series_checked": 22,
    "series_skipped_token_not_a_length": {
     "BL_2023": 2,
@@ -234,6 +235,7 @@
     "BL_2023": 1,
     "BL_2024": 7,
     "LR_2023": 24,
+    "NG_2025_2": 2,
     "RG_2023": 24,
     "SY_2025": 1,
     "ZH_2023": 12
@@ -333,7 +335,7 @@
    "wrong_Model": 0,
    "wrong_Route": 0,
    "cargo_pairs": {
-    "mRNA|FLuc": 787,
+    "mRNA|FLuc": 810,
     "mRNA|peptide_barcode": 407,
     "mRNA|hEPO": 268,
     "mRNA|base_editor": 141,
@@ -345,8 +347,8 @@
    "padded_columns": {}
   },
   "C8_descriptors": {
-   "rows_checked": 1780,
-   "unique_lipids": 1495,
+   "rows_checked": 1803,
+   "unique_lipids": 1506,
    "rows_disagreeing": 0,
    "columns_checked": 14,
    "by_column": {}
@@ -371,9 +373,9 @@
   "C13_quality_vocabulary": {
    "bad_values": 0,
    "examples": [],
-   "rows_carrying_a_flag": 63,
-   "rows_with_a_caveat": 54,
-   "rows_with_a_note": 61,
+   "rows_carrying_a_flag": 86,
+   "rows_with_a_caveat": 76,
+   "rows_with_a_note": 84,
    "rows_with_only_a_note": 7,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0

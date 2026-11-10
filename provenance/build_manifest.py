@@ -25,6 +25,8 @@ ESUM = os.path.join(HERE, "esummary_cache.json")
 # cross-checked against the folders present in confound/curation/
 CURATED = {
     "ZT_2026":   "curation/siegwart_42634137",
+    "NG_2025":   "curation/ng_2025",
+    "NG_2025_2": "curation/ng_2025",
     "LL_2026":   "curation/lin_aromatic_2026",
     "LL_2026_2": "curation/lin_aromatic_2026",
     "WT_2026":   "curation/wht_2026_falcon",

@@ -35,6 +35,11 @@ ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
 # CURATED in provenance/build_manifest.py and ADDED in lit_review/build_data.py;
 # check_registries() below fails if they drift apart.
 TARGETS = {
+    "NG_2025": dict(folder="curation/ng_2025",
+                    eids=["NG_2025", "NG_2025_2"],
+                    paper="Gong et al., Nat Biomed Eng 2025, 9, 2181-2195 - "
+                          "Mannich-reaction antioxidant ionizable lipids, "
+                          "310 in vitro on MC38 + 23 in vivo (liver IV, muscle IM)"),
     "ZT_2026": dict(folder="curation/siegwart_42634137", eids=["ZT_2026"],
                     paper="Tian et al., Adv Mater 2026 (PMID 42634137) - "
                           "esterified cholesterol conjugates, blood-brain barrier"),
@@ -57,8 +62,6 @@ TARGETS = {
 # Folders that are NOT review targets, and why. A reviewer that wanders into one
 # of these wastes a pass or, worse, edits work in flight.
 NOT_TARGETS = {
-    "ng_2025": "IN FLIGHT in another session as of 2026-10-30. Not merged. "
-               "DO NOT READ, DO NOT REPORT ON, DO NOT TOUCH.",
     "sd_2026": "queued, not started - PDFs only",
     "jl_2026": "PAUSED pending the authors' reply about source data; the SI "
                "heatmaps are 192 dpi and the printed digits are 5.1x3.5 px, "

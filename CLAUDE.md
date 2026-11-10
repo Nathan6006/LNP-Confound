@@ -29,8 +29,8 @@ A companion **modeling + wet-lab validation manuscript** (in preparation) is cro
 confound/
 ├── CLAUDE.md                 ← this file
 ├── data/                     ← CANONICAL corpus. Only three files live here.
-│   ├── data_vitro.csv            ★ 28,885 rows x 79 cols, 42 experiments, in vitro
-│   ├── data_vivo.csv             ★  1,780 rows x 79 cols, 19 experiments, in vivo
+│   ├── data_vitro.csv            ★ 29,195 rows x 79 cols, 43 experiments, in vitro
+│   ├── data_vivo.csv             ★  1,803 rows x 79 cols, 20 experiments, in vivo
 │   └── Original_LNPDB.csv        untouched upstream reference (19,797 x 66)
 ├── provenance/               ← how data/ was built, and proof that it is right
 │   ├── README.md                 lineage, precedence rules, every validation
@@ -64,7 +64,7 @@ reads `data/LNPDB_vitro.csv` / `data/LNPDB_vivo.csv`, which moved to
 `provenance/superseded/` on 2026-10-28. It will raise FileNotFoundError until
 repointed. **Do not silently repoint it at `data_vitro.csv`** — the frozen
 results in `results/` and `reports/` were computed on the 19,028-row corpus, and
-the current corpus is 28,885 rows, so re-running changes every reported number.
+the current corpus is 29,195 rows, so re-running changes every reported number.
 That is a research decision (see §6), not a path fix.
 
 Sibling dirs under `LNP/`: `LNP_ML/` (the companion modeling project; `new_data/`
@@ -79,9 +79,9 @@ ambiguities), `LNPCD_web/`, `Papers/`.
 | | in vitro | in vivo |
 |---|---|---|
 | File | `data/data_vitro.csv` | `data/data_vivo.csv` |
-| Rows | **28,885** | **1,780** |
+| Rows | **29,195** | **1,803** |
 | Columns | 79 | 79 (identical header) |
-| Experiments | **42** | **19** |
+| Experiments | **43** | **20** |
 
 79 columns = the 67 LNPDB curation columns + 5 RDKit descriptors from the ML
 change log (`Num_carbon_in_tail`, `num_protonatable_nitrogens`,
@@ -97,7 +97,7 @@ places, drifted, and then died before the merge (review finding F-001).
 | `Experiment_value_within_model` | `Experiment_value` re-standardised inside (experiment × `Model_type`). Exact, not approximate — a per-block z of an affine function of the log signal is the per-block z of the signal. Equals `Experiment_value` where an experiment has one `Model_type`. |
 | `value_normalization_unit` | `experiment` (the §3 convention), `source_file` (`WT_2026`), or `experiment_x_model_type` (error class 22 — the between-assay offset has been deleted; only legitimate where it is unrecoverable, and then the reason is in `curation_note`). |
 | `confidence` | `high`/`medium`/`low` — the **structure's** confidence, as assessed by the curation that built it. Must be that lipid's own assessment; a hard-coded literal once turned 24 disclosed `low` rows into `high` (F-011). |
-| `positional_ambiguity` | 1 where which heteroatom bears which substituent is a convention, not a measurement. 987 rows. |
+| `positional_ambiguity` | 1 where which heteroatom bears which substituent is a convention, not a measurement. **1,319 rows** (987 + 332 from NG_2025, whose Mannich products are unpurified crude mixtures with both phenol ortho positions open). |
 | `structure_assumed` | 1 where a specific feature was assumed: a quaternization site the paper draws nothing for, a commercial reagent sold as an isomer mixture, an ester connectivity inferred from one NMR shift. Pairs with `curation_note`, which must say *which* feature. |
 | `value_is_bound` | `upper` (a heatmap cell on the colormap floor — the truth is at or below it) or `lower` (censored past the top of an axis). A model treating these as measurements is fitting the floor of a colour ramp. |
 | `curation_note` | free text, one sentence, written for someone reading `data_vitro.csv` who has not opened the curation folder. |
@@ -279,7 +279,7 @@ products really is a positional-isomer mixture; saying so is correct, not timid.
 Write the flag into the **emitted row**, in the columns of
 `provenance/schema_quality.json` (§3). A count in your folder's QC JSON does not
 reach anyone: four of five curations computed their flags, wrote them to a QC
-file, and emitted rows without them, so **1,092** corpus rows carry a
+file, and emitted rows without them, so **1,424** corpus rows carry a
 convention and say so (F-001; it was 1,157 until F-040 removed the bound flag
 from 65 QL_2026 cells that are measurements, not bounds — and the round-1
 ledger's 1,152 was wrong for separate reasons, see §6). Carry the per-item assessment through; never write a
@@ -557,7 +557,7 @@ and flag those rows in the data, so a reader can see which values are measured
 and which are convention.
 
 **This is now implemented** — 7 columns, §3 — having been documented here and
-nowhere else for two days while **1,092** rows carried a convention silently
+nowhere else for two days while 1,092 rows (now 1,424) carried a convention silently
 (F-001). The lesson is narrower than "write the code": the flags had been
 *computed*, and were sitting in each curation's own QC JSON. They died at the
 emit step, one stage before the merge, so no change to `build_dataset.py` could
@@ -565,15 +565,15 @@ have rescued them and nobody reading the builder would have found it. **A flag
 that lives only in a per-folder QC file is not a flag, it is a memo.**
 
 **Which number, and quote the right one.** This count moved four times
-(≥266 → 1,137 → 1,152 → 1,157 → 1,092) and every correction was someone re-deriving it,
+(≥266 → 1,137 → 1,152 → 1,157 → 1,092 → 1,424 after the NG_2025 merge) and every correction was someone re-deriving it,
 because the quantity had no definition in code — only a prose description that
 each pass re-implemented slightly differently. `audit.py` C13 now emits **two**
 counts and the distinction is the whole point:
 
 | metric | 2026-11-07 | what it is |
 |---|---|---|
-| `rows_carrying_a_flag` | **1,587** | any quality column populated at all, `confidence = high` included. 495 rows carry only that, which is an *assurance*, not a caveat. **Not** the F-001 number. |
-| `rows_with_a_caveat` | **1,092** | the structure or value is genuinely qualified: an ambiguity, an assumed feature, a bound, or a confidence below `high`. **This is the one to quote.** |
+| `rows_carrying_a_flag` | **1,920** | any quality column populated at all, `confidence = high` included. 495 rows carry only that, which is an *assurance*, not a caveat. **Not** the F-001 number. |
+| `rows_with_a_caveat` | **1,424** | the structure or value is genuinely qualified: an ambiguity, an assumed feature, a bound, or a confidence below `high`. **This is the one to quote.** |
 
 Round 1's 1,152 was wrong twice over in ways that cancelled to within 5: it
 counted a `QL_2026` cross-figure conflict that carries no flag column, and
@@ -588,8 +588,8 @@ of being rediscovered.
 - **Reproducibility first.** One frozen script (T3) regenerates all numbers. When a number is finalized, update §3 / the manuscript AND note it here. Never hand-edit a reported number.
 - **Seeds & versions pinned** and recorded (RDKit, scikit-learn, XGBoost/PyTorch). State them in Methods and in the script header.
 - **Source key = `Experiment_ID`** everywhere. Chance baseline for S-way
-  classification = 1/S. **The live corpus is S = 42 vitro / 19 vivo (1/42,
-  1/19).** The `1/31, 1/17` written here until 2026-11-07 was stale in both
+  classification = 1/S. **The live corpus is S = 43 vitro / 20 vivo (1/43,
+  1/20).** The `1/31, 1/17` written here until 2026-11-07 was stale in both
   directions: it matched neither the current corpus nor the corpus the frozen
   pipeline actually ran on (S = 34 vitro / 17 vivo — see the 2026-07-23
   entries). Quote the S of the corpus a number was computed on, never a

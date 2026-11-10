@@ -107,16 +107,27 @@ ratios are exactly the one-ring and two-ring closures.
    paper's statement of what was bought; the alternative SMILES is in
    `07_flags.csv`, one line to reverse.
 2. **The ketone products** (104 lipids, flagged `low`). Enumerated from the
-   schemes. In the 1:2:1 library **15 of 52** are drawn as the open-chain
-   mono-adduct instead — I 6 (b4, b5, b7, b9, b10, b11), J 1 (b5), K 4 (b1, b2,
-   b7, b12), L 4 (b1, b2, b4, b10) — so the same amine is drawn both ways under
-   different tails. The 1:4:2 panels are mixed too, roughly 18 of 52, making
-   about **a third of all 104** ketone lipids drawn against their own scheme.
-   The decisive detail is that **every open-chain drawing gives the Mannich
-   nitrogen an extra methyl it cannot have** (K-a-b1's amine is methylamine,
-   yet it is drawn as N(CH3)2 plus one glutarate arm): they are template
-   artefacts, not an alternative product, which is why all 104 are enumerated
-   as rings.
+   schemes. ~~In the 1:2:1 library **15 of 52** are drawn as the open-chain
+   mono-adduct~~ — **THIS COUNT IS RETRACTED, 2026-11-09.** A Tier-2 reviewer
+   rendered NINE of the fifteen lipids this paragraph named (I-a-b4, I-a-b5,
+   I-a-b7, I-a-b9, I-a-b10, I-a-b11, K-a-b2, K-a-b12, L-a-b4) from the native
+   Supplementary Fig 8/9 rasters and found **every one drawn as the closed
+   4-oxopiperidine ring** — 6 of 6 on tail I. The true open-chain count is
+   unknown and is certainly much lower than 15; it may be zero. The 1:4:2
+   "roughly 18 of 52" is unverified for the same reason, and
+   `stage10_flags.py`'s docstring gives a THIRD number (five for tail I),
+   which is error class 39 — three secondary artifacts of a count nothing
+   implements.
+
+   What survives, and it is the part that mattered: every open-chain drawing
+   gives the Mannich nitrogen an extra methyl it cannot have, so those
+   drawings are template artefacts rather than an alternative product. All 104
+   are enumerated as rings, which the reviewer's nine renders support more
+   strongly than this paragraph originally did. **No `confidence` flag rests
+   on this count** — the 104 carry `medium` from the crude-product rule and
+   nothing else. To settle it properly, classify all 104 mechanically: the
+   cyclic form encloses one extra hole in the ink, so a per-structure
+   connected-component hole count decides it without eyes.
 3. **The Fig. 1p benchmark (held back).** The x-axis labels the twelfth bar
    DLin-MC3-DMA; the Source Data column for those same three numbers is headed
    SM-102. Different molecules, so the row is not emitted — a wrong benchmark
@@ -163,8 +174,13 @@ within 1.9×.
   the ~20 g body weight Methods state = 2.5 µg.
 
 **Two molar ratios exist in this paper.** Every row here carries
-50 / 10 / 38.5 / 1.5 (IL / DOPE / cholesterol / DMG-PEG), which is what Methods
-state for the screening and in-vivo-screening LNPs. Fig. 2a separately gives
+50 / 10 / 38.5 / 1.5 (IL / helper / cholesterol / DMG-PEG), which is what Methods
+state for the screening and in-vivo-screening LNPs. The helper is **DOPE on
+332 rows and DSPC on the single DLin-MC3-DMA row** — Methods give the
+benchmark its own sentence ("DLin-MC3-DMA, **DSPC**, cholesterol and
+DMG-PEG"), and the emitted table follows it. This paragraph said "IL /
+DOPE" flatly until 2026-11-09; the data was always right and the prose was
+not. Fig. 2a separately gives
 the *optimised* C-a16 LNP as **35 : 16 : 46.5 : 2.5**, size 80.6 ± 9.6 nm, PDI
 0.095 — that formulation belongs to the downstream C-a16 experiments (Figs 2-5)
 and none of those are emitted here. The Methods sentence is general, so the

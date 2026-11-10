@@ -49,6 +49,15 @@ ARCHIVE_HAVE = os.path.join(HERE, "provenance", "corpus_pmids_at_sweep.json")
 # Lin advertises "over 900" but that is 840 (Fig 2e) + 147 (Fig 2a) = 987 across
 # two screens run at DIFFERENT formulations, so they carry separate IDs.
 ADDED = {
+ "40681859": dict(expid="NG_2025,NG_2025_2", folder="ng_2025",
+   rows_vitro=310, rows_vivo=23, added="2026-11-09",
+   what="Mannich-reaction combinatorial library, 310 crude lipids screened in "
+        "MC38 + 11 taken into mice by two routes (liver IV, muscle IM)",
+   validation="Tier-2 adversarial review before merge: both z-vectors re-derived "
+              "from the publisher Source Data (in vitro max |delta| 5e-7, in vivo "
+              "EXACT), and the workbook-to-lipid mapping pinned independently by "
+              "testing every column permutation against each heat map panel's "
+              "vector fill colours (identity |rho| 0.998-0.9999)"),
  "42634137": dict(expid="ZT_2026", folder="siegwart_42634137",
    rows_vitro=486, rows_vivo=51, added="2026-10-28",
    what="486-formulation DoE on one lipid (C6O2B2) in IGROV1 + 51 lipids x 3 "
