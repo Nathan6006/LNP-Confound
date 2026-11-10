@@ -57,6 +57,7 @@ publishers serve anonymously and which need a browser.
 | folder | proposed `Experiment_ID` | rows | PMID | DOI | files expected |
 |---|---|---|---|---|---|
 | `maohq_39375194` | `LC_2024` | 5112 | 39375194 | 10.1021/acsnano.4c07615 | `nn4c07615_si_001.pdf`, `github/1080_LNP_OHE.csv`, `github/Compiled_validation.xlsx` |
+| `maohq_38583366` | `—` (0 rows; `YZ_2024` collides with PMID 38082180 — see its `DECISIONS.md` D-3) | 0 | 38583366 | 10.1016/j.biomaterials.2024.122559 | `mmc1.docx`, `PMC11099935.jats.xml`, `nihms-1986895-f0001.jpg`, `figs_elsevier/gr1_lrg.jpg` … `gr6_lrg.jpg` (Elsevier CDN, `1-s2.0-S0142961224000930-gr<N>_lrg.jpg`; `mmc2`–`mmc4` do not exist, 12 probes all 404) |
 | `siegwart_40644303` | `—` | 505 | 40644303 | 10.1021/acsbiomaterials.5c00463 | `PMC12869450.fulltext.txt`, `PMC12869450.jats.xml`, `ab5c00463_si_001.pdf`, `figures/fig1.jpg`, `figures/fig2.jpg`, `figures/fig3.jpg` … |
 | `lij_42130331` | `—` | 300 | 42130331 | 10.1021/acsnano.6c00706 | `nn6c00706_si_001.pdf` |
 | `peer_39912611` | `GN_2025` | 144 | 39912611 | 10.1021/acsnano.4c18636 | `PMC11841047.jats.xml`, `nn4c18636_si_001.pdf`, `si_figs/sf01.jpeg`, `si_figs/sf03.jpeg`, `si_figs/sf04.png`, `si_figs/sf05.jpeg` … |

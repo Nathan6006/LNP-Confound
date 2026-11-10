@@ -1004,12 +1004,14 @@
    "measures": "expression",
    "lib_src": "abstract",
    "note": ">1,000 formulations, stepwise down-selection. Same caveat: formulation space, few ILs. Mao lab is in your corpus via YZ_2022/YZ_2024, both of which have exactly 1 unique IL - consistent with this lab's formulation-first style.",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted_zero_admissible",
    "blockers": [],
    "pmcid": "PMC11099935",
    "value_reach": "C_pmc_fulltext",
-   "agent_task_id": "a747abdb8071ae6cc"
+   "agent_task_id": "a747abdb8071ae6cc",
+   "rows_emitted": 0,
+   "structures_enumerated": 1
   },
   {
    "rank": 40,
@@ -1399,7 +1401,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T20:40:38Z",
+ "updated_utc": "2026-11-10T20:43:38Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {
