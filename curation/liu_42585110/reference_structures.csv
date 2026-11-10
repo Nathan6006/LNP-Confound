@@ -1,0 +1,2 @@
+lipid_name,reference_SMILES,source_figure,read_on,read_by,expected_mismatch,note
+,,,,,,SCAFFOLD: no anchor yet. C10 cannot test topology against external ground truth until make_reference.py builds one.

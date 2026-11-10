@@ -1,0 +1,73 @@
+{
+ "_what": "THE INTAKE GATE. One entry per panel or table that supplies a VALUE. Filled BEFORE any digitiser was written.",
+ "_why": "The two curations that took their values from a publisher Source Data file (NG_2025) and from the authors' own repository (WT_2026) have ZERO digitisation defects between them. The four that digitised have eight value-changing findings: F-006, F-008, F-017, F-018, F-019, F-020, F-033, F-040.",
+ "_tiers": {
+  "1_publisher_source_data": "a Source Data file published with the paper",
+  "2_si_tables": "an xlsx/csv/docx table in the supplementary information",
+  "3_author_repository": "the authors' own repo, Zenodo, Dryad, figshare",
+  "4_pdf_text_table": "a real text table inside the PDF (pdfplumber)",
+  "4b_pdf_vector_geometry": "the PDF's own vector path coordinates, no raster",
+  "5_pixels": "digitised from a figure. THE LAST RESORT."
+ },
+ "_rule": "A panel recorded as 5_pixels MUST fill why_tiers_1_to_4_failed with a sentence a reviewer can check. 'Not available' is not such a sentence.",
+
+ "_tier_exhaustion_evidence": {
+  "tier_1_publisher_source_data": "NONE EXISTS. Wiley/Angew Chem publishes one supplementary file for this article, anie74215-sup-0001-suppmat.docx (14,164,113 bytes, sha256 e489457984f7efc2fe6317bbc05eb7a7691694a371d67f7eed2f34954d929997). It is the Supporting Information document, not a Source Data workbook. No .xlsx, .csv or .zip asset is referenced anywhere in the article or the SI.",
+  "tier_2_si_tables": "NONE EXISTS, and this was checked two ways because a sibling curation in this run found its SI's tables were EMF images that a <w:tbl> tag count could not see. (a) <w:tbl> element count in word/document.xml = 0. (b) The string 'Table S' occurs ZERO times in 959,060 characters of word/document.xml -- the SI has no numbered tables at all, so there is no table for a tag count to have missed. (c) All 83 files in word/media were enumerated and typed: 48 PNG + 28 SVG (Schemes S1-S12 and Figures S1-S29, i.e. synthesis schemes and NMR/ESI-MS spectra), 4 TIFF (Figures S30-S33: molar-fraction optimisation, particle size, PDI, zeta potential), 2 EMF (Figures S34-S35: cell viability, endosomal escape), 1 PNG pair (Figure S37, serum biochemistry). The two EMF metafiles DO carry a text layer and were checked; they are bar charts of viability and endosomal escape, neither of which is a delivery endpoint, and neither is a table.",
+  "tier_3_author_repository": "NONE EXISTS. Data Availability Statement, verbatim: 'The data that support the findings of this study are available from the corresponding author upon reasonable request.' provenance/tools/find_repo.py returned repo_hits: [] for BOTH the first author (--author Jiang) and the corresponding/PI author (--author Liu). An accession sweep for GSE/SRP/PRJNA/SRX/SRR/SRA/accession/deposit/github/zenodo/dryad/figshare/osf.io/Source Data/PXD/IPX over 3,126,538 characters (40,301 main-PDF text + 959,060 SI word/document.xml + 2,127,177 SI SVG text layers) returned 5 apparent hits, ALL of which were verified by printing their surrounding context to be base64-encoded embedded-font bytes inside the SVGs ('GSE1', 'SRP3', 'SRP7', 'SRX1', 'IPX6' as substrings of base64). TRUE COUNT OF REAL ACCESSIONS: 0.",
+  "tier_4_pdf_text_table": "The main PDF has no data tables; pages 3-6 and 8 each carry exactly ONE full-page raster image (2051x1840 to 2051x2408 px) plus a caption in the text layer. Figure values are not in the text layer.",
+  "tier_4b_pdf_vector_geometry": "UNAVAILABLE, and this is checkable. page.get_drawings() returns 187 path groups on page 1 (the journal masthead) and only 1-3 on every other page. On the five figure pages (3,4,5,6,8) the counts are 3,2,2,2,2 -- these are the Wiley download watermark and the page rule, not data. There is no vector geometry for any data panel.",
+  "native_dpi_of_the_figure_rasters": "Figure 1 is embedded at 2051 x 2352 px placed on a 492.24 x 564.27 pt rectangle = 299.97 x 300.13 dpi. MEASURED, not assumed; computed as px / rect_pt * 72. All reads below are on the EXTRACTED native image, never on a re-render."
+ },
+
+ "panels": [
+  {
+   "panel": "Figure 1a -- heat map, 3 rows x 41 columns",
+   "supplies": "in vitro DC2.4 luciferase expression for Dlin-MC3 + 40 RAIL-LNPs, 3 replicate rows each = 123 cells",
+   "tier": "5_pixels",
+   "locator": "main PDF page 4, image xref 81, native 2051x2352 px; heat map occupies x 43-1930, y 26-234; colorbar x 1945-1976, y 26-238",
+   "why_tiers_1_to_4_failed": "See _tier_exhaustion_evidence. There is no Source Data file, the SI contains zero tables (0 <w:tbl> elements AND 0 occurrences of the string 'Table S' in 959,060 chars), the Data Availability Statement directs readers to the corresponding author, find_repo.py returns zero repositories for both the first author and the PI, a 3,126,538-character accession sweep returns zero real accessions, and page 4 carries 2 vector paths (the Wiley watermark) so there is no vector geometry to read.",
+   "verified_against": "Three independent checks, all passing: (1) the paper names AT4-13CRA highest and AT4-Bex + AT3-13CRA 'also relatively high' -- our read ranks those exactly 1,2,3 of 41; (2) the paper states the ATX-RA series exceeds the ATX-c-RA series -- our read gives -0.0858 vs -0.4231, Mann-Whitney p=0.0045, 15/20 matched-pair wins; (3) the white point of the diverging colormap lands at value +0.0094, i.e. 0.47% of the half-range from the geometric centre of the bar, which the +-1.0 endpoint labels imply but the figure never prints. Max LUT colour distance over all 123 cells = 3.46 (mean 1.75), below the ~5 threshold that means the geometry is wrong."
+  },
+  {
+   "panel": "Figure 1c -- grouped bar chart, liver (blue) and spleen (red)",
+   "supplies": "in vivo whole-organ Avg Radiance for Dlin-MC3 + 40 RAIL-LNPs x 2 organs = 82 values",
+   "tier": "5_pixels",
+   "locator": "main PDF page 4, image xref 81; y-axis spine x 172-177, baseline y 1505-1511, ticks at 0,1,2,3 (x10^8 p/s/cm2/sr)",
+   "why_tiers_1_to_4_failed": "Identical to Figure 1a; same article, same absent Source Data, same tableless SI, same zero-repository result, same watermark-only vector layer.",
+   "verified_against": "The paper's own printed in vivo statistics, recomputed from our reads: AT4-13CRA spleen-to-liver ratio 'approximately 4.1'; AT4-13CRA splenic share of detected signal 78.9% and hepatic 19.2%; AT2-Bex 52.3%, AT4-AVA 67.1%, AT4-Bex 53.2% splenic share. See 07_qc.json."
+  },
+  {
+   "panel": "Figure 1d -- spleen-to-liver ratio bars",
+   "supplies": "NOTHING EMITTED. Read only as a cross-check on 1c.",
+   "tier": "5_pixels",
+   "locator": "main PDF page 4, image xref 81, lower panel",
+   "why_tiers_1_to_4_failed": "n/a -- no value from this panel is emitted.",
+   "verified_against": "CLAUDE.md section 8 rules a selectivity contrast non-poolable (the molea.csv 'mTP_Difference' precedent), and two earlier curations held back spleen/liver ratio panels for the same reason. Fig 1d is a ratio of the two quantities Fig 1c reports absolutely, so emitting it would double-count 1c and introduce a quantity with no corpus analogue."
+  },
+  {
+   "panel": "Figure S30 -- RAIL molar-fraction optimisation",
+   "supplies": "NOTHING EMITTED.",
+   "tier": "5_pixels",
+   "locator": "SI word/media/image75.tiff (1376x1198)",
+   "why_tiers_1_to_4_failed": "n/a -- not emitted.",
+   "verified_against": "This is a ONE-LIPID formulation screen: the varying factor is the RAIL mol% (the paper selects 33.3 mol%), not the ionizable-lipid chemistry. EXTRACTION_BRIEF section 2: a corpus keyed on ionizable-lipid chemistry gains nothing from it however many rows exist."
+  },
+  {
+   "panel": "Figures S31-S35, S36, S37; Figure 2d-f,h-k; Figure 3 onward",
+   "supplies": "NOTHING EMITTED.",
+   "tier": "n/a",
+   "locator": "SI and main PDF",
+   "why_tiers_1_to_4_failed": "n/a -- not emitted.",
+   "verified_against": "None is a delivery endpoint under EXTRACTION_BRIEF section 3: particle size, PDI, zeta potential, cell viability, endosomal-escape quantification, cellular uptake (the paper itself says expression 'was not explained by total cellular uptake alone'), serum-corona proteomics, transcriptomics, serum biochemistry, immune readouts and tumour growth."
+  },
+  {
+   "panel": "Formulation, dose, route, cargo, cell line, timepoint",
+   "supplies": "metadata for every emitted row",
+   "tier": "4_pdf_text_table",
+   "locator": "main PDF page 2 (Results 2.1), page 4 (Figure 1 caption), SI 'Experimental Method' prose",
+   "why_tiers_1_to_4_failed": "n/a -- taken from the text layer, not from pixels.",
+   "verified_against": "Figure 1 caption states 0.1 mg/kg mRNA, intravenous, BALB/c, 6 h, n=3; Results 2.1 states 33.3 mol% RAIL with DSPC, cholesterol and PEG-lipid by microfluidic mixing."
+  }
+ ]
+}

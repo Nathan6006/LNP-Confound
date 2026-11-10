@@ -1,0 +1,49 @@
+{
+ "_what": "Where each input file came from, with its hash. A provenance claim that is not executed is F-045; this file is the executed half.",
+ "scaffolded": "2026-11-10",
+ "curated": "2026-11-10",
+ "paper": {
+  "title": "Retinoic-Acid-Derived Ionizable Lipids Enable Spleen-Selective Antigen Expression for mRNA Cancer Vaccination",
+  "authors_as_printed": "Kai Jiang+, Bing Shao+, Runjie Li+, Tianzhu Liang, Chengying You, Lili Wang, Jie Cen, Jiajia Tan, Yanhao Zhang*, Minglong Chen*, Shiyong Liu*",
+  "first_author": "Jiang, Kai",
+  "corresponding": "Yanhao Zhang (yhzhangr@ustc.edu.cn); Minglong Chen (minglchen@ustc.edu.cn); Shiyong Liu (sliu@ustc.edu.cn)",
+  "affiliation": "Hefei National Research Center for Physical Sciences at the Microscale and State Key Laboratory of Precision and Intelligent Chemistry, University of Science and Technology of China, Hefei, Anhui, China",
+  "journal": "Angewandte Chemie International Edition",
+  "year": 2026,
+  "volume_article": "65, e3823572",
+  "doi": "10.1002/anie.3823572",
+  "pmid": "42585110",
+  "pmcid": null,
+  "received": "2026-06-03", "revised": "2026-07-28", "accepted": "2026-08-04",
+  "Experiment_ID": "KJ_2026",
+  "experiment_id_derivation": "First author Jiang, Kai -> initials KJ -> KJ_2026. EXTRACTION_BRIEF section 1: the ID derives from the FIRST author, not the PI; the folder name liu_42585110 is the PI's surname and is NOT the key. Checked against all 54 distinct Experiment_IDs in the live corpus BY PMID, not by the year token: no KJ_* exists and no corpus experiment carries PMID 42585110, so there is no collision of the F-075 kind."
+ },
+ "licence": {
+  "article": "ALL RIGHTS RESERVED. NOT Creative Commons. This was established from THREE independent records, none of them the publisher landing page: (1) Europe PMC core record for EXT_ID:42585110 returns isOpenAccess='N', license=null, and the only fullTextUrl carries availability='Subscription required'. (2) Crossref (api.crossref.org/works/10.1002/anie.3823572) lists exactly two licences, both Wiley's own: content-version 'vor' -> onlinelibrary.wiley.com/termsAndConditions#vor, and content-version 'tdm' -> doi.wiley.com/10.1002/tdm_license_1.1. Neither is a CC licence. (3) The PDF's own page-1 footer, verbatim: 'All rights reserved, including rights for text and data mining and training of artificial intelligence technologies or similar technologies. (c) 2026 Wiley-VCH GmbH'.",
+  "the_CC_line_in_the_pdf_is_a_trap": "Every page of this download carries the Wiley stamp '... See the Terms and Conditions ... on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License'. That clause is CONDITIONAL boilerplate printed on every Wiley PDF regardless of access status, and it does not assert that THIS article is OA. It is not a licence statement for this paper, and reading it as one would have recorded a CC licence for an All-Rights-Reserved article. The briefing for this curation did read it that way; the three records above are what settled it.",
+  "section_8_verdict": "FAILS CLAUDE.md section 8, which requires every constituent source to be CC0/CC-BY-compatible before corpus release. Recorded as DECISIONS.md D-1, STATUS: OPEN. Not a reason to discard the extraction -- the corpus already carries 14 CC BY-NC-ND sources recorded the same way -- but it is a release blocker the user has to rule on.",
+  "supplementary_information": "Same article, same Wiley terms; the SI carries no separate licence statement."
+ },
+ "data_availability_statement_verbatim": "The data that support the findings of this study are available from the corresponding author upon reasonable request.",
+ "files": [
+  {
+   "path": "curation/liu_42585110/source/Angew Chem Int Ed - 2026 - Jiang - Retinoic‐Acid‐Derived Ionizable Lipids Enable Spleen‐Selective Antigen Expression for.pdf",
+   "sha256": "6a6c6aa3c9e509dec9cde0b9610163890ae3e6de6cd0b344d9ee5d4ea8061483",
+   "bytes": 3819915,
+   "retrieved_from": "Downloaded BY THE USER BY HAND from Wiley Online Library (onlinelibrary.wiley.com/doi/10.1002/anie.3823572) under a CASE WESTERN RESERVE UNIVERSITY subscription; the per-page download stamp inside the PDF records that institution and the date 10/11/2026. No automated fetch was attempted by this curation.",
+   "retrieved_utc": "2026-11-10 (file mtime 17:40 local; stamp inside the PDF reads 10/11/2026)",
+   "verified": "magic bytes %PDF-1.6; 10 pages; 40,301 chars of text layer; 7 embedded images; the Wiley download stamp names DOI 10.1002/anie.3823572 on every page, which ties the bytes to this article and not to another paper in the shared scratchpad (F-065).",
+   "licence": "See licence.article above: All Rights Reserved, Wiley-VCH GmbH."
+  },
+  {
+   "path": "curation/liu_42585110/source/anie74215-sup-0001-suppmat.docx",
+   "sha256": "e489457984f7efc2fe6317bbc05eb7a7691694a371d67f7eed2f34954d929997",
+   "bytes": 14164113,
+   "retrieved_from": "Downloaded BY THE USER BY HAND from the same Wiley article page. The filename's manuscript id 'anie74215' is Wiley's internal id for this submission.",
+   "retrieved_utc": "2026-11-10 (file mtime 17:39 local)",
+   "verified": "magic bytes 504b0304 (ZIP); opens as Office Open XML; word/document.xml is 959,060 chars and its title paragraph reads 'Retinoic-Acid-Derived Ionizable Lipids Enable Spleen-Selective Antigen Expression for mRNA Cancer Vaccination' with the same 11-author byline as the article, which ties these bytes to this paper and not to another.",
+   "licence": "See licence.article above."
+  }
+ ],
+ "_scratchpad_hygiene": "F-065. Nothing was copied into source/ by this curation -- both files were placed there by the user before it started, and both were re-hashed and content-attested above. Every derived image (figure rasters, scheme renders) was written to a uniquely named directory under this session's scratchpad and read back by explicit absolute path; no glob copy was ever run."
+}

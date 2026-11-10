@@ -1,0 +1,112 @@
+{
+ "_what": "Every geometric constant used to read Figure 1, measured from the raster rather than assumed.",
+ "raster": "already extracted; see a previous run",
+ "fig1a": {
+  "geometry": {
+   "map_x0": 42,
+   "map_x1": 1930,
+   "y0": 26,
+   "y1": 234,
+   "cb_x0": 1944,
+   "cb_x1": 1975,
+   "cb_y0": 26,
+   "cb_y1": 238,
+   "map_edge_separation": {
+    "threshold_rows": 199,
+    "band_rows": 209,
+    "n_interior_columns_below_threshold": 125,
+    "n_interior_columns": 1889,
+    "interior_below_threshold_note": "Pale cells and the boundaries between them. A cell at value ~0 is white on a red-white-blue map and is indistinguishable from the page by any whiteness test.",
+    "antialias_columns_excluded_at_each_edge": 3,
+    "largest_coverage_left_of_the_map_beyond_its_antialias": 13,
+    "coverage_at_map_x0": 202,
+    "coverage_at_map_x1": 209,
+    "separation_note": "The strongest non-map column left of the map reaches 13/209 rows (the panel letter 'a'); the map's own outer columns reach 202 and 209."
+   },
+   "colorbar_distinct_colours": 208,
+   "colorbar_min_distinct_colours": 144,
+   "max_distinct_colours_in_a_map_column": 33,
+   "separation_ratio": 4.36,
+   "band_row_runs": [
+    [
+     26,
+     234
+    ],
+    [
+     297,
+     301
+    ]
+   ]
+  },
+  "cell_w_px": 46.073,
+  "cell_h_px": 69.667,
+  "lut_entries_raw": 211,
+  "lut_entries_after_dedupe": 204,
+  "lut_rows_merged_to_break_ties": 6,
+  "value_resolution": 0.0189,
+  "max_lut_colour_distance": 3.464,
+  "mean_lut_colour_distance": 1.76,
+  "n_ambiguous_within_10_rgb": 123,
+  "n_ambiguous_note": "Structural, not a defect: on a CONTINUOUS ramp adjacent LUT entries differ by ~2 RGB units, so almost every cell has a second swatch within 10. heatmap.match reports this and does not raise on it; what it raises on is an exact tie, and the dedupe above removes those legitimately.",
+  "white_point_value": 0.0094,
+  "white_point_check": "The diverging map's white point must be the value its middle label names, 0. Measured +0.0094, i.e. 0.47% of the half-range. The figure never prints this and draws no tick for it, so it is external to the calibration it validates.",
+  "n_cells_at_scale_top": 1,
+  "n_cells_at_scale_bottom": 0,
+  "saturation_note": "The brightest cell's RGB equals the colorbar's top interior colour and the darkest equals its bottom interior colour, so the data SPAN the scale exactly: the colour limits were set to the data's own min and max. Nothing is clipped, so no cell is a bound and value_is_bound stays empty on this panel."
+ },
+ "fig1c": {
+  "tick_rows_px": [
+   1177.13,
+   1287.463,
+   1397.5
+  ],
+  "tick_values": [
+   3.0,
+   2.0,
+   1.0
+  ],
+  "tick_fit_residual_px": 0.0985,
+  "px_per_unit": 110.1848,
+  "drawn_baseline_row_px": 1507.361,
+  "predicted_row_of_value_zero_px": 1507.734,
+  "zero_prediction_error_px": 0.373,
+  "zero_prediction_error_in_units": 0.00339,
+  "zero_prediction_note": "THE UNPRINTED CHECK. The axis is calibrated on the ticks for 3, 2 and 1 ONLY; the 0 tick is fused with the baseline and was excluded, and `forbid_target` was passed so that fitting onto the baseline would be a TypeError rather than a silent class-27 absorption. The fit then predicts where value 0 falls, and it is compared with the rule the authors actually drew.",
+  "bar_pitch_px": 45.338,
+  "bar_pitch_fit_residual_px": 1.124,
+  "series_fits": {
+   "spleen": {
+    "pitch": 45.338,
+    "origin": 203.1019,
+    "resid": 1.1239,
+    "n_runs": 38
+   },
+   "liver": {
+    "pitch": 45.3228,
+    "origin": 184.038,
+    "resid": 1.2659,
+    "n_runs": 39
+   }
+  },
+  "series_cross_checks": {
+   "liver_vs_spleen": {
+    "pitch_agreement_px": 0.0152,
+    "offset_px": 19.064
+   }
+  },
+  "bar_width_px": 19.0,
+  "anchor_runs_detected": 38,
+  "runs_note": "38 of 41 runs are detectable for the anchor series; the missing ones are liver bars so short that their side strokes are under the 12 px run-length floor. The windows are NOT taken from the runs -- they come from the fitted pitch -- so a missing run costs nothing. bars.bar_top then refuses on those windows, which is the correct outcome and is recorded as a refusal, not a zero.",
+  "refusals": {
+   "AT3-c-9CRA|liver": "bar_top: detected row 1504 is within 3 px of the baseline 1507. The first scanned row is already the axis rule, so this is the baseline being read as a bar of zero height, not a measurement. Narrow y_top/y_bot to exclude the axis.",
+   "AT3-c-9CRA|spleen": "bar_top: full-width rule fired at row 1504 but the right 6px flank has no covered row at all. A bar's top rule spans the full width, so it is present in both flanks; something present only in the middle is a replicate dot cluster, a whisker cap or a mean marker. That is error class 32 (F-018, F-020).",
+   "AT3-c-Bex|liver": "bar_top: detected row 1504 is within 3 px of the baseline 1507. The first scanned row is already the axis rule, so this is the baseline being read as a bar of zero height, not a measurement. Narrow y_top/y_bot to exclude the axis.",
+   "AT3-c-Bex|spleen": "bar_top: detected row 1505 is within 3 px of the baseline 1507. The first scanned row is already the axis rule, so this is the baseline being read as a bar of zero height, not a measurement. Narrow y_top/y_bot to exclude the axis.",
+   "AT4-c-13CRA|spleen": "bar_top: no row in [1205,1508) reaches 0.90 coverage of the full 19px bar for 3 contiguous rows."
+  },
+  "n_refused": 5,
+  "floor_px": 4.0,
+  "n_recorded_as_upper_bound": 5,
+  "bound_note": "A bar whose entire body lies within FLOOR_PX of the drawn baseline is recorded with value_is_bound = 'upper' at the floor value, not as a zero and not as a missing value. bars.bar_top refuses on them, and that refusal is correct: 'the bar has no resolvable height' is a different statement from 'the bar is this tall'."
+ }
+}

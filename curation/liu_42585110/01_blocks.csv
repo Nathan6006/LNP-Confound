@@ -1,0 +1,13 @@
+block_class,block_name,long_name,SMILES,formula,exact_mass,inchikey,double_bond_geometry,source
+retinoid,ATRA,all-trans-retinoic acid,OC(=O)/C=C(C)/C=C/C=C(C)/C=C/C1=C(C)CCCC1(C)C,C20H28O2,300.208930,SHGAZHPCJJPHSC-YCNIQYBTSA-N,4E/0Z,"Scheme S1, drawn in full beside the product"
+retinoid,13CRA,13-cis-retinoic acid (isotretinoin),OC(=O)/C=C(C)\C=C\C=C(C)\C=C\C1=C(C)CCCC1(C)C,C20H28O2,300.208930,SHGAZHPCJJPHSC-XFYACQKRSA-N,3E/1Z,"Scheme S1, drawn in full beside the product"
+retinoid,9CRA,9-cis-retinoic acid (alitretinoin),OC(=O)/C=C(C)/C=C/C=C(C)\C=C\C1=C(C)CCCC1(C)C,C20H28O2,300.208930,SHGAZHPCJJPHSC-ZVCIMWCZSA-N,3E/1Z,"Scheme S1, drawn in full beside the product"
+retinoid,AVA,acitretin,OC(=O)/C=C(C)/C=C/C=C(C)/C=C/c1c(C)c(C)c(OC)cc1C,C21H26O3,326.188195,IHUNBGSDBOWDMA-AQFIFDHZSA-N,4E/0Z,"Scheme S1, drawn in full beside the product"
+retinoid,Bex,bexarotene,OC(=O)c1ccc(cc1)C(=C)c1cc2c(cc1C)C(C)(C)CCC2(C)C,C24H28O2,348.208930,NAVMQTYZDKMPEU-UHFFFAOYSA-N,0E/0Z,"Scheme S1, drawn in full beside the product"
+atx_tail_motif,AT1,,[CH2:2]CCCCC(=O)OC(CCCCCCC)CCCCCCC,C21H41O2,,,,"from T1 = 8-pentadecyl 6-bromohexanoate (Scheme S3 row 1); C6 acid, pentadecan-8-ol, ester points acid->alcohol"
+atx_tail_motif,AT2,,[CH2:2]CCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC,C25H49O2,,,,"from T2 = 9-heptadecyl 8-bromooctanoate (Scheme S3 row 2); C8 acid, heptadecan-9-ol"
+atx_tail_motif,AT3,,[CH2:2]CCCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC,C27H53O2,,,,"from T3 = 9-heptadecyl 10-bromodecanoate (Scheme S3 row 3); C10 acid, heptadecan-9-ol"
+atx_tail_motif,AT4,,[CH2:2]CCCCCOC(=O)C(CCCCCC)CCCCCCCC,C22H43O2,,,,from T4 = 6-bromohexyl 2-hexyldecanoate (Scheme S3 row 4); ESTER REVERSED relative to AT1-AT3 -- the bromoalkyl is the ALCOHOL half here and 2-hexyldecanoic acid is the acyl half
+linker,c,,[NH2:1]CCCCCC(=O)OCCCCO,C10H21NO3,,,,"VI1 (Scheme S1): Br(CH2)5CO2(CH2)4OH. Two ester bonds between the amine and the retinoid -- the longer, doubly-ester linker. The library name writes this as '-c-'."
+linker,(none),,[NH2:1]CCCCCCO,C6H15NO,,,,"VI2 (Scheme S2): Br(CH2)6OH. One ester bond to the retinoid. The library name writes this as nothing at all, e.g. AT1-ATRA."
+head_arm,4-hydroxybutyl,,[CH2:2]CCCO,C4H9O,,,,"4-hydroxybutyl, from 4-amino-1-butanol (SI Materials and the Synthesis of AT1 paragraph). Scheme S4 draws three carbons; the HRMS says four. See 08_contradictions.csv row 1."

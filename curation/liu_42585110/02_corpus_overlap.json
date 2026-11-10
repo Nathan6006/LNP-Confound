@@ -1,0 +1,119 @@
+{
+ "_what": "RAIL library vs the live corpus, joined on full InChIKey.",
+ "corpus_size": {
+  "vitro_rows": 29195,
+  "vivo_rows": 1803
+ },
+ "rails_enumerated": 40,
+ "positive_controls": {
+  "DLin-MC3-DMA_by_InChIKey": {
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "rows": 3098,
+   "vitro": 3081,
+   "vivo": 17,
+   "asserts": "the registry's DLin-MC3-DMA is present in the corpus",
+   "passes": true
+  },
+  "Cholesterol_by_InChIKey_in_CHL_column": {
+   "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "rows": 30397,
+   "asserts": "the registry's cholesterol is present as a CHL component",
+   "passes": true
+  },
+  "DSPC_by_InChIKey_in_HL_column": {
+   "inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "rows": 7038,
+   "asserts": "the registry's DSPC is present as a helper lipid",
+   "passes": true
+  },
+  "roundtrip_our_own_lead": {
+   "asserts": "the lookup machinery finds AT4-13CRA in our own table when asked, so a zero against the corpus is a real zero and not a broken join",
+   "passes": true
+  }
+ },
+ "rail_structures_already_in_corpus": {
+  "count": 0,
+  "detail": {},
+  "interpretation": "ZERO is the expected answer and it is now a measured zero rather than an assumed one: no retinoid-derived ionizable lipid has any analogue among the corpus's 19,919 structures. The control above proves the same join finds DLin-MC3-DMA, so the machinery works."
+ },
+ "superset_sweep": {
+  "retinoid_trimethylcyclohexene_polyene": {
+   "smarts": "C1(C)(C)CCCC(C)=C1C=C",
+   "distinct_corpus_structures": 0,
+   "control_matches_AT1-ATRA": true
+  },
+  "tetrahydronaphthalene_gem_dimethyl": {
+   "smarts": "C1(C)(C)CCC(C)(C)c2ccccc12",
+   "distinct_corpus_structures": 0,
+   "control_matches_AT1-Bex": true
+  },
+  "any_tertiary_amine_SANITY_SUPERSET": {
+   "smarts": "[NX3;H0;!$(NC=O)](C)(C)C",
+   "distinct_corpus_structures": 18480,
+   "control_matches_DLin-MC3-DMA": true
+  },
+  "_label": "SUPERSET sweep. These counts are chemotype neighbourhoods, NOT shared lipids. The shared-lipid answer is rail_structures_already_in_corpus above."
+ },
+ "benchmark_Dlin_MC3": {
+  "paper_spelling": "Dlin-MC3",
+  "rows_matching_that_exact_name_in_corpus": 0,
+  "corpus_spellings_of_the_same_InChIKey": [
+   "DLin-MC3-DMA",
+   "Dlin-MC3-DMA"
+  ],
+  "rows_by_InChIKey": {
+   "vitro": 3081,
+   "vivo": 17
+  },
+  "token_pattern_note": "The paper's own spelling 'Dlin-MC3' matches 0 corpus rows by name while the molecule is present thousands of times. Joining on IL_name would have reported this benchmark absent."
+ },
+ "in_vivo_shared_lipid": {
+  "why_this_matters": "EXTRACTION_BRIEF 5: the in-vivo pool has exactly TWO structures shared across experiments, DLin-MC3-DMA and SM-102. Any in-vivo lipid already present elsewhere is rare and load-bearing.",
+  "MC3_in_vivo_today": {
+   "BL_2023|lung_epithelium": 1,
+   "BL_2023|muscle": 1,
+   "NG_2025_2|liver": 1,
+   "SB_2024|ear": 11,
+   "XD_2026|whole_body": 1,
+   "ZC_2023|liver": 1,
+   "ZH_2023|liver": 1
+  },
+  "MC3_in_vivo_sources_today": 6,
+  "MC3_in_vivo_organs_today": [
+   "ear",
+   "liver",
+   "lung_epithelium",
+   "muscle",
+   "whole_body"
+  ],
+  "MC3_liver_sources_today": [
+   "NG_2025_2",
+   "ZC_2023",
+   "ZH_2023"
+  ],
+  "what_KJ_2026_would_add": "Dlin-MC3 measured in BOTH liver and spleen at 0.1 mg/kg IV, 6 h. LIVER: a FOURTH liver source for MC3 (today NG_2025_2, ZC_2023, ZH_2023), i.e. 3 new organ-matched cross-source pairs on the one benchmark the in-vivo pool actually shares. SPLEEN: the FIRST MC3 spleen measurement anywhere in the in-vivo corpus.",
+  "spleen_coverage_today": {
+   "spleen_rows": 162,
+   "spleen_sources": [
+    "ZH_2023"
+   ],
+   "note": "The entire in-vivo corpus has ONE spleen source, ZH_2023. KJ_2026 would be the second. ZH_2023 carries MC3 only in liver, so the two spleen sources would still share no lipid -- the gain is organ coverage, not a new shared-lipid pair."
+  },
+  "organ_census_today": {
+   "liver": 821,
+   "muscle": 497,
+   "spleen": 162,
+   "bone_marrow": 141,
+   "ear": 60,
+   "brain": 51,
+   "lung_epithelium": 49,
+   "whole_body": 22
+  }
+ },
+ "already_merged_arm_check": {
+  "pmids_in_corpus_matching_42585110": [],
+  "experiment_ids_starting_KJ": [],
+  "distinct_experiment_ids_in_corpus": 54,
+  "verdict": "No arm of this paper is in the corpus. KJ_2026 is free; checked by PMID, not by the year token (F-075)."
+ }
+}
