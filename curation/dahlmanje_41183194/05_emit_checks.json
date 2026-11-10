@@ -1,0 +1,38 @@
+{
+ "rows_emitted": 10,
+ "formulations_emitted": 5,
+ "values_catalogued": 20,
+ "values_admissible_yes": 10,
+ "values_admissible_no": 10,
+ "molpct_sums": {
+  "GlycoLNP45": 100.0,
+  "GlycoLNP59": 100.0,
+  "GlycoLNP60": 100.0,
+  "GlycoLNP61": 100.0,
+  "GlycoLNP62": 100.0,
+  "Control LNP61": 100.0
+ },
+ "molpct_all_exactly_100": true,
+ "z_mean": 0.0,
+ "z_sd_pop": 1.0,
+ "log10_mean": 1.805473,
+ "log10_sd_pop": 0.104806,
+ "smiles_parse": {
+  "SM-102": true,
+  "DSPC": true,
+  "Cholesterol": true,
+  "cKK-E12": true,
+  "ALC-0159": true,
+  "DMG-PEG": true,
+  "C16 Galactosyl(a) Ceramide": true
+ },
+ "inchikeys": {
+  "SM-102": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+  "DSPC": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+  "Cholesterol": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+  "cKK-E12": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+  "ALC-0159": "LPAYAXQFSOFRTA-UHFFFAOYSA-N",
+  "DMG-PEG": "NLDCRRFPGOSAHV-UHFFFAOYSA-N",
+  "C16 Galactosyl(a) Ceramide": "VJLLLMIZEJJZTE-KAQXTUTFSA-N"
+ }
+}

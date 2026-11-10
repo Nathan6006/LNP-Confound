@@ -1,0 +1,81 @@
+{
+ "_what": "Seeded-mutation gate, KG_2025 Fig. 2B.",
+ "rule": "A seed is credited only if its own declared gate moved. A crash before the metric line is NOT a catch.",
+ "control": {
+  "returncode": 0,
+  "metric": "n_refusals=0 refusal_text='' anchor_verdict=PASS liver_delta=0.67 spleen_delta=-0.16 spleen62=77.84",
+  "stderr_tail": "",
+  "reached_metric": true
+ },
+ "control_verdict": "PASS",
+ "seeds": [
+  {
+   "name": "tick_jitter",
+   "defect": "One y tick displaced +3 px in the tick strip; the bars and the other ticks are untouched.",
+   "gate": "axis.calibrate's UNIFORM-SPACING assertion, which fires before the leave-one-out test is ever reached. Recorded honestly: on a panel whose ticks are evenly spaced, any non-uniform displacement trips uniform-spacing first, so LOO is NOT independently exercised here and its measured 0.5 / 0.0 px residual is evidence of fit quality, not a gate this curation proved has teeth. A uniform displacement, which LOO also cannot see, is seeded separately as `origin_shift`.",
+   "credited_by": "refusal",
+   "expect_in_stderr": "equally spaced",
+   "returncode": 1,
+   "metric": null,
+   "stderr_tail": "Equally-valued ticks on a log or linear axis are equally spaced in PIXELS. Unequal spacing means these positions are not tick marks -- most often glyph centroids of the axis labels, whose spacing tracks the label text, not the axis. That is error class 20. Re-detect the ticks from the darkness-weighted centroid of the columns OUTSIDE the axis rule.",
+   "reached_metric": false,
+   "credited": true,
+   "why": "CREDITED by refusal: non-zero exit and the refusal names 'equally spaced'."
+  },
+  {
+   "name": "stretch_scale",
+   "defect": "Every bar body moved 6 px up. The ticks are untouched, so the calibration is still perfect and LOO stays clean.",
+   "gate": "the printed Fig. 3C anchor (54 / 78), which took no part in any geometry. 6 px = 3.4 percentage points > the 2.0 tol.",
+   "credited_by": "metric",
+   "expect_metric": "anchor_verdict=FAIL",
+   "returncode": 1,
+   "metric": "n_refusals=0 refusal_text='' anchor_verdict=FAIL liver_delta=4.07 spleen_delta=3.25 spleen62=81.25",
+   "stderr_tail": "",
+   "reached_metric": true,
+   "credited": true,
+   "why": "CREDITED by metric: anchor_verdict=FAIL"
+  },
+  {
+   "name": "origin_shift",
+   "defect": "All y ticks moved 8 px uniformly -- a pure origin error. Shifted UP, not down, so that no tick is pushed out of the detection window: a seed that changes how many ticks are found crashes the calibration and proves nothing about the gate it was aimed at.",
+   "gate": "the printed Fig. 3C anchor. Spacing stays uniform and LOO stays clean, so no calibration gate can see this.",
+   "credited_by": "metric",
+   "expect_metric": "anchor_verdict=FAIL",
+   "returncode": 1,
+   "metric": "n_refusals=0 refusal_text='' anchor_verdict=FAIL liver_delta=-3.86 spleen_delta=-4.7 spleen62=73.3",
+   "stderr_tail": "",
+   "reached_metric": true,
+   "credited": true,
+   "why": "CREDITED by metric: anchor_verdict=FAIL"
+  },
+  {
+   "name": "fill_colour_mask",
+   "defect": "HISTORICAL REPLAY of the defect this curation actually hit: mask keyed on the bar's fill colour instead of its ink, used without the solidity walk. The bar's darker top stroke is missed and the replicate dots punch holes in the fill, so the two flanks of liver bar 61 disagree.",
+   "gate": "bars.bar_top's full-width-coverage and left/right flank rules. These are raised PER BAR and collected, so the run reaches its metric line with every bar refused rather than dying -- credited on the refusal TEXT, not on a crash.",
+   "credited_by": "refusal_text",
+   "expect_in_stderr": "flank",
+   "returncode": 1,
+   "metric": "n_refusals=1 refusal_text='bar_top: left flank first-covered row 121, right flank 118, delta 3.0 px > 2.0 px tolerance.' anchor_verdict=FAIL liver_delta=None spleen_delta=-0.73 spleen62=72.16",
+   "stderr_tail": "",
+   "reached_metric": true,
+   "credited": true,
+   "why": "CREDITED by refusal text: 1 bar(s) refused and the refusal names 'flank'."
+  },
+  {
+   "name": "no_solidity",
+   "defect": "The solidity walk dropped, so free-floating replicate clusters re-enter the mask.",
+   "gate": "the spleen-62 value itself, reported on the METRIC line.",
+   "credited_by": "metric",
+   "expect_metric_change": "spleen62",
+   "returncode": 1,
+   "metric": "n_refusals=2 refusal_text='bar_top: left flank first-covered row 112, right flank 97, delta 15.0 px > 2.0 px tolerance.;bar_top: left flank first-covered row 79, right flank 70, delta 9.0 px > 2.0 px tolerance.' anchor_verdict=FAIL liver_delta=None spleen_delta=-0.16 spleen62=97.73",
+   "stderr_tail": "",
+   "reached_metric": true,
+   "credited": true,
+   "why": "CREDITED by metric: spleen62 moved 77.84 -> 97.73, a 19.89 point shift."
+  }
+ ],
+ "n_seeds": 5,
+ "n_credited": 5,
+ "verdict": "PASS"
+}

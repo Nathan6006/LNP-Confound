@@ -1,0 +1,55 @@
+{
+ "_what": "Stage 07. 06_rows.csv is HEADER-ONLY: this paper emits zero corpus rows. Produced by 07_emit.py.",
+ "rows_emitted": 0,
+ "header_columns": 79,
+ "header_source": "data/data_vivo.csv, read live",
+ "quality_columns_present": [
+  "Experiment_value_within_model",
+  "value_normalization_unit",
+  "confidence",
+  "positional_ambiguity",
+  "structure_assumed",
+  "value_is_bound",
+  "curation_note"
+ ],
+ "why_zero": [
+  "1 distinct ionizable lipid (7C1), which is a polydisperse polymer with no single correct SMILES; data/ has 0 blank IL_SMILES rows.",
+  "The 146 pooled-and-measured formulations carry no attributable value: Fig 3E/5D are unlabelled scatters and the stable subsets (115 of 120, 31 of 40) are never identified.",
+  "The pooled readout is DNA barcode recovery, not expression; the corpus's one barcoded experiment (LR_2023) is a translated peptide-barcode readout.",
+  "DECISIONS.md D-1 is OPEN, which blocks the merge on its own."
+ ],
+ "would_have_emitted_if_D1_resolved": {
+  "n_formulations": 5,
+  "pool": "in vivo",
+  "Experiment_ID": "CS_2018",
+  "Model_target": "bone_marrow / lung / heart, carried in Model_target with ONE z over the experiment (error class 22)",
+  "Experiment_method": "protein_adundance_normalized (Fig S3B, 6E, 6G) and editing_efficiency_normalized (Fig 6H)",
+  "Experiment_batching": "individual"
+ },
+ "guard_selftests": {
+  "literal_confidence_raises": {
+   "raised": true,
+   "credited": true,
+   "message_head": "emit: confidence='low' is a LITERAL."
+  },
+  "caveat_without_a_note_raises": {
+   "raised": true,
+   "credited": true,
+   "message_head": "emit_rows('seed-no-note') item 'original_7C1': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='1', value_is_bound='') and its curation_note is empty."
+  },
+  "control_passes": {
+   "n_rows": 5,
+   "rows_with_a_caveat": 5,
+   "credited": true,
+   "example": {
+    "positional_ambiguity": "",
+    "structure_assumed": "1",
+    "value_is_bound": "",
+    "value_normalization_unit": "experiment",
+    "Experiment_value_within_model": "",
+    "confidence": "low",
+    "curation_note": "7C1 is a polydisperse branched-PEI(Mn~600)/C15-epoxide polymer; the paper draws only one representative arm, so no single SMILES is correct. Formulation 80.0/0.0/20.0 mol% with C14PEG2000; value from Fig S3B bar 1 (=1.0 by definition: the normaliser)."
+   }
+  }
+ }
+}

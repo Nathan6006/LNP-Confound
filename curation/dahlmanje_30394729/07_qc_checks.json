@@ -1,0 +1,585 @@
+{
+ "_what": "Stage 06 checks for curation/dahlmanje_30394729 (Sago et al. 2018, PMID 30394729). Every entry carries numbers. Produced by 06_checks.py.",
+ "N1_N2_normalisation": {
+  "formula": "nd_i = [ (c_i / sum_k c_k) / (in_i / sum_k in_k) ] / sum_j[ same ] x 100%",
+  "stage_1_raw_column_totals": {
+   "computed": [
+    540.0,
+    230.0,
+    560.0,
+    330.0
+   ],
+   "printed": [
+    540.0,
+    230.0,
+    560.0,
+    330.0
+   ],
+   "max_residual": 0.0,
+   "n_cells": 4
+  },
+  "stage_2_within_sample_percent": {
+   "n_cells": 12,
+   "n_exact_after_rounding": 10,
+   "max_residual": 17.0,
+   "mismatches": [
+    {
+     "lnp": 1,
+     "sample": "Mouse 2",
+     "reconstructed": 34.7826,
+     "printed": 34.0,
+     "residual_after_rounding": 1.0
+    },
+    {
+     "lnp": 2,
+     "sample": "Mouse 2",
+     "reconstructed": 19.5652,
+     "printed": 3.0,
+     "residual_after_rounding": 17.0
+    }
+   ],
+   "printed_total_row": [
+    100.0,
+    100.0,
+    100.0,
+    100.0
+   ],
+   "printed_cells_actually_sum_to": [
+    100.0,
+    83.0,
+    101.0,
+    99.0
+   ]
+  },
+  "stage_3_normalised_delivery": {
+   "n_cells": 9,
+   "n_exact_after_rounding": 9,
+   "max_residual": 0.0,
+   "cells": [
+    {
+     "lnp": 1,
+     "sample": "Mouse 1",
+     "reconstructed": 39.8792,
+     "printed": 40.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 1,
+     "sample": "Mouse 2",
+     "reconstructed": 37.5667,
+     "printed": 38.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 1,
+     "sample": "Mouse 3",
+     "reconstructed": 38.5401,
+     "printed": 39.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 2,
+     "sample": "Mouse 1",
+     "reconstructed": 16.6163,
+     "printed": 17.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 2,
+     "sample": "Mouse 2",
+     "reconstructed": 17.6094,
+     "printed": 18.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 2,
+     "sample": "Mouse 3",
+     "reconstructed": 17.6642,
+     "printed": 18.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 3,
+     "sample": "Mouse 1",
+     "reconstructed": 43.5045,
+     "printed": 44.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 3,
+     "sample": "Mouse 2",
+     "reconstructed": 44.8239,
+     "printed": 45.0,
+     "residual_after_rounding": 0.0
+    },
+    {
+     "lnp": 3,
+     "sample": "Mouse 3",
+     "reconstructed": 43.7956,
+     "printed": 44.0,
+     "residual_after_rounding": 0.0
+    }
+   ],
+   "printed_total_row": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "printed_cells_actually_sum_to": [
+    101.0,
+    101.0,
+    101.0
+   ]
+  }
+ },
+ "F1_factorial": {
+  "factorial_library_1": {
+   "label": "library 1 (Fig S2A)",
+   "n_peg_variants": 5,
+   "n_ratios_per_variant": {
+    "C14PEG2000": 24,
+    "C18PEG2000": 24,
+    "C14PEG3000": 24,
+    "C16PEG2000": 24,
+    "C18PEG3000": 24
+   },
+   "distinct_ratios_per_variant": {
+    "C14PEG2000": 24,
+    "C18PEG2000": 24,
+    "C14PEG3000": 24,
+    "C16PEG2000": 24,
+    "C18PEG3000": 24
+   },
+   "every_variant_carries_the_same_ratio_set": true,
+   "duplicate_ratios_within_a_variant": {
+    "C14PEG2000": 0,
+    "C18PEG2000": 0,
+    "C14PEG3000": 0,
+    "C16PEG2000": 0,
+    "C18PEG3000": 0
+   },
+   "product": 120,
+   "n_rows": 120,
+   "product_equals_rows": true,
+   "claimed": "5 PEG types x 24 formulation ratios = 120",
+   "claim_holds": true
+  },
+  "factorial_library_2": {
+   "label": "library 2 (Fig S2F)",
+   "n_peg_variants": 2,
+   "n_ratios_per_variant": {
+    "C16PEG2000": 20,
+    "C18PEG2000": 20
+   },
+   "distinct_ratios_per_variant": {
+    "C16PEG2000": 20,
+    "C18PEG2000": 20
+   },
+   "every_variant_carries_the_same_ratio_set": true,
+   "duplicate_ratios_within_a_variant": {
+    "C16PEG2000": 0,
+    "C18PEG2000": 0
+   },
+   "product": 40,
+   "n_rows": 40,
+   "product_equals_rows": true,
+   "claimed": "2 PEG types x 20 formulation ratios = 40",
+   "claim_holds": true
+  }
+ },
+ "M1_molpct": {
+  "molpct_library_1": {
+   "label": "library 1",
+   "n": 120,
+   "n_sum_to_100": 120,
+   "n_violations": 0,
+   "violations": []
+  },
+  "molpct_library_2": {
+   "label": "library 2",
+   "n": 40,
+   "n_sum_to_100": 38,
+   "n_violations": 2,
+   "violations": [
+    {
+     "lnp": 36,
+     "sum": 110.0,
+     "row": {
+      "lnp": 36,
+      "il_molpct": 60.0,
+      "chol_molpct": 45.0,
+      "peg_molpct": 5.0,
+      "dspc_molpct": 0.0,
+      "peg_type": "C16PEG2000"
+     }
+    },
+    {
+     "lnp": 40,
+     "sum": 110.0,
+     "row": {
+      "lnp": 40,
+      "il_molpct": 60.0,
+      "chol_molpct": 45.0,
+      "peg_molpct": 5.0,
+      "dspc_molpct": 0.0,
+      "peg_type": "C18PEG2000"
+     }
+    }
+   ]
+  }
+ },
+ "B1_barcodes": {
+  "n_cells_in_grid": 156,
+  "n_barcodes": 156,
+  "numbering_is_1_to_n": true,
+  "all_8_nt": true,
+  "n_distinct_sequences": 156,
+  "claimed_in_text": 156,
+  "matches_claim": true
+ },
+ "T1_total_formulated": {
+  "library_1": 120,
+  "library_2": 40,
+  "total": 160,
+  "drawn_in_Fig_1D": 160,
+  "matches": true,
+  "note": "Fig 1D draws '2x; 160 LNPs tested in vivo' and never computes it; 120 + 40 reproduces it exactly."
+ },
+ "W1_individually_tested": {
+  "n": 5,
+  "n_uniquely_located": 3,
+  "n_as_expected": 5,
+  "rows": [
+   {
+    "label": "Original 7C1 (80:20)",
+    "composition": "80.0/0.0/20.0/0.0 C14PEG2000",
+    "matches_in_the_library_tables": [],
+    "unique": false,
+    "expected_library": null,
+    "in_expected_library": true
+   },
+   {
+    "label": "Screen 1 Winner",
+    "composition": "60.0/37.5/2.5/0.0 C16PEG2000",
+    "matches_in_the_library_tables": [
+     "library 1 LNP 25",
+     "library 2 LNP 34"
+    ],
+    "unique": false,
+    "expected_library": "1",
+    "in_expected_library": true
+   },
+   {
+    "label": "LNP1 (screen 2)",
+    "composition": "70.0/10.0/20.0/0.0 C16PEG2000",
+    "matches_in_the_library_tables": [
+     "library 2 LNP 6"
+    ],
+    "unique": true,
+    "expected_library": "2",
+    "in_expected_library": true
+   },
+   {
+    "label": "BM1 (screen 2 winner)",
+    "composition": "80.0/2.5/17.5/0.0 C18PEG2000",
+    "matches_in_the_library_tables": [
+     "library 2 LNP 18"
+    ],
+    "unique": true,
+    "expected_library": "2",
+    "in_expected_library": true
+   },
+   {
+    "label": "LNP3 (screen 2)",
+    "composition": "80.0/0.0/20.0/0.0 C18PEG2000",
+    "matches_in_the_library_tables": [
+     "library 2 LNP 19"
+    ],
+    "unique": true,
+    "expected_library": "2",
+    "in_expected_library": true
+   }
+  ]
+ },
+ "P1_peg_repeat_count": {
+  "drawn_repeat_count": 45,
+  "unit_mass_Da": 44.05256,
+  "block_mass_Da": 1982.365,
+  "plus_terminal_OCH3_Da": 2013.399,
+  "printed_label": 2000,
+  "relative_error_vs_2000": 0.00882,
+  "verdict": "45 x 44.05 = 1982.4 Da, 0.9% from the printed 2000 -- the drawn repeat count is consistent with the label and was never multiplied out in the paper."
+ },
+ "E1_formulated_pies_vs_tables": {
+  "Fig_4A_library1_PEG_molpct": {
+   "n_formulated": 120,
+   "printed_slices": [
+    12,
+    25,
+    25,
+    21,
+    17
+   ],
+   "printed_sum": 100,
+   "bands_half_open": {
+    "bands": [
+     "2.5",
+     "5-9",
+     "10-14",
+     "15-20",
+     ">20"
+    ],
+    "counts": [
+     15,
+     30,
+     30,
+     25,
+     20
+    ],
+    "percent": [
+     12.5,
+     25.0,
+     25.0,
+     20.8333,
+     16.6667
+    ],
+    "rounded": [
+     12,
+     25,
+     25,
+     21,
+     17
+    ],
+    "exact_match": true,
+    "convention": "half_open [lo,hi)"
+   },
+   "bands_inclusive": {
+    "bands": [
+     "2.5",
+     "5-9",
+     "10-14",
+     "15-20",
+     ">20"
+    ],
+    "counts": [
+     15,
+     30,
+     30,
+     35,
+     10
+    ],
+    "percent": [
+     12.5,
+     25.0,
+     25.0,
+     29.1667,
+     8.3333
+    ],
+    "rounded": [
+     12,
+     25,
+     25,
+     29,
+     8
+    ],
+    "exact_match": false,
+    "convention": "inclusive [lo,hi]"
+   },
+   "exact_match": true
+  },
+  "Fig_4B_library1_PEG_type": {
+   "n_formulated": 120,
+   "printed_slices": [
+    20,
+    20,
+    20,
+    20,
+    20
+   ],
+   "printed_sum": 100,
+   "categories": [
+    "C14PEG2000",
+    "C16PEG2000",
+    "C18PEG2000",
+    "C14PEG3000",
+    "C18PEG3000"
+   ],
+   "counts": [
+    24,
+    24,
+    24,
+    24,
+    24
+   ],
+   "percent": [
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0
+   ],
+   "rounded": [
+    20,
+    20,
+    20,
+    20,
+    20
+   ],
+   "exact_match": true,
+   "convention": "exact category equality"
+  },
+  "Fig_5H_library2_PEG_molpct": {
+   "n_formulated": 40,
+   "printed_slices": [
+    40,
+    40,
+    20
+   ],
+   "printed_sum": 100,
+   "bands_half_open": {
+    "bands": [
+     "2.5",
+     "15-20",
+     ">20"
+    ],
+    "counts": [
+     18,
+     8,
+     14
+    ],
+    "percent": [
+     45.0,
+     20.0,
+     35.0
+    ],
+    "rounded": [
+     45,
+     20,
+     35
+    ],
+    "exact_match": false,
+    "convention": "half_open [lo,hi)"
+   },
+   "bands_inclusive": {
+    "bands": [
+     "2.5",
+     "15-20",
+     ">20"
+    ],
+    "counts": [
+     18,
+     16,
+     6
+    ],
+    "percent": [
+     45.0,
+     40.0,
+     15.0
+    ],
+    "rounded": [
+     45,
+     40,
+     15
+    ],
+    "exact_match": false,
+    "convention": "inclusive [lo,hi]"
+   },
+   "exact_match": false
+  },
+  "Fig_5I_library2_PEG_type": {
+   "n_formulated": 40,
+   "printed_slices": [
+    50,
+    50
+   ],
+   "printed_sum": 100,
+   "categories": [
+    "C16PEG2000",
+    "C18PEG2000"
+   ],
+   "counts": [
+    20,
+    20
+   ],
+   "percent": [
+    50.0,
+    50.0
+   ],
+   "rounded": [
+    50,
+    50
+   ],
+   "exact_match": true,
+   "convention": "exact category equality"
+  },
+  "Fig_5J_library2_7C1_molpct": {
+   "n_formulated": 40,
+   "printed_slices": [
+    20,
+    40,
+    20,
+    20
+   ],
+   "printed_sum": 100,
+   "categories": [
+    "50.0",
+    "60.0",
+    "70.0",
+    "80.0"
+   ],
+   "counts": [
+    8,
+    16,
+    8,
+    8
+   ],
+   "percent": [
+    20.0,
+    40.0,
+    20.0,
+    20.0
+   ],
+   "rounded": [
+    20,
+    40,
+    20,
+    20
+   ],
+   "exact_match": true,
+   "convention": "exact category equality"
+  },
+  "Fig_5K_library2_DSPC_molpct": {
+   "n_formulated": 40,
+   "printed_slices": [
+    60,
+    40
+   ],
+   "printed_sum": 100,
+   "categories": [
+    "0.0",
+    "10.0"
+   ],
+   "counts": [
+    24,
+    16
+   ],
+   "percent": [
+    60.0,
+    40.0
+   ],
+   "rounded": [
+    60,
+    40
+   ],
+   "exact_match": true,
+   "convention": "exact category equality"
+  },
+  "_summary": {
+   "n_panels": 6,
+   "n_reconciling": 5,
+   "panels_that_do_not": [
+    "Fig_5H_library2_PEG_molpct"
+   ]
+  }
+ }
+}

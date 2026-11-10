@@ -1,0 +1,311 @@
+{
+ "_what": "Drawn chain lengths, Fig. 1A glycolipids.",
+ "source": "pnas.2409569122fig01.jpg, 708x720 flattened JPEG",
+ "vector_route": "UNAVAILABLE -- no article PDF is served (fullTextPDF -> HTTP 404), so chains.vector_bonds has no bond coordinates to read. Both counts below are raster-side but methodologically independent.",
+ "chains": {
+  "C8_acyl": {
+   "what": "the N-acyl chain, lower left of the C8 panel",
+   "box": [
+    76,
+    85,
+    285,
+    350
+   ],
+   "bonds_by_turns": 8,
+   "turns_detail": {
+    "interior_turning_points": 7,
+    "deadband_px": 2.0
+   },
+   "bonds_by_crossings": 7,
+   "crossings_detail": {
+    "ink_per_row": {
+     "76": 1,
+     "77": 1,
+     "78": 8,
+     "79": 14,
+     "80": 14,
+     "81": 13,
+     "82": 14,
+     "83": 10,
+     "84": 2
+    },
+    "rows_kept": {
+     "78": 5,
+     "79": 8,
+     "80": 8,
+     "81": 7,
+     "82": 7,
+     "83": 4
+    },
+    "interior_used": [
+     8,
+     8,
+     7,
+     7
+    ],
+    "ink_floor": 5.6
+   },
+   "bonds_by_apex_vertices": 8,
+   "apex_detail": {
+    "top_row": 79,
+    "bot_row": 82,
+    "n_top": 5,
+    "n_bot": 4,
+    "vertices": 9,
+    "gap_mean": 7.81,
+    "gap_min": 1.5,
+    "gap_sd": 2.41
+   },
+   "centreline_px": 64,
+   "all_three_agree": false,
+   "_count_carbons": {
+    "n": 7,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   },
+   "DISAGREE": "turns=8 crossings=7 apex_vertices=8. curation/lib/chains.py's contract is that independent methods must AGREE; a disagreement is NOT averaged and NOT resolved by preferring a route. At ~9 px per bond on a flattened JPEG a +/-1 ambiguity is real, and it is recorded as one.",
+   "acyl_carbons_including_C1_by_crossings": 8,
+   "name_token_check": {
+    "label": "C8_acyl",
+    "name_token_length": 8,
+    "measured_length": 8,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "C8_sphingosine": {
+   "what": "the sphingoid base, upper left of the C8 panel",
+   "box": [
+    56,
+    65,
+    233,
+    350
+   ],
+   "bonds_by_turns": 13,
+   "turns_detail": {
+    "interior_turning_points": 12,
+    "deadband_px": 2.0
+   },
+   "bonds_by_crossings": 14,
+   "crossings_detail": {
+    "ink_per_row": {
+     "56": 0,
+     "57": 0,
+     "58": 22,
+     "59": 26,
+     "60": 27,
+     "61": 26,
+     "62": 29,
+     "63": 7,
+     "64": 0
+    },
+    "rows_kept": {
+     "58": 7,
+     "59": 13,
+     "60": 14,
+     "61": 14,
+     "62": 8
+    },
+    "interior_used": [
+     13,
+     14,
+     14
+    ],
+    "ink_floor": 11.6
+   },
+   "bonds_by_apex_vertices": 14,
+   "apex_detail": {
+    "top_row": 59,
+    "bot_row": 61,
+    "n_top": 7,
+    "n_bot": 8,
+    "vertices": 15,
+    "gap_mean": 8.0,
+    "gap_min": 3.0,
+    "gap_sd": 1.52
+   },
+   "centreline_px": 117,
+   "all_three_agree": false,
+   "_count_carbons": {
+    "n": 14,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   },
+   "DISAGREE": "turns=13 crossings=14 apex_vertices=14. curation/lib/chains.py's contract is that independent methods must AGREE; a disagreement is NOT averaged and NOT resolved by preferring a route. At ~9 px per bond on a flattened JPEG a +/-1 ambiguity is real, and it is recorded as one."
+  },
+  "C16_acyl": {
+   "what": "the N-acyl chain, lower left of the C16 panel",
+   "box": [
+    164,
+    173,
+    194,
+    341
+   ],
+   "bonds_by_turns": 15,
+   "turns_detail": {
+    "interior_turning_points": 14,
+    "deadband_px": 2.0
+   },
+   "bonds_by_crossings": 15,
+   "crossings_detail": {
+    "ink_per_row": {
+     "164": 0,
+     "165": 0,
+     "166": 19,
+     "167": 31,
+     "168": 32,
+     "169": 31,
+     "170": 31,
+     "171": 21,
+     "172": 2
+    },
+    "rows_kept": {
+     "166": 8,
+     "167": 15,
+     "168": 15,
+     "169": 15,
+     "170": 16,
+     "171": 8
+    },
+    "interior_used": [
+     15,
+     15,
+     15,
+     16
+    ],
+    "ink_floor": 12.8
+   },
+   "bonds_by_apex_vertices": 15,
+   "apex_detail": {
+    "top_row": 167,
+    "bot_row": 170,
+    "n_top": 8,
+    "n_bot": 8,
+    "vertices": 16,
+    "gap_mean": 9.5,
+    "gap_min": 9.0,
+    "gap_sd": 0.26
+   },
+   "centreline_px": 146,
+   "all_three_agree": true,
+   "_count_carbons": {
+    "n": 15,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   },
+   "acyl_carbons_including_C1_by_crossings": 16,
+   "name_token_check": {
+    "label": "C16_acyl",
+    "name_token_length": 16,
+    "measured_length": 16,
+    "matches": true,
+    "note": ""
+   }
+  },
+  "C16_sphingosine": {
+   "what": "the sphingoid base, upper left of the C16 panel",
+   "box": [
+    144,
+    153,
+    214,
+    342
+   ],
+   "bonds_by_turns": 13,
+   "turns_detail": {
+    "interior_turning_points": 12,
+    "deadband_px": 2.0
+   },
+   "bonds_by_crossings": 14,
+   "crossings_detail": {
+    "ink_per_row": {
+     "144": 0,
+     "145": 6,
+     "146": 30,
+     "147": 29,
+     "148": 28,
+     "149": 30,
+     "150": 27,
+     "151": 0,
+     "152": 0
+    },
+    "rows_kept": {
+     "146": 7,
+     "147": 14,
+     "148": 14,
+     "149": 14,
+     "150": 7
+    },
+    "interior_used": [
+     14,
+     14,
+     14
+    ],
+    "ink_floor": 12.0
+   },
+   "bonds_by_apex_vertices": 13,
+   "apex_detail": {
+    "top_row": 147,
+    "bot_row": 149,
+    "n_top": 7,
+    "n_bot": 7,
+    "vertices": 14,
+    "gap_mean": 9.46,
+    "gap_min": 8.5,
+    "gap_sd": 0.36
+   },
+   "centreline_px": 127,
+   "all_three_agree": false,
+   "_count_carbons": {
+    "n": 14,
+    "methods": [
+     "raster"
+    ],
+    "agreed": false,
+    "name_token_matches": null
+   },
+   "DISAGREE": "turns=13 crossings=14 apex_vertices=13. curation/lib/chains.py's contract is that independent methods must AGREE; a disagreement is NOT averaged and NOT resolved by preferring a route. At ~9 px per bond on a flattened JPEG a +/-1 ambiguity is real, and it is recorded as one."
+  }
+ },
+ "acyl_difference_identity": {
+  "_what": "C16 acyl minus C8 acyl, by each method independently. Hexadecanoyl minus octanoyl = exactly 8 carbons.",
+  "expected": 8,
+  "by_method": {
+   "turns": 7,
+   "crossings": 8,
+   "apex_vertices": 7
+  },
+  "all_methods_give_8": false
+ },
+ "sphingoid_base_consistency": {
+  "_what": "Both panels draw the SAME sphingoid base; only the N-acyl chain is meant to differ. This is a chemical constraint the reads must satisfy, not an assumption imported into them.",
+  "by_apex_vertices": {
+   "C8": 14,
+   "C16": 13
+  },
+  "by_crossings": {
+   "C8": 14,
+   "C16": 14
+  },
+  "apex_agrees_between_panels": false,
+  "crossings_agrees_between_panels": true,
+  "VERDICT": "The sphingoid base length is NOT pinned to +/-1 by this raster: apex-vertex counting makes the two panels agree and mid-line crossing counting does not. The base is therefore taken from the reagent's CHEMICAL NAME, and every emitted row carrying this helper lipid is flagged structure_assumed = 1 with the reason on the row."
+ },
+ "EMISSION_RELEVANT_RESULT": {
+  "_what": "What the emitted rows actually depend on.",
+  "C16_acyl_bonds_all_three_methods": 15,
+  "C16_acyl_carbons": 16,
+  "C16_acyl_unanimous": true,
+  "C16_name_token_matches": true,
+  "C8_acyl_unresolved": "crossings=7 bonds (8 C, matching the token) against turns=8 and apex=8. Recorded, NOT resolved. It changes nothing emitted: no row in this curation carries C8GaCer.",
+  "sphingoid_base_unresolved": "crossings makes both panels 14 bonds; apex and turns make the C16 panel 13. A +/-1 ambiguity at ~9 px per bond on a flattened JPEG. The base is therefore taken from the reagent's chemical name and every row carrying it is flagged structure_assumed."
+ }
+}

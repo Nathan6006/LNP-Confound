@@ -1,0 +1,135 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). One entry per panel/table that could supply a delivery value. Written BEFORE any digitiser was written. Tier 5 (pixels) must say, in a sentence a reviewer can check, why tiers 1-4 failed.",
+  "paper": {
+    "pmid": "41183194",
+    "pmcid": "PMC12625924",
+    "doi": "10.1073/pnas.2409569122",
+    "title": "Glycolipid nanoparticles target the spleen and detarget the liver without charge",
+    "first_author": "Kara Gentry",
+    "last_author": "James E. Dahlman",
+    "lab": "Dahlman lab, Wallace H. Coulter Dept of BME, Georgia Institute of Technology and Emory University School of Medicine",
+    "lab_verified_from": "Europe PMC REST core record, authorList affiliations; all 13 authors share the single Georgia Tech/Emory affiliation and Dahlman is corresponding (james.dahlman@emory.edu). The folder name dahlmanje_* names the PI and is correct, but Experiment_ID derives from the FIRST author: Gentry K -> KG_2025.",
+    "proposed_experiment_id": "KG_2025",
+    "journal": "Proc Natl Acad Sci U S A 122(45) e2409569122",
+    "pub_year": 2025,
+    "licence_article": "CC BY-NC-ND 4.0",
+    "licence_string_source": "Europe PMC core record field `license` = 'cc by-nc-nd'; corroborated by the JATS permissions block 'https://creativecommons.org/licenses/by-nc-nd/4.0/'",
+    "licence_verdict": "FAILS the CLAUDE.md section 8 CC0/CC-BY requirement on TWO counts: NonCommercial and NoDerivatives."
+  },
+  "deposits": {
+    "repository_search": "provenance/tools/find_repo.py --pmid 41183194 --author Gentry: 5 queries, 0 repo hits, 0 candidates. No author code/data repository exists.",
+    "declared_deposit": "SRA PRJNA1150220 (runs SRR30315640-44) - scRNA-seq raw reads ONLY.",
+    "declared_deposit_contains_no_delivery_value": "An SRA run is unaligned sequencing reads from the splenic scRNA-seq experiment. It contains no barcode count table, no normalized delivery value, and no LNP identity mapping. It is not a delivery-value source.",
+    "data_availability_statement_verbatim": "All other data are included in the article and/or SI Appendix.",
+    "publisher_source_data": "NONE. PNAS deposited no Source Data / Dataset S1 file. The Europe PMC supplementaryFiles archive for PMC12625924 contains exactly 11 members: the SI Appendix PDF plus the five main figures as .jpg and .gif. Verified by listing the archive.",
+    "si_appendix_is_figures_only": "12 pages; page 1 is the title block, pages 2-12 are one full-page bitmap each (Fig. S1-S11). pdfplumber find_tables() returns 0 on every page and there is no ruled table it missed (triage.py: native_tables 0, ruled_tables 0). Every SI number is therefore in pixels."
+  },
+  "sources": [
+    {
+      "id": "V1",
+      "locus": "Fig. 3C (radar/pentagon), printed numerals in parentheses",
+      "supplies": "ABSOLUTE percent Thy1.1+ cells for GlycoLNP61 and Control LNP61 in five organs: S(78,66) Li(54,81) L(13,0) K(1,1) H(0,0)",
+      "tier": "4_printed_numerals",
+      "tier_sentence": "The values are printed as numerals inside the figure artwork and are read as glyphs, not measured from any bar height or axis. The figure legend states 'Values in parentheses represent percent delivery'; the ordering (GlycoLNP61, Control LNP61) is fixed independently by the running Results text, which prints 78 / 54 / 66 for the same quantities.",
+      "corpus_admissible": "yes - percent of cells positive for the Thy1.1 protein reporter is a protein-abundance delivery readout"
+    },
+    {
+      "id": "V2",
+      "locus": "Results body text, paragraph beginning 'We then injected both LNPs into mice at a dose of 0.8 mg/kg'",
+      "supplies": "Same four spleen/liver values as V1, in running prose: GlycoLNP61 78% splenic macrophages / 54% liver endothelial cells; Control LNP61 66% / 82%.",
+      "tier": "4_printed_numerals",
+      "tier_sentence": "Machine-readable numerals in the JATS full text from Europe PMC; no rendering of any kind. Serves as the independent cross-check on V1 and is where the one contradiction (liver, Control LNP61: 82 in text vs 81 in Fig. 3C) is visible.",
+      "corpus_admissible": "yes - same measurement as V1"
+    },
+    {
+      "id": "V3",
+      "locus": "Fig. S5 (SI p. 6), a bordered table rendered as a bitmap (1429x668 px, native 219.8 dpi)",
+      "supplies": "FORMULATION, not a delivery value: Dh, PDI, EE%, molar ratio IL:Chol:PEG:HL, IL identity, cholesterol, PEG identity, helper-lipid identity and lipid:mRNA mass ratio for the five lead LNPs (45, 59, 60, 61, 62).",
+      "tier": "5_pixels",
+      "tier_sentence": "Tiers 1-3 fail because no Source Data file and no repository exist for this paper (see deposits). Tier 4 fails because the SI page carries only 145 characters of text (the caption); the table is a flattened bitmap with no text layer, so pdfplumber extracts nothing and find_tables() returns 0. The content read is TYPESET GLYPHS, not a measured geometry: no axis, no scale and no colour mapping is involved, so error classes 20/27/32 cannot arise here.",
+      "corpus_admissible": "n/a - formulation metadata, not a measurement"
+    },
+    {
+      "id": "V4",
+      "locus": "Fig. 2A, a bordered table inside the main-figure raster (786x1037 px)",
+      "supplies": "FORMULATION/biophysics: Dh, PDI, EE% for LNPs 61, 62, 45, 59, 60, at one more decimal place than Fig. S5.",
+      "tier": "5_pixels",
+      "tier_sentence": "Same reason as V3 - the main figures are deposited only as flattened .jpg rasters (no vector PDF of the article is served by Europe PMC; fullTextPDF returns HTTP 404). Typeset glyphs again, no geometry.",
+      "corpus_admissible": "n/a - formulation metadata"
+    },
+    {
+      "id": "V5",
+      "locus": "Fig. 2C, two formulation boxes",
+      "supplies": "FORMULATION: GlycoLNP61 = SM-102 45 / Cholesterol 27.5 / ALC-0159 2.5 / C16 G(a)Cer 25; Control LNP61 = identical with DSPC 25 in place of the glycolipid.",
+      "tier": "5_pixels",
+      "tier_sentence": "Same reason as V4. This is the ONLY locus that states Control LNP61's composition.",
+      "corpus_admissible": "n/a - formulation metadata"
+    },
+    {
+      "id": "V6",
+      "locus": "Fig. 2B, bar+dot plots, Liver and Spleen",
+      "supplies": "percent Thy1.1+ cells for GlycoLNP45, 59, 61, 62 in liver endothelial cells and splenic macrophages - bar MEANS, no numerals printed.",
+      "tier": "5_pixels",
+      "tier_sentence": "Tiers 1-4 fail for the whole paper (no Source Data, no repo, raster-only figures). Would require a bar-top read off a 786x1037 px raster in which this panel occupies roughly 330x200 px. NOT ATTEMPTED - see DECISIONS D-3; the panel is superseded for LNP61 by the printed V1/V2 numerals and the remaining three LNPs would be the only rows resting on a pixel read.",
+      "corpus_admissible": "yes in kind, but NOT EXTRACTED"
+    },
+    {
+      "id": "V7",
+      "locus": "Fig. 3D, dose-response bars",
+      "supplies": "percent Thy1.1+ splenic macrophages at Control 0.8, Glyco 0.8, Glyco 0.4, Glyco 0.2 mg/kg - bar means, no numerals.",
+      "tier": "5_pixels",
+      "tier_sentence": "Same as V6. NOT ATTEMPTED - see DECISIONS D-3.",
+      "corpus_admissible": "yes in kind, but NOT EXTRACTED"
+    },
+    {
+      "id": "R1",
+      "locus": "Fig. 1G and 1H, violin plots, 'Normalized BC Count'",
+      "supplies": "The pooled barcode screen's normalized delivery, but AGGREGATED into two groups (C8GaCer vs C16GaCer) per library. No point is labelled with an LNP identity.",
+      "tier": "not_a_source",
+      "tier_sentence": "The quantity is per-LNP, but the publication attributes nothing: a violin shows a distribution, and the only attribution available is the binary glycolipid group. No LNP identity, no molar ratio and no PEG identity can be recovered from it.",
+      "corpus_admissible": "no - not attributable to any formulation"
+    },
+    {
+      "id": "R2",
+      "locus": "Fig. S4 (SI p. 5)",
+      "supplies": "NOTHING. Despite the caption 'Schematic showing the process of ranking GlycoLNPs based on their spleen-to-liver ratios', the panel is a cartoon: five stylised barcode combs, a four-bar chart whose categories are labelled A/B/C/D, and prose describing the two-list selection rule.",
+      "tier": "not_a_source",
+      "tier_sentence": "Read at native 219.8 dpi. No LNP is named, no number is printed, no axis is calibrated to anything real. The ranked list the Results text refers to is not published.",
+      "corpus_admissible": "no - contains no data"
+    },
+    {
+      "id": "R3",
+      "locus": "Fig. S11 (SI p. 12), scatter, 52 points",
+      "supplies": "'Relative Normalized BC Count (spleen/liver)' vs hydrodynamic diameter for the 52 particles of the SM-102 pool.",
+      "tier": "not_a_source",
+      "tier_sentence": "TWO independent disqualifications. (a) The y quantity is a spleen/liver RATIO, which CLAUDE.md section 8 already rules is not a poolable readout. (b) The points carry no label of any kind, so even the 52 ratios cannot be attached to an LNP identity, a molar ratio or a PEG. This is the single locus in the paper where a per-LNP number is drawn, and it is drawn anonymously.",
+      "corpus_admissible": "no - a ratio, and unattributable"
+    },
+    {
+      "id": "R4",
+      "locus": "Fig. 3B and Fig. S8",
+      "supplies": "Spleen-to-liver delivery RATIO for GlycoLNP61 vs Control LNP61 (3B) and GlycoLNP62 vs Control LNP62 (S8).",
+      "tier": "not_a_source",
+      "tier_sentence": "A selectivity contrast, not a poolable readout - the same ruling CLAUDE.md section 8 makes for molea.csv's mTP_Difference. For the 61 pair the absolute per-organ values exist and are used instead (V1/V2); for the 62 pair they do NOT, so the 62 pair contributes nothing. See DECISIONS D-2.",
+      "corpus_admissible": "no - ratio"
+    },
+    {
+      "id": "R5",
+      "locus": "Fig. 1C; Fig. 1D/1E; Fig. 2D; Fig. 2E; Fig. 2F/2G and Fig. S7; Fig. 3E; Fig. 4 (all panels) and Fig. S9/S10; Fig. 5 (all panels); Fig. S1; Fig. S2/S3; Fig. S6",
+      "supplies": "hydrodynamic diameter and PDI; POOL-level percent Thy1.1+ (the whole 52- or 57-LNP mixture, not any one LNP); LNP surface pKa by TNS; cryo-TEM morphology; NMR spectra; tdTomato immunofluorescence images; scRNA-seq clusters, differential gene expression and Reactome pathways; serum cytokine panel; flow-cytometry gating markers; cell-type-level pool expression; Dh and EE.",
+      "tier": "not_a_source",
+      "tier_sentence": "Every one of these is outside the delivery-only Experiment_method vocabulary (size, PDI, pKa, encapsulation efficiency, morphology, spectra, host-response RNA-seq, cytokine panels), or is a POOL-level measurement that belongs to a 52/57-member mixture rather than to any single formulation and so cannot be keyed to a structure.",
+      "corpus_admissible": "no"
+    }
+  ],
+  "summary": {
+    "tier_1_source_data": 0,
+    "tier_2_si_tables": 0,
+    "tier_3_repo": 0,
+    "tier_4_printed_numerals": 2,
+    "tier_5_pixels_used_for_metadata_only": 3,
+    "tier_5_pixels_attempted_for_a_value": 0,
+    "not_a_source": 5,
+    "statement": "Every delivery VALUE this curation emits comes from printed numerals (tier 4). No value is measured from a geometry. The only pixel reads are of typeset glyphs in bordered formulation tables, where no axis, scale or colour mapping exists to be mis-anchored."
+  }
+}

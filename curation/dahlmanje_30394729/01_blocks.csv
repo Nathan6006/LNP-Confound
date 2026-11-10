@@ -1,0 +1,11 @@
+component,role,name_in_paper,where_drawn,structure_known,smiles_or_why_not,note
+ionizable,ionizable lipomer,7C1,"Fig 3A, Fig 5A (one arm only); Fig S1B (the synthesis)",NO,,"Branched PEI Mn~600 (1 molar eq) + a 1,2-epoxide with R = C13 (14 molar eq), 90C/72h/EtOH. A polydisperse, statistically substituted polymer: no single SMILES is correct. Fig 3A/5A draw ONE representative arm with the backbone nitrogen replaced by a diethylamino group."
+helper,phospholipid,DSPC,Fig 5A,YES,CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC,"Library 2 only, at 0 or 10 mol%. Drawn in full in Fig 5A. SMILES from provenance/reagent_registry.py, never from memory; the independently assembled anchor in reference_structures.csv agrees by full InChIKey."
+sterol,cholesterol,Cholesterol,"Fig 3A, Fig 5A",YES,CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C,"3-beta OH, drawn with wedges in both panels. SMILES from provenance/reagent_registry.py; the hand re-traversal written for the anchor gave a DIASTEREOMER (see reference_structures.csv), which is why no excipient SMILES in this folder is typed from memory."
+peg,PEG-lipid,C14PEG2000,Fig 3B (generic skeleton),ASSUMED,,"Drawn as a diacyl-glycero-phosphoethanolamine-PEG with (OCH2CH2)45OCH3. C14 => DMPE-PEG2000 by that skeleton, but the paper never names a catalogue product and never states the PEG dispersity; not emitted."
+peg,PEG-lipid,C16PEG2000,"Fig 3B, Fig 5A",ASSUMED,,C16 => DPPE-PEG2000 by the drawn skeleton. Not named by the paper.
+peg,PEG-lipid,C18PEG2000,"Fig 3B, Fig 5A",ASSUMED,,C18 => DSPE-PEG2000 by the drawn skeleton. Not named by the paper.
+peg,PEG-lipid,C14PEG3000,Fig 3B,ASSUMED,,Library 1 only.
+peg,PEG-lipid,C18PEG3000,Fig 3B,ASSUMED,,Library 1 only.
+cargo,siRNA,siICAM-2 / siLuciferase,Fig S1C,sequence given,,"2'-O-methyl modified, dTdT overhangs, phosphorothioate."
+cargo,DNA barcode,156 x 91-nt barcodes,Fig S1F,sequence given,,siRNA : DNA barcode mass ratio 10:1.

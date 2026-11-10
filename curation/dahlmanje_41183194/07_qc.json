@@ -1,0 +1,310 @@
+{
+ "_what": "KG_2025 (Gentry 2025, PNAS 122(45) e2409569122, PMID 41183194) -- all checks, with numbers.",
+ "experiment_id": "KG_2025",
+ "experiment_id_derivation": "INITIALS_YEAR from the FIRST author, Kara Gentry -> KG. The folder is named for the PI (Dahlman JE), which is correct as a folder name and is NOT the Experiment_ID.",
+ "checks": {
+  "P1_printed_statistics": {
+   "_what": "Four statements the Results text prints, recomputed from the Fig. S5 table as transcribed.",
+   "text_lead_diameters_80_to_132": {
+    "claim": "monodisperse particles with hydrodynamic diameters between 80 and 132 nm",
+    "measured_min": 80.0,
+    "measured_max": 132.0,
+    "exact": true
+   },
+   "text_EE_18_to_58": {
+    "claim": "low encapsulation efficiencies (18% to 58%)",
+    "measured_min": 18.0,
+    "measured_max": 58.0,
+    "exact": true
+   },
+   "text_GlycoLNP61_115nm_58pct": {
+    "measured_dh": 115.0,
+    "measured_ee": 58.0,
+    "exact": true
+   },
+   "text_GlycoLNP61_contains_25pct_glycolipid": {
+    "claim": "GlycoLNP61, which contained 25% C16GaCer",
+    "measured": 25.0,
+    "exact": true
+   },
+   "text_GlycoLNP61_mass_ratio_10_to_1": {
+    "claim": "the lipid:mass ratio of GlycoLNP61 is 10:1",
+    "measured": "10:1",
+    "exact": true
+   },
+   "n_exact": 5
+  },
+  "P2_factorial_proof": {
+   "_what": "The text claims two libraries of 64. Fig. 1A draws exactly 4 PEG-lipids and 2 glycolipids; Fig. 1B draws exactly 8 stacked molar-ratio bars, each reaching 100% on its own axis. The product is the claimed library size.",
+   "PEG_lipids_in_Fig1A": 4,
+   "glycolipids_in_Fig1A": 2,
+   "molar_ratio_sets_in_Fig1B": 8,
+   "product": 64,
+   "claimed_library_size": 64,
+   "matches": true,
+   "two_libraries": 128,
+   "injected_after_biophysical_screen": 109,
+   "abstract_claims_chemically_distinct": 109,
+   "injected_matches_abstract": true,
+   "attrition": 19
+  },
+  "P3_molpct_sums": {
+   "_what": "Every formulation's four molar percents, summed.",
+   "sums": {
+    "GlycoLNP45": 100.0,
+    "GlycoLNP59": 100.0,
+    "GlycoLNP60": 100.0,
+    "GlycoLNP61": 100.0,
+    "GlycoLNP62": 100.0,
+    "Control LNP61": 100.0
+   },
+   "all_exactly_100": true,
+   "n": 6,
+   "CREDITED_PARTIALLY": "This is a check on the TRANSCRIPTION of Fig. S5's 'Ratio (IL:Chol:PEG:HL)' strings, not a tautology of a derivation -- the four numbers are read as printed and their sum is a property of the printed values. But it is weak: it cannot catch a transposition that preserves the sum. The stronger tie is P4."
+  },
+  "P4_cross_figure_formulation": {
+   "_what": "GlycoLNP61's composition is printed TWICE, in two figures drawn in different styles -- Fig. S5's table row and Fig. 2C's four-line box -- and a third time in the Results text for the glycolipid alone. All three must agree. This is external to our transcription in the way P3 is not.",
+   "FigS5_row": "45:27.5:2.5:25 (IL:Chol:PEG:HL), SM-102, ALC-0159, C16GaCer",
+   "Fig2C_box": "SM-102 45 / Cholesterol 27.5 / ALC-0159 2.5 / C16 G(a) Cer 25",
+   "text": "GlycoLNP61, which contained 25% C16GaCer",
+   "agree": true,
+   "control_LNP61_differs_only_in_helper_lipid": {
+    "Fig2C_box": "SM-102 45 / Cholesterol 27.5 / ALC-0159 2.5 / DSPC 25",
+    "identical_molar_ratios": true,
+    "text": "an LNP with identical molar ratios but formulated with DSPC instead of C16aCer"
+   }
+  },
+  "P5_PDI_two_precisions": {
+   "_what": "Fig. 2A and Fig. S5 print the SAME five PDIs at different precisions. Rounding Fig. 2A to Fig. S5's precision must reproduce it exactly -- a cross-figure consistency test neither figure can pass by accident on five values.",
+   "Fig2A": {
+    "GlycoLNP61": 0.08,
+    "GlycoLNP62": 0.01,
+    "GlycoLNP45": 0.29,
+    "GlycoLNP59": 0.14,
+    "GlycoLNP60": 0.22
+   },
+   "FigS5": {
+    "GlycoLNP61": 0.08,
+    "GlycoLNP62": 0.01,
+    "GlycoLNP45": 0.3,
+    "GlycoLNP59": 0.1,
+    "GlycoLNP60": 0.2
+   },
+   "rounds_correctly": {
+    "GlycoLNP61": false,
+    "GlycoLNP62": false,
+    "GlycoLNP45": true,
+    "GlycoLNP59": true,
+    "GlycoLNP60": true
+   },
+   "n_consistent": 3,
+   "n": 5,
+   "Dh_and_EE_identical_in_both": true
+  },
+  "P6_digitisation_vs_printed_numerals": {
+   "_what": "Fig. 2B is a bar panel with no numerals. Its GlycoLNP61 bars measure the SAME quantity Fig. 3C PRINTS as 54 (liver) and 78 (spleen). Those two numbers took no part in building the axis calibration or the bar detection.",
+   "liver_printed": 54.0,
+   "liver_digitised": 54.67,
+   "liver_delta_points": 0.67,
+   "spleen_printed": 78.0,
+   "spleen_digitised": 77.84,
+   "spleen_delta_points": -0.16,
+   "tolerance_points": 2.0,
+   "verdict": "PASS",
+   "panel_resolution_percent_per_px": {
+    "liver": 0.5666,
+    "spleen": 0.5682
+   }
+  },
+  "P7_axis_calibration": {
+   "_what": "Scale AND origin fitted from detected tick positions only, via curation/lib/axis.calibrate.",
+   "liver_ticks_px": [
+    32.0,
+    67.0,
+    103.0,
+    138.0,
+    173.0
+   ],
+   "liver_tick_values": [
+    100,
+    80,
+    60,
+    40,
+    20
+   ],
+   "liver_LOO_residual_max_px": 0.5,
+   "spleen_ticks_px": [
+    32.0,
+    120.0,
+    208.0
+   ],
+   "spleen_LOO_residual_max_px": 0.0,
+   "LOO_tolerance_px_STRICT": 1.5,
+   "tolerance_was_rescaled_for_native_dpi": false,
+   "widening_not_relied_on": "axis.native_tol was NOT used. The strict 1.5 px tolerance written for a 600 dpi render already passes at 0.5 px (liver) and 0.0 px (spleen), so no widening was applied and none is relied on.",
+   "excluded_tick_prediction": {
+    "_what": "The 0 tick and the x-axis baseline were EXCLUDED from the fit (the 0 tick is drawn fainter than the detector threshold). Their position is therefore a prediction, not an input -- the shape CLAUDE.md calls a round number the authors DREW.",
+    "predicted_zero_row_px": 208.25,
+    "drawn_baseline_row_px": 208,
+    "delta_px": 0.25,
+    "faint_zero_tick_detected_at_dark210": [
+     208.333
+    ]
+   },
+   "cross_panel": {
+    "_what": "Liver (5 ticks, 100..20) and Spleen (3 ticks, 100/50/0) are calibrated from DISJOINT tick sets in DISJOINT pixel columns. If both panels are drawn to the same plot height, the two px-per-percentage-point figures must agree.",
+    "liver_px_per_pct": 1.765,
+    "spleen_px_per_pct": 1.76,
+    "ratio": 1.00284,
+    "spleen_50_tick_px_observed": 120.0,
+    "spleen_50_tick_px_from_liver_scale": 120.0
+   }
+  },
+  "P8_seed_gate": {
+   "_what": "A check that cannot fail is not a check. Each seed runs in its own process and is credited only if ITS OWN declared gate moved.",
+   "control_verdict": "PASS",
+   "control_metric": "n_refusals=0 refusal_text='' anchor_verdict=PASS liver_delta=0.67 spleen_delta=-0.16 spleen62=77.84",
+   "n_seeds": 5,
+   "n_credited": 5,
+   "verdict": "PASS",
+   "seeds": [
+    {
+     "name": "tick_jitter",
+     "gate": "axis.calibrate's UNIFORM-SPACING assertion, which fires before the leave-one-out test is ever reached. Recorded honestly: on a panel whose ticks are evenly spaced, any non-uniform displacement trips uniform-spacing first, so LOO is NOT independently exercised here and its measured 0.5 / 0.0 px residual is evidence of fit quality, not a gate this curation proved has teeth. A uniform displacement, which LOO also cannot see, is seeded separately as `origin_shift`.",
+     "credited": true,
+     "why": "CREDITED by refusal: non-zero exit and the refusal names 'equally spaced'."
+    },
+    {
+     "name": "stretch_scale",
+     "gate": "the printed Fig. 3C anchor (54 / 78), which took no part in any geometry. 6 px = 3.4 percentage points > the 2.0 tol.",
+     "credited": true,
+     "why": "CREDITED by metric: anchor_verdict=FAIL"
+    },
+    {
+     "name": "origin_shift",
+     "gate": "the printed Fig. 3C anchor. Spacing stays uniform and LOO stays clean, so no calibration gate can see this.",
+     "credited": true,
+     "why": "CREDITED by metric: anchor_verdict=FAIL"
+    },
+    {
+     "name": "fill_colour_mask",
+     "gate": "bars.bar_top's full-width-coverage and left/right flank rules. These are raised PER BAR and collected, so the run reaches its metric line with every bar refused rather than dying -- credited on the refusal TEXT, not on a crash.",
+     "credited": true,
+     "why": "CREDITED by refusal text: 1 bar(s) refused and the refusal names 'flank'."
+    },
+    {
+     "name": "no_solidity",
+     "gate": "the spleen-62 value itself, reported on the METRIC line.",
+     "credited": true,
+     "why": "CREDITED by metric: spleen62 moved 77.84 -> 97.73, a 19.89 point shift."
+    }
+   ],
+   "two_seeds_were_REJECTED_first": "The harness initially refused to credit `tick_jitter` (it fired axis.calibrate's uniform-spacing assertion, not the leave-one-out test I had declared) and `fill_colour_mask` (it was refused per-bar and reached its metric line rather than crashing). Both declarations were corrected to name the gate that actually fired; neither gate was weakened. A whole-image roll was also tried and DISCARDED as a no-op seed -- it moves the ticks and the bars together, so every gate here is invariant to it."
+  },
+  "P9_emit_guards": {
+   "_what": "curation/lib/emit.py's refusals, seeded by hand.",
+   "literal_confidence_raises": "EmitError: confidence='high' is a LITERAL (F-011)",
+   "caveat_without_note_raises": "EmitError: this row carries a caveat and its curation_note is empty (F-024)",
+   "item_without_record_raises": "EmitError: item 1 has no enumeration record",
+   "control_call_succeeds": true,
+   "all_three_seeded_and_fired": true
+  },
+  "P10_chain_lengths": {
+   "_what": "'C16' is a NAME TOKEN. CLAUDE.md section 5: name tokens are not chain lengths. It is measured, never assumed.",
+   "C16_acyl_bonds_turns": 15,
+   "C16_acyl_bonds_crossings": 15,
+   "C16_acyl_bonds_apex": 15,
+   "all_three_agree": true,
+   "C16_acyl_carbons": 16,
+   "name_token_matches": true,
+   "UNRESOLVED": {
+    "_what": "What the emitted rows actually depend on.",
+    "C16_acyl_bonds_all_three_methods": 15,
+    "C16_acyl_carbons": 16,
+    "C16_acyl_unanimous": true,
+    "C16_name_token_matches": true,
+    "C8_acyl_unresolved": "crossings=7 bonds (8 C, matching the token) against turns=8 and apex=8. Recorded, NOT resolved. It changes nothing emitted: no row in this curation carries C8GaCer.",
+    "sphingoid_base_unresolved": "crossings makes both panels 14 bonds; apex and turns make the C16 panel 13. A +/-1 ambiguity at ~9 px per bond on a flattened JPEG. The base is therefore taken from the reagent's chemical name and every row carrying it is flagged structure_assumed."
+   }
+  },
+  "P11_emitted_rows": {
+   "rows": 10,
+   "formulations": 5,
+   "organs": [
+    "liver",
+    "spleen"
+   ],
+   "z_mean": 2e-07,
+   "z_sd_pop_ddof0": 0.999999983908,
+   "one_z_per_experiment_pooling_organs": true,
+   "why_not_per_organ": "A per-organ z is error class 22. It would force this paper's entire finding -- that the glycolipid moves delivery FROM the liver TO the spleen -- to exactly zero, because each organ's mean would be subtracted away separately.",
+   "value_normalization_unit": [
+    "experiment"
+   ],
+   "within_model_equals_experiment_value": true,
+   "why": "Model_type is Mouse_B6 on all 10 rows, so re-standardising inside (experiment x Model_type) is the identity.",
+   "confidence_counts": {
+    "medium": 9,
+    "high": 1
+   },
+   "structure_assumed_count": 8,
+   "rows_with_a_caveat": 9,
+   "every_caveat_row_has_a_note": true
+  },
+  "P12_value_census": {
+   "_what": "Every value locus in the paper, with corpus_admissible and a reason on EVERY row. The counts sum.",
+   "total_loci": 20,
+   "admissible_yes": 10,
+   "admissible_no": 10,
+   "sums": true,
+   "emitted": 10,
+   "admissible_but_not_emitted": 0
+  },
+  "P13_corpus_overlap": {
+   "already_merged": {
+    "this_pmid_in_corpus": false,
+    "this_doi_in_corpus": false,
+    "note": "LR_2023 (PMID 37127709), the corpus's barcoded in-vivo experiment, is Rhym/Anderson (MIT), NOT Dahlman -- checked against Europe PMC. No Dahlman-lab experiment is in the corpus under this paper's PMID or DOI."
+   },
+   "SM-102": {
+    "inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+    "corpus_rows_full_inchikey": 2312,
+    "experiments": [
+     "AC_2025",
+     "SB_2024",
+     "SS_2018",
+     "SY_2025",
+     "WT_2026",
+     "XD_2026"
+    ],
+    "names_carried": [
+     "SM-102"
+    ]
+   },
+   "cKK-E12": {
+    "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+    "corpus_rows_full_inchikey": 241,
+    "experiments": [
+     "AC_2025",
+     "BL_2023",
+     "JW_2024"
+    ],
+    "names_carried": [
+     "CKK-E12",
+     "MD-1",
+     "other"
+    ],
+    "name_join_would_have_found": {
+     "CKK-E12": 216
+    },
+    "name_join_would_have_MISSED": 25
+   },
+   "structures_with_multiple_IL_names": {
+    "n_structures_total": 19919,
+    "n_with_multiple_names": 324
+   },
+   "token_pattern_verdict": "LOCAL INDEX. No name join is performed anywhere in this curation; both ionizable lipids are attested structurally.",
+   "glycolipids_absent_from_corpus": true
+  }
+ }
+}

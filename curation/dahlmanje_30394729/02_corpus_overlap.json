@@ -1,0 +1,205 @@
+{
+ "_what": "What curation/dahlmanje_30394729 (Sago 2018, PMID 30394729) shares with the live corpus. Produced by 02_corpus_overlap.py.",
+ "corpus_shape": {
+  "vitro": [
+   29195,
+   79
+  ],
+  "vivo": [
+   1803,
+   79
+  ],
+  "vitro_experiments": 43,
+  "vivo_experiments": 20
+ },
+ "token_pattern_test": {
+  "vitro": {
+   "rows_matched": 34,
+   "distinct_structures": 34,
+   "experiments": [
+    "KL_2010",
+    "LL_2012",
+    "LM_2019"
+   ],
+   "examples": [
+    [
+     "KL_2010",
+     "117C14",
+     "CCCCCCCCCCCCC(O)CN(CC(O)CCCCCCCCCCCC)[C@@H]1CCCC[C@@H]1N(CC(O)CCCCCCCCCCCC)CC(O)CCCCCCCCCCCC"
+    ],
+    [
+     "KL_2010",
+     "117C18",
+     "CCCCCCCCCCCCCCCCC(O)CN(CC(O)CCCCCCCCCCCCCCCC)[C@@H]1CCCC[C@@H]1N(CC(O)CCCCCCCCCCCCCCCC)CC(O)CCCCCCCCCCCCCCCC"
+    ],
+    [
+     "LL_2012",
+     "A7C10",
+     "CCCCCCCCCCSCC(CCC(=O)N1CCN(CCN(C)C)CC1)SCCCCCCCCCC"
+    ],
+    [
+     "LL_2012",
+     "B7C10",
+     "CCCCCCCCCCSCC(CCCC(=O)N1CCN(CCN(C)C)CC1)SCCCCCCCCCC"
+    ]
+   ]
+  },
+  "vivo": {
+   "rows_matched": 2,
+   "distinct_structures": 1,
+   "experiments": [
+    "ZH_2023"
+   ],
+   "examples": [
+    [
+     "ZH_2023",
+     "A4I18R7C18-2",
+     "CCCCC/C=C\\C/C=C\\CCCCCCCC(=O)N(CCCN(C)c1ccccc1)C(C(=O)NCCCCCCCCCCCCCCCCCC)C(CC)CCCC"
+    ]
+   ]
+  },
+  "total_rows": 36,
+  "total_distinct_structures": 35,
+  "total_experiments": [
+   "KL_2010",
+   "LL_2012",
+   "LM_2019",
+   "ZH_2023"
+  ],
+  "verdict": "A substring join on the bare token '7C1' captures 36 corpus rows spanning 35 distinct structures across 4 experiments, and NOT ONE of them is Dahlman's 7C1 lipomer: they are combinatorial labels in which the characters happen to co-occur (KL_2010 '117C14' = head 117 + C14; LL_2012 'A7C10'; LM_2019 'A1Iso7C11'; ZH_2023 'A4I18R7C18-2'). The paper's own '7C1' is a compound index from Dahlman 2014, not a composition: the '7' is the amine and the 'C1' is the epoxide index, while the drawn tail is C13 and the epoxide is C15. Three different numbers, none of them a chain length."
+ },
+ "substructure_sweep_SUPERSET": {
+  "vitro": {
+   "unique_structures_searched": 18720,
+   "loose_hits_SUPERSET": 1247,
+   "strict_hits_full_C13_arm": 0,
+   "strict_examples": []
+  },
+  "vivo": {
+   "unique_structures_searched": 1506,
+   "loose_hits_SUPERSET": 276,
+   "strict_hits_full_C13_arm": 0,
+   "strict_examples": []
+  },
+  "_what": "SUPERSET, not an identification. The loose pattern is 'any amine bearing CH2-CH(OH)-CH2', the amino-alcohol motif an epoxide ring-opening leaves; it matches a whole chemotype and says nothing about 7C1. The strict pattern additionally requires the full 13-carbon tail the paper draws. Neither can identify 7C1, because 7C1 is a polydisperse polymer with no single SMILES: a strict hit would be a small molecule carrying the same arm, not this lipid."
+ },
+ "excipients_by_inchikey": {
+  "Cholesterol": {
+   "our_smiles_from_the_drawn_figure": "C[C@H](CCCC(C)C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+   "our_full_inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "our_skeleton": "HVYWMOMLDIMFJA",
+   "registry_entry": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+   "matches_registry": true,
+   "corpus": {
+    "vitro:CHL_name": {
+     "rows": 28684,
+     "distinct_corpus_structures": 1,
+     "full_inchikeys": [
+      "HVYWMOMLDIMFJA-DPAQBDIFSA-N"
+     ],
+     "matches_our_drawn_structure": true
+    },
+    "vivo:CHL_name": {
+     "rows": 1713,
+     "distinct_corpus_structures": 1,
+     "full_inchikeys": [
+      "HVYWMOMLDIMFJA-DPAQBDIFSA-N"
+     ],
+     "matches_our_drawn_structure": true
+    }
+   }
+  },
+  "DSPC": {
+   "our_smiles_from_the_drawn_figure": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+   "our_full_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "our_skeleton": "NRJAVPSFFCBXDT",
+   "registry_entry": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+   "matches_registry": true,
+   "corpus": {
+    "vitro:HL_name": {
+     "rows": 6401,
+     "distinct_corpus_structures": 1,
+     "full_inchikeys": [
+      "NRJAVPSFFCBXDT-HUESYALOSA-N"
+     ],
+     "matches_our_drawn_structure": true
+    },
+    "vivo:HL_name": {
+     "rows": 637,
+     "distinct_corpus_structures": 1,
+     "full_inchikeys": [
+      "NRJAVPSFFCBXDT-HUESYALOSA-N"
+     ],
+     "matches_our_drawn_structure": true
+    }
+   }
+  }
+ },
+ "peg_lipid_names": {
+  "corpus_PEG_name_vocabulary": [
+   "ALC-0159",
+   "C14-PEG2000",
+   "C16-Ceramide-PEG2000",
+   "C8-Ceramide-PEG2000",
+   "DMG-C-PEG2000",
+   "DMG-PEG2000",
+   "DMG-PEG5000",
+   "DMPE-PEG2000",
+   "DOG-PEG2000",
+   "DOG-PEG5000",
+   "DPG-PEG2000",
+   "DPG-PEG5000",
+   "DSG-PEG2000",
+   "DSG-PEG5000",
+   "DSPE-PEG2000",
+   "Unknown"
+  ],
+  "this_paper_uses": [
+   "C14PEG2000",
+   "C16PEG2000",
+   "C18PEG2000",
+   "C14PEG3000",
+   "C18PEG3000"
+  ],
+  "already_in_the_vocabulary": [],
+  "note": "The paper names no catalogue product. Fig 3B draws a diacyl glycerophosphoethanolamine-PEG, which for C14/C16/C18 would be DMPE-/DPPE-/DSPE-PEG2000 -- two of those three names already exist in the corpus. The mapping is an INFERENCE from a drawn skeleton, so it is recorded and not applied; and PEG-lipids are deliberately absent from provenance/reagent_registry.py anyway, because the block length is a distribution."
+ },
+ "in_vivo_shared_chemistry": {
+  "n_structures_shared_across_experiments": 2,
+  "structures": [
+   {
+    "n_experiments": 6,
+    "experiments": [
+     "BL_2023",
+     "NG_2025_2",
+     "SB_2024",
+     "XD_2026",
+     "ZC_2023",
+     "ZH_2023"
+    ],
+    "names": [
+     "DLin-MC3-DMA",
+     "Dlin-MC3-DMA"
+    ],
+    "smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C"
+   },
+   {
+    "n_experiments": 4,
+    "experiments": [
+     "SB_2024",
+     "SS_2018",
+     "SY_2025",
+     "XD_2026"
+    ],
+    "names": [
+     "SM-102"
+    ],
+    "smiles": "CCCCCCCCCCCOC(=O)CCCCCN(CCO)CCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC"
+   }
+  ],
+  "does_this_paper_add_one": false,
+  "why": "This paper's only ionizable lipid is 7C1, which has no SMILES and is absent from the corpus under any name. It adds no shared in-vivo chemistry. It also uses no benchmark ionizable lipid at all -- no MC3, no SM-102, no ALC-0315 anywhere in the paper; its only comparator is its own 80:20 7C1 formulation."
+ },
+ "ionizable_lipids_this_paper_would_add": 0,
+ "ionizable_lipids_this_paper_uses": 1
+}

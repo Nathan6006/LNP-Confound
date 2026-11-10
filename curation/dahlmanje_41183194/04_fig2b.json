@@ -1,0 +1,131 @@
+{
+ "_what": "KG_2025 Fig. 2B digitisation",
+ "seed": null,
+ "panels": {
+  "liver": {
+   "organ": "liver",
+   "cell_type": "endothelial cells (CD31+)",
+   "ticks_px": [
+    32.0,
+    67.0,
+    103.0,
+    138.0,
+    173.0
+   ],
+   "tick_values": [
+    100,
+    80,
+    60,
+    40,
+    20
+   ],
+   "loo_residual_px_max": 0.5,
+   "px_per_percentage_point": 1.765,
+   "percent_per_px": 0.5666,
+   "bars": {
+    "61": {
+     "row_px": 112,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 54.67
+    },
+    "59": {
+     "row_px": 86,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 69.41
+    },
+    "45": {
+     "row_px": 86,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 69.41
+    },
+    "62": {
+     "row_px": 79,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 73.37
+    }
+   },
+   "refusals": {},
+   "excluded_tick_prediction": {
+    "_what": "The 0 tick and the x-axis baseline were EXCLUDED from the fit (the 0 tick is drawn fainter than the detector threshold). Their position is therefore a prediction, not an input -- the shape CLAUDE.md calls a round number the authors DREW.",
+    "predicted_zero_row_px": 208.25,
+    "drawn_baseline_row_px": 208,
+    "delta_px": 0.25,
+    "faint_zero_tick_detected_at_dark210": [
+     208.333
+    ]
+   }
+  },
+  "spleen": {
+   "organ": "spleen",
+   "cell_type": "macrophages (F4/80+)",
+   "ticks_px": [
+    32.0,
+    120.0,
+    208.0
+   ],
+   "tick_values": [
+    100,
+    50,
+    0
+   ],
+   "loo_residual_px_max": 0.0,
+   "px_per_percentage_point": 1.76,
+   "percent_per_px": 0.5682,
+   "bars": {
+    "61": {
+     "row_px": 71,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 77.84
+    },
+    "59": {
+     "row_px": 118,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 51.14
+    },
+    "45": {
+     "row_px": 145,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 35.8
+    },
+    "62": {
+     "row_px": 71,
+     "coverage": 1.0,
+     "flank_delta_px": 0.0,
+     "percent": 77.84
+    }
+   },
+   "refusals": {}
+  },
+  "_cross_panel_scale_check": {
+   "_what": "Liver (5 ticks, 100..20) and Spleen (3 ticks, 100/50/0) are calibrated from DISJOINT tick sets in DISJOINT pixel columns. If both panels are drawn to the same plot height, the two px-per-percentage-point figures must agree.",
+   "liver_px_per_pct": 1.765,
+   "spleen_px_per_pct": 1.76,
+   "ratio": 1.00284,
+   "spleen_50_tick_px_observed": 120.0,
+   "spleen_50_tick_px_from_liver_scale": 120.0
+  }
+ },
+ "printed_anchor_check": {
+  "liver": {
+   "printed_fig3C": 54.0,
+   "digitised_fig2B": 54.67,
+   "delta_pct_points": 0.67,
+   "within_tol": true
+  },
+  "spleen": {
+   "printed_fig3C": 78.0,
+   "digitised_fig2B": 77.84,
+   "delta_pct_points": -0.16,
+   "within_tol": true
+  },
+  "tolerance_pct_points": 2.0,
+  "verdict": "PASS"
+ }
+}

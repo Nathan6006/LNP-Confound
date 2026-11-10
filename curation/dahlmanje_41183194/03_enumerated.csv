@@ -1,0 +1,7 @@
+formulation_id,IL_name,IL_molratio,CHL_molratio,PEG_name,PEG_molratio,HL_name,HL_molratio,molpct_sum,Dh_nm,PDI,EE_pct,lipid_to_mRNA_mass_ratio,source,dosed
+GlycoLNP45,cKK-E12,45.0,27.5,DMG-PEG,2.5,C16 Galactosyl(a) Ceramide,25.0,100.0,113,0.29,26,10:1,Fig. S5,yes
+GlycoLNP59,cKK-E12,40.0,27.5,ALC-0159,2.5,C16 Galactosyl(a) Ceramide,30.0,100.0,80,0.14,28,10:1,Fig. S5,yes
+GlycoLNP60,cKK-E12,45.0,22.5,ALC-0159,2.5,C16 Galactosyl(a) Ceramide,30.0,100.0,132,0.22,18,10:1,Fig. S5,no
+GlycoLNP61,SM-102,45.0,27.5,ALC-0159,2.5,C16 Galactosyl(a) Ceramide,25.0,100.0,115,0.08,58,10:1,Fig. S5 and Fig. 2C,yes
+GlycoLNP62,SM-102,45.0,32.5,ALC-0159,2.5,C16 Galactosyl(a) Ceramide,20.0,100.0,84,0.01,54,10:1,Fig. S5,yes
+Control LNP61,SM-102,45.0,27.5,ALC-0159,2.5,DSPC,25.0,100.0,60,,76,10:1,Fig. 2C,yes

@@ -1,0 +1,538 @@
+{
+ "_what": "QC for curation/dahlmanje_30394729 -- Sago, Lokugamage, Islam, Krupczak, Sato, Dahlman, J Am Chem Soc 140(49), 2018, PMID 30394729, 'Nanoparticles That Deliver RNA to Bone Marrow Identified by in Vivo Directed Evolution.' Assembled by 10_qc.py from the stage outputs; numbers are composed, not retyped.",
+ "proposed_experiment_id": "CS_2018",
+ "rows_emitted": 0,
+ "THE_GOVERNING_NUMBER": {
+  "distinct_ionizable_lipids": 1,
+  "which": "7C1 only, in every formulation of both libraries and in every individually tested LNP.",
+  "formulations_formulated": 160,
+  "formulations_pooled_and_measured": 146,
+  "formulations_individually_measured": 5,
+  "design_supported_per_LNP_values": 146,
+  "attributed_per_LNP_values": 5,
+  "note": "A corpus keyed on ionizable-lipid structure gains ONE lipid from 160 formulations -- and gains zero, because that one lipid has no single SMILES."
+ },
+ "N1_normalisation_reconstructed_from_the_paper_s_own_worked_example": {
+  "formula": "nd_i = [ (c_i / sum_k c_k) / (in_i / sum_k in_k) ] / sum_j[ same ] x 100%",
+  "stage_1_raw_column_totals": {
+   "n_cells": 4,
+   "max_residual": 0.0,
+   "computed": [
+    540.0,
+    230.0,
+    560.0,
+    330.0
+   ],
+   "printed": [
+    540.0,
+    230.0,
+    560.0,
+    330.0
+   ]
+  },
+  "stage_3_normalised_delivery": {
+   "n_cells": 9,
+   "n_exact_after_rounding": 9,
+   "max_residual": 0.0,
+   "verdict": "9/9 EXACT, residual 0.0. The normalisation is count-share divided by input-share, renormalised to 100% across the pool -- so the readout is COMPOSITIONAL."
+  },
+  "stage_2_printed_intermediates": {
+   "n_cells": 12,
+   "n_exact_after_rounding": 10,
+   "max_residual": 17.0,
+   "mismatches": [
+    {
+     "lnp": 1,
+     "sample": "Mouse 2",
+     "reconstructed": 34.7826,
+     "printed": 34.0,
+     "residual_after_rounding": 1.0
+    },
+    {
+     "lnp": 2,
+     "sample": "Mouse 2",
+     "reconstructed": 19.5652,
+     "printed": 3.0,
+     "residual_after_rounding": 17.0
+    }
+   ],
+   "verdict": "10/12. Two printed cells in the Mouse 2 column are wrong: 34 where 80/230 = 34.78 rounds to 35, and 3 where 45/230 = 19.57 rounds to 20. Stage 3 is computed from the RAW counts and is still exact, which is what shows these are typos in the intermediate table rather than a different formula. Confirmed visually on the page render, not only from the text layer."
+  },
+  "the_drawn_but_never_computed_total": {
+   "printed_Total_row_stage_2": [
+    100.0,
+    100.0,
+    100.0,
+    100.0
+   ],
+   "printed_cells_actually_sum_to_stage_2": [
+    100.0,
+    83.0,
+    101.0,
+    99.0
+   ],
+   "printed_Total_row_stage_3": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "printed_cells_actually_sum_to_stage_3": [
+    101.0,
+    101.0,
+    101.0
+   ],
+   "verdict": "'Total (%) = 100' is DRAWN under all three tables and computed under none: the stage-2 columns sum to 100 / 83 / 101 / 99 and every stage-3 column sums to 101."
+  }
+ },
+ "F1_factorial_proved": {
+  "library_1": {
+   "n_peg_variants": 5,
+   "n_ratios_per_variant": {
+    "C14PEG2000": 24,
+    "C18PEG2000": 24,
+    "C14PEG3000": 24,
+    "C16PEG2000": 24,
+    "C18PEG3000": 24
+   },
+   "product": 120,
+   "n_rows": 120,
+   "every_variant_carries_the_same_ratio_set": true,
+   "claimed": "5 PEG types x 24 formulation ratios = 120",
+   "claim_holds": true
+  },
+  "library_2": {
+   "n_peg_variants": 2,
+   "n_ratios_per_variant": {
+    "C16PEG2000": 20,
+    "C18PEG2000": 20
+   },
+   "product": 40,
+   "n_rows": 40,
+   "every_variant_carries_the_same_ratio_set": true,
+   "claimed": "2 PEG types x 20 formulation ratios = 40",
+   "claim_holds": true
+  },
+  "verdict": "5 x 24 = 120 and 2 x 20 = 40, with every PEG variant carrying the IDENTICAL ratio set exactly once and zero duplicates. The claimed factorials are proved, not taken on trust."
+ },
+ "M1_molpct_sums": {
+  "library_1": {
+   "n": 120,
+   "n_sum_to_100": 120,
+   "n_violations": 0
+  },
+  "library_2": {
+   "n": 40,
+   "n_sum_to_100": 38,
+   "n_violations": 2,
+   "violations": [
+    {
+     "lnp": 36,
+     "sum": 110.0,
+     "row": {
+      "lnp": 36,
+      "il_molpct": 60.0,
+      "chol_molpct": 45.0,
+      "peg_molpct": 5.0,
+      "dspc_molpct": 0.0,
+      "peg_type": "C16PEG2000"
+     }
+    },
+    {
+     "lnp": 40,
+     "sum": 110.0,
+     "row": {
+      "lnp": 40,
+      "il_molpct": 60.0,
+      "chol_molpct": 45.0,
+      "peg_molpct": 5.0,
+      "dspc_molpct": 0.0,
+      "peg_type": "C18PEG2000"
+     }
+    }
+   ]
+  },
+  "verdict": "158 of 160 formulations sum to exactly 100 mol%. The two that do not are library 2 LNP 36 and LNP 40, both 60/45/5/0 = 110, at a stride of 4 across the two PEG blocks -- one error in a block that was pasted twice. NOT a tautology of our own derivation: the four columns are transcribed independently from native PDF text cells and nothing here computes one from the others."
+ },
+ "E1_formulated_pies_vs_the_composition_tables": {
+  "summary": {
+   "n_panels": 6,
+   "n_reconciling": 5,
+   "panels_that_do_not": [
+    "Fig_5H_library2_PEG_molpct"
+   ]
+  },
+  "Fig_4A": {
+   "printed": [
+    12,
+    25,
+    25,
+    21,
+    17
+   ],
+   "computed": [
+    12,
+    25,
+    25,
+    21,
+    17
+   ],
+   "percent": [
+    12.5,
+    25.0,
+    25.0,
+    20.8333,
+    16.6667
+   ],
+   "verdict": "5/5 slices exact, including 20.83 -> 21 and 16.67 -> 17, which also PINS the band convention as [lo,hi) with '>20' meaning >=20. One wrong PEG value anywhere in the 120-row table would break a slice, so this validates the whole transcription."
+  },
+  "Fig_5H": {
+   "printed": [
+    40,
+    40,
+    20
+   ],
+   "computed_half_open": [
+    45,
+    20,
+    35
+   ],
+   "computed_inclusive": [
+    45,
+    40,
+    15
+   ],
+   "verdict": "DOES NOT RECONCILE under either convention: printed 40/40/20 against 45/20/35 (the convention Fig 4A pins) or 45/40/15 (inclusive). Only the middle slice ever matches. Reconciliation would need exactly 2 of the 40 LNPs to move from the low band to >20, and exactly 2 LNPs (36 and 40) independently fail the mol% sum -- a convergence recorded as a hypothesis in 08_contradictions.csv, NOT as a conclusion, because the 33-35 series pattern implies the opposite repair."
+  },
+  "the_other_four": "Fig 4B 20/20/20/20/20, Fig 5I 50/50, Fig 5J 20/40/20/20, Fig 5K 60/40 -- all exact against the tables, no rounding needed."
+ },
+ "B1_barcodes": {
+  "n_cells_in_grid": 156,
+  "n_barcodes": 156,
+  "numbering_is_1_to_n": true,
+  "all_8_nt": true,
+  "n_distinct_sequences": 156,
+  "claimed_in_text": 156,
+  "matches_claim": true
+ },
+ "T1_total_formulated": {
+  "library_1": 120,
+  "library_2": 40,
+  "total": 160,
+  "drawn_in_Fig_1D": 160,
+  "matches": true,
+  "note": "Fig 1D draws '2x; 160 LNPs tested in vivo' and never computes it; 120 + 40 reproduces it exactly."
+ },
+ "W1_the_five_individually_tested_formulations": {
+  "n": 5,
+  "n_uniquely_located_in_a_library_table": 3,
+  "n_in_the_expected_library": 5,
+  "rows": [
+   {
+    "label": "Original 7C1 (80:20)",
+    "composition": "80.0/0.0/20.0/0.0 C14PEG2000",
+    "matches_in_the_library_tables": [],
+    "unique": false,
+    "expected_library": null,
+    "in_expected_library": true
+   },
+   {
+    "label": "Screen 1 Winner",
+    "composition": "60.0/37.5/2.5/0.0 C16PEG2000",
+    "matches_in_the_library_tables": [
+     "library 1 LNP 25",
+     "library 2 LNP 34"
+    ],
+    "unique": false,
+    "expected_library": "1",
+    "in_expected_library": true
+   },
+   {
+    "label": "LNP1 (screen 2)",
+    "composition": "70.0/10.0/20.0/0.0 C16PEG2000",
+    "matches_in_the_library_tables": [
+     "library 2 LNP 6"
+    ],
+    "unique": true,
+    "expected_library": "2",
+    "in_expected_library": true
+   },
+   {
+    "label": "BM1 (screen 2 winner)",
+    "composition": "80.0/2.5/17.5/0.0 C18PEG2000",
+    "matches_in_the_library_tables": [
+     "library 2 LNP 18"
+    ],
+    "unique": true,
+    "expected_library": "2",
+    "in_expected_library": true
+   },
+   {
+    "label": "LNP3 (screen 2)",
+    "composition": "80.0/0.0/20.0/0.0 C18PEG2000",
+    "matches_in_the_library_tables": [
+     "library 2 LNP 19"
+    ],
+    "unique": true,
+    "expected_library": "2",
+    "in_expected_library": true
+   }
+  ],
+  "verdict": "All five compositions printed in Fig S3A / Fig 6A are found where they should be: BM1 = library 2 LNP 18, LNP1 = library 2 LNP 6, LNP3 = library 2 LNP 19, the screen-1 winner = library 1 LNP 25. The screen-1 winner's ratio ALSO appears as library 2 LNP 34, which is not an error -- library 2 was evolved from library 1 and deliberately re-tested that ratio with both PEGs. The 'original' 80:20 7C1 is in neither table, as expected: it is the comparator, not a library member."
+ },
+ "P1_a_round_number_implied_but_never_printed": {
+  "drawn_repeat_count": 45,
+  "unit_mass_Da": 44.05256,
+  "block_mass_Da": 1982.365,
+  "plus_terminal_OCH3_Da": 2013.399,
+  "printed_label": 2000,
+  "relative_error_vs_2000": 0.00882,
+  "verdict": "45 x 44.05 = 1982.4 Da, 0.9% from the printed 2000 -- the drawn repeat count is consistent with the label and was never multiplied out in the paper."
+ },
+ "C1_corpus_overlap": {
+  "token_pattern_test": {
+   "rows_matched_by_a_substring_join_on_7C1": 36,
+   "distinct_structures": 35,
+   "experiments": [
+    "KL_2010",
+    "LL_2012",
+    "LM_2019",
+    "ZH_2023"
+   ],
+   "true_matches": 0,
+   "verdict": "A substring join on the bare token '7C1' captures 36 corpus rows spanning 35 distinct structures across 4 experiments, and NOT ONE of them is Dahlman's 7C1 lipomer: they are combinatorial labels in which the characters happen to co-occur (KL_2010 '117C14' = head 117 + C14; LL_2012 'A7C10'; LM_2019 'A1Iso7C11'; ZH_2023 'A4I18R7C18-2'). The paper's own '7C1' is a compound index from Dahlman 2014, not a composition: the '7' is the amine and the 'C1' is the epoxide index, while the drawn tail is C13 and the epoxide is C15. Three different numbers, none of them a chain length."
+  },
+  "substructure_sweep_SUPERSET": {
+   "vitro": {
+    "unique_structures_searched": 18720,
+    "loose_hits_SUPERSET": 1247,
+    "strict_hits_full_C13_arm": 0,
+    "strict_examples": []
+   },
+   "vivo": {
+    "unique_structures_searched": 1506,
+    "loose_hits_SUPERSET": 276,
+    "strict_hits_full_C13_arm": 0,
+    "strict_examples": []
+   },
+   "verdict": "The loose amino-alcohol pattern matches 1,247 of 18,720 vitro and 276 of 1,506 vivo structures -- a CHEMOTYPE, reported as a superset. The strict pattern (the full drawn C13 arm) matches 0 and 0."
+  },
+  "excipients_by_inchikey": {
+   "Cholesterol": {
+    "our_full_inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+    "matches_registry": true,
+    "corpus": {
+     "vitro:CHL_name": {
+      "rows": 28684,
+      "distinct_corpus_structures": 1,
+      "matches": true
+     },
+     "vivo:CHL_name": {
+      "rows": 1713,
+      "distinct_corpus_structures": 1,
+      "matches": true
+     }
+    }
+   },
+   "DSPC": {
+    "our_full_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "matches_registry": true,
+    "corpus": {
+     "vitro:HL_name": {
+      "rows": 6401,
+      "distinct_corpus_structures": 1,
+      "matches": true
+     },
+     "vivo:HL_name": {
+      "rows": 637,
+      "distinct_corpus_structures": 1,
+      "matches": true
+     }
+    }
+   }
+  },
+  "in_vivo_shared_chemistry": {
+   "n_structures_shared_across_experiments": 2,
+   "which": [
+    {
+     "names": [
+      "DLin-MC3-DMA",
+      "Dlin-MC3-DMA"
+     ],
+     "n_experiments": 6
+    },
+    {
+     "names": [
+      "SM-102"
+     ],
+     "n_experiments": 4
+    }
+   ],
+   "does_this_paper_add_one": false,
+   "why": "This paper's only ionizable lipid is 7C1, which has no SMILES and is absent from the corpus under any name. It adds no shared in-vivo chemistry. It also uses no benchmark ionizable lipid at all -- no MC3, no SM-102, no ALC-0315 anywhere in the paper; its only comparator is its own 80:20 7C1 formulation."
+  },
+  "benchmarks": "NONE. The paper uses no MC3, no SM-102, no ALC-0315 and no other field benchmark anywhere; its only comparator is its own 80:20 7C1 formulation. So the 'do benchmarks top the screen' question does not arise here, and the paper's own lead BM1 does top its own screen 2 by construction -- it was SELECTED as the top performer, which is not an independent finding."
+ },
+ "A1_anchors": {
+  "independence_guard": {
+   "checked": "make_reference.py",
+   "violations": 0,
+   "banned_literals_checked": 2,
+   "stage_modules_checked": 7,
+   "emitted_files_checked": 8
+  },
+  "anchors": {
+   "Cholesterol": {
+    "inchikey": "HVYWMOMLDIMFJA-UHFFFAOYSA-N",
+    "skeleton": "HVYWMOMLDIMFJA",
+    "matches_registry_inchikey": false,
+    "expected_mismatch": null
+   },
+   "DSPC": {
+    "inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "skeleton": "NRJAVPSFFCBXDT",
+    "matches_registry_inchikey": true,
+    "expected_mismatch": null
+   },
+   "7C1_representative_arm": {
+    "inchikey": "SSPNMOBMZCGVOW-UHFFFAOYSA-N",
+    "skeleton": "SSPNMOBMZCGVOW",
+    "matches_registry_inchikey": null,
+    "expected_mismatch": null
+   },
+   "7C1": {
+    "reference_SMILES": "",
+    "why_empty": "the paper draws no complete structure"
+   }
+  },
+  "discarded_cholesterol_stereo_attempt": {
+   "smiles": "O[C@@H]9CC[C@]8(C)C(=CC[C@@H]7[C@@H]8CC[C@]6(C)[C@H]7CC[C@@H]6[C@@H](C)CCCC(C)C)C9",
+   "inchikey": "HVYWMOMLDIMFJA-OXMOYTRBSA-N",
+   "skeleton": "HVYWMOMLDIMFJA",
+   "registry_inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "same_skeleton_block": true,
+   "same_full_inchikey": false,
+   "formula_and_exact_mass_identical": true,
+   "verdict": "DISCARDED, not tuned. Recorded so the hazard is visible."
+  },
+  "selftest": "5/5",
+  "verdict": "DSPC was assembled from sn-glycero-3-phosphocholine and two stearoyl fragments and agrees with the registry by FULL InChIKey. The 7C1 representative arm was assembled with the regiochemistry pinned by atom map; its Markovnikov isomer has the identical formula AND the identical exact mass to six decimals (0.0 Da difference) and a different InChIKey, which is how the gate is shown to test connectivity. Cholesterol is emitted at CONNECTIVITY ONLY after the hand-written stereo attempt produced a diastereomer; it was discarded rather than tuned against the registry."
+ },
+ "S1_seeded_mutation_gate": {
+  "verdict": "ALL SEEDS CREDITED",
+  "n_credited": 6,
+  "n_seeds": 6,
+  "control": {
+   "returncode": 0,
+   "metrics": {
+    "N1_stage3_exact_cells": "9",
+    "M1_molpct_violations_lib1": "0",
+    "F1_factorial_holds_lib1": "1",
+    "B1_n_barcodes": "156",
+    "W1_uniquely_located": "3",
+    "E1_pies_reconciling": "5"
+   },
+   "passes_clean": true
+  },
+  "seeds": {
+   "N1_normalisation_raw_count": {
+    "metric": "N1_stage3_exact_cells",
+    "control": "9",
+    "seeded": "6",
+    "returncode": 1,
+    "credited": true
+   },
+   "M1_molpct_sum": {
+    "metric": "M1_molpct_violations_lib1",
+    "control": "0",
+    "seeded": "1",
+    "returncode": 1,
+    "credited": true
+   },
+   "F1_factorial_peg_type": {
+    "metric": "F1_factorial_holds_lib1",
+    "control": "1",
+    "seeded": "0",
+    "returncode": 1,
+    "credited": true
+   },
+   "B1_barcode_count": {
+    "metric": "B1_n_barcodes",
+    "control": "156",
+    "seeded": "155",
+    "returncode": 1,
+    "credited": true
+   },
+   "W1_winner_location": {
+    "metric": "W1_uniquely_located",
+    "control": "3",
+    "seeded": "0",
+    "returncode": 1,
+    "credited": true
+   },
+   "E1_formulated_pie": {
+    "metric": "E1_pies_reconciling",
+    "control": "5",
+    "seeded": "4",
+    "returncode": 1,
+    "credited": true
+   }
+  },
+  "a_seed_that_was_NOT_credited": "The first E1 seed moved one library-1 PEG value from 20 to 22.5 and was a NO-OP, because the half-open convention already puts 20 in the '>20' band. It exited non-zero -- on the factorial, not on E1 -- while E1's metric never moved, so it was refused. That is why 'credited' requires the metric to MOVE and not merely a non-zero exit."
+ },
+ "emit_guards": {
+  "literal_confidence_raises": {
+   "raised": true,
+   "credited": true,
+   "message_head": "emit: confidence='low' is a LITERAL."
+  },
+  "caveat_without_a_note_raises": {
+   "raised": true,
+   "credited": true,
+   "message_head": "emit_rows('seed-no-note') item 'original_7C1': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='1', value_is_bound='') and its curation_note is empty."
+  },
+  "control_passes": {
+   "n_rows": 5,
+   "rows_with_a_caveat": 5,
+   "credited": true,
+   "example": {
+    "positional_ambiguity": "",
+    "structure_assumed": "1",
+    "value_is_bound": "",
+    "value_normalization_unit": "experiment",
+    "Experiment_value_within_model": "",
+    "confidence": "low",
+    "curation_note": "7C1 is a polydisperse branched-PEI(Mn~600)/C15-epoxide polymer; the paper draws only one representative arm, so no single SMILES is correct. Formulation 80.0/0.0/20.0 mol% with C14PEG2000; value from Fig S3B bar 1 (=1.0 by definition: the normaliser)."
+   }
+  }
+ },
+ "V1_values": {
+  "n_panel_groups": 19,
+  "n_values_catalogued": 662,
+  "by_corpus_admissible": {
+   "yes": 0,
+   "no": 662
+  },
+  "by_readout_is_delivery": {
+   "yes": 27,
+   "no": 611,
+   "n/a": 24
+  },
+  "delivery_values_that_are_ATTRIBUTABLE": 17,
+  "delivery_values_from_POOLED_unattributable_panels": 2,
+  "distinct_ionizable_lipids": 1,
+  "distinct_formulations_formulated": 160,
+  "distinct_formulations_pooled_and_measured": 146,
+  "distinct_formulations_individually_measured": 5,
+  "design_supported_per_LNP_values": 146,
+  "attributed_per_LNP_values": 5,
+  "counts_sum": true
+ },
+ "UNVERIFIABLE": [
+  "WHICH 115 of the 120 and WHICH 31 of the 40 formulated LNPs were pooled. Never stated; the diameters that decided it are plotted unlabelled.",
+  "The mapping from barcode number to LNP number. The 156 barcodes are listed and the 160 formulations are listed; nothing connects them.",
+  "Every per-LNP normalized delivery value (115 + 31 + the technical replicates). Unlabelled scatter points.",
+  "The N:P or mass ratio for the library LNPs. Only the 'original' 7C1 has one stated (7C1 + PEG : siRNA = 5:1 by mass); the libraries state only a total nucleic acid dose of 1.5 mg/kg and a siRNA:barcode mass ratio of 10:1.",
+  "The exact molecular identity of the PEG-lipids. Fig 3B draws a glycerophosphoethanolamine-PEG skeleton; no catalogue product is named and no dispersity is given.",
+  "The structure of 7C1 itself, which is the governing blocker."
+ ]
+}

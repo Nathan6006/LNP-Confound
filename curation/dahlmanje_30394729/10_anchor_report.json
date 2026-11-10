@@ -1,0 +1,120 @@
+{
+ "_what": "C10 anchors for curation/dahlmanje_30394729, built independently of 01_blocks.csv and of provenance/reagent_registry.py. provenance/structure_check.py was NOT run from this folder (it writes a tracked file other agents read); the comparison below is done here, in-process, and recorded by hand in PROVENANCE.md.",
+ "independence_guard": {
+  "checked": "make_reference.py",
+  "violations": 0,
+  "banned_literals_checked": 2,
+  "stage_modules_checked": 7,
+  "emitted_files_checked": 8
+ },
+ "anchors": {
+  "Cholesterol": {
+   "smiles": "CC(C)CCCC(C)C1CCC2C3CC=C4CC(O)CCC4(C)C3CCC12C",
+   "formula": "C27H46O",
+   "exact_mass": 386.354866,
+   "inchikey": "HVYWMOMLDIMFJA-UHFFFAOYSA-N",
+   "skeleton": "HVYWMOMLDIMFJA",
+   "n_assigned_stereocentres": 0,
+   "n_unassigned_stereocentres": 8,
+   "registry_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+   "byte_identical_to_registry": false,
+   "inchikey_matches_registry": false
+  },
+  "DSPC": {
+   "smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+   "formula": "C44H88NO8P",
+   "exact_mass": 789.624755,
+   "inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "skeleton": "NRJAVPSFFCBXDT",
+   "n_assigned_stereocentres": 1,
+   "n_unassigned_stereocentres": 1,
+   "registry_smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+   "byte_identical_to_registry": true,
+   "inchikey_matches_registry": true
+  },
+  "7C1_representative_arm": {
+   "smiles": "CCCCCCCCCCCCCC(O)CN(CC)CC",
+   "formula": "C19H41NO",
+   "exact_mass": 299.318815,
+   "inchikey": "SSPNMOBMZCGVOW-UHFFFAOYSA-N",
+   "skeleton": "SSPNMOBMZCGVOW",
+   "n_assigned_stereocentres": 0,
+   "n_unassigned_stereocentres": 1,
+   "registry_smiles": null,
+   "byte_identical_to_registry": false,
+   "inchikey_matches_registry": null
+  },
+  "7C1": {
+   "reference_SMILES": "",
+   "why_empty": "the paper draws no complete structure"
+  }
+ },
+ "discarded_cholesterol_stereo_attempt": {
+  "smiles": "O[C@@H]9CC[C@]8(C)C(=CC[C@@H]7[C@@H]8CC[C@]6(C)[C@H]7CC[C@@H]6[C@@H](C)CCCC(C)C)C9",
+  "inchikey": "HVYWMOMLDIMFJA-OXMOYTRBSA-N",
+  "skeleton": "HVYWMOMLDIMFJA",
+  "registry_inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+  "same_skeleton_block": true,
+  "same_full_inchikey": false,
+  "formula_and_exact_mass_identical": true,
+  "verdict": "DISCARDED, not tuned. Recorded so the hazard is visible."
+ },
+ "note_on_byte_identity": "DSPC's assembled anchor canonicalises BYTE-IDENTICAL to the registry string. That is not evidence of copying and not evidence of independence either (F-037): a correct re-derivation is byte-identical to a correct original once canonicalised, which is exactly why C10's anchor_may_be_a_copy test missed F-037. Independence here is the AST guard and the build route, both executed above, plus the fact that the assembly route refused two of its own first attempts (a radical oxygen, and the cholesterol stereo).",
+ "selftest": {
+  "import_a_stage_module": {
+   "seeded": true,
+   "metric_line_present": true,
+   "guard_fired": true,
+   "returncode": 3,
+   "message": "make_reference independence guard FAILED: imports stage module 'stage06'",
+   "credited": true
+  },
+  "paste_a_registry_smiles": {
+   "seeded": true,
+   "metric_line_present": true,
+   "guard_fired": true,
+   "returncode": 3,
+   "message": "make_reference independence guard FAILED: contains a string literal byte-identical to a reagent_registry SMILES",
+   "credited": true
+  },
+  "open_an_emitted_file": {
+   "seeded": true,
+   "metric_line_present": true,
+   "guard_fired": true,
+   "returncode": 3,
+   "message": "make_reference independence guard FAILED: names an emitted file '04_si_tables.json'",
+   "credited": true
+  },
+  "control_unmutated": {
+   "guard_fired": false,
+   "credited": true
+  },
+  "structural_seed_regiochemistry": {
+   "correct": {
+    "smiles": "CCCCCCCCCCCCCC(O)CN(CC)CC",
+    "formula": "C19H41NO",
+    "exact_mass": 299.318815,
+    "inchikey": "SSPNMOBMZCGVOW-UHFFFAOYSA-N",
+    "skeleton": "SSPNMOBMZCGVOW",
+    "n_assigned_stereocentres": 0,
+    "n_unassigned_stereocentres": 1
+   },
+   "seeded": {
+    "smiles": "CCCCCCCCCCCCCC(CO)N(CC)CC",
+    "formula": "C19H41NO",
+    "exact_mass": 299.318815,
+    "inchikey": "WMDBGTYHYQMLLR-UHFFFAOYSA-N",
+    "skeleton": "WMDBGTYHYQMLLR",
+    "n_assigned_stereocentres": 0,
+    "n_unassigned_stereocentres": 1
+   },
+   "same_formula": true,
+   "same_exact_mass": true,
+   "mass_difference_Da": 0.0,
+   "same_inchikey": false,
+   "same_skeleton_block": false,
+   "credited": true
+  }
+ },
+ "selftest_credited": "5/5"
+}

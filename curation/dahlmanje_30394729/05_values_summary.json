@@ -1,0 +1,22 @@
+{
+ "n_panel_groups": 19,
+ "n_values_catalogued": 662,
+ "by_corpus_admissible": {
+  "yes": 0,
+  "no": 662
+ },
+ "by_readout_is_delivery": {
+  "yes": 27,
+  "no": 611,
+  "n/a": 24
+ },
+ "delivery_values_that_are_ATTRIBUTABLE": 17,
+ "delivery_values_from_POOLED_unattributable_panels": 2,
+ "distinct_ionizable_lipids": 1,
+ "distinct_formulations_formulated": 160,
+ "distinct_formulations_pooled_and_measured": 146,
+ "distinct_formulations_individually_measured": 5,
+ "design_supported_per_LNP_values": 146,
+ "attributed_per_LNP_values": 5,
+ "counts_sum": true
+}

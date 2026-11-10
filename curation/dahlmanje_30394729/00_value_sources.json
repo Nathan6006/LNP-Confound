@@ -1,0 +1,86 @@
+{
+ "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). For every panel or table that supplies a VALUE, the tier it came from. Tiers: 1_publisher_source_data > 2_si_tables > 3_author_repository > 4_pdf_text_table > 5_pixels. Anything at 5_pixels must say WHY 1-4 failed, in a sentence a reviewer can check.",
+ "_honesty_note": "Written BEFORE any digitiser or extractor was written in this folder, after the tier reconnaissance (Source Data -> SI -> repository -> PDF text) and after looking at every figure page as an image. No digitiser was written at all in the end: see 'no_pixels_were_read'.",
+
+ "paper": {
+  "pmid": "30394729",
+  "doi": "10.1021/jacs.8b08976",
+  "proposed_experiment_id": "CS_2018",
+  "first_author": "Sago CD",
+  "lab": "Dahlman (Georgia Tech)"
+ },
+
+ "THE_ENDPOINT": {
+  "screen_readout": "'Normalized DNA delivery (%)' -- the count of each LNP's DNA barcode recovered from FACS-sorted ICAM-2-LOW bone-marrow endothelial cells, normalised within the sample and then to the barcode input pool. A POOLED, COMPOSITIONAL readout (every LNP's value is a share of a total that sums to 100% across the pool), measured once per library for 115 and 31 pooled LNPs.",
+  "individual_readout": "'ICAM-2 Protein Silencing (MFI, Normalized)' -- flow-cytometric ICAM-2 protein knockdown in sorted endothelial cells, siICAM-2 relative to the siLuc control, and 'ICAM-2 Indel (%)' by TIDE. Both are delivery endpoints in the data/ vocabulary (protein-abundance knockdown; editing-efficiency).",
+  "excluded_as_not_delivery": [
+   "Alexa647 MFI in vitro uptake, with and without endocytosis inhibitors (Fig 6C, 6D, Fig S3F, S3G) -- CELLULAR UPTAKE, explicitly not delivery",
+   "QUANT ddPCR barcode biodistribution in heart/lung/marrow ECs and CD34+ HSPCs (Fig S3H, S3I, S3J) -- BIODISTRIBUTION; the paper's own thesis is that this is a different quantity from functional delivery",
+   "hydrodynamic diameter and PDI (Fig 3D, 3F-3H, 5E-5G, 6B, Fig S1H, S2G, S3C)",
+   "pKa by TNS assay (Fig 6B, Fig S3D, S3E)",
+   "mouse body weight over time (Fig S2K, S2L, S3M, S3N) and mouse age/sex/weight table (Fig S2H)",
+   "'ICAM-2 Low cells (%)' as a cell-frequency (Fig 2D) -- a gate frequency, not a potency",
+   "enrichment-in-top-10% pie charts and bars (Fig 4A, 4B, Fig 5H-5L, Fig S2B) -- derived summaries over the pool, not per-LNP values",
+   "Figure 1B and SI page S3 -- a LITERATURE REVIEW of eight OTHER papers' silencing doses. These are other laboratories' values and must never be emitted under this Experiment_ID."
+  ]
+ },
+
+ "tier_1_publisher_source_data": {
+  "available": false,
+  "checked_how": "ACS published exactly one supplementary item for this article, ja8b08976_si_001.pdf, and it is a PDF. Europe PMC's supplementaryFiles endpoint returns errorBean 'Article with id PMC6556374 is not open access one'. The JATS deposit declares one supplement, NIHMS1032778-supplement-All.pdf. No workbook, no CSV, no Source Data of any kind exists."
+ },
+
+ "tier_2_si_tables": {
+  "available": "FOR FORMULATION COMPOSITION ONLY, NOT FOR ANY DELIVERY VALUE",
+  "what_is_there": {
+   "Figure S2A (SI p. S9)": "Library 1 Composition -- all 120 LNPs: LNP #, 7C1 mole %, Chol %, PEG %, DSPC %, PEG Type",
+   "Figure S2F (SI p. S11)": "Library 2 Composition -- all 40 LNPs, same columns",
+   "Figure S1F (SI p. S6)": "the 156 eight-nucleotide barcode sequences",
+   "Figure S1E (SI p. S5)": "the worked example that DEFINES the normalisation (three tables)",
+   "Figure S1A (SI p. S3)": "the literature review -- other papers' data, excluded",
+   "Figure S2H (SI p. S12)": "mouse strain/sex/age/weight per experiment"
+  },
+  "tables_carrying_a_delivery_value": 0,
+  "note": "The composition tables are complete and unambiguous, but they carry NO value column. The barcode-to-LNP mapping is never published, and neither is the identity of the 5 (of 120) and 9 (of 40) LNPs that failed the 20-200 nm stability gate, so even a perfect digitisation of Fig 3E could not be attributed to an LNP number."
+ },
+
+ "tier_3_author_repository": {
+  "available": false,
+  "checked_how": "provenance/tools/find_repo.py --pmid 30394729 --author Sago: the PMID code search returned 20 unrelated hits and every repo query returned either 0 or unrelated LNP-ML projects. Grep over the full JATS body (34,392 chars) and all 23,227 characters of SI text for GSE[0-9]+ / SRP / PRJNA / SRA / E-MTAB / accession / deposit / github / zenodo / dryad / figshare returns ZERO hits in both. There is no Data Availability statement at all. Methods say sequencing was 'processed using a custom R script' and 'normalized with an R script' -- neither script is deposited.",
+  "null_result_is_explicit": "No deposit of any kind. Had one existed, note that a sequencing accession is raw reads, not a delivery value."
+ },
+
+ "tier_4_pdf_text_table": {
+  "available": true,
+  "used_for": "Library 1 (120 rows) and Library 2 (40 rows) composition, the 156 barcode sequences, and the three Figure S1E normalisation tables. All four come back from pdfplumber find_tables()/extract() as native ruled tables with real text cells -- shapes 61x13 (p9), 41x6 (p12), 40x8 (p6), three 6x6/6x5 (p5). No OCR, no pixels.",
+  "verified_by_hand": "Yes. triage.py's text heuristic reported table_pages=[1] -- wrong in both directions, as PIPELINE_V2 warns: page 1 is the title page with no table, and it missed all four real tables. native_tables is the field that was read."
+ },
+
+ "tier_5_pixels": {
+  "used": false,
+  "no_pixels_were_read": "Not one value in this curation came from a pixel. Every delivery-bearing panel is a raster, and for each of them digitisation was ruled out BEFORE any geometry code was written, for a reason that is prior to geometry:",
+  "panel_by_panel": [
+   {
+    "panel": "Figure 3E / 3F / 3G",
+    "quantity": "Normalized DNA Delivery (%), 115 LNPs + 2 naked-barcode controls, log axis 0.001-100",
+    "tier": "5_pixels, NOT ATTEMPTED",
+    "attributable": "NO. 3E is a jittered one-column scatter of 115 identical grey circles with no identifier of any kind; 3F/3G plot the same values against diameter, also unlabelled. There is no key, no ordering statement, and no published list of WHICH 115 of the 120 tabulated LNPs were pooled.",
+    "why_not_digitised": "a perfectly measured point set with no labels is 115 numbers that cannot be attached to a formulation; and the corpus key is the ionizable lipid, of which there is exactly one here."
+   },
+   {
+    "panel": "Figure 5D / 5E / 5F",
+    "quantity": "Normalized Barcode Count (%), 31 LNPs + 2 controls",
+    "tier": "5_pixels, NOT ATTEMPTED",
+    "attributable": "NO. Same shape as Fig 3E; which 31 of the 40 tabulated LNPs were pooled is never stated."
+   },
+   {
+    "panel": "Figure 6E (marrow ECs), 6G (lung, heart), 6H (indels), Fig S3B (five named formulations), Fig S2D/S2E, Fig 1C, Fig 2C",
+    "quantity": "ICAM-2 protein silencing (MFI, normalised) and ICAM-2 indel %",
+    "tier": "5_pixels, NOT ATTEMPTED",
+    "attributable": "YES -- these bars ARE labelled, and they are the only delivery values in the paper that are attributable to a formulation.",
+    "why_not_digitised": "the governing blocker is upstream of the value: all of them are the SAME ionizable lipid, 7C1, which is a polydisperse branched-PEI/epoxide polymer for which no single SMILES is correct (see DECISIONS D-1). data/ has ZERO rows with a blank IL_SMILES in either pool, so no row can be emitted at any value precision, and reading pixels would produce numbers with nowhere to go. Six of the seven headline values are in any case stated as NUMERALS IN THE TEXT (37%, 4.8x, 2.2x, 16%, 15%, 4.7x) and are recorded in 05_values.csv at tier 4 from the text, not from the bars.",
+    "if_D-1_is_ever_resolved": "these panels are only available as 800x459 / 721x900 author-manuscript JPEGs at a DECLARED (not measured) 150 dpi, with no page rect and therefore no derivable native dpi, and the article PDF is unobtainable by all three routes tried. Any future digitisation must say so and must seed its own geometry."
+   }
+  ]
+ }
+}

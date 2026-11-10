@@ -1,0 +1,61 @@
+{
+ "_what": "PIPELINE_V2 Stage 00. What was acquired, from where, with hashes, and the LICENCE read off the Europe PMC record rather than the publisher landing page.",
+
+ "paper": {
+  "pmid": "30394729",
+  "pmcid": "PMC6556374",
+  "doi": "10.1021/jacs.8b08976",
+  "title_full": "Nanoparticles That Deliver RNA to Bone Marrow Identified by in Vivo Directed Evolution.",
+  "journal": "Journal of the American Chemical Society 140(49), December 2018",
+  "author_string_verbatim_from_europepmc": "Sago CD, Lokugamage MP, Islam FZ, Krupczak BR, Sato M, Dahlman JE.",
+  "first_author": "Cory D. Sago",
+  "senior_author_lab": "James E. Dahlman, Wallace H. Coulter Dept. of Biomedical Engineering, Georgia Institute of Technology",
+  "folder_name_check": "The folder is named dahlmanje_30394729 after the SENIOR author. Experiment_ID derives from the FIRST author, so the ID proposed here is CS_2018 (Sago CD, 2018), NOT JD_2018. Verified against the Europe PMC core record and against the SI title page, which lists the same six authors in the same order.",
+  "proposed_experiment_id": "CS_2018",
+  "collision_check": "EXECUTED against the live corpus: 43 vitro + 20 vivo Experiment_IDs, none begins 'CS'. Note data_vivo.csv DOES contain SS_2018 -- that is PMID 29653760 (Sabnis et al., Moderna), a different paper; checked by PMID, not by name."
+ },
+
+ "licence": {
+  "article": "NOT CC-BY. Europe PMC core record: isOpenAccess = 'N', license = null. The PMC deposit is an NIH author manuscript whose <permissions> block reads verbatim: 'This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.' Europe PMC's supplementaryFiles endpoint refuses with 'Article with id PMC6556374 is not open access one'.",
+  "verdict_for_CLAUDE_md_section_8": "FAILS the CC0/CC-BY-compatible requirement for corpus release. Text-mining permission is not a redistribution licence.",
+  "repository": "none exists (see 00_value_sources.json tier 3)."
+ },
+
+ "files": [
+  {
+   "path": "source/ja8b08976_si_001.pdf",
+   "what": "Supporting Information, 16 pages, Figures S1-S3 with the Library 1 and Library 2 composition tables and the barcode list.",
+   "bytes": 12017019,
+   "sha256": "c09c8d95ba38590beb15d3d9b0a68e7d164a81fea94b31d4684cae6bbd03296a",
+   "acquired": "already present in source/ when this curation started (placed 2026-11-09); not re-downloaded. Its own watermark records the route: 'Downloaded from pubs.acs.org/jacsat/article-supplement/688291/pdf/ja8b08976_si_001/'.",
+   "note": "Every page carries an institutional download watermark. That watermark is NOT part of the paper and was excluded from all text-length and table heuristics."
+  }
+ ],
+
+ "fetched_this_session": {
+  "where": "the session scratchpad, NOT this folder -- nothing fetched here is an input to a tracked artifact, so nothing needed to be written into the repo (CLAUDE.md section 7).",
+  "items": [
+   {
+    "what": "JATS full text (title, abstract, Results, Methods, all six figure captions)",
+    "route": "NCBI efetch db=pmc id=6556374, via provenance/tools/pmc_fetch.py",
+    "bytes": 160538,
+    "tables_in_markup": 0
+   },
+   {
+    "what": "Figures 1-6 as the NIHMS author-manuscript rasters",
+    "route": "https://pmc.ncbi.nlm.nih.gov/articles/instance/6556374/bin/nihms-1032778-f000N.jpg",
+    "validated": "magic bytes checked on every download (ff d8 ff e0 ... JFIF); 6/6 are real JPEGs",
+    "sizes_px": {"f0001": "800x247", "f0002": "800x559", "f0003": "800x658", "f0004": "800x212", "f0005": "721x900", "f0006": "800x459"},
+    "declared_dpi": "150x150 in the JFIF density field. DECLARED, not measured: these are standalone JPEGs with no page rect, so px/rect_pt*72 cannot be computed and no native dpi is derivable. No digitisation was performed on them (see 00_value_sources.json).",
+    "note": "f0001 and f0002 failed on the first attempt with an HTML error page and succeeded on a retry 30 s later. A single failure on this route is transient, not evidence the asset is absent."
+   }
+  ],
+  "refused": [
+   "Europe PMC /fullTextXML -> HTTP 500",
+   "Europe PMC /fullTextPDF -> HTTP 500 (HTML error body)",
+   "Europe PMC /supplementaryFiles -> 200 with errorBean 'not open access'",
+   "pmc .../bin/nihms-1032778.pdf (the manuscript PDF) -> HTML error page, both attempts. There is therefore NO vector rendition of the article figures available to this curation."
+  ],
+  "no_paywall_or_bot_check_was_bypassed": true
+ }
+}

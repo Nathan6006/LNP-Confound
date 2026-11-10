@@ -2407,3 +2407,81 @@ text-vs-table count gap it had found separately (137 stated, 130 tabulated).
 Licence **CC BY** — §8-compatible, the third such source this run.
 
 Launched `dahlmanje_30394729`.
+
+### 14:1x — `dahlmanje_30394729`: 0 rows, and the one-lipid pattern becomes a policy question
+
+**0 rows**, correctly, and the agent gave the governing number in its second
+line: this paper contributes **one** ionizable lipid — **7C1**, in every
+formulation of both libraries and every individually tested LNP — and
+effectively **zero**, because 7C1 is **branched PEI Mn≈600 plus 14 eq of a C15
+epoxide**, a polydisperse polymer with no single correct SMILES. `data/` has 0
+blank `IL_SMILES` in 30,998 rows, so no row can be emitted at any precision.
+Figs 3A/5A draw **one representative arm**, not the lipid. It also got the
+`Experiment_ID` right the hard way — first author **Sago**, so `CS_2018`, after
+checking by **PMID** that the corpus's existing `SS_2018` is a different paper
+(Sabnis/Moderna).
+
+**FINDING BB (F-067) — five papers this run are one-lipid formulation screens,
+and the corpus has no stated rule for them.** Taken from the queue's own
+`structures_enumerated` field rather than recollection:
+
+| folder | rows | the one lipid |
+|---|---|---|
+| `maohq_39375194` | **5,112** | DLin-MC3-DMA |
+| `chamolstad_41691524` | 77 | H9T6 |
+| `dahlmanje_36701517` | 37 | cKK-E12 |
+| `mitchellmj_41603124` | 0 | 18D4 (1 of 133 determinable) |
+| `dahlmanje_30394729` | 0 | 7C1 (a polymer) |
+
+**5,226 rows across the five, plus 28 from `dixonjb_41269090` whose only second
+structure is an MC3 benchmark — about 74% of this run's 7,158 staged rows
+carrying five distinct ionizable lipids between them.** In every case the
+varying factor is the helper lipid, the cholesterol/PEG ratio or the N:P.
+
+I wrote the finding with a table that **did not match the queue** — it listed
+`dixonjb_41269090` and `dahlmanje_30394729` as one-lipid and omitted
+`mitchellmj_41603124`. Corrected against `run_queue.json` in the same turn and
+the source of the numbers is now named in the finding, because a policy
+recommendation resting on a miscounted table is worse than none.
+
+The recommendation: **admit only the individually-measured validation arms** by
+default (where chemistry actually varies — 5 rows in this paper's case), with
+whole-screen admission available **by explicit decision** where a one-lipid
+screen supplies a cross-source shared lipid the pool otherwise lacks. That is
+exactly F-064's cKK-E12 case, and only on the in-vivo side, where shared
+chemistry is down to **two** structures. The user's call; all five folders still
+carry OPEN decisions so the builder refuses them today.
+
+**Its compositional reconstruction is the cleanest of the run: residual 0.0,
+9/9 cells exact**, raw column totals 4/4. And it used the drawn-but-uncomputed
+`Total (%) = 100` to find two printed **intermediate** typos (34 where
+34.78→35; 3 where 19.57→20) — identifiable *because* stage 3 was exact from the
+raw counts, so the formula was right and the printed intermediates were not.
+Confirmed on a 400 dpi render rather than the text layer alone.
+
+**Its anchor caught F-013 reproduced from scratch, in its own work.** Its
+hand-written cholesterol gave `HVYWMOMLDIMFJA-OXMOYTRBSA-N` — a
+**diastereomer with 4 of 8 centres inverted**, identical formula, identical
+exact mass to six decimals, **identical skeleton InChIKey block**. It
+**discarded the anchor rather than flipping tokens until it matched the
+registry**, and declared the gap on the row. That restraint is the whole point:
+tuning an anchor to agree with the thing it checks is how F-013 survived nine
+checks. Fourth agent today to hit the direction/stereo class.
+
+Its token-pattern measurement is the sharpest yet: a substring join on `7C1`
+captures **36 rows / 35 distinct structures / 4 experiments** and **none** is
+the lipomer — `7C1` packs three numbers in one name (`7` = amine, `C1` =
+epoxide index, drawn tail `C13`, actual epoxide **C15**), none of them a chain
+length.
+
+Verified while checking its MC3 note: two spellings exist, `DLin-MC3-DMA` on
+**3,087** rows across 10 experiments and `Dlin-MC3-DMA` on **11** in `SB_2024`
+— and `reagent_registry.py`'s `ALIASES` **already covers both**, so C11 is
+sound. The residual exposure is an ad-hoc `IL_name ==` join in a curation
+script, which is F-063's point again.
+
+Licence fails §8: `isOpenAccess = N`, `license = null`, the PMC copy an NIH
+author manuscript under "text mining … fair use".
+
+Launched `dahlmanje_33758781` — "constrained phospholipids" is very likely
+another helper-lipid variable, so its brief leads with the one-lipid question.

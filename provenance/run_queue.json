@@ -1188,15 +1188,16 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "109 LNPs with constrained phospholipids.",
-   "stage": "00_acquired",
-   "status": "ready_to_extract",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [
     "BARCODED IN VIVO SCREEN -- likely a FORMULATION screen in disguise. dahlmanje_29489381 stated 281 and turned out to be 564 formulations over only 15 distinct lipomers, 206 of them sharing one (7C1); 7 of the 15 are PEI polymers with no determinable SMILES. Deprioritised: confirm DISTINCT IONIZABLE STRUCTURES before spending an agent."
    ],
    "n_files": 1,
    "pmcid": "PMC7974401",
    "value_reach": "C_pmc_fulltext",
-   "kind_original": "ivv"
+   "kind_original": "ivv",
+   "agent_task_id": "a4c41472fb692bd8a"
   },
   {
    "rank": 47,
@@ -1215,8 +1216,8 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "~100 LNPs.",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted_zero_admissible",
    "blockers": [
     "BARCODED IN VIVO SCREEN -- likely a FORMULATION screen in disguise. dahlmanje_29489381 stated 281 and turned out to be 564 formulations over only 15 distinct lipomers, 206 of them sharing one (7C1); 7 of the 15 are PEI polymers with no determinable SMILES. Deprioritised: confirm DISTINCT IONIZABLE STRUCTURES before spending an agent."
    ],
@@ -1224,7 +1225,10 @@
    "pmcid": "PMC6556374",
    "value_reach": "C_pmc_fulltext",
    "kind_original": "ivv",
-   "agent_task_id": "af0a55fd218bee1fc"
+   "agent_task_id": "af0a55fd218bee1fc",
+   "rows_emitted": 0,
+   "structures_enumerated": 1,
+   "proposed_experiment_id": "CS_2018"
   },
   {
    "rank": 48,
@@ -1372,7 +1376,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T17:00:02Z",
+ "updated_utc": "2026-11-10T17:38:27Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

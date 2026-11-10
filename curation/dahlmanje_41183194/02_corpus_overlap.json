@@ -1,0 +1,373 @@
+{
+ "_what": "KG_2025 corpus overlap. PMID 41183194.",
+ "corpus": {
+  "vitro_rows": 29195,
+  "vivo_rows": 1803,
+  "experiments_vitro": 43,
+  "experiments_vivo": 20
+ },
+ "already_merged": {
+  "this_pmid_in_corpus": false,
+  "this_doi_in_corpus": false,
+  "note": "LR_2023 (PMID 37127709), the corpus's barcoded in-vivo experiment, is Rhym/Anderson (MIT), NOT Dahlman -- checked against Europe PMC. No Dahlman-lab experiment is in the corpus under this paper's PMID or DOI."
+ },
+ "ionizable_lipids": {
+  "SM-102": {
+   "smiles": "CCCCCCCCC(CCCCCCCC)OC(=O)CCCCCCCN(CCO)CCCCCC(=O)OCCCCCCCCCCC",
+   "provenance": "provenance/reagent_registry.py, written from the chemical name heptadecan-9-yl 8-[(2-hydroxyethyl)(6-oxo-6-undecoxyhexyl)amino]octanoate",
+   "inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "skeleton": "BGNVBNJYBVCBJH",
+   "join_full_inchikey": {
+    "AC_2025": {
+     "rows": 426,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    },
+    "SB_2024": {
+     "rows": 13,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "SS_2018": {
+     "rows": 1,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "SY_2025": {
+     "rows": 2,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "WT_2026": {
+     "rows": 1869,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    },
+    "XD_2026": {
+     "rows": 1,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    }
+   },
+   "join_skeleton": {
+    "AC_2025": {
+     "rows": 426,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    },
+    "SB_2024": {
+     "rows": 13,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "SS_2018": {
+     "rows": 1,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "SY_2025": {
+     "rows": 2,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "WT_2026": {
+     "rows": 1869,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    },
+    "XD_2026": {
+     "rows": 1,
+     "IL_names": [
+      "SM-102"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    }
+   },
+   "join_full_rows": 2312,
+   "join_skeleton_rows": 2312,
+   "names_this_structure_carries": [
+    "SM-102"
+   ],
+   "join_IL_name_literal": {
+    "SM-102": 2312
+   }
+  },
+  "cKK-E12": {
+   "smiles": "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC",
+   "provenance": "curation/corpus_components.py smi() on IL_name 'CKK-E12'; the guarded loader did NOT raise, so that name carries exactly one structure corpus-wide.",
+   "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+   "skeleton": "ZISVTYVLWSZJAL",
+   "join_full_inchikey": {
+    "AC_2025": {
+     "rows": 216,
+     "IL_names": [
+      "CKK-E12"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    },
+    "BL_2023": {
+     "rows": 6,
+     "IL_names": [
+      "MD-1"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "JW_2024": {
+     "rows": 19,
+     "IL_names": [
+      "other"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    }
+   },
+   "join_skeleton": {
+    "AC_2025": {
+     "rows": 216,
+     "IL_names": [
+      "CKK-E12"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    },
+    "BL_2023": {
+     "rows": 6,
+     "IL_names": [
+      "MD-1"
+     ],
+     "Model": [
+      "in_vivo"
+     ]
+    },
+    "JW_2024": {
+     "rows": 19,
+     "IL_names": [
+      "other"
+     ],
+     "Model": [
+      "in_vitro"
+     ]
+    }
+   },
+   "join_full_rows": 241,
+   "join_skeleton_rows": 241,
+   "names_this_structure_carries": [
+    "CKK-E12",
+    "MD-1",
+    "other"
+   ],
+   "join_IL_name_literal": {
+    "CKK-E12": 216
+   }
+  }
+ },
+ "structures_with_more_than_one_IL_name": {
+  "n_structures_total": 19919,
+  "n_with_multiple_names": 324
+ },
+ "excipients_in_corpus": {
+  "DSPC": {
+   "DSPC": {
+    "status": "unambiguous",
+    "smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC"
+   }
+  },
+  "Cholesterol": {
+   "Cholesterol": {
+    "status": "unambiguous",
+    "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C"
+   }
+  },
+  "ALC-0159": {
+   "ALC-0159": {
+    "status": "unambiguous",
+    "smiles": "CCCCCCCCCCCCCCN(CCCCCCCCCCCCCC)C(=O)COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC"
+   }
+  },
+  "DMG-PEG": {
+   "DMG-PEG2000": {
+    "status": "unambiguous",
+    "smiles": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+   }
+  },
+  "C14-PEG2000": {
+   "C14-PEG2000": {
+    "status": "unambiguous",
+    "smiles": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+   },
+   "DMPE-PEG2000": {
+    "status": "AMBIGUOUS",
+    "n_structures": 2,
+    "smiles": [
+     "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC",
+     "CCCCCCCCCCCCCC(=O)OCC(COP(=O)(O)OCCNCC(=O)OCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC"
+    ]
+   }
+  },
+  "C18-PEG2000": {
+   "DSPE-PEG2000": {
+    "status": "unambiguous",
+    "smiles": "CCCCCCCCCCCCCCCCCCC(=O)OC(COC(=O)CCCCCCCCCCCCCCCCC)COP(=O)(O)OCCNCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC"
+   }
+  },
+  "C8GaCer": {
+   "status": "absent from the corpus under every name tried: C8GaCer, C8GalCer, GalCer, alpha-GalCer"
+  },
+  "C16GaCer": {
+   "status": "absent from the corpus under every name tried: C16GaCer, C16GalCer"
+  }
+ },
+ "token_pattern_test": {
+  "paper_numbering": "GlycoLNP45, 59, 60, 61, 62 -- bare integers, and the screen members are numbered 1..64 CONTIGUOUSLY within each library. CLAUDE.md records the corpus amine catalogue as sparse and non-contiguous (255 values, large gaps, only 7 of 1-16 present), so a contiguous 1..N numbering is LOCAL and must never be joined to it.",
+  "verdict": "LOCAL INDEX. No name join is performed anywhere in this curation; both ionizable lipids are attested structurally.",
+  "per_token": {
+   "45": {
+    "exact_IL_name_match_rows": 0,
+    "exact_match_experiments": [],
+    "substring_match_rows": 32,
+    "substring_match_distinct_structures": 32,
+    "substring_match_experiments": [
+     "BL_2023",
+     "KW_2014",
+     "SX_2025",
+     "XH_2024_2",
+     "XH_2025"
+    ]
+   },
+   "59": {
+    "exact_IL_name_match_rows": 0,
+    "exact_match_experiments": [],
+    "substring_match_rows": 23,
+    "substring_match_distinct_structures": 22,
+    "substring_match_experiments": [
+     "BL_2023",
+     "JW_2024",
+     "KW_2014",
+     "SX_2025"
+    ]
+   },
+   "60": {
+    "exact_IL_name_match_rows": 0,
+    "exact_match_experiments": [],
+    "substring_match_rows": 51,
+    "substring_match_distinct_structures": 47,
+    "substring_match_experiments": [
+     "AA_2008",
+     "BL_2023",
+     "JW_2024",
+     "KW_2014",
+     "NC_2024",
+     "SX_2025"
+    ]
+   },
+   "61": {
+    "exact_IL_name_match_rows": 0,
+    "exact_match_experiments": [],
+    "substring_match_rows": 104,
+    "substring_match_distinct_structures": 90,
+    "substring_match_experiments": [
+     "AA_2008",
+     "BL_2023",
+     "BL_2024",
+     "JW_2024",
+     "KW_2014",
+     "SX_2025"
+    ]
+   },
+   "62": {
+    "exact_IL_name_match_rows": 0,
+    "exact_match_experiments": [],
+    "substring_match_rows": 145,
+    "substring_match_distinct_structures": 126,
+    "substring_match_experiments": [
+     "AA_2008",
+     "BL_2023",
+     "BL_2024",
+     "JW_2024",
+     "KW_2014",
+     "LM_2019",
+     "SX_2025"
+    ]
+   }
+  }
+ },
+ "substructure_sweep_SUPERSET": {
+  "beta-hydroxy-tertiary-amine-with-two-esters (SM-102-like)": {
+   "LABEL": "SUPERSET -- a substructure hit is a CHEMOTYPE, not a near-miss and not an identity claim.",
+   "smarts": "[#6]OC(=O)[#6][#6][#6][#6][#6][#6][NX3]([#6][#6]O)[#6]",
+   "rows": 88,
+   "distinct_structures": 88,
+   "experiments": {
+    "RG_2023": 88
+   }
+  },
+  "ketal-piperazine-diketopiperazine core (cKK-like)": {
+   "LABEL": "SUPERSET -- a substructure hit is a CHEMOTYPE, not a near-miss and not an identity claim.",
+   "smarts": "O=C1[#6][NX3][#6](=O)[#6][NX3]1",
+   "rows": 276,
+   "distinct_structures": 23,
+   "experiments": {
+    "AC_2025": 216,
+    "BL_2023": 6,
+    "JW_2024": 19,
+    "LL_2025": 8,
+    "NG_2025": 8,
+    "NG_2025_2": 6,
+    "XH_2025": 10,
+    "ZT_2026": 3
+   }
+  }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "_what": "Seeded-mutation gate. One CHILD PROCESS per seed; the verdict is the child's returncode, and a seed whose metric line is absent is NOT credited however it exited.",
+ "control": {
+  "returncode": 0,
+  "metrics": {
+   "N1_stage3_exact_cells": "9",
+   "M1_molpct_violations_lib1": "0",
+   "F1_factorial_holds_lib1": "1",
+   "B1_n_barcodes": "156",
+   "W1_uniquely_located": "3",
+   "E1_pies_reconciling": "5"
+  },
+  "passes_clean": true
+ },
+ "seeds": {
+  "N1_normalisation_raw_count": {
+   "metric": "N1_stage3_exact_cells",
+   "control_value": "9",
+   "seeded_value": "6",
+   "metric_line_present": true,
+   "metric_moved": true,
+   "returncode": 1,
+   "credited": true,
+   "stderr_tail": []
+  },
+  "M1_molpct_sum": {
+   "metric": "M1_molpct_violations_lib1",
+   "control_value": "0",
+   "seeded_value": "1",
+   "metric_line_present": true,
+   "metric_moved": true,
+   "returncode": 1,
+   "credited": true,
+   "stderr_tail": []
+  },
+  "F1_factorial_peg_type": {
+   "metric": "F1_factorial_holds_lib1",
+   "control_value": "1",
+   "seeded_value": "0",
+   "metric_line_present": true,
+   "metric_moved": true,
+   "returncode": 1,
+   "credited": true,
+   "stderr_tail": []
+  },
+  "B1_barcode_count": {
+   "metric": "B1_n_barcodes",
+   "control_value": "156",
+   "seeded_value": "155",
+   "metric_line_present": true,
+   "metric_moved": true,
+   "returncode": 1,
+   "credited": true,
+   "stderr_tail": []
+  },
+  "W1_winner_location": {
+   "metric": "W1_uniquely_located",
+   "control_value": "3",
+   "seeded_value": "0",
+   "metric_line_present": true,
+   "metric_moved": true,
+   "returncode": 1,
+   "credited": true,
+   "stderr_tail": []
+  },
+  "E1_formulated_pie": {
+   "metric": "E1_pies_reconciling",
+   "control_value": "5",
+   "seeded_value": "4",
+   "metric_line_present": true,
+   "metric_moved": true,
+   "returncode": 1,
+   "credited": true,
+   "stderr_tail": []
+  }
+ },
+ "n_credited": 6,
+ "n_seeds": 6,
+ "verdict": "ALL SEEDS CREDITED"
+}
