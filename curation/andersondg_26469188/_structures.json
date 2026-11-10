@@ -1,0 +1,145 @@
+{
+ "amine_200_arm_count": {
+  "KL_2010 '200C<n>'": {
+   "ARMS_IMPLIED": 1.0,
+   "dC_per_unit_tail": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "members": [
+    {
+     "formula": "C20H43N3O",
+     "n_C": 20,
+     "n_N": 3,
+     "name": "200C8",
+     "tail_token": 8
+    },
+    {
+     "formula": "C22H47N3O",
+     "n_C": 22,
+     "n_N": 3,
+     "name": "200C10",
+     "tail_token": 10
+    },
+    {
+     "formula": "C24H51N3O",
+     "n_C": 24,
+     "n_N": 3,
+     "name": "200C12",
+     "tail_token": 12
+    },
+    {
+     "formula": "C26H55N3O",
+     "n_C": 26,
+     "n_N": 3,
+     "name": "200C14",
+     "tail_token": 14
+    }
+   ],
+   "n_nitrogen": [
+    3
+   ],
+   "slope_constant": true
+  },
+  "KW_2014 'A200_C<n>'": {
+   "ARMS_IMPLIED": 5.0,
+   "dC_per_unit_tail": [
+    5.0,
+    5.0,
+    5.0,
+    5.0
+   ],
+   "members": [
+    {
+     "formula": "C75H145N5O10",
+     "n_C": 75,
+     "n_N": 5,
+     "name": "A200_C10",
+     "tail_token": 10
+    },
+    {
+     "formula": "C80H155N5O10",
+     "n_C": 80,
+     "n_N": 5,
+     "name": "A200_C11",
+     "tail_token": 11
+    },
+    {
+     "formula": "C85H165N5O10",
+     "n_C": 85,
+     "n_N": 5,
+     "name": "A200_C12",
+     "tail_token": 12
+    },
+    {
+     "formula": "C90H175N5O10",
+     "n_C": 90,
+     "n_N": 5,
+     "name": "A200_C13",
+     "tail_token": 13
+    },
+    {
+     "formula": "C95H185N5O10",
+     "n_C": 95,
+     "n_N": 5,
+     "name": "A200_C14",
+     "tail_token": 14
+    }
+   ],
+   "n_nitrogen": [
+    5
+   ],
+   "slope_constant": true
+  },
+  "_what_this_proves": "Within a homologous series holding the amine fixed and walking the tail length, dC/d(tail) EQUALS the number of arms. KW_2014's A200_C10..C14 gives 5 arms on a 5-nitrogen core; KL_2010's 200C8..C14 gives 1 arm on a 3-nitrogen core. Both series are INTERNALLY self-consistent, which is precisely why F-061 is a real conflict and not a typo: two curations each coherently encode a different molecule for the same catalogue amine. Reported; data/ untouched."
+ },
+ "three_way_helper_concordance": {
+  "DOPC": {
+   "all_three_agree": true,
+   "built_eq_corpus": true,
+   "built_eq_registry": true,
+   "built_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+   "built_is_byte_identical_to_registry": true,
+   "byte_identity_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation canonicalises to the same string as a correct stored structure. What matters is that the build ROUTE shares nothing with the registry, which make_reference.ast_guard tests at run time on its own AST.",
+   "corpus_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+   "corpus_rows": 81,
+   "exact_mass": 785.593455,
+   "exact_mass_max_delta": 0.0,
+   "formula": "C44H84NO8P",
+   "formula_all_agree": true,
+   "registry_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N"
+  },
+  "DOPE": {
+   "all_three_agree": true,
+   "built_eq_corpus": true,
+   "built_eq_registry": true,
+   "built_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "built_is_byte_identical_to_registry": true,
+   "byte_identity_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation canonicalises to the same string as a correct stored structure. What matters is that the build ROUTE shares nothing with the registry, which make_reference.ast_guard tests at run time on its own AST.",
+   "corpus_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "corpus_rows": 17737,
+   "exact_mass": 743.546505,
+   "exact_mass_max_delta": 0.0,
+   "formula": "C41H78NO8P",
+   "formula_all_agree": true,
+   "registry_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N"
+  },
+  "DSPC": {
+   "all_three_agree": true,
+   "built_eq_corpus": true,
+   "built_eq_registry": true,
+   "built_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "built_is_byte_identical_to_registry": true,
+   "byte_identity_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation canonicalises to the same string as a correct stored structure. What matters is that the build ROUTE shares nothing with the registry, which make_reference.ast_guard tests at run time on its own AST.",
+   "corpus_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "corpus_rows": 7038,
+   "exact_mass": 789.624755,
+   "exact_mass_max_delta": 0.0,
+   "formula": "C44H88NO8P",
+   "formula_all_agree": true,
+   "registry_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N"
+  },
+  "_independence_posture": "This is a NAME-CONCORDANCE check, NOT an external attestation of this paper's chemistry. The paper draws no structure; it prints a systematic name, and all three legs of this comparison are derivations from that same name by different hands. It catches a transcription error in any leg -- and the briefing records a sibling whose hand-built DSPC came out a ketone bearing an ether at the right mass to six decimals -- but it cannot catch a name that is wrong FOR THIS PAPER. Counted as such in PROVENANCE.md and NOT counted as a C10 pass."
+ }
+}

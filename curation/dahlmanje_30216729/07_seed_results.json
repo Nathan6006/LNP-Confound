@@ -1,0 +1,240 @@
+{
+ "_what": "Seeded-mutation results for this folder's checks. A seed is CREDITED only if the metric line appears in both runs and the metric moves in the expected direction.",
+ "n_seeds": 10,
+ "n_credited": 10,
+ "all_credited": true,
+ "curation_folder_artifacts_untouched_by_the_suite": true,
+ "f069_posture": "every seeded run received its own OUTDIR under /var/folders/yv/c04567j13yb34jnsj9wv6vvc0000gn/T/seed_30216729_4epuqzki; the tracked-artifact hashes above are compared across the whole suite, which is the only check that sees a write from a run that exited non-zero",
+ "hashes_before": {
+  "00_value_sources.json": "a2d836b84af1a583e3b6a3f49b7ecc2053a99b7db2f5d4275ca78f19dda31a69",
+  "01_blocks.csv": "0e0f648e80403ce0c26c423e9be30f40b447e5211cb13559def8df45a975ae6c",
+  "01_si_tables.json": "42492dd8890f21f064b0fdbb293c214c59a486f48e6927a7bcf7fc8b3bef438d",
+  "02_corpus_overlap.json": "56efae8374aaec0429bdbb2157791d7687cb0cc1e7c5faf05007bbe5301e8d9c",
+  "03_drawn_checks.json": "c55e1a5e08352ca702d864a582574f6851e4166cf4a2024b3ba9c788405ff66e",
+  "03_enumerated.csv": "c964d55f7ce90dfa2bfd5f0bdb4b6aecefd9f7ee0652724853ea3e208790864f",
+  "05_values.csv": "695cad8dd8a9851ff958607b9c657e3a47a0bdc83ce8d6bf4cf0df25b5b04ca9",
+  "06_rows.csv": "0ef39a0909433d138ca91b920dc96778bdc1fffc36d66efaace4c4aa991bbeba",
+  "07_qc.json": "70139dbe5f334b1f19e14289b4b48414d822f6242f8ea7a637cf771ac3b04bf6",
+  "08_contradictions.csv": "08ea517a7968377e893cf84f636353fc06c1a8b9b2bbd4b868b0d621007db1dd",
+  "reference_structures.csv": "0ce42b1e60071dd41b45fb005368a3cb76c031854e30a0523efe3a324b58a53e",
+  "PROVENANCE.md": "6850b81552e74762b6a08a55de7ad853879da18541629e416c8e13481047184b",
+  "DECISIONS.md": "b197acd6517376b34f3c4a94ce962bfd23264c981a541554b87a16f26d248a4b"
+ },
+ "hashes_after": {
+  "00_value_sources.json": "a2d836b84af1a583e3b6a3f49b7ecc2053a99b7db2f5d4275ca78f19dda31a69",
+  "01_blocks.csv": "0e0f648e80403ce0c26c423e9be30f40b447e5211cb13559def8df45a975ae6c",
+  "01_si_tables.json": "42492dd8890f21f064b0fdbb293c214c59a486f48e6927a7bcf7fc8b3bef438d",
+  "02_corpus_overlap.json": "56efae8374aaec0429bdbb2157791d7687cb0cc1e7c5faf05007bbe5301e8d9c",
+  "03_drawn_checks.json": "c55e1a5e08352ca702d864a582574f6851e4166cf4a2024b3ba9c788405ff66e",
+  "03_enumerated.csv": "c964d55f7ce90dfa2bfd5f0bdb4b6aecefd9f7ee0652724853ea3e208790864f",
+  "05_values.csv": "695cad8dd8a9851ff958607b9c657e3a47a0bdc83ce8d6bf4cf0df25b5b04ca9",
+  "06_rows.csv": "0ef39a0909433d138ca91b920dc96778bdc1fffc36d66efaace4c4aa991bbeba",
+  "07_qc.json": "70139dbe5f334b1f19e14289b4b48414d822f6242f8ea7a637cf771ac3b04bf6",
+  "08_contradictions.csv": "08ea517a7968377e893cf84f636353fc06c1a8b9b2bbd4b868b0d621007db1dd",
+  "reference_structures.csv": "0ce42b1e60071dd41b45fb005368a3cb76c031854e30a0523efe3a324b58a53e",
+  "PROVENANCE.md": "6850b81552e74762b6a08a55de7ad853879da18541629e416c8e13481047184b",
+  "DECISIONS.md": "b197acd6517376b34f3c4a94ce962bfd23264c981a541554b87a16f26d248a4b"
+ },
+ "seeds": [
+  {
+   "seed": "molpct_perturbed",
+   "metric": "molpct_lib1_ok",
+   "what": "one Chol % cell +1.0 -> that formulation no longer sums to 100",
+   "expected_direction": "decrease",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 128.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 127.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 128.0 -> 127.0 (decrease)"
+  },
+  {
+   "seed": "molpct_unparseable",
+   "metric": "molpct_lib1_unparsed",
+   "what": "one PEG % cell set to 'n/a' -> must be counted as unparsed, not silently skipped",
+   "expected_direction": "increase",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 0.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 1.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 0.0 -> 1.0 (increase)"
+  },
+  {
+   "seed": "lipomer_type_overwritten",
+   "metric": "n_distinct_ionizable",
+   "what": "40 library-2 rows relabelled 'MC3' -> the one-ionizable-lipid finding must break",
+   "expected_direction": "increase",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 1.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 2.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 1.0 -> 2.0 (increase)"
+  },
+  {
+   "seed": "diameter_column_blanked",
+   "metric": "diam_positive_control",
+   "what": "Diameter column emptied -> the sweep's own positive control must stop passing",
+   "expected_direction": "decrease",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 1.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 0.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 1.0 -> 0.0 (decrease)"
+  },
+  {
+   "seed": "printed_pct_perturbed",
+   "metric": "normA_exact",
+   "what": "one PRINTED percentage +5 -> stage A can no longer reproduce it. The first version of this seed inflated a RAW count instead, which trips check_normalisation's printed-total guard and raises before the metric is reached; the guard is correct, so the seed was retargeted rather than the guard widened, and the guard is credited by its own seed below",
+   "expected_direction": "decrease",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 21.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 20.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 21.0 -> 20.0 (decrease)"
+  },
+  {
+   "seed": "printed_total_inconsistent",
+   "metric": "normA_total_guard_raises",
+   "what": "a printed column total +25 -> the guard that cross-checks the printed total against the sum of the printed counts must refuse",
+   "expected_direction": "increase",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 0.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 1.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 0.0 -> 1.0 (increase)"
+  },
+  {
+   "seed": "stage_B_skips_input_normalisation",
+   "metric": "normB_exact",
+   "what": "stage-B printed values replaced by stage-A values -> input normalisation is what distinguishes them, so the reconstruction must stop matching",
+   "expected_direction": "decrease",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 18.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 1.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 18.0 -> 1.0 (decrease)"
+  },
+  {
+   "seed": "peg_repeat_shifted",
+   "metric": "peg_all_within_one",
+   "what": "one drawn repeat 45 -> 60 -> must fall outside one repeat of 2000/44.05",
+   "expected_direction": "decrease",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 1.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 0.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 1.0 -> 0.0 (decrease)"
+  },
+  {
+   "seed": "peg_repeat_mw_classes_merged",
+   "metric": "peg_ratio_residual_pct",
+   "what": "PEG3000's repeat forced to 45 -> the ratio test must move off 0.74%",
+   "expected_direction": "increase",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 0.7407,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 33.3333,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 0.7407 -> 33.3333 (increase)"
+  },
+  {
+   "seed": "drawn_peg_label_dropped",
+   "metric": "peg_n_drawn",
+   "what": "one drawn PEG-lipid removed -> the 4-drawn count must drop",
+   "expected_direction": "decrease",
+   "clean": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 4.0,
+    "stderr_tail": ""
+   },
+   "seeded": {
+    "returncode": 0,
+    "metric_line_present": true,
+    "value": 3.0,
+    "stderr_tail": ""
+   },
+   "credited": true,
+   "verdict": "CREDITED: 4.0 -> 3.0 (decrease)"
+  }
+ ]
+}

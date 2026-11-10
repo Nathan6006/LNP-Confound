@@ -1,0 +1,184 @@
+{
+ "_what": "Checks against the structures SI p14 DRAWS, and the enumeration of this paper's ionizable lipids.",
+ "structure_band": {
+  "n_drawing_paths": 885,
+  "stroke_width_histogram": {
+   "None": 637,
+   "0.25": 248
+  },
+  "n_filled_paths_width_none": 637,
+  "drawn_peg_lipid_labels": [
+   "C14PEG2000",
+   "C16PEG2000",
+   "C18PEG2000",
+   "C14PEG3000"
+  ],
+  "drawn_molecule_labels": [
+   "R=C13",
+   "PEI600",
+   "Cholesterol",
+   "DSPC"
+  ],
+  "polyether_repeat_counts_in_drawing_order": [
+   45,
+   45,
+   45,
+   67
+  ],
+  "label_to_repeat_pairs": [
+   {
+    "label": "C14PEG2000",
+    "repeat": 45
+   },
+   {
+    "label": "C16PEG2000",
+    "repeat": 45
+   },
+   {
+    "label": "C18PEG2000",
+    "repeat": 45
+   },
+   {
+    "label": "C14PEG3000",
+    "repeat": 67
+   }
+  ]
+ },
+ "peg_repeat_count_check": {
+  "per_lipid": [
+   {
+    "label": "C14PEG2000",
+    "alkyl": "C14",
+    "nominal_mw": 2000.0,
+    "drawn_repeat": 45,
+    "predicted_repeat": 45.4,
+    "residual_repeats": -0.4,
+    "within_one_repeat": true
+   },
+   {
+    "label": "C16PEG2000",
+    "alkyl": "C16",
+    "nominal_mw": 2000.0,
+    "drawn_repeat": 45,
+    "predicted_repeat": 45.4,
+    "residual_repeats": -0.4,
+    "within_one_repeat": true
+   },
+   {
+    "label": "C18PEG2000",
+    "alkyl": "C18",
+    "nominal_mw": 2000.0,
+    "drawn_repeat": 45,
+    "predicted_repeat": 45.4,
+    "residual_repeats": -0.4,
+    "within_one_repeat": true
+   },
+   {
+    "label": "C14PEG3000",
+    "alkyl": "C14",
+    "nominal_mw": 3000.0,
+    "drawn_repeat": 67,
+    "predicted_repeat": 68.1,
+    "residual_repeats": -1.1,
+    "within_one_repeat": true
+   }
+  ],
+  "n_lipids_drawn": 4,
+  "all_within_one_repeat": true,
+  "distinct_repeat_for_2000": [
+   45
+  ],
+  "distinct_repeat_for_3000": [
+   67
+  ],
+  "consistency_within_mw": true,
+  "ratio_test": {
+   "drawn_ratio": 1.488889,
+   "nominal_ratio": 1.5,
+   "relative_residual_pct": 0.7407,
+   "why_sharper": "the ratio cancels both the methoxy/linker end-group mass and the vendor's rounding of 1982 to '2000', neither of which the absolute test can separate"
+  },
+  "is_this_a_tautology": false,
+  "why_not": "The repeat subscripts live in the vector drawing on SI p14; the PEG MW column lives in the library table on the same page but is a separate object with its own extraction path. Nothing in this curation derived either from the other, and the paper never prints a PEG molecular weight computed from a repeat count. This is the drawn-but-never-computed class."
+ },
+ "drawn_vs_table": {
+  "drawn_peg_lipids": [
+   "C14PEG2000",
+   "C14PEG3000",
+   "C16PEG2000",
+   "C18PEG2000"
+  ],
+  "n_drawn": 4,
+  "table_combinations": {
+   "library_1": {
+    "C14PEG2000": 32,
+    "C16PEG2000": 32,
+    "C18PEG2000": 32,
+    "C14PEG3000": 32
+   },
+   "library_2": {
+    "C14PEG2000": 24,
+    "C18PEG2000": 24,
+    "C14PEG3000": 24,
+    "C16PEG2000": 24,
+    "C18PEG3000": 24
+   }
+  },
+  "library_1": {
+   "table_combinations": [
+    "C14PEG2000",
+    "C14PEG3000",
+    "C16PEG2000",
+    "C18PEG2000"
+   ],
+   "n_table": 4,
+   "drawn_equals_table": true,
+   "counts_per_combination": {
+    "C14PEG2000": 32,
+    "C16PEG2000": 32,
+    "C18PEG2000": 32,
+    "C14PEG3000": 32
+   },
+   "design_is_balanced": true,
+   "drawn_caption_on_p14": "Library 1:  128 LNPs (4 PEG-lipids)",
+   "caption_count_matches": true
+  },
+  "library_2": {
+   "table_combinations": [
+    "C14PEG2000",
+    "C14PEG3000",
+    "C16PEG2000",
+    "C18PEG2000",
+    "C18PEG3000"
+   ],
+   "n_table": 5,
+   "drawn_covers_table": false,
+   "in_table_but_never_drawn": [
+    "C18PEG3000"
+   ],
+   "counts_per_combination": {
+    "C14PEG2000": 24,
+    "C18PEG2000": 24,
+    "C14PEG3000": 24,
+    "C16PEG2000": 24,
+    "C18PEG3000": 24
+   },
+   "design_is_balanced": true
+  }
+ },
+ "ionizable_lipid_enumeration": [
+  {
+   "il_name": "7C1",
+   "il_smiles": "",
+   "n_formulations_using_it": 248,
+   "drawn_as": "generic scheme: an alkyl epoxide labelled R=C13 (hence a C15 epoxide) + PEI600, 90 C, 72 h, EtOH",
+   "why_no_smiles": "PEI600 is branched polydisperse polyethylenimine of nominal MW 600; the degree of epoxide substitution is not stated. The product is a distribution over both backbone topology and substitution, so no single SMILES is correct.",
+   "paper_gives_formula": false,
+   "paper_gives_hrms": false,
+   "paper_gives_nmr": false,
+   "confidence": "low",
+   "structure_assumed": 0,
+   "curation_note": "7C1 is a polydisperse PEI600/C15-epoxide polymer conjugate drawn only as a generic R-group scheme (SI p14); no atom-resolved structure exists to store."
+  }
+ ]
+}

@@ -1,0 +1,448 @@
+{
+ "C10_phospholipid_effect": {
+  "name": "phospholipid identity effect, measured per library",
+  "note": "The only chemical identity that varies in this paper, and it is a HELPER lipid, not the ionizable lipid.",
+  "per_library": {
+   "A": {
+    "DOPC": {
+     "geomean": 314.5,
+     "mean": 356.0,
+     "n": 3
+    },
+    "DOPE": {
+     "geomean": 386.4,
+     "mean": 1734.5,
+     "n": 4
+    },
+    "DSPC": {
+     "geomean": 274.6,
+     "mean": 668.2,
+     "n": 4
+    }
+   },
+   "B": {
+    "DOPE": {
+     "geomean": 5099.8,
+     "mean": 5268.7,
+     "n": 9
+    },
+    "DSPC": {
+     "geomean": 523.5,
+     "mean": 654.4,
+     "n": 9
+    }
+   }
+  }
+ },
+ "C1_molpct_sums": {
+  "NOT_credited_as": "a design check -- cholesterol is printed as the balance to 100, so the identity is a tautology of the authors' own derivation (trap 7)",
+  "credited_as": "transcription check only",
+  "max_abs_deviation_pct": 10.0,
+  "n_formulations_tested": 47,
+  "n_pass": 46,
+  "name": "mol% of the four components sums to 100",
+  "offenders": [
+   "A-03"
+  ]
+ },
+ "C2_cross_parameterisation": {
+  "independent": true,
+  "mismatches": [],
+  "n_cells_compared": 160,
+  "n_exact": 160,
+  "n_formulations": 32,
+  "name": "row-wise identity, Table S1 vs the DSD/FFD design tables",
+  "note": "5 fields x 32 formulations. Cholesterol mol%% is NOT in the design tables, so it has no independent attestation anywhere in the SI -- stated rather than quietly skipped."
+ },
+ "C3_coded_levels": {
+  "all_bijective": false,
+  "all_quantitative_order_preserving": true,
+  "independent": true,
+  "n_character_assertions": 174,
+  "n_consistent": 172,
+  "n_positions": 11,
+  "name": "coded design string (+/0/-) is a consistent third parameterisation",
+  "positions": [
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": "DO",
+     "-": "DS"
+    },
+    "factor": "head",
+    "library": "A",
+    "order_preserving": null,
+    "position": 0,
+    "quantitative": false,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": "PE",
+     "-": "PC"
+    },
+    "factor": "tail",
+    "library": "A",
+    "order_preserving": null,
+    "position": 1,
+    "quantitative": false,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 7.5,
+     "-": 2.5,
+     "0": 5.0
+    },
+    "factor": "wt_ratio",
+    "library": "A",
+    "order_preserving": true,
+    "position": 2,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 60.0,
+     "-": 40.0,
+     "0": 50.0
+    },
+    "factor": "il_molpct",
+    "library": "A",
+    "order_preserving": true,
+    "position": 3,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 16.0,
+     "-": 4.0,
+     "0": 10.0
+    },
+    "factor": "ph_molpct",
+    "library": "A",
+    "order_preserving": true,
+    "position": 4,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 2.5,
+     "-": 0.5,
+     "0": 1.5
+    },
+    "factor": "peg_molpct",
+    "library": "A",
+    "order_preserving": true,
+    "position": 5,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": "DOPE",
+     "-": "DSPC"
+    },
+    "factor": "phospholipid",
+    "library": "B",
+    "order_preserving": null,
+    "position": 0,
+    "quantitative": false,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 12.5,
+     "-": 7.5,
+     "0": 10.0
+    },
+    "factor": "wt_ratio",
+    "library": "B",
+    "order_preserving": true,
+    "position": 1,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 40.0,
+     "-": 30.0,
+     "0": 35.0
+    },
+    "factor": "il_molpct",
+    "library": "B",
+    "order_preserving": true,
+    "position": 2,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": true,
+    "char_to_level": {
+     "+": 28.0,
+     "-": 16.0,
+     "0": 22.0
+    },
+    "factor": "ph_molpct",
+    "library": "B",
+    "order_preserving": true,
+    "position": 3,
+    "quantitative": true,
+    "violations": []
+   },
+   {
+    "bijection": false,
+    "char_to_level": {
+     "+": 3.5,
+     "-": 2.5,
+     "0": 3.0
+    },
+    "factor": "peg_molpct",
+    "library": "B",
+    "order_preserving": true,
+    "position": 4,
+    "quantitative": true,
+    "violations": [
+     [
+      "B-20",
+      "0",
+      2.5,
+      3.0
+     ],
+     [
+      "B-26",
+      "0",
+      2.5,
+      3.0
+     ]
+    ]
+   }
+  ]
+ },
+ "C4_table_s2_statistics": {
+  "design_balanced_on_phospholipid": true,
+  "half_diff_vs_printed_estimate_abs": 0.0,
+  "half_diff_vs_printed_estimate_rel_pct": 0.0,
+  "half_difference": 2307.1,
+  "independent": true,
+  "interpretation": "For a 2-level nominal factor coded +/-1 in a balanced orthogonal design the least-squares estimate IS half the group difference. The residual gap is what the other four terms in the reduced model absorb, so agreement is expected to be close but not exact.",
+  "mean_DOPE": 5268.7,
+  "mean_DSPC": 654.4,
+  "mean_abs_error": 0.0444,
+  "mean_rel_error_pct": 0.0015,
+  "n_DOPE": 9,
+  "n_DSPC": 9,
+  "n_library_B_formulations": 18,
+  "n_matches_3_replicates": true,
+  "n_times_3": 54,
+  "name": "Table S2 printed statistics recomputed from Table S1",
+  "printed_Mean": 2961.6,
+  "printed_Phospholipid[DOPE]_estimate": 2307.1,
+  "printed_n": 54.0,
+  "recomputed_mean_of_18_group_means": 2961.5556
+ },
+ "C5_abstract_fold_claim": {
+  "C-35_EPO_ng_per_mL": 7065.0,
+  "C-35_over_Original": 7.344,
+  "Original_EPO_ng_per_mL": 962.0,
+  "claim_reproduced_on_C-35": true,
+  "max_EPO_ng_per_mL": 7548.0,
+  "max_of_screen_code": "C-36",
+  "max_over_Original": 7.846,
+  "name": "abstract's 7-fold potency claim",
+  "note": "7.34x on C-35, the formulation the paper calls optimized and carries into Tables S3/S4. The screen MAXIMUM is C-36 at 7.85x, so '7-fold' is the claim about C-35 specifically, not about the best formulation measured."
+ },
+ "C6_library_c_and_B26": {
+  "B-26_EPO": 7485.0,
+  "B-26_composition_identical_to_library_C": true,
+  "B-26_falls_between_them": true,
+  "B-26_wt_ratio": 12.5,
+  "bracketing_neighbours": [
+   [
+    10.0,
+    "C-35",
+    7065.0
+   ],
+   [
+    15.0,
+    "C-36",
+    7548.0
+   ]
+  ],
+  "independent": true,
+  "ladder_peak_at_wt_ratio": 15.0,
+  "ladder_strictly_increasing": false,
+  "library_C_composition": [
+   35.0,
+   16.0,
+   46.5,
+   2.5,
+   "DOPE"
+  ],
+  "library_C_composition_constant": true,
+  "library_C_ladder_wt_ratio_to_EPO": [
+   [
+    5.0,
+    "C-33",
+    3134.0
+   ],
+   [
+    7.5,
+    "C-34",
+    4504.0
+   ],
+   [
+    10.0,
+    "C-35",
+    7065.0
+   ],
+   [
+    15.0,
+    "C-36",
+    7548.0
+   ],
+   [
+    20.0,
+    "C-37",
+    7268.0
+   ],
+   [
+    25.0,
+    "C-38",
+    6179.0
+   ]
+  ],
+  "n_cells_asserted_constant": 30,
+  "name": "Library C weight-ratio ladder, and the independent B-26 interpolation",
+  "why_this_is_strong": "B-26 was run in a different library, from a different DOE, as a different batch, and nothing in the paper presents it as a replicate. Its value landing inside the bracket its Library C neighbours draw is an independent corroboration of both."
+ },
+ "C7_s3_s4_identity": {
+  "independent": true,
+  "mismatches": [],
+  "n_cells_compared": 24,
+  "n_exact": 24,
+  "name": "Original and C-35 re-specified identically in Tables S3 and S4"
+ },
+ "C8_batch_spread": {
+  "headline": "'Original' particle size is 152 / 113 / 65 nm across the three batches, a 2.34x spread, and its encapsulation efficiency is 24 / 27 / 59 %, a 2.46x spread -- same lab, same nominal recipe, three cargoes. Reported because it is a measured within-lab reproducibility figure, not because the paper presents it as one.",
+  "independent": true,
+  "name": "batch-to-batch spread of the SAME nominal formulation across 3 tables",
+  "per_formulation": {
+   "C-35": {
+    "ee_pct": {
+     "max": 58.0,
+     "max_over_min": 1.349,
+     "min": 43.0,
+     "values": {
+      "S1_EPO_mRNA": 43.0,
+      "S3_Luc_mRNA": 48.0,
+      "S4_FVII_siRNA": 58.0
+     }
+    },
+    "pdi": {
+     "max": 0.288,
+     "max_over_min": 1.823,
+     "min": 0.158,
+     "values": {
+      "S1_EPO_mRNA": 0.158,
+      "S3_Luc_mRNA": 0.221,
+      "S4_FVII_siRNA": 0.288
+     }
+    },
+    "size_nm": {
+     "max": 109.0,
+     "max_over_min": 1.329,
+     "min": 82.0,
+     "values": {
+      "S1_EPO_mRNA": 102.0,
+      "S3_Luc_mRNA": 82.0,
+      "S4_FVII_siRNA": 109.0
+     }
+    }
+   },
+   "Original": {
+    "ee_pct": {
+     "max": 59.0,
+     "max_over_min": 2.458,
+     "min": 24.0,
+     "values": {
+      "S1_EPO_mRNA": 24.0,
+      "S3_Luc_mRNA": 27.0,
+      "S4_FVII_siRNA": 59.0
+     }
+    },
+    "pdi": {
+     "max": 0.15,
+     "max_over_min": 1.471,
+     "min": 0.102,
+     "values": {
+      "S1_EPO_mRNA": 0.102,
+      "S3_Luc_mRNA": 0.147,
+      "S4_FVII_siRNA": 0.15
+     }
+    },
+    "size_nm": {
+     "max": 152.0,
+     "max_over_min": 2.338,
+     "min": 65.0,
+     "values": {
+      "S1_EPO_mRNA": 152.0,
+      "S3_Luc_mRNA": 113.0,
+      "S4_FVII_siRNA": 65.0
+     }
+    }
+   }
+  }
+ },
+ "C9_ranks": {
+  "C-35_EPO": 7065.0,
+  "C-35_rank": 4,
+  "Original_EPO": 962.0,
+  "Original_rank": 20,
+  "beat_the_benchmark": 19,
+  "benchmark_is": "'Original' -- the C12-200 formulation previously optimized for siRNA (50/10/38.5/1.5 DSPC, 5:1 wt), i.e. the field-standard starting point this paper sets out to beat",
+  "benchmark_tops_the_screen": false,
+  "declared_optimum": "C-35",
+  "declared_optimum_tops_the_screen": false,
+  "n_ranked_LNPs": 36,
+  "name": "rank of the benchmark and of the declared optimum",
+  "note": "The declared 'optimized formulation' C-35 is NOT the maximum of the screen: C-36 (7548) and B-26 (7485) both exceed it. C-35 was selected as the Library B regression optimum and Library C was the confirmation ladder run around it, so this is a model optimum reported as the optimized formulation, not a selection-into-a-second-screen tautology.",
+  "top5": [
+   [
+    "C-36",
+    7548.0,
+    1
+   ],
+   [
+    "B-26",
+    7485.0,
+    2
+   ],
+   [
+    "C-37",
+    7268.0,
+    3
+   ],
+   [
+    "C-35",
+    7065.0,
+    4
+   ],
+   [
+    "A-02",
+    6445.0,
+    5
+   ]
+  ]
+ }
+}

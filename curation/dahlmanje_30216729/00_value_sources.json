@@ -1,0 +1,76 @@
+{
+  "_what": "THE INTAKE GATE (PIPELINE_V2 Stage 00b). Every panel or table that could supply a value, with the tier it would come from and a sentence a reviewer can check. Written BEFORE any digitiser, and no digitiser was written: the gate concluded that no panel in this paper carries a corpus-admissible endpoint, so there was nothing to extract.",
+
+  "paper": {
+    "pmid": "30216729",
+    "pmcid": "PMC6426696",
+    "doi": "10.1021/acs.nanolett.8b03149",
+    "title_resolved_from_europepmc_core": "Modifying a Commonly Expressed Endocytic Receptor Retargets Nanoparticles in Vivo.",
+    "journal": "Nano Letters",
+    "pub_year": 2018,
+    "first_author": "Cory D Sago",
+    "last_author_pi": "James E Dahlman",
+    "proposed_experiment_id": "CS_2018",
+    "proposed_experiment_id_basis": "Experiment_ID is INITIALS_YEAR of the FIRST author (CLAUDE.md section 3). First author is Sago CD, not Dahlman. The folder name dahlmanje_30216729 names the PI and is NOT the key.",
+    "folder_name_is_the_pi_not_the_key": true
+  },
+
+  "endpoint": {
+    "what_is_measured": "Abundance of an administered single-stranded DNA barcode recovered from FACS-sorted cells, quantified two ways: (i) absolute copies by droplet digital PCR (ddPCR counts), and (ii) relative composition by Illumina deep sequencing ('normalized delivery', %).",
+    "printed_axis_labels": [
+      "Normalized DNA Delivery (%)",
+      "Normalized Nanoparticle Biodistribution (%)",
+      "Nanoparticle Accumulation (Au)",
+      "Absolute Delivery (AU)",
+      "647 MFI (Above Background)",
+      "% Normalized Nanoparticle Uptake (to WT Kupffer Cells)"
+    ],
+    "requires_expression": false,
+    "requires_expression_evidence": "The cargo is a 91-nt chemically modified single-stranded DNA barcode (SI Fig S1a sequence; Methods 'DNA Barcoding'). It encodes no gene, is not transcribed and is not translated. The readout is PCR amplification of that same DNA molecule. Nothing downstream of translation is measured anywhere in the paper.",
+    "corpus_vocabulary_verdict": "NOT DELIVERY. The brief's not-delivery list names particle biodistribution and cellular uptake explicitly; this paper's own title, abstract, figure axes and Discussion all call the quantity biodistribution/accumulation/uptake. The admissible list (luminescence, protein abundance, editing efficiency, knockdown, Cre->tdTomato recombination) requires a readout downstream of translation, and the paper has none."
+  },
+
+  "tiers": [
+    {
+      "tier": "1_publisher_source_data",
+      "available": false,
+      "why_not": "ACS Nano Letters 2018 published no Source Data file. The only supplementary item is nl8b03149_si_001.pdf (19 pages), staged in source/. The NIHMS deposit lists one further item, NIHMS991269-supplement-Supplemental_Figures.pdf, which is the author-manuscript rendering of the same figures and carries no tabular data the ACS SI lacks."
+    },
+    {
+      "tier": "2_si_tables",
+      "available": true,
+      "what_it_supplies": "FORMULATION METADATA ONLY, not values. SI p14 (library 1, 128 LNPs) and SI p15 (library 2, 120 LNPs) are native-text tables giving, per LNP: Lipomer Type, Chol Type, PEG alkyl tail, PEG MW, Helper-lipid type, the four component mole percents, and hydrodynamic diameter in nm. SI p11 is the 156-barcode sequence table. SI p13 is the normalisation worked example.",
+      "contains_no_endpoint": "Correct. Not one cell of any SI table is a delivery measurement. Diameter (nm) is a physical characterisation and is on the brief's not-delivery list.",
+      "used_for": "the 7C1-only finding, the mol%-sums-to-100 check, the 20-200 nm inclusion-criterion reconstruction, and the normalisation residual"
+    },
+    {
+      "tier": "3_author_repo",
+      "available": false,
+      "why_not": "Methods 'Data Access' states verbatim: 'The data, analyses, and scripts used to generate all figures in the paper are available upon request to james.dahlman@bme.gatech.edu.' An explicit accession/repository sweep over the full JATS (165357 chars) and the full SI text (25876 chars) for GSE[0-9]+, SRP, PRJNA, SRX, SRR, SRA, accession, deposit, github, zenodo, dryad, figshare, osf.io returned ZERO hits in both documents. find_repo.py was run twice, once for the first author (Sago) and once for the PI (Dahlman); neither produced a candidate. See 07_qc.json:accession_sweep."
+    },
+    {
+      "tier": "4_pdfplumber_text_table",
+      "available": true,
+      "note": "Same objects as tier 2; pdfplumber find_tables() succeeds natively on SI pages 2, 5, 6, 11, 13, 14, 15, 17 (triage native_tables, ruled_tables n=0). No value table needed re-reading with an explicit horizontal strategy. Again: metadata, not endpoints."
+    },
+    {
+      "tier": "5_pixels",
+      "used": false,
+      "why_tiers_1_to_4_would_have_failed_if_a_value_had_been_wanted": "The per-LNP delivery values exist in this paper ONLY as unlabelled scatter points (Fig 5f; SI Fig S4c, S5f, S6c-e). Each panel plots 111, 115 or 226 points with no per-point label, no ordering key and no legend mapping a point to an LNP number. Digitising them would yield a geometrically valid set of magnitudes that cannot be attributed to any row of the SI formulation tables. That is an ATTRIBUTABILITY failure, not a resolution failure, and no dpi fixes it.",
+      "decision": "No pixel extraction attempted, because the quantity is inadmissible on endpoint grounds before attributability is even reached. Nothing in this folder was digitised; no bar, axis or heatmap helper from curation/lib was called on a value."
+    }
+  ],
+
+  "si_file_provenance": {
+    "path": "source/nl8b03149_si_001.pdf",
+    "sha256": "b08cbc1705ef96417b062eb63aa82f902f52d6cdcca903698f0afaa7e13e3f99",
+    "bytes": 13069079,
+    "pages": 19,
+    "pre_staged": true,
+    "f065_attestation_method": "NOT a file-count or size check, which F-065 showed would pass on 17 figures from other papers. Three in-file content ties, each checkable by reopening the PDF: (1) every page carries the ACS watermark 'Downloaded from pubs.acs.org/nalefd/article-supplement/739037/pdf/nl8b03149_si_001/', and the token nl8b03149 is the ACS manuscript id inside this paper's own DOI 10.1021/acs.nanolett.8b03149; (2) SI page 1 line 2 is the paper's title verbatim, 'Modifying a commonly expressed endocytic receptor retargets nanoparticles in vivo'; (3) the SI's FACS antibody panel (CD31, CD45, CD68, CD11b) is the exact four-clone set named in this paper's Methods 'Cell Isolation & Staining', and SI Fig S1a's 91-nt barcode sequence contains the reverse primer GCTCTCATACGAACTCGTCC which is primer 'D' in the SI's own primer table on p5.",
+    "byte_identity_against_europepmc_zip_not_available": "Europe PMC's supplementaryFiles endpoint returned HTTP 500 for MED/30216729, and its fullTextXML endpoint returned HTTP 500 for PMC6426696, so the sibling trick of sha256-matching the staged file against the file inside Europe PMC's own ZIP could not be performed. Stated as a gap rather than claimed. The JATS was obtained instead via efetch (provenance/tools/pmc_fetch.py), which succeeded.",
+    "no_copy_out_of_the_shared_scratchpad": "Nothing was copied into source/. The only file in source/ is the pre-staged SI, hashed above. The two figure JPEGs that pmc_fetch.py downloaded were left in the session scratchpad and never used for a value."
+  },
+
+  "conclusion": "The gate closes the paper at tier 2. Tiers 1 and 3 do not exist; tiers 2 and 4 exist, are native text, and contain formulation metadata and a normalisation worked example but no delivery endpoint; tier 5 is both inadmissible and unattributable. Zero rows are emittable. 06_rows.csv is header-only."
+}

@@ -1,0 +1,425 @@
+{
+ "_what": "Every check for PMID 30216729 (Sago CD et al., Nano Letters 2018), with numbers. Assembled from the stage artifacts.",
+ "paper": {
+  "pmid": "30216729",
+  "pmcid": "PMC6426696",
+  "doi": "10.1021/acs.nanolett.8b03149",
+  "title_resolved_from_europepmc_core": "Modifying a Commonly Expressed Endocytic Receptor Retargets Nanoparticles in Vivo.",
+  "journal": "Nano Letters",
+  "pub_year": 2018,
+  "first_author": "Cory D Sago",
+  "last_author_pi": "James E Dahlman",
+  "proposed_experiment_id": "CS_2018",
+  "proposed_experiment_id_basis": "Experiment_ID is INITIALS_YEAR of the FIRST author (CLAUDE.md section 3). First author is Sago CD, not Dahlman. The folder name dahlmanje_30216729 names the PI and is NOT the key.",
+  "folder_name_is_the_pi_not_the_key": true
+ },
+ "HEADLINE": {
+  "endpoint": "abundance of the administered DNA barcode, by ddPCR (absolute counts) and Illumina deep sequencing (normalized delivery, %) -- i.e. BIODISTRIBUTION of the cargo, measured without translation",
+  "readout_requires_expression": false,
+  "readout_is_compositional": true,
+  "n_distinct_ionizable_lipids_contributed": 1,
+  "the_ionizable_lipid": [
+   "7C1"
+  ],
+  "n_formulations": 248,
+  "rows_emittable": 0,
+  "why_zero": "the variable in this paper is the mouse genotype (wild-type vs Cav1-/-) and the excipient molar ratios; the ionizable chemistry never changes, and the endpoint is not a delivery endpoint in the corpus's vocabulary"
+ },
+ "C_ionizable_lipid_count": {
+  "library_1_rows": 128,
+  "library_1_rows_expected": 128,
+  "library_2_rows": 120,
+  "library_2_rows_expected": 120,
+  "row_counts_match_paper": true,
+  "distinct_Lipomer_Type_over_all_248_rows": [
+   "7C1"
+  ],
+  "n_distinct": 1,
+  "positive_control_diameter_distinct_values": 66,
+  "positive_control_passes": true,
+  "positive_control_rationale": "a constant column and an unread column look identical in a report; a column known to vary must come back varying",
+  "corroborating_quote_fig4c": "'LNP library 1 was synthesized with the amine 7C1, Cholesterol, DSPC, and PEG compounds at variable molar ratios'",
+  "corroborating_quote_results": "'all 226 LNPs included the 7C1 compound'"
+ },
+ "C_molpct_sums_to_100": {
+  "library_1": "128/128",
+  "library_1_offenders": 0,
+  "library_1_unparsed": 0,
+  "library_2": "120/120",
+  "library_2_offenders": 0,
+  "library_2_unparsed": 0,
+  "total": "248/248",
+  "is_a_tautology": false,
+  "why_not": "not a tautology: all component percents are printed independently in the SI and none is derived here"
+ },
+ "C_inclusion_criterion_superset": {
+  "library_1_in_band_20_200nm": 119,
+  "library_1_paper_states_pooled": 111,
+  "library_1_superset_margin": 8,
+  "library_1_consistent": true,
+  "library_2_in_band_20_200nm": 110,
+  "library_2_paper_states_pooled": 115,
+  "library_2_superset_margin": -5,
+  "library_2_consistent": false,
+  "FINDING": "library 2's superset is SMALLER than the set it should contain, by 5. Recorded in 08_contradictions.csv as OPEN.",
+  "labelled_a_superset_because": "the second criterion -- one inflection point in the autocorrelation curve (SI Fig S4b) -- is not printed per LNP, so the diameter gate can only bound the pooled set from above"
+ },
+ "C_normalisation_reconstruction": {
+  "worked_example_exists": true,
+  "worked_example_locus": "SI p13, Figure S4e, three stacked 3-LNP tables",
+  "stage_A_counts_per_100": {
+   "n_cells": 21,
+   "n_exact": 21,
+   "max_abs_residual": 0.0,
+   "mean_abs_residual_before_rounding": 0.29908
+  },
+  "stage_B_input_normalised": {
+   "n_cells": 18,
+   "n_exact": 18,
+   "max_abs_residual": 0.0,
+   "mean_abs_residual_before_rounding": 0.290724
+  },
+  "residual": 0.0,
+  "residual_statement": "stage A 21/21 cells exact and stage B 18/18 cells exact against the printed integers, max |residual| = 0.0 in both. The pre-rounding mean |discrepancy| is 0.299 and 0.291 percentage points, which is the signature of the authors rounding to whole percent (expected mean 0.25 for uniform rounding) and NOT of a wrong formula -- stated this way rather than quoting 0.0 alone, because 0.0 against rounded integers is a weaker claim than it looks",
+  "is_compositional": true,
+  "compositional_evidence": "Stage A divides each barcode's count by the sum over all barcodes in the same sample; stage B re-closes the input-normalised ratios to 100. The SI prints 'Total (%) = 100' on every column of both stages. A value is therefore a SHARE of a pool, not an amount: it moves when any other pool member moves, and it is not comparable to a value from a pool of different membership.",
+  "formula_in_methods": "Methods 'Barcode Sequencing Normalization', one sentence, verbatim: 'Counts for each particle, per cell type, were normalized to the barcoded LNP mixture applied to cells or injected into the mouse.' The sentence alone does not distinguish stage A from stage B, nor state the re-closure; Fig S4e is what pins both.",
+  "sensitivity_limit_measured": "a seeded +5 percentage-point change to one printed cell moves stage A from 21/21 to 20/21; a seeded removal of the input-normalisation step moves stage B from 18/18 to 1/18. Smaller perturbations than the authors' own rounding (+-0.5 pp) are NOT detectable, and that is the honest limit"
+ },
+ "C_token_pattern_test": {
+  "exact_name_match_7C1_in_corpus": 0,
+  "exact_name_match_PEI600": 0,
+  "naive_substring_7C1_rows": 36,
+  "naive_substring_7C1_structures": 35,
+  "naive_substring_7C1_example_names": [
+   "117C14",
+   "117C18",
+   "A4I18R7C18-2",
+   "A7C10",
+   "A7C11",
+   "B7C10",
+   "B7C11"
+  ],
+  "naive_substring_7_rows": 4005,
+  "naive_substring_C14_rows": 1048,
+  "naive_substring_C14_example_names": [
+   "112C14",
+   "113C14",
+   "114C14",
+   "117C14",
+   "120C14",
+   "200C14"
+  ],
+  "naive_substring_C18_rows": 581,
+  "positive_control": {
+   "token": "DSPC",
+   "expectation": "DSPC is a corpus helper lipid and MUST return many rows",
+   "substring_rows": 7038,
+   "passes": true,
+   "why_this_control": "if the name-column scan were reading nothing -- a wrong column list, an all-NaN cast -- every token would return 0 and the 7C1 zero would be vacuous"
+  },
+  "FINDING": "the 36 rows a substring join on '7C1' returns carry names like 117C14, A7C10, B7C10 -- Anderson-lab lipidoids in which the digits are tail lengths. None is 7C1. And 'C14'/'C18', which are real tokens printed in THIS paper's tables, match 1048 and 581 corpus rows while meaning a PEG ALKYL TAIL here and a lipidoid tail there: the wrong-namespace failure, where token, match and row are all real and the join is still meaningless"
+ },
+ "C_structural_attestation": {
+  "inchikey_positive_control": {
+   "molecule": "(6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl 4-(dimethylamino)butanoate; ACYCLIC ESTER, no ring",
+   "rows": 3098,
+   "names_it_sits_under": [
+    "DLin-MC3-DMA",
+    "Dlin-MC3-DMA"
+   ],
+   "passes": true
+  },
+  "cholesterol_corpus_rows_by_inchikey": 30397,
+  "dspc_corpus_rows_by_inchikey": 7038,
+  "7C1_can_a_single_smiles_be_written": false,
+  "7C1_why_not": "SI p14 draws 7C1 as a GENERIC SCHEME: a C15 epoxide (drawn as R-epoxide with R=C13) reacted with PEI600 in ethanol at 90 C for 72 h. PEI600 is branched, polydisperse polyethylenimine of nominal MW 600, so the product is a distribution over both backbone topology and degree of substitution. No atom-resolved structure is drawn, stated, or derivable, and the paper gives no formula, no HRMS and no NMR for it.",
+  "both_drawn_excipients_already_in_corpus": true
+ },
+ "C_substructure_sweep_SUPERSET": {
+  "label": "SUPERSET -- a chemotype match is not the same molecule",
+  "n_distinct_structures_scanned": 19962,
+  "n_unparseable_skipped": 0,
+  "positive_controls": {
+   "tertiary_aliphatic_amine": {
+    "n_structures": 18472,
+    "premise_molecule": "DLin-MC3-DMA",
+    "premise_verified": true,
+    "passes": true
+   },
+   "sterol_skeleton": {
+    "n_structures": 63,
+    "premise_molecule": "Cholesterol",
+    "premise_verified": true,
+    "passes": true
+   }
+  },
+  "queries": {
+   "aminoalcohol_from_epoxide_ring_opening": 1535,
+   "aminoalcohol_with_long_tail": 988,
+   "polyamine_backbone_3plus_N": 3128
+  },
+  "FINDING_about_the_control_itself": "the first version of the sterol control was a hand-written steroid SMARTS. It returned 6 corpus structures and reported passes=True, while NOT matching the registry's cholesterol at all. A non-zero count made a mis-specified control look sound. Replaced by a pattern derived from the registry cholesterol's own Murcko scaffold with bond orders generified, which the guard now verifies against cholesterol before any count is reported: 63 structures, premise verified. This is F-070 one step further on -- a positive control needs a positive control",
+  "verdict": "Even a non-zero chemotype count would not be an overlap: 7C1 has no atom-resolved structure, so it cannot be shown identical to anything. The loose counts are reported as a superset and claimed as nothing more."
+ },
+ "C_invivo_shared_structures": {
+  "n_structures_shared_across_invivo_experiments": 2,
+  "shared": {
+   "BGNVBNJYBVCBJH-UHFFFAOYSA-N": {
+    "names": [
+     "SM-102"
+    ],
+    "n_sources": 4,
+    "sources": [
+     "SB_2024",
+     "SS_2018",
+     "SY_2025",
+     "XD_2026"
+    ],
+    "rows": 17
+   },
+   "NRLNQCOGCKAESA-KWXKLSQISA-N": {
+    "names": [
+     "DLin-MC3-DMA",
+     "Dlin-MC3-DMA"
+    ],
+    "n_sources": 6,
+    "sources": [
+     "BL_2023",
+     "NG_2025_2",
+     "SB_2024",
+     "XD_2026",
+     "ZC_2023",
+     "ZH_2023"
+    ],
+    "rows": 17
+   }
+  },
+  "this_paper_would_add": 0,
+  "why": "7C1 has no writable structure, so it cannot join this set even in principle, and this paper emits no in-vivo row anyway. It neither adds a third shared in-vivo structure nor raises the source count on either existing one."
+ },
+ "C_drawn_but_never_computed_PEG_repeats": {
+  "n_peg_lipids_drawn": 4,
+  "drawn_repeats": [
+   45,
+   45,
+   45,
+   67
+  ],
+  "nominal_mw": [
+   2000.0,
+   2000.0,
+   2000.0,
+   3000.0
+  ],
+  "residual_repeats": [
+   -0.4,
+   -0.4,
+   -0.4,
+   -1.1
+  ],
+  "all_within_one_repeat": true,
+  "consistency_within_mw_class": true,
+  "ratio_test": {
+   "drawn_ratio": 1.488889,
+   "nominal_ratio": 1.5,
+   "relative_residual_pct": 0.7407,
+   "why_sharper": "the ratio cancels both the methoxy/linker end-group mass and the vendor's rounding of 1982 to '2000', neither of which the absolute test can separate"
+  },
+  "is_a_tautology": false,
+  "why_not": "The repeat subscripts live in the vector drawing on SI p14; the PEG MW column lives in the library table on the same page but is a separate object with its own extraction path. Nothing in this curation derived either from the other, and the paper never prints a PEG molecular weight computed from a repeat count. This is the drawn-but-never-computed class."
+ },
+ "C_drawn_vs_table": {
+  "library_1_drawn_equals_table": true,
+  "library_1_drawn_caption": "Library 1:  128 LNPs (4 PEG-lipids)",
+  "library_1_caption_count_matches": true,
+  "library_1_counts_per_combination": {
+   "C14PEG2000": 32,
+   "C16PEG2000": 32,
+   "C18PEG2000": 32,
+   "C14PEG3000": 32
+  },
+  "library_1_balanced": true,
+  "library_2_counts_per_combination": {
+   "C14PEG2000": 24,
+   "C18PEG2000": 24,
+   "C14PEG3000": 24,
+   "C16PEG2000": 24,
+   "C18PEG3000": 24
+  },
+  "library_2_balanced": true,
+  "library_2_in_table_but_never_drawn": [
+   "C18PEG3000"
+  ]
+ },
+ "C_vector_geometry_posture": {
+  "structure_band_total_drawing_paths": 885,
+  "filled_paths_width_none": 637,
+  "stroke_width_histogram": {
+   "None": 637,
+   "0.25": 248
+  },
+  "bonds_are_filled_polygons": true,
+  "measured": "in the structure band above the library table, 391 filled paths carrying 1598 segments against only 4 stroked paths. So chains.vector_bonds would return approximately zero here without include_filled=True, which is the measured trap the brief names",
+  "no_page_was_rendered": true,
+  "native_dpi_not_measured_because": "nothing was rasterised. No axis.native_tol call, no calibrate call, no bar_top call: there is no value in this paper worth digitising"
+ },
+ "C_anchor_posture": {
+  "n_anchor_rows": 7,
+  "n_with_a_structure": 2,
+  "n_empty_on_purpose": 5,
+  "n_INDEPENDENT_anchors": 0,
+  "why_zero_independent": "the only two structures the paper draws that could be written at all are written from provenance/reagent_registry.py, which is the corpus's own source, so each would compare a value to itself",
+  "ast_guard_reports_this_module_as_independent": false,
+  "template_provenance_clean": true,
+  "guards_made_to_fail_on_purpose": true,
+  "guard_selftest": "python3 -I make_reference.py --selftest, 3/3 cases credited in child processes: a seeded reagent_registry import is reported non-independent, a seeded 40-character literal copied out of the cholesterol string is flagged by the template guard, and a clean control comes back clean on both -- without which the guards would be always-on and certify nothing"
+ },
+ "C_accession_sweep_NULL_RESULT": {
+  "jats_chars_searched": 165357,
+  "si_text_chars_searched": 25876,
+  "patterns": [
+   "GSE[0-9]+",
+   "SRP[0-9]+",
+   "PRJNA[0-9]+",
+   "SRX[0-9]+",
+   "SRR[0-9]+",
+   "\\bSRA\\b",
+   "accession",
+   "deposit",
+   "github",
+   "zenodo",
+   "dryad",
+   "figshare",
+   "osf.io"
+  ],
+  "hits_in_jats": 0,
+  "hits_in_si": 0,
+  "find_repo_first_author_Sago_candidates": 0,
+  "find_repo_pi_Dahlman_candidates": 0,
+  "data_access_statement": "'The data, analyses, and scripts used to generate all figures in the paper are available upon request to james.dahlman@bme.gatech.edu.'",
+  "verdict": "EXPLICIT NULL RESULT. No deposit, no accession, no repository. Tier 3 of the intake gate does not exist for this paper."
+ },
+ "C_value_inventory": {
+  "n_panels_inventoried": 44,
+  "n_corpus_admissible_yes": 0,
+  "n_corpus_admissible_no": 44,
+  "counts_sum": true,
+  "n_values_design_supported_total": 4242,
+  "n_values_attributable_total": 398,
+  "n_values_attributable_that_are_a_delivery_endpoint": 0,
+  "rows_emitted": 0,
+  "corpus_header_columns": 79,
+  "corpus_header_identical_vitro_vivo": true
+ },
+ "C_seeded_mutations": {
+  "n_seeds": 10,
+  "n_credited": 10,
+  "all_credited": true,
+  "curation_folder_artifacts_untouched": true,
+  "per_seed": [
+   {
+    "seed": "molpct_perturbed",
+    "metric": "molpct_lib1_ok",
+    "clean": 128.0,
+    "seeded": 127.0,
+    "credited": true
+   },
+   {
+    "seed": "molpct_unparseable",
+    "metric": "molpct_lib1_unparsed",
+    "clean": 0.0,
+    "seeded": 1.0,
+    "credited": true
+   },
+   {
+    "seed": "lipomer_type_overwritten",
+    "metric": "n_distinct_ionizable",
+    "clean": 1.0,
+    "seeded": 2.0,
+    "credited": true
+   },
+   {
+    "seed": "diameter_column_blanked",
+    "metric": "diam_positive_control",
+    "clean": 1.0,
+    "seeded": 0.0,
+    "credited": true
+   },
+   {
+    "seed": "printed_pct_perturbed",
+    "metric": "normA_exact",
+    "clean": 21.0,
+    "seeded": 20.0,
+    "credited": true
+   },
+   {
+    "seed": "printed_total_inconsistent",
+    "metric": "normA_total_guard_raises",
+    "clean": 0.0,
+    "seeded": 1.0,
+    "credited": true
+   },
+   {
+    "seed": "stage_B_skips_input_normalisation",
+    "metric": "normB_exact",
+    "clean": 18.0,
+    "seeded": 1.0,
+    "credited": true
+   },
+   {
+    "seed": "peg_repeat_shifted",
+    "metric": "peg_all_within_one",
+    "clean": 1.0,
+    "seeded": 0.0,
+    "credited": true
+   },
+   {
+    "seed": "peg_repeat_mw_classes_merged",
+    "metric": "peg_ratio_residual_pct",
+    "clean": 0.7407,
+    "seeded": 33.3333,
+    "credited": true
+   },
+   {
+    "seed": "drawn_peg_label_dropped",
+    "metric": "peg_n_drawn",
+    "clean": 4.0,
+    "seeded": 3.0,
+    "credited": true
+   }
+  ],
+  "a_seed_that_only_raises_is_not_credited": "the first version of the stage-A seed inflated a RAW count, which trips check_normalisation's printed-total guard and raises before the metric is reached. The harness reported it NOT CREDITED for having no metric line. The guard was left alone and the seed was retargeted to a printed percentage, and the guard was then credited by a seed of its own -- widening the gate instead would have been the documented wrong move"
+ },
+ "C_contradictions": {
+  "n_recorded": 7,
+  "n_open": 4,
+  "n_retired": 3,
+  "statuses": {
+   "Library 2 pooled-LNP count: the paper states 115 of 120 LNPs were stab": "OPEN",
+   "Methods describe an in vivo gene-editing experiment that the paper doe": "RETIRED_AS_BOILERPLATE",
+   "Methods describe an ICAM2 protein-abundance readout, which WOULD be co": "OPEN",
+   "Number of cell types in the fluorescence biodistribution panel: text s": "OPEN",
+   "The normalisation is specified in one sentence in Methods but is a two": "RETIRED_BY_RECONSTRUCTION",
+   "Figure 1 caption describes a panel (g) that the Results never referenc": "RETIRED_AS_COSMETIC",
+   "Library 2 uses a PEG-lipid that the paper never draws.": "OPEN"
+  }
+ },
+ "C_f065_source_integrity": {
+  "files_in_source": [
+   "nl8b03149_si_001.pdf"
+  ],
+  "sha256": "b08cbc1705ef96417b062eb63aa82f902f52d6cdcca903698f0afaa7e13e3f99",
+  "nothing_copied_out_of_the_shared_scratchpad": true,
+  "attestation": "NOT a file-count or size check, which F-065 showed would pass on 17 figures from other papers. Three in-file content ties, each checkable by reopening the PDF: (1) every page carries the ACS watermark 'Downloaded from pubs.acs.org/nalefd/article-supplement/739037/pdf/nl8b03149_si_001/', and the token nl8b03149 is the ACS manuscript id inside this paper's own DOI 10.1021/acs.nanolett.8b03149; (2) SI page 1 line 2 is the paper's title verbatim, 'Modifying a commonly expressed endocytic receptor retargets nanoparticles in vivo'; (3) the SI's FACS antibody panel (CD31, CD45, CD68, CD11b) is the exact four-clone set named in this paper's Methods 'Cell Isolation & Staining', and SI Fig S1a's 91-nt barcode sequence contains the reverse primer GCTCTCATACGAACTCGTCC which is primer 'D' in the SI's own primer table on p5.",
+  "gap": "Europe PMC's supplementaryFiles endpoint returned HTTP 500 for MED/30216729, and its fullTextXML endpoint returned HTTP 500 for PMC6426696, so the sibling trick of sha256-matching the staged file against the file inside Europe PMC's own ZIP could not be performed. Stated as a gap rather than claimed. The JATS was obtained instead via efetch (provenance/tools/pmc_fetch.py), which succeeded."
+ },
+ "LICENCE": {
+  "article_permissions_string_from_europepmc_pmc_record": "'This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.'",
+  "europepmc_core_isOpenAccess": "N",
+  "europepmc_core_license": null,
+  "is_cc0_or_cc_by": false,
+  "verdict": "NOT CC. This is an NIH author manuscript (NIHMS991269) deposited in PMC under the public-access policy; the publisher of record is ACS (Nano Letters), subscription. Fails the CLAUDE.md section 8 CC0/CC-BY-compatible requirement for corpus release. Moot here, since zero rows are emitted.",
+  "repo_licence": "no repository exists -- see C_accession_sweep_NULL_RESULT"
+ }
+}

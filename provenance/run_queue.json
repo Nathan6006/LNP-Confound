@@ -945,12 +945,16 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "226 LNPs, receptor-retargeting study.",
-   "stage": "00_acquired",
-   "status": "ready_to_extract",
+   "stage": "07_emitted",
+   "status": "extracted_zero_admissible",
    "blockers": [],
    "n_files": 1,
    "pmcid": "PMC6426696",
-   "value_reach": "C_pmc_fulltext"
+   "value_reach": "C_pmc_fulltext",
+   "agent_task_id": "a7037b3632bb4ae1d",
+   "rows_emitted": 0,
+   "structures_enumerated": 1,
+   "proposed_experiment_id": "CS_2018"
   },
   {
    "rank": 38,
@@ -1312,12 +1316,13 @@
    "measures": "expression",
    "lib_src": null,
    "note": "Kauffman et al. 2015: formulation optimisation by fractional factorial / definitive screening design. Anderson lab, pre-cutoff, uncurated. Formulation space, not IL space.",
-   "stage": "00_acquired",
-   "status": "ready_to_extract",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [],
    "n_files": 1,
    "pmcid": null,
-   "value_reach": "D_si_only"
+   "value_reach": "D_si_only",
+   "agent_task_id": "ac80af48b958294dd"
   },
   {
    "rank": 51,
@@ -1382,7 +1387,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T18:20:19Z",
+ "updated_utc": "2026-11-10T18:51:05Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

@@ -1,0 +1,597 @@
+{
+ "si_pages_read": {
+  "library_1": 14,
+  "library_2": 15,
+  "normalisation_worked_example": 13
+ },
+ "extraction_tier": "2_si_tables / 4_pdfplumber_text_table (native text, no pixels)",
+ "ionizable_lipid_count": {
+  "library_1_rows": 128,
+  "library_2_rows": 120,
+  "library_1_rows_expected": 128,
+  "library_2_rows_expected": 120,
+  "row_counts_match_paper": true,
+  "library_1_distinct_lipomer_type": [
+   "7C1"
+  ],
+  "library_2_distinct_lipomer_type": [
+   "7C1"
+  ],
+  "distinct_ionizable_lipids_in_paper": [
+   "7C1"
+  ],
+  "n_distinct_ionizable_lipids": 1,
+  "positive_control_diameter_distinct_values": 66,
+  "positive_control_diameter_varies": true,
+  "positive_control_chol_type_constant": [
+   "Chol"
+  ],
+  "helper_lipid_types_library_1": [
+   "DSPC"
+  ],
+  "peg_tails_library_1": [
+   "C14PEG",
+   "C16PEG",
+   "C18PEG"
+  ],
+  "peg_tails_library_2": [
+   "C14",
+   "C16",
+   "C18"
+  ],
+  "peg_mw_library_1": [
+   "2000",
+   "3000"
+  ],
+  "peg_mw_library_2": [
+   "2000",
+   "3000"
+  ],
+  "interpretation": "Every one of the 248 table rows carries Lipomer Type '7C1'. The variables are the four component mole percents, the PEG alkyl tail, the PEG molecular weight, the presence of DSPC, and the mouse genotype. The ionizable component never changes."
+ },
+ "molpct_sums_to_100": {
+  "library_1": {
+   "n_rows": 128,
+   "summed_to_100": 128,
+   "offenders": [],
+   "n_offenders": 0,
+   "unparsed": [],
+   "n_unparsed": 0,
+   "columns_summed": [
+    "Lipomer %",
+    "Chol %",
+    "PEG %",
+    "HL %"
+   ],
+   "tautology_check": "not a tautology: all component percents are printed independently in the SI and none is derived here"
+  },
+  "library_2": {
+   "n_rows": 120,
+   "summed_to_100": 120,
+   "offenders": [],
+   "n_offenders": 0,
+   "unparsed": [],
+   "n_unparsed": 0,
+   "columns_summed": [
+    "Lipomer Mole %",
+    "Chol Mole %",
+    "PEG Mole %"
+   ],
+   "tautology_check": "not a tautology: all component percents are printed independently in the SI and none is derived here"
+  }
+ },
+ "inclusion_criterion": {
+  "library_1": {
+   "n_rows": 128,
+   "n_within_20_200nm": 119,
+   "n_outside": 9,
+   "outside": [
+    {
+     "row": "6",
+     "diameter_nm": 16.0
+    },
+    {
+     "row": "8",
+     "diameter_nm": 15.2
+    },
+    {
+     "row": "53",
+     "diameter_nm": 288.0
+    },
+    {
+     "row": "54",
+     "diameter_nm": 15.0
+    },
+    {
+     "row": "65",
+     "diameter_nm": 13.0
+    },
+    {
+     "row": "67",
+     "diameter_nm": 720.0
+    },
+    {
+     "row": "68",
+     "diameter_nm": 287.0
+    },
+    {
+     "row": "76",
+     "diameter_nm": 16.0
+    },
+    {
+     "row": "82",
+     "diameter_nm": 287.0
+    }
+   ],
+   "n_unparsed_diameter": 0,
+   "paper_states_pooled": 111,
+   "diameter_gate_minus_stated": 8,
+   "is_a_superset_not_an_equality": true,
+   "why": "the second criterion -- one inflection point in the autocorrelation curve (SI Fig S4b) -- is not printed per LNP, so the diameter gate can only bound the pooled set from above"
+  },
+  "library_2": {
+   "n_rows": 120,
+   "n_within_20_200nm": 110,
+   "n_outside": 9,
+   "outside": [
+    {
+     "row": "3",
+     "diameter_nm": 290.0
+    },
+    {
+     "row": "68",
+     "diameter_nm": 17.0
+    },
+    {
+     "row": "11",
+     "diameter_nm": 12.5
+    },
+    {
+     "row": "23",
+     "diameter_nm": 15.0
+    },
+    {
+     "row": "29",
+     "diameter_nm": 264.0
+    },
+    {
+     "row": "92",
+     "diameter_nm": 297.0
+    },
+    {
+     "row": "37",
+     "diameter_nm": 270.0
+    },
+    {
+     "row": "103",
+     "diameter_nm": 545.0
+    },
+    {
+     "row": "50",
+     "diameter_nm": 16.0
+    }
+   ],
+   "n_unparsed_diameter": 1,
+   "paper_states_pooled": 115,
+   "diameter_gate_minus_stated": -5,
+   "is_a_superset_not_an_equality": true,
+   "why": "the second criterion -- one inflection point in the autocorrelation curve (SI Fig S4b) -- is not printed per LNP, so the diameter gate can only bound the pooled set from above"
+  }
+ },
+ "normalisation_reconstruction": {
+  "stage_A_counts_per_100": [
+   {
+    "lnp": "1",
+    "organ": "lung",
+    "mouse": 1,
+    "raw": 100.0,
+    "column_total": 270.0,
+    "calculated_pct": 37.037037,
+    "printed_pct": 37.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "lung",
+    "mouse": 1,
+    "raw": 50.0,
+    "column_total": 270.0,
+    "calculated_pct": 18.518519,
+    "printed_pct": 19.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "lung",
+    "mouse": 1,
+    "raw": 120.0,
+    "column_total": 270.0,
+    "calculated_pct": 44.444444,
+    "printed_pct": 44.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "lung",
+    "mouse": 2,
+    "raw": 80.0,
+    "column_total": 230.0,
+    "calculated_pct": 34.782609,
+    "printed_pct": 35.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "lung",
+    "mouse": 2,
+    "raw": 45.0,
+    "column_total": 230.0,
+    "calculated_pct": 19.565217,
+    "printed_pct": 20.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "lung",
+    "mouse": 2,
+    "raw": 105.0,
+    "column_total": 230.0,
+    "calculated_pct": 45.652174,
+    "printed_pct": 46.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "lung",
+    "mouse": 3,
+    "raw": 200.0,
+    "column_total": 560.0,
+    "calculated_pct": 35.714286,
+    "printed_pct": 36.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "lung",
+    "mouse": 3,
+    "raw": 110.0,
+    "column_total": 560.0,
+    "calculated_pct": 19.642857,
+    "printed_pct": 20.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "lung",
+    "mouse": 3,
+    "raw": 250.0,
+    "column_total": 560.0,
+    "calculated_pct": 44.642857,
+    "printed_pct": 45.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "kidney",
+    "mouse": 1,
+    "raw": 300.0,
+    "column_total": 550.0,
+    "calculated_pct": 54.545455,
+    "printed_pct": 55.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "kidney",
+    "mouse": 1,
+    "raw": 100.0,
+    "column_total": 550.0,
+    "calculated_pct": 18.181818,
+    "printed_pct": 18.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "kidney",
+    "mouse": 1,
+    "raw": 150.0,
+    "column_total": 550.0,
+    "calculated_pct": 27.272727,
+    "printed_pct": 27.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "kidney",
+    "mouse": 2,
+    "raw": 200.0,
+    "column_total": 350.0,
+    "calculated_pct": 57.142857,
+    "printed_pct": 57.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "kidney",
+    "mouse": 2,
+    "raw": 60.0,
+    "column_total": 350.0,
+    "calculated_pct": 17.142857,
+    "printed_pct": 17.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "kidney",
+    "mouse": 2,
+    "raw": 90.0,
+    "column_total": 350.0,
+    "calculated_pct": 25.714286,
+    "printed_pct": 26.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "kidney",
+    "mouse": 3,
+    "raw": 250.0,
+    "column_total": 430.0,
+    "calculated_pct": 58.139535,
+    "printed_pct": 58.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "kidney",
+    "mouse": 3,
+    "raw": 70.0,
+    "column_total": 430.0,
+    "calculated_pct": 16.27907,
+    "printed_pct": 16.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "kidney",
+    "mouse": 3,
+    "raw": 110.0,
+    "column_total": 430.0,
+    "calculated_pct": 25.581395,
+    "printed_pct": 26.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "input",
+    "mouse": null,
+    "raw": 100.0,
+    "column_total": 330.0,
+    "calculated_pct": 30.30303,
+    "printed_pct": 30.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "input",
+    "mouse": null,
+    "raw": 120.0,
+    "column_total": 330.0,
+    "calculated_pct": 36.363636,
+    "printed_pct": 36.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "input",
+    "mouse": null,
+    "raw": 110.0,
+    "column_total": 330.0,
+    "calculated_pct": 33.333333,
+    "printed_pct": 33.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   }
+  ],
+  "stage_B_input_normalised": [
+   {
+    "lnp": "1",
+    "organ": "lung",
+    "mouse": 1,
+    "calculated_pct": 39.879154,
+    "printed_pct": 40.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "lung",
+    "mouse": 1,
+    "calculated_pct": 16.616314,
+    "printed_pct": 17.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "lung",
+    "mouse": 1,
+    "calculated_pct": 43.504532,
+    "printed_pct": 44.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "lung",
+    "mouse": 2,
+    "calculated_pct": 37.566702,
+    "printed_pct": 38.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "lung",
+    "mouse": 2,
+    "calculated_pct": 17.609392,
+    "printed_pct": 18.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "lung",
+    "mouse": 2,
+    "calculated_pct": 44.823906,
+    "printed_pct": 45.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "lung",
+    "mouse": 3,
+    "calculated_pct": 38.540146,
+    "printed_pct": 39.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "lung",
+    "mouse": 3,
+    "calculated_pct": 17.664234,
+    "printed_pct": 18.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "lung",
+    "mouse": 3,
+    "calculated_pct": 43.79562,
+    "printed_pct": 44.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "kidney",
+    "mouse": 1,
+    "calculated_pct": 57.725948,
+    "printed_pct": 58.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "kidney",
+    "mouse": 1,
+    "calculated_pct": 16.034985,
+    "printed_pct": 16.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "kidney",
+    "mouse": 1,
+    "calculated_pct": 26.239067,
+    "printed_pct": 26.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "kidney",
+    "mouse": 2,
+    "calculated_pct": 60.273973,
+    "printed_pct": 60.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "kidney",
+    "mouse": 2,
+    "calculated_pct": 15.068493,
+    "printed_pct": 15.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "kidney",
+    "mouse": 2,
+    "calculated_pct": 24.657534,
+    "printed_pct": 25.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "1",
+    "organ": "kidney",
+    "mouse": 3,
+    "calculated_pct": 61.22449,
+    "printed_pct": 61.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "2",
+    "organ": "kidney",
+    "mouse": 3,
+    "calculated_pct": 14.285714,
+    "printed_pct": 14.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   },
+   {
+    "lnp": "3",
+    "organ": "kidney",
+    "mouse": 3,
+    "calculated_pct": 24.489796,
+    "printed_pct": 24.0,
+    "residual_after_rounding_to_int": 0.0,
+    "exact": true
+   }
+  ],
+  "stage_A_counts_per_100_summary": {
+   "n_cells": 21,
+   "n_exact": 21,
+   "max_abs_residual": 0.0,
+   "mean_abs_residual_before_rounding": 0.29908
+  },
+  "stage_B_input_normalised_summary": {
+   "n_cells": 18,
+   "n_exact": 18,
+   "max_abs_residual": 0.0,
+   "mean_abs_residual_before_rounding": 0.290724
+  },
+  "is_compositional": true,
+  "compositional_evidence": "Stage A divides each barcode's count by the sum over all barcodes in the same sample; stage B re-closes the input-normalised ratios to 100. The SI prints 'Total (%) = 100' on every column of both stages. A value is therefore a SHARE of a pool, not an amount: it moves when any other pool member moves, and it is not comparable to a value from a pool of different membership.",
+  "worked_example_exists": true,
+  "worked_example_locus": "SI p13, Figure S4e, three stacked 3-LNP tables",
+  "formula_in_methods": "Methods 'Barcode Sequencing Normalization', one sentence, verbatim: 'Counts for each particle, per cell type, were normalized to the barcoded LNP mixture applied to cells or injected into the mouse.' The sentence alone does not distinguish stage A from stage B, nor state the re-closure; Fig S4e is what pins both."
+ }
+}

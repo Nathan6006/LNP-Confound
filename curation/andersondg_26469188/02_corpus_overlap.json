@@ -1,0 +1,658 @@
+{
+ "C12_200_in_corpus": {
+  "SMILES": "CCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC",
+  "by_pool_experiment": {
+   "vitro/AC_2025/C12-200": 498,
+   "vitro/JW_2024/other": 20
+  },
+  "exact_mass": 1136.1246,
+  "formula": "C70H145N5O5",
+  "guarded_lookup": "resolved (unambiguous in the corpus)",
+  "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+  "inchikey_join_rows": 518,
+  "n_nitrogen": 5,
+  "name_join_rows": 498,
+  "names_under_this_structure": [
+   "C12-200",
+   "other"
+  ],
+  "same_shape_as_positive_control": "yes -- 20 extra rows recovered under the name 'other' in JW_2024, exactly as cKK-E12 hides 19 there",
+  "vitro_rows": 518,
+  "vivo_rows": 0
+ },
+ "F061_known_conflict": {
+  "AC_2025_C12_200": {
+   "formula": "C70H145N5O5",
+   "n_nitrogen": 5,
+   "rows": 498
+  },
+  "KL_2010_200C_series": {
+   "formulas": [
+    "C20H43N3O",
+    "C22H47N3O",
+    "C24H51N3O",
+    "C26H55N3O"
+   ],
+   "has_pentaamine_core": [
+    false
+   ],
+   "n_nitrogen": [
+    3
+   ],
+   "names": [
+    "200C10",
+    "200C12",
+    "200C14",
+    "200C8"
+   ],
+   "rows": 4
+  },
+  "status": "REPORTED, NOT REPAIRED. data/ is untouched.",
+  "what_the_corpus_itself_says": "Two independent experiments agree the '200' core is a 5-nitrogen pentaamine bearing 5 arms: AC_2025's C12-200 (C70H145N5O5, 498 rows) and KW_2014's A200_C10..C14 acrylate series. KL_2010's 4 rows are the lone dissent at 3 N and 1 arm. That is corroboration of the majority form but it is NOT this paper's evidence, and the AC_2025 precedent is exactly why nothing is repaired here.",
+  "which_form_does_THIS_paper_support": "NEITHER, by its own evidence. Kauffman 2015 cites C12-200 by name only: the SI contains no structure drawing, no molecular formula, no HRMS, no molecular weight and no synthesis. The main text is closed-access and not held. The weight ratio and the molar percentages are independent recipe parameters, so no molecular mass is derivable from them either. This paper therefore CANNOT adjudicate F-061 and is not evidence on either side."
+ },
+ "_what": "KK_2015 overlap against the live corpus. Read-only.",
+ "corpus_shape": {
+  "total_experiment_IDs": 54,
+  "vitro_experiments": 43,
+  "vitro_rows": 29195,
+  "vivo_experiments": 20,
+  "vivo_rows": 1803
+ },
+ "experiment_id": {
+  "all_existing_IDs": [
+   "AA_2008",
+   "AC_2025",
+   "AP_2025",
+   "BL_2023",
+   "BL_2023_3CR",
+   "BL_2024",
+   "FG_2026",
+   "JC_2023",
+   "JL_2024",
+   "JM_2016",
+   "JW_2024",
+   "KL_2010",
+   "KS_2024",
+   "KW_2014",
+   "KZ_2016",
+   "LL_2012",
+   "LL_2025",
+   "LL_2026",
+   "LL_2026_2",
+   "LM_2019",
+   "LR_2023",
+   "LX_2024",
+   "LX_2024_2",
+   "LX_2024_3",
+   "LZ_2025",
+   "MO_2026",
+   "NC_2024",
+   "NG_2025",
+   "NG_2025_2",
+   "QL_2026",
+   "RG_2023",
+   "SB_2024",
+   "SL_2020",
+   "SL_2021",
+   "SP_2020",
+   "SS_2018",
+   "SW_2024",
+   "SX_2025",
+   "SY_2025",
+   "WT_2026",
+   "XD_2026",
+   "XH_2024",
+   "XH_2024_2",
+   "XH_2025",
+   "YR_2024",
+   "YX_2024",
+   "YX_2026",
+   "YX_2026_SDL",
+   "YY_2023",
+   "YZ_2022",
+   "YZ_2024",
+   "ZC_2023",
+   "ZH_2023",
+   "ZT_2026"
+  ],
+  "checked_by_PMID_not_year_token": true,
+  "collides_with_existing_ID": false,
+  "derivation": "FIRST author Kauffman, Kevin J. + 2015. The folder is named andersondg_26469188 after the PI, which is not the corpus key.",
+  "n_existing_IDs": 54,
+  "nearest_tokens_examined": {
+   "KL_2010": [
+    "20080679"
+   ],
+   "KS_2024": [
+    "38969646"
+   ],
+   "KW_2014": [
+    "24969323"
+   ],
+   "KZ_2016": [
+    "26729861"
+   ]
+  },
+  "pmid_26469188_already_in_corpus": false,
+  "proposed": "KK_2015"
+ },
+ "helper_lipids_in_corpus": {
+  "note": "DSPE has 0 corpus rows. It is also never measured in this paper: all 3 DSPE designs (A-07, A-12, A-14) failed to formulate.",
+  "per_helper": {
+   "DOPC": {
+    "corpus_SMILES": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+    "corpus_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+    "corpus_rows": 81,
+    "formula": "C44H84NO8P",
+    "n_distinct_corpus_SMILES": 1
+   },
+   "DOPE": {
+    "corpus_SMILES": "CCCCCCCC/C=C\\CCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[NH3+])OC(=O)CCCCCCC/C=C\\CCCCCCCC",
+    "corpus_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+    "corpus_rows": 17737,
+    "formula": "C41H78NO8P",
+    "n_distinct_corpus_SMILES": 1
+   },
+   "DSPC": {
+    "corpus_SMILES": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+    "corpus_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "corpus_rows": 7038,
+    "formula": "C44H88NO8P",
+    "n_distinct_corpus_SMILES": 1
+   },
+   "DSPE": {
+    "corpus_rows": 0,
+    "n_distinct_corpus_SMILES": 0
+   }
+  }
+ },
+ "in_vivo_shared_structures": {
+  "C12_200_currently_in_how_many_in_vivo_experiments": 0,
+  "detail": {
+   "BGNVBNJYBVCBJH-UHFFFAOYSA-N": {
+    "experiments": [
+     "SB_2024",
+     "SS_2018",
+     "SY_2025",
+     "XD_2026"
+    ],
+    "names": [
+     "SM-102"
+    ]
+   },
+   "NRLNQCOGCKAESA-KWXKLSQISA-N": {
+    "experiments": [
+     "BL_2023",
+     "NG_2025_2",
+     "SB_2024",
+     "XD_2026",
+     "ZC_2023",
+     "ZH_2023"
+    ],
+    "names": [
+     "DLin-MC3-DMA",
+     "Dlin-MC3-DMA"
+    ]
+   }
+  },
+  "n_structures_shared_across_in_vivo_experiments": 2,
+  "why": "C12-200 appears in 0 in-vivo experiments today (518 rows, all in vitro, AC_2025 + JW_2024). Adding ONE in-vivo experiment takes it from 0 to 1, and a structure needs >=2 in-vivo experiments to be shared. So KK_2015 would create the FIRST in-vivo C12-200 rows and still leave the in-vivo shared set at exactly DLin-MC3-DMA and SM-102. It does however create a vitro<->vivo bridge for a 518-row structure, which is a different and smaller thing.",
+  "would_KK_2015_add_an_in_vivo_SHARED_lipid": false
+ },
+ "inchikey_machinery": {
+  "unique_IL_SMILES": 19919,
+  "unparseable": 0
+ },
+ "positive_control_1_cKK_E12": {
+  "PASSES": true,
+  "by_experiment": {
+   "vitro/AC_2025/CKK-E12": 216,
+   "vitro/JW_2024/other": 19,
+   "vivo/BL_2023/MD-1": 6
+  },
+  "expected_216_name_241_inchikey": true,
+  "inchikey_join_rows": 241,
+  "name_join_rows": 216,
+  "names_recovered": [
+   "CKK-E12",
+   "MD-1",
+   "other"
+  ],
+  "why": "F-070. A structure can sit under several names; this one is documented as CKK-E12 / other / MD-1. If the InChIKey join cannot reproduce that, the join is broken and a zero means nothing."
+ },
+ "positive_control_2_MC3": {
+  "PASSES": true,
+  "name_substring_rows": 3101,
+  "spellings": [
+   "DLin-MC3-DMA",
+   "Dlin-MC3-DMA"
+  ]
+ },
+ "substructure_sweep": {
+  "LABEL": "SUPERSET. The loose and strict tiers are chemotype supersets, not identity. Only the exact tier is identity.",
+  "experiments_at_strict_tier": [
+   "AC_2025",
+   "JW_2024"
+  ],
+  "positive_control": "C12-200 itself matches at the loose, strict and exact tiers. Asserted in code; the sweep raises if it does not.",
+  "tier_exact": {
+   "means": "full InChIKey identity with C12-200",
+   "rows": 518,
+   "structures": 1
+  },
+  "tier_loose": {
+   "means": "any amine bearing a 2-hydroxyalkyl arm, i.e. the epoxide-ring-opening chemotype",
+   "of_total_structures": 19919,
+   "rows": 2386,
+   "smarts": "[#7]-[CH2]-[CH1](-[OX2H1])",
+   "structures": 1535
+  },
+  "tier_strict": {
+   "means": "the amine-200 pentaamine core AND a hydroxyalkyl arm",
+   "rows": 518,
+   "smarts": "[#7](CCN1CCN(CC[#7])CC1)CC[#7]",
+   "structures": 1
+  }
+ },
+ "token_pattern_test": {
+  "contiguity_note": "F-055: the amine catalogue is sparse and non-contiguous, so a contiguous 1..N name would mean LOCAL indices. '200' is a catalogue index, not a local one.",
+  "is_the_numbering_contiguous": false,
+  "naive_substring_damage": {
+   "distinct_names": 24,
+   "distinct_structures": 24,
+   "query": "IL_name contains '200'",
+   "rows_returned": 526,
+   "verdict": "a naive substring join on '200' returns 526 rows spanning 24 names and 24 distinct structures with at least three incompatible chemotypes. Never used; the join here is on InChIKey."
+  },
+  "pattern": "C<tail length>-<amine catalogue index>. 'C12' is the tail (a 2-hydroxydodecyl arm from 1,2-epoxydodecane); '200' is the index of the polyamine core in this lab's amine catalogue.",
+  "per_name": {
+   "200C10": {
+    "experiments": [
+     "KL_2010"
+    ],
+    "formulas": [
+     "C22H47N3O"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     3
+    ],
+    "rows": 1
+   },
+   "200C12": {
+    "experiments": [
+     "KL_2010"
+    ],
+    "formulas": [
+     "C24H51N3O"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     3
+    ],
+    "rows": 1
+   },
+   "200C14": {
+    "experiments": [
+     "KL_2010"
+    ],
+    "formulas": [
+     "C26H55N3O"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     3
+    ],
+    "rows": 1
+   },
+   "200C8": {
+    "experiments": [
+     "KL_2010"
+    ],
+    "formulas": [
+     "C20H43N3O"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     3
+    ],
+    "rows": 1
+   },
+   "A200_C10": {
+    "experiments": [
+     "KW_2014"
+    ],
+    "formulas": [
+     "C75H145N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     true
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 2
+   },
+   "A200_C11": {
+    "experiments": [
+     "KW_2014"
+    ],
+    "formulas": [
+     "C80H155N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     true
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 2
+   },
+   "A200_C12": {
+    "experiments": [
+     "KW_2014"
+    ],
+    "formulas": [
+     "C85H165N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     true
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 2
+   },
+   "A200_C13": {
+    "experiments": [
+     "KW_2014"
+    ],
+    "formulas": [
+     "C90H175N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     true
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 2
+   },
+   "A200_C14": {
+    "experiments": [
+     "KW_2014"
+    ],
+    "formulas": [
+     "C95H185N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     true
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 2
+   },
+   "A200_O1,1,8": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C74H143N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O10": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C74H143N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O11": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C79H153N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O12": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C84H163N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O13": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C89H173N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O14": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C94H183N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O4,8": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C84H163N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O6,10": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C104H203N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_O8,12": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C124H243N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_Oi10": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C74H143N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_X3": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C79H143N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_X5": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C74H123N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "A200_X7": {
+    "experiments": [
+     "NC_2024"
+    ],
+    "formulas": [
+     "C114H203N5O10"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 1
+   },
+   "C12-200": {
+    "experiments": [
+     "AC_2025"
+    ],
+    "formulas": [
+     "C70H145N5O5"
+    ],
+    "has_amine200_pentaamine_core": [
+     true
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     5
+    ],
+    "rows": 498
+   },
+   "Lipid-200": {
+    "experiments": [
+     "SX_2025"
+    ],
+    "formulas": [
+     "C62H116N2O11"
+    ],
+    "has_amine200_pentaamine_core": [
+     false
+    ],
+    "n_distinct_structures": 1,
+    "n_nitrogen": [
+     2
+    ],
+    "rows": 1
+   }
+  },
+  "the_name": "C12-200",
+  "which_token_is_which_PROVEN_BY": "structural attestation, not a substring guess: in KW_2014 the A200_* series holds '200' FIXED while the tail token runs C10..C14, and all five of those structures contain the same 5-nitrogen pentaamine core; the carbon count is what changes. So '200' names the core and the C-number names the tail. KK_2015 writes the two tokens in the OPPOSITE order from KL_2010's '200C12'."
+ }
+}

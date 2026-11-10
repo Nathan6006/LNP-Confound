@@ -1,0 +1,12 @@
+{
+ "n_panels_inventoried": 44,
+ "n_corpus_admissible_yes": 0,
+ "n_corpus_admissible_no": 44,
+ "counts_sum": true,
+ "n_values_design_supported_total": 4242,
+ "n_values_attributable_total": 398,
+ "n_values_attributable_that_are_a_delivery_endpoint": 0,
+ "rows_emitted": 0,
+ "corpus_header_columns": 79,
+ "corpus_header_identical_vitro_vivo": true
+}

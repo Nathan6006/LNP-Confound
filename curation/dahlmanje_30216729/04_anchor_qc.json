@@ -1,0 +1,37 @@
+{
+ "_what": "C10 anchor posture for PMID 30216729, recorded by hand because provenance/structure_check.py and check_anchor_independence.py are out of scope for this task.",
+ "n_anchor_rows": 7,
+ "n_with_a_structure": 2,
+ "n_empty_on_purpose": 5,
+ "n_INDEPENDENT_anchors": 0,
+ "why_zero_independent": "the only two structures the paper draws that could be written at all are written from provenance/reagent_registry.py, which is the corpus's own source, so each would compare a value to itself",
+ "ast_provenance_of_this_module": {
+  "module": "make_reference.py",
+  "imports_detected": [
+   "ast",
+   "csv",
+   "json",
+   "os",
+   "reagent_registry",
+   "shutil",
+   "subprocess",
+   "sys",
+   "tempfile"
+  ],
+  "non_independent_imports": [
+   "reagent_registry"
+  ],
+  "non_independent_calls": [
+   "REGISTRY"
+  ],
+  "is_independent_of_project_structure_stores": false,
+  "nodes_inspected": "Import, ImportFrom, Call, Attribute only -- never string literals, so the ban list cannot match itself"
+ },
+ "template_provenance_of_this_module": {
+  "n_literals_checked": 32,
+  "violations": [],
+  "n_violations": 0,
+  "clean": true
+ },
+ "c10_would_report": "nothing, because no enumerated structure exists to compare an anchor against: this paper contributes one ionizable component and it has no atom-resolved structure"
+}

@@ -1,0 +1,23 @@
+{
+ "by_table": {
+  "S1": 40,
+  "S3": 2,
+  "S4": 7
+ },
+ "caveat_rows": 36,
+ "corpus_admissible_no": 5,
+ "corpus_admissible_yes": 44,
+ "counts_sum": true,
+ "emitted_equals_06_rows": true,
+ "emitted_no": 13,
+ "emitted_yes": 36,
+ "n_columns_emitted": 79,
+ "value_rows_total": 49,
+ "z_block": {
+  "mu_log10": 3.0818309305575875,
+  "n": 36,
+  "sd_log10": 0.6593319514315504,
+  "z_max": 1.207284068680455,
+  "z_min": -1.8571804861992074
+ }
+}

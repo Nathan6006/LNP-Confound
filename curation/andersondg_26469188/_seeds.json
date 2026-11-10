@@ -1,0 +1,146 @@
+{
+ "all_credited": false,
+ "curation_folder_untouched_by_seeds": true,
+ "n_credited": 11,
+ "n_seeds": 12,
+ "seeds": [
+  {
+   "credited": true,
+   "expected_metric": "EmitError",
+   "metric_lines": [
+    "METRIC exception=EmitError"
+   ],
+   "returncode": 0,
+   "seed": "emit_literal_confidence",
+   "stderr_tail": "",
+   "why": "F-011/F-025/F-046: a hard-coded confidence relabelled 24 'ASSUMED' rows as the project's highest confidence. emit.emit_rows must REFUSE a literal."
+  },
+  {
+   "credited": true,
+   "expected_metric": "EmitError",
+   "metric_lines": [
+    "METRIC exception=EmitError"
+   ],
+   "returncode": 0,
+   "seed": "emit_caveat_without_note",
+   "stderr_tail": "",
+   "why": "F-024: confidence_without_a_note found 6 rows on its first run. Here the condition must be unwritable, not merely audited later."
+  },
+  {
+   "credited": true,
+   "expected_metric": "n_pass",
+   "metric_lines": [
+    "METRIC clean n_pass=46 max_dev=10.0 offenders=['A-03']",
+    "METRIC seeded n_pass=45 max_dev=10.0 offenders=['A-03', 'B-20']"
+   ],
+   "returncode": 0,
+   "seed": "molpct_sum_offender",
+   "stderr_tail": "",
+   "why": "Perturb one printed molar percentage and require C1 to lose a pass. A shift-invariant check scores the same clean and seeded."
+  },
+  {
+   "credited": true,
+   "expected_metric": "n_exact",
+   "metric_lines": [
+    "METRIC clean n_exact=160/160 mismatches=0",
+    "METRIC seeded n_exact=158/160 mismatches=2"
+   ],
+   "returncode": 0,
+   "seed": "cross_parameterisation_transpose",
+   "stderr_tail": "",
+   "why": "Swap two formulations' weight ratios in the DESIGN table only. The two printed parameterisations must stop agreeing."
+  },
+  {
+   "credited": true,
+   "expected_metric": "n_consistent",
+   "metric_lines": [
+    "METRIC clean n_consistent=172/174 all_bijective=False",
+    "METRIC seeded n_consistent=167/174 all_bijective=False"
+   ],
+   "returncode": 0,
+   "seed": "coded_level_bijection",
+   "stderr_tail": "",
+   "why": "Corrupt one character of one coded design string. The third parameterisation must lose its bijection."
+  },
+  {
+   "credited": true,
+   "expected_metric": "mean_abs_error",
+   "metric_lines": [
+    "METRIC clean mean_abs_error=0.0444 dope_abs=0.0",
+    "METRIC seeded mean_abs_error=360.3222 dope_abs=360.3"
+   ],
+   "returncode": 0,
+   "seed": "table_s2_statistic",
+   "stderr_tail": "",
+   "why": "Perturb one Library B EPO value. The printed Mean=2961.6 and the printed DOPE estimate=2307.1 must stop reproducing."
+  },
+  {
+   "credited": true,
+   "expected_metric": "refusal",
+   "metric_lines": [
+    "METRIC clean rows=7 bands=6",
+    "METRIC seeded refusal=ValueError Table S4: expected one DSPC and one DOPE anchor, got ['DSPC']"
+   ],
+   "returncode": 0,
+   "seed": "table_s4_geometry",
+   "stderr_tail": "",
+   "why": "Delete one anchor token from Table S4's word list. The coordinate-based dose assignment must refuse, not fall back to reading order."
+  },
+  {
+   "credited": false,
+   "expected_metric": "refusal",
+   "metric_lines": [
+    "METRIC clean expanded='+0--0' changed=True",
+    "METRIC seeded refusals=1/3"
+   ],
+   "returncode": 1,
+   "seed": "emdash_width_guard",
+   "stderr_tail": "",
+   "why": "Hand the em-dash normaliser a string it cannot uniquely widen. It must refuse rather than pad to the expected width."
+  },
+  {
+   "credited": true,
+   "expected_metric": "findings",
+   "metric_lines": [
+    "METRIC guards=BOTH_FIRED"
+   ],
+   "returncode": 0,
+   "seed": "make_reference_ast_guard",
+   "stderr_tail": "",
+   "why": "F-037. The anchor's independence guard must fire when the module reaches a banned module, and must NOT fire on its own ban list or docstring."
+  },
+  {
+   "credited": true,
+   "expected_metric": "assertion",
+   "metric_lines": [
+    "METRIC stereo=ASSERTION_FIRED"
+   ],
+   "returncode": 0,
+   "seed": "make_reference_stereo",
+   "stderr_tail": "",
+   "why": "The derived glycerol-C2=(R) assertion must fire when the backbone tag is flipped -- otherwise the stereo claim is vacuous."
+  },
+  {
+   "credited": true,
+   "expected_metric": "all_three_agree",
+   "metric_lines": [
+    "METRIC three_way=FIRED"
+   ],
+   "returncode": 0,
+   "seed": "three_way_delta6",
+   "stderr_tail": "",
+   "why": "A delta-6 oleoyl passes every internal assertion at IDENTICAL formula and IDENTICAL exact mass. Only the three-way InChIKey check can see it."
+  },
+  {
+   "credited": true,
+   "expected_metric": "refusal",
+   "metric_lines": [
+    "METRIC regioisomer=REFUSED"
+   ],
+   "returncode": 0,
+   "seed": "make_reference_regioisomer",
+   "stderr_tail": "",
+   "why": "A 1,3-diacyl-2-phospho connectivity defect at delta-mass 0.000000 Da must be refused by the assembly route, proving the gate is not a mass check."
+  }
+ ]
+}

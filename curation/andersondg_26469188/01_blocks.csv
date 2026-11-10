@@ -1,0 +1,10 @@
+factor,levels,n_levels,note,varies_across_arms
+ionizable_lipid,C12-200,1,FIXED across every formulation in the paper. This is the whole answer to 'how many ionizable lipids': one.,yes
+phospholipid,DSPC | DOPE | DOPC | DSPE,4,"The only CHEMICAL identity that varies. DSPE appears in 3 designs (A-07, A-12, A-14) that could not be synthesized, so only 3 of the 4 are ever measured.",yes
+sterol,Cholesterol,1,FIXED. Written only as 'Chol.' in Table S1; never drawn and never given a systematic name.,no
+peg_lipid,UNSTATED,1,"FIXED but NEVER NAMED anywhere in the SI -- the column header is the bare word 'PEG'. The main text is not held (closed access), so the identity is unavailable. Emitted as PEG_name='Unknown'.",no
+il_to_mrna_weight_ratio,2.5 | 5 | 7.5 | 10 | 12.5 | 15 | 20 | 25,8,Quantitative factor. 3 levels per library; Library C extends it to 25.,yes
+il_molpct,30 | 35 | 40 | 50 | 60,5,Quantitative factor.,yes
+phospholipid_molpct,4 | 10 | 16 | 22 | 28,5,Quantitative factor.,yes
+peg_molpct,0.5 | 1.5 | 2.5 | 3 | 3.5,5,Quantitative factor.,yes
+cholesterol_molpct,balance to 100,0,"NOT an independent factor: it is 100 minus the other three, so it is a dependent column. Checking that the four sum to 100 therefore tests OUR TRANSCRIPTION, not the authors' design -- see 07_qc.json.",yes

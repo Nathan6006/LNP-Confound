@@ -1,0 +1,132 @@
+{
+  "_what": "Stage 00b intake gate (PIPELINE_V2.md s3). Every panel or table that supplies a value, with the tier it came from. Written BEFORE any extraction code was authored for this folder.",
+  "paper": {
+    "pmid": "26469188",
+    "doi": "10.1021/acs.nanolett.5b02497",
+    "title": "Optimization of Lipid Nanoparticle Formulations for mRNA Delivery in vivo with Fractional Factorial and Definitive Screening Designs",
+    "first_author": "Kauffman, Kevin J.",
+    "corresponding": "Anderson, Daniel G. (MIT)",
+    "journal": "Nano Letters 15(11):7300-7306",
+    "first_publication_date": "2015-10-20",
+    "proposed_experiment_ID": "KK_2015",
+    "experiment_ID_basis": "FIRST AUTHOR initials + year (Kauffman K J, 2015). The folder name andersondg_26469188 names the PI, which is not the corpus key."
+  },
+  "held_files": [
+    {
+      "path": "source/nl5b02497_si_001.pdf",
+      "sha256": "47b65dbac03f2bcacf039324dc5efa8a074052803706faf564096d48ee6ae654",
+      "bytes": 2221826,
+      "pages": 14,
+      "magic": "PDF document, version 1.5",
+      "belongs_to_this_paper_because": "three independent attestations, not a file count: (a) the filename stem nl5b02497 is the DOI suffix 10.1021/acs.nanolett.5b02497; (b) SI page 1 reproduces the Europe PMC title and the full 8-author list in order, including affiliations; (c) every one of the 14 pages carries the publisher watermark path pubs.acs.org/nalefd/article-supplement/1257894/pdf/nl5b02497_si_001/.",
+      "zip_byte_identity_check": "NOT AVAILABLE. Europe PMC reports inPMC=N, isOpenAccess=N, hasSuppl=N and pmcid=null, so there is no Europe PMC supplementaryFiles ZIP to diff this file against. The three attestations above stand in its place.",
+      "f065_contamination_guard": "No file was copied into source/ by this curation. The folder held exactly one file on arrival and holds exactly one file now; its name and sha256 are pinned above and re-asserted in 07_qc.json. No glob copy out of the shared session scratchpad was performed at any point."
+    }
+  ],
+  "main_text_not_held": {
+    "status": "The main article (Nano Lett 15:7300-7306) is NOT held and was NOT fetched.",
+    "why": "Closed access: Europe PMC fullTextUrlList offers only availabilityCode=S ('Subscription required') via DOI. isOpenAccess=N, inPMC=N, authMan=N, epmcAuthMan=N, nihAuthMan=N -> there is no PMC author manuscript either. elink dbfrom=pubmed db=pmc returns ONLY pubmed_pmc_refs (citing articles) and NO pubmed_pmc self-link, so there is no deposit of any kind. No paywall or bot-check bypass was attempted.",
+    "consequence": "Every value emitted here comes from the SI. Figures 1-4 of the main text are not read, and the main text's naming of the PEG-lipid is unavailable - see the PEG gap in 08_contradictions.csv and D-3."
+  },
+  "value_sources": [
+    {
+      "id": "VS-1",
+      "locus": "SI Table S1, page 2: 'Parameters, characterization, and efficacy of Library A, B, and C LNP formulations used in this study.'",
+      "supplies": "Serum EPO (ng/mL, mean +/- SD, n=3) for 36 LNP formulations and 1 PBS control, plus each formulation's C12-200:mRNA weight ratio, phospholipid identity, and the four molar percentages (C12-200 / phospholipid / cholesterol / PEG), plus EE%, size (nm) and PDI.",
+      "tier": "4_pdfplumber_text_table",
+      "tier_sentence": "pdfplumber extract_text() on page 2 returns all 41 data lines as native text characters - the page carries 2913 char objects and 0 image objects, so no pixel of this table is read by anything.",
+      "tiers_1_to_3_why_not_needed": "Not applicable: tier 4 succeeded completely. Tier 1 (publisher Source Data) does not exist for a 2015 ACS Nano Letters paper; tier 2 (a separate SI table file) does not exist - hasSuppl=N and the only supplementary artifact is this PDF; tier 3 (author repository) was searched and found nothing (see repo_search below).",
+      "pixels_touched": false
+    },
+    {
+      "id": "VS-2",
+      "locus": "SI page 10, the Definitive Screening Design table (unnumbered, inside 'Supplementary Methods: Detailed Description of Statistical Methodology')",
+      "supplies": "A SECOND, INDEPENDENT PARAMETERISATION of formulations A-01..A-14: the coded design string (6 characters of +/0/-), phospholipid head and tail as separate tokens, weight ratio, C12-200 mol%, phospholipid mol%, PEG mol%. Supplies no efficacy value.",
+      "tier": "4_pdfplumber_text_table",
+      "tier_sentence": "Native text, 2363 char objects and 0 images on page 10; pdfplumber find_tables() reports a 16x8 table there.",
+      "used_for": "Row-wise cross-parameterisation check against Table S1, and the coded-level monotonicity check. NOT a value source.",
+      "pixels_touched": false
+    },
+    {
+      "id": "VS-3",
+      "locus": "SI page 11, the Fractional Factorial Design table (unnumbered)",
+      "supplies": "A SECOND, INDEPENDENT PARAMETERISATION of formulations B-15..B-32: coded design string (5 characters), phospholipid, weight ratio, C12-200 mol%, phospholipid mol%, PEG mol%. Supplies no efficacy value.",
+      "tier": "4_pdfplumber_text_table",
+      "tier_sentence": "Native text, 2596 char objects and 0 images on page 11; find_tables() reports a 20x7 table there.",
+      "used_for": "Same two checks as VS-2. NOT a value source.",
+      "pixels_touched": false
+    },
+    {
+      "id": "VS-4",
+      "locus": "SI Table S2, page 3: regression statistics for the Library B Standard Least Squares model",
+      "supplies": "Printed statistics used as external checks on the Table S1 values: n=54, Mean=2961.6, R2=0.887, RMSE=922.2, and the parameter estimate Phospholipid[DOPE]=2307.1.",
+      "tier": "4_pdfplumber_text_table",
+      "tier_sentence": "Native text, 1190 char objects and 0 images on page 3.",
+      "used_for": "Independent reproduction of the Library B mean and of the DOPE main effect from the 18 Library B values. NOT a value source.",
+      "pixels_touched": false
+    },
+    {
+      "id": "VS-5",
+      "locus": "SI Table S3, page 4: 'Parameters, characterization, and efficacy of LNPs made with luciferase mRNA'",
+      "supplies": "Total flux (p/s) x 1e9, mean +/- SD, n=3, 6 h after 15 ug total mRNA IV, for 2 formulations ('Original, Luc' and 'C-35, Luc').",
+      "tier": "4_pdfplumber_text_table",
+      "tier_sentence": "Native text, 902 char objects and 0 images on page 4; find_tables() reports a 4x11 table.",
+      "pixels_touched": false
+    },
+    {
+      "id": "VS-6",
+      "locus": "SI Table S4, page 5: 'Parameters, characterization, and efficacy of LNPs made with FVII siRNA'",
+      "supplies": "Serum Factor VII (% of PBS, mean +/- SD, n=3) 72 h after IV siRNA at 0.1 / 0.03 / 0.01 mg/kg, for 2 formulations plus PBS.",
+      "tier": "4_pdfplumber_text_table",
+      "tier_sentence": "Native text, 1082 char objects and 0 images on page 5; find_tables() reports a 5x11 table.",
+      "pixels_touched": false
+    },
+    {
+      "id": "VS-7",
+      "locus": "Europe PMC core record abstractText (1585 chars)",
+      "supplies": "The headline '7-fold' potency claim, used only as a check against Table S1.",
+      "tier": "4_native_text",
+      "tier_sentence": "Fetched as JSON from the Europe PMC REST search endpoint with resultType=core; no rendering involved.",
+      "pixels_touched": false
+    }
+  ],
+  "panels_NOT_used_as_value_sources": [
+    {"locus": "SI Figure S1 (p6)", "content": "actual-by-predicted and residual plots for the Library B model", "why_not": "model diagnostics, not measurements; and every underlying value is already in Table S1 as native text"},
+    {"locus": "SI Figure S2 (p7)", "content": "EE vs weight ratio, and LNP size vs PEG mol%", "why_not": "both readouts (encapsulation efficiency, particle size) are non-delivery per the endpoint vocabulary, and both are printed numerically in Table S1"},
+    {"locus": "SI Figure S3 (p8)", "content": "DOE methodology flowchart", "why_not": "no data"},
+    {"locus": "SI Figure S4 (p9)", "content": "TEM images of the Original and C-35 LNPs", "why_not": "morphology, not a delivery readout"},
+    {"locus": "SI pp12-13", "content": "JMP screenshots of intermediate regression models and example residual plots", "why_not": "intermediate model output and generic illustrations; no measurement"},
+    {"locus": "Main text Figures 1-4", "content": "unknown", "why_not": "main text not held (closed access, no PMC deposit). Stated here so the gap is visible rather than implicit."}
+  ],
+  "pixels": {
+    "any_value_from_pixels": false,
+    "statement": "ZERO values in this curation come from pixels. No page was rendered, no raster was sampled, no axis was calibrated, no bar top was detected. curation/lib's axis/bars/heatmap modules are therefore not imported, and error classes 20, 23, 27, 28, 32, 33, 35 and 43 cannot arise here. This is the tier-4 outcome PIPELINE_V2 s3 names as the best available for a 2015 paper with native text tables."
+  },
+  "repo_search": {
+    "tool": "provenance/tools/find_repo.py",
+    "runs": [
+      {"author_term": "Kauffman", "note": "FIRST author. Author-scoped repo queries 'Kauffman lipid nanoparticle' and 'Kauffman LNP' both returned n=0."},
+      {"author_term": "Anderson", "note": "PI / corresponding. Author-scoped repo queries 'Anderson lipid nanoparticle' and 'Anderson LNP' both returned n=0."}
+    ],
+    "code_search_for_pmid": "GitHub code search for the literal \"26469188\" returned 20 hits, none of which is a repository belonging to this paper.",
+    "verdict": "NO author repository, Zenodo, Dryad, Figshare or OSF deposit exists for this paper. Expected for a 2015 ACS paper with no data-availability statement.",
+    "search_machinery_positive_control": "The repo sweep is not silently broken: among its hits it returned MaoResearchGroup/falcon-lnp-optimization, which is the real author repository of the Toh 2026 FALCON paper this project has already curated as WT_2026. A query that can surface a known-good LNP repository is a query that is running."
+  },
+  "accession_and_deposit_sweep": {
+    "searched": [
+      {"corpus": "SI full text via pdfplumber", "chars": 17091},
+      {"corpus": "Europe PMC abstractText", "chars": 1585},
+      {"corpus": "main article full text / JATS", "chars": 0, "note": "NOT AVAILABLE - closed access, no PMC deposit. This is the one gap in the sweep and it is stated rather than papered over."}
+    ],
+    "patterns": ["GSE[0-9]+", "SRP[0-9]+", "PRJNA[0-9]+", "\\bSRA\\b", "[Aa]ccession", "[Dd]eposit", "[Gg]it[Hh]ub", "[Zz]enodo", "[Dd]ryad", "[Ff]igshare", "osf\\.io", "[Dd]ata [Aa]vailability", "[Ss]ource [Dd]ata"],
+    "result": "EXPLICIT NULL RESULT: 0 hits for every one of the 13 patterns across 18,676 characters searched (17,091 SI + 1,585 abstract).",
+    "only_url_in_si": "http://www.itl.nist.gov/div898/handbook/pri/section3/pri33a.htm - the NIST Engineering Statistics Handbook, cited as background for mixed-level fractional factorial designs. Not a data deposit."
+  },
+  "licence": {
+    "source_of_truth": "Europe PMC core record for PMID 26469188, not the publisher landing page.",
+    "article": "license=null, isOpenAccess=N, fullTextUrlList availabilityCode=S ('Subscription required'). authMan=N, epmcAuthMan=N, nihAuthMan=N -> not an NIH author manuscript either. The article is All Rights Reserved, (c) 2015 American Chemical Society.",
+    "repo": "n/a - no repository exists.",
+    "cc_by_compatible": false,
+    "section8_verdict": "FAILS the CC0/CC-BY-compatible requirement in CLAUDE.md s8. Funders recorded by Europe PMC are Shire and Skoltech/MIT, with no NIH grant, which is consistent with there being no public-access deposit. If this paper is admitted, only derived numerical values could be redistributed, never the SI PDF, and s8 needs an explicit ruling. See D-4."
+  }
+}

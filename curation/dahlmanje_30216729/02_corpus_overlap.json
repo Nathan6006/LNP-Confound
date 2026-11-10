@@ -1,0 +1,293 @@
+{
+ "_what": "Corpus-overlap measurement for PMID 30216729 (Sago 2018, Nano Letters). Every query carries a positive control.",
+ "corpus_shape": {
+  "vitro": [
+   29195,
+   79
+  ],
+  "vivo": [
+   1803,
+   79
+  ]
+ },
+ "token_pattern_test": {
+  "7C1": {
+   "substring_rows": 36,
+   "distinct_structures": 35,
+   "columns_hit": {
+    "vitro:IL_name": 34,
+    "vivo:IL_name": 2
+   },
+   "example_names": [
+    "117C14",
+    "117C18",
+    "A4I18R7C18-2",
+    "A7C10",
+    "A7C11",
+    "B7C10",
+    "B7C11"
+   ]
+  },
+  "7": {
+   "substring_rows": 4005,
+   "distinct_structures": 3359,
+   "columns_hit": {
+    "vitro:IL_name": 3831,
+    "vivo:IL_name": 174
+   },
+   "example_names": [
+    "70_N16",
+    "75_N16",
+    "77_O15",
+    "87_N12",
+    "87_N14",
+    "87_O15",
+    "STAAR_A1_B1_C7",
+    "STAAR_A1_B2_C7"
+   ]
+  },
+  "C1": {
+   "substring_rows": 5604,
+   "distinct_structures": 4102,
+   "columns_hit": {
+    "vitro:IL_name": 4559,
+    "vitro:PEG_name": 492,
+    "vivo:IL_name": 553
+   },
+   "example_names": [
+    "A1_B1_C1",
+    "A2_B1_C1",
+    "A3_B1_C1",
+    "A4_B1_C1",
+    "A5_B1_C1",
+    "C12-200",
+    "C14-PEG2000",
+    "C16-Ceramide-PEG2000"
+   ]
+  },
+  "C14": {
+   "substring_rows": 1048,
+   "distinct_structures": 539,
+   "columns_hit": {
+    "vitro:IL_name": 499,
+    "vitro:PEG_name": 480,
+    "vivo:IL_name": 69
+   },
+   "example_names": [
+    "112C14",
+    "113C14",
+    "114C14",
+    "117C14",
+    "120C14",
+    "200C14",
+    "A113_C14",
+    "A159_C14"
+   ]
+  },
+  "C18": {
+   "substring_rows": 581,
+   "distinct_structures": 448,
+   "columns_hit": {
+    "vitro:IL_name": 211,
+    "vivo:IL_name": 370
+   },
+   "example_names": [
+    "103C18",
+    "109C18",
+    "117C18",
+    "120C18",
+    "63C18",
+    "96C18",
+    "C3_C10_Dis_C3_C18-1",
+    "C3_C10_Dis_C3_C18-2"
+   ]
+  },
+  "CHOL": {
+   "substring_rows": 0,
+   "distinct_structures": 0,
+   "columns_hit": {},
+   "example_names": []
+  },
+  "Chol": {
+   "substring_rows": 30397,
+   "distinct_structures": 1,
+   "columns_hit": {
+    "vitro:CHL_name": 28684,
+    "vivo:CHL_name": 1713
+   },
+   "example_names": [
+    "Cholesterol"
+   ]
+  },
+  "DSPC": {
+   "substring_rows": 7038,
+   "distinct_structures": 1,
+   "columns_hit": {
+    "vitro:HL_name": 6401,
+    "vivo:HL_name": 637
+   },
+   "example_names": [
+    "DSPC"
+   ]
+  },
+  "_exact_name_match": {
+   "7C1": 0,
+   "7c1": 0,
+   "7C1 ": 0,
+   "PEI600": 0,
+   "PEI": 0,
+   "C15 epoxide": 0
+  },
+  "_positive_control": {
+   "token": "DSPC",
+   "expectation": "DSPC is a corpus helper lipid and MUST return many rows",
+   "substring_rows": 7038,
+   "passes": true,
+   "why_this_control": "if the name-column scan were reading nothing -- a wrong column list, an all-NaN cast -- every token would return 0 and the 7C1 zero would be vacuous"
+  },
+  "_interpretation": "A substring join on this paper's own tokens is catastrophic and the numbers below quantify it. `7C1` matches nothing by any route, so the ionizable component is genuinely absent -- but `C14` and `C18`, which ARE tokens printed in this paper's formulation tables, match corpus rows in bulk while naming PEG ALKYL TAILS in this paper and something else there. That is the wrong-namespace failure: the token is real, the match is real, and the join is still meaningless."
+ },
+ "structural_attestation": {
+  "queried": {
+   "Cholesterol": {
+    "in_registry": true,
+    "why_queried": "drawn in full on SI p14",
+    "registry_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+    "registry_chemical_name": "cholest-5-en-3beta-ol",
+    "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+    "corpus_rows_by_inchikey": 30397,
+    "names_the_structure_sits_under": [
+     "Cholesterol"
+    ]
+   },
+   "DSPC": {
+    "in_registry": true,
+    "why_queried": "drawn in full on SI p14",
+    "registry_smiles": "CCCCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC",
+    "registry_chemical_name": "1,2-distearoyl-sn-glycero-3-phosphocholine; 18:0/18:0",
+    "inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "corpus_rows_by_inchikey": 7038,
+    "names_the_structure_sits_under": [
+     "DSPC"
+    ]
+   }
+  },
+  "positive_control": {
+   "in_registry": true,
+   "why_queried": "POSITIVE CONTROL -- not in this paper",
+   "registry_smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(OC(=O)CCCN(C)C)CCCCCCCC/C=C\\C/C=C\\CCCCC",
+   "registry_chemical_name": "(6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl 4-(dimethylamino)butanoate; ACYCLIC ESTER, no ring",
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "corpus_rows_by_inchikey": 3098,
+   "names_the_structure_sits_under": [
+    "DLin-MC3-DMA",
+    "Dlin-MC3-DMA"
+   ],
+   "passes": true,
+   "expectation": "DLin-MC3-DMA is documented at ~3,087 corpus rows; a join returning 0 would mean the InChIKey index is broken and every other zero here is uninterpretable"
+  },
+  "ionizable_component_7C1": {
+   "in_registry": false,
+   "can_a_single_smiles_be_written": false,
+   "why_not": "SI p14 draws 7C1 as a GENERIC SCHEME: a C15 epoxide (drawn as R-epoxide with R=C13) reacted with PEI600 in ethanol at 90 C for 72 h. PEI600 is branched, polydisperse polyethylenimine of nominal MW 600, so the product is a distribution over both backbone topology and degree of substitution. No atom-resolved structure is drawn, stated, or derivable, and the paper gives no formula, no HRMS and no NMR for it.",
+   "precedent": "CLAUDE.md section 3: PEG-lipids are deliberately absent from the reagent registry because the block length is a distribution, so no single SMILES is right. 7C1 is the same case on the ionizable component.",
+   "must_not_be_guessed": "Writing a representative monomer would put a made-up structure in IL_SMILES. The brief's rule is to flag, never guess -- and with zero emittable rows there is nothing to flag it on."
+  }
+ },
+ "substructure_sweep_superset": {
+  "n_distinct_structures_scanned": 19962,
+  "n_unparseable_skipped": 0,
+  "label": "SUPERSET -- a chemotype match is not the same molecule",
+  "queries": {
+   "aminoalcohol_from_epoxide_ring_opening": {
+    "smarts": "[NX3;!$(N-C=O)]-[CH2]-[CH;!$(C=O)]-[OX2H1]",
+    "why": "the motif 7C1 would carry: a ring-opened 1,2-epoxide giving N-CH2-CH(OH)-alkyl",
+    "n_structures": 1535,
+    "example_structures": [
+     "C=CCCCCCCC(O)CN(CCC[Si](C)(C)O[Si](C)(C)C)CC(O)CCCCCCC=C",
+     "C=CCCCCCCC(O)CN(CCC[Si](C)(C)O[Si](C)(C)CCCN(CC(O)CCCCCCC=C)CC(O)CCCCCCC=C)CC(O)CCCCCCC=C",
+     "C=CCCCCCCC(O)CN(CCC[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)CCCN(CC(O)CCCCCCC=C)CC(O)CCCCCCC=C)CC(O)CCCCCCC=C"
+    ]
+   },
+   "aminoalcohol_with_long_tail": {
+    "smarts": "[NX3;!$(N-C=O)]-[CH2]-[CH]([OX2H1])-[CH2][CH2][CH2][CH2][CH2]",
+    "why": "same motif, tightened to require >=5 further tail carbons",
+    "n_structures": 988,
+    "example_structures": [
+     "C=CCCCCCCC(O)CN(CCC[Si](C)(C)O[Si](C)(C)C)CC(O)CCCCCCC=C",
+     "C=CCCCCCCC(O)CN(CCC[Si](C)(C)O[Si](C)(C)CCCN(CC(O)CCCCCCC=C)CC(O)CCCCCCC=C)CC(O)CCCCCCC=C",
+     "C=CCCCCCCC(O)CN(CCC[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)CCCN(CC(O)CCCCCCC=C)CC(O)CCCCCCC=C)CC(O)CCCCCCC=C"
+    ]
+   },
+   "polyamine_backbone_3plus_N": {
+    "smarts": "[NX3]-[CH2]-[CH2]-[NX3]-[CH2]-[CH2]-[NX3]",
+    "why": "a PEI-like ethylenimine run of three nitrogens",
+    "n_structures": 3128,
+    "example_structures": [
+     "C#CCCCCCCCCC(=O)N(CCN(CCN)CCN)C(CCCCCCCC)C(=O)NCCCC",
+     "C#CCCCCCCCCC(=O)N(CCN(CCN)CCN)C(CCCCCCCCCC)C(=O)NCC(=O)OC",
+     "C#CCCCCCCCCC(=O)N(CCN(CCN)CCN)C(CCCCCCCCCCC)C(=O)NCC(=O)OCC"
+    ]
+   }
+  },
+  "positive_controls": {
+   "tertiary_aliphatic_amine": {
+    "smarts": "[NX3;H0;!$(N-C=O);!$(N-a)]([CX4])([CX4])[CX4]",
+    "why": "POSITIVE CONTROL -- ionizable lipids are full of these; must be in the thousands or the sweep is reading nothing",
+    "premise_molecule": "DLin-MC3-DMA",
+    "premise_smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(OC(=O)CCCN(C)C)CCCCCCCC/C=C\\C/C=C\\CCCCC",
+    "premise_verified_smarts_matches_that_molecule": true,
+    "n_structures": 18472,
+    "reference_structure_found_in_corpus": false,
+    "passes": true
+   },
+   "sterol_skeleton": {
+    "smarts": "[#6]1~[#6]~[#6]~[#6]2~[#6]3~[#6]~[#6]~[#6]4~[#6]~[#6]~[#6]~[#6]~[#6]~4~[#6]~3~[#6]~[#6]~[#6]~1~2",
+    "why": "POSITIVE CONTROL -- cholesterol is the corpus's near-universal sterol; must be non-zero AND must match the registry cholesterol",
+    "premise_molecule": "Cholesterol",
+    "premise_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+    "premise_verified_smarts_matches_that_molecule": true,
+    "n_structures": 63,
+    "reference_structure_found_in_corpus": true,
+    "passes": true
+   }
+  },
+  "verdict": "Even a non-zero chemotype count would not be an overlap: 7C1 has no atom-resolved structure, so it cannot be shown identical to anything. The loose counts are reported as a superset and claimed as nothing more."
+ },
+ "invivo_shared_structures": {
+  "n_structures_shared_across_invivo_experiments": 2,
+  "shared": {
+   "BGNVBNJYBVCBJH-UHFFFAOYSA-N": {
+    "n_sources": 4,
+    "sources": [
+     "SB_2024",
+     "SS_2018",
+     "SY_2025",
+     "XD_2026"
+    ],
+    "names": [
+     "SM-102"
+    ],
+    "rows": 17
+   },
+   "NRLNQCOGCKAESA-KWXKLSQISA-N": {
+    "n_sources": 6,
+    "sources": [
+     "BL_2023",
+     "NG_2025_2",
+     "SB_2024",
+     "XD_2026",
+     "ZC_2023",
+     "ZH_2023"
+    ],
+    "names": [
+     "DLin-MC3-DMA",
+     "Dlin-MC3-DMA"
+    ],
+    "rows": 17
+   }
+  },
+  "this_paper_would_add": 0,
+  "why": "7C1 has no writable structure, so it cannot join this set even in principle, and this paper emits no in-vivo row anyway. It neither adds a third shared in-vivo structure nor raises the source count on either existing one."
+ }
+}
