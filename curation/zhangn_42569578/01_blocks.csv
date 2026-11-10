@@ -1,0 +1,8 @@
+factor,code,unit,levels,n_levels,source,note
+Ionizable lipid type,ILP,,SM-102|MC-3|ALC-0315|CKK-E12,4,Table 1 (main text),all four are commercial catalogue benchmarks
+Helper lipid type,HLP,,DSPC|DOPC,2,Table 1 (main text),
+Ionizable lipid concentration,ILC,mM,1.25|2.5|5|10,4,Table 1 (main text),
+Ionizable lipid ratio,ILR,%,40|50|60,3,Table 1 (main text),
+Helper lipid ratio,HLR,%,4|10|16,3,Table 1 (main text),
+PEG-lipid ratio,PEGLR,%,0.5|1.5|2.5,3,Table 1 (main text),
+Cholesterol ratio,CHOLR,%,derived,0,section 2.3.1,dependent variable: 100 - ILR - HLR - PEGLR

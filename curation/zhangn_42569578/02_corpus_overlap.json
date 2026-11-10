@@ -1,0 +1,390 @@
+{
+  "paper": "PMID 42569578",
+  "experiment_id_proposed": "MY_2026",
+  "corpus": {
+    "vitro": 29195,
+    "vivo": 1803
+  },
+  "ambiguous_component_names_in_corpus": 293,
+  "corpus_distinct_IL_SMILES": 19919,
+  "corpus_distinct_IL_inchikeys": 19919,
+  "positive_controls": [
+    {
+      "control": "inchikey_join_registry_MC3",
+      "asserts_molecule": "DLin-MC3-DMA",
+      "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+      "corpus_rows": 3098,
+      "distinct_SMILES_strings": 1,
+      "IL_names_carrying_it": [
+        "DLin-MC3-DMA",
+        "Dlin-MC3-DMA"
+      ],
+      "expect_min_rows": 1,
+      "matched_the_named_molecule": true,
+      "passes": true
+    },
+    {
+      "control": "name_scan_DSPC",
+      "asserts_molecule": "DSPC",
+      "corpus_rows": 7038,
+      "expect_min_rows": 1,
+      "matched_the_named_molecule": true,
+      "passes": true
+    },
+    {
+      "control": "inchikey_join_registry_cholesterol",
+      "asserts_molecule": "Cholesterol",
+      "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+      "corpus_rows": 30397,
+      "CHL_names_carrying_it": [
+        "Cholesterol"
+      ],
+      "expect_min_rows": 1,
+      "matched_the_named_molecule": true,
+      "passes": true
+    }
+  ],
+  "paper_lipids": [
+    {
+      "paper_name": "ALC-0315",
+      "structure_source": "reagent_registry",
+      "structure_is_independent_of_corpus": true,
+      "canonical_SMILES": "CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC",
+      "inchikey": "QGWBEETXHOVFQS-UHFFFAOYSA-N",
+      "skeleton_block": "QGWBEETXHOVFQS",
+      "formula": "C48H95NO5",
+      "exact_mass": 765.721,
+      "corpus_rows_by_full_inchikey": 313,
+      "corpus_distinct_SMILES_strings": 1,
+      "corpus_IL_names": [
+        "ALC-0315"
+      ],
+      "corpus_experiments": {
+        "AC_2025:vitro": {
+          "rows": 216,
+          "names": [
+            "ALC-0315"
+          ]
+        },
+        "LZ_2025:vitro": {
+          "rows": 96,
+          "names": [
+            "ALC-0315"
+          ]
+        },
+        "XD_2026:vivo": {
+          "rows": 1,
+          "names": [
+            "ALC-0315"
+          ]
+        }
+      },
+      "n_corpus_experiments": 3,
+      "vivo_experiments": [
+        "XD_2026"
+      ],
+      "name_join_would_find": {
+        "ALC-0315": 313
+      },
+      "inchikey_join_finds_rows": 313,
+      "rows_a_single_name_join_would_MISS": 0
+    },
+    {
+      "paper_name": "SM-102",
+      "structure_source": "reagent_registry",
+      "structure_is_independent_of_corpus": true,
+      "canonical_SMILES": "CCCCCCCCCCCOC(=O)CCCCCN(CCO)CCCCCCCC(=O)OC(CCCCCCCC)CCCCCCCC",
+      "inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+      "skeleton_block": "BGNVBNJYBVCBJH",
+      "formula": "C44H87NO5",
+      "exact_mass": 709.6584,
+      "corpus_rows_by_full_inchikey": 2312,
+      "corpus_distinct_SMILES_strings": 1,
+      "corpus_IL_names": [
+        "SM-102"
+      ],
+      "corpus_experiments": {
+        "AC_2025:vitro": {
+          "rows": 426,
+          "names": [
+            "SM-102"
+          ]
+        },
+        "SB_2024:vivo": {
+          "rows": 13,
+          "names": [
+            "SM-102"
+          ]
+        },
+        "SS_2018:vivo": {
+          "rows": 1,
+          "names": [
+            "SM-102"
+          ]
+        },
+        "SY_2025:vivo": {
+          "rows": 2,
+          "names": [
+            "SM-102"
+          ]
+        },
+        "WT_2026:vitro": {
+          "rows": 1869,
+          "names": [
+            "SM-102"
+          ]
+        },
+        "XD_2026:vivo": {
+          "rows": 1,
+          "names": [
+            "SM-102"
+          ]
+        }
+      },
+      "n_corpus_experiments": 6,
+      "vivo_experiments": [
+        "SB_2024",
+        "SS_2018",
+        "SY_2025",
+        "XD_2026"
+      ],
+      "name_join_would_find": {
+        "SM-102": 2312
+      },
+      "inchikey_join_finds_rows": 2312,
+      "rows_a_single_name_join_would_MISS": 0
+    },
+    {
+      "paper_name": "MC-3 (DLin-MC3-DMA)",
+      "structure_source": "reagent_registry",
+      "structure_is_independent_of_corpus": true,
+      "canonical_SMILES": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+      "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+      "skeleton_block": "NRLNQCOGCKAESA",
+      "formula": "C43H79NO2",
+      "exact_mass": 641.6111,
+      "corpus_rows_by_full_inchikey": 3098,
+      "corpus_distinct_SMILES_strings": 1,
+      "corpus_IL_names": [
+        "DLin-MC3-DMA",
+        "Dlin-MC3-DMA"
+      ],
+      "corpus_experiments": {
+        "AC_2025:vitro": {
+          "rows": 216,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "BL_2023:vivo": {
+          "rows": 2,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "NG_2025_2:vivo": {
+          "rows": 1,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "SB_2024:vivo": {
+          "rows": 11,
+          "names": [
+            "Dlin-MC3-DMA"
+          ]
+        },
+        "SP_2020:vitro": {
+          "rows": 30,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "WT_2026:vitro": {
+          "rows": 675,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "XD_2026:vivo": {
+          "rows": 1,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "YZ_2022:vitro": {
+          "rows": 1080,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "YZ_2024:vitro": {
+          "rows": 1080,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "ZC_2023:vivo": {
+          "rows": 1,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        },
+        "ZH_2023:vivo": {
+          "rows": 1,
+          "names": [
+            "DLin-MC3-DMA"
+          ]
+        }
+      },
+      "n_corpus_experiments": 11,
+      "vivo_experiments": [
+        "BL_2023",
+        "NG_2025_2",
+        "SB_2024",
+        "XD_2026",
+        "ZC_2023",
+        "ZH_2023"
+      ],
+      "name_join_would_find": {
+        "DLin-MC3-DMA": 3087,
+        "Dlin-MC3-DMA": 11
+      },
+      "inchikey_join_finds_rows": 3098,
+      "rows_a_single_name_join_would_MISS": 11
+    },
+    {
+      "paper_name": "CKK-E12 (cKK-E12)",
+      "structure_source": "corpus_components.smi(CKK-E12)",
+      "structure_is_independent_of_corpus": false,
+      "canonical_SMILES": "CCCCCCCCCCC(O)CN(CCCCC1NC(=O)C(CCCCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)NC1=O)CC(O)CCCCCCCCCC",
+      "inchikey": "ZISVTYVLWSZJAL-UHFFFAOYSA-N",
+      "skeleton_block": "ZISVTYVLWSZJAL",
+      "formula": "C60H120N4O6",
+      "exact_mass": 992.9208,
+      "corpus_rows_by_full_inchikey": 241,
+      "corpus_distinct_SMILES_strings": 1,
+      "corpus_IL_names": [
+        "CKK-E12",
+        "MD-1",
+        "other"
+      ],
+      "corpus_experiments": {
+        "AC_2025:vitro": {
+          "rows": 216,
+          "names": [
+            "CKK-E12"
+          ]
+        },
+        "BL_2023:vivo": {
+          "rows": 6,
+          "names": [
+            "MD-1"
+          ]
+        },
+        "JW_2024:vitro": {
+          "rows": 19,
+          "names": [
+            "other"
+          ]
+        }
+      },
+      "n_corpus_experiments": 3,
+      "vivo_experiments": [
+        "BL_2023"
+      ],
+      "name_join_would_find": {
+        "CKK-E12": 216,
+        "MD-1": 6,
+        "other": 19
+      },
+      "inchikey_join_finds_rows": 241,
+      "rows_a_single_name_join_would_MISS": 25
+    }
+  ],
+  "token_pattern_test": {
+    "E12": {
+      "substring_rows": 216,
+      "distinct_structures": 1,
+      "distinct_IL_names": [
+        "CKK-E12"
+      ],
+      "n_distinct_IL_names": 1
+    },
+    "R93": {
+      "substring_rows": 0,
+      "distinct_structures": 0,
+      "distinct_IL_names": [],
+      "n_distinct_IL_names": 0
+    },
+    "S2": {
+      "substring_rows": 0,
+      "distinct_structures": 0,
+      "distinct_IL_names": [],
+      "n_distinct_IL_names": 0
+    },
+    "S1": {
+      "substring_rows": 0,
+      "distinct_structures": 0,
+      "distinct_IL_names": [],
+      "n_distinct_IL_names": 0
+    },
+    "D04": {
+      "substring_rows": 0,
+      "distinct_structures": 0,
+      "distinct_IL_names": [],
+      "n_distinct_IL_names": 0
+    },
+    "102": {
+      "substring_rows": 2327,
+      "distinct_structures": 16,
+      "distinct_IL_names": [
+        "A10Iso102DC18",
+        "A11Iso102DC18",
+        "A12Iso102DC18",
+        "A1Iso102DC18",
+        "A2Iso102DC18",
+        "A3Iso102DC18",
+        "A4Iso102DC18",
+        "A5Iso102DC18",
+        "A6Iso102DC18",
+        "A7Iso102DC18",
+        "A8Iso102DC18",
+        "A9Iso102DC18",
+        "SM-102",
+        "SM-102-CB1",
+        "SM-102-CB2",
+        "SM-102-CB3"
+      ],
+      "n_distinct_IL_names": 16
+    },
+    "0315": {
+      "substring_rows": 313,
+      "distinct_structures": 1,
+      "distinct_IL_names": [
+        "ALC-0315"
+      ],
+      "n_distinct_IL_names": 1
+    },
+    "MC-3": {
+      "substring_rows": 0,
+      "distinct_structures": 0,
+      "distinct_IL_names": [],
+      "n_distinct_IL_names": 0
+    },
+    "MC3": {
+      "substring_rows": 3101,
+      "distinct_structures": 4,
+      "distinct_IL_names": [
+        "DLin-MC3-DMA",
+        "Dlin-MC3-DMA",
+        "MC3-CB1",
+        "MC3-CB2",
+        "MC3-CB3"
+      ],
+      "n_distinct_IL_names": 5
+    }
+  },
+  "IL_names_with_more_than_one_structure": 292,
+  "IL_structures_with_more_than_one_name": 324
+}

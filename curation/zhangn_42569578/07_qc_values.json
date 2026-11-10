@@ -1,0 +1,213 @@
+{
+  "paper": "PMID 42569578",
+  "experiment_id_proposed": "MY_2026",
+  "value_tier": "1_publisher_source_data",
+  "digitised_values": 0,
+  "xlsx_header_cells_resolved_to_strings": 18,
+  "xlsx_rows_present_in_xml": 51,
+  "xlsx_rows_with_data": 25,
+  "xlsx_header_columns_verified": 6,
+  "si_tables_found": 3,
+  "si_table_shapes": [
+    [
+      204,
+      7
+    ],
+    [
+      26,
+      7
+    ],
+    [
+      5,
+      7
+    ]
+  ],
+  "si_S1_formulations": 203,
+  "si_S2_formulations": 25,
+  "si_S3_formulations": 4,
+  "design_level_violations_xlsx": 0,
+  "design_level_offenders": [],
+  "design_level_violations_tableS1": 0,
+  "tableS1_rows_checked": 203,
+  "fourth_component": "cholesterol, derived as 100 - IL - helper - PEG",
+  "mol_pct_sum_check_is_a_tautology": true,
+  "cholesterol_pct_min": 27.5,
+  "cholesterol_pct_max": 54.5,
+  "cholesterol_pct_nonpositive": 0,
+  "S2_to_xlsx_bijection": true,
+  "S2_to_xlsx_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 20,
+    "9": 21,
+    "10": 22,
+    "11": 23,
+    "12": 24,
+    "13": 25,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17,
+    "18": 18,
+    "19": 19,
+    "20": 8,
+    "21": 9,
+    "22": 10,
+    "23": 11,
+    "24": 12,
+    "25": 13
+  },
+  "S2_xlsx_rows_at_same_index": 13,
+  "S2_xlsx_rows_permuted": 12,
+  "ILC_discriminator": {
+    "xlsx_no_1_7": {
+      "xlsx_IL_name": [
+        "ALC-0315"
+      ],
+      "tableS2_no_range": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "unmapped_formulations": [],
+      "ILC_values": [
+        2.5,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "mean_ILC": 4.6429,
+      "n_at_max_level_10mM": 0
+    },
+    "xlsx_no_8_13": {
+      "xlsx_IL_name": [
+        "CEE-E12"
+      ],
+      "tableS2_no_range": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "unmapped_formulations": [],
+      "ILC_values": [
+        1.25,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "mean_ILC": 8.5417,
+      "n_at_max_level_10mM": 5
+    },
+    "xlsx_no_14_19": {
+      "xlsx_IL_name": [
+        "MC-3"
+      ],
+      "tableS2_no_range": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "unmapped_formulations": [],
+      "ILC_values": [
+        2.5,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        2.5
+      ],
+      "mean_ILC": 4.1667,
+      "n_at_max_level_10mM": 0
+    },
+    "xlsx_no_20_25": {
+      "xlsx_IL_name": [
+        "SM-102"
+      ],
+      "tableS2_no_range": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "unmapped_formulations": [],
+      "ILC_values": [
+        5.0,
+        2.5,
+        2.5,
+        2.5,
+        1.25,
+        5.0
+      ],
+      "mean_ILC": 3.125,
+      "n_at_max_level_10mM": 0
+    }
+  },
+  "distinct_ionizable_lipids": 4,
+  "novel_ionizable_lipids": 0,
+  "design_space_combinations": 864,
+  "values_total": 300,
+  "values_admissible_yes": 25,
+  "values_admissible_no": 275,
+  "would_be_z": {
+    "n": 25,
+    "transform": "z(-log10(relative S100P expression))",
+    "pooling": "ONE z per experiment over all 25 (no per-condition z; a per-condition z is error class 22)",
+    "mean_raw_relexpr": 0.404741,
+    "min_relexpr": 0.061063,
+    "max_relexpr": 0.830615,
+    "z_mean": 0.0,
+    "z_sd_ddof0": 1.0,
+    "z_values": {
+      "V012": -0.893706,
+      "V024": -0.128229,
+      "V036": -0.117473,
+      "V048": -0.385844,
+      "V060": 0.174235,
+      "V072": 0.145567,
+      "V084": 0.271413,
+      "V096": 0.163236,
+      "V108": -0.372806,
+      "V120": -0.209151,
+      "V132": -0.089295,
+      "V144": -0.327787,
+      "V156": 1.93824,
+      "V168": -1.239064,
+      "V180": -1.114498,
+      "V192": -1.249807,
+      "V204": -1.024324,
+      "V216": -1.169791,
+      "V228": -0.860828,
+      "V240": 0.061488,
+      "V252": 0.480439,
+      "V264": -0.036062,
+      "V276": 1.689551,
+      "V288": 2.094896,
+      "V300": 2.1996
+    }
+  },
+  "rows_emitted": 0,
+  "rows_header_columns": 79,
+  "rows_header_source": "data/data_vitro.csv (read live)"
+}

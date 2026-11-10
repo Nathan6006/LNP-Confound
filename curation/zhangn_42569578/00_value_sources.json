@@ -1,0 +1,170 @@
+{
+  "_what": "Stage 00b INTAKE GATE (PIPELINE_V2 \u00a73). Filled before any value was read into an artifact. NO DIGITISER WAS WRITTEN FOR THIS PAPER: every emitted-candidate value is tier 1. The figures were used only to VERIFY.",
+  "paper": {
+    "pmid": "42569578",
+    "pmcid": "PMC13450591",
+    "doi": "10.1016/j.mtbio.2026.103483",
+    "title": "High-throughput microfluidics and machine learning-assisted screening of lipid nanoparticle formulations for siRNA delivery",
+    "journal": "Materials Today Bio",
+    "pub_year": 2026,
+    "first_publication_date": "2026-07-22",
+    "first_author": "Mingzhi Yu",
+    "last_author_PI": "Nan Zhang",
+    "authors": "Yu M, Wang L, Liu D, Guo J, Liu J, Zhou J, Mathew A, He Z, Wu J, Zhang N",
+    "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), stated in the JATS permissions block AND Europe PMC core record license='cc by'; isOpenAccess=Y",
+    "licence_is_section8_compatible": true,
+    "folder_name_is_the_PI_not_the_first_author": "folder 'zhangn_42569578' is named for Nan Zhang (last author/PI). Experiment_ID derives from the FIRST author -> MY_2026 (Mingzhi Yu).",
+    "bibliographic_source": "Europe PMC REST core record, query EXT_ID:42569578, fetched 2026-11-10"
+  },
+  "acquisition": {
+    "_note": "Acquisition was performed by the dispatching reviewer and is RE-VERIFIED here, not trusted: every file's magic bytes were checked (both supplements are real PK ZIP containers), md5/sha256 recorded below, and the table contents were re-derived from the raw XML rather than from the reviewer's summary.",
+    "reviewer_reported_route": "PMC /bin/ served figures but returned HTML error pages for every supplement; Europe PMC supplementaryFiles returned HTTP 500; both supplements came from the Elsevier CDN https://ars.els-cdn.com/content/image/1-s2.0-S2590006426007283-mmc{1,2}.{docx,xlsx}",
+    "verified_by_me": [
+      "magic bytes 504b0304 (PK ZIP) on mmc1.docx and mmc2.xlsx",
+      "both unzip cleanly to OOXML parts",
+      "mmc2 sheet XML re-dumped directly; 51 <row> elements of which 25 carry data"
+    ],
+    "gap_found_in_the_handover": "the handover listed figures ga1 and gr1-gr5, but the JATS references gr1-gr7: Fig 6 (in-vivo biodistribution) and Fig 7 (biosafety) were MISSING from source/. Both are inadmissible endpoints so no emitted value depends on them, but the set was incomplete.",
+    "completed_by_me": "fetched gr4_lrg/gr5_lrg/gr6_lrg/gr7_lrg from https://ars.els-cdn.com/content/image/1-s2.0-S2590006426007283-gr<N>_lrg.jpg (open access, no session). The _lrg route gives Fig 5 at 2371x2857 px against 790x952 for the PMC copy: 3x linear, 9x pixels.",
+    "no_paywall_or_bot_check_was_bypassed": true,
+    "scratchpad_contamination_incident": "F-065. The session scratchpad already contained a directory named repo/ holding a DIFFERENT project (github ml_lnp_design_rules, an ACS Nano paper, complete with its own .git, timestamped 07:41 the same day). My first repo fetch landed inside it. Detected by comparing against this paper's own git-tree listing, which contains only 4 .py files plus .idea. Re-fetched into a uniquely named empty directory. Nothing from the contaminated directory was read or used."
+  },
+  "files": {
+    "mmc2.xlsx": {
+      "bytes": 12458,
+      "md5": "c99716fa3ba8cc58e5d7b62480318e0e",
+      "sha256": "77fed3ab03489816934fcc680894aeb4ffa867cc6e3256cf15b8495dbaf57996"
+    },
+    "mmc1.docx": {
+      "bytes": 2795585,
+      "md5": "e887d3a70f1d7bee70caf44b86e182a2",
+      "sha256": "6eb8202dd47077f776b6860b07e303d6fa659bbeb42d1ece55bdb0c779fa7134"
+    },
+    "PMC13450591.jats.xml": {
+      "bytes": 90263,
+      "md5": "aea811da9f9b43104792cfec426da8a9",
+      "sha256": "1891accce3293495e7620d74b04849f43f73aa097b79f9bf1eaeda21f2027135"
+    },
+    "ga1.jpg": {
+      "bytes": 340433,
+      "md5": "8375b037fbda9bc6dd8075aeb4a00af0",
+      "sha256": "7e617bba722f7555a3f13523fcdad70d8ff9c9b3161e3abe716fe191a2709e42"
+    },
+    "gr1.jpg": {
+      "bytes": 400650,
+      "md5": "5197d71cc910295c489e8e83c7eedc0e",
+      "sha256": "99b8840bbef1bd19b3fc632af90f4959df36c2f8de7d3f1529fff80f5511ee6d"
+    },
+    "gr2.jpg": {
+      "bytes": 342500,
+      "md5": "21075938e96392af00caf4d6455e420c",
+      "sha256": "70b3dcf7826a12c9eb6fd5440885ca4da6b5b3a12a3122a33f2555b839a4f156"
+    },
+    "gr3.jpg": {
+      "bytes": 277583,
+      "md5": "21c5ea0c23afdff0d6be708d41151de0",
+      "sha256": "af9c27aa8796090aeaa6d251a9417ce2156594ffca728a64794641287468ed8a"
+    },
+    "gr4.jpg": {
+      "bytes": 336722,
+      "md5": "0a4123aedb84f36e89315e8d3eeb3846",
+      "sha256": "d12f07e7ef97a6dfb92ec6e9390cf9a65ab62b3fa1b2d7656ddfe278c9342c7c"
+    },
+    "gr5.jpg": {
+      "bytes": 310050,
+      "md5": "4309a984ac73f34dd6f6aff065b35a56",
+      "sha256": "238d9a98fddb0619a8ace9c02ac7bf5f3b338f814a0357a446c990f56d9d1820"
+    },
+    "gr4_lrg.jpg": {
+      "bytes": 748834,
+      "md5": "b320d3b830297c0e411e554b11ccfec7",
+      "sha256": "369670661f29474a9aa2655ac4d5c22e1a552a93432d92aabd141138621e2e61"
+    },
+    "gr5_lrg.jpg": {
+      "bytes": 639280,
+      "md5": "10ebb6386d77b18954758899e0b12064",
+      "sha256": "3f87fcfd3754f5db679041bcbbad7c0ae809647e9644229978cb93a4f470df84"
+    },
+    "gr6_lrg.jpg": {
+      "bytes": 560255,
+      "md5": "52e40fb1cd8f49aa0d026691c19d18f5",
+      "sha256": "e1d68d8d88e9b350dc522b8215ac34114d8715d438bd4bf47465926e557ed8f7"
+    },
+    "gr7_lrg.jpg": {
+      "bytes": 615039,
+      "md5": "c47e4f8b343d4c056ead0bd164de2fb2",
+      "sha256": "d68c95e5ebd0b866e71099d3e4cffcf4fbfdba27d11a15e00fcc20a604a4c363"
+    }
+  },
+  "value_sources": [
+    {
+      "panel_or_table": "mmc2.xlsx sheet1 (publisher Source Data)",
+      "tier": "1_publisher_source_data",
+      "supplies": "all 300 measurements: size/PDI/zeta/signal for 25 formulations x 3 conditions",
+      "why_not_pixels": "n/a - tier 1 available",
+      "digitised": false
+    },
+    {
+      "panel_or_table": "mmc1.docx Table S2 (Top 25 formulations)",
+      "tier": "2_SI_table",
+      "supplies": "the formulation NUMBERING used by the main text and by every figure x-axis, plus an independent ionizable-lipid-type <-> composition mapping",
+      "why_not_pixels": "n/a - native Word table, 26 rows x 7 cols",
+      "digitised": false
+    },
+    {
+      "panel_or_table": "mmc1.docx Table S1 (203 LHS formulations)",
+      "tier": "2_SI_table",
+      "supplies": "composition of the 203 empty-LNP screen; NO measurements are given for them anywhere, so the 203-formulation arm supplies no value at all",
+      "digitised": false
+    },
+    {
+      "panel_or_table": "mmc1.docx Table S3 (4 in-vivo formulations)",
+      "tier": "2_SI_table",
+      "supplies": "composition of the 4 formulations taken in vivo",
+      "digitised": false
+    },
+    {
+      "panel_or_table": "github.com/luhan611/siRNA-LNP-ML-Optimization",
+      "tier": "3_author_repo",
+      "supplies": "NO DATA. 4 .py files only; the input workbooks are referenced by absolute local paths (/home/luhan/ucd/...) and are not committed. The code does attest the canonical lipid spelling list ['SM-102','MC-3','ALC-0315','CKK-E12'] and touches only size and PDI.",
+      "repo_http_status": 200,
+      "repo_has_licence": false,
+      "digitised": false
+    },
+    {
+      "panel_or_table": "Fig 4c, Fig 5a/b/c rasters",
+      "tier": "verification_only",
+      "supplies": "NOTHING. Used solely to confirm the readout identity of mmc2 column V and the x-axis block labelling. No value was read off a pixel.",
+      "digitised": false
+    }
+  ],
+  "digitisation_defect_surface": "zero: no geometry code, no axis calibration, no bar-top detection, no heatmap LUT was written or run for this paper.",
+  "accession_sweep": {
+    "_what": "explicit NULL RESULT with character counts",
+    "patterns": [
+      "GSE\\d+",
+      "SRP\\d+",
+      "PRJNA\\d+",
+      "PRJEB\\d+",
+      "SR[RX]\\d+",
+      "E-MTAB-\\d+",
+      "accession",
+      "deposit",
+      "github",
+      "zenodo",
+      "dryad",
+      "figshare",
+      "osf.io",
+      "gitlab"
+    ],
+    "chars_searched_total": 1895389,
+    "chars_searched_per_file": {
+      "PMC13450591.jats.xml": 89772,
+      "mmc1.docx/word/document.xml": 1783844,
+      "mmc2.xlsx sheet1+sharedStrings": 21773
+    },
+    "result": "NULL for every sequencing/data-repository pattern in all three sources. The single non-null hit is one 'github' occurrence in the main text (the code repo above). No GEO/SRA/BioProject/ArrayExpress accession, no Zenodo/Dryad/figshare/OSF/GitLab deposit exists.",
+    "data_availability_statement": "'Data will be made available on request.' - notable because mmc2.xlsx IS published as Source Data, so the statement understates what is actually available.",
+    "find_repo_equivalent": "searched for both the first author (Mingzhi Yu) and the PI (Nan Zhang); the only repository associated with this paper is the second author's (Luhan Wang / luhan611) code repo above."
+  }
+}
