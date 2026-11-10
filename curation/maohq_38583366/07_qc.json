@@ -1,0 +1,259 @@
+{
+ "_what": "Every check this curation ran, with numbers. Nothing is emitted into data/; see DECISIONS.md.",
+ "paper": {
+  "pmid": "38583366",
+  "first_author": "Zhu Yining",
+  "proposed_Experiment_ID": "YZ_2024 -- ALREADY TAKEN by PMID 38082180. See DECISIONS.md D-3."
+ },
+ "P1_weight_percentages_sum_to_100": {
+  "_what": "Five percentages printed INDEPENDENTLY per row (helper, MC3, cholesterol, DMG-PEG, pDNA). None is a stated balance, so this is a real transcription check, not a tautology.",
+  "n": 192,
+  "n_within_0.05_pp": 192,
+  "max_abs_deviation_pp": 0.02,
+  "expected_max_from_rounding_5_two_dp_numbers_pp": 0.025,
+  "verdict": "192/192 exact"
+ },
+ "P2_prose_grouping_Sec_3_3": {
+  "_what": "The paper names six formulations that 'all achieved transfection levels exceeding 5 x 10^4 photons/s'. A prose grouping is a threshold claim on a quantity we measured independently.",
+  "named": [
+   "AI-b3",
+   "CII-b2",
+   "CII-b3",
+   "DI-a1",
+   "DI-a3",
+   "FIII-b3"
+  ],
+  "my_top_6_by_value": [
+   "CII-b3",
+   "AI-b3",
+   "DI-a1",
+   "CII-b2",
+   "FIII-b3",
+   "DI-a3"
+  ],
+  "named_set_equals_my_top_6": true,
+  "smallest_named": 44704.7,
+  "largest_unnamed": 33551.5,
+  "separation_factor": 1.3324,
+  "stated_threshold": 50000.0,
+  "n_named_clearing_the_stated_threshold": 5,
+  "shortfall_of_the_sixth_pct": 10.59,
+  "verdict": "The SET is reproduced exactly (6 of 6; the named six ARE the six largest bars, separated from the seventh by a factor of 1.33). The stated 5e4 THRESHOLD is not: DI-a3 reads 4.47e+04, 10.6% below it, which is ~13 px on a panel whose worst held-out tick residual is 0.48 px. Recorded in 08_contradictions.csv, not reconciled."
+ },
+ "P3_fig4D_printed_liver_share": {
+  "_what": "liver / sum(5 organ bars), against the percentage PRINTED on the pie chart the authors drew above each group. They never computed it from these bars, so it is external to this read; one misread bar breaks it.",
+  "rows": [
+   {
+    "formulation": "AI-b3",
+    "printed_pct": 96.7,
+    "computed_pct": 96.729,
+    "delta_pp": 0.029
+   },
+   {
+    "formulation": "CII-b2",
+    "printed_pct": 91.4,
+    "computed_pct": 91.519,
+    "delta_pp": 0.119
+   },
+   {
+    "formulation": "CII-b3",
+    "printed_pct": 95.5,
+    "computed_pct": 95.182,
+    "delta_pp": -0.318
+   },
+   {
+    "formulation": "DI-a1",
+    "printed_pct": 95.2,
+    "computed_pct": 95.166,
+    "delta_pp": -0.034
+   },
+   {
+    "formulation": "DI-a3",
+    "printed_pct": 96.0,
+    "computed_pct": 96.021,
+    "delta_pp": 0.021
+   },
+   {
+    "formulation": "FIII-b3",
+    "printed_pct": 87.5,
+    "computed_pct": 87.513,
+    "delta_pp": 0.013
+   }
+  ],
+  "max_abs_delta_pp": 0.318,
+  "rms_delta_pp": 0.14,
+  "n_exact_to_1pp": 6,
+  "n": 6
+ },
+ "P4_fig4B_geometry": {
+  "px_per_decade": 298.992,
+  "factor_per_px": 1.007731,
+  "decade_gap_difference_px": 0.0774,
+  "held_out_minor_ticks": 10,
+  "minor_tick_residual_px_max": 0.48,
+  "minor_tick_residual_px_rms": 0.257,
+  "worst_minor_residual_as_a_factor": 1.003703,
+  "baseline_detected_row": 2329.277,
+  "baseline_value_read": 4990.002,
+  "baseline_offset_px_from_a_round_5000": 0.2599,
+  "bars_read": 20,
+  "bar_top_refusals": 0,
+  "max_flank_delta_px": 2.0,
+  "stroke_centre_correction_px": {
+   "px_min": -0.153,
+   "px_max": 1.745,
+   "px_mean": 0.541,
+   "as_factor_at_mean": 1.00418,
+   "_why": "bar_top returns the first row where the page ends, i.e. the stroke's upper half. The calibration is fitted on tick CENTROIDS. Reporting an edge against a centroid scale is F-019; every value below is at the stroke centre and this is the bias that removes."
+  },
+  "_unprinted_anchors": "Two. (1) The drawn x-axis rule sits on a round 5,000 to 0.26 px -- a number the authors chose as an axis limit and never printed. (2) The minor ticks are equally spaced in LINEAR value inside each decade (2.8/4.6/6.4/8.2), so they are unequally spaced in the fitted log coordinate; a wrong scale cannot reproduce ten of them to 0.48 px by accident. Neither took part in the fit."
+ },
+ "P5_fig4D_geometry": {
+  "px_per_decade": 111.1959,
+  "factor_per_px": 1.020923,
+  "held_out_minor_ticks": 16,
+  "minor_tick_residual_px_max": 0.528,
+  "bars_read": 30,
+  "bar_top_refusals": 0,
+  "max_flank_delta_px": 2.0
+ },
+ "P6_design_factorial": {
+  "levels": {
+   "NP_ratio": [
+    4,
+    8,
+    12
+   ],
+   "Dlin-MC3_Helper lipid_ratio": [
+    1,
+    10,
+    50,
+    100,
+    200
+   ],
+   "(IL+HL)": [
+    20,
+    40,
+    60,
+    80
+   ],
+   "Chol_DMG-PEG_ratio": [
+    10,
+    100,
+    500
+   ]
+  },
+  "helpers": 6,
+  "product": 1080,
+  "library_size_claimed": 1080,
+  "matches": true
+ },
+ "P7_already_merged_arm": {
+  "claim": "The in-vitro HepG2 arm of this paper is the SAME screen as corpus experiment YZ_2022 (PMID 35879315), which this paper cites as ref [16] for it.",
+  "step_1_corpus_vs_repo": {
+   "join": "on composition (helper, 4 component percents to 1 dp, N:P), using NO value column",
+   "rows_matched": 1080,
+   "of": 1080,
+   "spearman_Experiment_value_vs_RLU_HepG2": 1.0,
+   "pearson": 0.99999999,
+   "ln_unit_residual_rms": 0.000285314,
+   "predicted_rms_from_3dp_rounding_alone": 0.000288675,
+   "ratio_observed_over_predicted": 0.9884,
+   "reading": "The residual IS the rounding in the deposited file. An exact-equality join therefore fails and is not the right test."
+  },
+  "step_2_this_papers_192_si_values": {
+   "si_rows": 192,
+   "present_in_that_column_as_a_multiset": 192,
+   "per_helper": {
+    "14PA": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": true
+    },
+    "18PG": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": false
+    },
+    "DDAB": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": false
+    },
+    "DOPE": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": true
+    },
+    "DOTAP": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": true
+    },
+    "DSPC": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": false
+    }
+   }
+  },
+  "verdict": "ALREADY MERGED. Emitting these 192 values under a new Experiment_ID would duplicate a merged experiment and manufacture exactly the source-separability signal this project measures."
+ },
+ "P8_corpus_positive_controls": [
+  {
+   "control": "DSPC name scan over HL_name",
+   "rows": 7038,
+   "asserts": "the named helper DSPC, which this paper uses",
+   "passes": true
+  },
+  {
+   "control": "DLin-MC3-DMA by InChIKey",
+   "rows": 3098,
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "name_spellings": [
+    "DLin-MC3-DMA",
+    "Dlin-MC3-DMA"
+   ],
+   "asserts": "THE ionizable lipid of this paper, by structure not by name",
+   "passes": true
+  },
+  {
+   "control": "cholesterol by exact registry SMILES",
+   "rows": 30397,
+   "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "asserts": "the registry cholesterol string itself",
+   "passes": true
+  }
+ ],
+ "P9_C10_anchor": {
+  "anchors_built": 2,
+  "exact_matches_on_full_inchikey": 2,
+  "empty_on_purpose": [
+   "Cholesterol",
+   "DOTAP",
+   "DDAB",
+   "DOPE",
+   "DSPC",
+   "14PA",
+   "18PG"
+  ],
+  "connectivity_seeds_credited": 2,
+  "connectivity_seed_delta_mass_Da": [
+   0.0,
+   0.0
+  ],
+  "independence_guards": "make_reference.py --selftest: control clean, 2 of 2 guard seeds credited (a forbidden import the AST sees and nothing executes, and a 40-character slice of the target pasted in as a literal).",
+  "vacuous_where_empty": "Against the 7 empty anchors the guards are VACUOUS, not passing. Saying 'C10 clean' there would be F-013/F-037 exactly."
+ },
+ "P10_seed_suite": {
+  "credited": 6,
+  "seeds": 6,
+  "tracked_artifacts_unchanged": "PASS",
+  "reruns_byte_identical": true
+ },
+ "measured_sensitivity_limits": {
+  "fig4B": "1 px = a factor of 1.0077. The worst held-out minor tick is 0.48 px = a factor of 1.0037, so a value is good to about 0.4%. The stroke-centre convention moves values by +0.54 px on average (a factor of 1.00418); reporting bar_top's row instead would bias every value high by that much.",
+  "fig4D": "1 px = a factor of 1.0209, three times coarser than Fig 4B. That the six printed liver shares still reproduce to 0.14 pp rms means the bars are being located to well under a pixel.",
+  "what_this_read_CANNOT_do": "It cannot recover a dose that the panel does not state (Fig 4D and Fig 4C carry no dose), and it cannot distinguish a bar at the axis minimum from a bar below it -- though no bar in either panel sits on the baseline."
+ }
+}

@@ -1,0 +1,4 @@
+IL_name,IL_SMILES,InChIKey,drawn_in_paper,structure_source,confidence
+C12-200,CCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC,RVHYPUORVDKRTM-UHFFFAOYSA-N,1,"corpus AC_2025 (498 rows, 1 structure), confirmed against the Fig 1A drawing by an independently assembled anchor at an EXACT full-InChIKey match",high
+SM-102,CCCCCCCCC(CCCCCCCC)OC(=O)CCCCCCCN(CCO)CCCCCC(=O)OCCCCCCCCCCC,BGNVBNJYBVCBJH-UHFFFAOYSA-N,0,"provenance/reagent_registry.py, written from the chemical name heptadecan-9-yl 8-[(2-hydroxyethyl)(6-oxo-6-undecoxyhexyl)amino]octanoate",high
+ALC-0315,CCCCCCCCC(CCCCCC)C(=O)OCCCCCCN(CCCCO)CCCCCCOC(=O)C(CCCCCC)CCCCCCCC,QGWBEETXHOVFQS-UHFFFAOYSA-N,0,"provenance/reagent_registry.py, written from the chemical name ((4-hydroxybutyl)azanediyl)bis(hexane-6,1-diyl) bis(2-hexyldecanoate)",high

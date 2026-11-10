@@ -1,0 +1,385 @@
+{
+ "panel": "Fig 4D",
+ "calibration": {
+  "kind": "log10",
+  "px_per_unit": 111.1959,
+  "origin_px": 1154.28,
+  "origin_value": 10000000.0,
+  "tick_step_units": -1.0,
+  "n_ticks": 4,
+  "tick_fit_residual_px": 0.1421,
+  "tick_residual_tol_px": 2.5
+ },
+ "major_ticks_px": [
+  1154.208,
+  1265.618,
+  1376.602,
+  1487.867
+ ],
+ "decade_gaps_px": [
+  111.41,
+  110.984,
+  111.264
+ ],
+ "minor_ticks_held_out_n": 16,
+ "minor_tick_residual_px_max": 0.528,
+ "minor_tick_residual_px_rms": 0.298,
+ "precision": {
+  "px_per_decade": 111.1959,
+  "factor_per_px": 1.020923
+ },
+ "baseline_value_read": 1983.1,
+ "liver_share_check": {
+  "_what": "liver / sum(5 organ bars), against the percentage PRINTED on the pie chart the authors drew above each group. They never computed it from these bars, so it is external to this read; one misread bar breaks it.",
+  "rows": [
+   {
+    "formulation": "AI-b3",
+    "printed_pct": 96.7,
+    "computed_pct": 96.729,
+    "delta_pp": 0.029
+   },
+   {
+    "formulation": "CII-b2",
+    "printed_pct": 91.4,
+    "computed_pct": 91.519,
+    "delta_pp": 0.119
+   },
+   {
+    "formulation": "CII-b3",
+    "printed_pct": 95.5,
+    "computed_pct": 95.182,
+    "delta_pp": -0.318
+   },
+   {
+    "formulation": "DI-a1",
+    "printed_pct": 95.2,
+    "computed_pct": 95.166,
+    "delta_pp": -0.034
+   },
+   {
+    "formulation": "DI-a3",
+    "printed_pct": 96.0,
+    "computed_pct": 96.021,
+    "delta_pp": 0.021
+   },
+   {
+    "formulation": "FIII-b3",
+    "printed_pct": 87.5,
+    "computed_pct": 87.513,
+    "delta_pp": 0.013
+   }
+  ],
+  "max_abs_delta_pp": 0.318,
+  "rms_delta_pp": 0.14,
+  "n_exact_to_1pp": 6,
+  "n": 6
+ },
+ "text_claim_over_87_pct": {
+  "claim": "'over 87% of the observed bioluminescent flux localized in the liver' (Sec 3.3)",
+  "min_printed": 87.5,
+  "min_computed": 87.513
+ },
+ "gate_failures": [],
+ "bars": [
+  {
+   "formulation": "AI-b3",
+   "organ": "Heart",
+   "x0": 1903,
+   "x1": 1933,
+   "bar_top_row": 1463,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1463.076,
+   "value_photons_per_s": 16709.20337127402
+  },
+  {
+   "formulation": "AI-b3",
+   "organ": "Liver",
+   "x0": 1944,
+   "x1": 1974,
+   "bar_top_row": 1184,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1183.858,
+   "value_photons_per_s": 5420077.157286957
+  },
+  {
+   "formulation": "AI-b3",
+   "organ": "Spleen",
+   "x0": 1985,
+   "x1": 2016,
+   "bar_top_row": 1362,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1362.058,
+   "value_photons_per_s": 135340.50786892496
+  },
+  {
+   "formulation": "AI-b3",
+   "organ": "Lung",
+   "x0": 2026,
+   "x1": 2057,
+   "bar_top_row": 1496,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1496.561,
+   "value_photons_per_s": 8352.589055888408
+  },
+  {
+   "formulation": "AI-b3",
+   "organ": "Kidney",
+   "x0": 2068,
+   "x1": 2099,
+   "bar_top_row": 1448,
+   "flank_delta_px": 2.0,
+   "stroke_centre_row": 1447.844,
+   "value_photons_per_s": 22905.601365245853
+  },
+  {
+   "formulation": "CII-b2",
+   "organ": "Heart",
+   "x0": 2138,
+   "x1": 2168,
+   "bar_top_row": 1524,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1524.723,
+   "value_photons_per_s": 4661.847658178573
+  },
+  {
+   "formulation": "CII-b2",
+   "organ": "Liver",
+   "x0": 2179,
+   "x1": 2209,
+   "bar_top_row": 1254,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1253.868,
+   "value_photons_per_s": 1271714.489705888
+  },
+  {
+   "formulation": "CII-b2",
+   "organ": "Spleen",
+   "x0": 2221,
+   "x1": 2251,
+   "bar_top_row": 1424,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1424.423,
+   "value_photons_per_s": 37201.65251520344
+  },
+  {
+   "formulation": "CII-b2",
+   "organ": "Lung",
+   "x0": 2262,
+   "x1": 2291,
+   "bar_top_row": 1463,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1463.306,
+   "value_photons_per_s": 16629.733396146923
+  },
+  {
+   "formulation": "CII-b2",
+   "organ": "Kidney",
+   "x0": 2303,
+   "x1": 2333,
+   "bar_top_row": 1400,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1401.859,
+   "value_photons_per_s": 59359.4019756206
+  },
+  {
+   "formulation": "CII-b3",
+   "organ": "Heart",
+   "x0": 2373,
+   "x1": 2403,
+   "bar_top_row": 1477,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1477.104,
+   "value_photons_per_s": 12496.816935592698
+  },
+  {
+   "formulation": "CII-b3",
+   "organ": "Liver",
+   "x0": 2415,
+   "x1": 2444,
+   "bar_top_row": 1179,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1179.213,
+   "value_photons_per_s": 5967299.888263823
+  },
+  {
+   "formulation": "CII-b3",
+   "organ": "Spleen",
+   "x0": 2456,
+   "x1": 2485,
+   "bar_top_row": 1347,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1347.048,
+   "value_photons_per_s": 184676.52006985512
+  },
+  {
+   "formulation": "CII-b3",
+   "organ": "Lung",
+   "x0": 2497,
+   "x1": 2527,
+   "bar_top_row": 1427,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1426.888,
+   "value_photons_per_s": 35350.542409645706
+  },
+  {
+   "formulation": "CII-b3",
+   "organ": "Kidney",
+   "x0": 2539,
+   "x1": 2568,
+   "bar_top_row": 1394,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1394.216,
+   "value_photons_per_s": 69538.57291853965
+  },
+  {
+   "formulation": "DI-a1",
+   "organ": "Heart",
+   "x0": 2609,
+   "x1": 2638,
+   "bar_top_row": 1524,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1525.501,
+   "value_photons_per_s": 4587.296746920265
+  },
+  {
+   "formulation": "DI-a1",
+   "organ": "Liver",
+   "x0": 2649,
+   "x1": 2679,
+   "bar_top_row": 1197,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1198.029,
+   "value_photons_per_s": 4041615.1676229173
+  },
+  {
+   "formulation": "DI-a1",
+   "organ": "Spleen",
+   "x0": 2691,
+   "x1": 2721,
+   "bar_top_row": 1378,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1378.165,
+   "value_photons_per_s": 96955.10692827868
+  },
+  {
+   "formulation": "DI-a1",
+   "organ": "Lung",
+   "x0": 2732,
+   "x1": 2762,
+   "bar_top_row": 1416,
+   "flank_delta_px": 2.0,
+   "stroke_centre_row": 1416.1,
+   "value_photons_per_s": 44198.94131561369
+  },
+  {
+   "formulation": "DI-a1",
+   "organ": "Kidney",
+   "x0": 2774,
+   "x1": 2803,
+   "bar_top_row": 1401,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1401.698,
+   "value_photons_per_s": 59556.904359345805
+  },
+  {
+   "formulation": "DI-a3",
+   "organ": "Heart",
+   "x0": 2843,
+   "x1": 2874,
+   "bar_top_row": 1534,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1534.023,
+   "value_photons_per_s": 3845.18183659851
+  },
+  {
+   "formulation": "DI-a3",
+   "organ": "Liver",
+   "x0": 2885,
+   "x1": 2915,
+   "bar_top_row": 1230,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1230.045,
+   "value_photons_per_s": 2082755.863515633
+  },
+  {
+   "formulation": "DI-a3",
+   "organ": "Spleen",
+   "x0": 2926,
+   "x1": 2956,
+   "bar_top_row": 1437,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1437.429,
+   "value_photons_per_s": 28418.686547451125
+  },
+  {
+   "formulation": "DI-a3",
+   "organ": "Lung",
+   "x0": 2967,
+   "x1": 2997,
+   "bar_top_row": 1443,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1443.22,
+   "value_photons_per_s": 25206.925847684586
+  },
+  {
+   "formulation": "DI-a3",
+   "organ": "Kidney",
+   "x0": 3008,
+   "x1": 3038,
+   "bar_top_row": 1437,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1436.739,
+   "value_photons_per_s": 28827.323572788086
+  },
+  {
+   "formulation": "FIII-b3",
+   "organ": "Heart",
+   "x0": 3078,
+   "x1": 3109,
+   "bar_top_row": 1507,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1507.62,
+   "value_photons_per_s": 6642.978267206735
+  },
+  {
+   "formulation": "FIII-b3",
+   "organ": "Liver",
+   "x0": 3120,
+   "x1": 3150,
+   "bar_top_row": 1281,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1282.745,
+   "value_photons_per_s": 699350.2449210535
+  },
+  {
+   "formulation": "FIII-b3",
+   "organ": "Spleen",
+   "x0": 3160,
+   "x1": 3191,
+   "bar_top_row": 1438,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1438.555,
+   "value_photons_per_s": 27763.33075350129
+  },
+  {
+   "formulation": "FIII-b3",
+   "organ": "Lung",
+   "x0": 3202,
+   "x1": 3232,
+   "bar_top_row": 1450,
+   "flank_delta_px": 0.0,
+   "stroke_centre_row": 1450.416,
+   "value_photons_per_s": 21717.35063102331
+  },
+  {
+   "formulation": "FIII-b3",
+   "organ": "Kidney",
+   "x0": 3243,
+   "x1": 3274,
+   "bar_top_row": 1416,
+   "flank_delta_px": 1.0,
+   "stroke_centre_row": 1416.692,
+   "value_photons_per_s": 43661.15938286424
+  }
+ ]
+}

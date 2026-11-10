@@ -1,0 +1,257 @@
+{
+ "P1_identity": {
+  "pmid": "41138890",
+  "doi": "10.1016/j.ijpharm.2025.126278",
+  "first_author": "Marco Tullio Rodrigues Alves",
+  "proposed_Experiment_ID": "MR_2025",
+  "checked_against_all_corpus_ids_by_PMID": true,
+  "n_corpus_ids_checked": 54,
+  "id_collides": false,
+  "pmid_already_in_corpus": false,
+  "abstractText_length": 1740,
+  "no_original_data_discriminator": "abstract is 1,740 chars with Methods and Results -> ordinary research article"
+ },
+ "P2_governing_number": {
+  "n_distinct_ionizable_lipids": 3,
+  "n_new_to_the_corpus": 0,
+  "n_formulations": 18,
+  "n_individually_measured_formulations_fig1D": 18,
+  "n_design_supported_per_LNP_values": "18 formulations x 5 organs = 90 b-DNA cells (Fig 1C), all biodistribution",
+  "n_attributed_delivery_values_with_varying_chemistry": 3,
+  "factorial_claimed": "3 helper lipids x 6 molar contents",
+  "factorial_proved": "3 x 6 = 18",
+  "factorial_equals_row_count": true,
+  "ionizable_lipid_molratio_values_across_all_29_SI_rows": [
+   35.0
+  ],
+  "verdict": "a HELPER-LIPID / MOLAR-RATIO formulation screen on one ionizable lipid, plus a 3-point ionizable-lipid substitution"
+ },
+ "P3_si_tables": {
+  "container": "mmc1.docx, tables embedded as EMF METAFILES",
+  "w_tbl_count_in_document_xml": 1,
+  "value_tables_actually_present": 3,
+  "why_the_count_disagrees": "Tables S1/S2/S3 are images; only Table S4 is a Word table",
+  "EXTTEXTOUTW_records": {
+   "TableS1": 694,
+   "TableS3": 534,
+   "TableS2": 1571
+  },
+  "glyph_grouping": {
+   "S1": {
+    "n_text_records": 694,
+    "n_rows": 23,
+    "gap_ratio_at_break": 2.633,
+    "largest_gap_jump": 240,
+    "widest_within_cell_advance": 147,
+    "narrowest_column_gap": 387,
+    "threshold_used": 267.0
+   },
+   "S3": {
+    "n_text_records": 534,
+    "n_rows": 16,
+    "gap_ratio_at_break": 2.096,
+    "largest_gap_jump": 160,
+    "widest_within_cell_advance": 146,
+    "narrowest_column_gap": 306,
+    "threshold_used": 226.0
+   }
+  },
+  "S1_formulations": 18,
+  "S3_formulations": 11,
+  "molpct_sum_exact_100_S1": "18/18",
+  "molpct_sum_exact_100_S3": "11/11",
+  "molpct_sum_is_partly_tautological": "PARTLY: cholesterol is the residual by construction, so the identity can only fail on a transcription error in one of the four printed percents -- which is what it is here for. It is NOT evidence the design is correct.",
+  "S3_is_a_subset_of_S1": "11/11 agree on composition, 0 disagree"
+ },
+ "P3b_independent_tie_figure_vs_SI_table": {
+  "what": "Fig 2G printed pKa (raster legend, read by eye) vs Table S3 pKa (EMF glyph records, read by stage02_si_tables.py)",
+  "n_compared": 9,
+  "n_agree_exactly": 9,
+  "n_disagree": 0,
+  "decimal_separators_differ": true,
+  "verdict": "PASS",
+  "what_it_does_NOT_validate": "the Fig 4G bar geometry. pKa is printed text in both places; nothing here touches a measured pixel."
+ },
+ "P4_fig4g_geometry": {
+  "tier": "5_pixels",
+  "source": "publisher raster gr4_lrg.jpg",
+  "native_dpi": "NOT DERIVABLE -- a standalone JPEG has no page rectangle. axis.native_tol was NOT called; it refuses a guessed dpi and a guess is all there was.",
+  "tolerance_used": "the STRICT axis.LOO_TOL_PX = 1.5 px, unrescaled; the widening was NOT relied on",
+  "ticks_px": [
+   2932.496,
+   3021.427,
+   3110.462,
+   3199.173,
+   3287.917,
+   3376.601
+  ],
+  "tick_spacing_px": [
+   88.931,
+   89.035,
+   88.71,
+   88.745,
+   88.684
+  ],
+  "tick_spacing_spread_px": 0.352,
+  "px_per_1000_units": 88.821,
+  "loo_worst_px": 0.279,
+  "loo_passes_strict_1.5px": true,
+  "precision_statement": "1 px = 11.26 units; the strict 1.5 px gate therefore permits at most 16.9 units of scale error, 0.44% of the smallest emitted value",
+  "bars_read": 11,
+  "bars_refused": 1,
+  "refusals": {
+   "Control_72h": "bar_top: no row in [2932,3375) reaches 0.90 coverage of the full 65px bar for 3 contiguous rows."
+  },
+  "flank_delta_px_max": 0.0,
+  "max_error_bar_cap_coverage": 0.6269,
+  "bars_FRAC_gate": 0.9,
+  "cap_margin_vs_gate": 0.2731,
+  "furniture_masked": "rows [2856, 2857, 2858, 2859, 2860, 3106, 3107, 3108, 3109]; limit 201 px = 3 bar widths. The bracket at 3106-3109 spans 612 px (9.1 bar widths) and covers the SM-102 and ALC-0315 windows at 0.97-1.00",
+  "censored_bars": []
+ },
+ "P5_unprinted_round_number": {
+  "what": "the 0 tick must land on the DRAWN axis baseline -- the authors drew it and never printed it",
+  "offset_px": 0.101,
+  "offset_in_axis_units": 1.14,
+  "why_it_earns_its_place": "it is the ONLY check that sees a uniform origin error: the ticks_uniform_shift seed moves every tick by +4 px, so calibrate and the LOO gate both still pass perfectly (0.279 px) while this offset moves 0.101 -> 4.101 px"
+ },
+ "P6_anchor_C10": {
+  "anchor_built_from": "Figure 1A, green box (C12-200 drawn in full; every tail PRINTED as 'C10H21')",
+  "result": "exact_match_full_inchikey",
+  "matched_corpus_rows": 498,
+  "anchor_inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+  "anchor_formula": "C70H145N5O5",
+  "anchor_exact_mass": 1136.124573,
+  "corpus_stored_Molecular_Weight": [
+   "1136.96"
+  ],
+  "connectivity_seed": {
+   "what": "Markovnikov opening of the C12 epoxide: N-CH(C10H21)-CH2OH instead of N-CH2-CH(OH)-C10H21",
+   "seeded": {
+    "inchikey": "RNUQPRZVSZGVOX-UHFFFAOYSA-N",
+    "skeleton_block": "RNUQPRZVSZGVOX",
+    "formula": "C70H145N5O5",
+    "exact_mass": 1136.124573
+   },
+   "clean": {
+    "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+    "skeleton_block": "RVHYPUORVDKRTM",
+    "formula": "C70H145N5O5",
+    "exact_mass": 1136.124573
+   },
+   "delta_exact_mass_Da": 0.0,
+   "formula_identical": true,
+   "skeleton_block_identical": false,
+   "inchikey_differs": true,
+   "credited": true
+  },
+  "independence_guards": {
+   "clean_control_clean": true,
+   "banned_import_guard_fires": true,
+   "lifted_template_guard_fires": true
+  },
+  "anchors_empty_on_purpose": 4,
+  "vacuity_statement": "SM-102, ALC-0315, cholesterol, DOPE, DSPC and DOTAP have NO independent anchor. Against an empty anchor the guards are VACUOUS, not passing."
+ },
+ "P7_seeds": {
+  "n_seeds": 8,
+  "n_credited": 8,
+  "negative_control_moved_nothing": true,
+  "byte_identical_across_two_clean_runs": true,
+  "per_seed": [
+   {
+    "seed": "tick_shift",
+    "credited": true,
+    "route": "refusal (calibrate's 2.5 px residual limit, reached before the LOO gate)",
+    "reason": "REFUSED before writing a metric: Equally-valued ticks on a log or linear axis are equally spaced in PIXELS. Unequal spacing means these positions are not tick marks -- most often glyph centroids of the axis labels, whose spacing tracks the label text, not the axis. That is error class 20. Re-detect the ticks from the darkness-weighted centroid of the columns OUTSIDE the axis rule."
+   },
+   {
+    "seed": "tick_shift_subtle",
+    "credited": true,
+    "route": "metric moved",
+    "reason": "loo_worst_px 0.279 -> 1.836 (strict gate 1.5: FAILS); 11/12 bar values moved, worst |delta| 3.7 units: {'Control_24h': (165.8, 167.6), 'Control_48h': (64.5, 66.3), 'LNP4_24h': (1246.7, 1249.0), 'LNP4_48h': (2822.9, 2826.1)}"
+   },
+   {
+    "seed": "ticks_uniform_shift",
+    "credited": true,
+    "route": "metric moved",
+    "reason": "zero_tick_offset_px 0.101 -> 4.101; 11/12 bar values moved, worst |delta| 45.1 units: {'Control_24h': (165.8, 210.9), 'Control_48h': (64.5, 109.5), 'LNP4_24h': (1246.7, 1291.7), 'LNP4_48h': (2822.9, 2867.9)}"
+   },
+   {
+    "seed": "no_furniture_mask",
+    "credited": true,
+    "route": "metric moved",
+    "reason": "6/12 bar values moved, worst |delta| 2679.6 units: {'SM-102_24h': (593.7, 3048.1), 'SM-102_48h': (1370.5, 3048.1), 'SM-102_72h': (1719.5, 3048.1), 'ALC-0315_24h': (368.5, 3048.1)}"
+   },
+   {
+    "seed": "topmost_ink",
+    "credited": true,
+    "route": "metric moved",
+    "reason": "12/12 bar values moved, worst |delta| 4053.2 units: {'Control_24h': (165.8, 267.2), 'Control_48h': (64.5, 98.3), 'Control_72h': (None, 87.0), 'LNP4_24h': (1246.7, 1381.8)}"
+   },
+   {
+    "seed": "erase_baseline",
+    "credited": true,
+    "route": "refusal",
+    "reason": "REFUSED before writing a metric: errors.DetectionError: detect_bar_windows: did not find 12 bar windows at any probe row. This is a REFUSAL. Do not fall back to an assumed pitch -- an assumed grid is error class 28, a detector miss falling through to a literal."
+   },
+   {
+    "seed": "roll_image",
+    "credited": true,
+    "route": "n/a",
+    "reason": "correctly moved nothing: 12/12 bar values identical. The harness does not credit 'any change exits non-zero'."
+   },
+   {
+    "seed": "swap_digit",
+    "credited": true,
+    "route": "n/a",
+    "reason": "1 cell(s) moved [('LNP1', 'CHL_molratio', 47.5, 97.5)]; S1_molpct_sum_exact_100 18 -> 17"
+   }
+  ],
+  "emit_refusals": {
+   "literal_confidence": "raises: emit: confidence='high' is a LITERAL.",
+   "caveat_without_a_note": "raises: emit_rows('seed') item 'X': this row carries a caveat (confidence='low', positional_ambiguity='', structure_assumed='', value_is_bound='') and its curation_note is empty.",
+   "both_fire": true
+  }
+ },
+ "P8_emission": {
+  "experiment_id": "MR_2025",
+  "experiment_id_free_in_corpus": true,
+  "pmid": "41138890",
+  "n_distinct_ionizable_lipids_in_paper": 3,
+  "n_formulations_in_paper": 18,
+  "n_rows_emitted": 3,
+  "timepoint_emitted": "72h",
+  "values_emitted": {
+   "C12-200": 3847.4,
+   "SM-102": 1719.5,
+   "ALC-0315": 1179.1
+  },
+  "z": {
+   "C12-200": 1.343494,
+   "SM-102": -0.289297,
+   "ALC-0315": -1.054197
+  },
+  "z_mean": 0.0,
+  "z_sd_ddof0": 1.0,
+  "z_over": "one z per experiment; one cell type, one cargo, one timepoint, one formulation -- error class 22 cannot arise",
+  "rows_with_a_caveat": 0,
+  "benchmarks_top_the_screen": false,
+  "benchmark_ratio_C12_200_over_SM_102": 2.2375,
+  "benchmark_ratio_C12_200_over_ALC_0315": 3.263
+ },
+ "P9_benchmarks": {
+  "question": "do the field's benchmark lipids top this screen?",
+  "answer": "NO",
+  "C12_200_over_SM_102": 2.2375,
+  "C12_200_over_ALC_0315": 3.263,
+  "but_the_comparison_is_CONFOUNDED": "the formulation (DOPE 30.5 / chol 32 / PEG 2.5) was selected as the winner of an 18-member screen run on C12-200. SM-102 and ALC-0315 are evaluated in a formulation optimised for a different ionizable lipid, so the ranking is not a clean chemistry comparison. Recorded on the row and in DECISIONS.",
+  "all_three_are_universal_controls": "C12-200, SM-102 and ALC-0315 are the field's benchmark lipids and all three are already in the corpus. 3 of 3 shared lipids are controls -- CLAUDE.md section 8's hazard in its purest form."
+ },
+ "measured_sensitivity_limits": {
+  "scale": "1 px = 11.26 axis units; the smallest emitted value (1179.1) is 105 px tall, so a 1 px read error is 0.96% of it",
+  "error_bar_caps": "the widest cap covers 0.6269 of its bar against the 0.90 gate -- margin 0.2731. A cap wider than 0.90 would leak; none here is.",
+  "control_72h": "bars.bar_top refuses it. The bar is ~3 px tall and the refusal is recorded as a refusal, never as a zero.",
+  "dose": "Fig 4G's pDNA dose is stated nowhere in the SI and the article is paywalled. Dose_ug_nucleicacid is BLANK (F-004's posture), not reconstructed from Fig 3B."
+ }
+}

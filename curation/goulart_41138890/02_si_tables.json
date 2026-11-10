@@ -1,0 +1,415 @@
+{
+ "tableS1": [
+  {
+   "formulation": "LNP1",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 15.0,
+   "CHL_molratio": 47.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 93.7,
+   "PDI": 0.113,
+   "zeta_mV": -9.4
+  },
+  {
+   "formulation": "LNP2",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 20.0,
+   "CHL_molratio": 42.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 99.5,
+   "PDI": 0.186,
+   "zeta_mV": -6.1
+  },
+  {
+   "formulation": "LNP3",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 25.0,
+   "CHL_molratio": 37.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 92.5,
+   "PDI": 0.181,
+   "zeta_mV": -2.2
+  },
+  {
+   "formulation": "LNP4",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 30.5,
+   "CHL_molratio": 32.0,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 99.8,
+   "PDI": 0.159,
+   "zeta_mV": -5.3
+  },
+  {
+   "formulation": "LNP5",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 35.0,
+   "CHL_molratio": 27.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 101.5,
+   "PDI": 0.138,
+   "zeta_mV": -1.4
+  },
+  {
+   "formulation": "LNP6",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 50.0,
+   "CHL_molratio": 12.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 110.0,
+   "PDI": 0.141,
+   "zeta_mV": -8.9
+  },
+  {
+   "formulation": "LNP7",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 15.0,
+   "CHL_molratio": 47.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 88.3,
+   "PDI": 0.241,
+   "zeta_mV": -10.1
+  },
+  {
+   "formulation": "LNP8",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 20.0,
+   "CHL_molratio": 42.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 81.6,
+   "PDI": 0.221,
+   "zeta_mV": -12.4
+  },
+  {
+   "formulation": "LNP9",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 25.0,
+   "CHL_molratio": 37.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 170.9,
+   "PDI": 0.443,
+   "zeta_mV": -9.7
+  },
+  {
+   "formulation": "LNP10",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 30.5,
+   "CHL_molratio": 32.0,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 105.4,
+   "PDI": 0.261,
+   "zeta_mV": -5.3
+  },
+  {
+   "formulation": "LNP11",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 35.0,
+   "CHL_molratio": 27.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 142.6,
+   "PDI": 0.498,
+   "zeta_mV": -5.3
+  },
+  {
+   "formulation": "LNP12",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 50.0,
+   "CHL_molratio": 12.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 135.4,
+   "PDI": 0.235,
+   "zeta_mV": 1.5
+  },
+  {
+   "formulation": "LNP13",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 15.0,
+   "CHL_molratio": 47.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 99.4,
+   "PDI": 0.199,
+   "zeta_mV": -7.8
+  },
+  {
+   "formulation": "LNP14",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 20.0,
+   "CHL_molratio": 42.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 118.2,
+   "PDI": 0.368,
+   "zeta_mV": 23.0
+  },
+  {
+   "formulation": "LNP15",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 25.0,
+   "CHL_molratio": 37.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 148.2,
+   "PDI": 0.404,
+   "zeta_mV": 27.5
+  },
+  {
+   "formulation": "LNP16",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 30.5,
+   "CHL_molratio": 32.0,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 110.3,
+   "PDI": 0.226,
+   "zeta_mV": 22.7
+  },
+  {
+   "formulation": "LNP17",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 35.0,
+   "CHL_molratio": 27.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 100.0,
+   "PDI": 0.253,
+   "zeta_mV": 16.8
+  },
+  {
+   "formulation": "LNP18",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 50.0,
+   "CHL_molratio": 12.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 75.7,
+   "PDI": 0.256,
+   "zeta_mV": 20.4
+  }
+ ],
+ "tableS3": [
+  {
+   "formulation": "LNP1",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 15.0,
+   "CHL_molratio": 47.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 94.5,
+   "PDI": 0.11,
+   "zeta_mV": -12.2,
+   "pKa": 7.59
+  },
+  {
+   "formulation": "LNP2",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 20.0,
+   "CHL_molratio": 42.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 113.3,
+   "PDI": 0.142,
+   "zeta_mV": -10.8,
+   "pKa": 7.47
+  },
+  {
+   "formulation": "LNP3",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 25.0,
+   "CHL_molratio": 37.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 112.6,
+   "PDI": 0.151,
+   "zeta_mV": -6.2,
+   "pKa": 7.6
+  },
+  {
+   "formulation": "LNP4",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOPE",
+   "HL_molratio": 30.5,
+   "CHL_molratio": 32.0,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 101.8,
+   "PDI": 0.106,
+   "zeta_mV": -3.3,
+   "pKa": 7.41
+  },
+  {
+   "formulation": "LNP8",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 20.0,
+   "CHL_molratio": 42.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 92.1,
+   "PDI": 0.131,
+   "zeta_mV": -15.4,
+   "pKa": 7.37
+  },
+  {
+   "formulation": "LNP10",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 30.5,
+   "CHL_molratio": 32.0,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 126.5,
+   "PDI": 0.147,
+   "zeta_mV": -11.4,
+   "pKa": 6.78
+  },
+  {
+   "formulation": "LNP12",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DSPC",
+   "HL_molratio": 50.0,
+   "CHL_molratio": 12.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 151.8,
+   "PDI": 0.145,
+   "zeta_mV": -10.9,
+   "pKa": 7.49
+  },
+  {
+   "formulation": "LNP14",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 20.0,
+   "CHL_molratio": 42.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 88.4,
+   "PDI": 0.123,
+   "zeta_mV": 4.0,
+   "pKa": 7.65
+  },
+  {
+   "formulation": "LNP15",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 25.0,
+   "CHL_molratio": 37.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 114.5,
+   "PDI": 0.102,
+   "zeta_mV": 5.7,
+   "pKa": 8.06
+  },
+  {
+   "formulation": "LNP16",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 30.5,
+   "CHL_molratio": 32.0,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 90.5,
+   "PDI": 0.091,
+   "zeta_mV": 11.0,
+   "pKa": 8.1
+  },
+  {
+   "formulation": "LNP18",
+   "IL_molratio": 35.0,
+   "helper_lipid": "DOTAP",
+   "HL_molratio": 50.0,
+   "CHL_molratio": 12.5,
+   "PEG_molratio": 2.5,
+   "diameter_nm": 87.2,
+   "PDI": 0.186,
+   "zeta_mV": 22.7,
+   "pKa": 10.01
+  }
+ ],
+ "checks": {
+  "S1_n_formulations": 18,
+  "S3_n_formulations": 11,
+  "S1_helpers": [
+   "DOPE",
+   "DOTAP",
+   "DSPC"
+  ],
+  "S1_helper_contents": [
+   15.0,
+   20.0,
+   25.0,
+   30.5,
+   35.0,
+   50.0
+  ],
+  "S1_factorial": "3 x 6 = 18",
+  "S1_factorial_equals_row_count": true,
+  "S1_contents_DOPE": [
+   15.0,
+   20.0,
+   25.0,
+   30.5,
+   35.0,
+   50.0
+  ],
+  "S1_contents_DOTAP": [
+   15.0,
+   20.0,
+   25.0,
+   30.5,
+   35.0,
+   50.0
+  ],
+  "S1_contents_DSPC": [
+   15.0,
+   20.0,
+   25.0,
+   30.5,
+   35.0,
+   50.0
+  ],
+  "S1_molpct_sums": [
+   100.0
+  ],
+  "S1_molpct_sum_exact_100": 18,
+  "S1_molpct_sum_n": 18,
+  "S1_molpct_sum_is_tautological": "PARTLY: cholesterol is the residual by construction, so the identity can only fail on a transcription error in one of the four printed percents -- which is what it is here for. It is NOT evidence the design is correct.",
+  "S3_molpct_sum_exact_100": 11,
+  "S3_molpct_sum_n": 11,
+  "IL_molratio_constant": [
+   35.0
+  ],
+  "PEG_molratio_constant": [
+   2.5
+  ],
+  "S3_subset_of_S1_agree": 11,
+  "S3_subset_of_S1_disagree": [],
+  "glyph_grouping": {
+   "S1": {
+    "n_text_records": 694,
+    "n_rows": 23,
+    "gap_ratio_at_break": 2.633,
+    "largest_gap_jump": 240,
+    "widest_within_cell_advance": 147,
+    "narrowest_column_gap": 387,
+    "threshold_used": 267.0
+   },
+   "S3": {
+    "n_text_records": 534,
+    "n_rows": 16,
+    "gap_ratio_at_break": 2.096,
+    "largest_gap_jump": 160,
+    "widest_within_cell_advance": 146,
+    "narrowest_column_gap": 306,
+    "threshold_used": 226.0
+   }
+  }
+ }
+}

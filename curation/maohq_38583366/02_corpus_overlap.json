@@ -1,0 +1,284 @@
+{
+ "_what": "Corpus overlap, duplicate-arm test and token-pattern test for PMID 38583366.",
+ "inputs": {
+  "1080_LNP_OHE.csv": {
+   "path": "curation/maohq_39375194/source/github/1080_LNP_OHE.csv",
+   "md5": "98baa22d8d8e9a92648e1c9b9904198f"
+  },
+  "01_si_tables.csv": {
+   "md5": "88c3ebe65509550cd5c02910f0573753"
+  }
+ },
+ "positive_controls": [
+  {
+   "control": "DSPC name scan over HL_name",
+   "rows": 7038,
+   "asserts": "the named helper DSPC, which this paper uses",
+   "passes": true
+  },
+  {
+   "control": "DLin-MC3-DMA by InChIKey",
+   "rows": 3098,
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "name_spellings": [
+    "DLin-MC3-DMA",
+    "Dlin-MC3-DMA"
+   ],
+   "asserts": "THE ionizable lipid of this paper, by structure not by name",
+   "passes": true
+  },
+  {
+   "control": "cholesterol by exact registry SMILES",
+   "rows": 30397,
+   "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "asserts": "the registry cholesterol string itself",
+   "passes": true
+  }
+ ],
+ "distinct_ionizable_lipids_this_paper_contributes": 1,
+ "the_one_lipid": {
+  "name_in_paper": "DLin-MC3 DMA (Materials), DLin-MC3-DMA elsewhere",
+  "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+  "already_in_corpus": true,
+  "vitro_rows": 3081,
+  "vitro_sources": [
+   "AC_2025",
+   "SP_2020",
+   "WT_2026",
+   "YZ_2022",
+   "YZ_2024"
+  ],
+  "vivo_rows": 17,
+  "vivo_sources": [
+   "BL_2023",
+   "NG_2025_2",
+   "SB_2024",
+   "XD_2026",
+   "ZC_2023",
+   "ZH_2023"
+  ],
+  "vivo_organs_already_covered": [
+   "ear",
+   "liver",
+   "lung_epithelium",
+   "muscle",
+   "whole_body"
+  ],
+  "vivo_sources_with_liver": [
+   "NG_2025_2",
+   "ZC_2023",
+   "ZH_2023"
+  ]
+ },
+ "in_vivo_pool_shared_structures": [
+  {
+   "inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "names": [
+    "SM-102"
+   ],
+   "sources": [
+    "SB_2024",
+    "SS_2018",
+    "SY_2025",
+    "XD_2026"
+   ],
+   "organs": [
+    "ear",
+    "whole_body"
+   ],
+   "rows": 17
+  },
+  {
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "names": [
+    "DLin-MC3-DMA",
+    "Dlin-MC3-DMA"
+   ],
+   "sources": [
+    "BL_2023",
+    "NG_2025_2",
+    "SB_2024",
+    "XD_2026",
+    "ZC_2023",
+    "ZH_2023"
+   ],
+   "organs": [
+    "ear",
+    "liver",
+    "lung_epithelium",
+    "muscle",
+    "whole_body"
+   ],
+   "rows": 17
+  }
+ ],
+ "already_merged_arm": {
+  "claim": "The in-vitro HepG2 arm of this paper is the SAME screen as corpus experiment YZ_2022 (PMID 35879315), which this paper cites as ref [16] for it.",
+  "step_1_corpus_vs_repo": {
+   "join": "on composition (helper, 4 component percents to 1 dp, N:P), using NO value column",
+   "rows_matched": 1080,
+   "of": 1080,
+   "spearman_Experiment_value_vs_RLU_HepG2": 1.0,
+   "pearson": 0.99999999,
+   "ln_unit_residual_rms": 0.000285314,
+   "predicted_rms_from_3dp_rounding_alone": 0.000288675,
+   "ratio_observed_over_predicted": 0.9884,
+   "reading": "The residual IS the rounding in the deposited file. An exact-equality join therefore fails and is not the right test."
+  },
+  "step_2_this_papers_192_si_values": {
+   "si_rows": 192,
+   "present_in_that_column_as_a_multiset": 192,
+   "per_helper": {
+    "14PA": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": true
+    },
+    "18PG": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": false
+    },
+    "DDAB": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": false
+    },
+    "DOPE": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": true
+    },
+    "DOTAP": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": true
+    },
+    "DSPC": {
+     "si_rows": 32,
+     "in_repo_column_multiset": 32,
+     "equals_that_helpers_top_32": false
+    }
+   }
+  },
+  "verdict": "ALREADY MERGED. Emitting these 192 values under a new Experiment_ID would duplicate a merged experiment and manufacture exactly the source-separability signal this project measures."
+ },
+ "design_proved": {
+  "levels": {
+   "NP_ratio": [
+    4,
+    8,
+    12
+   ],
+   "Dlin-MC3_Helper lipid_ratio": [
+    1,
+    10,
+    50,
+    100,
+    200
+   ],
+   "(IL+HL)": [
+    20,
+    40,
+    60,
+    80
+   ],
+   "Chol_DMG-PEG_ratio": [
+    10,
+    100,
+    500
+   ]
+  },
+  "helpers": 6,
+  "product": 1080,
+  "library_size_claimed": 1080,
+  "matches": true
+ },
+ "token_pattern_test": {
+  "_what": "This paper's LNP ids are cluster tokens (AI, CII, DI, FIII) plus a sub-cluster letter and an index. They are LOCAL indices, not a shared catalogue: every one of them is a formulation of the same single lipid. A substring join on IL_name would match unrelated corpus lipids.",
+  "tokens": {
+   "AI": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "BI": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "CI": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "CII": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "DI": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "FIII": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "AI-a1": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "CII-b3": {
+    "rows_matched_by_substring": 0,
+    "distinct_structures": 0,
+    "example_names": []
+   },
+   "A1": {
+    "rows_matched_by_substring": 5249,
+    "distinct_structures": 4393,
+    "example_names": [
+     "10A1-1B-Ac10",
+     "10A1-1B-Ac10-1",
+     "10A1-1B-Ac12",
+     "10A1-1B-Ac18",
+     "10A1-1B-Ac8-1",
+     "10A1-1B-EP10"
+    ]
+   },
+   "C1": {
+    "rows_matched_by_substring": 5112,
+    "distinct_structures": 4100,
+    "example_names": [
+     "100C12",
+     "100C14",
+     "100C16",
+     "103C10d",
+     "103C12",
+     "103C14"
+    ]
+   },
+   "D1": {
+    "rows_matched_by_substring": 915,
+    "distinct_structures": 915,
+    "example_names": [
+     "A1+B1+C14+D15",
+     "A1+B1+C9+D1",
+     "A1+B10+C10+D1",
+     "A1+B10+C13+D17",
+     "A1+B10+C15+D11",
+     "A1+B10+C15+D19"
+    ]
+   }
+  }
+ },
+ "f057_18PG": {
+  "question": "Is 18PG SOPG (18:0/18:1, the corpus string on 1,474 rows) or DOPG (18:1/18:1)?",
+  "what_this_paper_says": "NOTHING that discriminates. Verbatim and complete: 'a mixture of helper lipids (DOTAP, DDAB, DOPE, DSPC, 14PA, 18PG) from Avanti'. No chemical name, no catalogue number, no acyl specification, no structure is drawn anywhere in the article or the SI.",
+  "searched": "'stearoyl', 'oleoyl', 'glycero', 'phospho', '18:0', '18:1', 'DOPG', 'SOPG', 'catalog', 'Cat' over 60,875 chars of JATS full text and 17,600 chars of SI text: zero hits for every one of them.",
+  "verdict": "This paper DOES NOT SETTLE F-057 in either direction. It supports neither SOPG nor DOPG. No change to data/."
+ }
+}

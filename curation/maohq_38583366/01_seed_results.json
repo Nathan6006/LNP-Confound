@@ -1,0 +1,103 @@
+{
+ "credited": 6,
+ "seeds": 6,
+ "results": [
+  {
+   "seed": "CONTROL(stage01_fig4b.py)",
+   "returncode": 0,
+   "gates": {
+    "decade_gap_difference_px": "0.0774",
+    "minor_tick_residual_px_max": "0.4800",
+    "baseline_offset_px": "0.2599",
+    "n_bars": "20"
+   },
+   "verdict": "PASS"
+  },
+  {
+   "seed": "CONTROL(stage02_fig4d.py)",
+   "returncode": 0,
+   "gates": {
+    "minor_tick_residual_px_max": "0.5280",
+    "liver_share_max_abs_delta_pp": "0.3180",
+    "liver_share_n_exact_to_1pp": "6",
+    "n_bars": "30"
+   },
+   "verdict": "PASS"
+  },
+  {
+   "seed": "tick_shift_4b_subtle",
+   "stage": "stage01_fig4b.py",
+   "kind": "metric",
+   "returncode": 1,
+   "metric": "decade_gap_difference_px",
+   "control_value": "0.0774",
+   "seeded_value": "6.0774",
+   "verdict": "CREDITED: metric moved 0.0774 -> 6.0774 and the gate exited non-zero"
+  },
+  {
+   "seed": "tick_shift_4b_gross",
+   "stage": "stage01_fig4b.py",
+   "kind": "refusal_calibrate",
+   "returncode": 1,
+   "metric": null,
+   "control_value": null,
+   "seeded_value": null,
+   "verdict": "CREDITED (refusal_calibrate route): the library refused before any value was produced",
+   "refusal_excerpt": "errors.CalibrationError: calibrate: tick-fit residual 4.03 px exceeds 2.5 px over 3 ticks at [1641.01, 1946.05, 2239.0]."
+  },
+  {
+   "seed": "baseline_shift_4b",
+   "stage": "stage01_fig4b.py",
+   "kind": "metric",
+   "returncode": 1,
+   "metric": "baseline_offset_px",
+   "control_value": "0.2599",
+   "seeded_value": "7.7401",
+   "verdict": "CREDITED: metric moved 0.2599 -> 7.7401 and the gate exited non-zero"
+  },
+  {
+   "seed": "occlude_bar_4b",
+   "stage": "stage01_fig4b.py",
+   "kind": "refusal_bar_top",
+   "returncode": 1,
+   "metric": null,
+   "control_value": null,
+   "seeded_value": null,
+   "verdict": "CREDITED (refusal_bar_top route): the library refused before any value was produced",
+   "refusal_excerpt": "errors.DetectionError: bar_top: no row in [1630,2327) reaches 0.90 coverage of the full 47px bar for 3 contiguous rows."
+  },
+  {
+   "seed": "liver_bar_4d",
+   "stage": "stage02_fig4d.py",
+   "kind": "metric",
+   "returncode": 1,
+   "metric": "liver_share_max_abs_delta_pp",
+   "control_value": "0.3180",
+   "seeded_value": "76.2920",
+   "verdict": "CREDITED: metric moved 0.3180 -> 76.2920 and the gate exited non-zero"
+  },
+  {
+   "seed": "minor_tick_4d",
+   "stage": "stage02_fig4d.py",
+   "kind": "metric",
+   "returncode": 1,
+   "metric": "minor_tick_residual_px_max",
+   "control_value": "0.5280",
+   "seeded_value": "4.8250",
+   "verdict": "CREDITED: metric moved 0.5280 -> 4.8250 and the gate exited non-zero"
+  },
+  {
+   "seed": "_F069_tracked_artifacts_unchanged",
+   "pre_sha256": {
+    "01_fig4b.json": "569f27dc4660c6295f8229ffd8b0a0f8cb21430164c53c757225ff921096f4ec",
+    "02_fig4d.json": "c84d02571361e144a2beadc1bfe6f7b6dfe3380f2c69ba8d8771564ee51b72a1"
+   },
+   "post_sha256": {
+    "01_fig4b.json": "569f27dc4660c6295f8229ffd8b0a0f8cb21430164c53c757225ff921096f4ec",
+    "02_fig4d.json": "c84d02571361e144a2beadc1bfe6f7b6dfe3380f2c69ba8d8771564ee51b72a1"
+   },
+   "verdict": "PASS"
+  }
+ ],
+ "tmpdir": "/var/folders/yv/c04567j13yb34jnsj9wv6vvc0000gn/T/maohq38_seeds_ct2w7ucp"
+}

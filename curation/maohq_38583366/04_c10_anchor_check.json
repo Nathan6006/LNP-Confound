@@ -1,0 +1,85 @@
+{
+ "_what": "C10 for maohq_38583366, run locally.",
+ "anchors_built": 2,
+ "anchors_empty_on_purpose": [
+  "Cholesterol",
+  "DOTAP",
+  "DDAB",
+  "DOPE",
+  "DSPC",
+  "14PA",
+  "18PG"
+ ],
+ "results": [
+  {
+   "lipid_name": "DLin-MC3-DMA",
+   "anchor": {
+    "smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+    "formula": "C43H79NO2",
+    "exact_mass": 641.611081,
+    "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+    "skeleton": "NRLNQCOGCKAESA"
+   },
+   "corpus": {
+    "smiles": "CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C",
+    "formula": "C43H79NO2",
+    "exact_mass": 641.611081,
+    "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+    "skeleton": "NRLNQCOGCKAESA"
+   },
+   "full_inchikey_match": true,
+   "skeleton_match": true,
+   "byte_identical_canonical": true,
+   "_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation is byte-identical to a correct original once canonicalised. Independence is established by make_reference.py's two run-time guards, both of which were made to fail on purpose."
+  },
+  {
+   "lipid_name": "DMG-PEG2000",
+   "anchor": {
+    "smiles": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC",
+    "formula": "C122H242O50",
+    "exact_mass": 2507.639389,
+    "inchikey": "NLDCRRFPGOSAHV-UHFFFAOYSA-N",
+    "skeleton": "NLDCRRFPGOSAHV"
+   },
+   "corpus": {
+    "smiles": "CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC",
+    "formula": "C122H242O50",
+    "exact_mass": 2507.639389,
+    "inchikey": "NLDCRRFPGOSAHV-UHFFFAOYSA-N",
+    "skeleton": "NLDCRRFPGOSAHV"
+   },
+   "full_inchikey_match": true,
+   "skeleton_match": true,
+   "byte_identical_canonical": true,
+   "_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation is byte-identical to a correct original once canonicalised. Independence is established by make_reference.py's two run-time guards, both of which were made to fail on purpose."
+  }
+ ],
+ "exact_matches_on_full_inchikey": 2,
+ "connectivity_seeds": [
+  {
+   "anchor": "DLin-MC3-DMA",
+   "defect_class": "regiochemistry",
+   "formula_identical": true,
+   "exact_mass_identical": true,
+   "delta_mass_Da": 0.0,
+   "clean_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "seeded_inchikey": "DPHDIRYUGZIOOZ-PNOCIVJDSA-N",
+   "skeleton_block_also_differs": true,
+   "credited": true
+  },
+  {
+   "anchor": "DMG-PEG2000",
+   "defect_class": "ester direction",
+   "formula_identical": true,
+   "exact_mass_identical": true,
+   "delta_mass_Da": 0.0,
+   "clean_inchikey": "NLDCRRFPGOSAHV-UHFFFAOYSA-N",
+   "seeded_inchikey": "HJFGSNBISQKZRF-UHFFFAOYSA-N",
+   "skeleton_block_also_differs": true,
+   "credited": true
+  }
+ ],
+ "seeds_credited": 2,
+ "cholesterol_posture": "NO ANCHOR. The registry/corpus string is NOT counted as one -- comparing the corpus to the corpus is comparing a value to itself. Against an empty anchor the guards are VACUOUS, not passing. What Fig 1 settles qualitatively is in PROVENANCE.md.",
+ "helper_lipid_posture": "NO ANCHOR for DOTAP/DDAB/DOPE/DSPC/14PA/18PG: this paper names them in a box and draws none of them."
+}

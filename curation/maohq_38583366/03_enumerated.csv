@@ -1,0 +1,10 @@
+role,name,smiles,source,anchored,distinct_count
+ionizable_lipid,DLin-MC3-DMA,CCCCC/C=C\C/C=C\CCCCCCCCC(CCCCCCCC/C=C\C/C=C\CCCCC)OC(=O)CCCN(C)C,MedKoo Biosciences (Materials); drawn in Fig 1,YES -- full InChIKey exact match,1
+sterol,Cholesterol,,Sigma-Aldrich (Materials); drawn in Fig 1,NO -- empty on purpose; see 04_c10_anchor_check.json,1
+peg_lipid,DMG-PEG2000,CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC,Avanti (Materials); drawn in Fig 1 with 44 in the bracket and one further ethyleneoxy unit outside it,YES -- full InChIKey exact match at n_EO = 45,1
+helper_lipid,DOTAP,,"Avanti (Materials); named in a Fig 1 box, never drawn",NO -- this paper draws no helper lipid,1
+helper_lipid,DDAB,,"Avanti (Materials); named in a Fig 1 box, never drawn",NO -- this paper draws no helper lipid,1
+helper_lipid,DOPE,,"Avanti (Materials); named in a Fig 1 box, never drawn",NO -- this paper draws no helper lipid,1
+helper_lipid,DSPC,,"Avanti (Materials); named in a Fig 1 box, never drawn",NO -- this paper draws no helper lipid,1
+helper_lipid,14PA,,"Avanti (Materials); named in a Fig 1 box, never drawn",NO -- this paper draws no helper lipid,1
+helper_lipid,18PG,,"Avanti (Materials); named in a Fig 1 box, never drawn",NO -- this paper draws no helper lipid,1

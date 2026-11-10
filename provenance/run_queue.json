@@ -894,13 +894,16 @@
    "journal": "Int J Pharm",
    "title": "High-Throughput in vivo and in vitro screening of lipid nanoparticles for nucleic acid delivery to the brain.",
    "source": "new PubMed sweep 2026-11-10",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted",
    "blockers": [],
    "rank": 35,
    "pmcid": null,
    "value_reach": "E_nothing",
-   "agent_task_id": "ad34063d2e3bc9f13"
+   "agent_task_id": "ad34063d2e3bc9f13",
+   "rows_emitted": 3,
+   "structures_enumerated": 3,
+   "proposed_experiment_id": "MR_2025"
   },
   {
    "rank": 36,
@@ -1396,7 +1399,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T19:57:30Z",
+ "updated_utc": "2026-11-10T20:40:38Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

@@ -1,0 +1,22 @@
+{
+ "what": "Fig 2G printed pKa (raster legend, read by eye) vs Table S3 pKa (EMF glyph records, read by stage02_si_tables.py)",
+ "n_compared": 9,
+ "n_agree_exactly": 9,
+ "n_disagree": 0,
+ "disagreements": [],
+ "absent_from_tableS3": [],
+ "in_tableS3_but_not_plotted_in_Fig_2G": [
+  "LNP1",
+  "LNP15"
+ ],
+ "decimal_separator_fig2G": ".",
+ "decimal_separator_tableS3": ", (comma -- Brazilian locale)",
+ "why_this_matters": "two independent renderings, two independent extraction paths, and different decimal separators. A 9/9 exact agreement validates the EMF glyph transcription against something outside it; one misread digit in the SI table would break it.",
+ "what_it_does_NOT_validate": "the Fig 4G bar geometry. pKa is printed text in both places; nothing here touches a measured pixel.",
+ "verdict": "PASS",
+ "figure_2_plots_exactly_the_nine_pKa_formulations": true,
+ "tableS3_has_two_extra": [
+  "LNP1",
+  "LNP15"
+ ]
+}

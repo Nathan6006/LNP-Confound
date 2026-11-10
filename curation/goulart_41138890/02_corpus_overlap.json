@@ -1,0 +1,396 @@
+{
+ "corpus": {
+  "vitro_rows": 29195,
+  "vivo_rows": 1803,
+  "vitro_experiments": 43,
+  "vivo_experiments": 20,
+  "distinct_experiment_ids": 54
+ },
+ "positive_controls": {
+  "name_scan_HL_name_contains_DSPC": {
+   "rows": 7038,
+   "brief_reference": 7038,
+   "matches_brief": true
+  },
+  "inchikey_Cholesterol": {
+   "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+   "rows": 30397,
+   "brief_reference": 30397,
+   "matches_brief": true,
+   "asserts": "the registry cholesterol, by name, is present"
+  },
+  "inchikey_DLin_MC3_DMA": {
+   "inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "rows": 3098,
+   "brief_reference": 3098,
+   "matches_brief": true,
+   "names_found": [
+    "DLin-MC3-DMA",
+    "Dlin-MC3-DMA"
+   ]
+  },
+  "all_controls_match_the_briefs_measured_numbers": true
+ },
+ "ionizable_lipids": {
+  "C12-200": {
+   "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "already_in_corpus": true,
+   "vitro_rows": 518,
+   "vitro_experiments": [
+    "AC_2025",
+    "JW_2024"
+   ],
+   "vivo_rows": 0,
+   "vivo_experiments": [],
+   "il_names_it_sits_under": [
+    "C12-200",
+    "other"
+   ]
+  },
+  "SM-102": {
+   "inchikey": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+   "already_in_corpus": true,
+   "vitro_rows": 2295,
+   "vitro_experiments": [
+    "AC_2025",
+    "WT_2026"
+   ],
+   "vivo_rows": 17,
+   "vivo_experiments": [
+    "SB_2024",
+    "SS_2018",
+    "SY_2025",
+    "XD_2026"
+   ],
+   "il_names_it_sits_under": [
+    "SM-102"
+   ]
+  },
+  "ALC-0315": {
+   "inchikey": "QGWBEETXHOVFQS-UHFFFAOYSA-N",
+   "already_in_corpus": true,
+   "vitro_rows": 312,
+   "vitro_experiments": [
+    "AC_2025",
+    "LZ_2025"
+   ],
+   "vivo_rows": 1,
+   "vivo_experiments": [
+    "XD_2026"
+   ],
+   "il_names_it_sits_under": [
+    "ALC-0315"
+   ]
+  }
+ },
+ "n_new_to_the_corpus": 0,
+ "in_vivo_shared_lipids_touched": {
+  "note": "the emitted block is IN VITRO, so it adds no in-vivo row and cannot change the in-vivo pool's two shared structures (DLin-MC3-DMA, SM-102)",
+  "SM_102_vivo_sources_today": [
+   "SB_2024",
+   "SS_2018",
+   "SY_2025",
+   "XD_2026"
+  ],
+  "ALC_0315_vivo_sources_today": [
+   "XD_2026"
+  ]
+ },
+ "vitro_source_count_change_if_merged": {
+  "C12-200": {
+   "today": 2,
+   "after": 3
+  },
+  "SM-102": {
+   "today": 2,
+   "after": 3
+  },
+  "ALC-0315": {
+   "today": 2,
+   "after": 3
+  }
+ },
+ "token_pattern_test": {
+  "C12-200": {
+   "IL_name_substring_rows": 498,
+   "IL_name_substring_distinct_structures": 1,
+   "IL_name_substring_experiments": [
+    "AC_2025"
+   ],
+   "IL_name_exact_rows": 498,
+   "IL_name_exact_distinct_structures": 1
+  },
+  "200": {
+   "IL_name_substring_rows": 526,
+   "IL_name_substring_distinct_structures": 24,
+   "IL_name_substring_experiments": [
+    "AC_2025",
+    "KL_2010",
+    "KW_2014",
+    "NC_2024",
+    "SX_2025"
+   ],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "C12": {
+   "IL_name_substring_rows": 1174,
+   "IL_name_substring_distinct_structures": 640,
+   "IL_name_substring_experiments": [
+    "AC_2025",
+    "JM_2016",
+    "KL_2010",
+    "KS_2024",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2012",
+    "LL_2026",
+    "LX_2024_3",
+    "QL_2026",
+    "RG_2023",
+    "YX_2026_SDL",
+    "YY_2023",
+    "ZH_2023"
+   ],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "SM-102": {
+   "IL_name_substring_rows": 2315,
+   "IL_name_substring_distinct_structures": 4,
+   "IL_name_substring_experiments": [
+    "AC_2025",
+    "SB_2024",
+    "SS_2018",
+    "SY_2025",
+    "WT_2026",
+    "XD_2026",
+    "ZT_2026"
+   ],
+   "IL_name_exact_rows": 2312,
+   "IL_name_exact_distinct_structures": 1
+  },
+  "102": {
+   "IL_name_substring_rows": 2327,
+   "IL_name_substring_distinct_structures": 16,
+   "IL_name_substring_experiments": [
+    "AC_2025",
+    "LM_2019",
+    "SB_2024",
+    "SS_2018",
+    "SY_2025",
+    "WT_2026",
+    "XD_2026",
+    "ZT_2026"
+   ],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "ALC-0315": {
+   "IL_name_substring_rows": 313,
+   "IL_name_substring_distinct_structures": 1,
+   "IL_name_substring_experiments": [
+    "AC_2025",
+    "LZ_2025",
+    "XD_2026"
+   ],
+   "IL_name_exact_rows": 313,
+   "IL_name_exact_distinct_structures": 1
+  },
+  "0315": {
+   "IL_name_substring_rows": 313,
+   "IL_name_substring_distinct_structures": 1,
+   "IL_name_substring_experiments": [
+    "AC_2025",
+    "LZ_2025",
+    "XD_2026"
+   ],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "C14PEG": {
+   "IL_name_substring_rows": 0,
+   "IL_name_substring_distinct_structures": 0,
+   "IL_name_substring_experiments": [],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "C14PEG2k": {
+   "IL_name_substring_rows": 0,
+   "IL_name_substring_distinct_structures": 0,
+   "IL_name_substring_experiments": [],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "LNP4": {
+   "IL_name_substring_rows": 0,
+   "IL_name_substring_distinct_structures": 0,
+   "IL_name_substring_experiments": [],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "LNP": {
+   "IL_name_substring_rows": 0,
+   "IL_name_substring_distinct_structures": 0,
+   "IL_name_substring_experiments": [],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "DOPE": {
+   "IL_name_substring_rows": 0,
+   "IL_name_substring_distinct_structures": 0,
+   "IL_name_substring_experiments": [],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "DOTAP": {
+   "IL_name_substring_rows": 0,
+   "IL_name_substring_distinct_structures": 0,
+   "IL_name_substring_experiments": [],
+   "IL_name_exact_rows": 0,
+   "IL_name_exact_distinct_structures": 0
+  },
+  "_wrong_namespace": {
+   "200_in_PEG_name": {
+    "rows": 29000,
+    "distinct_structures": 9
+   },
+   "C14_in_PEG_name": {
+    "rows": 480,
+    "distinct_structures": 1
+   },
+   "DOPE_in_HL_name": {
+    "rows": 17737,
+    "distinct_structures": 1
+   },
+   "DSPC_in_HL_name": {
+    "rows": 7038,
+    "distinct_structures": 1
+   },
+   "DOTAP_in_HL_name": {
+    "rows": 2564,
+    "distinct_structures": 1
+   }
+  }
+ },
+ "peg_lipid": {
+  "drawn_in_Fig_1A": "1,2-diacyl-sn-glycero-3-phospho-ethanolamine N-carbamoyl-mPEG45, ammonium salt -- phosphate present, -NH-C(=O)O- carbamate present, subscript 45 printed",
+  "corpus_names": {
+   "C14-PEG2000": {
+    "NLDCRRFPGOSAHV-UHFFFAOYSA-N": {
+     "rows": 480,
+     "experiments": [
+      "BL_2023_3CR"
+     ],
+     "has_P": false
+    }
+   },
+   "DMPE-PEG2000": {
+    "OJTFVTWLLKMOJL-UHFFFAOYSA-N": {
+     "rows": 3611,
+     "experiments": [
+      "BL_2023",
+      "BL_2024",
+      "JC_2023",
+      "LM_2019",
+      "LR_2023",
+      "LX_2024",
+      "LZ_2025",
+      "NC_2024"
+     ],
+     "has_P": true
+    },
+    "NLDCRRFPGOSAHV-UHFFFAOYSA-N": {
+     "rows": 1873,
+     "experiments": [
+      "JW_2024"
+     ],
+     "has_P": false
+    }
+   },
+   "DMG-PEG2000": {
+    "NLDCRRFPGOSAHV-UHFFFAOYSA-N": {
+     "rows": 22973,
+     "experiments": [
+      "AA_2008",
+      "AC_2025",
+      "AP_2025",
+      "FG_2026",
+      "JL_2024",
+      "KL_2010",
+      "KS_2024",
+      "KW_2014",
+      "LL_2025",
+      "LL_2026",
+      "LL_2026_2",
+      "LX_2024_2",
+      "LX_2024_3",
+      "LZ_2025",
+      "MO_2026",
+      "NG_2025",
+      "NG_2025_2",
+      "QL_2026",
+      "SB_2024",
+      "SL_2020",
+      "SL_2021",
+      "SP_2020",
+      "SS_2018",
+      "SW_2024",
+      "SX_2025",
+      "SY_2025",
+      "WT_2026",
+      "XD_2026",
+      "XH_2024",
+      "XH_2024_2",
+      "XH_2025",
+      "YR_2024",
+      "YX_2024",
+      "YX_2026",
+      "YX_2026_SDL",
+      "YY_2023",
+      "YZ_2022",
+      "YZ_2024",
+      "ZC_2023",
+      "ZH_2023",
+      "ZT_2026"
+     ],
+     "has_P": false
+    }
+   }
+  },
+  "finding": "the corpus name 'C14-PEG2000' resolves UNAMBIGUOUSLY to a structure with no N and no P, so corpus_components.smi would NOT raise and would return the wrong molecule for this paper. PEG_SMILES is therefore left blank. This is an eighth independent sighting of the shape behind the open F-049.",
+  "f049_restated": "'DMPE-PEG2000' itself carries TWO structures in the corpus: the phosphoethanolamine on 3,611 rows across 8 experiments, and the glycerol ether on 1,873 rows in JW_2024 alone"
+ },
+ "already_merged_arm_test": {
+  "question": "does any arm of this screen duplicate an experiment already in the corpus?",
+  "closest_candidate": "AC_2025 -- the corpus's other C12-200 formulation screen (498 rows, 308 distinct IL/HL/CHL/PEG compositions)",
+  "composition_twins_found": 2,
+  "of_n_formulations": 18,
+  "twins": [
+   {
+    "formulation": "LNP6",
+    "composition": [
+     35.0,
+     "DOPE",
+     50.0,
+     12.5,
+     2.5
+    ],
+    "AC_2025_rows_at_that_composition": 18
+   },
+   {
+    "formulation": "LNP12",
+    "composition": [
+     35.0,
+     "DSPC",
+     50.0,
+     12.5,
+     2.5
+    ],
+    "AC_2025_rows_at_that_composition": 14
+   }
+  ],
+  "answer": "NO. The two composition twins (LNP6, LNP12) are measured in a different cell (DC2.4 vs primary rat cortical neuron), with a different cargo (mRNA/FLuc vs pDNA/GFP), by a different lab. The FORMULATION SPACE overlaps at 2/18 points; the measurements do not overlap at all. Neither twin is among the three emitted rows, which sit on the LNP4 backbone (35/30.5/32/2.5) -- a composition AC_2025 does not contain.",
+  "no_duplicated_Experiment_ID_risk": true
+ }
+}

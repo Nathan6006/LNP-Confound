@@ -1,0 +1,5 @@
+block,n_formulations,ionizable_lipid,varying_factor,levels,readout,corpus_admissible,reason
+"b-DNA barcode screen (Fig 1, Table S1)",18,C12-200,helper lipid identity x helper molar content,DOPE/DSPC/DOTAP x 15/20/25/30.5/35/50 = 18,"normalized b-DNA delivery by NGS, per organ",no,"barcode recovered from TISSUE is biodistribution, not delivery (brief section 3)"
+"pDNA-GFP formulation screen (Fig 3, Table S3, Figs S5/S6)",11,C12-200,helper lipid identity x helper molar content,subset of the 18,GFP fluorescence intensity / area,"in kind yes, not emitted",every bar is the same ionizable lipid; a corpus keyed on ionizable-lipid chemistry gains nothing
+ionizable-lipid substitution (Fig 4G),3,C12-200 / SM-102 / ALC-0315,THE IONIZABLE LIPID,3,GFP fluorescence intensity / area,yes,the only ionizable-lipid-varying delivery measurement in the paper
+"in vivo luciferase mRNA (Fig 6, Fig S9)",3,C12-200,DOPE molar content (20/25/30.5),3,brain Total Flux [p/s],"in kind yes, not emitted",one ionizable lipid; LNP2/LNP3/LNP4 differ only in helper content

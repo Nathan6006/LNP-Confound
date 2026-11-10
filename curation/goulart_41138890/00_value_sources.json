@@ -1,0 +1,88 @@
+{
+  "_what": "Stage 00b intake gate (PIPELINE_V2 section 3). Every panel or table that supplies a value names its tier BEFORE any digitiser was written. Anything at tier 5 must say why tiers 1-4 failed, in a sentence a reviewer can check.",
+
+  "paper": {
+    "pmid": "41138890",
+    "doi": "10.1016/j.ijpharm.2025.126278",
+    "pii": "S0378517325011159",
+    "title": "High-Throughput in vivo and in vitro screening of lipid nanoparticles for nucleic acid delivery to the brain",
+    "first_author": "Marco Tullio Rodrigues Alves",
+    "corresponding_author": "Pedro Pires Goulart Guimaraes (ppiresgo@reitoria.ufmg.br)",
+    "journal": "International Journal of Pharmaceutics 686:126278",
+    "first_publication_date": "2025-10-23",
+    "proposed_experiment_id": "MR_2025",
+    "identity_source": "Europe PMC REST core record for EXT_ID:41138890, retrieved 2026-11-10; first author confirmed independently against api.crossref.org/works/<doi> (given 'Marco Tullio', family 'Rodrigues Alves', sequence 'first')."
+  },
+
+  "licence": {
+    "article": "NOT open access. Europe PMC core record: isOpenAccess = N, license = null, inEPMC = N, inPMC = N, subsetName = null, hasSuppl = N; fullTextUrlList carries exactly one entry, availability 'Subscription required'. Crossref lists only Elsevier TDM user licence (elsevier.com/tdm/userlicense/1.0) and STM article-sharing policies 017/037/012/029/004. NO Creative Commons licence of any kind.",
+    "verdict": "FAILS CLAUDE.md section 8 (needs CC0/CC-BY-compatible). Recorded off the Europe PMC record, not the publisher landing page, per the brief.",
+    "repo": "none exists -- see tier_3 below"
+  },
+
+  "tiers": [
+    {
+      "tier": "1_publisher_source_data",
+      "status": "DOES NOT EXIST",
+      "evidence": "Probed the Elsevier CDN route https://ars.els-cdn.com/content/image/1-s2.0-S0378517325011159-mmc<N>.<ext> for N in 1..5 and ext in {pdf,xlsx,docx,zip,csv,txt} -- 30 requests. Exactly ONE returned HTTP 200: mmc1.docx, 7,825,773 bytes, magic 504b0304. All 29 others returned HTTP 404 with a 189-byte XML error body (magic 3c3f786d = '<?xml ve'), which is why the judgement is by magic bytes AND size, not by size alone. There is no Source Data workbook."
+    },
+    {
+      "tier": "2_si_numeric_table",
+      "status": "USED -- and it is a VECTOR TEXT LAYER, not pixels",
+      "file": "source/mmc1.docx",
+      "md5": "434fcb27e5c86fda754522afdf19aded",
+      "sha256": "b4f0839295ca03107646ff2080a0f85d313b76238c11c6444afb9005bca977ab",
+      "bytes": 7825773,
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0378517325011159-mmc1.docx",
+      "route": "DOI -> api.crossref.org/works/10.1016/j.ijpharm.2025.126278 -> alternative-id S0378517325011159 (the PII) -> ars.els-cdn.com content/image route. Anonymous, no session, no login.",
+      "retrieved_utc": "2026-11-10",
+      "attestation": "md5 and sha256 recomputed in this session from the bytes on disk. The file's own word/document.xml names this paper's full title, its 13-author list and the corresponding address ppiresgo@reitoria.ufmg.br -- content only this paper's SI can produce (F-065).",
+      "what_is_in_it": "Captions for Figures S1-S13 and Tables S1-S3 as real Word paragraphs; 1 real <w:tbl> (Table S4, 156 rows x ~6 cols of pairwise statistics); 17 EMF images. CRITICAL: Tables S1, S2 and S3 are NOT Word tables -- they are EMF images (word/media/image15,16,17.emf). A <w:tbl> count alone reports ONE table for a document holding four.",
+      "why_not_pixels": "The EMFs are Windows metafiles, not bitmaps. image15.emf holds 694 EMR_EXTTEXTOUTW records, image17.emf 534, image16.emf 1571 -- one Unicode glyph per record with an exact device-space reference point. Table S1 and Table S3 were reassembled from those glyph records by clustering on y (23 and 15 distinct rows) and splitting on an x gap, so every digit is a transcription, not a measurement. This is tier 4-equivalent precision reached from a tier-2 container."
+    },
+    {
+      "tier": "3_author_repo",
+      "status": "NULL RESULT, SEARCHED AND REPORTED EXPLICITLY",
+      "evidence": [
+        "provenance/tools/find_repo.py run TWICE, for the first author ('Rodrigues Alves') and for the PI ('Guimaraes'), each with --doi and --pmid. The DOI code search returned n=1 and the PMID code search n=20; every hit is a digit-string coincidence (the top candidate is RRZE-HPC/BBP-ECM-RA, an HPC cache-benchmark repo whose results/.../caches.txt files contain the numeral run). No repository belongs to this paper.",
+        "Regex sweep for GSE\\d+ | SRP\\d+ | PRJNA\\d+ | SRX\\d+ | SRR\\d+ | SRA | accession | deposit | github | zenodo | dryad | figshare | osf.io | mendeley | 'supplementary data' | 'data availab' over 1,002,901 characters in 3 sources (docx paragraph text 6,382 chars; all EMF text records 19,724 chars; raw word/document.xml 976,795 chars). HITS: 0.",
+        "NCBI elink dbfrom=pubmed db=pmc id=41138890 returns ONLY linkname 'pubmed_pmc_refs' (2 citing PMCIDs). There is NO 'pubmed_pmc' SELF-link, so no PMC deposit exists and pmc_fetch.py has nothing to fetch. Europe PMC /supplementaryFiles is per-PMCID and there is no PMCID."
+      ],
+      "note": "The paper's NGS barcode data would be the one thing an accession could carry, and there is none. That matters only for the biodistribution arm, which is not corpus-admissible anyway."
+    },
+    {
+      "tier": "4_pdf_text",
+      "status": "NOT AVAILABLE",
+      "evidence": "The article PDF is behind Elsevier subscription (Europe PMC availabilityCode S). No paywall or bot-check bypass was attempted. No full text was obtained, so no Methods paragraph, no printed statistic from the body text, and no dose/timepoint sentence is available to this curation."
+    },
+    {
+      "tier": "4b_pdf_vector_geometry",
+      "status": "NOT APPLICABLE",
+      "evidence": "No PDF was obtained, so there are no page drawings to read. The SI's vector content was read instead, through the EMF record stream (tier 2 above)."
+    },
+    {
+      "tier": "5_pixels",
+      "status": "USED for Figure 4G ONLY",
+      "file": "source/figs/gr4_lrg.jpg",
+      "sha256": "0f597687010a420a8459ae0ddf99088d77d7f1c14b4fcf0e03a8edd797941aa0",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0378517325011159-gr4_lrg.jpg",
+      "size_px": "2510 x 3440",
+      "why_tiers_1_to_4_failed": "Figure 4G is the ONLY place in the entire paper where the IONIZABLE LIPID varies (LNP4 = C12-200 vs SM-102 vs ALC-0315 at one fixed formulation). Its values appear in no SI table: mmc1.docx's only numeric tables are S1 and S3 (molar composition + size/PDI/zeta/pKa, no transfection values) and S4 (p-values for the b-DNA arm). Tier 1 does not exist (30 probes, 29 x HTTP 404). Tier 3 does not exist (two find_repo runs, 0 accession hits in 1,002,901 chars). Tier 4 is paywalled. So the bar heights exist nowhere but in the published raster.",
+      "resolution_note": "A standalone JPEG has no page rectangle, so NO native dpi is derivable (brief section 7) and axis.native_tol was NOT called -- it refuses a guessed dpi and a guess is all that was available. The strict axis.LOO_TOL_PX = 1.5 px gate was used unrescaled; see 07_qc.json for whether it passed on its own."
+    }
+  ],
+
+  "panels_and_what_they_supply": [
+    {"locus": "Fig 1A", "tier": "5_pixels (read by eye, not measured)", "supplies": "the IDENTITY of the ionizable lipid -- C12-200, drawn in full. The SI never names it. Also DOPE, DSPC, DOTAP, cholesterol and C14PEG2k drawn in full.", "corpus_admissible": "no (structure, not a value)"},
+    {"locus": "Fig 1C / 1D / 1E-1H", "tier": "n/a", "supplies": "normalized b-DNA delivery per organ, NGS barcode counts", "corpus_admissible": "NO -- barcode recovered from TISSUE is biodistribution, not delivery (brief section 3). Not extracted."},
+    {"locus": "Fig 2 / Figs S1,S2,S4,S8", "tier": "n/a", "supplies": "size, PDI, zeta, pKa, cryo-TEM, gel retardation", "corpus_admissible": "NO -- physicochemical, not delivery. Not extracted."},
+    {"locus": "Table S1", "tier": "2_si_numeric_table", "supplies": "molar composition + size/PDI/zeta of all 18 b-DNA LNPs", "corpus_admissible": "no (formulation metadata, used as design evidence)"},
+    {"locus": "Table S3", "tier": "2_si_numeric_table", "supplies": "molar composition + size/PDI/zeta/pKa of the 11 pDNA-GFP LNPs", "corpus_admissible": "no (formulation metadata)"},
+    {"locus": "Fig 3B/3E, Figs S5/S6", "tier": "5_pixels (NOT extracted)", "supplies": "GFP fluorescence intensity/area for 9-10 formulations", "corpus_admissible": "admissible in KIND (protein expression) but every bar is the SAME ionizable lipid, C12-200. A formulation screen. Not extracted -- see DECISIONS.md D-2."},
+    {"locus": "Fig 4G", "tier": "5_pixels", "supplies": "GFP fluorescence intensity/area at 24/48/72 h for Control, LNP4 (C12-200), SM-102, ALC-0315", "corpus_admissible": "YES in kind -- the only ionizable-lipid-varying delivery measurement in the paper."},
+    {"locus": "Fig 5", "tier": "n/a", "supplies": "mCherry mRNA dose-response, transwell transport, HT22 luminescence -- LNP4 only", "corpus_admissible": "admissible in kind but ONE ionizable lipid. Not extracted."},
+    {"locus": "Fig 6C/6D, Fig S9", "tier": "n/a", "supplies": "in vivo brain Total Flux and per-organ % of total luminescence for LNP2/LNP3/LNP4", "corpus_admissible": "admissible in kind (luciferase expression) but all three are C12-200 at three DOPE ratios -- ONE ionizable lipid. Not extracted."},
+    {"locus": "Fig S10", "tier": "n/a", "supplies": "DiD probe fluorescence in head and ex vivo brain", "corpus_admissible": "NO -- particle biodistribution (brief section 3)."},
+    {"locus": "Figs S11,S12,S13, Fig 6E-H", "tier": "n/a", "supplies": "ALT/AST, urea, creatinine, histology, open-field and elevated-plus-maze behaviour", "corpus_admissible": "NO -- toxicology and behaviour."}
+  ]
+}

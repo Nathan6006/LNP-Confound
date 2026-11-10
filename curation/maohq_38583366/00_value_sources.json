@@ -1,0 +1,197 @@
+{
+ "_what": "Stage 00b intake gate. Filled BEFORE any digitiser was written (PIPELINE_V2 Sec 3). Every value this curation touches is named here with the tier it came from and, for anything at tier 5, why tiers 1-4 failed.",
+ "paper": {
+  "pmid": "38583366",
+  "pmcid": "PMC11099935",
+  "doi": "10.1016/j.biomaterials.2024.122559",
+  "pii": "S0142961224000930",
+  "title": "Optimization of Lipid Nanoparticles for Gene Editing of the Liver via Intraduodenal Delivery",
+  "journal": "Biomaterials 308 (2024) 122559",
+  "first_author": "Zhu Yining",
+  "pi": "Mao Hai-Quan",
+  "identity_resolved_from": "Europe PMC REST core record, one call, 2026-11-10",
+  "original_data_discriminator": "abstractText length 1473 (not 0) and the JATS carries 2. Materials and Methods and 3. Results and Discussion with named subsections. pubType was NOT used."
+ },
+ "licence": {
+  "article": "NIH AUTHOR MANUSCRIPT. The JATS permissions block reads verbatim: 'This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.' Europe PMC core record: isOpenAccess = N, license = null.",
+  "crossref_licence_urls": [
+   "https://www.elsevier.com/tdm/userlicense/1.0/",
+   "https://www.elsevier.com/legal/tdmrep-license",
+   "http://www.elsevier.com/open-access/userlicense/1.0/ (content-version am, from 2025-04-06)"
+  ],
+  "verdict": "NOT CC0/CC-BY. FAILS CLAUDE.md Sec 8. Same posture as the three other NIH author manuscripts measured in this run.",
+  "repo": "none exists -- see accession_sweep"
+ },
+ "acquisition": {
+  "mmc1.docx": {
+   "route": "Elsevier CDN, anonymous: https://ars.els-cdn.com/content/image/1-s2.0-S0142961224000930-mmc1.docx",
+   "supplied_by": "orchestrator",
+   "validated": "magic 504b0304, 5209906 B"
+  },
+  "mmc2..mmc4": {
+   "route": "same CDN pattern, probed by me in .docx/.pdf/.xlsx/.zip",
+   "result": "ALL 12 probes HTTP 404 returning a 189-byte XML error body (magic 3c3f786d). Only mmc1 exists. Confirms the orchestrator's finding independently."
+  },
+  "figures": {
+   "route": "https://ars.els-cdn.com/content/image/1-s2.0-S0142961224000930-gr<N>_lrg.jpg",
+   "result": "gr1..gr6 HTTP 200, magic ffd8ffe0, 3059x3180 to 3591x3475 px. gr7 404. These are the published figures at full publisher resolution; the PMC author-manuscript figure supplied to me (nihms-1986895-f0001.jpg) was not used for any value."
+  },
+  "article_pdf": {
+   "route": "https://europepmc.org/articles/PMC11099935?pdf=render",
+   "result": "HTTP 403, 5522-byte HTML error page (magic 3c21444f43 = '<!DOC'). REJECTED BY MAGIC BYTES, not by a size floor. No article PDF was obtained, so there is NO page rect and therefore NO derivable native dpi for any figure (see tier_5 note)."
+  },
+  "pmc_bin_route": {
+   "result": "orchestrator: refused the SI as an HTML error page"
+  },
+  "europepmc_supplementaryFiles": {
+   "result": "orchestrator: 297-byte XML stub. Recorded in BROWSER_ACQUISITION.md."
+  },
+  "untrusted_data_posture": "Every download went to a uniquely named, VERIFIED-EMPTY directory in the session scratchpad (asserted 0 entries before writing) and the docx was unzipped into a second such directory. No glob copy was used anywhere (F-065). Every parser lives in a different directory from the extracted archive and takes its input path as an argument; all runs are python3 -I."
+ },
+ "accession_sweep": {
+  "patterns": [
+   "GSE\\d+",
+   "SRP\\d+",
+   "PRJNA\\d+",
+   "SRX\\d+",
+   "SRR\\d+",
+   "SRA",
+   "accession",
+   "deposit",
+   "github",
+   "zenodo",
+   "dryad",
+   "figshare",
+   "osf.io",
+   "data availab",
+   "Source Data",
+   "code availab"
+  ],
+  "searched_chars": {
+   "jats_full_text": 60875,
+   "si_docx_text": 17600,
+   "total": 78475
+  },
+  "result": "EXPLICIT NULL: 0 hits for every pattern. The paper has no data-availability statement, no deposit and no repository of its own.",
+  "find_repo": "provenance/tools/find_repo.py run TWICE, --author Zhu (first author) and --author Mao (PI). Neither returned a repository for this PMID; the only lipid-related hits are unrelated third-party projects, all correctly reported as non-matches."
+ },
+ "value_sources": [
+  {
+   "panel": "Supplementary Tables S1-S6 (6 x 32 = 192 rows)",
+   "quantity": "'RLU in HepG2' per LNP, plus 5 printed weight percentages, Z-average and PDI",
+   "tier": "2_si_numeric_table",
+   "how": "Parsed from word/document.xml of mmc1.docx as a real table (w:tbl -> w:tr -> w:tc), not by counting tags and not from a text heuristic. Header asserted cell-by-cell before any row was read.",
+   "corpus_admissible": "NO -- ALREADY MERGED. Every one of the 192 values is the same number already in data_vitro.csv as YZ_2022 (PMID 35879315). See 02_corpus_overlap.json.",
+   "note": "The column header says 'measured in RLU' and the values run 1.705-9.233. They are NOT RLU; they are ln(RLU). A column header is a claim, not a measurement."
+  },
+  {
+   "panel": "Fig 4B",
+   "quantity": "Total bioluminescence flux from liver, photons/s, per INDIVIDUAL formulation, intraduodenal, 100 ug pDNA",
+   "tier": "5_pixels",
+   "why_tiers_1_4_failed": "Tier 1: no publisher Source Data file exists -- mmc2/mmc3/mmc4 were probed on the Elsevier CDN in four extensions each and all twelve returned HTTP 404. Tier 2: mmc1.docx contains six value tables and they are the in-vitro HepG2 tables only; no in-vivo flux appears in any table or in the SI text. Tier 3: no repository exists (see accession_sweep, explicit null over 78,475 chars plus two find_repo runs). Tier 4: no article PDF could be obtained (Europe PMC 403), and the figure is a publisher JPEG with no text layer and no vector layer, so there is nothing to read with pdfplumber and page.get_drawings() cannot be consulted at all.",
+   "corpus_admissible": "luminescence from a translated reporter -- admissible in KIND. See DECISIONS D-1/D-2 for why it is still not emitted."
+  },
+  {
+   "panel": "Fig 4D",
+   "quantity": "Total bioluminescence flux per organ (heart/liver/spleen/lung/kidney) for 6 formulations, plus 6 printed liver-share percentages",
+   "tier": "5_pixels",
+   "why_tiers_1_4_failed": "as Fig 4B",
+   "corpus_admissible": "admissible in kind; used here as a CHECK (the printed liver share is a quantity the authors drew but never computed from the bars)."
+  },
+  {
+   "panel": "Fig 3A / 3B / 3C / 3D",
+   "quantity": "Liver flux for POOLED clusters of 8 LNPs (3A, 24 clusters; 3B, 9 clusters) and sub-clusters of 4 (3C, 10; 3D, 5 x 5 organs)",
+   "tier": "5_pixels",
+   "why_tiers_1_4_failed": "as Fig 4B",
+   "corpus_admissible": "NO -- not attributable. The injected dose is a physical mixture of 8 (or 4) different formulations and there is no barcode, so the flux is a sum over the pool and belongs to no single LNP. This is NOT the LR_2023 barcoded precedent, which resolves individual members."
+  },
+  {
+   "panel": "Fig 4E",
+   "quantity": "liver flux vs dose (100/500/1000 ug) for 4 formulations",
+   "tier": "5_pixels",
+   "corpus_admissible": "admissible in kind; a dose series of formulations already covered by Fig 4B."
+  },
+  {
+   "panel": "Fig 4F/4G, Fig S3",
+   "quantity": "organ distribution of flux (4G) and of Cy5-pDNA (S3)",
+   "tier": "5_pixels",
+   "corpus_admissible": "4G yes in kind; Fig S3 NO -- Cy5-labelled pDNA is particle/cargo biodistribution, not delivery."
+  },
+  {
+   "panel": "Fig 5B/5C, Fig S7, Fig S9",
+   "quantity": "tdTomato+ cells per unit area; % tdTomato+ by FACS; TIDE indel %",
+   "tier": "5_pixels",
+   "corpus_admissible": "YES in kind -- Cas9 excision -> tdTomato is downstream of translation, and TIDE indel % is editing efficiency. All are for the SINGLE formulation CII-b3."
+  },
+  {
+   "panel": "Fig 6B/6C, Fig S10, Fig S11",
+   "quantity": "serum LDL-C / total cholesterol / ALT",
+   "tier": "n/a",
+   "corpus_admissible": "NO -- a downstream pharmacodynamic endpoint, not a delivery measurement."
+  },
+  {
+   "panel": "Fig S1, S2, S4, S5, S6, S8",
+   "quantity": "size/PDI, survival, body weight, cytokine panel, confocal images",
+   "tier": "n/a",
+   "corpus_admissible": "NO -- none is a delivery measurement."
+  }
+ ],
+ "tier_5_resolution_note": "Every figure here is a standalone publisher JPEG. There is no PDF page rect, so native dpi is NOT derivable and axis.native_tol() would have to be fed a guess -- which it refuses by design. All tolerances are therefore stated in the panel's OWN pixel units and converted to a value-space precision (px per decade -> factor per px), which is the honest statement. No tolerance was widened.",
+ "files": {
+  "source/mmc1.docx": {
+   "bytes": 5209906,
+   "md5": "fe3af2eb61dd442a47088b51b197b830",
+   "sha256": "5b7f1c507ecbc6d18ad8aa1049376c2bc032cf9c22fbc787e619fdf283fa02e9",
+   "magic": "504b0304"
+  },
+  "source/PMC11099935.jats.xml": {
+   "bytes": 127171,
+   "md5": "eab8df24f2c88b1443087bdc71e374a5",
+   "sha256": "26a0a0f5b79ea78aa83a9483ba812eeefa8bdc840276ca630bf5c4787dbd485f",
+   "magic": "3c3f786d"
+  },
+  "source/nihms-1986895-f0001.jpg": {
+   "bytes": 260242,
+   "md5": "086d0991e49989351f4dce45dda8691d",
+   "sha256": "333324bce50f3b593c4932170988946f657644fb5491d33adb49f3b444715811",
+   "magic": "ffd8ffe0"
+  },
+  "source/figs_elsevier/gr1_lrg.jpg": {
+   "bytes": 1319166,
+   "md5": "996e572c7824d7fc27f78f116f7f2d08",
+   "sha256": "d0352b93970c32d540be750f9d2f45abbcd83e1e8119423719580f217d6757fe",
+   "magic": "ffd8ffe0"
+  },
+  "source/figs_elsevier/gr2_lrg.jpg": {
+   "bytes": 1190464,
+   "md5": "38802edd196c4e8994a2ff4d0860ddbd",
+   "sha256": "ee0f19b8e27b708df1d8c45a7f45ea9e15fa93dfe2bb2fbed16b8b505573ef24",
+   "magic": "ffd8ffe0"
+  },
+  "source/figs_elsevier/gr3_lrg.jpg": {
+   "bytes": 621194,
+   "md5": "1af07384ba433234417acd46f5ff4864",
+   "sha256": "617c383a95e785e89639503512e887649e787f5b93d86d08a52299ccd533a3d3",
+   "magic": "ffd8ffe0"
+  },
+  "source/figs_elsevier/gr4_lrg.jpg": {
+   "bytes": 1606692,
+   "md5": "3a95b4c9ef53e277d4a2795b77148a45",
+   "sha256": "873f0edce402c9453f73cf9682f48495f9b4b734ed232714fe299131714768c5",
+   "magic": "ffd8ffe0"
+  },
+  "source/figs_elsevier/gr5_lrg.jpg": {
+   "bytes": 1241991,
+   "md5": "c1d831e50574c649ce830c66c8d4ef46",
+   "sha256": "f2b18126ae322548ddcaa1d29a94a43b3c2c1845e0ff55dae1166f9555e8d2ba",
+   "magic": "ffd8ffe0"
+  },
+  "source/figs_elsevier/gr6_lrg.jpg": {
+   "bytes": 669610,
+   "md5": "8e5b8fad80eb7fc41b74bd1b77763322",
+   "sha256": "522af79c103922dc487f6b75b5830e3bc24e8ea984bd7d7d709d48a2382ec545",
+   "magic": "ffd8ffe0"
+  }
+ },
+ "written_utc": "2026-11-10T20:13:37.678561+00:00"
+}

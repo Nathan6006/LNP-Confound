@@ -1,0 +1,10 @@
+lipid_name,reference_SMILES,source_figure,read_on,read_by,expected_mismatch,note
+DLin-MC3-DMA,CCCCC/C=C\C/C=C\CCCCCCCCC(CCCCCCCC/C=C\C/C=C\CCCCC)OC(=O)CCCN(C)C,"Fig 1, 'Lipid Nanoparticle Library Design' box",2026-11-10,curation agent,,"Built from the IUPAC name, head first. Fig 1 draws the head as (CH3)2N-CH2CH2CH2-C(=O)-O- and the ester oxygen on the chain carbon, both confirmed by eye at 3x native; the tail vertex count was NOT counted by eye -- it comes from the name."
+DMG-PEG2000,CCCCCCCCCCCCCC(=O)OCC(COCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)OC(=O)CCCCCCCCCCCCC,"Fig 1, 'Lipid Nanoparticle Library Design' box",2026-11-10,curation agent,,"n_eo = 45: 44 inside the drawn bracket plus one drawn outside it. The block length is a distribution, so this anchor tests CONNECTIVITY and the drawn unit count, not the reagent."
+Cholesterol,,Fig 1,2026-11-10,curation agent,,"NO ANCHOR ON PURPOSE -- a hand-written 8-stereocentre sterol is a worse anchor than none (F-013 was reproduced from scratch that way), and the registry string is the corpus, so comparing to it is comparing a value to itself. Fig 1 draws the C3 oxygen on a BOLD WEDGE (3-beta), the Delta-5 olefin and an iso-octyl side chain; that reading is in PROVENANCE.md."
+DOTAP,,not drawn,2026-11-10,curation agent,,"Named in a box in Fig 1, never drawn."
+DDAB,,not drawn,2026-11-10,curation agent,,"Named in a box in Fig 1, never drawn."
+DOPE,,not drawn,2026-11-10,curation agent,,"Named in a box in Fig 1, never drawn."
+DSPC,,not drawn,2026-11-10,curation agent,,"Named in a box in Fig 1, never drawn."
+14PA,,not drawn,2026-11-10,curation agent,,"Named in a box in Fig 1, never drawn."
+18PG,,not drawn,2026-11-10,curation agent,,"Named in a box in Fig 1, never drawn. This is why this paper cannot settle F-057."

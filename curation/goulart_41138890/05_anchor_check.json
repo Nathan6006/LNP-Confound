@@ -1,0 +1,77 @@
+{
+ "anchor": {
+  "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+  "skeleton_block": "RVHYPUORVDKRTM",
+  "formula": "C70H145N5O5",
+  "exact_mass": 1136.124573
+ },
+ "corpus_C12_200": {
+  "RVHYPUORVDKRTM-UHFFFAOYSA-N": {
+   "rows": 498,
+   "experiments": [
+    "AC_2025"
+   ],
+   "stored_Molecular_Weight": [
+    "1136.96"
+   ],
+   "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "skeleton_block": "RVHYPUORVDKRTM",
+   "formula": "C70H145N5O5",
+   "exact_mass": 1136.124573
+  }
+ },
+ "n_distinct_corpus_structures_under_this_name": 1,
+ "C10_result": "exact_match_full_inchikey",
+ "C10_matched_rows": 498,
+ "connectivity_seed": {
+  "what": "Markovnikov opening of the C12 epoxide: N-CH(C10H21)-CH2OH instead of N-CH2-CH(OH)-C10H21",
+  "seeded": {
+   "inchikey": "RNUQPRZVSZGVOX-UHFFFAOYSA-N",
+   "skeleton_block": "RNUQPRZVSZGVOX",
+   "formula": "C70H145N5O5",
+   "exact_mass": 1136.124573
+  },
+  "clean": {
+   "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "skeleton_block": "RVHYPUORVDKRTM",
+   "formula": "C70H145N5O5",
+   "exact_mass": 1136.124573
+  },
+  "delta_exact_mass_Da": 0.0,
+  "formula_identical": true,
+  "skeleton_block_identical": false,
+  "inchikey_differs": true,
+  "credited": true
+ },
+ "independence_guards": {
+  "clean_control": {
+   "ast_independence_violations": [],
+   "lifted_template_literals": [],
+   "clean": true
+  },
+  "seed_banned_import": {
+   "violations": [
+    "import corpus_components"
+   ],
+   "fires": true,
+   "note": "the guard is run against the MUTATED FILE's AST; a guard that could not see its own seeded import would report the clean module and pass (the F-037 shape)"
+  },
+  "seed_lifted_template": {
+   "literal_seeded_len": 40,
+   "violations": [
+    "CCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCC"
+   ],
+   "fires": true
+  },
+  "both_guards_fire": true
+ },
+ "reference_structures_csv": {
+  "header_exact": true,
+  "n_rows": 5,
+  "n_with_structure": 1,
+  "n_empty_on_purpose": 4,
+  "expected_mismatches": [
+   "C14PEG2k"
+  ]
+ }
+}

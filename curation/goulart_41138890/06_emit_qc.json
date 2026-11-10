@@ -1,0 +1,26 @@
+{
+ "experiment_id": "MR_2025",
+ "experiment_id_free_in_corpus": true,
+ "pmid": "41138890",
+ "n_distinct_ionizable_lipids_in_paper": 3,
+ "n_formulations_in_paper": 18,
+ "n_rows_emitted": 3,
+ "timepoint_emitted": "72h",
+ "values_emitted": {
+  "C12-200": 3847.4,
+  "SM-102": 1719.5,
+  "ALC-0315": 1179.1
+ },
+ "z": {
+  "C12-200": 1.343494,
+  "SM-102": -0.289297,
+  "ALC-0315": -1.054197
+ },
+ "z_mean": 0.0,
+ "z_sd_ddof0": 1.0,
+ "z_over": "one z per experiment; one cell type, one cargo, one timepoint, one formulation -- error class 22 cannot arise",
+ "rows_with_a_caveat": 0,
+ "benchmarks_top_the_screen": false,
+ "benchmark_ratio_C12_200_over_SM_102": 2.2375,
+ "benchmark_ratio_C12_200_over_ALC_0315": 3.263
+}

@@ -1,0 +1,132 @@
+{
+ "temp_root": "/var/folders/yv/c04567j13yb34jnsj9wv6vvc0000gn/T/goulart_seeds_xv3v8cw9",
+ "seeds": [
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "tick_shift",
+   "why": "GROSS: displace ticks[2] by +3.0 px. calibrate's own 2.5 px residual limit refuses first, so this seed is credited by the REFUSAL route, recorded distinctly -- it never reaches the LOO gate (brief s10).",
+   "kind": "refusal_only",
+   "returncode": 1,
+   "credited": true,
+   "reason": "REFUSED before writing a metric: Equally-valued ticks on a log or linear axis are equally spaced in PIXELS. Unequal spacing means these positions are not tick marks -- most often glyph centroids of the axis labels, whose spacing tracks the label text, not the axis. That is error class 20. Re-detect the ticks from the darkness-weighted centroid of the columns OUTSIDE the axis rule.",
+   "route": "refusal (calibrate's 2.5 px residual limit, reached before the LOO gate)"
+  },
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "tick_shift_subtle",
+   "why": "SUBTLE: displace ticks[2] by +1.6 px -- small enough to pass calibrate, so the LOO gate is the only thing that can see it.",
+   "kind": "loo+values",
+   "returncode": 0,
+   "credited": true,
+   "reason": "loo_worst_px 0.279 -> 1.836 (strict gate 1.5: FAILS); 11/12 bar values moved, worst |delta| 3.7 units: {'Control_24h': (165.8, 167.6), 'Control_48h': (64.5, 66.3), 'LNP4_24h': (1246.7, 1249.0), 'LNP4_48h': (2822.9, 2826.1)}",
+   "route": "metric moved"
+  },
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "ticks_uniform_shift",
+   "why": "displace ALL six ticks by +4.0 px. Spacing is untouched, so calibrate AND the LOO gate both pass perfectly. Only the UNPRINTED check -- the 0 tick landing on the drawn baseline -- can see it.",
+   "kind": "zero_offset",
+   "returncode": 0,
+   "credited": true,
+   "reason": "zero_tick_offset_px 0.101 -> 4.101; 11/12 bar values moved, worst |delta| 45.1 units: {'Control_24h': (165.8, 210.9), 'Control_48h': (64.5, 109.5), 'LNP4_24h': (1246.7, 1291.7), 'LNP4_48h': (2822.9, 2867.9)}",
+   "route": "metric moved"
+  },
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "no_furniture_mask",
+   "why": "do not mask the significance bracket at rows 3106-3109 (612 px, 9.1 bar widths)",
+   "kind": "values",
+   "returncode": 0,
+   "credited": true,
+   "reason": "6/12 bar values moved, worst |delta| 2679.6 units: {'SM-102_24h': (593.7, 3048.1), 'SM-102_48h': (1370.5, 3048.1), 'SM-102_72h': (1719.5, 3048.1), 'ALC-0315_24h': (368.5, 3048.1)}",
+   "route": "metric moved"
+  },
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "topmost_ink",
+   "why": "replace bars.bar_top with the topmost inked row -- error class 32, the F-018/F-020 detector",
+   "kind": "values",
+   "returncode": 0,
+   "credited": true,
+   "reason": "12/12 bar values moved, worst |delta| 4053.2 units: {'Control_24h': (165.8, 267.2), 'Control_48h': (64.5, 98.3), 'Control_72h': (None, 87.0), 'LNP4_24h': (1246.7, 1381.8)}",
+   "route": "metric moved"
+  },
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "erase_baseline",
+   "why": "erase the drawn axis baseline -- the unprinted round-number check must notice",
+   "kind": "zero_offset",
+   "returncode": 1,
+   "credited": true,
+   "reason": "REFUSED before writing a metric: errors.DetectionError: detect_bar_windows: did not find 12 bar windows at any probe row. This is a REFUSAL. Do not fall back to an assumed pitch -- an assumed grid is error class 28, a detector miss falling through to a literal.",
+   "route": "refusal"
+  },
+  {
+   "script": "stage04_fig4g.py",
+   "seed": "roll_image",
+   "why": "NEGATIVE CONTROL: roll the whole image by 7 rows. Ticks and bars move together, so a correct read is unchanged. Must move NOTHING.",
+   "kind": "negative_control",
+   "returncode": 0,
+   "credited": true,
+   "reason": "correctly moved nothing: 12/12 bar values identical. The harness does not credit 'any change exits non-zero'."
+  },
+  {
+   "script": "stage02_si_tables.py",
+   "seed": "swap_digit",
+   "why": "flip the first UTF-16 '4' glyph record in image15.emf to '9'",
+   "kind": "s1",
+   "returncode": 0,
+   "credited": true,
+   "reason": "1 cell(s) moved [('LNP1', 'CHL_molratio', 47.5, 97.5)]; S1_molpct_sum_exact_100 18 -> 17"
+  }
+ ],
+ "clean_control": {
+  "returncodes": [
+   0,
+   0
+  ],
+  "loo_worst_px": 0.279,
+  "zero_tick_offset_px": 0.101,
+  "S1_molpct_sum_exact_100": 18,
+  "bar_values": {
+   "Control_24h": 165.8,
+   "Control_48h": 64.5,
+   "Control_72h": null,
+   "LNP4_24h": 1246.7,
+   "LNP4_48h": 2822.9,
+   "LNP4_72h": 3847.4,
+   "SM-102_24h": 593.7,
+   "SM-102_48h": 1370.5,
+   "SM-102_72h": 1719.5,
+   "ALC-0315_24h": 368.5,
+   "ALC-0315_48h": 953.9,
+   "ALC-0315_72h": 1179.1
+  }
+ },
+ "reproducibility": {
+  "tracked_artifacts": [
+   "02_si_tables.json",
+   "02_tableS1.csv",
+   "02_tableS3.csv",
+   "04_fig4g.json"
+  ],
+  "byte_identical_across_two_clean_runs": true,
+  "sha256_folder": {
+   "04_fig4g.json": "4743c9c2bec0ae7072ab48d17fb16ba406da13c2189fdc5a70d14915c51e472b",
+   "02_si_tables.json": "b664433ad4a951962b2352eacca5ef199fb34ce686fd0d6b15e9abeab91b4f2e",
+   "02_tableS1.csv": "510ea42ab9eea8f7b0ff920765ebd0095f88050b67efb0d33227b59d50679a1d",
+   "02_tableS3.csv": "dbb4941804f4d2c59c988d8d43ca8fd65c4095d8ab34ed878f7e2d24cde0330b"
+  },
+  "sha256_fresh_run": {
+   "04_fig4g.json": "4743c9c2bec0ae7072ab48d17fb16ba406da13c2189fdc5a70d14915c51e472b",
+   "02_si_tables.json": "b664433ad4a951962b2352eacca5ef199fb34ce686fd0d6b15e9abeab91b4f2e",
+   "02_tableS1.csv": "510ea42ab9eea8f7b0ff920765ebd0095f88050b67efb0d33227b59d50679a1d",
+   "02_tableS3.csv": "dbb4941804f4d2c59c988d8d43ca8fd65c4095d8ab34ed878f7e2d24cde0330b"
+  }
+ },
+ "summary": {
+  "n_seeds": 8,
+  "n_credited": 8,
+  "all_credited": true
+ }
+}
