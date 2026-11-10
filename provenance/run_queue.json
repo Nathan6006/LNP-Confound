@@ -894,12 +894,13 @@
    "journal": "Int J Pharm",
    "title": "High-Throughput in vivo and in vitro screening of lipid nanoparticles for nucleic acid delivery to the brain.",
    "source": "new PubMed sweep 2026-11-10",
-   "stage": "queued",
-   "status": "pending_acquisition",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [],
    "rank": 35,
    "pmcid": null,
-   "value_reach": "E_nothing"
+   "value_reach": "E_nothing",
+   "agent_task_id": "ad34063d2e3bc9f13"
   },
   {
    "rank": 36,
@@ -1000,11 +1001,12 @@
    "measures": "expression",
    "lib_src": "abstract",
    "note": ">1,000 formulations, stepwise down-selection. Same caveat: formulation space, few ILs. Mao lab is in your corpus via YZ_2022/YZ_2024, both of which have exactly 1 unique IL - consistent with this lab's formulation-first style.",
-   "stage": "queued",
-   "status": "pending_acquisition",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [],
    "pmcid": "PMC11099935",
-   "value_reach": "C_pmc_fulltext"
+   "value_reach": "C_pmc_fulltext",
+   "agent_task_id": "a747abdb8071ae6cc"
   },
   {
    "rank": 40,
@@ -1394,7 +1396,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T19:25:50Z",
+ "updated_utc": "2026-11-10T19:57:30Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

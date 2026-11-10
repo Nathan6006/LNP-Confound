@@ -275,3 +275,55 @@ columns.
 Four of the eight are not in PMC at all, so they need the browser and an
 institutional session — which is the one thing a cloud session cannot inherit
 (see `HANDOFF_CLOUD.md`).
+
+## 2026-11-10 (later) — the Elsevier CDN cleared 2 of 6; the rest are a TRANSFER problem, not a login problem
+
+Clearing the pending queue. **Two acquired with no browser and no login**, both
+through the Crossref-PII → `ars.els-cdn.com` route in §above:
+
+| folder | file | bytes |
+|---|---|---|
+| `goulart_41138890` | `mmc1.docx` | 7,825,773 |
+| `maohq_38583366` | `mmc1.docx` | 5,209,906 |
+
+Both magic-byte validated `504b0304`. Both are now extracting.
+
+### The remaining four, with the measured blocker for each
+
+- **`leejy_42610355`** (RSC, `10.1039/d6bm00568c`, **CC BY**). Plain curl: **403
+  on all three routes** (landing / articlepdf / suppdata). Playwright: Cloudflare
+  `Just a moment...` **403**, and it did **not** clear after a 15 s wait or on
+  re-navigation. **This is a bot check, so it was not pushed further.**
+- **`cheng_41656866`** (Wiley, `10.1002/adma.202522552`). **The article page
+  loads fine and needed NO login** — Cloudflare cleared by itself on the second
+  attempt, and the real title is *"Optimizing Peptide Ionizable Lipids Enables
+  Efficient and Low-Toxicity mRNA Delivery for In Vivo Prime Editing and Protein
+  Replacement Therapy"* (Wang 2026). The SI link was located exactly:
+  `/action/downloadSupplement?doi=10.1002%2Fadma.202522552&file=adma72475-sup-0001-SuppMat.pdf`,
+  **44.3 MB**. **What failed is the TRANSFER, not the access**: an in-page
+  `fetch` → `arrayBuffer` → POST to the localhost receiver did not complete in
+  two attempts (both moved to background at 120 s and were cancelled), and a
+  direct `browser_navigate` to the download URL left no file in `~/Downloads`,
+  `/tmp` or `.playwright-mcp/`. 44 MB appears to be past what this bridge
+  handles; the 4 MB ACS SI earlier in the run went through the same path fine.
+- **`liu_42585110`** (Wiley, `10.1002/anie.3823572`) — not attempted after the
+  above; same host family, so expect the page to load and the transfer to be the
+  issue.
+- **`xuq_22148515`** (ACS, `10.1021/bc200572w`, 2011). In PMC as `PMC3261308`
+  but the JATS has **0 `<table-wrap>` and 0 `<supplementary-material>`**, and
+  `hasSuppl=N` — so its values are in its **7 figures**, which PMC's `/bin/`
+  route saved **none** of, and Europe PMC `fulltextRepo` **403s** on every
+  guessed SI name. Note ACS is **not covered by the institutional session in
+  use** (the browser identifies as Phillips Exeter Academy), recorded earlier.
+
+### Two of my own errors here, worth recording
+
+**I invented the receiver's API instead of reading it.** I called
+`POST /upload?name=…`; the handler takes **`?path=`** and returns 400 for
+anything else. **And I started it with `--port 8765 --outdir <dir>` when it takes
+its root as `sys.argv[1]`**, so `ROOT` became `"--port"` and the first probe
+wrote into a directory literally named `./--port`. Removed. Both are the run's
+own recurring lesson — *read the primary object* — committed by me against my own
+tool, and the second one is the sharper of the two: the receiver reported HTTP
+200 and a correct-looking JSON record while writing to the wrong root, so **the
+success response was not evidence the file went where I asked.**
