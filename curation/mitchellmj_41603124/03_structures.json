@@ -1,0 +1,118 @@
+{
+ "amines_drawn": {
+  "17": {
+   "smiles": "NCCN(CCN)CCN",
+   "formula": "C6H18N4",
+   "avg_mw": 146.238,
+   "name": "tris(2-aminoethyl)amine (TREN)"
+  },
+  "18": {
+   "smiles": "NCCNCCN1CCN(CCN)CC1",
+   "formula": "C10H25N5",
+   "avg_mw": 215.345,
+   "name": "N-(2-aminoethyl)-2-[4-(2-aminoethyl)piperazin-1-yl]ethan-1-amine"
+  },
+  "20": {
+   "smiles": null,
+   "why": "a branched polyamidoamine with multiple -CH2CH2C(=O)NH-CH2CH2NH2 arms. Drawn in Supp Fig 2, but the core and the arm count were NOT resolved at the 137 dpi this SI offers, and no reading is recorded rather than a guess."
+  }
+ },
+ "ms_arithmetic": {
+  "18D4": {
+   "figure": "Supplementary Figure 5 (SI p.19)",
+   "arms_k": 3,
+   "amine_avg_mw": 215.345,
+   "per_ion": [
+    {
+     "ion": "[M+2H]2+",
+     "mz_printed": 451.589,
+     "neutral_M": 901.162,
+     "a_plus_b": 8.023,
+     "residual_from_integer": 0.023
+    },
+    {
+     "ion": "[M+H]+",
+     "mz_printed": 901.829,
+     "neutral_M": 900.821,
+     "a_plus_b": 8.015,
+     "residual_from_integer": 0.015
+    },
+    {
+     "ion": "[M+Na]+",
+     "mz_printed": 923.681,
+     "neutral_M": 900.691,
+     "a_plus_b": 8.012,
+     "residual_from_integer": 0.012
+    }
+   ],
+   "instrument_internal_spread_Da": 0.471,
+   "a_plus_b_mean": 8.017
+  },
+  "17D9.2": {
+   "figure": "Supplementary Figure 4 (SI p.18)",
+   "arms_k": 3,
+   "amine_avg_mw": 146.238,
+   "per_ion": [
+    {
+     "ion": "[M+2H]2+",
+     "mz_printed": 648.123,
+     "neutral_M": 1294.23,
+     "a_plus_b": 19.006,
+     "residual_from_integer": 0.006
+    },
+    {
+     "ion": "[M+H]+",
+     "mz_printed": 1294.693,
+     "neutral_M": 1293.685,
+     "a_plus_b": 18.993,
+     "residual_from_integer": -0.007
+    },
+    {
+     "ion": "[M+Na]+",
+     "mz_printed": 1316.125,
+     "neutral_M": 1293.135,
+     "a_plus_b": 18.98,
+     "residual_from_integer": -0.02
+    }
+   ],
+   "instrument_internal_spread_Da": 1.095,
+   "a_plus_b_mean": 18.993
+  },
+  "20D8i": {
+   "figure": "Supplementary Figure 6 (SI p.20)",
+   "neutral_M_per_ion": [
+    1878.783,
+    1878.374
+   ],
+   "instrument_internal_spread_Da": 0.409,
+   "a_plus_b": null,
+   "why": "the amine's formula is unread, so the arithmetic has two unknowns and is not solvable."
+  }
+ },
+ "18D4": {
+  "smiles": "CCCCOC(=O)CC(NCCN1CCN(CCN(CCNC(CC(=O)OCCCC)C(=O)OCCCC)C(CC(=O)OCCCC)C(=O)OCCCC)CC1)C(=O)OCCCC",
+  "formula": "C46H85N5O12",
+  "avg_mw": 900.209,
+  "inchikey": "MFMRADGRKUHRDG-UHFFFAOYSA-N",
+  "predicted_MH": 901.217,
+  "printed_MH": 901.829,
+  "delta_Da": 0.612,
+  "nearest_alternative_Da": 28.053,
+  "note": "one CH2 on each of two chains is the nearest alternative; the discrimination margin is that over the delta."
+ },
+ "determinability_counts": {
+  "NOT_determinable": 111,
+  "composable_from_two_other_drawings": 6,
+  "drawn_in_full": 3,
+  "catalogue_reagent": 13
+ },
+ "among_the_7_individually_measured": {
+  "2D8": "NOT_determinable",
+  "7D4": "NOT_determinable",
+  "17D8i": "composable_from_two_other_drawings",
+  "17D9.2": "drawn_in_full",
+  "18D4": "drawn_in_full",
+  "20D8i": "drawn_in_full",
+  "SM-102": "catalogue_reagent"
+ }
+}

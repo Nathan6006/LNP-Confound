@@ -1,0 +1,332 @@
+{
+ "P1_supp_table3": {
+  "what": "Supp Table 3 parsed from NATIVE PDF TEXT (tier 4), words taken with coordinates and clustered by y, never from the linear stream",
+  "n_formulations": 133,
+  "index_contiguous_1_to_N": true,
+  "distinct_IL_names": 133,
+  "molpct_sums_to_100_exactly": 133,
+  "molpct_offenders": [],
+  "distinct_recipes": 3,
+  "verdict": "133/133 exact (trap 8 clean)"
+ },
+ "P2_library_grid": {
+  "amines": 20,
+  "maleates": 6,
+  "product": 120,
+  "nDm_members_in_table": 120,
+  "missing_combinations": [],
+  "catalogue_reagents": 13,
+  "total": 133,
+  "amine_block_order_in_file": "NOT monotone (...8, 10, 11, 13, 12, 14 ... 20, 9), so Index must be READ from the table and can never be computed from the name. Checked, not assumed."
+ },
+ "P3_lead_lnp_identity": {
+  "what": "Three loci must agree: (a) the main text sentence 'These LNPs contained the biodegradable ionizable lipids 2D8, 7D4, 17D8i, 17D9.2, 18D4, and 20D8i, respectively'; (b) Figure 3a's panel headers 'LNP 9 / 37 / 94 / 96 / 97 / 112'; (c) Supp Table 3's Index column, which neither of the other two references.",
+  "agreement": "6/6",
+  "mapping": {
+   "2D8": 9,
+   "7D4": 37,
+   "17D8i": 94,
+   "17D9.2": 96,
+   "18D4": 97,
+   "20D8i": 112
+  },
+  "ascending_in_both_orders": true
+ },
+ "P4_token_pattern": {
+  "amine_tokens": "1..20, contiguous, no gaps",
+  "verdict": "LOCAL INDICES, not the shared amine catalogue",
+  "corpus_bare_numeric_IL_names_in_1_20": [],
+  "naive_substring_join_worst_case": [
+   "1",
+   20837,
+   14437,
+   50
+  ],
+  "name_joins_performed_in_this_curation": 0
+ },
+ "P5_corpus_overlap": {
+  "nDm_members_matching_any_corpus_IL_name": 0,
+  "catalogue_names_present_in_corpus": [
+   "ALC-0315",
+   "C12-200",
+   "DLin-MC3-DMA",
+   "SM-102"
+  ],
+  "n_catalogue_names_present": 4,
+  "structure_overlap": "NOT COMPUTABLE for the 120 nDm members: 111 have no determinable structure at all, so there is no InChIKey to compare. The substructure sweep is therefore not run; reporting a SUPERSET of hits against structures we do not have would be meaningless.",
+  "already_merged_arm_check": {
+   "sibling": "curation/mitchellmj_38982196 (same lab, staged, 100 rows)",
+   "its_grammar": "<amine>T-O<tail>, 2-iminothiolane/thioether/acrylate",
+   "our_grammar": "<amine>D<maleate>, aza-Michael onto a dialkyl maleate",
+   "shared_member_names": 0,
+   "shared_chemistry": "none - different linker chemistry, different amine set, no name in common",
+   "verdict": "no arm of this screen is already merged"
+  }
+ },
+ "P6_reagent_registry_vs_corpus": {
+  "what": "Every excipient and benchmark this paper NAMES, resolved two ways and compared by FULL InChIKey. Trap 6: a benchmark SMILES is never written from memory.",
+  "agreement": "6/6",
+  "detail": {
+   "DOPE": {
+    "registry": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+    "corpus": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+    "full_inchikey_match": true
+   },
+   "Cholesterol": {
+    "registry": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+    "corpus": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+    "full_inchikey_match": true
+   },
+   "DSPC": {
+    "registry": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "corpus": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "full_inchikey_match": true
+   },
+   "SM-102": {
+    "registry": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+    "corpus": "BGNVBNJYBVCBJH-UHFFFAOYSA-N",
+    "full_inchikey_match": true
+   },
+   "DLin-MC3-DMA": {
+    "registry": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+    "corpus": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+    "full_inchikey_match": true
+   },
+   "ALC-0315": {
+    "registry": "QGWBEETXHOVFQS-UHFFFAOYSA-N",
+    "corpus": "QGWBEETXHOVFQS-UHFFFAOYSA-N",
+    "full_inchikey_match": true
+   }
+  },
+  "PEG_lipids_excluded": "C14-PEG2000, DMG-PEG2000 and ALC-0159 are deliberately absent from the registry: a PEG block length is a distribution, so no single SMILES is right (CLAUDE.md s3)."
+ },
+ "P7_ms_arithmetic": {
+  "what": "The printed ions pin the TOTAL carbons across each maleate's two ester chains: a+b = (M - amine - k*116.072)/(14.027*k). An integer iff the read is right.",
+  "validated_on": "18D4, where the maleate is drawn plainly n-butyl on both sides and the token is '4', so the answer is known independently of the arithmetic.",
+  "18D4": {
+   "a_plus_b": 8.017,
+   "expected": 8,
+   "residual_carbons": 0.017,
+   "instrument_internal_spread_Da": 0.471
+  },
+  "17D9.2": {
+   "a_plus_b": 18.993,
+   "nearest_integer": 19,
+   "residual_carbons": -0.007,
+   "instrument_internal_spread_Da": 1.095,
+   "but": "mass cannot see connectivity: 11+8 and 10+9 are isomeric, as is every branch position. The carbon count is pinned; the structure is NOT."
+  },
+  "20D8i": {
+   "figure": "Supplementary Figure 6 (SI p.20)",
+   "neutral_M_per_ion": [
+    1878.783,
+    1878.374
+   ],
+   "instrument_internal_spread_Da": 0.409,
+   "a_plus_b": null,
+   "why": "the amine's formula is unread, so the arithmetic has two unknowns and is not solvable."
+  },
+  "name_token_is_not_a_chain_length": "'D4' is 4+4 = 8 carbons, but 'D9.2' is 19 total, not 2x9.2 = 18.4. The suffix is not a chain length and its meaning is not stated anywhere in this paper (trap 1)."
+ },
+ "P8_18D4_two_independent_routes": {
+  "enumerator": "03_enumerate.py, plain SMILES string interpolation, arm-first",
+  "anchor": "make_reference.py::build, assemble.attach on atom-mapped atoms, head-first from the piperazine, AST-verified free of string surgery",
+  "enumerator_inchikey": "MFMRADGRKUHRDG-UHFFFAOYSA-N",
+  "anchor_inchikey": "MFMRADGRKUHRDG-UHFFFAOYSA-N",
+  "formula": "C46H85N5O12",
+  "predicted_MH_avg": 901.217,
+  "printed_MH": 901.829,
+  "delta_Da": 0.612,
+  "nearest_alternative_Da": 28.053,
+  "discrimination_margin": 45.8,
+  "routes_agree": true
+ },
+ "P9_P10_anchor_selftest": {
+  "command": "python3 -I make_reference.py --selftest",
+  "returncode": 0,
+  "stdout": [
+   "PASS  guard accepts build(); calls seen: ['attach', 'canonical']",
+   "PASS  guard fires on a string-built function: NOT INDEPENDENT: _string_built builds SMILES by string surgery: ['str concat/% at line 3']",
+   "      anchor   C46H85N5O12  avg=900.209  exact=899.619473  MFMRADGRKUHRDG-UHFFFAOYSA-N",
+   "      seeded   C46H85N5O12  avg=900.209  exact=899.619473  UHVAORHCRFDQOO-UHFFFAOYSA-N",
+   "PASS  seeded regioisomer: formula, average mass AND exact mass identical (delta 0.000000 Da); InChIKey differs -> the gate tests CONNECTIVITY, not composition"
+  ],
+  "what_it_proves": [
+   "the AST guard ACCEPTS the assembled build()",
+   "the AST guard FIRES ON PURPOSE on a string-built function (a check that cannot fail is not a check)",
+   "the C10 gate reads CONNECTIVITY: the seeded regioisomer has the same formula, the same average mass and the same monoisotopic mass to 6 dp (delta 0.000000 Da) and a different InChIKey"
+  ]
+ },
+ "P11_fig3b_calibration": {
+  "x_axis": {
+   "decade_ticks_px": [
+    409.0,
+    428.0,
+    446.0,
+    465.0,
+    483.0,
+    501.5,
+    520.0,
+    538.0
+   ],
+   "recovered_from_a_double_gap": 1,
+   "px_per_decade": 18.4226,
+   "residual_px": 0.3988,
+   "loo_residuals_px": [
+    0.571,
+    0.336,
+    0.217,
+    0.459,
+    0.027,
+    0.065,
+    0.18,
+    0.5
+   ]
+  },
+  "y_axis": {
+   "decade_ticks_px": [
+    19.04,
+    43.85,
+    68.0,
+    92.0,
+    116.3,
+    140.83
+   ],
+   "px_per_decade": 24.2943,
+   "residual_px": 0.2895,
+   "loo_residuals_px": [
+    0.48,
+    0.411,
+    0.175,
+    0.184,
+    0.202,
+    0.188
+   ]
+  },
+  "y_decade_vs_minor_separation": "12 candidate ticks, measured tick LENGTH 4 px (decade) vs 3 px (5x minor), perfectly alternating 12/12. Decade ticks are selected by that measurement, not by taking every other one.",
+  "legend_columns_detected": [
+   456,
+   497
+  ],
+  "blobs_rejected_as_inside_another_marker": [
+   {
+    "series": "SM-102",
+    "x": 504.0,
+    "y": 57.5,
+    "n_px": 6,
+    "inside": "LNP 97",
+    "centre_sep_px": 1.63
+   }
+  ]
+ },
+ "P12_printed_18.1x_gate": {
+  "clean": {
+   "returncode": 0,
+   "check": {
+    "printed": 18.1,
+    "separation_px": 23.18,
+    "px_predicted_by_18.1x": 23.17,
+    "px_error": 0.01,
+    "measured_ratio": 18.123,
+    "ratio_of_ratios": 1.0013,
+    "PASS": true
+   }
+  },
+  "seeded_shift_sm102_4px": {
+   "returncode": 1,
+   "check": {
+    "printed": 18.1,
+    "separation_px": 19.18,
+    "px_predicted_by_18.1x": 23.17,
+    "px_error": -3.99,
+    "measured_ratio": 10.993,
+    "ratio_of_ratios": 0.6073,
+    "PASS": false
+   }
+  },
+  "metric_moved": {
+   "separation_px": [
+    23.18,
+    19.18
+   ],
+   "measured_ratio": [
+    18.123,
+    10.993
+   ]
+  },
+  "credited": "YES - the seed MOVES the metric (23.18 -> 19.18 px; 18.123x -> 10.993x) and the gate notices; it does not merely raise. Each run is its own process and the verdict is the returncode, never a pipe.",
+  "this_gate_has_already_earned_itself": "the first version of the digitiser reported 6.685x: the grey mask had swallowed the 131-px axis rule, every colour also matched its own legend swatch, and brown annexed the dark flank of the orange marker it overlaps. Three repairs at the source moved it to 18.123x."
+ },
+ "P13_precision": {
+  "px_per_decade_liver_x": 18.4226,
+  "px_per_decade_spleen_y": 24.2943,
+  "value_factor_per_px_x": 1.1331,
+  "library_tick_gate_px": 2.5,
+  "value_factor_that_gate_permits_x": 1.367,
+  "why_this_matters": "axis.TICK_RESIDUAL_PX = 2.5 px was set for 600 dpi renders, where it is ~0.1 pt. A decade on this x axis is 18.42 px, so the SAME gate would pass a factor-1.37 error in a reported value. The gate is not wrong; it is being asked to protect a panel it was not scaled for, which is why the printed 18.1x is the real gate here."
+ },
+ "P14_dashed_identity_line": {
+  "what": "Figure 3b draws a dashed diagonal and the Methods say tropism is classified against the spleen:liver ratio in PBS-treated mice. If the line is that ratio, it is a relationship the authors DREW and never printed, and it would test both calibrations at once.",
+  "result": "ATTEMPTED AND REFUSED. The dashed line's grey is the same grey as the panel's anti-aliased text; a robust column-median fit over the one stretch clear of the legend (29 columns) leaves a residual sd of 40.5 px against a 153 px panel. It is not separable at 546 px. Recorded rather than forced.",
+  "residual_sd_px": 40.5,
+  "columns_used": 29
+ },
+ "P15_compositional": {
+  "formula_as_STATED_IN_PROSE": "Methods 4.6, verbatim: 'Normalized accumulation was calculated as the ratio of output read fraction to input read fraction. Specifically, read fractions were first computed by dividing the read count for each barcode by the total number of barcode counts within each sample. Each sample read fraction (output) was then divided by the corresponding mean read fraction from the uninjected pool samples (input) to yield normalized accumulation.'",
+  "formula": "nd_i(s) = [c_i(s) / SUM_k c_k(s)] / mean_p[ c_i(p) / SUM_k c_k(p) ]",
+  "compositional": "YES, in the numerator. f_out_i(s) = c_i(s)/SUM_k c_k(s) is LNP i's SHARE OF ITS OWN POOL, so every value depends on its pool-mates through the denominator.",
+  "how_it_differs_from_the_sibling": "The sibling's formula had an OUTER renormalisation, '/ SUM_k[same] x 100%', which forces the values onto a unit simplex summing to 100. THIS paper has no such step, and its denominator is a FIXED reference -- the mean input fraction from uninjected pool samples, the same number for every output sample. That is the materially better case: the pool-mate dependence is removed from the input side.",
+  "but_the_constant_sum_survives_anyway": "SUM_i nd_i(s) = SUM_i f_out_i(s)/f_in_i. The paper NARROWED its barcode pool precisely so the f_in_i are near-uniform: Figure 1g, verbatim, 'b-mRNAs demonstrating 20% enrichment or depletion (outside the shaded area) were excluded from later use.' With every retained f_in_i within +/-20% of 1/N, SUM_i nd_i is pinned to [N/1.2, N/0.8] = [110.8, 166.3] for N = 133. So the values still lie on a simplex, scaled by N instead of by 100.",
+  "derived_bound_N133": [
+   110.83,
+   166.25
+  ],
+  "reconstruction_residual": "NOT COMPUTABLE, and the reason is the point: this paper publishes NO read counts, NO input fractions, NO per-LNP normalized accumulation values and NO worked example. There is nothing numeric to reconstruct against. The sibling could reach residual 0.0 because its paper tabulated a worked example; here the formula is fully stated in prose and is simply never instantiated.",
+  "pool_size_is_constant_within_this_paper": "One pool of 133 LNPs for every cell population and both strains, so the different-simplex problem does not bite WITHIN the paper. It bites across sources, which is exactly the comparison this project measures."
+ },
+ "P16_data_deposit": {
+  "data_availability_verbatim": "The data that support the findings of this study are available from the corresponding author upon reasonable request.",
+  "accessions_found_in_article_XML": 0,
+  "accessions_found_in_SI_text": 0,
+  "patterns_searched": [
+   "GSE",
+   "SRP",
+   "PRJNA",
+   "SRA",
+   "E-MTAB",
+   "zenodo",
+   "dryad",
+   "github",
+   "figshare"
+  ],
+  "SI_text_chars_searched": 22296,
+  "find_repo_py": "no candidate repository; all code-search hits were unrelated projects",
+  "note": "Methods name the UMI-tools Python package and 'the R statistical programming language with ... CRAN and Bioconductor', and a renv-style lockfile hash ('3ff0e34b') appears in the Data Analysis section, but no analysis code is deposited anywhere."
+ },
+ "P17_si_has_no_value_table": {
+  "si_tables": {
+   "1": "Top 200 barcode sequences",
+   "2": "Final 134 barcode sequences",
+   "3": "Formulation details of tested LNP library",
+   "4": "Antibody clones"
+  },
+  "tables_carrying_a_delivery_value": 0,
+  "consequence": "tier 2 of the intake gate fails; Supp Table 3 is used, but for FORMULATION, not for a value."
+ },
+ "P18_figure_resolution": {
+  "only_rendition_obtainable": "546 px wide JPEG (PMC deposit)",
+  "sha256_verified_against_own_download_record": "6/6",
+  "routes_tried_for_a_higher_rendition": {
+   "PMC /bin/ ADMA-38-e14370.pdf": "HTML error page (21,483 B)",
+   "europepmc fulltextRepo .pdf": "HTTP 403 {\"error\":\"PDF link h...\"}",
+   "europepmc fulltextRepo .jpg": "served, same 546 px file",
+   "onlinelibrary.wiley.com/doi/...": "HTTP 403 to a plain client",
+   "onlinelibrary.wiley.com/doi/pdfdirect/...": "HTTP 403"
+  },
+  "browser": "not used - the shared Playwright browser was out of scope for this run, and no bot check was bypassed",
+  "native_dpi": "NOT MEASURABLE. axis.native_tol refuses a guessed dpi and there is no PDF rect to measure px/pt against, because no PDF rendition of the article is obtainable. Reported instead as the directly measured 18.42 px per decade.",
+  "SI_figures": "all flattened rasters; page.get_drawings() over all 29 SI pages returns chemistry-free paths only (the TOC rule, table rules, and two flow-cytometry gating panels on pp. 25-26). Supp Fig 2 is 722x1004 at a measured 137.5 dpi; Supp Fig 14 is 1800x2400 at a measured 300.0 dpi."
+ },
+ "_rows_emitted": 0,
+ "_why_zero": "Two independent blockers, either one sufficient. (1) The screen's 3,840 attributable values are b-mRNA ACCUMULATION measured by RNA sequencing before peak translation, which is not one of the four delivery readouts data/ records. (2) The validation panels ARE delivery readouts and ARE attributable, but 5 of their 7 ionizable lipids have no determinable structure, and the 2 that do are the 2 the paper did not need to draw."
+}

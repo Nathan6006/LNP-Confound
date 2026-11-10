@@ -441,6 +441,66 @@ def main(seed=None):
                    and seeds["control_clean_run"]["passes"] else "FAIL",
     }
 
+    # ---- 12b. the C10 anchor, in its own processes ---------------------
+    if seed is None:
+        mr = {}
+        for args, want in ((["--prove-guard"], 0), ([], 0),
+                           (["--seed-regioisomer"], 1)):
+            p2 = subprocess.run([sys.executable, "-I",
+                                 os.path.join(HERE, "make_reference.py")] + args,
+                                capture_output=True, text=True, cwd=HERE)
+            mr[" ".join(args) or "(normal)"] = {
+                "returncode": p2.returncode, "expected": want,
+                "ok": p2.returncode == want,
+                "tail": p2.stdout.strip().splitlines()[-1] if p2.stdout.strip() else ""}
+        Q["c10_anchor"] = {
+            "what": "one real anchor (DLin-MC3-DMA, derived from its IUPAC name "
+                    "by walking locants and composing a string) and one "
+                    "deliberately EMPTY row (cKK-E12). Independence is verified "
+                    "by an AST walk of make_reference.py at run time, not by "
+                    "byte-identity, which is a trap (F-037).",
+            "runs": mr,
+            "ast_guard_proved_to_fail": "a temporary copy with 'import "
+                                        "assemble' added is rejected",
+            "connectivity_seed": "ester C19 -> C18: formula C43H79NO2 both, "
+                                 "exact mass 641.611081 both, delta 0.000000; "
+                                 "InChIKey NRLNQCOGCKAESA-KWXKLSQISA-N vs "
+                                 "DPHDIRYUGZIOOZ-PNOCIVJDSA-N. Only the key "
+                                 "sees it.",
+            "anchors_with_empty_reference_SMILES": 1,
+            "fails_if": "any of the three runs returns something other than "
+                        "its expected code",
+            "verdict": "PASS" if all(v["ok"] for v in mr.values()) else "FAIL",
+        }
+
+    # ---- 12c. what Figure 1A does and does not settle --------------------
+    Q["drawn_structure_figure_1A"] = {
+        "what": "Figure 1A draws every lipid component. Recorded because my "
+                "own first pass wrote 'NO structure disclosed' for the four "
+                "stereopure lipomers off the Methods sentence alone, which was "
+                "wrong -- a claim about a paper read from one sentence rather "
+                "than from the paper.",
+        "figure_px": [708, 391],
+        "ckk_e12_panel_px": [130, 70],
+        "stereopure_panel_px_each_approx": [110, 57],
+        "legible_at_that_size": [
+            "cKK-E12: 2,5-diketopiperazine with two ring C=O and two NH; two "
+            "tertiary N, each bearing two CH2-CH(OH)-R arms; arm labels read "
+            "C10H21, so each arm is a 2-hydroxydodecyl -- CONSISTENT with the "
+            "emitted corpus structure (C60H120N4O6, four 2-hydroxydodecyl arms)",
+            "an 'R Chains' key reading C12S = C12H25, C13S = C13H27, "
+            "C12R = C12H25, C13R = C13H27",
+            "panels headed '2 Stereopure R Lipids' and '2 Stereopure S Lipids', "
+            "a piperazine-cored lipidoid with wedge stereochemistry",
+        ],
+        "NOT_legible": "the methylene count of each lysine side chain of "
+                       "cKK-E12 -- the one thing a C10 anchor exists to test",
+        "token_note": "the '12' in C12S is the R-CHAIN length, not the arm "
+                      "length: the arm is CH2-CH(OH)-R and carries 14 carbons "
+                      "(error class 1, a name token is not a chain length)",
+        "verdict": "REPORTED",
+    }
+
     # ---- 13. corpus overlap summary ------------------------------------
     O = json.load(open(os.path.join(HERE, "02_corpus_overlap.json")))
     Q["corpus_overlap"] = {

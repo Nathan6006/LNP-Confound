@@ -1096,8 +1096,8 @@
    "measures": "barcode accumulation",
    "lib_src": "abstract",
    "note": "150 LNPs over 3 screening rounds. These are formulation variants more than distinct ILs.",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted",
    "blockers": [
     "abstract says 150 FORMULATIONS, not 150 lipids. Abstract-verified 2026-11-10."
    ],
@@ -1105,7 +1105,10 @@
    "kind_original": "ivv",
    "pmcid": "PMC12874650",
    "value_reach": "C_pmc_fulltext",
-   "agent_task_id": "a246ffe4442b75df2"
+   "agent_task_id": "a246ffe4442b75df2",
+   "rows_emitted": 28,
+   "structures_enumerated": 2,
+   "proposed_experiment_id": "EM_2025"
   },
   {
    "rank": 44,
@@ -1261,8 +1264,8 @@
    "measures": "barcode accumulation",
    "lib_src": null,
    "note": "Barcoded in vivo screen varying IL structure, IL mol%, and PEG mol%. Library size not in abstract.",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted",
    "blockers": [
     "BARCODED IN VIVO SCREEN -- likely a FORMULATION screen in disguise. dahlmanje_29489381 stated 281 and turned out to be 564 formulations over only 15 distinct lipomers, 206 of them sharing one (7C1); 7 of the 15 are PEI polymers with no determinable SMILES. Deprioritised: confirm DISTINCT IONIZABLE STRUCTURES before spending an agent."
    ],
@@ -1270,7 +1273,10 @@
    "pmcid": null,
    "value_reach": "D_si_only",
    "kind_original": "ivv",
-   "agent_task_id": "ae3117bdb5ebe596c"
+   "agent_task_id": "ae3117bdb5ebe596c",
+   "rows_emitted": 48,
+   "structures_enumerated": 15,
+   "proposed_experiment_id": "EH_2026"
   },
   {
    "rank": 50,
@@ -1359,7 +1365,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T13:26:44Z",
+ "updated_utc": "2026-11-10T14:09:04Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

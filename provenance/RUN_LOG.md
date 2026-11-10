@@ -2266,3 +2266,63 @@ started elsewhere, which is the thing worth knowing.
 fully / partly / not at all, and the standing rule that **nothing in
 `curation/` has been merged** and the frozen pipeline must not be re-pointed
 without the user's decision.
+
+### 13:0x — `dixonjb_41269090`: 28 rows, CC BY, and two corpus-level gaps; run halted on usage limit
+
+**28 rows, and the first source this run that is cleanly §8-compatible besides
+`palczewski_41654520`: CC BY**, read off the Europe PMC record rather than the
+publisher landing page. All values are **printed numerals** from three SI tables
+that are **bitmaps pasted into the PDF** (286/337/344 chars of page text —
+caption and watermark only; `find_tables()` finds nothing; native 198.5/249.7/
+249.8 dpi). No axis, scale, origin or colour ramp exists, so error classes
+20/23/27/28/32/43 **cannot arise** — and the agent wrote a stage that
+re-derives that and exits non-zero if it is ever false.
+
+**A "150-LNP library" with ONE ionizable lipid.** All six leads are cKK-E12;
+only helper lipid and mole ratios vary. 150 formulations claimed, 99 claimed
+administered, **30 verifiable**, **7 individually administered**. The factorial
+was proved rather than asserted: 5 helpers x 6 ratio sets = **30 = row count**,
+every cell once. Its token trap is a new dialect: Fig 1A's own key reads
+`C12 = C12H25`, but the arm is CH2-CH(OH)-R, so "C12" carries **14** carbons —
+the number is the R-chain, not the arm.
+
+**It caught error class 22 in its own first draft.** It had used two z-blocks,
+one per cohort. LNP7 appears in both, and at the one site draining the injection
+in both they agree to **11.4%** (37.34% vs 33.52%) — so one z is right. What
+actually differs is *which nodes drain*, carried in `Model_target` with a
+`_nondraining` suffix rather than deleted by separate standardisation; without
+it LNP7 would carry two axillary values **14.4x** apart under one key. Exactly
+one duplicate key remains, the true replicate pair.
+
+Its z round-trip check is the right shape: observed error **2.0164e-5** pp
+against **2.0233e-5** predicted from 6-dp rounding alone, **ratio 0.9966** — and
+it says it tried a round 1e-9 bound first and discarded it because it *could
+only ever fail*.
+
+**F-062 — `Experiment_method` carries a misspelling on 766 rows**, verified:
+`protein_adundance_normalized`. A curation emitting the correct spelling would
+fail the vocabulary gate, so every new curation must copy the typo to pass,
+which is how a typo becomes a convention. Not fixed: §7 forbids hand-editing
+`data/`, so it needs `build_dataset.py` + a rebuild + `audit_baseline.json` +
+C13's vocabulary in one commit.
+
+**F-063 — C17 pins NAME -> STRUCTURE and nothing checks the reverse.**
+cKK-E12, a benchmark lipid, sits in the corpus under **three names** —
+`CKK-E12`/`AC_2025` 216 rows, **`other`**/`JW_2024` 19 rows, `MD-1`/`BL_2023`
+6 rows — all one InChIKey. Generally, **324 of 19,919 structures carry more than
+one `IL_name`**, up to four. An `IL_name` lookup for cKK-E12 finds it in 1 of 3
+places and misses 25 rows; this curation found it only by comparing InChIKeys.
+A C19 is proposed (group by full InChIKey, report every multi-named structure,
+baseline 324) and `JW_2024`'s 19 rows named literally `other` are flagged
+separately — a placeholder that *looks* populated is worse than a blank.
+
+**Benchmark does NOT top this screen**: LNP7 beats MC3 **2.39x** at the
+popliteal node and **4.06x** at the popliteal vessel. Third independent
+counter-example to §8's benchmark-only-pairs worry — and this source would be
+benchmark-only for every cross-source pair but one.
+
+**RUN HALTED HERE on the account's usage limit.** Two agents
+(`dahlmanje_36701517`, `mitchellmj_41603124`) were still running and do not
+receive the limit notice; their output lands in their own folders and is
+recoverable from disk exactly as the four sleep-killed agents were. Nothing is
+merged; `data/` is untouched at 29,195 x 79 / 1,803 x 79.

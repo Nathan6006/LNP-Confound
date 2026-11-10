@@ -1,0 +1,72 @@
+{
+ "_what": "Stage 00 acquisition record for PMID 36701517.",
+ "article": {
+  "doi": "10.1021/acs.nanolett.2c04479",
+  "journal": "Nano Letters 23(3), February 2023",
+  "licence": "CC BY",
+  "licence_compatibility": "CC BY is compatible with CLAUDE.md section 8 (corpus release needs CC0/CC-BY-compatible constituent sources).",
+  "licence_evidence": "Europe PMC REST core record for EXT_ID:36701517 returns license='cc by' and isOpenAccess='Y'. Retrieved 2026-11-10. The same record lists the Europe PMC open-access HTML and PDF renditions.",
+  "pmcid": "PMC9912332",
+  "pmid": "36701517",
+  "publisher_landing_page_not_visited": "The ACS landing page was NOT fetched: no browser was used for this curation and the article text, the SI and the figure rasters were all obtainable from Europe PMC and PMC without one.",
+  "title_verbatim": "The Transcriptional Response to Lung-Targeting Lipid Nanoparticles <i>in Vivo</i>."
+ },
+ "fetched_utc": "2026-11-10",
+ "files": {
+  "source/nl2c04479_si_001.pdf": {
+   "bytes": 12814661,
+   "md5": "371b22d12e69bf62ab85cd72be8750f8",
+   "note": "The supplementary PDF as supplied to this folder. It carries a per-download stamp ('Downloaded from pubs.acs.org/... by PHILLIPS EXETER ACADEMY user on 10 November 2026') on every page, which is why its hash differs from the copy inside the Europe PMC supplementaryFiles zip (12,758,799 B, md5 bfa159ad7536735564a56c1411286308). Page count 41, figure content identical.",
+   "sha256": "8b574bfb781871b10df34206c0741b31c766abd3cff9c2cdd8463ed90914390b"
+  },
+  "source_epmc/ft.xml": {
+   "bytes": 98120,
+   "md5": "d95972bd5b8e1898fefac1a8e5f17887",
+   "note": "Europe PMC fullTextXML for PMC9912332, the article body and reference list.",
+   "sha256": "057c5a7f3d4d9aebfbe7d902bb295bb2724645b52fe4291698794623823b3afd"
+  },
+  "source_epmc/nl2c04479_0001.jpg": {
+   "bytes": 134022,
+   "md5": "ae2f249b42401ebd7d2a6c174cc90eb2",
+   "note": "publisher main-text figure 1 raster as served by PMC/Europe PMC; used for LABELS AND PRINTED NUMERALS ONLY, never for a digitised value (see 00_value_sources.json).",
+   "sha256": "a556389d45af98b72dedccbc95d0f3fadeb8e192caafad0c7d39afc9829690d7"
+  },
+  "source_epmc/nl2c04479_0002.jpg": {
+   "bytes": 158806,
+   "md5": "40d5aa7e18888f008e61b341dc220fed",
+   "note": "publisher main-text figure 2 raster as served by PMC/Europe PMC; used for LABELS AND PRINTED NUMERALS ONLY, never for a digitised value (see 00_value_sources.json).",
+   "sha256": "8f9f85b2a58abfa2c409f3b70f16c79dfc78e62eda8e1294ae09f65896ea0272"
+  },
+  "source_epmc/nl2c04479_0003.jpg": {
+   "bytes": 194636,
+   "md5": "d5f75816586fe725a45648cf60be80ee",
+   "note": "publisher main-text figure 3 raster as served by PMC/Europe PMC; used for LABELS AND PRINTED NUMERALS ONLY, never for a digitised value (see 00_value_sources.json).",
+   "sha256": "21f2f9f46c16b194275955118d3b130ec14d0e8a47f15e32439458882b53505a"
+  },
+  "source_epmc/nl2c04479_0004.jpg": {
+   "bytes": 201429,
+   "md5": "70244418faaffd9c11004eef71514661",
+   "note": "publisher main-text figure 4 raster as served by PMC/Europe PMC; used for LABELS AND PRINTED NUMERALS ONLY, never for a digitised value (see 00_value_sources.json).",
+   "sha256": "2f1ac0667fc8183fde7b566a8d20a7ed513f12ad52e2841da544c29b43cea95e"
+  },
+  "source_epmc/nl2c04479_0005.jpg": {
+   "bytes": 93441,
+   "md5": "9e7ae1fabd0032a979f624adce122caa",
+   "note": "publisher main-text figure 5 raster as served by PMC/Europe PMC; used for LABELS AND PRINTED NUMERALS ONLY, never for a digitised value (see 00_value_sources.json).",
+   "sha256": "48d7c3d748fcc26dff160476614d3b461bd757046df861c8b9e6d70b498d02a0"
+  },
+  "source_epmc/nl2c04479_0006.jpg": {
+   "bytes": 80948,
+   "md5": "46b14130c5d08bad7ed821f35e4553c5",
+   "note": "publisher main-text figure 6 raster as served by PMC/Europe PMC; used for LABELS AND PRINTED NUMERALS ONLY, never for a digitised value (see 00_value_sources.json).",
+   "sha256": "f8186b4a351d91bbe852923cd502eff0ea61bcc2bd9e599c802316210ec5743e"
+  }
+ },
+ "licences_of_derived_files": "All files in this folder are derived from the CC BY article and its CC BY supplementary PDF.",
+ "repository": {
+  "data_availability_statement": "THE ARTICLE HAS NONE. grep for GSE[0-9]+, 'accession', 'deposit', 'github', 'zenodo', 'dryad' over the Europe PMC fullTextXML (98,120 B) and over the full 41-page SI text returns nothing but the phrase 'available free of charge at https://pubs.acs.org/doi/...' referring to the SI PDF.",
+  "result": "none. 0 relevant candidates.",
+  "scRNAseq_deposit": "NOT DEPOSITED, as far as the article states. And it would not help: a GEO/SRA deposit for Figures 4-5 would hold host lung-cell count matrices -- what the tissue does ABOUT the particle -- which is not a delivery value. The only cargo-derived quantity in that dataset is the aVHH pseudogene read count of Fig 4b,c, reported per transcriptional cluster for one LNP and with no per-formulation value table.",
+  "searched": "provenance/tools/find_repo.py --pmid 36701517 --title 'transcriptional response lung-targeting lipid nanoparticles' --author Dahlman"
+ }
+}

@@ -1,0 +1,508 @@
+{
+ "C10_equivalent_anchor_comparison": {
+  "18:0 DDAB": {
+   "_note": "byte identity is NOT the independence signal (F-037); make_reference.py's AST guard is.",
+   "anchor_inchikey": "OGQYPPBGSLZBEG-UHFFFAOYSA-N",
+   "byte_identical_strings": true,
+   "full_match": true,
+   "registry_entry": "DDAB",
+   "registry_inchikey": "OGQYPPBGSLZBEG-UHFFFAOYSA-N",
+   "skeleton_match": true
+  },
+  "18:0 PC (DSPC)": {
+   "_note": "byte identity is NOT the independence signal (F-037); make_reference.py's AST guard is.",
+   "anchor_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "byte_identical_strings": true,
+   "full_match": true,
+   "registry_entry": "DSPC",
+   "registry_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "skeleton_match": true
+  },
+  "18:1 PA": {
+   "_note": "18:1 PA (DOPA) is NOT in provenance/reagent_registry.py. The registry's only PA is 14PA (DMPA, 14:0/14:0), a different molecule. Nothing to compare against; the anchor stands alone and An-LNP's helper lipid is therefore the one excipient in this paper with no second attestation.",
+   "anchor_inchikey": "MHUWZNTUIIFHAS-DSSVUWSHSA-M",
+   "registry_entry": null
+  },
+  "cKK-E12": {
+   "_note": "EMPTY ON PURPOSE. The paper draws no structure for its only ionizable lipid, so there is no anchor to build. The absence is recorded rather than filled in.",
+   "reference_SMILES": ""
+  }
+ },
+ "_what": "QC for PMID 36701517, every check in numbers",
+ "cross_panel_figS13_vs_figS15": {
+  "_expected": "the difference should be the PBS level, which Fig S13 shows at 0-4.5% everywhere. A difference outside roughly [-0.6, 5] would mean the two panels do not plot the same measurement.",
+  "_join": "on (organ, cell type) LABEL, never on column index -- Fig S13 lung is ECs/Monocytes/DCs/T/B and Fig S15 lung is ECs/DCs/T/B/Monocytes",
+  "n_pairs": 14,
+  "n_within_PBS_band_0_to_5pct": 14,
+  "pairs": [
+   {
+    "above_background_figS15_pct": 5.757,
+    "cell_type": "ECs",
+    "lnp": "Neu-LNP",
+    "organ": "lung",
+    "pbs_figS13_pct": null,
+    "ratio": 1.1334,
+    "raw_figS13_pct": 6.525,
+    "raw_minus_abovebackground": 0.768
+   },
+   {
+    "above_background_figS15_pct": 16.243,
+    "cell_type": "Monocytes",
+    "lnp": "Neu-LNP",
+    "organ": "lung",
+    "pbs_figS13_pct": null,
+    "ratio": 1.102,
+    "raw_figS13_pct": 17.899,
+    "raw_minus_abovebackground": 1.656
+   },
+   {
+    "above_background_figS15_pct": 46.679,
+    "cell_type": "B cells",
+    "lnp": "Neu-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": null,
+    "ratio": 0.9979,
+    "raw_figS13_pct": 46.58,
+    "raw_minus_abovebackground": -0.099
+   },
+   {
+    "above_background_figS15_pct": 55.639,
+    "cell_type": "DCs",
+    "lnp": "Neu-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": null,
+    "ratio": 1.0114,
+    "raw_figS13_pct": 56.274,
+    "raw_minus_abovebackground": 0.635
+   },
+   {
+    "above_background_figS15_pct": 93.041,
+    "cell_type": "ECs",
+    "lnp": "Neu-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": 2.744,
+    "ratio": 1.0261,
+    "raw_figS13_pct": 95.473,
+    "raw_minus_abovebackground": 2.432
+   },
+   {
+    "above_background_figS15_pct": 48.627,
+    "cell_type": "Hepatocytes",
+    "lnp": "Neu-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": null,
+    "ratio": 0.9926,
+    "raw_figS13_pct": 48.266,
+    "raw_minus_abovebackground": -0.361
+   },
+   {
+    "above_background_figS15_pct": 84.469,
+    "cell_type": "Kupffer Cells",
+    "lnp": "Neu-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": 4.43,
+    "ratio": 1.0454,
+    "raw_figS13_pct": 88.308,
+    "raw_minus_abovebackground": 3.839
+   },
+   {
+    "above_background_figS15_pct": 43.562,
+    "cell_type": "T cells",
+    "lnp": "Neu-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": null,
+    "ratio": 1.0112,
+    "raw_figS13_pct": 44.051,
+    "raw_minus_abovebackground": 0.489
+   },
+   {
+    "above_background_figS15_pct": 2.573,
+    "cell_type": "ECs",
+    "lnp": "Neu-LNP",
+    "organ": "heart",
+    "pbs_figS13_pct": null,
+    "ratio": 1.0381,
+    "raw_figS13_pct": 2.671,
+    "raw_minus_abovebackground": 0.098
+   },
+   {
+    "above_background_figS15_pct": 1.794,
+    "cell_type": "Immune cells",
+    "lnp": "Neu-LNP",
+    "organ": "heart",
+    "pbs_figS13_pct": null,
+    "ratio": 1.2536,
+    "raw_figS13_pct": 2.249,
+    "raw_minus_abovebackground": 0.455
+   },
+   {
+    "above_background_figS15_pct": 4.92,
+    "cell_type": "ECs",
+    "lnp": "An-LNP",
+    "organ": "lung",
+    "pbs_figS13_pct": null,
+    "ratio": 1.0856,
+    "raw_figS13_pct": 5.341,
+    "raw_minus_abovebackground": 0.421
+   },
+   {
+    "above_background_figS15_pct": 18.12,
+    "cell_type": "Monocytes",
+    "lnp": "An-LNP",
+    "organ": "lung",
+    "pbs_figS13_pct": 2.032,
+    "ratio": 1.0709,
+    "raw_figS13_pct": 19.404,
+    "raw_minus_abovebackground": 1.284
+   },
+   {
+    "above_background_figS15_pct": 55.975,
+    "cell_type": "B cells",
+    "lnp": "An-LNP",
+    "organ": "liver",
+    "pbs_figS13_pct": null,
+    "ratio": 1.0169,
+    "raw_figS13_pct": 56.92,
+    "raw_minus_abovebackground": 0.945
+   },
+   {
+    "above_background_figS15_pct": 1.821,
+    "cell_type": "ECs",
+    "lnp": "An-LNP",
+    "organ": "heart",
+    "pbs_figS13_pct": null,
+    "ratio": 1.3465,
+    "raw_figS13_pct": 2.452,
+    "raw_minus_abovebackground": 0.631
+   }
+  ],
+  "raw_minus_abovebackground_max": 3.839,
+  "raw_minus_abovebackground_median": 0.635,
+  "raw_minus_abovebackground_min": -0.361
+ },
+ "figS1_molar_ratios": {
+  "_why": "a round number the authors implied but never printed",
+  "columns": [
+   [
+    60,
+    26,
+    2,
+    12
+   ],
+   [
+    50,
+    35,
+    2.5,
+    12.5
+   ],
+   [
+    35,
+    18,
+    2.5,
+    44.5
+   ],
+   [
+    20,
+    50,
+    2.5,
+    27.5
+   ]
+  ],
+  "max_abs_residual_from_100": 0,
+  "n_exact": 4,
+  "sums": [
+   100,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ "figS3a_worked_example": {
+  "counts": [
+   3,
+   1,
+   1
+  ],
+  "max_abs_residual": 0.0,
+  "n_sequenced": 5,
+  "printed_normalized_delivery_pct": [
+   60,
+   20,
+   20
+  ],
+  "reconstructed_from_counts": [
+   60.0,
+   20.0,
+   20.0
+  ],
+  "sum": 100.0,
+  "sum_residual_vs_100": 0.0
+ },
+ "figS6c_average_is_the_mean_of_the_three_organ_columns": {
+  "_why": "reproduces a column the authors derived but never defined, and simultaneously validates 88 transcribed numerals.",
+  "max_abs_error": 1.666666804567285e-09,
+  "n_rows": 22,
+  "n_within_1e-8": 22
+ },
+ "figS6c_pool_shares_sum_to_100": {
+  "_interpretation": "Each column is a SHARE OF ITS OWN POOL and the shares sum to 100%. Fig S3a states it as a worked example: 3, 1 and 1 of five sequenced barcodes give 60, 20 and 20, which sums to 100.000 with residual 0.000 and reproduces as 3/5, 1/5, 1/5 exactly. The residuals here are all POSITIVE and are attributable to exactly one pooled LNP missing from the table: the text says 23 cationic LNPs were pooled and the table lists 22. The three organ residuals average to 6.5528, which equals the 'average' column residual to 3e-4 -- the same arithmetic identity the column itself obeys.",
+  "average": {
+   "residual_vs_100": -6.552817215999994,
+   "sum_including_naked_barcode": 93.447182784
+  },
+  "average_column_residual": -6.552817215999994,
+  "identity_residual": 3.333298081997782e-10,
+  "liver": {
+   "residual_vs_100": -10.472722238999992,
+   "sum_including_naked_barcode": 89.52727776100001
+  },
+  "lung": {
+   "residual_vs_100": -2.635968210999991,
+   "sum_including_naked_barcode": 97.36403178900001
+  },
+  "mean_of_three_organ_residuals": -6.552817216333324,
+  "spleen": {
+   "residual_vs_100": -6.549761198999988,
+   "sum_including_naked_barcode": 93.45023880100001
+  }
+ },
+ "geometry": {
+  "gate_actually_used": "the UNRESCALED 1.5 px; the rescale was available and never needed",
+  "gate_px_rescaled_for_220dpi": 4.091,
+  "gate_px_unrescaled": 1.5,
+  "native_dpi_measured": {
+   "S13ab": 220.15,
+   "S13c": 220.07,
+   "S15": 219.77
+  },
+  "panels": {
+   "S13a/heart": {
+    "loo_max_px": 0.253,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3735,
+    "spine_top_residual_px": 0.299,
+    "tick_fit_residual_px": 0.1644
+   },
+   "S13a/kidney": {
+    "loo_max_px": 0.252,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3758,
+    "spine_top_residual_px": 0.381,
+    "tick_fit_residual_px": 0.1472
+   },
+   "S13a/liver": {
+    "loo_max_px": 0.178,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3779,
+    "spine_top_residual_px": 0.225,
+    "tick_fit_residual_px": 0.1256
+   },
+   "S13a/lung": {
+    "loo_max_px": 0.282,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3732,
+    "spine_top_residual_px": 0.374,
+    "tick_fit_residual_px": 0.15
+   },
+   "S13a/spleen": {
+    "loo_max_px": 0.227,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3753,
+    "spine_top_residual_px": 0.549,
+    "tick_fit_residual_px": 0.1597
+   },
+   "S13b/heart": {
+    "loo_max_px": 0.078,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.371,
+    "spine_top_residual_px": 0.23,
+    "tick_fit_residual_px": 0.0642
+   },
+   "S13b/kidney": {
+    "loo_max_px": 0.184,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3753,
+    "spine_top_residual_px": 0.09,
+    "tick_fit_residual_px": 0.1296
+   },
+   "S13b/liver": {
+    "loo_max_px": 0.08,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3725,
+    "spine_top_residual_px": 0.26,
+    "tick_fit_residual_px": 0.0658
+   },
+   "S13b/lung": {
+    "loo_max_px": 0.161,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.3739,
+    "spine_top_residual_px": 0.097,
+    "tick_fit_residual_px": 0.0768
+   },
+   "S13b/spleen": {
+    "loo_max_px": 0.201,
+    "n_y_ticks": 5,
+    "px_per_percent": 2.3774,
+    "spine_top_residual_px": 0.703,
+    "tick_fit_residual_px": 0.1302
+   },
+   "S13c/heart": {
+    "loo_max_px": 0.235,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.4178,
+    "spine_top_residual_px": 0.15,
+    "tick_fit_residual_px": 0.1922
+   },
+   "S13c/kidney": {
+    "loo_max_px": 0.192,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.4208,
+    "spine_top_residual_px": 0.173,
+    "tick_fit_residual_px": 0.1573
+   },
+   "S13c/liver": {
+    "loo_max_px": 0.166,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.4211,
+    "spine_top_residual_px": 0.3,
+    "tick_fit_residual_px": 0.1189
+   },
+   "S13c/lung": {
+    "loo_max_px": 0.114,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.4177,
+    "spine_top_residual_px": 0.146,
+    "tick_fit_residual_px": 0.0623
+   },
+   "S13c/spleen": {
+    "loo_max_px": 0.229,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.4198,
+    "spine_top_residual_px": 0.158,
+    "tick_fit_residual_px": 0.1413
+   },
+   "S15b/heart": {
+    "loo_max_px": 0.17,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.5682,
+    "spine_top_residual_px": 0.215,
+    "tick_fit_residual_px": 0.0995
+   },
+   "S15b/liver": {
+    "loo_max_px": 0.126,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.5668,
+    "spine_top_residual_px": 0.137,
+    "tick_fit_residual_px": 0.0891
+   },
+   "S15b/lung": {
+    "loo_max_px": 0.14,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.5747,
+    "spine_top_residual_px": 0.651,
+    "tick_fit_residual_px": 0.1145
+   },
+   "S15d/heart": {
+    "loo_max_px": 0.143,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.5581,
+    "spine_top_residual_px": 0.155,
+    "tick_fit_residual_px": 0.101
+   },
+   "S15d/liver": {
+    "loo_max_px": 0.08,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.5673,
+    "spine_top_residual_px": 0.025,
+    "tick_fit_residual_px": 0.0658
+   },
+   "S15d/lung": {
+    "loo_max_px": 0.151,
+    "n_y_ticks": 6,
+    "px_per_percent": 2.5756,
+    "spine_top_residual_px": 0.108,
+    "tick_fit_residual_px": 0.1065
+   }
+  },
+  "spine_check_what_it_is": "every y-axis spine is stroked from the 100% level to the 0% level, so the row the tick-fitted scale puts 100% at must be the spine's top row. The spine takes no part in the fit. 21/21 sub-panels pass at <= 0.71 px, which also pins the value of the top stub in the one panel (Fig S13b Spleen) that draws only five.",
+  "worst_loo_px": 0.282,
+  "worst_spine_top_residual_px": 0.703
+ },
+ "lead_LNP_pie_labels_pin_a_figS1_column": {
+  "_why": "the PEG mol% is the unlabelled slice of each pie; matching the three printed labels against the Fig S1 columns recovers it uniquely for all three lead LNPs, 3/3.",
+  "n_unique": 3,
+  "per_lnp": {
+   "An-LNP": {
+    "matching_figS1_columns": [
+     0
+    ],
+    "peg_agrees_with_stored": true,
+    "peg_recovered": 2,
+    "printed_pie_labels": [
+     12,
+     26,
+     60
+    ],
+    "unique": true
+   },
+   "Cat-LNP": {
+    "matching_figS1_columns": [
+     2
+    ],
+    "peg_agrees_with_stored": true,
+    "peg_recovered": 2.5,
+    "printed_pie_labels": [
+     18,
+     35,
+     44.5
+    ],
+    "unique": true
+   },
+   "Neu-LNP": {
+    "matching_figS1_columns": [
+     3
+    ],
+    "peg_agrees_with_stored": true,
+    "peg_recovered": 2.5,
+    "printed_pie_labels": [
+     20,
+     27.5,
+     50
+    ],
+    "unique": true
+   }
+  }
+ },
+ "rows_emitted": {
+  "n": 37,
+  "n_formulations": 3,
+  "n_unique_IL_SMILES": 1,
+  "rows_with_a_caveat": 37,
+  "value_pct_max": 95.473,
+  "value_pct_min": 2.027,
+  "z_mean": 0.0,
+  "z_sd_population": 1.0
+ },
+ "the_three_numbers": {
+  "distinct_formulations_designed": 144,
+  "distinct_formulations_injected": 137,
+  "distinct_helper_lipid_structures": 18,
+  "distinct_ionizable_lipid_structures": 1,
+  "formulation_design": "18 helper lipids x 2 PEG-lipids (C14PEG2K, C18PEG2K) x 4 molar ratios = 144",
+  "individually_measured_LNPs": 4,
+  "individually_measured_names": [
+   "Cat-LNP",
+   "Neu-LNP",
+   "An-LNP",
+   "Kauffman LNP (literature control, Fig S14)"
+  ],
+  "second_PEG_lipid_identity": "C18PEG2K. Named NOWHERE in the article text or the SI Methods ('PEGs, cholesterol, and helper lipids ... purchased from Avanti Lipids'), and recoverable only from the PEG column of the Fig S6 tables.",
+  "what_the_design_can_support": "ONE ionizable-lipid structure. Every one of the 144 formulations uses cKK-E12; what varies is the helper lipid, the PEG-lipid and the molar ratio. A corpus keyed on ionizable-lipid structure gains one lipid from this paper, however many rows are emitted."
+ },
+ "values_table": {
+  "admissible_no": 72,
+  "admissible_yes": 37,
+  "sums": true,
+  "total": 109
+ }
+}

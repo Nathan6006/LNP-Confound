@@ -1,0 +1,26 @@
+{
+ "_what": "Supplementary Figure 6c, the CATIONIC screen table, transcribed at full printed precision from the embedded raster on SI page 17 (xref 202, 1844 x 778 px, measured 220.0 dpi). Printed numerals read at 1.0x and 1.1x zoom with the Read tool -- the project's sanctioned route for symbolic content, and strictly better than digitising a bar. The transcription is VALIDATED, not asserted: the table's own 'average normalized delivery' column is the arithmetic mean of the three organ columns to < 1e-8 on 22 of 22 rows, and a single misread digit in any of the 88 numerals would break that identity.",
+ "_columns_as_printed": ["Barcodes", "# LNP", "Lung average", "Liver average", "spleen average", "average normalized delivery", "Ionizable lipid", "Cholesterol", "PEG", "Helper lipid", "Charge", "Ionizable lipid molar ratio", "Cholesterol Molar ratio", "PEG molar ratio", "Helper lipid molar ratio"],
+ "_ionizable_lipid_column": "cKK-E12 on every row",
+ "_n_rows_in_table": 22,
+ "_n_pooled_stated_in_text": 23,
+ "_lnp_numbers_present": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+ "_lnp_numbers_absent": [1, 14],
+ "_red_box": "SI page 17 carries one vector stroke of colour exactly (1.0, 0.0, 0.0), width 1.25 pt, spanning the full table width at y = [221.1, 230.7] pt. The caption says the red box marks the lead LNP. The image occupies y = [115.2, 369.9] pt for 778 px, i.e. 3.055 px/pt, putting the box centre at row 338 px of 778, which is the 10th data row = LNP #11 (TCCTAAGA, DDAB, C14PEG2K, 35/18/2.5/44.5). That is Cat-LNP's composition exactly, as printed in Fig 3a.",
+
+ "barcode": ["AGCATGCG", "TTGCGTTG", "ACGTCGAA", "CTACGAGG", "ATAGAATC", "GTCGCCTC", "GTCAATCT", "GACGCAAT", "GATTCAAC", "TCCTAAGA", "CATCATTA", "TACCTGCT", "CAAGAAGG", "TTGCAACT", "GGCGCTTG", "CTTACGTC", "GAGTATAC", "ACTCAAGT", "ACCTAATC", "GCTAATCG", "TAGAATTA", "TCTAACTG"],
+ "lnp_number": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+ "helper_lipid": ["DOTAP", "DOTAP", "DOTAP", "DOTMA", "DOTMA", "DOTMA", "DOTMA", "DDAB", "DDAB", "DDAB", "DDAB", "DOTAP", "DOTAP", "DOTAP", "DOTMA", "DOTMA", "DOTMA", "DOTMA", "DDAB", "DDAB", "DDAB", "DDAB"],
+ "peg": ["C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C14PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K", "C18PEG2K"],
+ "molratio_il": [50, 35, 20, 60, 50, 35, 20, 60, 50, 35, 20, 50, 35, 20, 60, 50, 35, 20, 60, 50, 35, 20],
+ "molratio_chol": [35, 18, 50, 26, 35, 18, 50, 26, 35, 18, 50, 35, 18, 50, 26, 35, 18, 50, 26, 35, 18, 50],
+ "molratio_peg": [2.5, 2.5, 2.5, 2, 2.5, 2.5, 2.5, 2, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 2, 2.5, 2.5, 2.5, 2, 2.5, 2.5, 2.5],
+ "molratio_hl": [12.5, 44.5, 27.5, 12, 12.5, 44.5, 27.5, 12, 12.5, 44.5, 27.5, 12.5, 44.5, 27.5, 12, 12.5, 44.5, 27.5, 12, 12.5, 44.5, 27.5],
+
+ "lung": [12.56256328, 2.377185354, 2.002639125, 3.461523684, 2.388169424, 2.072582804, 1.496114241, 4.559002703, 5.65587824, 10.70795163, 2.448116757, 4.239008784, 5.687825976, 2.328265292, 4.739717288, 3.334529063, 4.255948685, 5.750342045, 1.409544503, 5.863723904, 3.145606084, 6.763484213],
+ "liver": [8.524294312, 1.911603866, 2.081597779, 2.550574912, 2.140902725, 3.047458645, 1.40017483, 7.725292314, 4.931457318, 6.787428278, 2.785822786, 4.491167191, 4.656207347, 1.905498327, 3.938939394, 2.722239283, 3.024652113, 3.341275375, 5.561151432, 5.079908054, 3.53427274, 7.222256178],
+ "spleen": [3.402668606, 4.620508024, 8.175763564, 1.425292919, 10.74356823, 1.858859395, 4.971669107, 3.311535108, 3.462286173, 3.698774055, 2.171807573, 1.415055526, 3.139577841, 2.021396178, 4.660291473, 7.944338444, 2.68576884, 3.008190304, 9.671625209, 4.604695188, 3.2043026, 3.218984213],
+ "average": [8.163175401, 2.969765748, 4.086666823, 2.479130505, 5.090880125, 2.326300281, 2.622652726, 5.198610041, 4.683207244, 7.064717988, 2.468582372, 3.381743834, 4.494537055, 2.085053266, 4.446316052, 4.667035596, 3.322123213, 4.033269242, 5.547440381, 5.182775715, 3.294727141, 5.734908201],
+
+ "naked": {"barcode": "TTGCCGGT", "lung": 0.11430871, "liver": 0.163102562, "spleen": 0.033280231, "average": 0.103563834}
+}
