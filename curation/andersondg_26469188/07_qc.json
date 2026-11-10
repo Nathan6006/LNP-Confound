@@ -1,0 +1,1113 @@
+{
+ "_what": "KK_2015 quality control. Kauffman KJ et al., Nano Lett 15(11):7300-7306 (2015), PMID 26469188. Every figure here is measured, not asserted.",
+ "headline": {
+  "ENDPOINT": "Serum erythropoietin (EPO) protein by ELISA, ng/mL, mean +/- SD, n = 3 mice, 6 h after 15 ug total mRNA by intravenous injection. A PROTEIN-ABUNDANCE delivery readout, admissible.",
+  "DISTINCT_IONIZABLE_LIPIDS_CONTRIBUTED": 1,
+  "the_one_lipid": "C12-200",
+  "what_actually_varies": "the phospholipid identity (DSPC / DOPE / DOPC, plus a DSPE arm that never formulated), the four molar percentages, and the C12-200:mRNA weight ratio",
+  "formulations_specified": 39,
+  "formulations_individually_measured_for_EPO": 36,
+  "formulations_with_no_value": 3,
+  "rows_emitted": 36,
+  "value_tier": "4_pdfplumber_text_table -- ZERO pixels touched anywhere in this curation. No page rendered, no raster sampled, no axis calibrated, no bar top detected."
+ },
+ "C0_file_provenance": {
+  "source_file": "source/nl5b02497_si_001.pdf",
+  "sha256": "47b65dbac03f2bcacf039324dc5efa8a074052803706faf564096d48ee6ae654",
+  "bytes": 2221826,
+  "files_in_source_dir": [
+   "nl5b02497_si_001.pdf"
+  ],
+  "n_files_in_source_dir": 1,
+  "F065_guard": "No file was copied into source/ by this curation, so the shared-scratchpad contamination path (17 figure files from OTHER PAPERS landing in a sibling's source/figs/) cannot have occurred. The directory is asserted by NAME AND HASH above, not by a count.",
+  "belongs_to_this_PMID_because": [
+   "the filename stem nl5b02497 is the DOI suffix of 10.1021/acs.nanolett.5b02497",
+   "SI page 1 reproduces the Europe PMC title and all 8 authors in order",
+   "all 14 pages carry the publisher watermark path pubs.acs.org/nalefd/article-supplement/1257894/pdf/nl5b02497_si_001/"
+  ],
+  "zip_byte_identity_check": "UNAVAILABLE: pmcid=null, inPMC=N, hasSuppl=N, so Europe PMC has no supplementaryFiles ZIP to diff against."
+ },
+ "C1_molpct_sums_to_100": {
+  "NOT_credited_as": "a design check -- cholesterol is printed as the balance to 100, so the identity is a tautology of the authors' own derivation (trap 7)",
+  "credited_as": "transcription check only",
+  "max_abs_deviation_pct": 10.0,
+  "n_formulations_tested": 47,
+  "n_pass": 46,
+  "name": "mol% of the four components sums to 100",
+  "offenders": [
+   "A-03"
+  ]
+ },
+ "C2_cross_parameterisation": {
+  "independent": true,
+  "mismatches": [],
+  "n_cells_compared": 160,
+  "n_exact": 160,
+  "n_formulations": 32,
+  "name": "row-wise identity, Table S1 vs the DSD/FFD design tables",
+  "note": "5 fields x 32 formulations. Cholesterol mol%% is NOT in the design tables, so it has no independent attestation anywhere in the SI -- stated rather than quietly skipped."
+ },
+ "C3_coded_design_levels": {
+  "all_bijective": false,
+  "all_quantitative_order_preserving": true,
+  "independent": true,
+  "n_character_assertions": 174,
+  "n_consistent": 172,
+  "n_positions": 11,
+  "name": "coded design string (+/0/-) is a consistent third parameterisation"
+ },
+ "C3_detail": [
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": "DO",
+    "-": "DS"
+   },
+   "factor": "head",
+   "library": "A",
+   "order_preserving": null,
+   "position": 0,
+   "quantitative": false,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": "PE",
+    "-": "PC"
+   },
+   "factor": "tail",
+   "library": "A",
+   "order_preserving": null,
+   "position": 1,
+   "quantitative": false,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 7.5,
+    "-": 2.5,
+    "0": 5.0
+   },
+   "factor": "wt_ratio",
+   "library": "A",
+   "order_preserving": true,
+   "position": 2,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 60.0,
+    "-": 40.0,
+    "0": 50.0
+   },
+   "factor": "il_molpct",
+   "library": "A",
+   "order_preserving": true,
+   "position": 3,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 16.0,
+    "-": 4.0,
+    "0": 10.0
+   },
+   "factor": "ph_molpct",
+   "library": "A",
+   "order_preserving": true,
+   "position": 4,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 2.5,
+    "-": 0.5,
+    "0": 1.5
+   },
+   "factor": "peg_molpct",
+   "library": "A",
+   "order_preserving": true,
+   "position": 5,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": "DOPE",
+    "-": "DSPC"
+   },
+   "factor": "phospholipid",
+   "library": "B",
+   "order_preserving": null,
+   "position": 0,
+   "quantitative": false,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 12.5,
+    "-": 7.5,
+    "0": 10.0
+   },
+   "factor": "wt_ratio",
+   "library": "B",
+   "order_preserving": true,
+   "position": 1,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 40.0,
+    "-": 30.0,
+    "0": 35.0
+   },
+   "factor": "il_molpct",
+   "library": "B",
+   "order_preserving": true,
+   "position": 2,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": true,
+   "char_to_level": {
+    "+": 28.0,
+    "-": 16.0,
+    "0": 22.0
+   },
+   "factor": "ph_molpct",
+   "library": "B",
+   "order_preserving": true,
+   "position": 3,
+   "quantitative": true,
+   "violations": []
+  },
+  {
+   "bijection": false,
+   "char_to_level": {
+    "+": 3.5,
+    "-": 2.5,
+    "0": 3.0
+   },
+   "factor": "peg_molpct",
+   "library": "B",
+   "order_preserving": true,
+   "position": 4,
+   "quantitative": true,
+   "violations": [
+    [
+     "B-20",
+     "0",
+     2.5,
+     3.0
+    ],
+    [
+     "B-26",
+     "0",
+     2.5,
+     3.0
+    ]
+   ]
+  }
+ ],
+ "C4_printed_regression_statistics": {
+  "design_balanced_on_phospholipid": true,
+  "half_diff_vs_printed_estimate_abs": 0.0,
+  "half_diff_vs_printed_estimate_rel_pct": 0.0,
+  "half_difference": 2307.1,
+  "independent": true,
+  "interpretation": "For a 2-level nominal factor coded +/-1 in a balanced orthogonal design the least-squares estimate IS half the group difference. The residual gap is what the other four terms in the reduced model absorb, so agreement is expected to be close but not exact.",
+  "mean_DOPE": 5268.7,
+  "mean_DSPC": 654.4,
+  "mean_abs_error": 0.0444,
+  "mean_rel_error_pct": 0.0015,
+  "n_DOPE": 9,
+  "n_DSPC": 9,
+  "n_library_B_formulations": 18,
+  "n_matches_3_replicates": true,
+  "n_times_3": 54,
+  "name": "Table S2 printed statistics recomputed from Table S1",
+  "printed_Mean": 2961.6,
+  "printed_Phospholipid[DOPE]_estimate": 2307.1,
+  "printed_n": 54.0,
+  "recomputed_mean_of_18_group_means": 2961.5556
+ },
+ "C5_abstract_fold_claim": {
+  "C-35_EPO_ng_per_mL": 7065.0,
+  "C-35_over_Original": 7.344,
+  "Original_EPO_ng_per_mL": 962.0,
+  "claim_reproduced_on_C-35": true,
+  "max_EPO_ng_per_mL": 7548.0,
+  "max_of_screen_code": "C-36",
+  "max_over_Original": 7.846,
+  "name": "abstract's 7-fold potency claim",
+  "note": "7.34x on C-35, the formulation the paper calls optimized and carries into Tables S3/S4. The screen MAXIMUM is C-36 at 7.85x, so '7-fold' is the claim about C-35 specifically, not about the best formulation measured."
+ },
+ "C6_library_C_ladder_and_B26": {
+  "B-26_EPO": 7485.0,
+  "B-26_composition_identical_to_library_C": true,
+  "B-26_falls_between_them": true,
+  "B-26_wt_ratio": 12.5,
+  "bracketing_neighbours": [
+   [
+    10.0,
+    "C-35",
+    7065.0
+   ],
+   [
+    15.0,
+    "C-36",
+    7548.0
+   ]
+  ],
+  "independent": true,
+  "ladder_peak_at_wt_ratio": 15.0,
+  "ladder_strictly_increasing": false,
+  "library_C_composition": [
+   35.0,
+   16.0,
+   46.5,
+   2.5,
+   "DOPE"
+  ],
+  "library_C_composition_constant": true,
+  "library_C_ladder_wt_ratio_to_EPO": [
+   [
+    5.0,
+    "C-33",
+    3134.0
+   ],
+   [
+    7.5,
+    "C-34",
+    4504.0
+   ],
+   [
+    10.0,
+    "C-35",
+    7065.0
+   ],
+   [
+    15.0,
+    "C-36",
+    7548.0
+   ],
+   [
+    20.0,
+    "C-37",
+    7268.0
+   ],
+   [
+    25.0,
+    "C-38",
+    6179.0
+   ]
+  ],
+  "n_cells_asserted_constant": 30,
+  "name": "Library C weight-ratio ladder, and the independent B-26 interpolation",
+  "why_this_is_strong": "B-26 was run in a different library, from a different DOE, as a different batch, and nothing in the paper presents it as a replicate. Its value landing inside the bracket its Library C neighbours draw is an independent corroboration of both."
+ },
+ "C7_S3_S4_formulation_identity": {
+  "independent": true,
+  "mismatches": [],
+  "n_cells_compared": 24,
+  "n_exact": 24,
+  "name": "Original and C-35 re-specified identically in Tables S3 and S4"
+ },
+ "C8_batch_to_batch_spread": {
+  "headline": "'Original' particle size is 152 / 113 / 65 nm across the three batches, a 2.34x spread, and its encapsulation efficiency is 24 / 27 / 59 %, a 2.46x spread -- same lab, same nominal recipe, three cargoes. Reported because it is a measured within-lab reproducibility figure, not because the paper presents it as one.",
+  "independent": true,
+  "name": "batch-to-batch spread of the SAME nominal formulation across 3 tables",
+  "per_formulation": {
+   "C-35": {
+    "ee_pct": {
+     "max": 58.0,
+     "max_over_min": 1.349,
+     "min": 43.0,
+     "values": {
+      "S1_EPO_mRNA": 43.0,
+      "S3_Luc_mRNA": 48.0,
+      "S4_FVII_siRNA": 58.0
+     }
+    },
+    "pdi": {
+     "max": 0.288,
+     "max_over_min": 1.823,
+     "min": 0.158,
+     "values": {
+      "S1_EPO_mRNA": 0.158,
+      "S3_Luc_mRNA": 0.221,
+      "S4_FVII_siRNA": 0.288
+     }
+    },
+    "size_nm": {
+     "max": 109.0,
+     "max_over_min": 1.329,
+     "min": 82.0,
+     "values": {
+      "S1_EPO_mRNA": 102.0,
+      "S3_Luc_mRNA": 82.0,
+      "S4_FVII_siRNA": 109.0
+     }
+    }
+   },
+   "Original": {
+    "ee_pct": {
+     "max": 59.0,
+     "max_over_min": 2.458,
+     "min": 24.0,
+     "values": {
+      "S1_EPO_mRNA": 24.0,
+      "S3_Luc_mRNA": 27.0,
+      "S4_FVII_siRNA": 59.0
+     }
+    },
+    "pdi": {
+     "max": 0.15,
+     "max_over_min": 1.471,
+     "min": 0.102,
+     "values": {
+      "S1_EPO_mRNA": 0.102,
+      "S3_Luc_mRNA": 0.147,
+      "S4_FVII_siRNA": 0.15
+     }
+    },
+    "size_nm": {
+     "max": 152.0,
+     "max_over_min": 2.338,
+     "min": 65.0,
+     "values": {
+      "S1_EPO_mRNA": 152.0,
+      "S3_Luc_mRNA": 113.0,
+      "S4_FVII_siRNA": 65.0
+     }
+    }
+   }
+  }
+ },
+ "C9_ranks": {
+  "C-35_EPO": 7065.0,
+  "C-35_rank": 4,
+  "Original_EPO": 962.0,
+  "Original_rank": 20,
+  "beat_the_benchmark": 19,
+  "benchmark_is": "'Original' -- the C12-200 formulation previously optimized for siRNA (50/10/38.5/1.5 DSPC, 5:1 wt), i.e. the field-standard starting point this paper sets out to beat",
+  "benchmark_tops_the_screen": false,
+  "declared_optimum": "C-35",
+  "declared_optimum_tops_the_screen": false,
+  "n_ranked_LNPs": 36,
+  "name": "rank of the benchmark and of the declared optimum",
+  "note": "The declared 'optimized formulation' C-35 is NOT the maximum of the screen: C-36 (7548) and B-26 (7485) both exceed it. C-35 was selected as the Library B regression optimum and Library C was the confirmation ladder run around it, so this is a model optimum reported as the optimized formulation, not a selection-into-a-second-screen tautology.",
+  "top5": [
+   [
+    "C-36",
+    7548.0,
+    1
+   ],
+   [
+    "B-26",
+    7485.0,
+    2
+   ],
+   [
+    "C-37",
+    7268.0,
+    3
+   ],
+   [
+    "C-35",
+    7065.0,
+    4
+   ],
+   [
+    "A-02",
+    6445.0,
+    5
+   ]
+  ]
+ },
+ "C10_phospholipid_effect": {
+  "name": "phospholipid identity effect, measured per library",
+  "note": "The only chemical identity that varies in this paper, and it is a HELPER lipid, not the ionizable lipid.",
+  "per_library": {
+   "A": {
+    "DOPC": {
+     "geomean": 314.5,
+     "mean": 356.0,
+     "n": 3
+    },
+    "DOPE": {
+     "geomean": 386.4,
+     "mean": 1734.5,
+     "n": 4
+    },
+    "DSPC": {
+     "geomean": 274.6,
+     "mean": 668.2,
+     "n": 4
+    }
+   },
+   "B": {
+    "DOPE": {
+     "geomean": 5099.8,
+     "mean": 5268.7,
+     "n": 9
+    },
+    "DSPC": {
+     "geomean": 523.5,
+     "mean": 654.4,
+     "n": 9
+    }
+   }
+  }
+ },
+ "C11_three_way_helper_concordance": {
+  "per_helper": {
+   "DOPC": {
+    "all_three_agree": true,
+    "built_eq_corpus": true,
+    "built_eq_registry": true,
+    "built_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+    "built_is_byte_identical_to_registry": true,
+    "byte_identity_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation canonicalises to the same string as a correct stored structure. What matters is that the build ROUTE shares nothing with the registry, which make_reference.ast_guard tests at run time on its own AST.",
+    "corpus_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+    "corpus_rows": 81,
+    "exact_mass": 785.593455,
+    "exact_mass_max_delta": 0.0,
+    "formula": "C44H84NO8P",
+    "formula_all_agree": true,
+    "registry_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N"
+   },
+   "DOPE": {
+    "all_three_agree": true,
+    "built_eq_corpus": true,
+    "built_eq_registry": true,
+    "built_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+    "built_is_byte_identical_to_registry": true,
+    "byte_identity_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation canonicalises to the same string as a correct stored structure. What matters is that the build ROUTE shares nothing with the registry, which make_reference.ast_guard tests at run time on its own AST.",
+    "corpus_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+    "corpus_rows": 17737,
+    "exact_mass": 743.546505,
+    "exact_mass_max_delta": 0.0,
+    "formula": "C41H78NO8P",
+    "formula_all_agree": true,
+    "registry_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N"
+   },
+   "DSPC": {
+    "all_three_agree": true,
+    "built_eq_corpus": true,
+    "built_eq_registry": true,
+    "built_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "built_is_byte_identical_to_registry": true,
+    "byte_identity_note": "Byte identity is EXPECTED and is NOT the signal (F-037): a correct re-derivation canonicalises to the same string as a correct stored structure. What matters is that the build ROUTE shares nothing with the registry, which make_reference.ast_guard tests at run time on its own AST.",
+    "corpus_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+    "corpus_rows": 7038,
+    "exact_mass": 789.624755,
+    "exact_mass_max_delta": 0.0,
+    "formula": "C44H88NO8P",
+    "formula_all_agree": true,
+    "registry_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N"
+   }
+  },
+  "n_helpers": 3,
+  "n_all_three_agree": 3,
+  "max_exact_mass_delta_Da": 0.0,
+  "independence_posture": "This is a NAME-CONCORDANCE check, NOT an external attestation of this paper's chemistry. The paper draws no structure; it prints a systematic name, and all three legs of this comparison are derivations from that same name by different hands. It catches a transcription error in any leg -- and the briefing records a sibling whose hand-built DSPC came out a ketone bearing an ether at the right mass to six decimals -- but it cannot catch a name that is wrong FOR THIS PAPER. Counted as such in PROVENANCE.md and NOT counted as a C10 pass."
+ },
+ "C12_amine_200_arm_count": {
+  "KL_2010 '200C<n>'": {
+   "ARMS_IMPLIED": 1.0,
+   "dC_per_unit_tail": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "members": [
+    {
+     "formula": "C20H43N3O",
+     "n_C": 20,
+     "n_N": 3,
+     "name": "200C8",
+     "tail_token": 8
+    },
+    {
+     "formula": "C22H47N3O",
+     "n_C": 22,
+     "n_N": 3,
+     "name": "200C10",
+     "tail_token": 10
+    },
+    {
+     "formula": "C24H51N3O",
+     "n_C": 24,
+     "n_N": 3,
+     "name": "200C12",
+     "tail_token": 12
+    },
+    {
+     "formula": "C26H55N3O",
+     "n_C": 26,
+     "n_N": 3,
+     "name": "200C14",
+     "tail_token": 14
+    }
+   ],
+   "n_nitrogen": [
+    3
+   ],
+   "slope_constant": true
+  },
+  "KW_2014 'A200_C<n>'": {
+   "ARMS_IMPLIED": 5.0,
+   "dC_per_unit_tail": [
+    5.0,
+    5.0,
+    5.0,
+    5.0
+   ],
+   "members": [
+    {
+     "formula": "C75H145N5O10",
+     "n_C": 75,
+     "n_N": 5,
+     "name": "A200_C10",
+     "tail_token": 10
+    },
+    {
+     "formula": "C80H155N5O10",
+     "n_C": 80,
+     "n_N": 5,
+     "name": "A200_C11",
+     "tail_token": 11
+    },
+    {
+     "formula": "C85H165N5O10",
+     "n_C": 85,
+     "n_N": 5,
+     "name": "A200_C12",
+     "tail_token": 12
+    },
+    {
+     "formula": "C90H175N5O10",
+     "n_C": 90,
+     "n_N": 5,
+     "name": "A200_C13",
+     "tail_token": 13
+    },
+    {
+     "formula": "C95H185N5O10",
+     "n_C": 95,
+     "n_N": 5,
+     "name": "A200_C14",
+     "tail_token": 14
+    }
+   ],
+   "n_nitrogen": [
+    5
+   ],
+   "slope_constant": true
+  },
+  "_what_this_proves": "Within a homologous series holding the amine fixed and walking the tail length, dC/d(tail) EQUALS the number of arms. KW_2014's A200_C10..C14 gives 5 arms on a 5-nitrogen core; KL_2010's 200C8..C14 gives 1 arm on a 3-nitrogen core. Both series are INTERNALLY self-consistent, which is precisely why F-061 is a real conflict and not a typo: two curations each coherently encode a different molecule for the same catalogue amine. Reported; data/ untouched."
+ },
+ "C13_corpus_overlap": {
+  "positive_control_cKK_E12": {
+   "PASSES": true,
+   "by_experiment": {
+    "vitro/AC_2025/CKK-E12": 216,
+    "vitro/JW_2024/other": 19,
+    "vivo/BL_2023/MD-1": 6
+   },
+   "expected_216_name_241_inchikey": true,
+   "inchikey_join_rows": 241,
+   "name_join_rows": 216,
+   "names_recovered": [
+    "CKK-E12",
+    "MD-1",
+    "other"
+   ],
+   "why": "F-070. A structure can sit under several names; this one is documented as CKK-E12 / other / MD-1. If the InChIKey join cannot reproduce that, the join is broken and a zero means nothing."
+  },
+  "C12_200": {
+   "SMILES": "CCCCCCCCCCC(O)CN(CCN1CCN(CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC)CC1)CCN(CC(O)CCCCCCCCCC)CC(O)CCCCCCCCCC",
+   "by_pool_experiment": {
+    "vitro/AC_2025/C12-200": 498,
+    "vitro/JW_2024/other": 20
+   },
+   "exact_mass": 1136.1246,
+   "formula": "C70H145N5O5",
+   "guarded_lookup": "resolved (unambiguous in the corpus)",
+   "inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "inchikey_join_rows": 518,
+   "n_nitrogen": 5,
+   "name_join_rows": 498,
+   "names_under_this_structure": [
+    "C12-200",
+    "other"
+   ],
+   "same_shape_as_positive_control": "yes -- 20 extra rows recovered under the name 'other' in JW_2024, exactly as cKK-E12 hides 19 there",
+   "vitro_rows": 518,
+   "vivo_rows": 0
+  },
+  "in_vivo_shared": {
+   "C12_200_currently_in_how_many_in_vivo_experiments": 0,
+   "detail": {
+    "BGNVBNJYBVCBJH-UHFFFAOYSA-N": {
+     "experiments": [
+      "SB_2024",
+      "SS_2018",
+      "SY_2025",
+      "XD_2026"
+     ],
+     "names": [
+      "SM-102"
+     ]
+    },
+    "NRLNQCOGCKAESA-KWXKLSQISA-N": {
+     "experiments": [
+      "BL_2023",
+      "NG_2025_2",
+      "SB_2024",
+      "XD_2026",
+      "ZC_2023",
+      "ZH_2023"
+     ],
+     "names": [
+      "DLin-MC3-DMA",
+      "Dlin-MC3-DMA"
+     ]
+    }
+   },
+   "n_structures_shared_across_in_vivo_experiments": 2,
+   "why": "C12-200 appears in 0 in-vivo experiments today (518 rows, all in vitro, AC_2025 + JW_2024). Adding ONE in-vivo experiment takes it from 0 to 1, and a structure needs >=2 in-vivo experiments to be shared. So KK_2015 would create the FIRST in-vivo C12-200 rows and still leave the in-vivo shared set at exactly DLin-MC3-DMA and SM-102. It does however create a vitro<->vivo bridge for a 518-row structure, which is a different and smaller thing.",
+   "would_KK_2015_add_an_in_vivo_SHARED_lipid": false
+  },
+  "substructure_sweep_SUPERSET": {
+   "LABEL": "SUPERSET. The loose and strict tiers are chemotype supersets, not identity. Only the exact tier is identity.",
+   "experiments_at_strict_tier": [
+    "AC_2025",
+    "JW_2024"
+   ],
+   "positive_control": "C12-200 itself matches at the loose, strict and exact tiers. Asserted in code; the sweep raises if it does not.",
+   "tier_exact": {
+    "means": "full InChIKey identity with C12-200",
+    "rows": 518,
+    "structures": 1
+   },
+   "tier_loose": {
+    "means": "any amine bearing a 2-hydroxyalkyl arm, i.e. the epoxide-ring-opening chemotype",
+    "of_total_structures": 19919,
+    "rows": 2386,
+    "smarts": "[#7]-[CH2]-[CH1](-[OX2H1])",
+    "structures": 1535
+   },
+   "tier_strict": {
+    "means": "the amine-200 pentaamine core AND a hydroxyalkyl arm",
+    "rows": 518,
+    "smarts": "[#7](CCN1CCN(CC[#7])CC1)CC[#7]",
+    "structures": 1
+   }
+  },
+  "token_pattern": {
+   "contiguity_note": "F-055: the amine catalogue is sparse and non-contiguous, so a contiguous 1..N name would mean LOCAL indices. '200' is a catalogue index, not a local one.",
+   "is_the_numbering_contiguous": false,
+   "naive_substring_damage": {
+    "distinct_names": 24,
+    "distinct_structures": 24,
+    "query": "IL_name contains '200'",
+    "rows_returned": 526,
+    "verdict": "a naive substring join on '200' returns 526 rows spanning 24 names and 24 distinct structures with at least three incompatible chemotypes. Never used; the join here is on InChIKey."
+   },
+   "pattern": "C<tail length>-<amine catalogue index>. 'C12' is the tail (a 2-hydroxydodecyl arm from 1,2-epoxydodecane); '200' is the index of the polyamine core in this lab's amine catalogue.",
+   "the_name": "C12-200",
+   "which_token_is_which_PROVEN_BY": "structural attestation, not a substring guess: in KW_2014 the A200_* series holds '200' FIXED while the tail token runs C10..C14, and all five of those structures contain the same 5-nitrogen pentaamine core; the carbon count is what changes. So '200' names the core and the C-number names the tail. KK_2015 writes the two tokens in the OPPOSITE order from KL_2010's '200C12'."
+  },
+  "experiment_id": {
+   "all_existing_IDs": [
+    "AA_2008",
+    "AC_2025",
+    "AP_2025",
+    "BL_2023",
+    "BL_2023_3CR",
+    "BL_2024",
+    "FG_2026",
+    "JC_2023",
+    "JL_2024",
+    "JM_2016",
+    "JW_2024",
+    "KL_2010",
+    "KS_2024",
+    "KW_2014",
+    "KZ_2016",
+    "LL_2012",
+    "LL_2025",
+    "LL_2026",
+    "LL_2026_2",
+    "LM_2019",
+    "LR_2023",
+    "LX_2024",
+    "LX_2024_2",
+    "LX_2024_3",
+    "LZ_2025",
+    "MO_2026",
+    "NC_2024",
+    "NG_2025",
+    "NG_2025_2",
+    "QL_2026",
+    "RG_2023",
+    "SB_2024",
+    "SL_2020",
+    "SL_2021",
+    "SP_2020",
+    "SS_2018",
+    "SW_2024",
+    "SX_2025",
+    "SY_2025",
+    "WT_2026",
+    "XD_2026",
+    "XH_2024",
+    "XH_2024_2",
+    "XH_2025",
+    "YR_2024",
+    "YX_2024",
+    "YX_2026",
+    "YX_2026_SDL",
+    "YY_2023",
+    "YZ_2022",
+    "YZ_2024",
+    "ZC_2023",
+    "ZH_2023",
+    "ZT_2026"
+   ],
+   "checked_by_PMID_not_year_token": true,
+   "collides_with_existing_ID": false,
+   "derivation": "FIRST author Kauffman, Kevin J. + 2015. The folder is named andersondg_26469188 after the PI, which is not the corpus key.",
+   "n_existing_IDs": 54,
+   "nearest_tokens_examined": {
+    "KL_2010": [
+     "20080679"
+    ],
+    "KS_2024": [
+     "38969646"
+    ],
+    "KW_2014": [
+     "24969323"
+    ],
+    "KZ_2016": [
+     "26729861"
+    ]
+   },
+   "pmid_26469188_already_in_corpus": false,
+   "proposed": "KK_2015"
+  }
+ },
+ "C14_text_extraction_geometry": {
+  "table_S4_dose_assignment": {
+   "anchor_separation_pt": 28.08,
+   "n_dose_bands": 6,
+   "worst_assignment_far_pt": 18.68,
+   "worst_assignment_near_pt": 9.4,
+   "worst_margin_ratio": 1.99
+  },
+  "why_geometric": "Table S4's READING ORDER IS NOT ITS VISUAL ORDER: the dose cell is vertically centred, so each formulation's first dose line sorts ABOVE its own code label. A line-order parser recovered 6 of 8 value rows and dropped the two 0.1 mg/kg points silently. Doses are therefore assigned by NATIVE TEXT y-coordinate (the PDF's own character positions, not pixels), each to its nearest phospholipid anchor.",
+  "worst_margin_ratio": 1.99,
+  "margin_interpretation": "The tightest decision is 9.40 pt to the correct anchor against 18.68 pt to the wrong one, a 1.99x margin on a 28.08 pt anchor separation and a ~9.1 pt row pitch. Every one of the 6 dose bands is assigned by at least that margin, and the parser asserts each formulation receives exactly the dose set {0.01, 0.03, 0.1} rather than trusting the margin.",
+  "em_dash_normalisations": [
+   [
+    "B-29",
+    "+0\u20140",
+    "+0--0"
+   ]
+  ],
+  "em_dash_note": "One, on B-29. pdfplumber fuses a hyphen run into U+2014. Accepted only because width 5 forces exactly two hyphens AND the result satisfies all 5 of B-29's coded-level assertions independently (08_contradictions.csv C-06).",
+  "A_DEFECT_FOUND_IN_OUR_OWN_CODE": {
+   "what": "_fix_emdash's first version returned early whenever len(s) == want, so an em-dash string that happened to be the right width came back with the em dash still in it. check_coded_levels would then have indexed that character as a design level, adding a fourth key to a three-key char->level map and MASKING a violation.",
+   "found_by": "its own seed (emdash_width_guard), which scored 1 of 3 refusals",
+   "after_fix": "3 of 3 refusals; the character set is now validated on the way OUT unconditionally and length alone never buys an exit",
+   "output_change": "none -- B-29 was the only affected row and was already handled correctly",
+   "class": "the 'a check that canonicalises its input has given up the ability to detect non-canonical input' shape (error class 37), in our own code"
+  }
+ },
+ "C15_emission": {
+  "by_table": {
+   "S1": 40,
+   "S3": 2,
+   "S4": 7
+  },
+  "caveat_rows": 36,
+  "corpus_admissible_no": 5,
+  "corpus_admissible_yes": 44,
+  "counts_sum": true,
+  "emitted_equals_06_rows": true,
+  "emitted_no": 13,
+  "emitted_yes": 36,
+  "n_columns_emitted": 79,
+  "value_rows_total": 49,
+  "z_block": {
+   "n": 36,
+   "unit": "one z per experiment",
+   "quantity": "z of log10(serum EPO ng/mL), POPULATION sd (ddof=0)",
+   "mean_log10": 3.0818309305575875,
+   "sd_log10": 0.6593319514315504,
+   "z_min": -1.8571804861992074,
+   "z_max": 1.207284068680455,
+   "block_mean_residual": "< 1e-12 (asserted)",
+   "block_sd_residual": "< 1e-12 (asserted)",
+   "error_class_22_cannot_arise": "there is ONE Model_type and ONE organ across all 36 rows, so no per-cell or per-cohort z exists to delete a between-assay offset"
+  },
+  "value_rows_by_admissibility": {
+   "yes": 44,
+   "no": 5,
+   "total": 49,
+   "sums": true
+  },
+  "not_admissible_breakdown": {
+   "PBS vehicle, Table S1": 1,
+   "PBS vehicle, Table S4": 1,
+   "unsynthesizable (DSPE insoluble), Table S1": 3
+  },
+  "non_delivery_readouts_deliberately_NOT_value_rows": "encapsulation efficiency, particle size and PDI are carried as CHARACTERISATION COLUMNS on the value rows, never as value rows of their own, because the endpoint vocabulary excludes all three. Figures S2a and S2b plot exactly those two quantities and were therefore not read as value sources.",
+  "columns": {
+   "n": 79,
+   "header_source": "read LIVE from data/data_vivo.csv and asserted identical to data/data_vitro.csv"
+  },
+  "flags": {
+   "written_by": "curation/lib/emit.py emit_rows, with PER-ITEM CALLABLES",
+   "literal_confidence_refused": "verified by seed emit_literal_confidence (EmitError)",
+   "caveat_without_note_refused": "verified by seed emit_caveat_without_note (EmitError)",
+   "rows_with_a_caveat": 36,
+   "of_rows": 36,
+   "confidence": {
+    "medium": 36
+   },
+   "structure_assumed_1": 36,
+   "positional_ambiguity_1": 0,
+   "value_is_bound_set": 0,
+   "value_is_bound_note": "ZERO. Every emitted value is a printed numeral with a printed SD; no colormap floor, no censored axis, no digitised bar exists in this curation."
+  }
+ },
+ "C16_anchor_posture": {
+  "paper_draws_nothing": "There is not one chemical structure drawing in the 14 SI pages. Per-page object counts: the 8 text pages hold 0 image objects, and the 6 image pages are Fig S1 (regression plots), Fig S2 (EE and size trends), Fig S3 (a methodology flowchart), Fig S4 (TEM micrographs) and two pages of JMP screenshots.",
+  "C12_200_anchor": "NONE. reference_SMILES is EMPTY on purpose so the absence is visible. No drawing, no formula, no HRMS, no MW, no synthesis.",
+  "excipients_anchored_instead": [
+   "DSPC",
+   "DOPE",
+   "DOPC"
+  ],
+  "what_that_anchor_IS": "a NAME-CONCORDANCE anchor. The SI spells the systematic names out in its footnotes, and make_reference.py re-derives structures from those names by a head-first assemble.attach route. All three legs of the comparison are derivations from the SAME name by different hands.",
+  "what_that_anchor_IS_NOT": "an external structural attestation of this paper's chemistry. It would catch a transcription error in any leg -- the briefing records a sibling whose hand-built DSPC came out a ketone bearing an ether at the right mass to six decimals -- but it cannot catch a name that is wrong FOR THIS PAPER. NOT counted as a C10 pass.",
+  "cholesterol": "NOT hand-written and NOT anchored. The paper gives only the abbreviation 'Chol.'. CHL_SMILES is populated from provenance/reagent_registry.py and that registry pin is explicitly NOT counted as an anchor.",
+  "reference_structures_csv": {
+   "rows": 7,
+   "with_a_structure": 3,
+   "empty_on_purpose": 4,
+   "header": [
+    "lipid_name",
+    "reference_SMILES",
+    "source_figure",
+    "read_on",
+    "read_by",
+    "expected_mismatch",
+    "note"
+   ]
+  },
+  "independence_verified_how": "make_reference.py walks ITS OWN AST at run time and inspects Call, Import and ImportFrom nodes ONLY, so the ban list cannot match itself (a substring scan over the source would flag the ban list inside its own docstring -- one sibling's guard failed on its own module for exactly that). 8 import nodes and 168 call nodes examined, 0 findings. A template-provenance guard additionally requires that no string literal of >= 25 chars in the module be a substring of any emitted structure: 54 literals examined, 0 hits.",
+  "byte_identity_is_not_the_signal": "F-037. The built DSPC/DOPE/DOPC canonicalise byte-identically to the registry's strings, and that is EXPECTED: a correct re-derivation is byte-identical to a correct stored structure. Testing for byte-difference is the trap. What is tested is the ROUTE, by AST.",
+  "stereo_assertions_are_NOT_vacuous": "DSPC, DOPE and DOPC each have exactly 1 real stereocentre (glycerol C2), asserted (R) from the sn convention. Seed make_reference_stereo flips the backbone tag and the assertion fires, reporting (S). Double-bond geometry is asserted explicitly: 2 C=C, 2 Z, 0 unassigned for the dioleoyl lipids; 0 C=C for DSPC.",
+  "connectivity_gate_proven": "Seed make_reference_regioisomer builds 1,3-diacyl-glycero-2-phospho DSPC: IDENTICAL formula C44H88NO8P, exact-mass delta 0.000000 Da, different InChIKey. The assembly route REFUSES it -- via assemble.check_stereo_preserved, because C2 stops being stereogenic when both CH2 arms become identical. So the gate sees connectivity, not mass.",
+  "MEASURED_SENSITIVITY_LIMIT": "make_reference's OWN assertions (C2=R, C=C count, Z count, no unassigned) CANNOT see double-bond POSITION. Seed three_way_delta6 moves the oleoyl double bond from delta-9 to delta-6: every internal assertion still passes, formula identical, exact-mass delta 0.000000 Da. ONLY the three-way InChIKey comparison catches it, and it does. That is the honest limit of this curation's structural gates."
+ },
+ "C17_seeded_mutation_suite": {
+  "n_seeds": 12,
+  "n_credited": 12,
+  "all_credited": true,
+  "curation_folder_untouched_by_seeds": true,
+  "F069_posture": "Every seed runs in a CHILD PROCESS with its own temp OUTDIR; nothing a seed writes can land in the curation folder, and the 7 tracked artifacts are sha256-compared before and after the whole suite. Verdicts come from returncode, never from a pipeline's exit status.",
+  "A_SEED_THAT_ONLY_RAISES_IS_NOT_CREDITED": "each seed must print a METRIC line naming the quantity it moved; a child that dies before its metric is reported NOT CREDITED even on a non-zero exit",
+  "seeds": [
+   {
+    "credited": true,
+    "expected_metric": "EmitError",
+    "metric_lines": [
+     "METRIC exception=EmitError"
+    ],
+    "returncode": 0,
+    "seed": "emit_literal_confidence",
+    "why": "F-011/F-025/F-046: a hard-coded confidence relabelled 24 'ASSUMED' rows as the project's highest confidence. emit.emit_rows must REFUSE a literal."
+   },
+   {
+    "credited": true,
+    "expected_metric": "EmitError",
+    "metric_lines": [
+     "METRIC exception=EmitError"
+    ],
+    "returncode": 0,
+    "seed": "emit_caveat_without_note",
+    "why": "F-024: confidence_without_a_note found 6 rows on its first run. Here the condition must be unwritable, not merely audited later."
+   },
+   {
+    "credited": true,
+    "expected_metric": "n_pass",
+    "metric_lines": [
+     "METRIC clean n_pass=46 max_dev=10.0 offenders=['A-03']",
+     "METRIC seeded n_pass=45 max_dev=10.0 offenders=['A-03', 'B-20']"
+    ],
+    "returncode": 0,
+    "seed": "molpct_sum_offender",
+    "why": "Perturb one printed molar percentage and require C1 to lose a pass. A shift-invariant check scores the same clean and seeded."
+   },
+   {
+    "credited": true,
+    "expected_metric": "n_exact",
+    "metric_lines": [
+     "METRIC clean n_exact=160/160 mismatches=0",
+     "METRIC seeded n_exact=158/160 mismatches=2"
+    ],
+    "returncode": 0,
+    "seed": "cross_parameterisation_transpose",
+    "why": "Swap two formulations' weight ratios in the DESIGN table only. The two printed parameterisations must stop agreeing."
+   },
+   {
+    "credited": true,
+    "expected_metric": "n_consistent",
+    "metric_lines": [
+     "METRIC clean n_consistent=172/174 all_bijective=False",
+     "METRIC seeded n_consistent=167/174 all_bijective=False"
+    ],
+    "returncode": 0,
+    "seed": "coded_level_bijection",
+    "why": "Corrupt one character of one coded design string. The third parameterisation must lose its bijection."
+   },
+   {
+    "credited": true,
+    "expected_metric": "mean_abs_error",
+    "metric_lines": [
+     "METRIC clean mean_abs_error=0.0444 dope_abs=0.0",
+     "METRIC seeded mean_abs_error=360.3222 dope_abs=360.3"
+    ],
+    "returncode": 0,
+    "seed": "table_s2_statistic",
+    "why": "Perturb one Library B EPO value. The printed Mean=2961.6 and the printed DOPE estimate=2307.1 must stop reproducing."
+   },
+   {
+    "credited": true,
+    "expected_metric": "refusal",
+    "metric_lines": [
+     "METRIC clean rows=7 bands=6",
+     "METRIC seeded refusal=ValueError Table S4: expected one DSPC and one DOPE anchor, got ['DSPC']"
+    ],
+    "returncode": 0,
+    "seed": "table_s4_geometry",
+    "why": "Delete one anchor token from Table S4's word list. The coordinate-based dose assignment must refuse, not fall back to reading order."
+   },
+   {
+    "credited": true,
+    "expected_metric": "refusal",
+    "metric_lines": [
+     "METRIC clean expanded='+0--0' changed=True",
+     "METRIC seeded refusals=3/3"
+    ],
+    "returncode": 0,
+    "seed": "emdash_width_guard",
+    "why": "Hand the em-dash normaliser a string it cannot uniquely widen. It must refuse rather than pad to the expected width."
+   },
+   {
+    "credited": true,
+    "expected_metric": "findings",
+    "metric_lines": [
+     "METRIC guards=BOTH_FIRED"
+    ],
+    "returncode": 0,
+    "seed": "make_reference_ast_guard",
+    "why": "F-037. The anchor's independence guard must fire when the module reaches a banned module, and must NOT fire on its own ban list or docstring."
+   },
+   {
+    "credited": true,
+    "expected_metric": "assertion",
+    "metric_lines": [
+     "METRIC stereo=ASSERTION_FIRED"
+    ],
+    "returncode": 0,
+    "seed": "make_reference_stereo",
+    "why": "The derived glycerol-C2=(R) assertion must fire when the backbone tag is flipped -- otherwise the stereo claim is vacuous."
+   },
+   {
+    "credited": true,
+    "expected_metric": "all_three_agree",
+    "metric_lines": [
+     "METRIC three_way=FIRED"
+    ],
+    "returncode": 0,
+    "seed": "three_way_delta6",
+    "why": "A delta-6 oleoyl passes every internal assertion at IDENTICAL formula and IDENTICAL exact mass. Only the three-way InChIKey check can see it."
+   },
+   {
+    "credited": true,
+    "expected_metric": "refusal",
+    "metric_lines": [
+     "METRIC regioisomer=REFUSED"
+    ],
+    "returncode": 0,
+    "seed": "make_reference_regioisomer",
+    "why": "A 1,3-diacyl-2-phospho connectivity defect at delta-mass 0.000000 Da must be refused by the assembly route, proving the gate is not a mass check."
+   }
+  ]
+ },
+ "C18_reproducibility": {
+  "two_independent_clean_runs": "byte-identical across all 6 generated artifacts, run into two separate temp OUTDIRs AFTER the seed suite, and byte-identical to the tracked copies in this folder",
+  "artifacts_compared": [
+   "01_blocks.csv",
+   "02_corpus_overlap.json",
+   "03_enumerated.csv",
+   "05_values.csv",
+   "06_rows.csv",
+   "reference_structures.csv"
+  ],
+  "python": "3.13.5"
+ },
+ "C19_contradictions": {
+  "n": 11,
+  "live": 6,
+  "retired": 5,
+  "ids_live": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-04",
+   "C-05",
+   "C-07"
+  ],
+  "ids_retired": [
+   "C-06",
+   "C-08",
+   "C-09",
+   "C-10",
+   "C-11"
+  ],
+  "retired_that_were_MY_error_not_the_paper's": [
+   "C-08",
+   "C-09"
+  ]
+ },
+ "what_could_NOT_be_verified": [
+  "The main article is not held (closed access, no PMC deposit of any kind), so Figures 1-4, the Methods, the mouse strain, the PEG-lipid identity, the EPO species and any structural depiction of C12-200 are all unavailable. 0 characters of main text were searched.",
+  "C12-200's structure is not attested by this paper at ANY level. It is carried from the corpus and cannot be checked against the source.",
+  "Cholesterol mol% has NO independent attestation anywhere in the SI -- the p10 and p11 design tables omit the column entirely -- which is precisely where the one real numerical error (A-03) sits.",
+  "The PEG-lipid is unidentified, so PEG_SMILES is blank on all 36 rows.",
+  "The mouse strain is not stated, so Model_type is 'Mouse_unspecified'.",
+  "N:P / charge ratio is never given; IL_to_nucleicacid_chargeratio is blank.",
+  "Aqueous buffer, dialysis buffer and mixing method live in the main text's Methods and are blank.",
+  "F-061 cannot be adjudicated from this paper, which provides no structural evidence on either side."
+ ]
+}

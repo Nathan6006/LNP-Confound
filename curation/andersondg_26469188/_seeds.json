@@ -1,7 +1,7 @@
 {
- "all_credited": false,
+ "all_credited": true,
  "curation_folder_untouched_by_seeds": true,
- "n_credited": 11,
+ "n_credited": 12,
  "n_seeds": 12,
  "seeds": [
   {
@@ -87,13 +87,13 @@
    "why": "Delete one anchor token from Table S4's word list. The coordinate-based dose assignment must refuse, not fall back to reading order."
   },
   {
-   "credited": false,
+   "credited": true,
    "expected_metric": "refusal",
    "metric_lines": [
     "METRIC clean expanded='+0--0' changed=True",
-    "METRIC seeded refusals=1/3"
+    "METRIC seeded refusals=3/3"
    ],
-   "returncode": 1,
+   "returncode": 0,
    "seed": "emdash_width_guard",
    "stderr_tail": "",
    "why": "Hand the em-dash normaliser a string it cannot uniquely widen. It must refuse rather than pad to the expected width."

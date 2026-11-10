@@ -84,21 +84,46 @@ _FFD = re.compile(
 )
 
 
+LEVEL_CHARS = set("+-0")
+
+
 def _fix_emdash(s, want):
     """pdfplumber fuses a run of hyphens into U+2014. Expand it to reach `want`.
 
-    This is a TEXT-EXTRACTION artifact, not a data question: the expansion is
-    only accepted if it is forced, i.e. if replacing the single em dash with
-    exactly (want - len(s) + 1) hyphens is the unique way to reach `want`.
+    This is a TEXT-EXTRACTION artifact, not a data question, and the expansion
+    is only accepted when it is FORCED: exactly one em dash, and replacing it
+    with (want - len(s) + 1) hyphens is the unique way to reach `want`.
+
+    Its first version had a hole its own seed found: it returned early whenever
+    `len(s) == want`, so an em-dash string that HAPPENED to be the right width
+    was handed back with the em dash still in it -- and `check_coded_levels`
+    would then index that character as if it were a design level, silently
+    adding a fourth key to a three-key map and masking a violation. A guard
+    that short-circuits on a length test has given up the ability to see a
+    non-canonical character. So the character set is now validated on the way
+    OUT, unconditionally, and length alone never buys an exit.
     """
-    if len(s) == want:
-        return s, False
-    if s.count("—") != 1:
-        raise ValueError("cannot normalise design string %r to width %d" % (s, want))
-    need = want - (len(s) - 1)
-    if need < 2:
-        raise ValueError("em-dash expansion of %r would not lengthen it" % s)
-    return s.replace("—", "-" * need), True
+    out = s
+    if "\u2014" in out:
+        if out.count("\u2014") != 1:
+            raise ValueError("design string %r has %d em dashes; only a single "
+                             "fused hyphen run can be expanded unambiguously"
+                             % (s, out.count("\u2014")))
+        need = want - (len(out) - 1)
+        if need < 2:
+            raise ValueError("em-dash expansion of %r to width %d would not "
+                             "lengthen it, so the em dash is not a fused hyphen "
+                             "run" % (s, want))
+        out = out.replace("\u2014", "-" * need)
+    if len(out) != want:
+        raise ValueError("design string %r normalises to %r, width %d, expected %d"
+                         % (s, out, len(out), want))
+    bad = sorted(set(out) - LEVEL_CHARS)
+    if bad:
+        raise ValueError("design string %r normalises to %r which contains "
+                         "non-level character(s) %r; a level is one of %s"
+                         % (s, out, bad, sorted(LEVEL_CHARS)))
+    return out, out != s
 
 
 def parse_designs(p10, p11):

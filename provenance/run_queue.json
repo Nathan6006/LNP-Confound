@@ -1079,11 +1079,12 @@
    "measures": "knockdown",
    "lib_src": "abstract",
    "note": "864 candidate formulations varying IL, helper, molar ratio and lipid concentration, with ML. siRNA endpoint; formulation-dominated.",
-   "stage": "queued",
-   "status": "pending_acquisition",
+   "stage": "extracting",
+   "status": "in_progress_agent",
    "blockers": [],
    "pmcid": "PMC13450591",
-   "value_reach": "C_pmc_fulltext"
+   "value_reach": "C_pmc_fulltext",
+   "agent_task_id": "aea36c125353e6e64"
   },
   {
    "rank": 43,
@@ -1387,7 +1388,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T18:51:05Z",
+ "updated_utc": "2026-11-10T18:57:33Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {

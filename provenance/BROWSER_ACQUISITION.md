@@ -215,3 +215,48 @@ So this folder can now do value-level validation on 20 of 960 members plus the
 full block ranking, which checks the naming scheme and the block ordering. It
 still cannot do the 960-row recall comparison it exists for. Detail and hashes
 in `curation/amino_lipid_fg_2026/00_acquisition.json`.
+
+## 2026-11-10 — PMC serves FIGURES but not SUPPLEMENTS; the publisher CDN does
+
+Measured on three PMCIDs while clearing the pending-acquisition queue:
+
+| route | figures | supplements |
+|---|---|---|
+| PMC `articles/instance/<numeric>/bin/<name>` | **works** (ga1/gr1-gr5.jpg, nihms figures) | **HTML error page, ~21.5 kB**, every time |
+| Europe PMC `/<PMCID>/supplementaryFiles` | — | **HTTP 500** (10,135 B of HTML) |
+| **Elsevier CDN** `ars.els-cdn.com/content/image/1-s2.0-<PII>-mmc<N>.<ext>` | — | **works, anonymously** |
+
+So the `/bin/` route's success on figures says nothing about supplements, and the
+21.5 kB HTML body is the tell — **a size floor would have accepted it**, which is
+why every download is magic-byte validated (`504b0304` for a real xlsx/docx ZIP
+container, not a byte count).
+
+**Getting the PII without a browser:** Europe PMC `core` gives the DOI, then
+`api.crossref.org/works/<doi>` returns `alternative-id`, whose `S`-prefixed entry
+is the PII. For `10.1016/j.mtbio.2026.103483` that is `S2590006426007283`, and
+probing `mmc1..3 x {xlsx,pdf,docx}` found `mmc1.docx` (2.7 MB SI) and
+**`mmc2.xlsx` (12.2 kB, the Source Data table)**. Two HTTP calls, no login, no
+bot check.
+
+**Why it was worth the detour:** that xlsx is a **tier-1** source, and the two
+curations in this project that took values from a repo or Source Data file have
+**zero digitisation defects between them, against eight for the four that
+digitised**. `find_screens.py` printed **nothing** for it — per F-070 that
+silence was not trusted, and dumping `xl/worksheets/sheet1.xml` directly showed
+**51 rows x 22 columns** with explicit `Ionizable/Helper/PEG Lipid Ratio (%)`
+columns.
+
+### Current pending-acquisition posture (8 papers, measured)
+
+| folder | OA | inPMC | hasSuppl | note |
+|---|---|---|---|---|
+| `zhangn_42569578` | Y | Y | Y | **acquired**, CC BY, tier-1 xlsx |
+| `chauy_40028722` | Y | Y | Y | figures acquired; CC BY-**NC** fails §8 |
+| `maohq_38583366` | N | Y | Y | NIH author manuscript; 1 figure, SI refused |
+| `xuq_22148515` | N | Y | N | in PMC, no supplements declared |
+| `leejy_42610355` | N | N | N | **CC BY** but not in PMC — needs the publisher |
+| `liu_42585110` · `cheng_41656866` · `goulart_41138890` | N | N | N | subscription, no PMC deposit |
+
+Four of the eight are not in PMC at all, so they need the browser and an
+institutional session — which is the one thing a cloud session cannot inherit
+(see `HANDOFF_CLOUD.md`).
