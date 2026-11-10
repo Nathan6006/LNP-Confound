@@ -1317,13 +1317,16 @@
    "measures": "expression",
    "lib_src": null,
    "note": "Kauffman et al. 2015: formulation optimisation by fractional factorial / definitive screening design. Anderson lab, pre-cutoff, uncurated. Formulation space, not IL space.",
-   "stage": "extracting",
-   "status": "in_progress_agent",
+   "stage": "07_emitted",
+   "status": "extracted",
    "blockers": [],
    "n_files": 1,
    "pmcid": null,
    "value_reach": "D_si_only",
-   "agent_task_id": "ac80af48b958294dd"
+   "agent_task_id": "ac80af48b958294dd",
+   "rows_emitted": 36,
+   "structures_enumerated": 1,
+   "proposed_experiment_id": "KK_2015"
   },
   {
    "rank": 51,
@@ -1388,7 +1391,7 @@
   "dahlmanje_29489381": 1,
   "whiteheadka_30637934": 1
  },
- "updated_utc": "2026-11-10T18:58:53Z",
+ "updated_utc": "2026-11-10T19:00:18Z",
  "_reclassified_2026_11_10": "kind verified against each abstract; 2 papers moved ivl->form, 1 marked duplicate.",
  "rows_staged": 7045,
  "_value_reach_legend": {
