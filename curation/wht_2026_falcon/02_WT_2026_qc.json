@@ -6,6 +6,71 @@
  "rows": 2544,
  "columns": 79,
  "experiments": 7,
+ "np_ratio_realignment": [
+  {
+   "file": "URS",
+   "rows": 129,
+   "state": "REALIGNED (F-004)",
+   "rows_self_consistent": 0,
+   "rows_reconstructed": 126,
+   "rows_blanked": 3,
+   "unmapped_formulations": [
+    "U0001",
+    "U0002",
+    "U0003"
+   ],
+   "assumption": "NP_ratio moved with the three shape knobs it sits beside (spreadsheet selection F:I, not G:I). If the selection excluded it, the as-shipped values were already correct. Nothing available distinguishes these cases; see realign_np_ratio.__doc__.",
+   "known_conflict": "Suppl Table 5 p.8 prints N:P 6.0 for U0036, which matches neither the stored 7.1985 nor the reconstructed 16.7659. That table is itself block-pasted in two places."
+  },
+  {
+   "file": "E0",
+   "rows": 273,
+   "state": "aligned",
+   "rows_self_consistent": 273,
+   "rows_reconstructed": 0,
+   "rows_blanked": 0
+  },
+  {
+   "file": "E1",
+   "rows": 197,
+   "state": "aligned",
+   "rows_self_consistent": 197,
+   "rows_reconstructed": 0,
+   "rows_blanked": 0
+  },
+  {
+   "file": "E2",
+   "rows": 136,
+   "state": "aligned",
+   "rows_self_consistent": 136,
+   "rows_reconstructed": 0,
+   "rows_blanked": 0
+  },
+  {
+   "file": "E3",
+   "rows": 123,
+   "state": "aligned",
+   "rows_self_consistent": 123,
+   "rows_reconstructed": 0,
+   "rows_blanked": 0
+  },
+  {
+   "file": "E4",
+   "rows": 180,
+   "state": "aligned",
+   "rows_self_consistent": 180,
+   "rows_reconstructed": 0,
+   "rows_blanked": 0
+  },
+  {
+   "file": "E5",
+   "rows": 180,
+   "state": "aligned",
+   "rows_self_consistent": 180,
+   "rows_reconstructed": 0,
+   "rows_blanked": 0
+  }
+ ],
  "unique_IL": [
   "DLin-MC3-DMA",
   "SM-102"

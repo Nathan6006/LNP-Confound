@@ -223,6 +223,133 @@ def pct_columns(hdr):
     return il, hl, chol, peg
 
 
+NP_TOL = 0.15          # the source rounds percents to 1 dp; 0.01 produced a
+                       # false finding on file 1 in round 1 (9/197 "bad",
+                       # actually 197/197 clean)
+
+
+def realign_np_ratio(src, ilc, hlc, cholc, pegc, tag):
+    """Repair `NP_ratio` where the source's two parameterisations disagree.
+
+    THE DEFECT (review finding F-004). Every row of these files states its
+    formulation twice: as four design knobs (`NP_ratio`, `IL+HL`, `HL_IL+HL`,
+    `PEG_PEG+Chol`) and as four finished molar percents. On SIX of the seven
+    files the two agree row for row. On the URS file (129 rows) **not one row
+    agrees with itself**, while 126 of them derive exactly one OTHER row's
+    percents, injectively. The design block was sorted out of alignment with the
+    rest of the row -- `PEG_PEG+Chol` is strictly monotone decreasing across all
+    129 rows with zero violations, which cannot arise from uniform random
+    sampling and is the signature of a spreadsheet sort over a contiguous column
+    selection with the sort key last.
+
+    WHICH HALF MOVED, and why the percents are the ones to trust: the paper
+    names `U0036` its best URS composition and that row carries the file-maximum
+    response; Supplementary Table 5 (p. 8) prints `U0036`'s percents and they
+    match the PERCENT block to the printed decimal; and URS row 1's percents are
+    byte-identical to `F0162`'s in the clean E0 file. So `FALCON_ID` ->
+    response -> percents are mutually aligned and the design knobs are the
+    outlier. The molar ratios we emit were never affected.
+
+    `NP_ratio` sits inside the moved block, so it was wrong on 129 corpus rows
+    (median error 6.86 against a column spanning 4.01-25.54).
+
+    WHAT THIS FUNCTION DOES, and the assumption it rests on. Reconstruct by
+    following the injective map: for each percent row, find the unique design
+    row whose knobs derive it, and take that design row's `NP_ratio`.
+
+    **This assumes `NP_ratio` was INSIDE the sorted selection.** It is column F
+    and the three shape knobs are G-I; if the selection was G:I rather than F:I
+    then `NP_ratio` never moved and the ORIGINAL values were already right. No
+    observable in the repo, the preprint or the SI distinguishes the two cases,
+    and for the one formulation the SI tabulates there are three mutually
+    inconsistent candidates:
+
+        stored (as shipped)            7.1985
+        reconstructed (this function) 16.7659
+        Supplementary Table 5          6.0      <- matches NEITHER
+
+    and no `NP_ratio` in any of the seven files is within 0.02 of 6.0. Suppl
+    Table 5 cannot arbitrate because it is itself block-pasted in two places:
+    `U0036`'s last three cells repeat its own first three, and its bottom rows
+    slip by one. Neither alignment correlates with the response above a
+    random-pairing floor (Spearman +0.042 stored, -0.041 reconstructed, against
+    a 95th percentile of 0.167).
+
+    So the reconstruction is a DECISION, taken deliberately 2026-11-09 in
+    preference to blanking the column, and every affected row says so in
+    `curation_note`. A reader who wants the as-shipped numbers can recover them
+    from the source CSV; a reader who wants no number at all should filter on
+    the note.
+
+    The 3 percent rows nothing maps to get a BLANK, not a guess. Those are
+    `U0001`-`U0003`, and they are the rows a reviewer showed are not uniform
+    random samples at all: `U0001` and `U0002` have percents byte-identical to
+    `F0162` and `F0192` in other files, and `U0003` is a round designed
+    composition with `(IL+HL)% = 60.0000` exactly. Three design rows are
+    likewise unclaimed. Whatever happened to those three, no mapping exists.
+
+    Mutates each row, adding `_NP_RESOLVED`. Returns a dict for the QC file.
+    """
+    def derive(r):
+        ilhl, hlf = float(r["IL+HL"]), float(r["HL_IL+HL"])
+        pegf = float(r["PEG_PEG+Chol"])
+        hl = ilhl * hlf / 100.0
+        peg = (100.0 - ilhl) * pegf / 100.0
+        return (ilhl - hl, hl, (100.0 - ilhl) - peg, peg)
+
+    def stated(r):
+        return (float(r[ilc]), float(r[hlc]), float(r[cholc]), float(r[pegc]))
+
+    def agrees(a, b):
+        return max(abs(x - y) for x, y in zip(a, b)) <= NP_TOL
+
+    self_ok = sum(1 for r in src if agrees(derive(r), stated(r)))
+    if self_ok == len(src):
+        # The normal case: six of seven files. Nothing to repair.
+        for r in src:
+            r["_NP_RESOLVED"] = float(r["NP_ratio"])
+        return {"file": tag, "rows": len(src), "state": "aligned",
+                "rows_self_consistent": self_ok, "rows_reconstructed": 0,
+                "rows_blanked": 0}
+
+    # Misaligned. Build the design -> percent map and invert it.
+    fwd = {}
+    for i, d in enumerate(src):
+        hits = [j for j, s in enumerate(src) if agrees(derive(d), stated(s))]
+        if len(hits) == 1:
+            fwd[i] = hits[0]
+    inv = {j: i for i, j in fwd.items()}
+    assert len(inv) == len(fwd), (
+        f"{tag}: the design->percent map is NOT injective ({len(fwd)} design "
+        f"rows claim only {len(inv)} percent rows). Reconstruction assigns one "
+        f"N:P to each formulation and is unsafe without injectivity -- blank "
+        f"the column instead of guessing.")
+
+    rebuilt = blanked = 0
+    for j, r in enumerate(src):
+        if j in inv:
+            r["_NP_RESOLVED"] = float(src[inv[j]]["NP_ratio"])
+            rebuilt += 1
+        else:
+            r["_NP_RESOLVED"] = ""          # no mapping exists; do not guess
+            blanked += 1
+
+    return {"file": tag, "rows": len(src), "state": "REALIGNED (F-004)",
+            "rows_self_consistent": self_ok,
+            "rows_reconstructed": rebuilt, "rows_blanked": blanked,
+            "unmapped_formulations": [src[j].get("FALCON_ID", j)
+                                      for j in range(len(src)) if j not in inv],
+            "assumption": "NP_ratio moved with the three shape knobs it sits "
+                          "beside (spreadsheet selection F:I, not G:I). If the "
+                          "selection excluded it, the as-shipped values were "
+                          "already correct. Nothing available distinguishes "
+                          "these cases; see realign_np_ratio.__doc__.",
+            "known_conflict": "Suppl Table 5 p.8 prints N:P 6.0 for U0036, "
+                              "which matches neither the stored 7.1985 nor the "
+                              "reconstructed 16.7659. That table is itself "
+                              "block-pasted in two places."}
+
+
 def main():
     corpus = list(csv.DictReader(open(CORPUS)))
     hdr = list(corpus[0].keys())
@@ -249,6 +376,7 @@ def main():
     smiles[("HL", "18PG")] = Chem.MolToSmiles(Chem.MolFromSmiles(SOPG))
 
     index = 1 + max(int(r["Index"]) for r in corpus if r["Index"].isdigit())
+    np_notes = []
     rows, blocks, sel_check = [], [], []
 
     for fname, tag, outputs in DATASETS:
@@ -256,6 +384,8 @@ def main():
         head = list(src[0])
         ilc, hlc, cholc, pegc = pct_columns(head)
         selcol = next((c for c in head if c.endswith("Selectivity")), None)
+        np_note = realign_np_ratio(src, ilc, hlc, cholc, pegc, tag)
+        np_notes.append(np_note)
 
         # ONE z-score per FILE, pooled over this file's cell-type columns, so a
         # within-file cross-cell-type difference survives (F-003). mu and sd are
@@ -281,7 +411,7 @@ def main():
                     "Experiment_ID": eid, "Formulation_ID": fid,
                     "IL_name": il_name, "IL_SMILES": smiles[("IL", il_name)],
                     "IL_molratio": float(r[ilc]),
-                    "IL_to_nucleicacid_chargeratio": float(r["NP_ratio"]),
+                    "IL_to_nucleicacid_chargeratio": r["_NP_RESOLVED"],
                     "HL_name": hl_name, "HL_SMILES": smiles[("HL", hl_name)],
                     "HL_molratio": float(r[hlc]),
                     "CHL_name": "Cholesterol", "CHL_SMILES": smiles[("CHL", "Cholesterol")],
@@ -302,6 +432,34 @@ def main():
                     # consumer never has to infer it (F-001/F-016)
                     "value_normalization_unit": "source_file",
                 })
+                # Say on the row that N:P was reconstructed, not shipped (F-004).
+                # A reader of data_vitro.csv must not take these as the authors'
+                # own numbers -- they are ours, recovered through an injective
+                # realignment that rests on a stated assumption. The molar
+                # ratios on the same row ARE the authors' and are unaffected.
+                if np_note["state"].startswith("REALIGNED"):
+                    row["curation_note"] = (
+                        "IL_to_nucleicacid_chargeratio RECONSTRUCTED, not as "
+                        "shipped: this source file states each formulation twice "
+                        "and its design-parameter block was sorted out of "
+                        "alignment with the ID, percent and response columns, so "
+                        "the N:P it shipped belongs to a different formulation "
+                        "(median error 6.86 on a 4.01-25.54 range). Recovered via "
+                        "the injective design->percent map. Assumes N:P moved "
+                        "with the three shape parameters beside it; if it did "
+                        "not, the shipped value was already right. Suppl Table 5 "
+                        "prints a third, different value for the one formulation "
+                        "it tabulates. The four molar ratios are unaffected and "
+                        "are the authors' own."
+                        if row["IL_to_nucleicacid_chargeratio"] != "" else
+                        "IL_to_nucleicacid_chargeratio BLANK: this source file's "
+                        "design-parameter block was sorted out of alignment with "
+                        "the rest of the row, and no design row maps to this "
+                        "formulation, so no N:P can be recovered for it. This is "
+                        "also one of three rows whose percents are not uniform "
+                        "random samples at all (they duplicate compositions from "
+                        "other files, or are round designed values). The four "
+                        "molar ratios are unaffected.")
                 row.update(descriptors(row["IL_SMILES"]))
                 rows.append(row)
                 index += 1
@@ -403,6 +561,7 @@ def main():
             open(os.path.join(SRC, f), encoding="utf-8-sig")))) for f, _, _ in DATASETS),
         "rows": len(rows), "columns": len(hdr),
         "experiments": len(blocks),
+        "np_ratio_realignment": np_notes,
         "unique_IL": sorted({r["IL_name"] for r in rows}),
         "unique_HL": sorted({r["HL_name"] for r in rows}),
         "cell_types": sorted({r["Model_type"] for r in rows}),

@@ -1,6 +1,6 @@
 # Review packet — ZT_2026
 
-Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `curation/` trees. **Every number below was read out of the repository at generation time.** If the packet and the repository disagree, the packet is the bug — say so.
+Generated 2026-11-09 by `provenance/review/brief.py` from the live `data/` and `curation/` trees. **Every number below was read out of the repository at generation time.** If the packet and the repository disagree, the packet is the bug — say so.
 
 - **Paper:** Tian et al., Adv Mater 2026 (PMID 42634137) - esterified cholesterol conjugates, blood-brain barrier
 - **Curation folder:** `curation/siegwart_42634137/`
@@ -63,10 +63,9 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
  "molratios": {
   "IL_molratio": "45 distinct",
   "HL_molratio": "81 distinct",
-  "CHL_molratio": [
-   ""
-  ],
-  "PEG_molratio": "41 distinct"
+  "PEG_molratio": "41 distinct",
+  "fifthcomponent_molratio": "81 distinct",
+  "_sum_over_all_five": "99.99-100.01"
  },
  "flag_columns": {
   "value_normalization_unit": {
@@ -135,12 +134,13 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": [
    "23.8"
   ],
-  "CHL_molratio": [
-   ""
-  ],
   "PEG_molratio": [
    "4.8"
-  ]
+  ],
+  "fifthcomponent_molratio": [
+   "23.8"
+  ],
+  "_sum_over_all_five": "100.0-100.0"
  },
  "flag_columns": {
   "value_normalization_unit": {
@@ -180,6 +180,8 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "34.25",
   "CHL_molratio": "",
   "PEG_molratio": "0.68",
+  "fifthcomponent_name": "DODAP",
+  "fifthcomponent_molratio": "20.55",
   "Publication_PMID": "42634137",
   "Publication_DOI": "10.1002/adma.74762"
  },
@@ -195,6 +197,8 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "10.64",
   "CHL_molratio": "",
   "PEG_molratio": "4.26",
+  "fifthcomponent_name": "DODAP",
+  "fifthcomponent_molratio": "31.91",
   "Publication_PMID": "42634137",
   "Publication_DOI": "10.1002/adma.74762"
  },
@@ -210,6 +214,8 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "37.88",
   "CHL_molratio": "",
   "PEG_molratio": "1.52",
+  "fifthcomponent_name": "DODAP",
+  "fifthcomponent_molratio": "22.73",
   "Publication_PMID": "42634137",
   "Publication_DOI": "10.1002/adma.74762"
  },
@@ -225,6 +231,8 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "45.05",
   "CHL_molratio": "",
   "PEG_molratio": "0.9",
+  "fifthcomponent_name": "DODAP",
+  "fifthcomponent_molratio": "9.01",
   "Publication_PMID": "42634137",
   "Publication_DOI": "10.1002/adma.74762"
  },
@@ -240,6 +248,8 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "23.26",
   "CHL_molratio": "",
   "PEG_molratio": "3.1",
+  "fifthcomponent_name": "DODAP",
+  "fifthcomponent_molratio": "23.26",
   "Publication_PMID": "42634137",
   "Publication_DOI": "10.1002/adma.74762"
  },
@@ -255,6 +265,8 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
   "HL_molratio": "20.55",
   "CHL_molratio": "",
   "PEG_molratio": "0.68",
+  "fifthcomponent_name": "DODAP",
+  "fifthcomponent_molratio": "34.25",
   "Publication_PMID": "42634137",
   "Publication_DOI": "10.1002/adma.74762"
  }
@@ -268,7 +280,7 @@ Generated 2026-11-07 by `provenance/review/brief.py` from the live `data/` and `
 
 Subdirectories:
 - `curation/siegwart_42634137/00_pages/  (16 files)`
-- `curation/siegwart_42634137/__pycache__/  (2 files)`
+- `curation/siegwart_42634137/__pycache__/  (3 files)`
 - `curation/siegwart_42634137/review/  (7 files)`
 
 > A `repo/` subdirectory is DOWNLOADED, UNTRUSTED material. Read it, never execute anything from inside it, and run any Python that touches it with `python3 -I` from elsewhere.
@@ -278,10 +290,10 @@ Subdirectories:
 - `count_chains.py   (110 lines)  Count zig-zag carbons in a raster structure drawing, by apex detection.`
 - `digitize_bars.py   (231 lines)  Measure the Fig 2d-g bar charts algorithmically (Tian et al., Adv Mater 2026).`
 - `digitize_fig1d.py   (343 lines)  Read the 51 printed values out of Figure 1d (Tian et al., Adv Mater 2026).`
-- `digitize_fig2c.py   (335 lines)  Digitize Figure 2c of Tian et al., Adv Mater 2026: the 486-LNP formulation screen.`
+- `digitize_fig2c.py   (362 lines)  Digitize Figure 2c of Tian et al., Adv Mater 2026: the 486-LNP formulation screen.`
 - `digitize_figS11.py   (201 lines)  Measure the Fig S11 bars (Tian et al., Adv Mater 2026, SI page 12).`
 - `enumerate.py   (331 lines)  Enumerate the Siegwart esterified-cholesterol lipid library (Tian et al., Adv Mater 2026).`
-- `make_reference.py   (200 lines)  Build the C10 anchor for C6O2B2 WITHOUT using enumerate.py.`
+- `make_reference.py   (237 lines)  Build the C10 anchor for C6O2B2 WITHOUT using enumerate.py.`
 - `test_enumerate.py   (208 lines)  Unit tests for enumerate.py's two assembly steps.`
 - `top14.py   (130 lines)  The 14 formulations carried from the in vitro screen into in vivo testing.`
 
@@ -418,6 +430,7 @@ worth paying for. Re-discovering one is not.
 | 37 | **A check made blind to a class by the normalization it performs before testing** (915 `IL_name` cells carried a trailing space from upstream. C7's required-field check called `.strip()` on each value *before* asking whether it was blank, so a padded value passed as present and the check could not see padding at all. `"A1I5R22C8 "` and `"A1I5R22C8"` are distinct dict keys carrying the *same* SMILES, so this is a silent join hazard, not a cosmetic one — and the condition was DISCLOSED in `CLAUDE.md` and worked around with two defensive `.strip()` calls in `build_dataset.py` for the corpus's whole life) | 2026-11-07, `BL_2023` + `ZH_2023` | **C7 `padded_cells`** | strip at the single emit choke point, and test for padding on EVERY cell rather than normalizing it away inside the test. Generally: a check that canonicalises its input before comparing has deliberately given up the ability to detect non-canonical input, so whatever it normalises away needs its own check. A known-and-worked-around defect is worse than an unknown one, because the workarounds are evidence everybody saw it and nobody owned it |
 | 38 | **A tracked artifact whose input lives in a session scratchpad** (`build_manifest.py` read its NCBI cross-check cache from `.../claude-501/<old-session-uuid>/scratchpad/esum.json`. Scratchpads are session-scoped and get cleared, so the script raised `FileNotFoundError` and `data/experiment_manifest.csv` — committed to git — could not be regenerated from anything in the repository. The cache was also silently STALE: it predated the `QL_2026` and `XD_2026` merges, so the manifest recorded "PMID … not checked against NCBI" for both) | 2026-11-07, second instance — `lit_review/build_data.py` had it on 2026-10-30 | the rule, plus `fetch_esummary.py` | **no script in this repo may read an input from a session scratchpad**; anything a tracked output depends on is written into the repo together with the script that fetches it. Derive paths from `__file__`, not from an absolute path under `/Users/`. Two instances make this a missing rule rather than an oversight |
 | 39 | **A number asserted in the project's own documentation that nothing measures** (`CLAUDE.md` stated the F-001 flag count as 1,152 and told the reader to re-measure it with `C13.rows_carrying_a_flag`, which returns 1,652 because it counts `confidence = high`; the figure matching the prose is 1,157. It also gave the chance baseline as `1/31` vitro — the S from before a July re-trim, matching neither the live corpus (42) nor the frozen run (34) — and described a trailing-space defect as affecting "several" rows when it was 915 cells. The count had moved four times, ≥266 → 1,137 → 1,152 → 1,157, each correction by hand) | 2026-11-07, corpus-wide (F-022/F-024/F-026) | **C15** | `provenance/check_docs.py` + `docs_claims.json` — every documented number paired with an expression that measures it, each tagged with the section that claims it. Deliberately does NOT parse the Markdown: the expected value is transcribed by hand, so changing a doc number means changing both and the pair either agrees or the build fails. **A quantity with a prose definition and no implementation gets re-implemented, slightly differently, by every pass that touches it.** Narrower cousin of class 21, which is a curation's provenance text contradicting its own code |
+| 40 | **A reagent whose structure already exists, independently curated, elsewhere in the corpus — and was never consulted** (`ZT_2026` read the `OF-2` core off a figure by eye and wrote all four tails one carbon short, C17 for C18. `LL_2025` had carried the same reagent as `OF-02` all along, at the correct C84H152N4O6 / UMSCHHWDFWCONK-RGLFHLPNSA-N. The error was internally consistent — formula, descriptors and canonical SMILES all agreed with each other — and this was the one lipid whose own `confidence_basis` records that the apex chain counter could NOT be used on it, because its alkenes break the zig-zag, so a by-eye count was the only evidence it ever had) | 2026-11-07, `ZT_2026` `OF-2` (F-031) | **not yet automated** | for every reagent name appearing in more than one experiment, compare skeleton InChIKeys and report disagreements. Needs a small alias table (`OF-2` vs `OF-02`) and is otherwise mechanical. The general point is stronger than the check: **the corpus is its own best external anchor, and a second independent curation of the same reagent is the cheapest C10 there is** — cheaper than reading the figure again, and available for free whenever two papers share a commercial lipid |
 | 40 | **A source stating the same quantity in two parameterisations where only ONE is row-aligned** (`WT_2026`'s URS file gives each formulation as four design parameters AND four molar percents. On that one file of seven they describe different formulations: 0 of 129 design rows agree with their own percent row, while 126 derive exactly one OTHER row's percents, injectively. The design block's `PEG_PEG+Chol` is strictly monotone over all 129 rows with zero violations -- impossible under uniform random sampling, and the signature of a spreadsheet sort applied to a contiguous column selection. `IL_to_nucleicacid_chargeratio` was taken from `NP_ratio`, which travels with the sorted block, so it is wrong on 129 corpus rows: median error 6.86 against a file range of 4.01-25.54. C4, C5 and C6 are all blind because every row's percents still sum to exactly 100) | 2026-11-07, `WT_2026` | per-curation, automatable | where a source gives both parameterisations, DERIVE one from the other and require **row-wise** agreement. The positive signature of the defect is a cross-row injective match with ZERO self-matches. Note what does not work: a range check passes identically on misassigned values because a permutation preserves the multiset, which is why this curation's `validate.py` recorded `PASS N/P range 3.33-37.12` on 129 wrong rows |
 | 41 | **A derived "within-model" column silently pooling normalisation units the source says are incomparable** (`Experiment_value_within_model` re-standardises inside (`Experiment_ID` x `Model_type`), but `WT_2026` is normalised per SOURCE FILE and one `Model_type` spans several files -- `Ramos` alone covers 959 rows across five. So the derived column straddles five scales the authors' own `dataset_info.txt` forbids comparing, and `value_normalization_unit` does not describe it: that column declares the unit of `Experiment_value` only. A consumer reaching for the "within model" column to remove an assay offset gets exactly the cross-file mixing the `source_file` flag exists to prevent) | 2026-11-07, `WT_2026` | **open** | a derived column needs its own declared unit, or must refuse to compute where the base unit is not the one it assumes. Generally: adding a re-normalised convenience column creates a SECOND normalisation contract, and a flag that describes only the first one is not a flag on the second |
 

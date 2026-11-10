@@ -143,11 +143,32 @@ def slice_stats(rows, eids):
                 out[col] = {"distinct": len(c),
                             "top": dict(c.most_common(6))}
     ratios = {}
-    for p in ("IL", "HL", "CHL", "PEG"):
+    # `fifthcomponent` INCLUDED since 2026-11-09 (F-039). Without it every
+    # ZT_2026 row in a packet showed ratios summing to ~79%, with the missing
+    # 20.55% (DODAP, 10-50 mol% of the particle) never named -- so a reviewer
+    # briefed from this packet would go hunting a C5 violation that does not
+    # exist. A packet that manufactures a false finding is worse than a thin
+    # one, and the C11 block below already reads fifthcomponent_name, so the
+    # omission was an oversight rather than a policy.
+    for p in ("IL", "HL", "CHL", "PEG", "fifthcomponent"):
         k = f"{p}_molratio"
-        if k in sel[0]:
+        if k in sel[0] and any(str(r[k]).strip() for r in sel):
             vals = sorted(set(r[k] for r in sel))
             ratios[k] = vals if len(vals) <= 8 else f"{len(vals)} distinct"
+    # State the sum explicitly, so a reviewer never has to infer whether a
+    # component is missing from this summary.
+    sums = []
+    for r in sel:
+        tot = 0.0
+        for p in ("IL", "HL", "CHL", "PEG", "fifthcomponent"):
+            v = str(r.get(f"{p}_molratio", "")).strip()
+            if v:
+                try:
+                    tot += float(v)
+                except ValueError:
+                    pass
+        sums.append(round(tot, 2))
+    ratios["_sum_over_all_five"] = (f"{min(sums)}-{max(sums)}" if sums else "n/a")
     out["molratios"] = ratios
     # The quality/provenance columns, taken from schema_quality.json -- the file
     # CLAUDE.md §3 names as the single source of these column names.
@@ -286,9 +307,12 @@ def reagents_in(rows, eids):
 
 def sample_rows(rows, eids, k=6, seed=11):
     sel = [r for r in rows if r["Experiment_ID"] in eids]
+    # fifthcomponent_* included for the reason in molratios above (F-039):
+    # without it a sampled ZT_2026 row reads as summing to 79%.
     keep = ["Experiment_ID", "IL_name", "IL_SMILES", VALUE_COL, "Model_type",
             "Model", "IL_molratio", "HL_name", "HL_molratio", "CHL_molratio",
-            "PEG_molratio", "MolWt", "Publication_PMID", "Publication_DOI"]
+            "PEG_molratio", "fifthcomponent_name", "fifthcomponent_molratio",
+            "MolWt", "Publication_PMID", "Publication_DOI"]
     out = []
     for r in random.Random(seed).sample(sel, min(k, len(sel))):
         out.append({c: r[c] for c in keep if c in r})

@@ -235,9 +235,9 @@
  "checks_marginal": {
   "C4_fig2d_by_C6O2B2": {
    "digitized": {
-    "35": 0,
-    "50": 0,
-    "65": 0
+    "35": 41,
+    "50": 21,
+    "65": 31
    },
    "reported": {
     "35": 41,
@@ -245,17 +245,17 @@
     "65": 31
    },
    "delta": {
-    "35": -41,
-    "50": -21,
-    "65": -31
+    "35": 0,
+    "50": 0,
+    "65": 0
    },
-   "rank_order_matches": false
+   "rank_order_matches": true
   },
   "C5_fig2e_by_DMGPEG": {
    "digitized": {
-    "1": 0,
-    "2": 0,
-    "4": 0
+    "1": 35,
+    "2": 29,
+    "4": 29
    },
    "reported": {
     "1": 35,
@@ -263,17 +263,17 @@
     "4": 29
    },
    "delta": {
-    "1": -35,
-    "2": -29,
-    "4": -29
+    "1": 0,
+    "2": 0,
+    "4": 0
    },
    "rank_order_matches": true
   },
   "C6_fig2f_by_DODAP": {
    "digitized": {
-    "10": 0,
-    "30": 0,
-    "50": 0
+    "10": 8,
+    "30": 31,
+    "50": 54
    },
    "reported": {
     "10": 8,
@@ -281,11 +281,11 @@
     "50": 54
    },
    "delta": {
-    "10": -8,
-    "30": -31,
-    "50": -54
+    "10": 0,
+    "30": 0,
+    "50": 0
    },
-   "rank_order_matches": false
+   "rank_order_matches": true
   },
   "C7_fig2g_by_helper": {
    "digitized": {

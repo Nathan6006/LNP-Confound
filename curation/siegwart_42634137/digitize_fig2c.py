@@ -301,17 +301,44 @@ def verify(rows, geom, pal):
     out["checks_scalar"] = {k: {"digitized": a, "reported": b, "delta": a - b}
                             for k, (a, b) in checks.items()}
     out["checks_marginal"] = {}
-    for name, key, rep in [("C4_fig2d_by_C6O2B2", "C6O2B2_molpct", REPORTED["by_c6o2b2"]),
-                           ("C5_fig2e_by_DMGPEG", "DMGPEG_molpct", REPORTED["by_peg"]),
-                           ("C6_fig2f_by_DODAP", "DODAP_molpct", REPORTED["by_dodap"]),
+    # CORRECTED 2026-11-09 (F-038). Three of these four checks were keyed on
+    # `*_molpct` against REPORTED keys that are the raw DESIGN LEVELS (35/50/65,
+    # 1/2/4, 10/30/50). The 2026-10-28 column rename moved those levels to
+    # `*_molratio` and put genuine percentages in `*_molpct`, so every lookup
+    # missed every key and `got.get(k, 0)` returned the literal 0. The emitted
+    # QC file recorded exactly that -- `"digitized": {"35":0,"50":0,"65":0}`,
+    # `"rank_order_matches": false` -- while 07_qc.json went on asserting
+    # "ALL FOUR EXACT ... 15 of 15 bins match with zero deviation". Only
+    # C7_fig2g_by_helper ever ran, because `helper_lipid` was not renamed.
+    #
+    # Two known classes at once: error class 28 (a `.get(k, 0)` default turning
+    # a lookup miss into a number) and error class 35's general form (a rename
+    # invalidating everything keyed on the old name). The substance always held
+    # -- recomputing from `*_molratio` gives 41/21/31, 35/29/29, 8/31/54 and the
+    # six helper counts exactly -- so no datum was ever wrong. What was wrong is
+    # that the panel-orientation argument PROVENANCE.md rests on had stopped
+    # being tested, and a re-run would have printed three failures beside a
+    # summary claiming four passes.
+    #
+    # `got[k]` now, not `got.get(k, 0)`: a missing key is a broken check and
+    # must raise, not score zero.
+    for name, key, rep in [("C4_fig2d_by_C6O2B2", "C6O2B2_molratio", REPORTED["by_c6o2b2"]),
+                           ("C5_fig2e_by_DMGPEG", "DMGPEG_molratio", REPORTED["by_peg"]),
+                           ("C6_fig2f_by_DODAP", "DODAP_molratio", REPORTED["by_dodap"]),
                            ("C7_fig2g_by_helper", "helper_lipid", REPORTED["by_helper"])]:
         got = marg(key)
+        missing = [k for k in rep if str(k) not in {str(g) for g in got}]
+        assert not missing, (
+            f"{name}: key column {key!r} has no value matching {missing} -- the "
+            f"check is looking at the wrong column and would silently score 0. "
+            f"Column holds {sorted({str(g) for g in got})}.")
+        g = {str(k): got[str(k)] if str(k) in got else got[k] for k in rep}
         out["checks_marginal"][name] = {
-            "digitized": {str(k): got.get(k, 0) for k in rep},
+            "digitized": g,
             "reported": {str(k): v for k, v in rep.items()},
-            "delta": {str(k): got.get(k, 0) - v for k, v in rep.items()},
+            "delta": {str(k): g[str(k)] - v for k, v in rep.items()},
             "rank_order_matches": (sorted(rep, key=lambda k: -rep[k])
-                                   == sorted(rep, key=lambda k: -got.get(k, 0))),
+                                   == sorted(rep, key=lambda k: -g[str(k)])),
         }
     return out
 

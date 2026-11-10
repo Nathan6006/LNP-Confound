@@ -81,8 +81,53 @@ def main():
     worst = max(abs(s - 100) for s in sums)
     check(worst <= 0.1 + 1e-9,
           f"molar percents sum to 100, max deviation {worst:.4f} (source rounds to 0.1)")
-    np_r = [float(r["IL_to_nucleicacid_chargeratio"]) for r in rows]
-    check(min(np_r) > 0, f"N/P range {min(np_r):.2f}-{max(np_r):.2f}")
+    # N:P is BLANK on the 3 URS formulations no design row maps to (F-004), so
+    # this cannot assume every row parses as a float.
+    #
+    # And a RANGE check is near-worthless here, which is worth stating where the
+    # check lives: a permutation preserves the multiset, so the old
+    # `N/P range 3.33-37.12` passed identically on 129 values attached to the
+    # wrong formulations. It is kept as a sanity floor and nothing more. What
+    # actually tests the realignment is the pairing assertion below.
+    np_r = [float(r["IL_to_nucleicacid_chargeratio"]) for r in rows
+            if str(r["IL_to_nucleicacid_chargeratio"]).strip() != ""]
+    blank = len(rows) - len(np_r)
+    check(min(np_r) > 0 and blank == 3,
+          f"N/P range {min(np_r):.2f}-{max(np_r):.2f} over {len(np_r)} rows; "
+          f"{blank} blank (the 3 unmappable URS formulations). NOTE: a range "
+          f"check cannot detect a permutation -- see the pairing check next")
+
+    # The realignment, tested properly: every URS row whose N:P was
+    # reconstructed must now carry an N:P whose own design parameters derive
+    # THIS row's molar percents. That is the property the shipped file violated
+    # on all 129 rows, and it is what the repair restores.
+    urs = [r for r in rows if str(r["Formulation_ID"]).startswith("U")]
+    src_urs = list(csv.DictReader(open(os.path.join(
+        SRC, "0_Norm_RAMOS_Single_Objective_UniformRandomSampling_Ctrl_MC3_DSPC.csv"),
+        encoding="utf-8-sig")))
+    by_np = {}
+    for d in src_urs:
+        by_np.setdefault(round(float(d["NP_ratio"]), 6), []).append(d)
+    ok = 0
+    for r in urs:
+        v = str(r["IL_to_nucleicacid_chargeratio"]).strip()
+        if v == "":
+            continue
+        for d in by_np.get(round(float(v), 6), []):
+            ilhl, hlf = float(d["IL+HL"]), float(d["HL_IL+HL"])
+            pegf = float(d["PEG_PEG+Chol"])
+            hl = ilhl * hlf / 100.0
+            peg = (100.0 - ilhl) * pegf / 100.0
+            derived = (ilhl - hl, hl, (100.0 - ilhl) - peg, peg)
+            stated = (float(r["IL_molratio"]), float(r["HL_molratio"]),
+                      float(r["CHL_molratio"]), float(r["PEG_molratio"]))
+            if max(abs(a - b) for a, b in zip(derived, stated)) <= 0.15:
+                ok += 1
+                break
+    check(ok == 126,
+          f"N:P realignment: {ok}/126 reconstructed URS rows carry an N:P whose "
+          f"own design parameters derive that row's molar percents (the shipped "
+          f"file managed 0/129)")
 
     # --- structures --------------------------------------------------------
     uniq = {(p, r[f"{p}_name"], r[f"{p}_SMILES"])
