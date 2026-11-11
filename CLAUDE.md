@@ -654,7 +654,37 @@ of being rediscovered.
 - **`SB_2024` / `SY_2025` (60 vivo rows) are not on the z-score scale** — drop them as we dropped `ZL_2022`/`YX_2023`, or keep and caveat?
 - **48 duplicate SMILES with conflicting values** — resolve from source publications, or exclude those lipids from Result 3?
 - **The in-vivo pool's only cross-source chemistry is now MC3 and SM-102.** `XD_2026` carries both, taking MC3 from 4 → 5 sources and SM-102 from 3 → 4, but it adds no *new* shared lipid (ALC-0315 is vitro-only) and shares at most 2 lipids with any single source, so its contribution lands in Stage 5's pooled set and not in any per-pair rho. Flagged because those two are the field's universal positive controls and they rank 2nd and 3rd of 12 here: a source whose only shared lipids are benchmarks that top every screen can push cross-lab concordance toward +1 for reasons that have nothing to do with transferable SAR. Decide before Stage 5 is re-run whether benchmark-only pairs belong in the pooled concordance at all — this bears directly on T8 and on Result 3.
-- **git init + license check:** constituent-source licenses must be CC0/CC-BY-compatible before corpus release (Data & code availability section).
+- **~~git init + license check: constituent-source licenses must be
+  CC0/CC-BY-compatible before corpus release.~~ SUPERSEDED 2026-11-10 — see
+  `provenance/POLICY_DECISIONS.md` P1.** That rule was never checked against the
+  data it governed, and it fails on our own foundation: of the **42 publications
+  LNPDB itself curated, 28 are `isOpenAccess: N` and only 6 are CC BY**.
+  Applying it literally would delete ~85% of `Original_LNPDB.csv`, `AA_2008` and
+  `KW_2014` included — together 57% of Result 3's pooled points.
+
+  The rule is now **expression vs. fact**, which is where copyright law actually
+  draws the line (*Feist v. Rural Telephone*, 499 U.S. 340 (1991): facts are not
+  copyrightable; a compilation is protected only in its selection and
+  arrangement, and that protection does not reach the facts inside it):
+
+  | | |
+  |---|---|
+  | extracted values, and structures we derived | **release**, with per-row `Publication_PMID` |
+  | source PDFs, SI files, publisher Source Data | **never redistribute** (done: 110 files / 156.9 MB removed 2026-11-10) |
+  | rendered figures, crops, digitisation overlays | **never publish** — an overlay is a derivative of a protected figure (done: 21 files purged from git history 2026-11-10, `provenance/removed_overlays_2026-11-10.json`) |
+
+  The precedent is exact and peer-reviewed: LNPDB's own Methods say its values
+  were *"extracted from published heatmaps and bar plots by **digitizing the
+  figures**"*, and it was released publicly in a **CC BY 4.0** *Nature
+  Communications* paper (PMID 41605942) with no permissions statement anywhere
+  in the article. ChEMBL (CC BY-SA) and BindingDB (CC BY 4.0) do the same from
+  closed journals. Cite LNPDB's sentence in our own Data Availability section.
+
+  Residual risk is **contract, not copyright**: subscription agreements may
+  restrict bulk TDM independently. We read articles one at a time through normal
+  institutional access, which is not the posture those clauses target. Before
+  public release, get one written note from the CWRU library's scholarly
+  communications officer.
 
 ---
 
