@@ -41,6 +41,7 @@
    "40060499",
    "40131321",
    "40234552",
+   "40681859",
    "40796944",
    "40817189",
    "41145968",
@@ -48,6 +49,7 @@
    "41742414",
    "41922838",
    "42050330",
+   "42367940",
    "42592089",
    "42634137"
   ],
@@ -6676,6 +6678,187 @@
    "sortfirstauthor": "Pe\u00f1a \u00c1",
    "vernaculartitle": ""
   },
+  "40681859": {
+   "uid": "40681859",
+   "pubdate": "2025 Dec",
+   "epubdate": "2025 Jul 18",
+   "source": "Nat Biomed Eng",
+   "authors": [
+    {
+     "name": "Gong N",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kim D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Alameh MG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "El-Mayta R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Han EL",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Dwivedi G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Palanki R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shi Q",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Han X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xue L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Xu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Meng Z",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Luo T",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Figueroa-Espada CG",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weissman D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Li J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mitchell MJ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mitchell MJ",
+   "title": "Mannich reaction-based combinatorial libraries identify antioxidant ionizable lipids for mRNA delivery with reduced immunogenicity.",
+   "sorttitle": "mannich reaction based combinatorial libraries identify antioxidant ionizable lipids for mrna delivery with reduced immunogenicity",
+   "volume": "9",
+   "issue": "12",
+   "pages": "2181-2195",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101696896",
+   "issn": "",
+   "essn": "2157-846X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "pubstatus": "256",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "40681859"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41551-025-01422-8"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41551-025-01422-8"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "received",
+     "date": "2024/04/06 00:00"
+    },
+    {
+     "pubstatus": "accepted",
+     "date": "2025/05/08 00:00"
+    },
+    {
+     "pubstatus": "medline",
+     "date": "2025/12/16 06:28"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2025/07/19 16:45"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2025/07/18 23:36"
+    }
+   ],
+   "references": [
+    {
+     "refsource": "Nat Biomed Eng. 2025 Dec;9(12):2215. doi: 10.1038/s41551-025-01486-6.",
+     "reftype": "Erratum in",
+     "pmid": 40745065,
+     "note": ""
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "Nature biomedical engineering",
+   "elocationid": "doi: 10.1038/s41551-025-01422-8",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2025/12/01 00:00",
+   "sortfirstauthor": "Gong N",
+   "vernaculartitle": ""
+  },
   "40796944": {
    "uid": "40796944",
    "pubdate": "2026 Mar",
@@ -7853,6 +8036,242 @@
    "chapter": "",
    "sortpubdate": "2026/04/28 00:00",
    "sortfirstauthor": "Zhou M",
+   "vernaculartitle": ""
+  },
+  "42367940": {
+   "uid": "42367940",
+   "pubdate": "2026 Jun 17",
+   "epubdate": "2026 Jun 17",
+   "source": "bioRxiv",
+   "authors": [
+    {
+     "name": "Toh WH",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cheng L",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Chang B",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yu D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Ma J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Huang X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Weng G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhu Y",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lu X",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Lin J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Liu J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Choy J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Greco A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Jain M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Yang J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Patel M",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shoemaker G",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Cozzone I",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Antov D",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Zhang K",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kayabas S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Shin C",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Aggarwal A",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Green J",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Tzeng S",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Kumar R",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Konig MF",
+     "authtype": "Author",
+     "clusterid": ""
+    },
+    {
+     "name": "Mao HQ",
+     "authtype": "Author",
+     "clusterid": ""
+    }
+   ],
+   "lastauthor": "Mao HQ",
+   "title": "FALCON: Closed-Loop Multi-Objective Optimization of Lipid Nanoparticles for Cell-Selective mRNA Delivery.",
+   "sorttitle": "falcon closed loop multi objective optimization of lipid nanoparticles for cell selective mrna delivery",
+   "volume": "",
+   "issue": "",
+   "pages": "",
+   "lang": [
+    "eng"
+   ],
+   "nlmuniqueid": "101680187",
+   "issn": "",
+   "essn": "2692-8205",
+   "pubtype": [
+    "Journal Article",
+    "Preprint"
+   ],
+   "recordstatus": "PubMed",
+   "pubstatus": "3",
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "42367940"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC13307981"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC13307981;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.64898/2026.06.13.731774"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "2026.06.13.731774"
+    }
+   ],
+   "history": [
+    {
+     "pubstatus": "medline",
+     "date": "2026/06/29 16:11"
+    },
+    {
+     "pubstatus": "pubmed",
+     "date": "2026/06/29 16:10"
+    },
+    {
+     "pubstatus": "entrez",
+     "date": "2026/06/29 06:42"
+    },
+    {
+     "pubstatus": "pmc-release",
+     "date": "2026/06/26 00:00"
+    }
+   ],
+   "references": [],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "pmcrefcount": "",
+   "fulljournalname": "bioRxiv : the preprint server for biology",
+   "elocationid": "pii: 2026.06.13.731774. doi: 10.64898/2026.06.13.731774",
+   "doctype": "citation",
+   "srccontriblist": [],
+   "booktitle": "",
+   "medium": "",
+   "edition": "",
+   "publisherlocation": "",
+   "publishername": "",
+   "srcdate": "",
+   "reportnumber": "",
+   "availablefromurl": "",
+   "locationlabel": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "bookname": "",
+   "chapter": "",
+   "sortpubdate": "2026/06/17 00:00",
+   "sortfirstauthor": "Toh WH",
    "vernaculartitle": ""
   },
   "42592089": {

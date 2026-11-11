@@ -1,0 +1,447 @@
+{
+ "_what": "Experiment_ID -> laboratory, derived from the LAST AUTHOR of each paper's NCBI esummary record. Written by provenance/build_lab_map.py; do not hand-edit.",
+ "_method": "lab = esummary 'lastauthor', with provenance/build_lab_map.py::ALIASES merging initials-variants of one person.",
+ "_limits": "Last author is not always the corresponding author, and scientific lineage is not captured (Whitehead KA trained in Anderson DG's lab). See the module docstring.",
+ "_counts": {
+  "experiments": 54,
+  "distinct_labs": 22
+ },
+ "_labs_with_more_than_one_experiment": {
+  "Anderson DG": [
+   "AA_2008",
+   "BL_2023",
+   "BL_2023_3CR",
+   "BL_2024",
+   "JW_2024",
+   "KL_2010",
+   "KW_2014",
+   "LM_2019",
+   "LR_2023"
+  ],
+  "Mitchell MJ": [
+   "LX_2024",
+   "LX_2024_2",
+   "LX_2024_3",
+   "NG_2025",
+   "NG_2025_2",
+   "XH_2024",
+   "XH_2024_2",
+   "XH_2025"
+  ],
+  "Li B": [
+   "FG_2026",
+   "JC_2023",
+   "MO_2026",
+   "YX_2024",
+   "YX_2026",
+   "YX_2026_SDL"
+  ],
+  "Siegwart DJ": [
+   "JM_2016",
+   "KZ_2016",
+   "SL_2020",
+   "SL_2021",
+   "ZT_2026"
+  ],
+  "Liu S": [
+   "KS_2024",
+   "LL_2026",
+   "LL_2026_2",
+   "SW_2024",
+   "YY_2023"
+  ],
+  "Mao HQ": [
+   "WT_2026",
+   "YZ_2022",
+   "YZ_2024"
+  ],
+  "DeRosa F": [
+   "LL_2025",
+   "RG_2023"
+  ],
+  "Bang EK": [
+   "SB_2024",
+   "SY_2025"
+  ]
+ },
+ "map": {
+  "AA_2008": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "18438401",
+   "first_author": "Akinc A",
+   "pubdate": "2008 May"
+  },
+  "AC_2025": {
+   "lab": "Traverso G",
+   "lab_raw": "Traverso G",
+   "pmid": "40817189",
+   "first_author": "Chan A",
+   "pubdate": "2025 Oct"
+  },
+  "AP_2025": {
+   "lab": "Gim\u00e9nez-Warren J",
+   "lab_raw": "Gim\u00e9nez-Warren J",
+   "pmid": "40234552",
+   "first_author": "Pe\u00f1a \u00c1",
+   "pubdate": "2025 Apr 16"
+  },
+  "BL_2023": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson D",
+   "pmid": "36997680",
+   "first_author": "Li B",
+   "pubdate": "2023 Oct"
+  },
+  "BL_2023_3CR": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "37679571",
+   "first_author": "Li B",
+   "pubdate": "2025 Feb"
+  },
+  "BL_2024": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "38740955",
+   "first_author": "Li B",
+   "pubdate": "2024 Jul"
+  },
+  "FG_2026": {
+   "lab": "Li B",
+   "lab_raw": "Li B",
+   "pmid": "41922838",
+   "first_author": "Gong F",
+   "pubdate": "2026 Apr 1"
+  },
+  "JC_2023": {
+   "lab": "Li B",
+   "lab_raw": "Li B",
+   "pmid": "38060560",
+   "first_author": "Chen J",
+   "pubdate": "2023 Dec 12"
+  },
+  "JL_2024": {
+   "lab": "Lu X",
+   "lab_raw": "Lu X",
+   "pmid": "39497197",
+   "first_author": "Li J",
+   "pubdate": "2024 Nov 4"
+  },
+  "JM_2016": {
+   "lab": "Siegwart DJ",
+   "lab_raw": "Siegwart DJ",
+   "pmid": "27981708",
+   "first_author": "Miller JB",
+   "pubdate": "2017 Jan 19"
+  },
+  "JW_2024": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "37985700",
+   "first_author": "Jiang AY",
+   "pubdate": "2024 Mar"
+  },
+  "KL_2010": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "20080679",
+   "first_author": "Love KT",
+   "pubdate": "2010 Feb 2"
+  },
+  "KS_2024": {
+   "lab": "Liu S",
+   "lab_raw": "Liu S",
+   "pmid": "38969646",
+   "first_author": "Su K",
+   "pubdate": "2024 Jul 5"
+  },
+  "KW_2014": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "24969323",
+   "first_author": "Whitehead KA",
+   "pubdate": "2014 Jun 27"
+  },
+  "KZ_2016": {
+   "lab": "Siegwart DJ",
+   "lab_raw": "Siegwart DJ",
+   "pmid": "26729861",
+   "first_author": "Zhou K",
+   "pubdate": "2016 Jan 19"
+  },
+  "LL_2012": {
+   "lab": "Levkin PA",
+   "lab_raw": "Levkin PA",
+   "pmid": "22902058",
+   "first_author": "Li L",
+   "pubdate": "2012 Nov"
+  },
+  "LL_2025": {
+   "lab": "DeRosa F",
+   "lab_raw": "DeRosa F",
+   "pmid": "40131321",
+   "first_author": "Liu L",
+   "pubdate": "2025 May 9"
+  },
+  "LL_2026": {
+   "lab": "Liu S",
+   "lab_raw": "Liu S",
+   "pmid": "41689530",
+   "first_author": "Lin L",
+   "pubdate": "2026 Feb 25"
+  },
+  "LL_2026_2": {
+   "lab": "Liu S",
+   "lab_raw": "Liu S",
+   "pmid": "41689530",
+   "first_author": "Lin L",
+   "pubdate": "2026 Feb 25"
+  },
+  "LM_2019": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "31570898",
+   "first_author": "Miao L",
+   "pubdate": "2019 Oct"
+  },
+  "LR_2023": {
+   "lab": "Anderson DG",
+   "lab_raw": "Anderson DG",
+   "pmid": "37127709",
+   "first_author": "Rhym LH",
+   "pubdate": "2023 Jul"
+  },
+  "LX_2024": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "38424061",
+   "first_author": "Xue L",
+   "pubdate": "2024 Feb 29"
+  },
+  "LX_2024_2": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "39742515",
+   "first_author": "Xue L",
+   "pubdate": "2025 Jan 15"
+  },
+  "LX_2024_3": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "39354147",
+   "first_author": "Xue L",
+   "pubdate": "2025 Jan"
+  },
+  "LZ_2025": {
+   "lab": "Yang YY",
+   "lab_raw": "Yang YY",
+   "pmid": "39875076",
+   "first_author": "Zhang L",
+   "pubdate": "2025 Apr 10"
+  },
+  "MO_2026": {
+   "lab": "Li B",
+   "lab_raw": "Li B",
+   "pmid": "42050330",
+   "first_author": "Zhou M",
+   "pubdate": "2026 Apr 28"
+  },
+  "NC_2024": {
+   "lab": "Whitehead KA",
+   "lab_raw": "Whitehead KA",
+   "pmid": "38437545",
+   "first_author": "Chaudhary N",
+   "pubdate": "2024 Mar 12"
+  },
+  "NG_2025": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "40681859",
+   "first_author": "Gong N",
+   "pubdate": "2025 Dec"
+  },
+  "NG_2025_2": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "40681859",
+   "first_author": "Gong N",
+   "pubdate": "2025 Dec"
+  },
+  "QL_2026": {
+   "lab": "Li J",
+   "lab_raw": "Li J",
+   "pmid": "41145968",
+   "first_author": "Liu Q",
+   "pubdate": "2026 Feb"
+  },
+  "RG_2023": {
+   "lab": "DeRosa F",
+   "lab_raw": "DeRosa F",
+   "pmid": "37480759",
+   "first_author": "Goldman RL",
+   "pubdate": "2023 Oct"
+  },
+  "SB_2024": {
+   "lab": "Bang EK",
+   "lab_raw": "Bang EK",
+   "pmid": "38779592",
+   "first_author": "Bae SH",
+   "pubdate": "2024 Aug"
+  },
+  "SL_2020": {
+   "lab": "Siegwart DJ",
+   "lab_raw": "Siegwart DJ",
+   "pmid": "33305471",
+   "first_author": "Lee SM",
+   "pubdate": "2021 Mar 8"
+  },
+  "SL_2021": {
+   "lab": "Siegwart DJ",
+   "lab_raw": "Siegwart DJ",
+   "pmid": "33542471",
+   "first_author": "Liu S",
+   "pubdate": "2021 May"
+  },
+  "SP_2020": {
+   "lab": "Sahay G",
+   "lab_raw": "Sahay G",
+   "pmid": "32080183",
+   "first_author": "Patel S",
+   "pubdate": "2020 Feb 20"
+  },
+  "SS_2018": {
+   "lab": "Benenato KE",
+   "lab_raw": "Benenato KE",
+   "pmid": "29653760",
+   "first_author": "Sabnis S",
+   "pubdate": "2018 Jun 6"
+  },
+  "SW_2024": {
+   "lab": "Liu S",
+   "lab_raw": "Liu S",
+   "pmid": "39424104",
+   "first_author": "Wu S",
+   "pubdate": "2024 Dec"
+  },
+  "SX_2025": {
+   "lab": "Wu Y",
+   "lab_raw": "Wu Y",
+   "pmid": "40796944",
+   "first_author": "Xu S",
+   "pubdate": "2026 Mar"
+  },
+  "SY_2025": {
+   "lab": "Bang EK",
+   "lab_raw": "Bang EK",
+   "pmid": "39502027",
+   "first_author": "Yoo S",
+   "pubdate": "2025 Mar"
+  },
+  "WT_2026": {
+   "lab": "Mao HQ",
+   "lab_raw": "Mao HQ",
+   "pmid": "42367940",
+   "first_author": "Toh WH",
+   "pubdate": "2026 Jun 17"
+  },
+  "XD_2026": {
+   "lab": "Song X",
+   "lab_raw": "Song X",
+   "pmid": "42592089",
+   "first_author": "Duan X",
+   "pubdate": "2026 Aug"
+  },
+  "XH_2024": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "38409275",
+   "first_author": "Han X",
+   "pubdate": "2024 Feb 26"
+  },
+  "XH_2024_2": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "39578640",
+   "first_author": "Han X",
+   "pubdate": "2024 Nov"
+  },
+  "XH_2025": {
+   "lab": "Mitchell MJ",
+   "lab_raw": "Mitchell MJ",
+   "pmid": "40060499",
+   "first_author": "Han X",
+   "pubdate": "2025 Mar 1"
+  },
+  "YR_2024": {
+   "lab": "Chen J",
+   "lab_raw": "Chen J",
+   "pmid": "39099464",
+   "first_author": "Ren Y",
+   "pubdate": "2024 Aug 22"
+  },
+  "YX_2024": {
+   "lab": "Li B",
+   "lab_raw": "Li B",
+   "pmid": "39060305",
+   "first_author": "Xu Y",
+   "pubdate": "2024 Jul 26"
+  },
+  "YX_2026": {
+   "lab": "Li B",
+   "lab_raw": "Li B",
+   "pmid": "41742414",
+   "first_author": "Xu Y",
+   "pubdate": "2026 Mar 19"
+  },
+  "YX_2026_SDL": {
+   "lab": "Li B",
+   "lab_raw": "Li B",
+   "pmid": "41742414",
+   "first_author": "Xu Y",
+   "pubdate": "2026 Mar 19"
+  },
+  "YY_2023": {
+   "lab": "Liu S",
+   "lab_raw": "Liu S",
+   "pmid": "37591187",
+   "first_author": "Yan Y",
+   "pubdate": "2023 Oct"
+  },
+  "YZ_2022": {
+   "lab": "Mao HQ",
+   "lab_raw": "Mao HQ",
+   "pmid": "35879315",
+   "first_author": "Zhu Y",
+   "pubdate": "2022 Jul 25"
+  },
+  "YZ_2024": {
+   "lab": "Mao HQ",
+   "lab_raw": "Mao HQ",
+   "pmid": "38082180",
+   "first_author": "Zhu Y",
+   "pubdate": "2024 May"
+  },
+  "ZC_2023": {
+   "lab": "Xiong H",
+   "lab_raw": "Xiong H",
+   "pmid": "37853662",
+   "first_author": "Chen Z",
+   "pubdate": "2023 Nov 8"
+  },
+  "ZH_2023": {
+   "lab": "Chen Y",
+   "lab_raw": "Chen Y",
+   "pmid": "37661193",
+   "first_author": "He Z",
+   "pubdate": "2023 Oct 23"
+  },
+  "ZT_2026": {
+   "lab": "Siegwart DJ",
+   "lab_raw": "Siegwart DJ",
+   "pmid": "42634137",
+   "first_author": "Tian Z",
+   "pubdate": "2026 Oct"
+  }
+ }
+}
