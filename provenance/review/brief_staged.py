@@ -29,6 +29,34 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
 
 
+SMILES_COLS = ("IL_SMILES", "smiles", "SMILES", "canonical_SMILES",
+               "il_smiles", "emitted_SMILES", "product_SMILES", "parent_SMILES")
+VALUE_PREFIX = "Experiment_value"
+
+
+def smiles_col(cols):
+    """The structure column, whatever this folder chose to call it.
+
+    WHY A TUPLE AND NOT A LITERAL. The first version of this file required the
+    exact string `IL_SMILES`, and its docstring claimed it selected "by SCHEMA,
+    not filename". **One literal column name is a filename by another route.**
+    Measured by the Wave-1 reviewer, 2026-11-10: `linyx_41851281` calls it
+    `smiles` (138/140 rows carry a parseable structure) and
+    `palczewski_41654520` calls it `canonical_SMILES` (59/64) -- so the packet
+    declared ~200 verified tier-1 rows unmergeable, as an affirmative finding.
+
+    That is the same failure as the filename-keyed scan this generator was
+    written to replace, which is the point: **a discovery rule derived from a
+    convention nobody enforces is not a check, it is the convention's second
+    victim.** The durable fix is a per-folder declaration (see PLAN.md); this
+    tuple only stops the packet from lying in the meantime.
+    """
+    for c in SMILES_COLS:
+        if c in cols:
+            return c
+    return None
+
+
 def key(smi):
     m = Chem.MolFromSmiles(smi) if smi else None
     return Chem.MolToInchiKey(m) if m else None
@@ -63,8 +91,8 @@ def emitted_file(folder, want):
             if not cols:
                 continue
             cs = set(cols)
-            if "IL_SMILES" not in cs or not any(
-                    c.startswith("Experiment_value") for c in cs):
+            if not smiles_col(cs) or not any(
+                    c.startswith(VALUE_PREFIX) for c in cs):
                 continue
             n = sum(1 for _ in csv.DictReader(open(p)))
             if n:
@@ -91,9 +119,14 @@ def packet(folder, qrow, ck):
       f"{qrow.get('pmid')}.")
     A("")
     if not path:
-        A("**NO SCHEMA-VALID ROW FILE FOUND** (needs `IL_SMILES` and a column "
-          "starting `Experiment_value`). That is itself a finding: this folder "
-          "cannot be merged as it stands.")
+        A("**NO FILE MATCHED THE DISCOVERY RULE** (a column in "
+          f"{SMILES_COLS} plus one starting `{VALUE_PREFIX}`).")
+        A("")
+        A("**This is a statement about the discovery rule, NOT about the data.** "
+          "An earlier version of this generator reported the same condition as "
+          "an affirmative finding -- \"this folder cannot be merged\" -- and was "
+          "wrong for 2 of 4 folders, writing off ~200 verified rows. Check the "
+          "files below yourself before concluding anything.")
         A("")
         A("Files that look row-like but lack one of those columns:")
         for p in sorted(glob.glob(f"{ROOT}/curation/{folder}/*.csv")):
@@ -123,16 +156,18 @@ def packet(folder, qrow, ck):
     # structures
     ks = collections.Counter()
     bad = 0
+    scol = smiles_col(cols)
     for r in rows:
-        k = key(r.get("IL_SMILES"))
+        k = key(r.get(scol))
         if k:
             ks[k] += 1
-        elif (r.get("IL_SMILES") or "").strip():
+        elif (r.get(scol) or "").strip():
             bad += 1
     A("")
     A("## Structures")
     A(f"- distinct full InChIKeys: **{len(ks)}**")
-    A(f"- unparseable `IL_SMILES`: **{bad}**")
+    A(f"- structure column: **`{scol}`**")
+    A(f"- unparseable structures: **{bad}**")
     already = {k: v for k, v in ks.items() if k in ck}
     A(f"- already in the corpus: **{len(already)}** of {len(ks)}")
     if already:

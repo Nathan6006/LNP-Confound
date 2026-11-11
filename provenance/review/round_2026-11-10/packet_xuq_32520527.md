@@ -2,7 +2,9 @@
 
 Generated from live files. Queue says **33** emitted rows; status `extracted`; proposed `Experiment_ID` **none**; PMID 32520527.
 
-**NO SCHEMA-VALID ROW FILE FOUND** (needs `IL_SMILES` and a column starting `Experiment_value`). That is itself a finding: this folder cannot be merged as it stands.
+**NO FILE MATCHED THE DISCOVERY RULE** (a column in ('IL_SMILES', 'smiles', 'SMILES', 'canonical_SMILES', 'il_smiles', 'emitted_SMILES', 'product_SMILES', 'parent_SMILES') plus one starting `Experiment_value`).
+
+**This is a statement about the discovery rule, NOT about the data.** An earlier version of this generator reported the same condition as an affirmative finding -- "this folder cannot be merged" -- and was wrong for 2 of 4 folders, writing off ~200 verified rows. Check the files below yourself before concluding anything.
 
 Files that look row-like but lack one of those columns:
   - `01_blocks.csv` — 9 cols, IL_SMILES=False, value=[]
