@@ -1,5 +1,5 @@
 {
- "columns": 79,
+ "columns": 81,
  "vitro_rows": 29195,
  "vivo_rows": 1803,
  "row_provenance": {
@@ -790,6 +790,22 @@
    "units_overridden": {
     "NG_2025_2: experiment_x_model_type -> experiment_x_model_target": 23
    }
+  },
+  "design_axis": {
+   "vitro": {
+    "chemistry": 17700,
+    "mixed": 8723,
+    "formulation": 2772
+   },
+   "vivo": {
+    "chemistry": 1275,
+    "mixed": 520,
+    "formulation": 8
+   }
+  },
+  "labs": {
+   "vitro": 15,
+   "vivo": 11
   }
  }
 }

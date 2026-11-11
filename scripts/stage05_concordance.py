@@ -87,10 +87,36 @@ def replicate_noise_ceiling(df, seed=GLOBAL_SEED):
     which physical well/LNP_ID was measured). For groups with >=2 such rows and genuine
     value variation, randomly pick 2 as (repA, repB), look up their already-computed
     within-source-endpoint ranks, and pool the (rankA, rankB) pairs."""
+    # MODEL_TARGET AND ROUTE_OF_ADMINISTRATION WERE MISSING UNTIL 2026-11-11.
+    # `Model_type` is the animal STRAIN (Mouse_B6); the ORGAN lives in
+    # `Model_target`, which was not in the key. So two rows measuring one lipid
+    # in LIVER and in SPLEEN matched on every key column and were pooled as
+    # replicate measurements of one thing.
+    #
+    # Measured on the live corpus: **171 of 205 (83.4%) in-vivo "replicate"
+    # groups spanned more than one organ** -- 160 ZH_2023 liver-vs-spleen, 11
+    # NG_2025_2 liver-vs-muscle. The frozen registry already recorded the
+    # symptom: concordance.LNPDB_vivo.ceiling_spearman = 0.3319, n = 194,
+    # dominant_source ZH_2023, dominant_source_frac 0.825, confidence "OK".
+    #
+    # That number is T2's assay-noise CEILING -- the control that makes
+    # Result 3's near-zero cross-source concordance mean something. It was
+    # instead measuring within-lab cross-TISSUE concordance, which the direct
+    # measurement confirms (ZH_2023 liver vs spleen = Spearman 0.2406 over the
+    # 160 lipids in both organs). Worse, those two organs were z-scored
+    # SEPARATELY upstream (F-080), so the pairs also straddle two deleted
+    # scales. The registry entry is annotated `retracted` (F-083); its value is
+    # deliberately NOT edited, because CLAUDE.md s7 forbids hand-editing a
+    # reported number and that is what the frozen run produced.
+    #
+    # Adding these two columns CHANGES THE NEXT RUN'S NUMBERS. That is the
+    # point, and it is the s8 open decision about re-running the pipeline.
+    # The in-vitro ceiling is unaffected by this mechanism.
     key_cols = [
         "Experiment_ID", "canonical_IL_SMILES", "canonical_HL_SMILES", "HL_molratio",
         "canonical_CHL_SMILES", "CHL_molratio", "canonical_PEG_SMILES", "PEG_molratio",
-        "Dose_ug_nucleicacid", "Model_type", "Experiment_method", "Cargo_type",
+        "Dose_ug_nucleicacid", "Model_type", "Model_target",
+        "Route_of_administration", "Experiment_method", "Cargo_type",
     ]
     d = df.copy()
     d["_key"] = d[key_cols].astype(str).agg("|".join, axis=1)

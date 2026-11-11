@@ -839,6 +839,12 @@ def main():
     merged = merge_curations(rows, vivo, out_cols)
     quality = {"vitro": add_quality_columns(rows),
                "vivo": add_quality_columns(vivo)}
+    # design_axis and lab (policies P2 and P4). Derived here rather than
+    # curated: both are functions of what is already stored, so a curation
+    # could only restate them and drift from them -- the F-001 mechanism.
+    quality["design_axis"] = {"vitro": add_design_axis(rows),
+                              "vivo": add_design_axis(vivo)}
+    quality["labs"] = {"vitro": add_lab(rows), "vivo": add_lab(vivo)}
     stripped = {"vitro": strip_cells(rows), "vivo": strip_cells(vivo)}
     rows.sort(key=lambda r: (r["Experiment_ID"],
                              int(r["Index"]) if str(r["Index"]).isdigit() else 0))
@@ -1072,6 +1078,82 @@ def merge_curations(vitro, vivo, cols):
     return out
 
 
+FORM_COLS = ["IL_molratio", "HL_molratio", "CHL_molratio", "PEG_molratio",
+             "HL_name", "CHL_name", "PEG_name", "Dose_ug_nucleicacid",
+             "IL_to_nucleicacid_massratio", "IL_to_nucleicacid_chargeratio"]
+
+
+def add_design_axis(rows):
+    """Set `design_axis` per experiment: what the screen actually VARIED.
+
+    Policy P2 (2026-11-10). A screen that holds the ionizable lipid fixed and
+    varies only the formulation measures something real but contributes no
+    transferable chemistry, so Result 3 must be able to exclude it -- and
+    excluding it by refusing the curation would throw away the extraction,
+    while a column costs one filter.
+
+    THE TEST IS WITHIN-LIPID, and that is the whole design. A first version
+    called an experiment `mixed` whenever formulation varied at all, which
+    labelled `YX_2024` -- 1,200 distinct lipids measured at 2 formulations --
+    as mixed and would have dropped the corpus's second-largest chemistry
+    screen out of Result 3. Formulation variation that merely accompanies a
+    changing lipid is a by-product; formulation variation WITHIN one lipid is a
+    deliberate second axis.
+
+      one distinct IL_SMILES                      -> formulation
+      lipid varies, some lipid at >1 formulation  -> mixed
+      lipid varies, each lipid at 1 formulation   -> chemistry
+
+    Live: 49 chemistry (18,975 rows), 8 mixed (9,243), 6 formulation (2,780).
+    """
+    by_exp = defaultdict(list)
+    for r in rows:
+        by_exp[r["Experiment_ID"]].append(r)
+    log = Counter()
+    for eid, block in by_exp.items():
+        ils = {r.get("IL_SMILES", "") for r in block}
+        if len(ils) <= 1:
+            axis = "formulation"
+        else:
+            per = defaultdict(set)
+            for r in block:
+                per[r.get("IL_SMILES", "")].add(
+                    "|".join(str(r.get(c, "")) for c in FORM_COLS))
+            axis = "mixed" if max(len(v) for v in per.values()) > 1 else "chemistry"
+        for r in block:
+            r["design_axis"] = axis
+        log[axis] += len(block)
+    return dict(log)
+
+
+def add_lab(rows):
+    """Set `lab` from provenance/lab_map.json (policy P4, finding F-082).
+
+    REFUSES on an experiment with no entry rather than leaving a blank. A blank
+    lab silently becomes its own laboratory of one in any group-by, which is
+    exactly the mis-grouping hazard P5 forbids and the same shape as the
+    `Anderson D` / `Anderson DG` split that map's ALIASES table exists to close.
+    """
+    path = os.path.join(HERE, "lab_map.json")
+    if not os.path.exists(path):
+        raise SystemExit(
+            "provenance/lab_map.json is missing. Run "
+            "`python3 -I provenance/build_lab_map.py` first -- the corpus's "
+            "`lab` column has no other source and a blank is not an acceptable "
+            "default (it would become a laboratory of one).")
+    m = json.load(open(path))["map"]
+    missing = sorted({r["Experiment_ID"] for r in rows
+                      if r["Experiment_ID"] not in m})
+    if missing:
+        raise SystemExit(
+            f"lab_map.json has no laboratory for: {', '.join(missing)}. "
+            f"Refresh it with build_lab_map.py (and fetch_esummary.py if a PMID "
+            f"is new). Refusing to emit a blank `lab`.")
+    for r in rows:
+        r["lab"] = m[r["Experiment_ID"]]["lab"]
+    return len({m[r["Experiment_ID"]]["lab"] for r in rows})
+
+
 def add_quality_columns(rows):
     """Populate the two normalization columns; validate the five flag columns.
 
@@ -1204,8 +1286,13 @@ def strip_cells(rows):
 
     915 `IL_name` cells arrived from upstream padded with a trailing space --
     720 `BL_2023` vitro, 150 `ZH_2023` + 45 `BL_2023` vivo -- and in `ZH_2023`
-    the padding tracks the organ exactly (every liver row padded, every spleen
-    row not), which is the fingerprint of two source tables concatenated. No
+    the padding is CONTIGUOUS, which is the fingerprint of two source tables
+    concatenated upstream. (This docstring used to say the padding "tracks the
+    organ exactly (every liver row padded, every spleen row not)". That was
+    FALSE -- measured 2026-11-11 it is liver 81/82, spleen 69/93 -- and the
+    claim had been repeated in CLAUDE.md, CHANGELOG.md and audit_baseline.json
+    from one unchecked observation. Padding and organ each run in blocks and
+    share exactly one boundary, which is what produced the impression.) No
     cell anywhere else in the corpus carries padding.
 
     The padding is a join hazard that no check could see: `"A1I5R22C8 "` and

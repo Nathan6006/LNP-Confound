@@ -129,7 +129,7 @@
   "C7_fields.padded_cells": {
    "mode": "max",
    "value": 0,
-   "why": "ACCEPTED AS ZERO: no cell in the corpus may carry leading or trailing whitespace. 915 IL_name cells did -- 720 BL_2023 vitro, 150 ZH_2023 + 45 BL_2023 vivo -- for the corpus's whole life, and in ZH_2023 the padding tracked the organ exactly, the fingerprint of two source tables concatenated. It was disclosed in CLAUDE.md and worked around with .strip() at two call sites in build_dataset.py, but no check could see it: blank_required_fields strips before testing, so a padded value passes as present. Stripped at the single emit choke point 2026-11-07 (F-022); gated at 0 so it cannot come back with the next upstream merge."
+   "why": "ACCEPTED AS ZERO: no cell in the corpus may carry leading or trailing whitespace. 915 IL_name cells did -- 720 BL_2023 vitro, 150 ZH_2023 + 45 BL_2023 vivo -- for the corpus's whole life, and the padding is contiguous, the fingerprint of two source tables concatenated upstream. (This why previously claimed the padding 'tracked the organ exactly'; that was false -- liver 81/82, spleen 69/93 -- and was corrected 2026-11-11.) It was disclosed in CLAUDE.md and worked around with .strip() at two call sites in build_dataset.py, but no check could see it: blank_required_fields strips before testing, so a padded value passes as present. Stripped at the single emit choke point 2026-11-07 (F-022); gated at 0 so it cannot come back with the next upstream merge."
   },
   "C8_descriptors.rows_disagreeing": {
    "mode": "max",
@@ -195,6 +195,21 @@
    "mode": "exact",
    "value": 0,
    "why": "Zero is right for vitro. A steroid ring present with NO cleavable ester means the check silently examined nothing on that row, so it is gated rather than ignored."
+  },
+  "C13_quality_vocabulary.rows_with_a_blank_lab": {
+   "mode": "max",
+   "value": 0,
+   "why": "GATED AT ZERO. `lab` is free text so C13's vocabulary check is blind to it, and a blank lab becomes its own laboratory of one in any group-by -- the mis-grouping policy P5 forbids. add_lab() already refuses to emit a blank; this is the second line of defence. Added 2026-11-11 with the lab column (F-082)."
+  },
+  "C19_protonated_consistency.inconsistent_rows": {
+   "mode": "exact",
+   "value": 104,
+   "why": "NOT REPAIRED, GATED AT THE MEASURED VALUE so it cannot grow unnoticed (F-084, 2026-11-11). These rows' IL_protonated_SMILES is not their own row's lipid: LX_2024 96, SL_2020 6, JW_2024 2. The LX_2024 96 are the serious ones -- the protonated string has 58 heavy atoms to the neutral's 33 and the neutral is a SUBSTRUCTURE of it, so IL_SMILES looks TRUNCATED TO HALF THE MOLECULE, and IL_SMILES is what every descriptor, fingerprint and InChIKey is computed from. Which half is right needs the paper (PMID 38424061), so nothing is changed. The JW_2024 2 are the M80/M95 and M3/M81 duplicate-SMILES pairs CLAUDE.md s3 already flags, and the protonated column may hold the distinct structure the neutral column collapsed -- a route into that open item. The 572 SL_2021 iPhos rows are deliberately NOT counted: an iPhos is zwitterionic, so its protonated form writes the phosphate [O-] and the amine [NH+], and the test is on elemental composition rather than mass precisely so those pass."
+  },
+  "C20_experiment_id_unique.ids_with_more_than_one_pmid": {
+   "mode": "max",
+   "value": 0,
+   "why": "GATED AT ZERO. Experiment_ID is INITIALS_YEAR of the FIRST author and is not unique: two staged papers wanted YZ_2024 and two wanted SL_2025, and nothing checked. A tag reused by a different paper merges two screens into one 'source', which is the key Results 1, 4 and 5 are computed on. One tag may span both pools and both arms of one paper, but every row must agree on Publication_PMID. Collisions resolve by publication date, earlier 'a' and later 'b' (policy P4b). Added 2026-11-11."
   }
  },
  "vivo": {
@@ -316,7 +331,7 @@
   "C7_fields.padded_cells": {
    "mode": "max",
    "value": 0,
-   "why": "ACCEPTED AS ZERO: no cell in the corpus may carry leading or trailing whitespace. 915 IL_name cells did -- 720 BL_2023 vitro, 150 ZH_2023 + 45 BL_2023 vivo -- for the corpus's whole life, and in ZH_2023 the padding tracked the organ exactly, the fingerprint of two source tables concatenated. It was disclosed in CLAUDE.md and worked around with .strip() at two call sites in build_dataset.py, but no check could see it: blank_required_fields strips before testing, so a padded value passes as present. Stripped at the single emit choke point 2026-11-07 (F-022); gated at 0 so it cannot come back with the next upstream merge."
+   "why": "ACCEPTED AS ZERO: no cell in the corpus may carry leading or trailing whitespace. 915 IL_name cells did -- 720 BL_2023 vitro, 150 ZH_2023 + 45 BL_2023 vivo -- for the corpus's whole life, and the padding is contiguous, the fingerprint of two source tables concatenated upstream. (This why previously claimed the padding 'tracked the organ exactly'; that was false -- liver 81/82, spleen 69/93 -- and was corrected 2026-11-11.) It was disclosed in CLAUDE.md and worked around with .strip() at two call sites in build_dataset.py, but no check could see it: blank_required_fields strips before testing, so a padded value passes as present. Stripped at the single emit choke point 2026-11-07 (F-022); gated at 0 so it cannot come back with the next upstream merge."
   },
   "C8_descriptors.rows_disagreeing": {
    "mode": "max",
@@ -382,6 +397,21 @@
    "mode": "max",
    "value": 0,
    "why": "ACCEPTED AS ZERO -- F-021 RESOLVED 2026-11-09. It was 2 (ZH_2023's A4I18-1R2C70) from 2026-10-30, when C14 found on its first run that this lipid's sterol cleaves to C26H44O, a 19-nor sterol missing the C10 angular methyl and carrying no stereochemistry -- a connectivity error, not F-013's epimer. The source paper was not held at the time and the entry was gated at its count so it could not spread, explicitly NOT accepted as correct. The user supplied the paper (He et al., Angew Chem Int Ed 2023, 62, e202310401) and SI Section D, 'Detailed List of Ugi Reactants Used in the Study', draws C70 in full as CHOLESTERYL HEMISUCCINATE with both angular methyls and the C3-O on a bold wedge (3-beta). Rebuilt by esterifying the Ugi acid with the registry's cholesterol; the corrected lipid liberates C27H46O / HVYWMOMLDIMFJA-DPAQBDIFSA-N, matching reagent_registry.json exactly. Gated at 0: every sterol in the corpus must now cleave cleanly."
+  },
+  "C13_quality_vocabulary.rows_with_a_blank_lab": {
+   "mode": "max",
+   "value": 0,
+   "why": "GATED AT ZERO. `lab` is free text so C13's vocabulary check is blind to it, and a blank lab becomes its own laboratory of one in any group-by -- the mis-grouping policy P5 forbids. add_lab() already refuses to emit a blank; this is the second line of defence. Added 2026-11-11 with the lab column (F-082)."
+  },
+  "C19_protonated_consistency.inconsistent_rows": {
+   "mode": "exact",
+   "value": 2,
+   "why": "NOT REPAIRED, GATED AT THE MEASURED VALUE so it cannot grow unnoticed (F-084, 2026-11-11). These rows' IL_protonated_SMILES is not their own row's lipid: ZH_2023 2. The LX_2024 96 are the serious ones -- the protonated string has 58 heavy atoms to the neutral's 33 and the neutral is a SUBSTRUCTURE of it, so IL_SMILES looks TRUNCATED TO HALF THE MOLECULE, and IL_SMILES is what every descriptor, fingerprint and InChIKey is computed from. Which half is right needs the paper (PMID 38424061), so nothing is changed. The JW_2024 2 are the M80/M95 and M3/M81 duplicate-SMILES pairs CLAUDE.md s3 already flags, and the protonated column may hold the distinct structure the neutral column collapsed -- a route into that open item. The 572 SL_2021 iPhos rows are deliberately NOT counted: an iPhos is zwitterionic, so its protonated form writes the phosphate [O-] and the amine [NH+], and the test is on elemental composition rather than mass precisely so those pass."
+  },
+  "C20_experiment_id_unique.ids_with_more_than_one_pmid": {
+   "mode": "max",
+   "value": 0,
+   "why": "GATED AT ZERO. Experiment_ID is INITIALS_YEAR of the FIRST author and is not unique: two staged papers wanted YZ_2024 and two wanted SL_2025, and nothing checked. A tag reused by a different paper merges two screens into one 'source', which is the key Results 1, 4 and 5 are computed on. One tag may span both pools and both arms of one paper, but every row must agree on Publication_PMID. Collisions resolve by publication date, earlier 'a' and later 'b' (policy P4b). Added 2026-11-11."
   }
  }
 }

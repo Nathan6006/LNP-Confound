@@ -16,8 +16,8 @@ Per-paper figure extraction | `../curation/<paper>/` |
 
 | file | rows | cols | contents |
 |---|---|---|---|
-`data/data_vitro.csv` | 29,195 | 79 | 43 experiments, all in vitro |
-`data/data_vivo.csv` | 1,803 | 79 | 20 experiments, all in vivo |
+`data/data_vitro.csv` | 29,195 | 81 | 43 experiments, all in vitro |
+`data/data_vivo.csv` | 1,803 | 81 | 20 experiments, all in vivo |
 `data/Original_LNPDB.csv` | 19,797 | 66 | untouched upstream reference |
 
 > These three numbers, and the experiment counts, are gated by **C15**
@@ -35,8 +35,9 @@ lab additions, with three deletions reversed, plus the curated papers:
 `data_vivo.csv` is the vivo corpus re-canonicalized with descriptors recomputed;
 the ML change log never touched it, and there are no Bowen Li vivo additions.
 
-The 79 columns are the 67 LNPDB curation columns + 5 RDKit descriptors from the
-ML change log + the **7 quality/provenance columns** defined once in
+The 81 columns are the 67 LNPDB curation columns + 5 RDKit descriptors from the
+ML change log + the **9 quality/provenance columns** (7 from 2026-10-30, plus
+`design_axis` and `lab` from 2026-11-11, policies P2 and P4) defined once in
 `schema_quality.json` (added 2026-10-30, F-001). Do not restate that list: it
 exists because a per-curation flag was restated in six places, drifted, and
 then died one stage before the merge.

@@ -1042,9 +1042,12 @@ metric or a piece of provenance.
 
 **F-022 — 915 `IL_name` cells carried a trailing space.** 720 `BL_2023` vitro;
 150 `ZH_2023` + 45 `BL_2023` vivo. `IL_name` was the only affected column in the
-corpus. All trailing, never leading, and in `ZH_2023` the padding tracked the
-organ *exactly* — every liver row padded, every spleen row not — which is the
-fingerprint of two source tables concatenated upstream.
+corpus. All trailing, never leading. **The sentence that used to stand here —
+"in `ZH_2023` the padding tracked the organ *exactly* — every liver row padded,
+every spleen row not" — was false, and is corrected 2026-11-11 (F-080
+validation).** On the same 150 cells: liver 81 padded / 82 not, spleen 69 / 93.
+Padding and organ are each contiguous and share one boundary, so the
+two-tables-concatenated reading survives; the organ correlation does not.
 
 `"A1I5R22C8 "` and `"A1I5R22C8"` are different dict keys carrying the **same**
 `IL_SMILES`, so any join or `groupby` on `IL_name` split one lipid in two. It

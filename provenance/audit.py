@@ -562,6 +562,94 @@ ESTER_RX = AllChem.ReactionFromSmarts(
     "[C:1](=[O:2])[O:3][C:4]>>[C:1](=[O:2])[OH].[OH][C:4]")
 
 
+def c19_protonated_consistency(rows):
+    """C19: `IL_protonated_SMILES` must be THIS ROW's lipid, protonated.
+
+    Added 2026-11-11 (F-084). Nothing had ever compared this column against the
+    `IL_SMILES` in the same row, and 107 rows are wrong in three distinct ways:
+
+      * **96 `LX_2024` rows** where the protonated string has 58 heavy atoms to
+        the neutral's 33 and the neutral is a SUBSTRUCTURE of it -- i.e.
+        `IL_SMILES` is TRUNCATED TO HALF THE MOLECULE, and `IL_SMILES` is what
+        every descriptor, fingerprint and InChIKey in the corpus is built from.
+      * **7 `SL_2020`** rows, one of them the `4A3-SC6` patch leftover that
+        still carried the SC8 octyl tail (+113.13 Da against its own row) --
+        repaired by the F-077 SMARTS patch, which now covers every IL column.
+      * **2 `JW_2024`** (+15.02 Da, one extra carbon; these are the M80/M95 and
+        M3/M81 duplicate-SMILES pairs CLAUDE.md s3 already flags) and
+        **2 `ZH_2023`** (a different skeleton from upstream LNPDB).
+
+    ZWITTERIONS ARE NOT VIOLATIONS, and getting that wrong is how this check
+    could have been worse than nothing. My first version asked only "is the
+    protonated mass the neutral mass + 1.00783?" and flagged **572 correct
+    `SL_2021` iPhos rows**: an iPhos is zwitterionic, so its protonated form
+    writes the phosphate `[O-]` and the amine `[NH+]`, losing a hydrogen from
+    one site while gaining one at another. The mass gap is NEGATIVE and the
+    structure is right. A check that buries 107 real defects under 572 false
+    ones is a check nobody will read.
+
+    So the test is on COMPOSITION, not mass: the protonated form must have the
+    same heavy-atom count and the same elemental formula as the neutral apart
+    from hydrogens, which admits both a true protonation (+1 H, +1 charge) and a
+    charge-separated tautomer (same H count, net charge unchanged).
+    """
+    bad, by_exp = [], Counter()
+    for r in rows:
+        p = (r.get("IL_protonated_SMILES") or "").strip()
+        n = (r.get("IL_SMILES") or "").strip()
+        if not p or not n:
+            continue
+        mp, mn = Chem.MolFromSmiles(p), Chem.MolFromSmiles(n)
+        if mp is None or mn is None:
+            continue
+        if mp.GetNumHeavyAtoms() != mn.GetNumHeavyAtoms():
+            why = "heavy-atom count differs"
+        else:
+            fp = Counter(a.GetSymbol() for a in mp.GetAtoms())
+            fn = Counter(a.GetSymbol() for a in mn.GetAtoms())
+            if fp != fn:
+                why = "elemental composition differs"
+            else:
+                continue
+        bad.append({"experiment": r["Experiment_ID"], "lipid": r.get("IL_name"),
+                    "why": why,
+                    "heavy_neutral": mn.GetNumHeavyAtoms(),
+                    "heavy_protonated": mp.GetNumHeavyAtoms()})
+        by_exp[r["Experiment_ID"]] += 1
+    return {"rows_checked": sum(1 for r in rows
+                                if (r.get("IL_protonated_SMILES") or "").strip()),
+            "inconsistent_rows": len(bad),
+            "by_experiment": dict(by_exp.most_common()),
+            "detail": bad[:20]}
+
+
+def c20_experiment_id_is_unique(rows):
+    """C20: one `Experiment_ID` must mean one publication.
+
+    Policy P4(b), added 2026-11-11. `Experiment_ID` is INITIALS_YEAR of the
+    first author, which is not unique -- two papers already wanted `YZ_2024` and
+    two wanted `SL_2025` in the staged run, and nothing checked. A tag reused by
+    a different paper silently merges two screens into one "source", which is
+    the key Results 1, 4 and 5 are computed on.
+
+    The rule is: an `Experiment_ID` may span both pools and both a vitro and a
+    vivo arm of ONE paper, but every row carrying it must agree on
+    `Publication_PMID`. Collisions resolve by publication date, earlier taking
+    'a' and later 'b' (`YZ_2024a` / `YZ_2024b`); a bare colliding tag is never
+    emitted. The pre-merge gate catches this before a merge;  this catches it in
+    `data/` afterwards, because the two can drift apart.
+    """
+    pmids = defaultdict(set)
+    for r in rows:
+        p = str(r.get("Publication_PMID", "")).strip()
+        if p and p.lower() not in ("nan", "none"):
+            pmids[r["Experiment_ID"]].add(p)
+    clashes = {k: sorted(v) for k, v in pmids.items() if len(v) > 1}
+    return {"experiment_ids": len(pmids),
+            "ids_with_more_than_one_pmid": len(clashes),
+            "detail": clashes}
+
+
 def c14_embedded_sterol(rows):
     """A sterol ESTERIFIED INSIDE the ionizable lipid must still be cholesterol.
 
@@ -719,7 +807,18 @@ def c13_quality_vocabulary(rows):
             "rows_with_a_note": noted,
             "rows_with_only_a_note": note_only,
             "flagged_without_a_note": unexplained,
-            "confidence_without_a_note": conf_unexplained}
+            "confidence_without_a_note": conf_unexplained,
+            # `lab` is free text, so the vocabulary check cannot see it -- and a
+            # BLANK lab is the specific hazard its own schema entry documents:
+            # in any group-by it silently becomes a laboratory of one, which is
+            # the mis-grouping P5 forbids and the same shape as the
+            # `Anderson D` / `Anderson DG` split build_lab_map.py's ALIASES
+            # table exists to close. add_lab() refuses to emit one, so this is
+            # the second line of defence against a hand-edit or a future merge
+            # path, and it is gated at 0.
+            "rows_with_a_blank_lab": sum(
+                1 for r in rows if not str(r.get("lab", "")).strip()),
+            }
 
 
 def check_baseline(findings):
@@ -794,6 +893,8 @@ def main():
             "C12_zscore_unit": c12_zscore_unit(rows),
             "C13_quality_vocabulary": c13_quality_vocabulary(rows),
             "C14_embedded_sterol": c14_embedded_sterol(rows),
+            "C19_protonated_consistency": c19_protonated_consistency(rows),
+            "C20_experiment_id_unique": c20_experiment_id_is_unique(rows),
         }
     json.dump(findings, open(os.path.join(HERE, "audit_findings.json"), "w"), indent=1)
 
@@ -846,6 +947,14 @@ def main():
         print(f"C13 quality    {c13['rows_carrying_a_flag']} rows carry a flag, "
               f"{c13['bad_values']} values outside the schema vocabulary, "
               f"{c13['flagged_without_a_note']} flagged without a note")
+        c19 = f["C19_protonated_consistency"]
+        print(f"C19 protonated {c19['inconsistent_rows']} of {c19['rows_checked']} "
+              f"IL_protonated_SMILES are not their own row's lipid "
+              f"{c19['by_experiment'] or ''}")
+        c20 = f["C20_experiment_id_unique"]
+        print(f"C20 source key {c20['ids_with_more_than_one_pmid']} of "
+              f"{c20['experiment_ids']} Experiment_IDs carry more than one PMID "
+              f"{c20['detail'] or ''}")
         c14 = f["C14_embedded_sterol"]
         print(f"C14 sterol     {c14['rows_with_embedded_sterol']} rows have a sterol "
               f"esterified inside IL_SMILES; WRONG EPIMER "

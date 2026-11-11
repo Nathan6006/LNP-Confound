@@ -106,7 +106,7 @@
    }
   },
   "C4_contradictory_replicates": {
-   "columns_in_key": 55,
+   "columns_in_key": 57,
    "replicate_groups": 341,
    "groups_that_are_true_replicates": 340,
    "exact_duplicate_rows": 1,
@@ -209,7 +209,8 @@
    "rows_with_a_note": 4460,
    "rows_with_only_a_note": 616,
    "flagged_without_a_note": 0,
-   "confidence_without_a_note": 0
+   "confidence_without_a_note": 0,
+   "rows_with_a_blank_lab": 0
   },
   "C14_embedded_sterol": {
    "authority": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
@@ -221,6 +222,162 @@
    "wrong_by_experiment": {},
    "rows_steroid_present_but_no_cleavable_ester": 0,
    "nosite_by_experiment": {}
+  },
+  "C19_protonated_consistency": {
+   "rows_checked": 16253,
+   "inconsistent_rows": 104,
+   "by_experiment": {
+    "LX_2024": 96,
+    "SL_2020": 6,
+    "JW_2024": 2
+   },
+   "detail": [
+    {
+     "experiment": "JW_2024",
+     "lipid": "RM_branched_ester_M80_R14",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 78,
+     "heavy_protonated": 79
+    },
+    {
+     "experiment": "JW_2024",
+     "lipid": "RM_branched_ester_M81_R6",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 95,
+     "heavy_protonated": 96
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T6",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 33,
+     "heavy_protonated": 58
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T6b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 33,
+     "heavy_protonated": 58
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T7",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 35,
+     "heavy_protonated": 62
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T7b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 35,
+     "heavy_protonated": 62
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T7b2",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 35,
+     "heavy_protonated": 62
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T8",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 37,
+     "heavy_protonated": 66
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T8b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 36,
+     "heavy_protonated": 66
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T9",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 39,
+     "heavy_protonated": 70
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T9b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 39,
+     "heavy_protonated": 70
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A2_T9b2",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 39,
+     "heavy_protonated": 70
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A3_T6b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 42,
+     "heavy_protonated": 76
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A3_T7b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 45,
+     "heavy_protonated": 82
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A3_T7b2",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 45,
+     "heavy_protonated": 82
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A3_T8b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 48,
+     "heavy_protonated": 88
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "1_A3_T9b2",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 51,
+     "heavy_protonated": 94
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "2_A2_T6",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 35,
+     "heavy_protonated": 60
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "2_A2_T6b",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 35,
+     "heavy_protonated": 60
+    },
+    {
+     "experiment": "LX_2024",
+     "lipid": "2_A2_T7",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 37,
+     "heavy_protonated": 64
+    }
+   ]
+  },
+  "C20_experiment_id_unique": {
+   "experiment_ids": 43,
+   "ids_with_more_than_one_pmid": 0,
+   "detail": {}
   }
  },
  "vivo": {
@@ -325,7 +482,7 @@
    }
   },
   "C4_contradictory_replicates": {
-   "columns_in_key": 55,
+   "columns_in_key": 57,
    "replicate_groups": 14,
    "groups_that_are_true_replicates": 14,
    "exact_duplicate_rows": 0,
@@ -459,7 +616,8 @@
    "rows_with_a_note": 462,
    "rows_with_only_a_note": 386,
    "flagged_without_a_note": 0,
-   "confidence_without_a_note": 0
+   "confidence_without_a_note": 0,
+   "rows_with_a_blank_lab": 0
   },
   "C14_embedded_sterol": {
    "authority": "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
@@ -472,6 +630,34 @@
    "wrong_by_experiment": {},
    "rows_steroid_present_but_no_cleavable_ester": 0,
    "nosite_by_experiment": {}
+  },
+  "C19_protonated_consistency": {
+   "rows_checked": 1717,
+   "inconsistent_rows": 2,
+   "by_experiment": {
+    "ZH_2023": 2
+   },
+   "detail": [
+    {
+     "experiment": "ZH_2023",
+     "lipid": "A4I18-1R2C70",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 70,
+     "heavy_protonated": 69
+    },
+    {
+     "experiment": "ZH_2023",
+     "lipid": "A4I18-1R2C70",
+     "why": "heavy-atom count differs",
+     "heavy_neutral": 70,
+     "heavy_protonated": 69
+    }
+   ]
+  },
+  "C20_experiment_id_unique": {
+   "experiment_ids": 20,
+   "ids_with_more_than_one_pmid": 0,
+   "detail": {}
   }
  }
 }

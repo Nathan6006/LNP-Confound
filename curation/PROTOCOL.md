@@ -34,7 +34,7 @@ worthless if the answer was visible while extracting.
 5. `05_formulations.csv` — molar ratios, helper/chol/PEG identities, IL:mRNA ratios, and
    the mol→weight arithmetic with the MWs used recorded inline.
 6. `06_merged.csv` — one row per LNP in the **79-column** corpus schema (67 LNPDB
-   curation columns + 5 ML-change-log descriptors + the 7 quality/provenance
+   curation columns + 5 ML-change-log descriptors + the 9 quality/provenance
    columns of `provenance/schema_quality.json`) plus provenance
    columns (stripped on final merge).
 7. `07_qc.json` — every check below, pass/fail per row.

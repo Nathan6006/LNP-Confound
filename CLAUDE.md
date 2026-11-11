@@ -29,8 +29,8 @@ A companion **modeling + wet-lab validation manuscript** (in preparation) is cro
 confound/
 ├── CLAUDE.md                 ← this file
 ├── data/                     ← CANONICAL corpus. Only three files live here.
-│   ├── data_vitro.csv            ★ 29,195 rows x 79 cols, 43 experiments, in vitro
-│   ├── data_vivo.csv             ★  1,803 rows x 79 cols, 20 experiments, in vivo
+│   ├── data_vitro.csv            ★ 29,195 rows x 81 cols, 43 experiments, in vitro
+│   ├── data_vivo.csv             ★  1,803 rows x 81 cols, 20 experiments, in vivo
 │   └── Original_LNPDB.csv        untouched upstream reference (19,797 x 66)
 ├── provenance/               ← how data/ was built, and proof that it is right
 │   ├── README.md                 lineage, precedence rules, every validation
@@ -89,13 +89,14 @@ ambiguities), `LNPCD_web/`, `Papers/`.
 |---|---|---|
 | File | `data/data_vitro.csv` | `data/data_vivo.csv` |
 | Rows | **29,195** | **1,803** |
-| Columns | 79 | 79 (identical header) |
+| Columns | **81** | 81 (identical header) |
 | Experiments | **43** | **20** |
 
-79 columns = the 67 LNPDB curation columns + 5 RDKit descriptors from the ML
+81 columns = the 67 LNPDB curation columns + 5 RDKit descriptors from the ML
 change log (`Num_carbon_in_tail`, `num_protonatable_nitrogens`,
 `num_permanent_cationic_N`, `formal_net_charge`, `num_unsaturated_cc_bonds`)
-+ **7 quality/provenance columns added 2026-10-30**, defined once in
++ **9 quality/provenance columns** (7 added 2026-10-30, plus `design_axis`
+and `lab` on 2026-11-11 for policies P2 and P4), defined once in
 `provenance/schema_quality.json` and read from there by the builder, by every
 curation that emits a flag, and by `audit.py` C13. Do not restate that list in
 code: these columns exist *because* per-curation flags were restated in six
@@ -144,9 +145,15 @@ time with `pd.get_dummies`.
   fingerprints.
 - **~~Several `BL_2023` `IL_name` values carry a trailing space.~~ FIXED
   2026-11-07.** It was 915 cells, not "several" — 720 `BL_2023` vitro, 150
-  `ZH_2023` + 45 `BL_2023` vivo — and in `ZH_2023` the padding tracked the organ
-  exactly (every liver row padded, every spleen row not), which is the
-  fingerprint of two source tables concatenated upstream. Stripped at the one
+  `ZH_2023` + 45 `BL_2023` vivo. **The claim that "in `ZH_2023` the padding
+  tracked the organ exactly (every liver row padded, every spleen row not)" was
+  FALSE and stood here from 2026-11-07 to 2026-11-11.** Measured on the same 150
+  cells F-022 counted: liver **81 padded / 82 not**, spleen **69 / 93**. The
+  padding IS contiguous and the organ IS contiguous, but only one of their
+  boundaries coincides, so two source tables were concatenated upstream — that
+  part holds — while the organ correlation was invented. It is a QUALITATIVE
+  claim, so C15 cannot see it, and it was used as supporting evidence for F-080
+  before being checked. Stripped at the one
   emit choke point in `build_dataset.py`; `IL_name` was the only affected
   column, every change was exactly a strip, and nothing merged: no two distinct
   names collapsed inside an experiment, no name gained a second SMILES, and the

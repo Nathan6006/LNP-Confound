@@ -74,6 +74,25 @@
    "allowed": null,
    "meaning": "One short sentence naming what is uncertain about THIS row and, where there is one, where the fuller account lives. Free text on purpose: a controlled vocabulary cannot carry 'two figures of the paper disagree 7.3x on this lipid' and a flag that cannot say what it means gets ignored. Written for a reader of data_vitro.csv who has not opened the curation folder.",
    "added_for": "F-001"
+  },
+  {
+   "name": "design_axis",
+   "type": "enum",
+   "allowed": [
+    "chemistry",
+    "formulation",
+    "mixed",
+    ""
+   ],
+   "meaning": "WHAT THE SCREEN ACTUALLY VARIED, so an analysis can exclude screens that carry no transferable chemistry without re-curating them. Derived at build time, not curated: 'formulation' where the experiment has exactly ONE distinct IL_SMILES (it measures formulation, dose or excipient effects on a fixed lipid and contributes no cross-source shared chemistry at all); 'mixed' where the ionizable lipid varies AND at least one lipid is measured at more than one formulation, so the two axes co-vary inside the experiment; 'chemistry' where the lipid varies and each lipid appears at one formulation. The within-lipid test is the point: a rule that called any formulation variation 'mixed' labelled YX_2024 -- 1,200 lipids at 2 formulations -- as mixed and would have dropped it from Result 3. Live counts: 49 chemistry (18,975 rows), 8 mixed (9,243), 6 formulation (2,780). Result 3 should use chemistry + mixed and report chemistry alone as a robustness check.",
+   "added_for": "P2 / F-067"
+  },
+  {
+   "name": "lab",
+   "type": "free text",
+   "allowed": null,
+   "meaning": "THE LABORATORY, which Experiment_ID is not. Experiment_ID is a SCREEN key (INITIALS_YEAR of the FIRST author), and the project had been reading it as a laboratory key -- the manuscript title says 'Cross-laboratory prediction'. Derived mechanically by provenance/build_lab_map.py as the LAST AUTHOR of each paper's NCBI esummary record, which is the field's convention for the principal investigator. 54 experiments resolve to 22 distinct laboratories; Anderson DG alone holds 9. This column exists because of F-082: 79.1% of the in-vitro corpus's shared-lipid instances are WITHIN one laboratory, and the pair carrying 57% of Result 3's pooled points (AA_2008 <-> KW_2014) is Anderson <-> Anderson. Limits, which matter because this feeds a claim: last author is not always the corresponding author, co-senior authors collapse to one name, and scientific lineage is invisible (NC_2024 is Whitehead KA, first author of KW_2014 in Anderson's lab -- two labs by this rule, one tradition by any other). Read the same-lab/cross-lab split with that caveat stated.",
+   "added_for": "P4 / F-082"
   }
  ]
 }

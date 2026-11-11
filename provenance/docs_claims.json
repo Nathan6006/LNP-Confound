@@ -13,7 +13,7 @@
   {
    "id": "vitro_cols",
    "where": "CLAUDE.md \u00a72, \u00a73",
-   "expect": 79,
+   "expect": 81,
    "expr": "len(V[0])",
    "file": "CLAUDE.md"
   },
@@ -34,7 +34,7 @@
   {
    "id": "vivo_cols",
    "where": "CLAUDE.md \u00a72, \u00a73",
-   "expect": 79,
+   "expect": 81,
    "expr": "len(W[0])",
    "file": "CLAUDE.md"
   },
@@ -62,14 +62,14 @@
   {
    "id": "quality_columns",
    "where": "CLAUDE.md \u00a73 (79 = 67 + 5 + 7)",
-   "expect": 7,
+   "expect": 9,
    "expr": "len(S)",
    "file": "CLAUDE.md"
   },
   {
    "id": "schema_total",
    "where": "CLAUDE.md \u00a73",
-   "expect": 79,
+   "expect": 81,
    "expr": "67 + 5 + len(S)",
    "file": "CLAUDE.md"
   },
@@ -247,7 +247,7 @@
    "id": "readme_vitro_cols",
    "where": "provenance/README.md, 'The two files'",
    "file": "provenance/README.md",
-   "expect": 79,
+   "expect": 81,
    "expr": "len(V[0])"
   },
   {
@@ -268,7 +268,7 @@
    "id": "readme_vivo_cols",
    "where": "provenance/README.md, 'The two files'",
    "file": "provenance/README.md",
-   "expect": 79,
+   "expect": 81,
    "expr": "len(W[0])"
   },
   {
@@ -282,7 +282,7 @@
    "id": "readme_quality_columns",
    "where": "provenance/README.md, 'The two files'",
    "file": "provenance/README.md",
-   "expect": 7,
+   "expect": 9,
    "expr": "len(S)"
   },
   {
@@ -352,8 +352,71 @@
    "id": "protocol_schema_columns",
    "where": "curation/PROTOCOL.md, stage 06",
    "file": "curation/PROTOCOL.md",
-   "expect": 79,
+   "expect": 81,
    "expr": "len(V[0])"
+  },
+  {
+   "id": "design_axis_formulation_rows",
+   "where": "POLICY_DECISIONS.md P2; schema_quality.json",
+   "expect": 2780,
+   "expr": "sum(1 for r in V+W if r['design_axis']=='formulation')",
+   "file": "provenance/POLICY_DECISIONS.md"
+  },
+  {
+   "id": "design_axis_chemistry_rows",
+   "where": "POLICY_DECISIONS.md P2; schema_quality.json",
+   "expect": 18975,
+   "expr": "sum(1 for r in V+W if r['design_axis']=='chemistry')",
+   "file": "provenance/POLICY_DECISIONS.md"
+  },
+  {
+   "id": "design_axis_mixed_rows",
+   "where": "POLICY_DECISIONS.md P2; schema_quality.json",
+   "expect": 9243,
+   "expr": "sum(1 for r in V+W if r['design_axis']=='mixed')",
+   "file": "provenance/POLICY_DECISIONS.md"
+  },
+  {
+   "id": "distinct_labs_vitro",
+   "where": "FINDINGS F-082; schema_quality.json 'lab'",
+   "expect": 15,
+   "expr": "len({r['lab'] for r in V})",
+   "file": "provenance/review/FINDINGS_2026-11-09.md"
+  },
+  {
+   "id": "distinct_labs_vivo",
+   "where": "FINDINGS F-082",
+   "expect": 11,
+   "expr": "len({r['lab'] for r in W})",
+   "file": "provenance/review/FINDINGS_2026-11-09.md"
+  },
+  {
+   "id": "anderson_vitro_experiment_ids",
+   "where": "FINDINGS F-082 (the 9-experiment Anderson group)",
+   "expect": 8,
+   "expr": "len({r['Experiment_ID'] for r in V if r['lab']=='Anderson DG'})",
+   "file": "provenance/review/FINDINGS_2026-11-09.md"
+  },
+  {
+   "id": "rows_declaring_per_organ_z",
+   "where": "FINDINGS F-080; CLAUDE.md \u00a73",
+   "expect": 401,
+   "expr": "sum(1 for r in V+W if r['value_normalization_unit']=='experiment_x_model_target')",
+   "file": "provenance/review/FINDINGS_2026-11-09.md"
+  },
+  {
+   "id": "kz2016_sc3_is_propyl",
+   "where": "FINDINGS F-077; build_dataset.py SMARTS_PATCHES",
+   "expect": 42,
+   "expr": "sum(1 for r in V if r['Experiment_ID']=='KZ_2016' and r['IL_name'].endswith('-SC3') and r['IL_tail1_SMILES']=='CCCS')",
+   "file": "provenance/review/FINDINGS_2026-11-09.md"
+  },
+  {
+   "id": "excluded_endpoint_rows",
+   "where": "POLICY_DECISIONS.md P6; data/excluded_endpoints.csv",
+   "expect": 761,
+   "expr": "__import__('csv').reader(open('data/excluded_endpoints.csv')) and sum(1 for _ in open('data/excluded_endpoints.csv'))-1",
+   "file": "provenance/POLICY_DECISIONS.md"
   }
  ]
 }
