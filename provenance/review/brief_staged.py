@@ -174,8 +174,18 @@ def packet(folder, qrow, ck):
         A("  | InChIKey | rows here | in corpus as |")
         A("  |---|---|---|")
         for k in list(already)[:8]:
-            where = sorted({f"{e}:{nm}" for e, nm in ck[k]})[:3]
-            A(f"  | `{k}` | {ks[k]} | {', '.join(where)} |")
+            # TRUNCATE LOUDLY OR NOT AT ALL. The first version printed
+            # `[:3]` with no ellipsis, so a packet naming 3 of the **11**
+            # experiments that hold DLin-MC3-DMA read as a complete list --
+            # and alphabetical order dropped exactly `YZ_2022` and `YZ_2024`,
+            # the two that mattered, because they are the already-merged arm
+            # of the very library under review. A silent truncation is a
+            # false statement about the corpus (reviewer finding E-1).
+            w = sorted({f"{e}:{nm}" for e, nm in ck[k]})
+            shown = ", ".join(w[:3])
+            if len(w) > 3:
+                shown += f"  **… and {len(w) - 3} more of {len(w)} total**"
+            A(f"  | `{k}` | {ks[k]} | {shown} |")
     A(f"- **NEW to the corpus: {len(ks) - len(already)}**")
 
     # values
@@ -211,8 +221,10 @@ def packet(folder, qrow, ck):
         if c in cols:
             cc = collections.Counter((r.get(c) or "").strip() for r in rows)
             nonblank = sum(v for k, v in cc.items() if k)
+            more = len(cc) - 5
             A(f"- `{c}`: {nonblank}/{len(rows)} populated — "
-              f"{dict(cc.most_common(5))}")
+              f"{dict(cc.most_common(5))}"
+              + (f"  **… {more} further distinct values not shown**" if more > 0 else ""))
         else:
             A(f"- `{c}`: **COLUMN ABSENT**")
 

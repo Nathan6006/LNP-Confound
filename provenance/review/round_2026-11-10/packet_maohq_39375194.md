@@ -8,11 +8,12 @@ Generated from live files. Queue says **5112** emitted rows; status `extracted`;
 
 ## Structures
 - distinct full InChIKeys: **1**
-- unparseable `IL_SMILES`: **0**
+- structure column: **`IL_SMILES`**
+- unparseable structures: **0**
 - already in the corpus: **1** of 1
   | InChIKey | rows here | in corpus as |
   |---|---|---|
-  | `NRLNQCOGCKAESA-KWXKLSQISA-N` | 5112 | AC_2025:DLin-MC3-DMA, BL_2023:DLin-MC3-DMA, NG_2025_2:DLin-MC3-DMA |
+  | `NRLNQCOGCKAESA-KWXKLSQISA-N` | 5112 | AC_2025:DLin-MC3-DMA, BL_2023:DLin-MC3-DMA, NG_2025_2:DLin-MC3-DMA  **… and 8 more of 11 total** |
 - **NEW to the corpus: 0**
 
 ## Values

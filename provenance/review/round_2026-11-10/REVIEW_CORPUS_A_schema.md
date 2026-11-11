@@ -28,6 +28,21 @@ one of them today.** Every schema finding below is therefore "corrupts or
 crashes the merge when the decisions are resolved", not "already in `data/`" —
 except the C12 finding, which is live.
 
+**Added after the coordinator's mid-task correction, verified from the files:**
+the brief's claim that four folders are structureless was **false on two of
+four** (`linyx_41851281` has 138/140 structures under `smiles`, 101 new to the
+corpus; `palczewski_41654520` 59/64 under `canonical_SMILES`, 30 new), and my
+first draft of §1.1–§1.2 **reproduced the brief's rule, got the same four
+folders, and reported the agreement as confirmation**. §1.2 is corrected and
+the class is **N-16 / error class 51**: a discovery rule standing in for a
+declaration, which has now failed three times in the same place (filename →
+literal column name → tuple of column names). The durable fix is **C31**, a
+per-folder `00_schema.json` the producer writes and the consumer resolves
+exactly or refuses. One more measurement fell out: `brief_staged.py`'s tiebreak
+for `mitchellmj_38982196` is **non-deterministic** — six runs split 3/3 — and
+the committed packet briefed its reviewer on an enumeration intermediate
+(**N-17**).
+
 ---
 
 ## 1. CONFIRMED (your three numbered claims, measured)
@@ -62,14 +77,43 @@ columns on its enumeration output. And **9 of the 26 matched files have no bare
 The rule that actually discriminates is **`IL_SMILES` AND `Experiment_ID` AND
 `Model` AND a bare `Experiment_value`** — which only **16 of 26** files satisfy.
 
-### 1.2 Four folders with values and no `IL_SMILES` — CONFIRMED EXACTLY, and
-### there is a second form of the same shape in two more folders
+### 1.2 Four folders with values and no `IL_SMILES` — **REFUTED on 2 of 4,
+### re-measured independently.** The 255 figure was the generator's defect.
 
-`linyx_41851281` 140 + `palczewski_41654520` 64 + `sd_2026` 18 +
-`xuq_32520527` 33 = **255 rows**, exactly as you had it. No fifth folder is
-missing the column.
+The coordinator's mid-task correction is **correct, and I verified it from the
+files rather than taking it** (parser control asserted first: the registry DSPC
+SMILES keys to `NRJAVPSFFCBXDT-HUESYALOSA-N`, so a `None` below means
+unparseable, not a broken parser):
 
-**The shape I was asked to look for does exist in another form:** the column is
+| folder | structure column | rows | parseable | blank | distinct | already in corpus | **NEW** |
+|---|---|---|---|---|---|---|---|
+| `linyx_41851281` | **`smiles`** | 140 | **138** | 2 | 119 | 18 | **101** |
+| `palczewski_41654520` | **`canonical_SMILES`** | 64 | **59** | 5 | 30 | 0 | **30** |
+| `xuq_32520527` | none in `05_values.csv` | 33 | — | — | — | — | — |
+| `sd_2026` | none anywhere | 18 | 0 | — | 0 | — | 0 |
+
+For `xuq_32520527` I tested the join rather than assuming it: `05_values.csv`
+has **11 distinct `lipidoid`** values and `03_enumerated.csv` carries
+`IL_SMILES` keyed on both `lipidoid` and `IL_name`, each covering **11/11**
+(`head_name` covers 0/11 and is the wrong key). So all **33 rows are
+recoverable by a bijective join**, and the recovery is checkable.
+
+**So the honest figures are:** rows with no ionizable-lipid structure anywhere
+= **18** (`sd_2026` only), not 255. Rows recoverable only by a declared join =
+**33**. Rows whose structure column is present but blank on the row = **7**
+(`linyx` 2, `palczewski` 5) plus the 70 below. And **131 structures new to the
+corpus (101 + 30) would have been written off** by the claim as stated.
+
+My own §1.1 and §1.2 as first drafted inherited this: I ran the discovery rule
+I was given, got the same four folders, and **reported the agreement as
+confirmation.** That is the error the round-1 ledger names five times — a
+conclusion drawn from a secondary artifact rather than the primary one — and
+here the secondary artifact was *the reviewer's own brief*, which is class 50's
+shape (ground truth taken from the project's own narrative) one level worse
+than class 50 because it was being used to scope a review rather than score
+one. **Corrected above; see N-16 for the class.**
+
+**A second form of the shape does exist**, and this part stands: the column is
 present and **blank on the row**.
 
 - `levkinpa_29558113/06_rows.csv` — **40 of 45 rows** have a blank `IL_SMILES`.
@@ -80,9 +124,12 @@ present and **blank on the row**.
   `mRNA` ×4. Correctly structureless.
 
 Neither is a defect. The finding is that **a column-presence test reports both
-folders as "has structures"**, so the 255 you found and these 70 would be
-counted differently by the same scan. Total staged rows with no ionizable-lipid
-structure: **325 of 7,296 (4.5%)**.
+folders as "has structures" and a column-name test reports `linyx` and
+`palczewski` as having none** — the two tests fail in opposite directions on
+the same question. Corrected total staged rows with no recoverable
+ionizable-lipid structure: **18 + 7 blanks = 25 of 7,296 (0.34%)**, with 70
+more legitimately structureless (40 undefined head groups, 30 controls) and 33
+recoverable by join.
 
 And the mirror-image shape, which nothing names: **892 of 7,296 staged rows
 (12.2%) carry no `Experiment_value`** — 818 in files without the column, plus
@@ -706,8 +753,178 @@ on the inversion (read the schema, the lambda and the note); **medium** on
 whether a reviewer who read the paper would agree the thiol-epoxide
 regiochemistry is "a specific feature" rather than library-wide uncertainty.
 
+### N-16 (SEVERE, and it is the class behind §1.2) — the structure column has
+### no agreed name either, and a discovery rule keyed on a convention nobody
+### enforces fails the same way a filename-keyed one did
+
+I agree with the coordinator's framing and the sibling's phrasing: *a discovery
+rule derived from a convention nobody enforces is not a check, it is the
+convention's second victim.* Measured, because the claim deserves the same
+treatment as the data.
+
+**Across the 29 staged folders' CSV headers: 30 distinct SMILES-like column
+names.** Three of them are used as a folder's **primary emitted structure
+column**:
+
+| primary structure column | folders |
+|---|---|
+| `IL_SMILES` | 26 |
+| `smiles` | 1 (`linyx_41851281`) |
+| `canonical_SMILES` | 1 (`palczewski_41654520`) |
+| none in the values file | 2 (`xuq_32520527` — join-recoverable; `sd_2026` — genuinely none) |
+
+Widening to **all** of `curation/`, the coordinator's 8-name list checks out —
+all four names I could not find in the staged set exist as real CSV headers in
+folders outside it, which is why my 30-name tally missed them:
+
+```
+il_smiles       curation/dahlmanje_30216729/03_enumerated.csv, dahlmanje_30394729/03_enumerated.csv
+emitted_SMILES  curation/mitchellmj_41603124/03_enumerated.csv
+product_SMILES  curation/dahlmanje_29489381/03_enumerated.csv
+parent_SMILES   curation/pabst_37602460/{03_enumerated,05_values,07_emit_preview}.csv
+```
+
+`pabst_37602460/05_values.csv` matters: that is a **values** file whose
+structure column is `parent_SMILES`, so the discovery rule fails there too, not
+only on enumeration intermediates. The other four are `03_enumerated.csv` only.
+
+The remaining 22 names are legitimate auxiliary columns (`IL_head_SMILES`,
+`alcohol_SMILES`, `arm_ester_SMILES`, `SMILES_with_attachment_map`,
+`free_amine_SMILES`, `block_SMILES`, `adduct_fragment_SMILES`,
+`tail_acrylate_SMILES`, …). They are not a defect, but they are the reason a
+sniffer cannot be made safe by adding candidates: `whiteheadka_38888972` alone
+carries **19** SMILES-like column names in one folder, so any tuple of
+candidate names large enough to catch `canonical_SMILES` is also large enough
+to catch `candidate_SMILES` — which sits beside it in `palczewski_41654520` and
+is, by its own name, *not* the chosen structure.
+
+**Error class 51** (see the numbering note below), stated generally:
+
+> **A discovery rule standing in for a declaration.** Three successive scans
+> for "the file a curation emits" keyed on a filename (found 14 of 27,
+> under-reported new lipids by 14×), then on a literal column name (reported 4
+> folders as structureless; 2 were false and 131 new structures would have been
+> written off), then on a tuple of column names (still a guess, and it must
+> admit `candidate_SMILES` to admit `canonical_SMILES`). Each replacement
+> failed in the same place, because the thing being discovered is a
+> **convention**, and no scan can distinguish a convention that was followed
+> from one that was not. The fix is never a better sniffer: the producer must
+> **declare** what it produced, and the consumer must resolve the declaration
+> exactly or refuse.
+
+Severity: **the discovery rule scopes every review and every merge.** Its
+first failure mis-stated a lipid count by 14×; its second would have discarded
+131 structures; both printed a clean, affirmative result. Confidence: **very
+high** (measured in both directions).
+
+### N-17 (SEVERE) — `packet_mitchellmj_38982196.md` describes an enumeration
+### intermediate, chosen by a NON-DETERMINISTIC tiebreak
+
+Two files in that folder satisfy the discovery rule, and — the part worth
+measuring — **both have exactly 100 rows**, which is also the folder's
+`rows_emitted`. `brief_staged.py:105`:
+
+```python
+exact = [c for c in cands if c[1] == want]
+pick  = exact[0] if exact else max(cands, key=lambda t: t[1])
+```
+
+So `exact` has **two** entries and the pick is `exact[0]` — the first element
+of a list built by iterating a `set()` union of two globs over path strings.
+Python randomises `str` hashing per process, so this is not "a silent guess one
+rename away" (the coordinator's reading, which assumed the `max` branch); it is
+**non-deterministic between runs of the same unchanged repository**. Six
+separate `python3 -I` processes:
+
+```
+run 1  05_values.csv      run 4  03_enumerated.csv
+run 2  05_values.csv      run 5  05_values.csv
+run 3  03_enumerated.csv  run 6  03_enumerated.csv
+```
+
+3 and 3. And the **committed** packet landed on the wrong one:
+
+```
+packet_mitchellmj_38982196.md:5
+## Rows read from `curation/mitchellmj_38982196/03_enumerated.csv` — 100 rows
+```
+
+`03_enumerated.csv` is a 17-column structures file with **no `Experiment_ID`,
+no `Model`, no `IL_name` and no bare `Experiment_value`**. Its Wave-1 reviewer
+was briefed on an intermediate as "the rows", by coin flip, and a regeneration
+of the packets would silently disagree with the committed one.
+
+This is error class 30's mechanism (*"resolved by file order"*) in a new place,
+and it is why I flagged in §1.1 that the discovery rule matches that file at
+all. Note the folder is also the one that put the seven quality columns on its
+enumeration output, which is what makes the file match.
+
+Severity: **a reviewer is briefed on the wrong file; packet output is not
+reproducible.** Confidence: **very high** (read the source, ran it six times,
+read the committed packet).
+
+### N-18 (SEVERE for the manuscript, and it is the cost of §1.2's false claim) —
+### `linyx_41851281` carries 15 NOVEL CROSS-LAB shared lipids, the thing Result 3
+### is short of, and the brief's claim would have discarded them
+
+Having recovered `linyx_41851281`'s structure column, I re-ran the corpus
+overlap that §5 had reported clean. `linyx_41851281` has **18 of its 119
+distinct structures already in the corpus**:
+
+```
+AA_2008  9 | KW_2014 10 | NC_2024  2 | AC_2025  3 | XD_2026  3 | SB_2024 2 | WT_2026 2
+SP_2020 1 | SS_2018 1 | YZ_2022 1 | YZ_2024 1 | ZC_2023 1 | ZH_2023 1 | BL_2023 1
+LZ_2025 1 | SY_2025 1 | NG_2025_2 1
+```
+
+**3 are the universal benchmarks** (`DLin-MC3-DMA`, `ALC-0315`, `SM-102`),
+which is the §8 hazard and carries no information. **The other 15 are novel
+lipidoids shared with `AA_2008`, `KW_2014` and `NC_2024` under completely
+different names:**
+
+| `linyx` name | `AA_2008` | `KW_2014` | `NC_2024` |
+|---|---|---|---|
+| `H2-OT7(2)` | `80_O10` | `A80_C10` | |
+| `H3-OT5(3)` | `109_O14` | `A109_C14` | |
+| `H3-OT7(3)` | `109_O10` | `A109_C10` | |
+| `H3-OT3(3)` | `109_O18` | | |
+| `H3-NT3(3)` | `109_N18` | | |
+| `H4-OT5(4)` | | `A113_C14` | |
+| `H4-OT6(4)` | | `A113_C12` | |
+| `H4-OT7(4)` | | `A113_C10` | |
+| `H9-OT5(4)` | | `A306_C14` | `A306_O14` |
+
+This matters more than anything else I found on the positive side:
+
+- `AA_2008`↔`KW_2014` is the **current largest shared-structure pair in the
+  corpus (135)** and, per the frozen Stage 5, **57% of Result 3's pooled
+  points**. A third, independent source landing on that same catalogue is a
+  genuine **cross-laboratory** addition — the opposite sign from N-3, which
+  would add a 360-structure *same-lab* pair.
+- These lipids are **joinable only on structure**. Three labs give one molecule
+  three names (`80_O10` / `A80_C10` / `H2-OT7(2)`), which is F-063 and the
+  brief's §5 token-pattern warning in live form: a bare `80` substring join
+  returns 94 rows across 85 structures, and `H2-OT7(2)` shares no token with
+  either corpus name. **Only the InChIKey finds these 15.**
+- My §5 statement that "no cross-folder duplicate structure is a novel
+  non-benchmark lipid shared between two different labs" was **false**, and it
+  was false *because* I accepted the brief's premise and excluded this folder.
+  The brief's error was not merely conservative: it would have written off the
+  single most Result-3-relevant folder in the run.
+
+`palczewski_41654520`'s 30 structures are **0** already in the corpus, so it
+adds no overlap either way.
+
+Severity: **changes Result 3's available cross-lab evidence, favourably.**
+Confidence: **very high** on the 18/15 split and the name mappings (full
+InChIKey, parser control asserted). What I did **not** do: check whether the
+`linyx` values are on a comparable scale — the folder has **no bare
+`Experiment_value` column**, so this is a structure overlap, not yet a
+concordance pair.
+
 ### N-13 (MINOR) — `corpus_admissible` is mandated by the brief and exists
-### under 8 names, 5 value vocabularies, and not at all in 15 folders
+### under 8 names, 5 value vocabularies, and not at all in 15 of 29 staged
+### folders (27 of 46 repo-wide)
 
 Brief §3: *"Put `corpus_admissible` yes/no **with a reason on every row** of
 `05_values.csv`, counts summing."* Measured in every folder's `05_values.csv`:
@@ -728,6 +945,16 @@ Brief §3: *"Put `corpus_admissible` yes/no **with a reason on every row** of
 Reason columns come under three names: `admissible_reason`,
 `admissibility_reason`, `reason_if_not_emitted`. Value vocabularies: `yes/no`,
 `True/False`, `1/0`, `yes`/`no (benchmark)`, free text.
+
+**Repo-wide count, since the coordinator raised it:** `curation/` holds **46**
+`05_values.csv` files, of which **27 lack `corpus_admissible`** — not 28. The
+27 are the 14 staged ones above plus `dahlmanje_29489381`, `kooh_42690843`,
+`liu_41162324`, `pabst_37602460`, `siegwartdj_42150080`, `songx_39664425`, and
+`levkinpa_29558113`/`siegwart_40644303`/`whiteheadka_30637934`/
+`whiteheadka_38888972`/`xuq_32438474`/`xuq_32520527`/`xuq_32662132` whose
+judgement lives under one of the other seven column names. For those folders
+the delivery-only judgement exists **only in prose**, exactly as the
+coordinator says.
 
 Where it exists, the quality is genuinely high — `dixonjb_41269090`,
 `maohq_39375194`, `mitchellmj_41555650` and `zhangz_40433897` write reasons
@@ -935,6 +1162,115 @@ saying plainly that it is **unearned today**: one note currently satisfies up
 to four flags, which is the shape F-025 had (a note that blamed the wrong
 component while the real reason sat in `03_enumerated.csv`).
 
+### C31 — a per-folder `00_schema.json` DECLARATION, and a gate that resolves
+### it exactly or refuses
+**This is the one that matters most, and it replaces C20's sniffing half.**
+I agree with the coordinator: the durable fix is a declaration, not a better
+sniffer, for the reason N-16 states — no scan can tell a followed convention
+from an unfollowed one.
+
+**Where:** `curation/<folder>/00_schema.json`, written by
+`provenance/new_curation.py`'s scaffold so a folder cannot exist without one,
+and resolved by `provenance/check_staged.py` (C20) and by
+`build_dataset.py::merge_curations` before it reads a single row.
+
+**Shape** (every field required; no defaults, no inference):
+
+```json
+{
+  "emitted_file": "05_values.csv",        // exactly one, or null
+  "structure_column": "canonical_SMILES", // the ONE chosen structure
+  "value_column": "Experiment_value",
+  "experiment_id_column": "Experiment_ID",
+  "model_column": "Model",
+  "rows_emitted": 59,
+  "experiment_ids": ["XX_2025"],
+  "structure_join": null,                 // or {"from","key","to","to_key","to_column"}
+  "zero_because": null                    // required iff emitted_file is null
+}
+```
+
+**Asserts, in this order, raising on the first failure and naming the folder:**
+
+1. `00_schema.json` exists and every field is present. A missing field is not a
+   blank.
+2. `emitted_file` resolves to exactly one existing file. Not a glob, not a
+   list, not a tiebreak — **this is what kills N-17**, because a declaration
+   cannot tie with itself.
+3. `structure_column`, `value_column`, `experiment_id_column` and
+   `model_column` all exist in that file's header, and **the header contains no
+   duplicate token** (N-15).
+4. `rows_emitted` equals the file's row count **and** the folder's
+   `run_queue.json` entry (N-14), and equals `count(corpus_admissible == "yes")`
+   once C25 lands.
+5. `structure_column` is non-blank and RDKit-parseable on every row, **or** the
+   row is covered by `structure_join`, which must be **bijective and total** on
+   the declared key — the `xuq_32520527` case, where 11/11 `lipidoid` values
+   resolve and `head_name` resolves 0/11, so the join is checkable rather than
+   asserted.
+6. `experiment_ids` equals the distinct set in the file, and feeds C22's
+   cross-folder uniqueness check. **This is what makes C22 possible at all**:
+   N-6's `SL_2025` collision is only visible once both folders declare.
+7. `emitted_file: null` requires a non-empty `zero_because`, so **a declared
+   zero is distinguishable from a discovery failure.** That distinction is the
+   whole point: today the two are the same output, which is how `linyx` and
+   `palczewski` were reported as structureless.
+
+**What it would have caught:** N-16 and §1.2 in full (`smiles`,
+`canonical_SMILES`, the `xuq_32520527` join, `sd_2026`'s honest zero — four
+different answers that the current rule flattens into one wrong one); N-17 (no
+tiebreak exists); §1.1 (6 filenames, 9 files with no bare `Experiment_value`,
+`mitchellmj_38982196`'s two matches); N-2's silent half; N-14; N-15; and it is
+the precondition for C22 and C25.
+
+**Error class 51.** I checked the number rather than taking it: the coordinator
+said `ERROR_CLASSES.md` "runs to 48", and it **runs to 50** — class 49 is the
+per-folder re-implemented hazard (`curation/lib/`) and class 50 is ground truth
+transcribed from the project's own narrative. I enumerated every table row
+number (1–50, with 18 and 19 each appearing three times in the pre-renumbering
+rows) and grepped every `.md` in `provenance/`, `provenance/review/` and
+`curation/*/` for `class N` citations: the highest cited anywhere is **50**.
+So **51 is the next free number and is unused.** Taking 49 as instructed would
+have collided with a class added on 2026-11-09 — which is precisely the failure
+the file's own numbering note documents and tells the next author to prevent by
+taking `max + 1` *and confirming it is unused*.
+
+**The four ways it must be made to fail on purpose** before anyone trusts it
+(per §6: a new check is not done until it has been made to fail, and my first
+two attempts at an analogous guard would have reported clean while seeing
+nothing). Each in **its own child process**, verdict read from `returncode`,
+never from stdout or a pipeline:
+
+1. **Wrong name, right data.** In a *copy*, rename `canonical_SMILES` to
+   `candidate_SMILES` in `palczewski_41654520` without touching
+   `00_schema.json`. Must fail at assertion 3. This is the seed for N-16: the
+   declaration and the file disagree.
+2. **Right name, wrong file.** Point `emitted_file` at
+   `mitchellmj_38982196/03_enumerated.csv` — which satisfies the old discovery
+   rule and has the declared row count. Must fail at assertion 3 on the absent
+   `Experiment_ID`/`Model`/`Experiment_value`. This is the seed for N-17, and
+   it is the one that proves the gate reads the *header* and not just the row
+   count: **a seed that only changes `rows_emitted` would pass assertion 4 and
+   stop there**, which is the "seed exits non-zero while moving nothing" shape.
+3. **A silent zero.** Set `emitted_file: null` and leave `zero_because` empty
+   on `sd_2026`. Must fail at assertion 7. Then set a real `zero_because` and
+   confirm it **passes** — because the check that cannot accept an honest zero
+   will be disabled by whoever hits it first.
+4. **A plausible but non-total join.** On `xuq_32520527`, change
+   `structure_join.to_key` from `lipidoid` to `head_name`. Coverage goes 11/11
+   → **0/11** and it must fail at assertion 5. The companion seed is the subtle
+   one: drop a single row from `03_enumerated.csv` so coverage is 10/11 — a
+   gate that only tests "the join returned something" passes that, and the
+   agreement count must **move** for the seed to be credited.
+
+Plus the mandatory clean control: all 29 folders with correct declarations must
+come back **exit 0**, and the suite must write only to a temp `OUTDIR` —
+`00_schema.json` is a tracked file in the folder being mutated, so F-069's
+hazard (a seeded copy writing its output into the real curation folder, with a
+non-zero exit concealing the write) applies directly. Assert every
+`00_schema.json` is byte-identical across two clean runs **after** the seed
+suite.
+
 ---
 
 ## 4. UNVERIFIABLE
@@ -983,7 +1319,10 @@ component while the real reason sat in `03_enumerated.csv`).
 | N-10 | `_N` as an escape hatch; 2 splits with no declared distinction | changes S and LOSO | **high** (medium for `sd_2026`) |
 | N-11 | `18PG` 972 staged rows vs registry + 1,474 corpus rows | changes excipients | **very high** conflict, nil adjudication |
 | N-12 | `lij_42130331` `structure_assumed = 0` on 300 rows its note contradicts | changes a flag | **high** |
-| N-13 | `corpus_admissible` under 8 names, absent in 15 folders | no ledger | **very high** |
+| N-16 | 30 structure-column names; a discovery rule in place of a declaration (**class 51**) | scopes every review and merge | **very high** |
+| N-18 | `linyx_41851281` carries 15 novel **cross-lab** shared lipids (AA_2008/KW_2014/NC_2024) | changes Result 3's evidence, favourably | **very high** |
+| N-17 | packet pick non-deterministic; committed packet names an intermediate | reviewer briefed on wrong file | **very high** |
+| N-13 | `corpus_admissible` under 8 names, absent in 15 of 29 (27 of 46) | no ledger | **very high** |
 | N-14 | three values for `rows_staged` | cosmetic now | **very high** |
 | N-15 | duplicated header token in `dahlmanje_41183194` | silent data loss path | **very high** |
 
@@ -1012,10 +1351,14 @@ for them:
   `306O12`, plus `306Oi10` = 4 lipids), a genuine **same-lab cross-paper**
   shared set, under two naming conventions (`A306_O10` vs `306O10`) — F-063's
   one-structure-many-names, benign but worth the alias table C27 needs.
-  **No cross-folder duplicate structure is a novel non-benchmark lipid shared
-  between two different labs**, so this run adds **zero new cross-laboratory
-  shared chemistry** to Result 3 except through benchmarks and through N-3's
-  same-lab pair. That is §8's hazard in its purest form, measured.
+  ~~No cross-folder duplicate structure is a novel non-benchmark lipid shared
+  between two different labs.~~ **STRUCK — this was wrong, and wrong because the
+  scan excluded `linyx_41851281` on the brief's false premise. See N-18: that
+  folder carries 15 novel cross-LAB shared lipids with `AA_2008`/`KW_2014`/
+  `NC_2024`.** The corrected statement is that the *26 files my scan covered*
+  add no new cross-lab chemistry, and the two files it wrongly excluded add 15.
+  This tally must be re-run over all 29 folders with the corrected structure
+  columns before anyone quotes it.
 
 **Errors of mine, recorded per §6:**
 
@@ -1027,6 +1370,35 @@ for them:
    positive control caught it. Recording it because that is the F-070 shape
    exactly, and a count of 1 looked like a parse quirk rather than the wrong
    file.
+3. **The worst one.** §1.1 and §1.2 as first written ran the discovery rule the
+   brief handed me, reproduced its four folders exactly, and wrote that up as
+   **"CONFIRMED EXACTLY"** — including "no fifth folder is missing the column",
+   which is true and irrelevant, because two of the four were not missing a
+   structure at all. I did notice and report that the rule was *degenerate*
+   (it reduces to "has `IL_SMILES`", §1.1), and then failed to draw the
+   obvious consequence: a rule keyed on the literal name `IL_SMILES` cannot see
+   a folder that chose a different name. I had the premise and did not take the
+   step. ~200 verified rows and 131 corpus-new structures were inside that gap.
+   Corrected only because the coordinator sent the correction; I would not have
+   found it from the direction I was working.
+
+**Claims of the coordinator's that I checked and that did NOT survive**, per
+§6's "treat findings as claims", in both directions:
+
+- *"`ERROR_CLASSES.md` runs to 48"* — it runs to **50**. Taking the instructed
+  49 would have collided with a class added 2026-11-09. I took **51** after
+  enumerating all table-row numbers and grepping every citation.
+- *"28 of 46 `05_values.csv` files lack `corpus_admissible`"* — it is **27**.
+- *"my generator breaks the tie by `max(n_rows)`, a silent guess one rename
+  away"* — the `max` branch is never reached for `mitchellmj_38982196`, because
+  `rows_emitted` equals **both** candidates' row counts, so `exact` has two
+  entries and `exact[0]` resolves by `set` iteration order. It is worse than a
+  guess: it is **not reproducible between runs** (N-17).
+- *"8 structure-column names"* — correct repo-wide, and I initially could not
+  find four of them because my tally was scoped to the 29 staged folders. All
+  four are real headers in non-staged folders, one of them
+  (`pabst_37602460/05_values.csv`, `parent_SMILES`) in a **values** file rather
+  than an enumeration intermediate. Both scopes are now reported.
 
 ---
 
@@ -1050,11 +1422,35 @@ for them:
 - **`reference_structures.csv` / C10 posture.** Out of scope by instruction (I
   did not run `structure_check.py`, `check_anchor_independence.py` or
   `check_anchor_coverage.py`, and did not inspect the anchors).
-- **The four no-`IL_SMILES` folders' own content** — another agent owns
+- **The four "no-`IL_SMILES`" folders' own content** — another agent owns
   `linyx_41851281`, `palczewski_41654520`, `xuq_32520527`, `sd_2026`. I
-  confirmed the set is exactly those four and found the second form of the
-  shape (70 blank-cell rows in two more folders); I did not look at their
-  values.
+  re-measured their *structures* (§1.2) because the brief's claim about them was
+  the thing under test, and found the second form of the shape (70 blank-cell
+  rows in two more folders). I did **not** look at their values, their
+  normalisation or their flags — and note that because those four were excluded
+  from my emitted-file set on the brief's premise, **they are absent from every
+  other tally in this report**: the vocabulary tally (N-9), the quality-column
+  audit, the z-partition test (N-1's staged half), the chemistry census (N-5)
+  and the cross-folder InChIKey overlap (§5) all exclude up to 255 rows and, now
+  that `linyx`'s 119 and `palczewski`'s 30 structures are known, **149 distinct
+  ionizable lipids**. Those five checks should be re-run over all 29 folders
+  with the corrected structure columns. `linyx_41851281` in particular shows
+  **18 structures already in the corpus**, which my cross-folder overlap section
+  could not see and which may add to N-3's shared-lipid accounting.
+- **§5's "0 staged folders with an undeclared per-part z"** — I can now close
+  this rather than leave it open: **neither `linyx_41851281` nor
+  `palczewski_41654520` has a bare `Experiment_value` column**, so there is no
+  z to partition and nothing was missed. The clean result stands, and the
+  reason it stands is that those folders have no z at all — which puts them in
+  §1.2's 892-valueless-rows bucket instead.
+- **I did re-run the corpus-overlap tally** over the two recovered folders
+  rather than deferring it, because it bore on a clean result I had already
+  stated. That produced **N-18**, which is the most consequential thing in this
+  report on the positive side. The vocabulary tally (N-9), the quality-column
+  audit and the chemistry census (N-5) are still scoped to 26 of 28 files and
+  should be re-run; I judged them lower-yield than the overlap because neither
+  folder can contribute an `Experiment_method`/`Model_target` value to a merge
+  without a value column first.
 - **Whether the staged folders' new `Model_type` values collide with each other
   semantically** (`4T1-Luc` vs a plain `4T1`; `MC38-Luc` vs the corpus's
   `MC38`). The corpus has `MC38`; `zhangz_40433897` adds `MC38-Luc`. That is
