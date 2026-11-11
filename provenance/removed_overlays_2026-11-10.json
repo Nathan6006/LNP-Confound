@@ -1,0 +1,161 @@
+{
+ "removed_on": "2026-11-10",
+ "reason": "These are DERIVATIVES OF PUBLISHER FIGURES -- an overlay or crop of a copyrighted figure is protected expression, unlike the numeric values read off it, which are facts (POLICY_DECISIONS.md P1). They were committed to a PUBLIC repository and are removed from the working tree AND from every commit in git history by a rewrite on 2026-11-10.",
+ "kept_locally": "The files remain on local disk, untracked and matched by the existing slashless *.png rule in .gitignore, so the audit trail for F-017, F-018, F-019 and the three curations' geometry checks is still inspectable by anyone with the repo checkout and the source PDFs. Nothing about the FINDINGS is lost: each is reproducible by re-running that curation's own render step against the source PDF.",
+ "history_rewrite": {
+  "backup_bundle": "/Users/nathanliu/LNP/confound_PREREWRITE_20261110.bundle",
+  "pre_rewrite_head": "eb93baea315cd8c2f563560d76a9753b0527cfb3",
+  "blob_instances_purged": 22,
+  "distinct_paths": 21,
+  "bytes_in_history": 8380652
+ },
+ "files": [
+  {
+   "path": "curation/lin_aromatic_2026/review/fig2a_overlay.png",
+   "bytes": 245713,
+   "sha256": "471819e4395168dcf524ace752905174923c2c7a8d4a30b246a4c3f11c4cbd7c",
+   "pixels": "2913x546",
+   "derived_from": "LL_2026 digitisation overlay (Lin aromatic lipids, JACS 2026, PMID 41689530)"
+  },
+  {
+   "path": "curation/lin_aromatic_2026/review/fig2e_overlay.png",
+   "bytes": 1033151,
+   "sha256": "3253bae7ba80e0d926c3c57739bd583e7597e1a6d79e72ef4484c7d64d6eaae7",
+   "pixels": "1602x3869",
+   "derived_from": "LL_2026 digitisation overlay (Lin aromatic lipids, JACS 2026, PMID 41689530)"
+  },
+  {
+   "path": "curation/lin_aromatic_2026/review/fig2fgh_overlay.png",
+   "bytes": 188304,
+   "sha256": "70c6dc66689dc2a3188d36ca69eae81faaf3e6fa150779597b1b8df1cc9c1221",
+   "pixels": "2350x1500",
+   "derived_from": "LL_2026 digitisation overlay (Lin aromatic lipids, JACS 2026, PMID 41689530)"
+  },
+  {
+   "path": "curation/ql_2026/review/fig2b_overlay.png",
+   "bytes": 296956,
+   "sha256": "544e781a9f194da3f831ceca4078e797693c369684f273372eabb8beb7c8131e",
+   "pixels": "3071x1061",
+   "derived_from": "QL_2026 digitisation overlay (Liu thiosuccinimide, Adv Healthc Mater 2026, PMID 41145968)"
+  },
+  {
+   "path": "curation/ql_2026/review/fig2c_overlay.png",
+   "bytes": 265321,
+   "sha256": "85390dac0bdba509a3905abaa9c2b8ef41d8af1224a9ab413ae6c024e01df031",
+   "pixels": "3508x1020",
+   "derived_from": "QL_2026 digitisation overlay (Liu thiosuccinimide, Adv Healthc Mater 2026, PMID 41145968)"
+  },
+  {
+   "path": "curation/ql_2026/review/fig2def_overlay.png",
+   "bytes": 186935,
+   "sha256": "a214af7963e711328bf685b8ee9eb1e330cd3eac517b7dde4f29b074afd66144",
+   "pixels": "3700x994",
+   "derived_from": "QL_2026 digitisation overlay (Liu thiosuccinimide, Adv Healthc Mater 2026, PMID 41145968)"
+  },
+  {
+   "path": "curation/ql_2026/review/fig3c_overlay.png",
+   "bytes": 172413,
+   "sha256": "358854ee83a3755d998fe71f9c02916de44a273c388e723cb1c8b781f536c32a",
+   "pixels": "2060x699",
+   "derived_from": "QL_2026 digitisation overlay (Liu thiosuccinimide, Adv Healthc Mater 2026, PMID 41145968)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/fig1b_chain_counts.png",
+   "bytes": 571894,
+   "sha256": "1d7cda3270179ac48169a5084cf9b52914bbf025e40053709338542f441cdcfd",
+   "pixels": "3900x700",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/fig1d_glyphs_exponent.png",
+   "bytes": 23685,
+   "sha256": "dd8bdea0fecdeee9062d8b380a945bf54a4c46d528607aa32ddbc52186f0085b",
+   "pixels": "626x146",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/fig1d_glyphs_mantissa.png",
+   "bytes": 53163,
+   "sha256": "47b2e3557b7e071aab477eb287b007b2da87c56dba59e47b9b6307056746e614",
+   "pixels": "626x486",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/fig1d_overlay.png",
+   "bytes": 690225,
+   "sha256": "09e24f9d456135abee0f9fd2b7df2f33f90d9a3f933498c6046ff0951dedbb4f",
+   "pixels": "2910x618",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/fig2c_overlay.png",
+   "bytes": 2060496,
+   "sha256": "886f9b91b502e9145d68de3f6df96eb4f8ec23ed607b3a31ed919ffcf1197844",
+   "pixels": "2300x2920",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/fig2dg_overlay.png",
+   "bytes": 427331,
+   "sha256": "5c8a5353bcb88c5bd74e4884296a9ef2a44a289c7e23d7eaded1ab2436d67fe3",
+   "pixels": "1560x1560",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "curation/siegwart_42634137/review/figS11_overlay.png",
+   "bytes": 446661,
+   "sha256": "3dccb4fa7197e5f3383f8d3524c3f90ea3c969ffb58353df00095e256f5e10b4",
+   "pixels": "1200x1200",
+   "derived_from": "ZT_2026 digitisation overlay / glyph crop (Tian, Adv Mater 2026, PMID 42634137)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlay_XD_2026_fig5c.png",
+   "bytes": 218063,
+   "sha256": "186d03e4705bf45bdf463d30509fc65cb8cfd1949ddef61ef83348085e491474",
+   "pixels": "1960x1480",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlays/F017_fig2c_yaxis_ticks.png",
+   "bytes": 193894,
+   "sha256": "2c19150d67409e3fd58b44abf568dfd5f9dbd187e2b6f68a9db9657ad6d32534",
+   "pixels": "2080x1020",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlays/F017_fig3c_yaxis_ticks.png",
+   "bytes": 212383,
+   "sha256": "f16a4cbb1c043ed041821dd0b24b628f650a8abd5273e8869f985930266c4693",
+   "pixels": "2160x710",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlays/F018_fig2c_bartops.png",
+   "bytes": 257027,
+   "sha256": "3e0e941328e7055cdd4739dd5bb4c47cd4efb2f3a3320aab50be640a8a31aa47",
+   "pixels": "3400x860",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlays/F018_fig3c_bartops.png",
+   "bytes": 168801,
+   "sha256": "f388a6f2fde0ace4d339508626ae877e8b83855cdb8d06b4cfe3f4dc8e6deff0",
+   "pixels": "2000x690",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlays/F019_colorbar_calibration.png",
+   "bytes": 149456,
+   "sha256": "b324900ed5068b1f22122f9353a33d1f295f10c16c159c6b0d0abfcd127482d5",
+   "pixels": "1308x1000",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  },
+  {
+   "path": "provenance/review/round_2026-10-30/overlays/F019_fig2b_floored_cells.png",
+   "bytes": 262972,
+   "sha256": "fe4fb29f6daaac024c7b5b593da9b9cedb97d0f2db381078aeccdf870b80a16f",
+   "pixels": "3040x1030",
+   "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
+  }
+ ]
+}
