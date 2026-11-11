@@ -2,6 +2,46 @@
  "what": "C18 anchor coverage and independence posture",
  "folders": [
   {
+   "folder": "andersondg_41203968",
+   "anchors": 1,
+   "real_anchors": 1,
+   "copies": 0,
+   "no_drawn": 0,
+   "structures": 0,
+   "structures_per_real_anchor": 0.0,
+   "has_generator": true
+  },
+  {
+   "folder": "kooh_42690843",
+   "anchors": 2,
+   "real_anchors": 0,
+   "copies": 0,
+   "no_drawn": 0,
+   "structures": 0,
+   "structures_per_real_anchor": null,
+   "has_generator": true
+  },
+  {
+   "folder": "levkinpa_29558113",
+   "anchors": 3,
+   "real_anchors": 0,
+   "copies": 0,
+   "no_drawn": 2,
+   "structures": 0,
+   "structures_per_real_anchor": null,
+   "has_generator": true
+  },
+  {
+   "folder": "lij_42130331",
+   "anchors": 2,
+   "real_anchors": 2,
+   "copies": 0,
+   "no_drawn": 0,
+   "structures": 0,
+   "structures_per_real_anchor": 0.0,
+   "has_generator": true
+  },
+  {
    "folder": "lin_aromatic_2026",
    "anchors": 1,
    "real_anchors": 1,
@@ -9,6 +49,16 @@
    "no_drawn": 0,
    "structures": 987,
    "structures_per_real_anchor": 987.0,
+   "has_generator": true
+  },
+  {
+   "folder": "liu_41162324",
+   "anchors": 2,
+   "real_anchors": 2,
+   "copies": 0,
+   "no_drawn": 0,
+   "structures": 0,
+   "structures_per_real_anchor": 0.0,
    "has_generator": true
   },
   {
@@ -32,6 +82,16 @@
    "has_generator": false
   },
   {
+   "folder": "siegwart_40644303",
+   "anchors": 2,
+   "real_anchors": 1,
+   "copies": 0,
+   "no_drawn": 1,
+   "structures": 0,
+   "structures_per_real_anchor": 0.0,
+   "has_generator": true
+  },
+  {
    "folder": "siegwart_42634137",
    "anchors": 1,
    "real_anchors": 1,
@@ -39,6 +99,16 @@
    "no_drawn": 0,
    "structures": 51,
    "structures_per_real_anchor": 51.0,
+   "has_generator": true
+  },
+  {
+   "folder": "whiteheadka_38888972",
+   "anchors": 1,
+   "real_anchors": 1,
+   "copies": 0,
+   "no_drawn": 0,
+   "structures": 0,
+   "structures_per_real_anchor": 0.0,
    "has_generator": true
   },
   {

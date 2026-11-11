@@ -61,6 +61,7 @@ import math
 import io
 import os
 import statistics as st
+import sys
 from collections import Counter, defaultdict
 
 from rdkit import Chem, RDLogger
@@ -192,6 +193,14 @@ EXTRA = ["Num_carbon_in_tail", "num_protonatable_nitrogens",
 # The names and the allowed values live in schema_quality.json and are read, not
 # restated: the whole reason these columns exist is that per-curation flags were
 # restated in six places, drifted, and then died one stage before the merge.
+sys.path.insert(0, HERE)                 # so `import premerge_gate` resolves
+import premerge_gate                      # the row-level merge gate
+
+# Experiment_ID -> (folder, path) of whoever claimed it first, so a tag reused
+# by a DIFFERENT paper is caught at merge time (policy P4b). Two files in one
+# folder sharing a tag is normal -- a screen can span both pools.
+_SEEN_EIDS = {}
+
 QUALITY_SCHEMA = json.load(open(os.path.join(HERE, "schema_quality.json")))
 QUALITY = [c["name"] for c in QUALITY_SCHEMA["columns"]]
 SMILES_COLS = ["IL_SMILES", "IL_protonated_SMILES", "IL_head_SMILES",
@@ -781,6 +790,19 @@ def merge_curations(vitro, vivo, cols):
                   "to decide what the source meant. AC_2025's first repair was "
                   "confident, internally consistent, and would have put 419 "
                   "measured values on the wrong molecules.")
+        # THE PRE-MERGE GATE (provenance/premerge_gate.py). open_decisions()
+        # above gates the FOLDER's unresolved questions; nothing gated the
+        # ROWS, and the routing line below sent any row with a blank `Model`
+        # to the in-vivo pool. `lij_42130331` has 300 such rows, which would
+        # have become 16.6% of data_vivo.csv in silence.
+        violations = premerge_gate.check(path, known_experiments=_SEEN_EIDS,
+                                         in_merge=True)
+        if violations:
+            raise SystemExit(
+                f"REFUSING TO MERGE {os.path.relpath(path)}: it fails the "
+                f"pre-merge gate on {len(violations)} count(s):\n  "
+                + "\n  ".join(violations)
+                + "\n\nFix the emitted file, not this gate.")
         added = Counter()
         for r in csv.DictReader(open(path)):
             row = {c: r.get(c, "") for c in cols}
@@ -791,7 +813,23 @@ def merge_curations(vitro, vivo, cols):
             row["Index"] = nxt
             row["LNP_ID"] = f"LNP_{nxt:07d}"
             nxt += 1
-            (vitro if r["Model"] == "in_vitro" else vivo).append(row)
+            # NO ELSE-BRANCH FALLTHROUGH. This line used to read
+            #     (vitro if r["Model"] == "in_vitro" else vivo).append(row)
+            # so a blank, misspelled or absent Model did not fail -- it
+            # silently became an in-vivo row. The gate above now catches that
+            # before we get here, and this raise is the second line of defence
+            # so the two cannot drift apart.
+            m = r.get("Model")
+            if m not in ("in_vitro", "in_vivo"):
+                raise SystemExit(
+                    f"{os.path.relpath(path)}: Model={m!r} is neither "
+                    f"'in_vitro' nor 'in_vivo'. A row that does not say which "
+                    f"pool it belongs in has not been curated.")
+            (vitro if m == "in_vitro" else vivo).append(row)
+            _SEEN_EIDS.setdefault(
+                r["Experiment_ID"],
+                (os.path.basename(os.path.dirname(os.path.abspath(path))),
+                 os.path.relpath(path)))
             added[f'{r["Experiment_ID"]}/{r["Model"]}'] += 1
         out[os.path.basename(path)] = dict(added)
     return out
