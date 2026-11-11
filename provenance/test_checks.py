@@ -105,6 +105,24 @@ MUT = {
  # cannot land makes a working check look broken.
  "C14 epicholesterol (F-013)": ("vivo", _epimerise,
                                 lambda r: r["Experiment_ID"] == "ZT_2026"),
+ # C12 HAD NO MUTATION AT ALL until 2026-11-10 -- 29 mutations and not one for
+ # the check that exists to catch error class 22, in direct violation of §6's
+ # "a new check is not done until it has been made to fail on purpose". It had
+ # therefore never been made to fail, and when it silently stopped examining a
+ # whole pool (F-080: 0 of 20 in-vivo experiments, because it partitioned on
+ # Model_type and none has more than one) nothing noticed for the corpus's
+ # whole life. A single-row mutation suffices: the declaration test requires
+ # ONE token across the whole experiment, so changing one row's token splits
+ # the set and the experiment stops counting as declared.
+ "C12 ZH_2023 token reverted":  ("vivo", lambda r: r.update(
+     value_normalization_unit="experiment"),
+     lambda r: r["Experiment_ID"] == "ZH_2023"),
+ "C12 ZH_2023 wrong block key": ("vivo", lambda r: r.update(
+     value_normalization_unit="experiment_x_model_type"),
+     lambda r: r["Experiment_ID"] == "ZH_2023"),
+ "C12 YX_2024 token reverted":  ("vitro", lambda r: r.update(
+     value_normalization_unit="experiment"),
+     lambda r: r["Experiment_ID"] == "YX_2024"),
  "C9 stereo stripped":         ("vitro", lambda r: r.update(
      IL_SMILES="CCCCC/C=C\\C/C=C\\CCCCCCCCC(CCCCCCCC/C=C\\C/C=C\\CCCCC)OC(=O)CCCN(C)C"
                .replace("/", "").replace("\\", ""))),

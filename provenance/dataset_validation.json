@@ -344,7 +344,7 @@
   }
  },
  "SMILES_corrections_carried_from_processed": 700,
- "descriptor_rows_corrected_vs_curation_file": 677,
+ "descriptor_rows_corrected_vs_curation_file": 719,
  "vivo_experiments": {
   "AP_2025": 91,
   "BL_2023": 53,
@@ -402,22 +402,26 @@
  },
  "structure_patches": {
   "lipids_patched": {
-   "KZ_2016": 42,
-   "SL_2020": 1
+   "KZ_2016": 84,
+   "SL_2020": 2
   },
-  "n_rows_patched": 43,
+  "n_rows_patched": 86,
   "examples": [
    {
     "experiment": "KZ_2016",
     "lipid": "6A3-SC3",
+    "column": "IL_SMILES",
+    "how": "smarts x6",
     "before": "CC(C)CCSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCN(CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C",
-    "after": "CC(CSCC(C)(C)C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCN(CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C"
+    "after": "CCCSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC)CCN(CCN(CCC(=O)OCCOC(=O)C(C)CSCCC)CCC(=O)OCCOC(=O)C(C)CSCCC)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC)CCC(=O)OCCOC(=O)C(C)CSCCC"
    },
    {
     "experiment": "KZ_2016",
-    "lipid": "2H4-SC3",
-    "before": "CCCCCCCCCCCCCCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C",
-    "after": "CCCCCCCCCCCCCCN(CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C)CCC(=O)OCCOC(=O)C(C)CSCC(C)(C)C"
+    "lipid": "6A3-SC3",
+    "column": "IL_protonated_SMILES",
+    "how": "smarts x6",
+    "before": "CC(C)CCSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CC[NH+](CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC(C)C)CCC(=O)OCCOC(=O)C(C)CSCCC(C)C",
+    "after": "CCCSCC(C)C(=O)OCCOC(=O)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC)CC[NH+](CCN(CCC(=O)OCCOC(=O)C(C)CSCCC)CCC(=O)OCCOC(=O)C(C)CSCCC)CCN(CCC(=O)OCCOC(=O)C(C)CSCCC)CCC(=O)OCCOC(=O)C(C)CSCCC"
    }
   ],
   "duplicate_SMILES_remaining_by_experiment": {
@@ -756,10 +760,14 @@
    "experiments_not_zscores": [],
    "within_model_populated": 29195,
    "declared_units": {
+    "BL_2023": "experiment_x_model_target",
     "LZ_2025": "experiment_x_model_type",
     "YX_2024": "experiment_x_model_type"
    },
-   "bad_values": []
+   "bad_values": [],
+   "within_model_blanked": {
+    "BL_2023": 0
+   }
   },
   "vivo": {
    "experiments_on_zscore_scale": 18,
@@ -767,9 +775,21 @@
     "SB_2024",
     "SY_2025"
    ],
-   "within_model_populated": 1743,
-   "declared_units": {},
-   "bad_values": []
+   "within_model_populated": 1342,
+   "declared_units": {
+    "BL_2023": "experiment_x_model_target",
+    "NG_2025_2": "experiment_x_model_target",
+    "ZH_2023": "experiment_x_model_target"
+   },
+   "bad_values": [],
+   "within_model_blanked": {
+    "BL_2023": 53,
+    "NG_2025_2": 23,
+    "ZH_2023": 325
+   },
+   "units_overridden": {
+    "NG_2025_2: experiment_x_model_type -> experiment_x_model_target": 23
+   }
   }
  }
 }

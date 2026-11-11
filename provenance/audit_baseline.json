@@ -53,8 +53,8 @@
   },
   "C4_contradictory_replicates.groups_that_are_true_replicates": {
    "mode": "exact",
-   "value": 0,
-   "why": "no experiment should contain identical structure AND formulation AND model with different values; none does"
+   "value": 340,
+   "why": "CHANGED 2026-11-10, F-085: this was accepted as 0 and the 0 was a BLIND CHECK, not a clean corpus. C4's key excluded only Index/LNP_ID/Formulation_ID/Experiment_value, leaving `Experiment_value_within_model` -- a column computed FROM Experiment_value and distinct on 61% of vitro rows -- so any two rows with different values differed in the key and no replicate group could form. The real figures with derived columns out of the key are 340 vitro (AC_2025 266, JW_2024 58, KW_2014 7, WT_2026 7, SP_2020 2). Found only because blanking that column on 401 rows (F-080) made the vivo count appear and turned this gate red; the departure was the check starting to work. NOT YET ADJUDICATED: these are rows identical in every DESCRIPTIVE column carrying different values, e.g. BL_2023 A4-T7 has five rows spanning -1.150 to +2.944. They are most likely genuine replicate measurements the corpus stores unmarked, and they bear on T2's split-half assay-noise ceiling (0.400), which is computed from a DIFFERENT replicate definition in scripts/stage05_concordance.py. Gated at the measured value so the next move is visible; adjudicate before the pipeline is re-run."
   },
   "C4_contradictory_replicates.exact_duplicate_rows": {
    "mode": "exact",
@@ -240,8 +240,8 @@
   },
   "C4_contradictory_replicates.groups_that_are_true_replicates": {
    "mode": "exact",
-   "value": 0,
-   "why": "as vitro"
+   "value": 14,
+   "why": "CHANGED 2026-11-10, F-085: this was accepted as 0 and the 0 was a BLIND CHECK, not a clean corpus. C4's key excluded only Index/LNP_ID/Formulation_ID/Experiment_value, leaving `Experiment_value_within_model` -- a column computed FROM Experiment_value and distinct on 61% of vitro rows -- so any two rows with different values differed in the key and no replicate group could form. The real figures with derived columns out of the key are 14 vivo (BL_2023 8, JW_2024 2, KZ_2016 2, ZH_2023 2). Found only because blanking that column on 401 rows (F-080) made the vivo count appear and turned this gate red; the departure was the check starting to work. NOT YET ADJUDICATED: these are rows identical in every DESCRIPTIVE column carrying different values, e.g. BL_2023 A4-T7 has five rows spanning -1.150 to +2.944. They are most likely genuine replicate measurements the corpus stores unmarked, and they bear on T2's split-half assay-noise ceiling (0.400), which is computed from a DIFFERENT replicate definition in scripts/stage05_concordance.py. Gated at the measured value so the next move is visible; adjudicate before the pipeline is re-run."
   },
   "C4_contradictory_replicates.exact_duplicate_rows": {
    "mode": "exact",
@@ -336,7 +336,7 @@
   "C12_zscore_unit.undeclared_violations": {
    "mode": "max",
    "value": 0,
-   "why": "as vitro; no vivo experiment has more than one Model_type"
+   "why": "error class 22, keyed on EVERY candidate partition column since 2026-11-10. The previous why read 'as vitro; no vivo experiment has more than one Model_type' -- which recorded the check's BLIND SPOT as the reason for accepting zero, the F-027 pattern. C12 partitioned on Model_type alone and so examined 0 of 20 in-vivo experiments while reporting clean, missing ZH_2023 (325 rows) and BL_2023 (53) standardised per ORGAN and declaring 'experiment' (F-080). It now examines 4 of 18 on-z vivo experiments, flags all three per-block ones, and all three declare correctly. Tolerance 1e-6/5e-6, measured: at the old 1e-3/5e-3 a permutation test fired on 12/1500 reps for YX_2024 and 3/1500 for ZH_2023; at 1e-6 it is 0/1500 with every true positive still caught."
   },
   "C13_quality_vocabulary.bad_values": {
    "mode": "max",
@@ -360,13 +360,13 @@
   },
   "C13_quality_vocabulary.rows_with_a_note": {
    "mode": "exact",
-   "value": 84,
-   "why": "ACCEPTED: 45 ZT_2026 + 9 XD_2026 caveated rows, plus the ALC-0315 override note added 2026-11-07 (F-030). Changed 2026-11-09 by F-042: +6 ZT_2026 vivo rows that previously carried no note now disclose the derived dose (0.1 mg/kg x an 18-20 g mouse = 1.8-2.0 ug; 2.0 is stored). The other 45 already had a structure note and the dose sentence is appended to it. Changed 2026-11-09 by the NG_2025 merge: +310 vitro / +23 vivo. Every crude lipid in that screen carries confidence (medium, or low on the 28 b3/b4 rows whose amine the paper draws two mutually exclusive ways) plus positional_ambiguity, because the paper evaporated solvent to obtain 310 CRUDE compounds and screened those directly, characterising only C-a16. The single DLin-MC3-DMA benchmark row is high and carries no caveat, which is why the vivo caveat count rises by 22 and not 23."
+   "value": 462,
+   "why": "ACCEPTED: 45 ZT_2026 + 9 XD_2026 caveated rows, plus the ALC-0315 override note added 2026-11-07 (F-030). Changed 2026-11-09 by F-042: +6 ZT_2026 vivo rows that previously carried no note now disclose the derived dose (0.1 mg/kg x an 18-20 g mouse = 1.8-2.0 ug; 2.0 is stored). The other 45 already had a structure note and the dose sentence is appended to it. Changed 2026-11-09 by the NG_2025 merge: +310 vitro / +23 vivo. Every crude lipid in that screen carries confidence (medium, or low on the 28 b3/b4 rows whose amine the paper draws two mutually exclusive ways) plus positional_ambiguity, because the paper evaporated solvent to obtain 310 CRUDE compounds and screened those directly, characterising only C-a16. The single DLin-MC3-DMA benchmark row is high and carries no caveat, which is why the vivo caveat count rises by 22 and not 23. CHANGED 2026-11-10, F-080: +378 rows. ZH_2023 (325) and BL_2023 (53) now carry a curation_note stating that their between-organ offset was deleted upstream and is not recoverable, which is what value_normalization_unit = experiment_x_model_target obliges the row to explain. NG_2025_2's 23 rows already had such a note; its token was corrected from the false experiment_x_model_type."
   },
   "C13_quality_vocabulary.rows_with_only_a_note": {
    "mode": "exact",
-   "value": 7,
-   "why": "ACCEPTED: XD_2026's ALC-0315. Its emitted structure deliberately disagrees with the figure it came from (the paper draws the head one carbon short), so it carries a note and confidence = high -- correctly, because the emitted structure is the published compound and is MORE trustworthy than the drawing. structure_assumed is deliberately not set: nothing was assumed, it was overridden from an external source (F-030). Changed 2026-11-09 by F-042: +6 ZT_2026 vivo rows that previously carried no note now disclose the derived dose (0.1 mg/kg x an 18-20 g mouse = 1.8-2.0 ug; 2.0 is stored). The other 45 already had a structure note and the dose sentence is appended to it."
+   "value": 386,
+   "why": "ACCEPTED: XD_2026's ALC-0315. Its emitted structure deliberately disagrees with the figure it came from (the paper draws the head one carbon short), so it carries a note and confidence = high -- correctly, because the emitted structure is the published compound and is MORE trustworthy than the drawing. structure_assumed is deliberately not set: nothing was assumed, it was overridden from an external source (F-030). Changed 2026-11-09 by F-042: +6 ZT_2026 vivo rows that previously carried no note now disclose the derived dose (0.1 mg/kg x an 18-20 g mouse = 1.8-2.0 ug; 2.0 is stored). The other 45 already had a structure note and the dose sentence is appended to it. CHANGED 2026-11-10, F-080: +378 rows. ZH_2023 (325) and BL_2023 (53) now carry a curation_note stating that their between-organ offset was deleted upstream and is not recoverable, which is what value_normalization_unit = experiment_x_model_target obliges the row to explain. NG_2025_2's 23 rows already had such a note; its token was corrected from the false experiment_x_model_type."
   },
   "C14_embedded_sterol.rows_wrong_epimer": {
    "mode": "max",

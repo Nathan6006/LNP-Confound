@@ -181,7 +181,103 @@ ZSCORE_UNIT_DECLARED = {
     "LZ_2025": ("experiment_x_model_type",
                 "A549 and HepG2 were z-scored separately upstream; as YX_2024, "
                 "the offset is not recoverable from the data we hold. See F-016."),
+
+    # ---- F-080, added 2026-11-10. ----------------------------------------
+    # The three entries below are standardized per BLOCK on a key that is NOT
+    # Model_type, which is why C12 could not see them: it partitioned on
+    # Model_type, and NO in-vivo experiment has more than one. C12 therefore
+    # examined 0 of 20 in-vivo experiments while reporting clean.
+    #
+    # Per-block standardization is not an inference here. Three independent
+    # lines, the third new:
+    #   1. Each block sits at mean 0 / population sd 1 to the 9-dp ROUNDING
+    #      FLOOR -- ZH_2023 liver |mean| 4.3e-11 against a predicted floor of
+    #      2.3e-11, spleen 3.7e-11 against 2.3e-11, BL_2023 muscle (n=4) 2.8e-17
+    #      with its four stored values summing to exactly 0 at 9 dp.
+    #   2. The alternative -- that the raw blocks happened to share a mean AND
+    #      an sd -- has a probability. Over the 160 lipids ZH_2023 measures in
+    #      both organs the per-lipid liver-spleen difference has sd 1.1966, so
+    #      the sample mean difference has SE 0.0946 even if the true offset were
+    #      zero; P(|mean| < 8e-11) is about 7e-10, and the sd agreement is a
+    #      second, independent coincidence of about 5e-10.
+    #   3. ZH_2023's values are DISCRETE, and each organ lies on its own
+    #      arithmetic lattice -- liver on 0.005823944 (127 unique values, every
+    #      gap an exact integer multiple, max residual 1.6e-7), spleen on
+    #      0.007970627 -- while the union of the two lies on no common lattice
+    #      (residual 0.490). Three continuous controls return "no lattice", so
+    #      the test is not manufacturing structure. Two different affine maps
+    #      were applied. The ratio 1.3686 is what a single global z would have
+    #      left between the two stored sds instead of 1.0000000000.
+    #
+    # NOT RESCALED, deliberately. Our values are byte-identical to
+    # Original_LNPDB.csv (max |sorted(ours) - sorted(upstream)| = 0.000e+00) and
+    # README.md's list of the eleven experiments we rescaled contains neither.
+    # The per-block z is UPSTREAM, both papers are closed-access, and no raw
+    # signal exists in the repository. Same posture as YX_2024/LZ_2025 above.
+    #
+    # NOT SPLIT into separate Experiment_IDs either, and that is the sharpest
+    # reason to keep them whole: 160 of ZH_2023's lipids and all 4 of BL_2023's
+    # muscle lipids appear in both of their own blocks, so splitting would
+    # manufacture 164 FAKE cross-source shared lipids inside single papers and
+    # feed them into Result 3 -- a pool that has only 2 real ones. It would also
+    # contradict policy P4(c).
+    "ZH_2023": ("experiment_x_model_target",
+                "Liver and spleen were z-scored SEPARATELY upstream, so the "
+                "between-organ offset is identically zero by construction and "
+                "is not recoverable: this arrives already standardized in "
+                "Original_LNPDB.csv with no raw luminescence in the repository. "
+                "Model_target is the ONLY column that reproduces the partition "
+                "(route, dose, cargo, method and mixing are all single-valued "
+                "here). 160 lipids are measured in both organs, so cross-organ "
+                "RANKING is usable (Spearman 0.241) but absolute potency "
+                "between organs is not. See F-080.",
+                "Model_target"),
+    "BL_2023": ("experiment_x_model_target",
+                "The two in-vivo arms were z-scored SEPARATELY upstream and the "
+                "offset between them is not recoverable. The block is THE "
+                "FIGURE ARM, not the organ as such: five columns reproduce the "
+                "same partition exactly -- Model_target, "
+                "Route_of_administration, Dose_ug_nucleicacid, Dialysis_buffer "
+                "and Mixing_method (lung_epithelium/intratracheal/5ug/PBS/"
+                "microfluidics against muscle/intramuscular/10ug/blank/"
+                "handmixed) -- so the token names one of five co-varying keys "
+                "and asserts no more than that. This experiment's 720 in-vitro "
+                "rows are a THIRD separately standardized block. See F-080.",
+                "Model_target"),
+    "NG_2025_2": ("experiment_x_model_target",
+                  "Liver (intravenous, Fig. 1m) and muscle (intramuscular "
+                  "injection site, Fig. 1p) were z-scored separately by this "
+                  "curation. The token was 'experiment_x_model_type' until "
+                  "2026-11-10, which was FALSE on these rows: Model_type is "
+                  "the single value Mouse_B6 and the block key is Model_target. "
+                  "The curation_note had said so all along while the enum said "
+                  "otherwise. See F-080.",
+                  "Model_target"),
 }
+
+# The block key for each declared exception, where it is not Model_type. Used to
+# BLANK Experiment_value_within_model rather than compute a meaningless one: that
+# column re-standardizes inside (experiment x Model_type), and on these rows
+# Model_type is constant, so it collapses to the identity -- byte-identical to
+# Experiment_value on all 325 ZH_2023 rows. That satisfies the letter of its
+# definition while defeating its stated purpose ("use this where a between-assay
+# offset would be a nuisance"), because here the assay block is the organ and
+# that offset is already gone. Re-standardizing the union of two already-
+# flattened blocks is error class 41, and a blank is the honest value: the
+# schema's own rule is that blank means "not stated", not "clean".
+ZSCORE_BLOCK_KEY = {eid: t[2] for eid, t in ZSCORE_UNIT_DECLARED.items()
+                    if len(t) > 2}
+
+# A DECLARATION MUST NOT LEAK ACROSS POOLS. BL_2023 spans both files: its 53
+# in-vivo rows are standardized per organ, and its 720 in-vitro rows are a
+# THIRD, separately standardized block whose key is the pool, not the organ.
+# Keying the declaration on Experiment_ID alone put `experiment_x_model_target`
+# on all 773 -- a false statement about the 720 in-vitro rows, introduced by
+# this very repair and caught by reading its own output. Those rows keep
+# `experiment`, which already means experiment-x-pool for the nine experiments
+# that span both files (see schema_quality.json).
+ZSCORE_UNIT_POOL = {"ZH_2023": "in_vivo", "BL_2023": "in_vivo",
+                    "NG_2025_2": "in_vivo"}
 
 RESTORE = {"ZC_2023", "XH_2024"}
 V_WINS = {"YX_2024"} | RESTORE          # experiments taken wholly from V
@@ -227,13 +323,55 @@ DISULFIDE = Chem.MolFromSmarts("[#16X2][#16X2]")
 # 1354.99. The patched structure hits 1354.99 exactly.
 #
 # KZ_2016 / *-SC3 (42 lipids) --------------------------------------------------
-# Every SC3 held the SC2 (isopentyl) structure. The source metadata in
-# LNP_ML/data_files/Zhou_dendrimer/individual_metadata.csv resolves what SC3
-# should be: 6A3-SC2 and 6A3-SC3 share MolWt 1876.692 but are recorded with
-# DIFFERENT tail chain lengths, 4 and 3. So SC3 is a more branched isomer of the
-# same C5 formula. With SC1 = isobutyl (C4, chain 3) and SC2 = isopentyl
-# (C5, chain 4), SC3 = neopentyl (C5, chain 3). The patch preserves the
-# molecular formula exactly and restores the chain length the metadata records.
+# SC3 is **n-PROPYL** (C3). Corrected 2026-11-10, review finding F-077.
+#
+# Every SC3 originally held the SC2 (isopentyl, C5) structure. The 2026-10-28
+# patch replaced it with **neopentyl**, also C5, on this reasoning: "6A3-SC2 and
+# 6A3-SC3 share MolWt 1876.692 but are recorded with DIFFERENT tail chain
+# lengths, 4 and 3, so SC3 is a more branched isomer of the same C5 formula."
+#
+# THAT MolWt WAS THE BUG'S OWN OUTPUT. `individual_metadata.csv`'s MolWt is a
+# derived column computed from the PRE-FIX isopentyl SMILES. Measured over all
+# 1,502 upstream rows: 42 disagree with the MolWt recomputed from their own
+# `main_data.csv` SMILES, all 42 are SC3, and every deficit is exactly
+# -28.054 x Num_tails (2 CH2 per tail). The shared 1876.692 is therefore not
+# evidence of isomerism, it is the fingerprint of the defect that
+# `Zhou_dendrimer/note.txt` -- "fixed 42 smiles (SC3 tails were being
+# represented as SC2)" -- says was repaired, and `temp.py` beside it names the
+# intent in code: wrong_pattern "SCCC(C)C" -> correct_pattern "SCCC".
+# The patch read the stale half of that sentence and discarded the live half.
+#
+# Five independent witnesses, none of which is the other's output:
+#   1. `IL_tail1_SMILES` = `CCCS` (propane-1-thiol) on 42/42 rows, present in
+#      `Original_LNPDB.csv` and so predating both temp.py and our patch.
+#   2. The homologue mass ladder. Repaired, SC3 = 360.2083 for head 1A1 =
+#      SC4 - 14.0157 exactly, making SC3..SC18 an unbroken +1 CH2 ladder with
+#      token = carbon count. As stored, SC3 was isobaric with BOTH SC2 and SC5
+#      and heavier than SC4 -- three anomalies at once.
+#   3. `main_data.csv` carries n-propyl on 42/42 after temp.py ran.
+#   4. Figure 1b of PMID 40644303 (the 2025 Siegwart paper) DRAWS every thiol in
+#      this library; SC3 is an unbranched zigzag one bond shorter than SC4, and
+#      no quaternary carbon appears anywhere in the SC series.
+#   5. The 2016 SI anchors the nomenclature by HRMS and NMR: "1-octanethiol" for
+#      SC8, 1-tetradecanethiol for SC14, and SAR bins written "SC5-8"/"SC9-12".
+#      Five SI HRMS formulas match the corpus enumeration 5/5.
+# Against them stood one stale derived number. SC1/SC2 are the two BRANCHED
+# specials (iso-C4, iso-C5, isobaric with SC4/SC5) and SC19 is 2-phenylethane-
+# thiol, an index not a count; SC3..SC18 are linear.
+#
+# THE REPAIR IS SMARTS-BASED AND COVERS EVERY IL SMILES COLUMN, for two reasons
+# the 2026-10-28 patch got wrong:
+#   * It edited only `IL_SMILES`. `IL_protonated_SMILES` still held the ORIGINAL
+#     isopentyl structure on 42/42 rows -- byte-identical to the same head's SC2
+#     -- so the corpus stated this one tail three different ways in a single
+#     row. No composition check could see it: isopentyl and neopentyl are
+#     isomers, so formula and exact mass agree.
+#   * A literal string replace is traversal-dependent. The isopentyl pattern
+#     `CC(C)CCS` appears in only 32 of the 42 protonated strings and `SCCC(C)C`
+#     in 37; the other rows write the same tail a different way. A SMARTS query
+#     matches 42/42 in both columns. After the repair the protonated form sits
+#     exactly one proton above the neutral (+1.00728 Da, a proton less an
+#     electron) for the first time.
 # ZH_2023 / A4I18-1R2C70 (2 vivo rows) ----------------------------------------
 #
 # RESOLVED 2026-11-09, review finding F-021 -- found by C14 on its first run, in
@@ -276,9 +414,31 @@ DISULFIDE = Chem.MolFromSmarts("[#16X2][#16X2]")
 # silently never fire.
 ZH_C70 = ("CCCCCCCC/C=C\\CCCCCCCCNC(=O)C(C(CC)CCCC)N(CCCN(C)C)C(=O)CCC(=O)O[C@H]1CC[C@@]2(C)C(=CC[C@H]3[C@@H]4CC[C@H]([C@H](C)CCCC(C)C)[C@@]4(C)CC[C@@H]32)C1")
 
+# SMARTS patches. Keyed like PATCHES, but each rule is
+# (query SMARTS, replacement SMILES, index of the replacement's attachment atom)
+# and is applied to EVERY column that carries the ionizable lipid, so the
+# neutral and protonated strings cannot disagree. Use these, not PATCHES, for
+# anything where the stored traversal varies between rows (F-077).
+SMARTS_PATCHES = {
+    # neopentylthio (what the 2026-10-28 patch wrote) AND isopentylthio (the
+    # original upstream bug, still live in IL_protonated_SMILES) both become
+    # n-propylthio. Listing both is deliberate: the two columns were wrong in
+    # two DIFFERENT ways, and a rule that only knew about one would have fixed
+    # half the row and reported success.
+    ("KZ_2016", "*-SC3"): [
+        ("[#16X2][CH2][CX4]([CH3])([CH3])[CH3]", "CCCS", 3),   # neopentyl -> propyl
+        ("[#16X2][CH2][CH2][CH1]([CH3])[CH3]", "CCCS", 3),     # isopentyl -> propyl
+    ],
+    # SL_2020 / 4A3-SC6: IL_SMILES was patched to hexyl in 2026-10-28 but
+    # IL_protonated_SMILES still held the SC8 octyl structure, a +113.13 Da
+    # disagreement with its own row -- visible to a mass check, and nothing was
+    # checking. Octylthio -> hexylthio.
+    ("SL_2020", "4A3-SC6"): [
+        ("[#16X2][CH2][CH2][CH2][CH2][CH2][CH2][CH2][CH3]", "CCCCCCS", 6),
+    ],
+}
+
 PATCHES = {
-    ("SL_2020", "4A3-SC6"): [("SCCCCCCCC", "SCCCCCC"), ("^CCCCCCCCS", "CCCCCCS")],
-    ("KZ_2016", "*-SC3"): [("CC(C)CCS", "CC(C)(C)CS"), ("SCCC(C)C", "SCC(C)(C)C")],
 }
 
 # ---------------------------------------------------------------------------
@@ -385,31 +545,108 @@ def apply_component_patches(rows):
 
 
 def apply_patches(rows):
-    """Apply PATCHES, returning what changed. Anchored '^' rules match only at
-    the string start, where the first tail is written chain-first."""
+    """Apply PATCHES and SMARTS_PATCHES, returning what changed.
+
+    Two mechanisms, and the SMARTS one exists because the literal one was not
+    enough (F-077):
+
+      * PATCHES is literal string surgery on `IL_SMILES` only. Anchored '^'
+        rules match at the string start, where the first tail is written
+        chain-first. It is kept for rules where the traversal is known fixed.
+      * SMARTS_PATCHES matches a substructure and so is independent of how the
+        row happens to write it, and it is applied to EVERY column carrying the
+        ionizable lipid. The 2026-10-28 patch edited `IL_SMILES` alone, leaving
+        `IL_protonated_SMILES` holding the original wrong tail on 42/42
+        `KZ_2016` SC3 rows and the pre-patch octyl tail on `SL_2020`/`4A3-SC6`.
+        A literal replace would also have missed 10 of those 42, because
+        `CC(C)CCS` appears in only 32 of the protonated strings.
+
+    A patch that fixes one column and leaves a sibling column disagreeing is
+    worse than no patch: it makes the row internally inconsistent while looking
+    repaired, and no formula or mass check can see it when the wrong tail is an
+    isomer of the right one.
+    """
     log = []
+    # Only the columns that carry the IONIZABLE LIPID itself. Helper lipid,
+    # cholesterol and PEG columns are untouched -- a tail patch has no business
+    # rewriting DSPC.
+    IL_COLS = ["IL_SMILES", "IL_protonated_SMILES", "IL_head_SMILES",
+               "IL_linker_SMILES", "IL_tail1_SMILES", "IL_tail2_SMILES",
+               "IL_tail3_SMILES", "IL_tail4_SMILES"]
     for r in rows:
         key = None
         if (r["Experiment_ID"], r["IL_name"]) in PATCHES:
             key = (r["Experiment_ID"], r["IL_name"])
         elif (r["Experiment_ID"], "*-SC3") in PATCHES and r["IL_name"].endswith("-SC3"):
             key = (r["Experiment_ID"], "*-SC3")
-        if not key:
+        if key:
+            before = r["IL_SMILES"]
+            s = before
+            for old, new in PATCHES[key]:
+                if old.startswith("^"):
+                    stem = old[1:]
+                    if s.startswith(stem):
+                        s = new + s[len(stem):]
+                else:
+                    s = s.replace(old, new)
+            if s != before:
+                r["IL_SMILES"] = canon(s)
+                log.append({"experiment": r["Experiment_ID"],
+                            "lipid": r["IL_name"], "column": "IL_SMILES",
+                            "how": "literal",
+                            "before": before, "after": r["IL_SMILES"]})
+
+        skey = None
+        if (r["Experiment_ID"], r["IL_name"]) in SMARTS_PATCHES:
+            skey = (r["Experiment_ID"], r["IL_name"])
+        elif ((r["Experiment_ID"], "*-SC3") in SMARTS_PATCHES
+              and r["IL_name"].endswith("-SC3")):
+            skey = (r["Experiment_ID"], "*-SC3")
+        if not skey:
             continue
-        before = r["IL_SMILES"]
-        s = before
-        for old, new in PATCHES[key]:
-            if old.startswith("^"):
-                stem = old[1:]
-                if s.startswith(stem):
-                    s = new + s[len(stem):]
-            else:
-                s = s.replace(old, new)
-        if s != before:
-            r["IL_SMILES"] = canon(s)
-            log.append({"experiment": r["Experiment_ID"], "lipid": r["IL_name"],
-                        "before": before, "after": r["IL_SMILES"]})
+        for col in IL_COLS:
+            before = r.get(col)
+            if not before:
+                continue
+            m = Chem.MolFromSmiles(before)
+            if m is None:
+                continue
+            hit = 0
+            for smarts, repl, cp in SMARTS_PATCHES[skey]:
+                q = _smarts(smarts)
+                if q is None or not m.HasSubstructMatch(q):
+                    continue
+                n = len(m.GetSubstructMatches(q))
+                m = Chem.ReplaceSubstructs(
+                    m, q, Chem.MolFromSmiles(repl), replaceAll=True,
+                    replacementConnectionPoint=cp)[0]
+                # ReplaceSubstructs can leave the molecule needing a re-parse
+                # before another query will match it correctly.
+                m = Chem.MolFromSmiles(Chem.MolToSmiles(m))
+                if m is None:
+                    raise SystemExit(
+                        f"SMARTS patch {skey} broke {r['IL_name']} {col}: the "
+                        f"replacement did not re-parse. Refusing to emit a "
+                        f"structure nobody has looked at.")
+                hit += n
+            if hit:
+                after = canon(Chem.MolToSmiles(m))
+                if after != before:
+                    r[col] = after
+                    log.append({"experiment": r["Experiment_ID"],
+                                "lipid": r["IL_name"], "column": col,
+                                "how": f"smarts x{hit}",
+                                "before": before, "after": after})
     return log
+
+
+_smarts_cache = {}
+
+
+def _smarts(p):
+    if p not in _smarts_cache:
+        _smarts_cache[p] = Chem.MolFromSmarts(p)
+    return _smarts_cache[p]
 
 
 _canon_cache = {}
@@ -881,15 +1118,62 @@ def add_quality_columns(rows):
         log["experiments_on_zscore_scale"] += 1
 
         declared = ZSCORE_UNIT_DECLARED.get(eid)
+        pool = ZSCORE_UNIT_POOL.get(eid)
         for r in block:
-            if not r.get("value_normalization_unit"):
-                r["value_normalization_unit"] = (declared[0] if declared
-                                                 else "experiment")
+            # A DECLARED EXCEPTION OVERRIDES THE CURATION'S OWN TOKEN. It used
+            # to only fill a BLANK, which let NG_2025_2 keep
+            # `experiment_x_model_type` -- a token that is literally false on
+            # those rows, since Model_type is the single value Mouse_B6 and the
+            # block key is Model_target. Its curation_note had said "z-scored
+            # SEPARATELY for liver ... and muscle" all along while the enum said
+            # otherwise, and C12's declaration test is exact set equality
+            # against one literal, so it read the false token as a pass. Where
+            # this table and a curation disagree, this table is the adjudicated
+            # answer and the override is logged.
+            if pool and r.get("Model") != pool:
+                if not r.get("value_normalization_unit"):
+                    r["value_normalization_unit"] = "experiment"
+                continue
+            if declared:
+                was = r.get("value_normalization_unit")
+                if was and was != declared[0]:
+                    log.setdefault("units_overridden", {}).setdefault(
+                        f"{eid}: {was} -> {declared[0]}", 0)
+                    log["units_overridden"][
+                        f"{eid}: {was} -> {declared[0]}"] += 1
+                r["value_normalization_unit"] = declared[0]
+            elif not r.get("value_normalization_unit"):
+                r["value_normalization_unit"] = "experiment"
         if declared:
             log["declared_units"][eid] = declared[0]
             for r in block:
+                if pool and r.get("Model") != pool:
+                    continue
                 if not r.get("curation_note"):
                     r["curation_note"] = declared[1]
+
+        # F-080: where the experiment's standardization block is NOT Model_type,
+        # Experiment_value_within_model would re-standardize the union of blocks
+        # whose offsets are already deleted -- error class 41, and on ZH_2023 it
+        # comes out byte-identical to Experiment_value on all 325 rows. Leave it
+        # blank: "not stated" is true, "identical to Experiment_value" is a
+        # number that invites a consumer to use it for exactly the purpose the
+        # schema says it is for, and which it cannot serve here.
+        if eid in ZSCORE_BLOCK_KEY:
+            pool = ZSCORE_UNIT_POOL.get(eid)
+            hit = [r for r in block if not pool or r.get("Model") == pool]
+            for r in hit:
+                r["Experiment_value_within_model"] = ""
+            log.setdefault("within_model_blanked", {})[eid] = len(hit)
+            if len(hit) == len(block):
+                continue
+            block = [r for r in block if r not in hit]
+            vals = []
+            for r in block:
+                try:
+                    vals.append(float(r["Experiment_value"]))
+                except ValueError:
+                    vals.append(None)
 
         cells = defaultdict(list)
         for r, v in zip(block, vals):

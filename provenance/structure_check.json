@@ -1,12 +1,83 @@
 {
  "what": "enumerated structures vs the structure the paper draws",
- "anchors_compared": 21,
- "connectivity_failures": 3,
+ "anchors_compared": 92,
+ "connectivity_failures": 36,
  "stereo_only_differences": 0,
  "expected_mismatches_paper_drawing_wrong": 1,
- "papers_with_no_drawn_structure": 12,
+ "papers_with_no_drawn_structure": 143,
  "anchors_that_may_be_a_copy_of_the_enumeration": 6,
  "results": [
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "C12-200",
+   "source_figure": "none -- this paper draws no structure anywhere",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR EXISTS. The SI contains zero chemical structure drawings (0 image objects on every text page; the 6 image pages are plots, a flowchart, TEM micrographs and JMP screenshots) and prints no formula, no HRMS, no MW and no synthesis for C12-200. The main text is closed-access and not held. Empty on purpose so the gap is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "DSPC",
+   "source_figure": "SI Table S1/S3/S4 footnote (systematic name, not a drawing)",
+   "read_on": "2026-11-10",
+   "note": "NAME-CONCORDANCE anchor, NOT an independent attestation of this paper's chemistry: the paper draws nothing, so this is the SI's own systematic name re-derived by a different hand. octadecanoyl (stearoyl), 18:0 + 3-phosphocholine; glycerol C2 asserted (R) from the sn convention, not copied; 0 Z double bond(s) asserted explicitly; C44H88NO8P, exact mass 789.624755.",
+   "reference_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "enumerated_inchikey": "NRJAVPSFFCBXDT-HUESYALOSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "DOPE",
+   "source_figure": "SI Table S1/S3/S4 footnote (systematic name, not a drawing)",
+   "read_on": "2026-11-10",
+   "note": "NAME-CONCORDANCE anchor, NOT an independent attestation of this paper's chemistry: the paper draws nothing, so this is the SI's own systematic name re-derived by a different hand. (9Z)-octadec-9-enoyl (oleoyl), 18:1 cis-9 + 3-phosphoethanolamine; glycerol C2 asserted (R) from the sn convention, not copied; 2 Z double bond(s) asserted explicitly; C41H78NO8P, exact mass 743.546505.",
+   "reference_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "enumerated_inchikey": "MWRBNPKJOOWZPW-NYVOMTAGSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "DOPC",
+   "source_figure": "SI Table S1/S3/S4 footnote (systematic name, not a drawing)",
+   "read_on": "2026-11-10",
+   "note": "NAME-CONCORDANCE anchor, NOT an independent attestation of this paper's chemistry: the paper draws nothing, so this is the SI's own systematic name re-derived by a different hand. (9Z)-octadec-9-enoyl (oleoyl), 18:1 cis-9 + 3-phosphocholine; glycerol C2 asserted (R) from the sn convention, not copied; 2 Z double bond(s) asserted explicitly; C44H84NO8P, exact mass 785.593455.",
+   "reference_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+   "enumerated_inchikey": "SNKAWJBJQDLSFF-NVKMUCNASA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "DSPE",
+   "source_figure": "SI Table S1 footnote (abbreviation only)",
+   "read_on": "2026-11-10",
+   "note": "No anchor and no structure: all three DSPE designs (A-07, A-12, A-14) failed to formulate, so no value exists. 'DSPE' is also an incomplete specification on its own.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "Cholesterol",
+   "source_figure": "SI Table S1 column header ('Chol.')",
+   "read_on": "2026-11-10",
+   "note": "Deliberately NOT hand-written. A sibling's hand-built cholesterol came out a diastereomer with 4 of 8 centres inverted at identical formula, identical exact mass to six decimals and an identical skeleton InChIKey block. This paper gives only the abbreviation 'Chol.', so no sterol is asserted here; the registry pin is also NOT counted as an anchor.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "andersondg_26469188",
+   "lipid_name": "PEG-lipid",
+   "source_figure": "none -- never named in the SI",
+   "read_on": "2026-11-10",
+   "note": "The PEG-lipid is never identified: the Table S1 column header is the bare word 'PEG'. Emitted as PEG_name='Unknown'. Guessing was refused because C14-PEG2000 is drawn in the literature as a phosphoethanolamine-carbamate-PEG and stored in this corpus as the glycerol ether.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
   {
    "paper": "andersondg_41203968",
    "lipid_name": "AMG1541",
@@ -19,6 +90,672 @@
    "stereo_match": true,
    "status": "exact_match",
    "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "chamolstad_41691524",
+   "lipid_name": "H9T6",
+   "source_figure": "SI p.5 (written preparation; NO structure is drawn)",
+   "read_on": "2026-11-10",
+   "note": "Assembled by STRING SUBSTITUTION on a template, with no RDKit bond operation anywhere and the arm written from the nitrogen outward -- the opposite traversal to 02_enumerate.py, which uses RWMol.RemoveBond plus assemble.attach and takes the stereocentre from a CIP selection on a flat ester. The paper draws nothing, so this anchor tests the enumerator against the SI's WORDS, not against a drawing; it cannot catch an error the written procedure also contains.",
+   "reference_inchikey": "UMBWDSGQAXLQTI-DVIOPHQQSA-N",
+   "enumerated_inchikey": "UMBWDSGQAXLQTI-DVIOPHQQSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 7C1 (PEI 600 + C15 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 8 (1,4,8,12-Tetraazacyclopentadecane + Lauryl Acrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 48 (Spermine Free Base + Lauryl Acrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 58 (Spermidine + Lauryl Acrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 68 (PEI 600 + Lauryl Acrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 69 (PEI 600 + Stearyl Methacrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 78 (PEI 1200 + Lauryl Acrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 79 (PEI 1200 + Stearyl Methacrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 88 (Triethylenetetramine + Lauryl Acrylate)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 92 (1,4,8,12-Tetraazacyclopentadecane + C12 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 100 (Spermine Free Base + C12 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 102 (Spermidine + C12 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 104 (PEI 600 + C12 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 106 (PEI 1200 + C12 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_29489381",
+   "lipid_name": "lipomer 108 (Triethylenetetramine + C12 Epoxy)",
+   "source_figure": "SI Fig S2a p7 / Fig S3d p12 / Fig S3f p13 / Fig S5a p23 (generic scheme only)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR POSSIBLE: the paper draws no complete lipomer anywhere. The scheme is a Markush with an unlabelled R on the tail and, for the PEI lipomers, the amine itself abstracted to diethylamine. The degree of substitution is never stated. This curation emits 0 corpus rows, so the anchor guards nothing yet; the row exists so the absence is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "7C1",
+   "source_figure": "SI p14, synthesis scheme (R=C13 epoxide + PEI600)",
+   "read_on": "2026-11-10",
+   "note": "The ionizable component is drawn ONLY as a generic R-group scheme. PEI600 is branched polydisperse polyethylenimine, nominal MW 600, and the degree of epoxide substitution is not stated; the paper gives no formula, no HRMS and no NMR. Empty on purpose so the absence of an anchor is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "Cholesterol",
+   "source_figure": "SI p14, drawn in full",
+   "read_on": "2026-11-10",
+   "note": "Structure taken from provenance/reagent_registry.py, the same source the corpus uses, so this compares a value to itself and is NOT counted as a C10 result. Not hand-written: a hand-written sterol has already come out a diastereomer with 4 of 8 centres inverted, identical in formula, exact mass and skeleton InChIKey block. The paper's drawing was not traced (see D-4).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "DSPC",
+   "source_figure": "SI p14, drawn in full",
+   "read_on": "2026-11-10",
+   "note": "Structure taken from the registry. An assemble.esterify build from stearic acid + sn-glycero-3-phosphocholine would be a different code path, but the headgroup fragment written from the chemical name is a 28-character substring of the registry string, so the template-provenance guard would refuse to certify it as independent. NOT counted as a C10 result.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "C14PEG2000",
+   "source_figure": "SI p14, drawn in full with (OCH2CH2)45OCH3",
+   "read_on": "2026-11-10",
+   "note": "PEG-lipid drawn with an explicit repeat count of 45. Empty reference_SMILES because the polyether block length is a distribution and no single SMILES is right -- the same reason CLAUDE.md section 3 keeps PEG-lipids out of the reagent registry. The drawn repeat count IS checked, against the table's nominal PEG MW, in stage03_drawn_checks.py.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "C16PEG2000",
+   "source_figure": "SI p14, drawn in full with (OCH2CH2)45OCH3",
+   "read_on": "2026-11-10",
+   "note": "PEG-lipid drawn with an explicit repeat count of 45. Empty reference_SMILES because the polyether block length is a distribution and no single SMILES is right -- the same reason CLAUDE.md section 3 keeps PEG-lipids out of the reagent registry. The drawn repeat count IS checked, against the table's nominal PEG MW, in stage03_drawn_checks.py.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "C18PEG2000",
+   "source_figure": "SI p14, drawn in full with (OCH2CH2)45OCH3",
+   "read_on": "2026-11-10",
+   "note": "PEG-lipid drawn with an explicit repeat count of 45. Empty reference_SMILES because the polyether block length is a distribution and no single SMILES is right -- the same reason CLAUDE.md section 3 keeps PEG-lipids out of the reagent registry. The drawn repeat count IS checked, against the table's nominal PEG MW, in stage03_drawn_checks.py.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30216729",
+   "lipid_name": "C14PEG3000",
+   "source_figure": "SI p14, drawn in full with (OCH2CH2)67OCH3",
+   "read_on": "2026-11-10",
+   "note": "PEG-lipid drawn with an explicit repeat count of 67. Empty reference_SMILES because the polyether block length is a distribution and no single SMILES is right -- the same reason CLAUDE.md section 3 keeps PEG-lipids out of the reagent registry. The drawn repeat count IS checked, against the table's nominal PEG MW, in stage03_drawn_checks.py.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "7C1",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "73",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "78",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "80",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "83",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "88",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "90",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "92",
+   "source_figure": "SI Fig S1j (p.5)",
+   "read_on": "2026-11-10",
+   "note": "The paper draws a single repeat-unit cartoon - one tertiary nitrogen bearing one arm with the backbone truncated to two stubs - not a complete molecule. Degree of substitution is never stated and the PEI-based compounds are polydisperse polymers. EMPTY ON PURPOSE so the absence of an anchor is visible (CLAUDE.md section 5).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "Cholesterol",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "Excipient drawn in full. Built here by hand from the drawing; compared by FULL InChIKey against the corpus. full_match=True skeleton_match=True.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_30275336",
+   "lipid_name": "DOPE",
+   "source_figure": "SI Fig S2b (p.7)",
+   "read_on": "2026-11-10",
+   "note": "Excipient drawn in full. Built here by hand from the drawing; compared by FULL InChIKey against the corpus. full_match=True skeleton_match=True.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_30394729",
+   "lipid_name": "7C1",
+   "source_figure": "Fig S1B (synthesis scheme); Fig 3A / Fig 5A (one arm)",
+   "read_on": "2026-11-10",
+   "note": "The ionizable lipid is NEVER drawn as a complete structure. It is branched PEI Mn~600 (1 eq) ring-opened with 14 eq of a C15 1,2-epoxide, i.e. a polydisperse statistically substituted polymer: no single SMILES is correct, so the anchor is deliberately EMPTY and the gap is visible.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_30394729",
+   "lipid_name": "7C1_representative_arm",
+   "source_figure": "Fig 3A, Fig 5A (highlighted inset)",
+   "read_on": "2026-11-10",
+   "note": "Et2N-CH2-CH(OH)-C13H27, the arm as drawn, with the PEI backbone nitrogen replaced by the drawing's diethylamino group. Built by atom-mapped attachment so the regiochemistry is pinned: the Markovnikov isomer has the identical formula and exact mass.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_30394729",
+   "lipid_name": "Cholesterol",
+   "source_figure": "Fig 3A, Fig 5A",
+   "read_on": "2026-11-10",
+   "note": "CONNECTIVITY ONLY. Re-traversed from the drawn structure starting at the C3 hydroxyl. The hand-written stereo attempt gave HVYWMOMLDIMFJA-OXMOYTRBSA-N, a diastereomer with 4 of 8 centres inverted, identical in formula, exact mass and skeleton block; it was discarded rather than tuned against the registry.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_30394729",
+   "lipid_name": "DSPC",
+   "source_figure": "Fig 5A",
+   "read_on": "2026-11-10",
+   "note": "Built by fragment assembly from sn-glycero-3-phosphocholine and two stearoyl fragments through atom-mapped attachment; no atom deleted.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "A-9",
+   "source_figure": "Figure 1a/1b + Appendix S1 p.2",
+   "read_on": "2026-11-10",
+   "note": "decanoyl (C10) tail, Fig 1b tail ID 9. Built adamantyl-cage-first as plain text, the OPPOSITE traversal to the enumerator's assemble.esterify route; guards 1 and 2 in make_reference.py are executed at run time and are made to fail on purpose by --selftest. InChIKey agrees with the enumeration.",
+   "reference_inchikey": "RTNFNKRRUDEIJB-JOBMLVCBSA-N",
+   "enumerated_inchikey": "RTNFNKRRUDEIJB-JOBMLVCBSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "A-17",
+   "source_figure": "Figure 1a/1b + Appendix S1 p.7",
+   "read_on": "2026-11-10",
+   "note": "stearoyl (C18) tail, Fig 1b tail ID 17. Built adamantyl-cage-first as plain text, the OPPOSITE traversal to the enumerator's assemble.esterify route; guards 1 and 2 in make_reference.py are executed at run time and are made to fail on purpose by --selftest. InChIKey agrees with the enumeration.",
+   "reference_inchikey": "GHMVAZOSNDRQKH-GRMGNVMWSA-N",
+   "enumerated_inchikey": "GHMVAZOSNDRQKH-GRMGNVMWSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "Cholesterol",
+   "source_figure": "Figure 2a",
+   "read_on": "2026-11-10",
+   "note": "NOT AN INDEPENDENT DERIVATION, and says so. This string is the reagent registry's pin, copied verbatim so the provenance claim is mechanically true. The paper draws cholesterol in Fig 2a and the SKELETON is legible at 709 px (four fused rings, 3-OH, 5-ene, iso-octyl tail) and agrees; the EIGHT stereocentres are not resolvable at that resolution, so they are inherited from the registry and are not evidence from this paper.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "cKK-E15",
+   "source_figure": "Figure 2a",
+   "read_on": "2026-11-10",
+   "note": "DRAWN, BUT NOT READABLE. Fig 2a draws the full connectivity -- a 2,5-diketopiperazine, two (CH2)4 linkers to two tertiary nitrogens, each bearing two CH2-CH(OH)-R arms -- but abbreviates every tail to a 'CnH2n+1' label whose subscripts are 2-3 px tall in the only figure we can obtain (709 px web JPEG; the publisher's full-resolution figure is behind a browser we are not using). n is therefore not readable, the paper cites no source for cKK-E15 and mentions it exactly twice, so the tail length is an inference from the cKK-E12 naming convention and NOT an anchor. See DECISIONS.md D-2.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "beta-Sitosterol",
+   "source_figure": "Figure 2a",
+   "read_on": "2026-11-10",
+   "note": "NOT WRITTEN ON PURPOSE. It is cholesterol plus a C24 ethyl, and that ethyl CREATES a stereocentre (24R in natural sitosterol) that a 709 px drawing cannot resolve. Hand-writing a sterol is how a sibling produced a 4-of-8-inverted diastereomer today with identical formula, identical exact mass and an identical skeleton InChIKey block. Not in provenance/reagent_registry.py either. Declared unpinned rather than guessed.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "20alpha-OH Cholesterol",
+   "source_figure": "Figure 2a",
+   "read_on": "2026-11-10",
+   "note": "NOT WRITTEN ON PURPOSE, same reason: the 20-hydroxyl's configuration is the whole point of the name and is not resolvable at this resolution. Not in the reagent registry.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_33758781",
+   "lipid_name": "C14PEG2000",
+   "source_figure": "Figure 2a",
+   "read_on": "2026-11-10",
+   "note": "NOT ANCHORABLE IN PRINCIPLE. The PEG block length is a distribution, so no single SMILES is right -- which is why provenance/reagent_registry.py deliberately holds no PEG-lipid.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_36701517",
+   "lipid_name": "cKK-E12",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NOT DRAWN ANYWHERE IN THE PAPER. The ionizable lipid of all 144 formulations is named once, with a vendor and catalogue number (Organix Inc., O-8744), and no structure is shown in any main or supplementary figure. Empty reference_SMILES is deliberate: the absence of an anchor is the finding.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_36701517",
+   "lipid_name": "18:0 DDAB",
+   "source_figure": "Fig S2a row C3; redrawn in Fig 3a beside Cat-LNP",
+   "read_on": "2026-11-10",
+   "note": "Drawn twice, identically: two C18 saturated chains on a quaternary nitrogen with two methyls, Br- counterion. Stored as the cation.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_36701517",
+   "lipid_name": "18:0 PC (DSPC)",
+   "source_figure": "Fig S2b row N7; redrawn in Fig S15a beside Neu-LNP",
+   "read_on": "2026-11-10",
+   "note": "Drawn twice. Fig S2b labels it '18:0 PC' and Fig S15a labels the same structure 'DSPC'; the main text expands DSPC as 1,2-distearoyl-sn-glycero-3-phosphocholine, so the two labels agree.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_36701517",
+   "lipid_name": "18:1 PA",
+   "source_figure": "Fig S2c row A1; redrawn in Fig S15c beside An-LNP",
+   "read_on": "2026-11-10",
+   "note": "Drawn twice. Two 18:1 cis-9 acyl chains and a free phosphate shown as P(=O)(OH)(O-) with Na+. Stored as the mono-anion without sodium.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "C16 Galactosyl(a) Ceramide",
+   "source_figure": "Fig. 1A, lower box",
+   "read_on": "2026-11-10",
+   "note": "Assembled head-first from three atom-mapped fragments through curation/lib/assemble.py. The N-acyl chain length is the measured one (C16: 15 bonds + carbonyl = 16 C, all three methods unanimous). The SPHINGOID BASE length is NOT pinned by the raster (crossings 14 vs apex/turns 13 on the C16 panel) and is taken from the reagent's chemical name, d18:1 sphingosine; rows carrying this helper lipid are flagged structure_assumed = 1.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "C8 Galactosyl(a) Ceramide",
+   "source_figure": "Fig. 1A, upper box",
+   "read_on": "2026-11-10",
+   "note": "Assembled head-first from three atom-mapped fragments through curation/lib/assemble.py. The N-acyl chain length is the measured one (C16: 15 bonds + carbonyl = 16 C, all three methods unanimous). The SPHINGOID BASE length is NOT pinned by the raster (crossings 14 vs apex/turns 13 on the C16 panel) and is taken from the reagent's chemical name, d18:1 sphingosine; rows carrying this helper lipid are flagged structure_assumed = 1.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "SM-102",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named in a box in Fig. 1A; no structure is drawn anywhere in the paper or SI. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "cKK-E12",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named in a box in Fig. 1A; no structure is drawn. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "Cholesterol",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "DSPC",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named in Fig. 2C; no structure is drawn. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "ALC-0159",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "DMG-PEG",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "C14-PEG2000",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dahlmanje_41183194",
+   "lipid_name": "C18-PEG2000",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only. Stored empty so the absence of an anchor is visible rather than implied.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "dixonjb_41269090",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "NOT a figure: the IUPAC name recorded as this reagent's authority in provenance/reagent_registry.py. Figure 1A of the paper does draw MC3, but the only copy obtainable is 708x391 px for twelve panels.",
+   "read_on": "2026-11-10",
+   "note": "Exact InChIKey match to the enumerated structure. What this tests is the CORPUS/REGISTRY string against the chemical name, by a second route; it does not test the paper's own drawing, which is unreadable here. The gate is shown to see connectivity by --seed-regioisomer (ester C19->C18: identical formula, identical exact mass, different key).",
+   "reference_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "enumerated_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "dixonjb_41269090",
+   "lipid_name": "cKK-E12",
+   "source_figure": "main-article Figure 1A, cKK-E12 panel (source/pmc_oa/nn5c12080_0001.jpg)",
+   "read_on": "2026-11-10",
+   "note": "EMPTY ON PURPOSE. The paper DOES draw this lipid, but the panel is 130 x 70 px inside a 708 x 391 px figure, the only copy obtainable (Europe PMC fulltextRepo returned an HTML error page and the PMC OA service 404'd; no bot check was bypassed). At that size the 2,5-diketopiperazine with its two ring carbonyls and two NH, the two tertiary nitrogens, the four CH2-CH(OH)-R arms and their 'C10H21' labels are all legible and CONSISTENT with the emitted structure -- but the methylene count of each lysine side chain, the one thing an anchor exists to test, is not resolvable, and counting it by eye is what this project forbids. No anchor is better than a guessed one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "goulart_41138890",
+   "lipid_name": "C12-200",
+   "source_figure": "Figure 1A, green box (gr4/gr1_lrg.jpg)",
+   "read_on": "2026-11-10",
+   "note": "Assembled head-first from the drawn connectivity by assemble.attach with SMARTS-selected targets; every tail is PRINTED as the text 'C10H21', so chain length is read, not counted. No corpus file is read by make_reference.py and no literal >=25 chars in it occurs in the corpus string; both asserted at run time by AST walk.",
+   "reference_inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RVHYPUORVDKRTM-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "goulart_41138890",
+   "lipid_name": "C14PEG2k",
+   "source_figure": "Figure 1A, red box",
+   "read_on": "2026-11-10",
+   "note": "DRAWN as a 1,2-diacyl-sn-glycero-3-phospho-ethanolamine N-carbamoyl-mPEG45 (ammonium salt): phosphate, -NH-C(=O)O-, subscript 45. The corpus name 'C14-PEG2000' (BL_2023_3CR, 480 rows) resolves to InChIKey NLDCRRFPGOSAHV, formula C122H242O50 -- a GLYCEROL ETHER with no N and no P, i.e. DMG-PEG2000. No SMILES stored rather than a guessed one; the acyl chains would have to be counted off a raster.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "goulart_41138890",
+   "lipid_name": "SM-102",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NOT DRAWN anywhere in the paper -- named only, in Fig 4G and Fig S8. Empty on purpose so the absence of an anchor is visible (brief section 9). Structure taken from provenance/reagent_registry.py, which is a name-derived pin and NOT an independent anchor.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "goulart_41138890",
+   "lipid_name": "ALC-0315",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NOT DRAWN -- named only. Same posture as SM-102. Against an empty anchor the C10 guards are VACUOUS, not passing.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "goulart_41138890",
+   "lipid_name": "Cholesterol",
+   "source_figure": "Figure 1A, yellow box",
+   "read_on": "2026-11-10",
+   "note": "Drawn with 3-beta-OH wedge and all eight centres, but NOT hand-written here: one agent's hand-written cholesterol came out a diastereomer with 4 of 8 centres inverted at identical formula, identical exact mass and an identical skeleton InChIKey block. Structure comes from provenance/reagent_registry.py, and pinning the registry against itself is DECLARED NOT INDEPENDENT rather than counted as an anchor.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "C3-K2-E14",
+   "source_figure": "Fig S1A",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "ZNFXNNRQRPINEP-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ZNFXNNRQRPINEP-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "C3-K2-A14",
+   "source_figure": "Fig S1A",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "BTSOBWSUZHHPPW-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BTSOBWSUZHHPPW-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "C3-K2-E15",
+   "source_figure": "SI p11 scheme",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "CAZRHPMPWPXUJK-UHFFFAOYSA-N",
+   "enumerated_inchikey": "CAZRHPMPWPXUJK-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "C3-K2-E10",
+   "source_figure": "Fig S2A",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "KSNHLVWZFBKIEW-UHFFFAOYSA-N",
+   "enumerated_inchikey": "KSNHLVWZFBKIEW-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "C3-K3-E10",
+   "source_figure": "Fig S3A",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "RIPLQBVUYULCTL-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RIPLQBVUYULCTL-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "OC2-K3-E10",
+   "source_figure": "Fig S4A",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "QUXHZASDVBKOSF-UHFFFAOYSA-N",
+   "enumerated_inchikey": "QUXHZASDVBKOSF-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "OC3-K3-E10",
+   "source_figure": "Fig S4A",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "PSGUOQIHHLNYHA-UHFFFAOYSA-N",
+   "enumerated_inchikey": "PSGUOQIHHLNYHA-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "OC2-K2-A10",
+   "source_figure": "Fig S7B",
+   "read_on": "2026-11-10",
+   "note": "Hand-written from the drawn structure, tail-first, by plain string concatenation; no RDKit editing, no atom maps, no curation/lib import -- a different code path from stage01_enumerate.py, which builds core-first with assemble.attach. Flat: the four carbinols are racemic, so C10's stereo comparison carries no information here.",
+   "reference_inchikey": "XFNUIHZGYXUONG-UHFFFAOYSA-N",
+   "enumerated_inchikey": "XFNUIHZGYXUONG-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "SM-102",
+   "source_figure": "Fig S1A",
+   "read_on": "2026-11-10",
+   "note": "Drawn in Fig S1A but not made in this paper. Structure taken from provenance/reagent_registry (C11) and matched to the corpus on full InChIKey, skeleton and name in AC_2025/WT_2026 (vitro) and SB_2024/SS_2018/SY_2025/XD_2026 (vivo). The drawing was NOT independently traced.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "none",
+   "read_on": "2026-11-10",
+   "note": "Named on the Fig S7A axis as 'MC3' and in Table S2 rows 25-27; never drawn in the SI. Structure from the registry (C11); corpus match on all three keys across 5 vitro and 6 vivo experiments.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "khanof_36652629",
+   "lipid_name": "ALC-0315",
+   "source_figure": "none",
+   "read_on": "2026-11-10",
+   "note": "Appears ONLY in the Fig S11 pKa row (6.27). Never drawn, and absent from Table S2 entirely, so this paper formulated it without listing it. No value row is emitted for it.",
+   "status": "NO_DRAWN_STRUCTURE"
   },
   {
    "paper": "kooh_42690843",
@@ -35,6 +772,45 @@
    "read_on": "2026-11-10",
    "note": "Derived from the compound NAME printed in the SI, not from the block drawing the enumerator reads, and composed by plain string concatenation of name-derived tokens -- no RWMol, no AddBond, no RemoveAtom, no atom map. compose() refuses a ring-closure digit shared between fragments, which is the documented failure mode of this route. The alpha carbon(s) are unassigned stereocentres in both the anchor and the enumeration: the photochemical radical addition is not stereoselective and the SI does not resolve them, so C10's stereo comparison has nothing to compare.",
    "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "levkinpa_23909648",
+   "lipid_name": "1C12-D",
+   "source_figure": "SI p.7, the full structure drawing above the printed 'C30H62N2' / 'Exact Mass: 450.4913' block (vector; bonds are filled outlines)",
+   "read_on": "2026-11-10",
+   "note": "Composed HEAD-FIRST by plain string concatenation from the drawing: ring 'C1CCCN1CC' then the nitrogen then the tails. NO RDKit fragment assembly, no atom maps, no RWMol, no AddBond, no RemoveAtom -- a different code path from stage03_enumerate.py (which uses curation/lib/assemble.attach) and a different traversal from stage07_qc.py's tail-first re-derivation. Raw template before canonicalisation: 'C1CCCN1CCN(CCCCCCCCCCCC)CCCCCCCCCCCC'. Chain length and tail count are read from the drawing and from the authors' own printed Chemical Formula C30H62N2, not from the compound label. IUPAC name as printed: N-dodecyl-N-(2-(pyrrolidin-1-yl)ethyl)dodecan-1-amine.",
+   "reference_inchikey": "JRMOGNFMWXJRPA-UHFFFAOYSA-N",
+   "enumerated_inchikey": "JRMOGNFMWXJRPA-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "levkinpa_23909648",
+   "lipid_name": "1C16-S",
+   "source_figure": "SI p.10, the full structure drawing above the printed 'C22H46N2' / 'Exact Mass: 338.3661' block (vector; bonds are filled outlines)",
+   "read_on": "2026-11-10",
+   "note": "Composed HEAD-FIRST by plain string concatenation from the drawing: ring 'C1CCCN1CC' then the nitrogen then the tails. NO RDKit fragment assembly, no atom maps, no RWMol, no AddBond, no RemoveAtom -- a different code path from stage03_enumerate.py (which uses curation/lib/assemble.attach) and a different traversal from stage07_qc.py's tail-first re-derivation. Raw template before canonicalisation: 'C1CCCN1CCNCCCCCCCCCCCCCCCC'. Chain length and tail count are read from the drawing and from the authors' own printed Chemical Formula C22H46N2, not from the compound label. IUPAC name as printed: N-(2-(pyrrolidin-1-yl)ethyl)hexadecan-1-amine.",
+   "reference_inchikey": "MGFAWVNIUHAINZ-UHFFFAOYSA-N",
+   "enumerated_inchikey": "MGFAWVNIUHAINZ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "levkinpa_23909648",
+   "lipid_name": "1C16-D",
+   "source_figure": "SI p.13, the full structure drawing above the printed 'C38H78N2' / 'Exact Mass: 562.6165' block (vector; bonds are filled outlines)",
+   "read_on": "2026-11-10",
+   "note": "Composed HEAD-FIRST by plain string concatenation from the drawing: ring 'C1CCCN1CC' then the nitrogen then the tails. NO RDKit fragment assembly, no atom maps, no RWMol, no AddBond, no RemoveAtom -- a different code path from stage03_enumerate.py (which uses curation/lib/assemble.attach) and a different traversal from stage07_qc.py's tail-first re-derivation. Raw template before canonicalisation: 'C1CCCN1CCN(CCCCCCCCCCCCCCCC)CCCCCCCCCCCCCCCC'. Chain length and tail count are read from the drawing and from the authors' own printed Chemical Formula C38H78N2, not from the compound label. IUPAC name as printed: N-hexadecyl-N-(2-(pyrrolidin-1-yl)ethyl)hexadecan-1-amine.",
+   "reference_inchikey": "YXEYSZSMDVRCPG-UHFFFAOYSA-N",
+   "enumerated_inchikey": "YXEYSZSMDVRCPG-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
   },
   {
    "paper": "levkinpa_29558113",
@@ -59,6 +835,45 @@
    "read_on": "2026-11-10",
    "note": "NO ANCHOR POSSIBLE. A8 is known only as the molecular formula C7H17N3 (01_amines.json). This is the paper's SECOND-best lipidoid, so the gap is recorded here rather than left to be noticed later. DECISIONS.md D-2.",
    "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "li_39883839",
+   "lipid_name": "H1A1B1",
+   "source_figure": "SI Appendix Fig. S1 (top-left structure)",
+   "read_on": "2026-11-10",
+   "note": "Composed head-first by plain string substitution into '%(head)sC(%(branch)s)C(=O)N%(amide)s' from fragments transcribed off the drawn structure; no assemble/RWMol/atom-map code path is shared with stage02_enumerate.py. Pre-canonicalisation template: CN(C)CC(=O)OC(CCCCCCCCC)C(=O)NCCCCCCCCCCC . Template differs from the enumeration string: YES. InChIKey vs enumeration: match.",
+   "reference_inchikey": "UDKBJJHXNPVYFQ-UHFFFAOYSA-N",
+   "enumerated_inchikey": "UDKBJJHXNPVYFQ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "li_39883839",
+   "lipid_name": "H2A4B4",
+   "source_figure": "SI Appendix Fig. S2; redrawn in Fig. 3G ('Spacer = 2' head plus the shared R group)",
+   "read_on": "2026-11-10",
+   "note": "Composed head-first by plain string substitution into '%(head)sC(%(branch)s)C(=O)N%(amide)s' from fragments transcribed off the drawn structure; no assemble/RWMol/atom-map code path is shared with stage02_enumerate.py. Pre-canonicalisation template: CN(C)CCC(=O)OC(CCCCCOC(=O)C(CCCCCC)CCCCCCCC)C(=O)NCCCCCCCC/C=C\\CCCCCCCC . Template differs from the enumeration string: YES. InChIKey vs enumeration: match.",
+   "reference_inchikey": "CLSYHCWHWWOKMZ-MRCUWXFGSA-N",
+   "enumerated_inchikey": "CLSYHCWHWWOKMZ-MRCUWXFGSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "li_39883839",
+   "lipid_name": "A4B4-S3",
+   "source_figure": "Fig. 3G ('Spacer = 3' head plus the shared R group labelled 'Top performing tail combination by batch test')",
+   "read_on": "2026-11-10",
+   "note": "Composed head-first by plain string substitution into '%(head)sC(%(branch)s)C(=O)N%(amide)s' from fragments transcribed off the drawn structure; no assemble/RWMol/atom-map code path is shared with stage02_enumerate.py. Pre-canonicalisation template: CN(C)CCCC(=O)OC(CCCCCOC(=O)C(CCCCCC)CCCCCCCC)C(=O)NCCCCCCCC/C=C\\CCCCCCCC . Template differs from the enumeration string: YES. InChIKey vs enumeration: match.",
+   "reference_inchikey": "JBBSMSLXXPFXRD-MRCUWXFGSA-N",
+   "enumerated_inchikey": "JBBSMSLXXPFXRD-MRCUWXFGSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
   },
   {
    "paper": "lij_42130331",
@@ -100,6 +915,22 @@
    "anchor_derivation": "make_reference.py"
   },
   {
+   "paper": "linyx_41851281",
+   "lipid_name": "Lipid 107",
+   "source_figure": "Supplementary Fig. 12 (MOESM1 p.17), structure labelled 'Lipid T3'",
+   "read_on": "2026-11-10",
+   "note": "Lipid 107 = H4-OT13(3) = the ML test set's Lipid T3. The drawing shows two arms on one primary nitrogen and one on the other, which is the only external evidence for the 3-arm H4 regiochemistry. T13's branch position (ethyl + C13 either side of the carbinol) is read from the same drawing and agrees with the trace of Supplementary Fig. 1a and with the HRMS formula C19H36O2 for the OT13 monomer. BUILT BY: plain str.format on the head-first template 'CN(CCN({A})({A}))CCN{A}' with the arm 'CCC(=O)OC(CC)CCCCCCCCCCCCC', parsed once at the end; no RWMol, AddBond, RemoveAtom, assemble.attach or assemble.esterify anywhere in this file.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "linyx_41851281",
+   "lipid_name": "Lipid P1",
+   "source_figure": "Supplementary Methods reaction scheme (MOESM1 p.56) and Supplementary Fig. 14a",
+   "read_on": "2026-11-10",
+   "note": "Lipid P1 = H4-OT1(3). The p.56 scheme draws H4 + T1 -> P1 and names it 'the 3-tailed lipid P1', separated from '4-tailed byproducts', which is what fixes the arm count. BUILT BY: plain str.format on the head-first template 'CN(CCN({A})({A}))CCN{A}' with the arm 'CCC(=O)OCCCCCCCC/C=C\\\\C/C=C\\\\CCCCC', parsed once at the end; no RWMol, AddBond, RemoveAtom, assemble.attach or assemble.esterify anywhere in this file.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
    "paper": "liu_41162324",
    "lipid_name": "SSC4F1",
    "source_figure": "SI PDF p.25, reaction scheme under heading 3.2.1.2 (embedded raster 1153x107 px, read at 7x)",
@@ -124,6 +955,557 @@
    "stereo_match": true,
    "status": "exact_match",
    "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "liu_42585110",
+   "lipid_name": "AT1-c-ATRA",
+   "source_figure": "SI Scheme S5, row 2, the drawn product",
+   "read_on": "2026-11-10",
+   "note": "Built by writing one SMILES string, ring-end first. No curation/lib import, no RWMol, no fragment assembly. The arm that is one CH2 longer here than in the AT4-Bex anchor is the linker, not the head arm.",
+   "reference_inchikey": "ALAWTIHWVGEAKA-VDLJIEFOSA-N",
+   "enumerated_inchikey": "ALAWTIHWVGEAKA-VDLJIEFOSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "liu_42585110",
+   "lipid_name": "AT4-Bex",
+   "source_figure": "SI Scheme S9, bottom row, the drawn product",
+   "read_on": "2026-11-10",
+   "note": "Built by writing one SMILES string, aromatic-ring first. The T4 ester points the other way than T1's and the formula is identical either way, so this anchor is the one that can see a reversed ester.",
+   "reference_inchikey": "CZMRBDVYRKKGAS-UHFFFAOYSA-N",
+   "enumerated_inchikey": "CZMRBDVYRKKGAS-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C10",
+   "source_figure": "Figure S18 (SI p.30), upper left",
+   "read_on": "2026-11-10",
+   "note": "Three n-decyl carbonate tails (2 + 1 across the two nitrogens) and one free 2-hydroxyethyl arm, exactly as drawn.",
+   "reference_inchikey": "RBJVQQHYUHIFGM-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RBJVQQHYUHIFGM-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-C10",
+   "source_figure": "Figure S18 (SI p.30), upper right",
+   "read_on": "2026-11-10",
+   "note": "The carboxylate analog: undecanoyl esters, one oxygen at the linker instead of two. Drawn beside A5-CE-C10 for that contrast.",
+   "reference_inchikey": "ZMXOPAIDEOORPY-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ZMXOPAIDEOORPY-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C7-6",
+   "source_figure": "Figure S18 (SI p.30), lower left",
+   "read_on": "2026-11-10",
+   "note": "Two tridecan-7-yl carbonate tails, ONE PER NITROGEN, two free hydroxyethyl arms. Confirms the regiochemistry Figure S12 asserts from its two 13C peaks at 52.93 and 52.67 ppm.",
+   "reference_inchikey": "STNXHWVRXPDEBX-UHFFFAOYSA-N",
+   "enumerated_inchikey": "STNXHWVRXPDEBX-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-C7-6",
+   "source_figure": "Figure S18 (SI p.30), lower right",
+   "read_on": "2026-11-10",
+   "note": "The carboxylate analog, 2-hexyloctanoyl esters. Its acid is named in the SI text (p.5), which independently pins the two hexyl arms.",
+   "reference_inchikey": "LMHRJWDLKDWOQQ-UHFFFAOYSA-N",
+   "enumerated_inchikey": "LMHRJWDLKDWOQQ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C6",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C6-5",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C8-7",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C8-8",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "lius_40500862",
+   "lipid_name": "A5-CE-C10-6",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named only in Figure S5; no structure, HRMS or NMR anywhere in the SI",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "Fig 1, 'Lipid Nanoparticle Library Design' box",
+   "read_on": "2026-11-10",
+   "note": "Built from the IUPAC name, head first. Fig 1 draws the head as (CH3)2N-CH2CH2CH2-C(=O)-O- and the ester oxygen on the chain carbon, both confirmed by eye at 3x native; the tail vertex count was NOT counted by eye -- it comes from the name.",
+   "reference_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "enumerated_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "DMG-PEG2000",
+   "source_figure": "Fig 1, 'Lipid Nanoparticle Library Design' box",
+   "read_on": "2026-11-10",
+   "note": "n_eo = 45: 44 inside the drawn bracket plus one drawn outside it. The block length is a distribution, so this anchor tests CONNECTIVITY and the drawn unit count, not the reagent.",
+   "reference_inchikey": "NLDCRRFPGOSAHV-UHFFFAOYSA-N",
+   "enumerated_inchikey": "NLDCRRFPGOSAHV-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "Cholesterol",
+   "source_figure": "Fig 1",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR ON PURPOSE -- a hand-written 8-stereocentre sterol is a worse anchor than none (F-013 was reproduced from scratch that way), and the registry string is the corpus, so comparing to it is comparing a value to itself. Fig 1 draws the C3 oxygen on a BOLD WEDGE (3-beta), the Delta-5 olefin and an iso-octyl side chain; that reading is in PROVENANCE.md.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "DOTAP",
+   "source_figure": "not drawn",
+   "read_on": "2026-11-10",
+   "note": "Named in a box in Fig 1, never drawn.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "DDAB",
+   "source_figure": "not drawn",
+   "read_on": "2026-11-10",
+   "note": "Named in a box in Fig 1, never drawn.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "DOPE",
+   "source_figure": "not drawn",
+   "read_on": "2026-11-10",
+   "note": "Named in a box in Fig 1, never drawn.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "DSPC",
+   "source_figure": "not drawn",
+   "read_on": "2026-11-10",
+   "note": "Named in a box in Fig 1, never drawn.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "14PA",
+   "source_figure": "not drawn",
+   "read_on": "2026-11-10",
+   "note": "Named in a box in Fig 1, never drawn.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_38583366",
+   "lipid_name": "18PG",
+   "source_figure": "not drawn",
+   "read_on": "2026-11-10",
+   "note": "Named in a box in Fig 1, never drawn. This is why this paper cannot settle F-057.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "SI Table 2 (p2, image xref 61)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed head-first from 4-(dimethylamino)butanoate and the two halves of heptatriaconta-6,9,28,31-tetraen-19-yl. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "reference_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "enumerated_inchikey": "NRLNQCOGCKAESA-KWXKLSQISA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "DOTAP",
+   "source_figure": "SI Table 2 (p2, image xref 64)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed from the quaternary nitrogen outward; stereocentre left unspecified to match the registry convention, see 08_contradictions.csv. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "DDAB",
+   "source_figure": "SI Table 2 (p2, image xref 65)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed from the quaternary nitrogen outward; counterion omitted. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "DOPE",
+   "source_figure": "SI Table 2 (p2, image xref 66)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed head-first from phosphoethanolamine; C2 tag chosen by CIP = R. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "DSPC",
+   "source_figure": "SI Table 2 (p2, image xref 67)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed head-first from phosphocholine; C2 tag chosen by CIP = R. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "18PG",
+   "source_figure": "SI Table 2 (p2, image xref 68; head magnified in p2_x68_head.png)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed head-first from phospho-(1'-rac-glycerol) with TWO oleoyl chains, because the panel draws a cis C=C in both tails and SI Table 3 prints Double_bonds = 2; head glycerol left unspecified because the panel draws it without a wedge. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "14PA",
+   "source_figure": "SI Table 2 (p2, image xref 69)",
+   "read_on": "2026-11-10",
+   "note": "DERIVED, not copied: composed head-first from the phosphate monoester; counterion omitted. Independence verified at run time by walking this module's AST (no registry/assembler import, no RWMol/AddBond/RemoveAtom/CombineMols call); byte-identity with the emitted structure is EXPECTED and is not the signal (F-037).",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "Cholesterol",
+   "source_figure": "SI Table 2 (p2, image xref 62)",
+   "read_on": "2026-11-10",
+   "note": "NO INDEPENDENT ANCHOR. Left empty on purpose so the gap is visible. Hand-writing an 8-stereocentre steroid here would be a worse anchor than none, and cholesterol is already covered corpus-wide by C14, which cleaves every ester in IL_SMILES and pins the liberated sterol's FULL InChIKey against the registry.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "maohq_39375194",
+   "lipid_name": "DMG-PEG2000",
+   "source_figure": "SI Table 2 (p2, image xref 63)",
+   "read_on": "2026-11-10",
+   "note": "EMPTY ON PURPOSE. The panel draws n = 44, but the block length is a distribution, so no single SMILES is the reagent and the reagent registry excludes PEG lipids on purpose (CLAUDE.md section 3). The DRAWN member is dmg_peg2000(45) -- 45 ethylene oxides, not the 44 in the bracket, because one more is drawn outside it -- and it reproduces YZ_2022's stored PEG_SMILES exactly, which is what 06_rows.csv emits for corpus consistency.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mckinlaycj_39105751",
+   "lipid_name": "peptoid_236",
+   "source_figure": "SI Figure S7A (nn4c05513_si_001.pdf page 20)",
+   "read_on": "2026-11-10",
+   "note": "Peptoid drawn in full by the authors. This anchor tests MONOMER ORDER, which is what a formula cannot see: 236, 237, 259, 264 and 266 all have calculated exact mass 1275.09 and are five different molecules.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "mckinlaycj_39105751",
+   "lipid_name": "peptoid_266",
+   "source_figure": "SI Figure S7A (nn4c05513_si_001.pdf page 20)",
+   "read_on": "2026-11-10",
+   "note": "Peptoid drawn in full by the authors. This anchor tests MONOMER ORDER, which is what a formula cannot see: 236, 237, 259, 264 and 266 all have calculated exact mass 1275.09 and are five different molecules.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "mckinlaycj_39105751",
+   "lipid_name": "peptoid_226",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. The paper draws this peptoid nowhere -- only 236 and 266 are drawn in full (SI Figure S7A). Its structure rests on SI Table S9's sequence, cross-checked against SI Table S4 (34/34 sequences agree) and against the printed calculated exact mass (44/44 within 0.005 Da). Mass confirms composition and not order, so this row has no external test of its monomer order.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mckinlaycj_39105751",
+   "lipid_name": "peptoid_245",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. The paper draws this peptoid nowhere -- only 236 and 266 are drawn in full (SI Figure S7A). Its structure rests on SI Table S9's sequence, cross-checked against SI Table S4 (34/34 sequences agree) and against the printed calculated exact mass (44/44 within 0.005 Da). Mass confirms composition and not order, so this row has no external test of its monomer order.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mckinlaycj_39105751",
+   "lipid_name": "peptoid_263",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. The paper draws this peptoid nowhere -- only 236 and 266 are drawn in full (SI Figure S7A). Its structure rests on SI Table S9's sequence, cross-checked against SI Table S4 (34/34 sequences agree) and against the printed calculated exact mass (44/44 within 0.005 Da). Mass confirms composition and not order, so this row has no external test of its monomer order.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C10-306",
+   "source_figure": "SI p.3, systematic name of C10-306 (no drawn structure)",
+   "read_on": "2026-11-10",
+   "note": "Written tail-first from the far methyl of one decan-2-ol. Four arms, methyl-bis(3-aminopropyl)amine core.",
+   "reference_inchikey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+   "enumerated_inchikey": "NDBHXBBZSYMCLE-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C14-200",
+   "source_figure": "SI p.2, systematic name of C14-200 (no drawn structure)",
+   "read_on": "2026-11-10",
+   "note": "Written tail-first from the far methyl of one tetradecan-2-ol. Five arms; the piperazine is written as a ring closure in the middle of the traversal, where the enumerator reaches it last.",
+   "reference_inchikey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+   "enumerated_inchikey": "AHBCTBFMRJVSGQ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C10-114",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C10-200",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C10-490",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C10-494",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C12-114",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C12-200",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C12-306",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C12-490",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C12-494",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C14-114",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C14-306",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C14-490",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41555650",
+   "lipid_name": "C14-494",
+   "source_figure": "no structure is drawn anywhere in the SI; the main article was not acquired (ACS Cloudflare)",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Structure rests on the SI systematic name plus the stoichiometry check P1. Two of the fifteen carry an independent anchor; this is not one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "18D4",
+   "source_figure": "Supplementary Figure 2 (SI p.16), product panel",
+   "read_on": "2026-11-10",
+   "note": "The one member this paper both draws and confirms. Printed [M+H]+ 901.829 (Supp Fig 5) against 901.217 for this structure, delta 0.612 Da; the nearest alternative (one CH2 on each of the two ester chains) is 28.053 Da away, a 45.8x discrimination margin. Three arms, one on each N-H; the two piperazine tertiary N are untouched, which is the scheme's own 'favor mono-addition'.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "17D9.2",
+   "source_figure": "Supplementary Figure 2 (SI p.16), product panel",
+   "read_on": "2026-11-10",
+   "note": "DRAWN but NOT DETERMINABLE. The three printed ions pin the two ester chains at a+b = 18.993 carbons total (residual -0.007 from 19), on TREN with three arms. But mass cannot see connectivity: 11+8 and 10+9 are isomeric, as is every branch position, and the SI raster is 137 dpi. No structure is recorded rather than a guessed one.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "20D8i",
+   "source_figure": "Supplementary Figure 2 (SI p.16), product panel",
+   "read_on": "2026-11-10",
+   "note": "DRAWN but NOT DETERMINABLE. M = 1878.58 +/- 0.41 Da from the printed [M+3H]3+ and [M+2H]2+. Amine 20 is a branched polyamidoamine whose core and arm count were not resolved at 137 dpi, so the arithmetic has two unknowns and is not solvable.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "DOPE",
+   "source_figure": "Supplementary Table 3 (SI p.11-13) -- NAMED only",
+   "read_on": "2026-11-10",
+   "note": "No anchor is possible from this paper: Supp Table 3 gives the NAME and the mol%, and Supplementary Figure 2 draws only the three nDm products. Recorded instead in 07_qc.json: all six names resolve identically in provenance/reagent_registry.py and in the live corpus, 6/6 by FULL InChIKey.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "Cholesterol",
+   "source_figure": "Supplementary Table 3 (SI p.11-13) -- NAMED only",
+   "read_on": "2026-11-10",
+   "note": "No anchor is possible from this paper: Supp Table 3 gives the NAME and the mol%, and Supplementary Figure 2 draws only the three nDm products. Recorded instead in 07_qc.json: all six names resolve identically in provenance/reagent_registry.py and in the live corpus, 6/6 by FULL InChIKey.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "DSPC",
+   "source_figure": "Supplementary Table 3 (SI p.11-13) -- NAMED only",
+   "read_on": "2026-11-10",
+   "note": "No anchor is possible from this paper: Supp Table 3 gives the NAME and the mol%, and Supplementary Figure 2 draws only the three nDm products. Recorded instead in 07_qc.json: all six names resolve identically in provenance/reagent_registry.py and in the live corpus, 6/6 by FULL InChIKey.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "SM-102",
+   "source_figure": "Supplementary Table 3 (SI p.11-13) -- NAMED only",
+   "read_on": "2026-11-10",
+   "note": "No anchor is possible from this paper: Supp Table 3 gives the NAME and the mol%, and Supplementary Figure 2 draws only the three nDm products. Recorded instead in 07_qc.json: all six names resolve identically in provenance/reagent_registry.py and in the live corpus, 6/6 by FULL InChIKey.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "DLin-MC3-DMA",
+   "source_figure": "Supplementary Table 3 (SI p.11-13) -- NAMED only",
+   "read_on": "2026-11-10",
+   "note": "No anchor is possible from this paper: Supp Table 3 gives the NAME and the mol%, and Supplementary Figure 2 draws only the three nDm products. Recorded instead in 07_qc.json: all six names resolve identically in provenance/reagent_registry.py and in the live corpus, 6/6 by FULL InChIKey.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "mitchellmj_41603124",
+   "lipid_name": "ALC-0315",
+   "source_figure": "Supplementary Table 3 (SI p.11-13) -- NAMED only",
+   "read_on": "2026-11-10",
+   "note": "No anchor is possible from this paper: Supp Table 3 gives the NAME and the mol%, and Supplementary Figure 2 draws only the three nDm products. Recorded instead in 07_qc.json: all six names resolve identically in provenance/reagent_registry.py and in the live corpus, 6/6 by FULL InChIKey.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "namjh_39264000",
+   "lipid_name": "FH-5-EB-5T-1",
+   "source_figure": "SI section 1.2.5.1 / 1.2.5.2 (IUPAC names of compounds 4-7) and SI Figure S9 (HRMS)",
+   "read_on": "2026-11-10",
+   "note": "The paper specifies this member completely: an IUPAC name for the protected precursor, a 1H and a 13C NMR spectrum (Figures S5-S8) and an HRMS peak (Figure S9). It is the only member with an external anchor of any kind.",
+   "reference_inchikey": "RCLOSQNJIDJDJR-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RCLOSQNJIDJDJR-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "namjh_39264000",
+   "lipid_name": "FH-5-EB-5T-2",
+   "source_figure": "SI section 1.2.5.1 / 1.2.5.2 (IUPAC names of compounds 4-7) and SI Figure S9 (HRMS)",
+   "read_on": "2026-11-10",
+   "note": "The paper specifies this member completely: an IUPAC name for the protected precursor, a 1H and a 13C NMR spectrum (Figures S5-S8) and an HRMS peak (Figure S9). It is the only member with an external anchor of any kind.",
+   "reference_inchikey": "KHHPWFLXQHXBJR-UHFFFAOYSA-N",
+   "enumerated_inchikey": "KHHPWFLXQHXBJR-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "namjh_39264000",
+   "lipid_name": "FH-1 / FH-2 / FH-4 / FH-6 and EB-6 / EB-7 members",
+   "source_figure": "none",
+   "read_on": "2026-11-10",
+   "note": "DELIBERATELY EMPTY so the ABSENCE is visible. 24 of the 36 enumerated members contain at least one block that the paper names in no synthetic procedure, no reagent list, no NMR assignment and no mass spectrum. Their only evidence is the Fig 3a drawing. C10 therefore tests 2 of 36 members against external ground truth, and the other 34 rest on stage01's tracer, which is itself calibrated on the five blocks the SI does name.",
+   "status": "NO_DRAWN_STRUCTURE"
   },
   {
    "paper": "ng_2025",
@@ -204,6 +1586,357 @@
    "anchor_may_be_a_copy": "stored reference is byte-identical to the enumeration and already canonical, and this folder has no make_reference.py showing a separate derivation. An anchor copied from the enumeration can only pass (F-013). Byte-equality is not proof of a copy -- two correct routes give the same canonical SMILES -- so this is a prompt to confirm, not a failure."
   },
   {
+   "paper": "pabst_37602460",
+   "lipid_name": "3NB8",
+   "source_figure": "Figure 1A: the reaction scheme's own product panel (tris(2-aminoethyl)amine, six acrylates, then CH3I) combined with the 'R = 8' n-butyl drawing in the Linear tail box",
+   "read_on": "2026-11-10",
+   "note": "Walked off the drawing as an explicit atom/bond table: centre N, three 2-carbon arms to three outer N, two N-CH2-CH2-C(=O)-O-butyl tails on each outer N, then a methyl and a '+' on all four nitrogens. No SMILES string exists anywhere in make_reference.py, so there is nothing for a transcription to hide in (F-013, F-037). | anchor InChIKey == the enumeration's | anchor formula C52H102N4O12+4",
+   "reference_inchikey": "JPCJDVVBMIONRC-UHFFFAOYSA-N",
+   "enumerated_inchikey": "JPCJDVVBMIONRC-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "pabst_37602460",
+   "lipid_name": "4NC6B",
+   "source_figure": "Figure 1A: the 'Cyclic' headgroup box (cyclam, ring spacers 3,2,3,2 carbons) combined with the '6B' tert-butyl drawing in the Branched/cyclic tail box",
+   "read_on": "2026-11-10",
+   "note": "Same atom/bond-table route, chosen to exercise a RING nitrogen bearing two ring bonds plus an arm plus a methyl, and a branched tail -- neither of which the 3NB8 anchor touches. | anchor InChIKey == the enumeration's | anchor formula C42H84N4O8+4",
+   "reference_inchikey": "VLRQOBJDSPWRJN-UHFFFAOYSA-N",
+   "enumerated_inchikey": "VLRQOBJDSPWRJN-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "pabst_37602460",
+   "lipid_name": "4NC9",
+   "source_figure": "SI Figure S1 panel (E), page S5: the full structure of 4NC9 drawn with NMR assignments, whose d/b'/d and d/d proton labels state the cyclam ring spacers explicitly; methylation from Figure 1A's product panel",
+   "read_on": "2026-11-10",
+   "note": "Read from a DIFFERENT figure in a DIFFERENT document than the other two anchors, and walked the way that panel labels its carbons. SI pages S3-S8 carry no text layer, so this structure exists only as a raster and could not have been copied from anything machine-readable. | anchor InChIKey == the enumeration's | anchor formula C46H92N4O8+4",
+   "reference_inchikey": "DRXVAAYQHSCXCU-UHFFFAOYSA-N",
+   "enumerated_inchikey": "DRXVAAYQHSCXCU-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "palczewski_41654520",
+   "lipid_name": "CBB21",
+   "source_figure": "Supplementary Figure 1, SI p2 (the left-hand structure, drawn in full)",
+   "read_on": "2026-11-10",
+   "note": "CBB21 is the only CBB-series compound the paper draws completely; CBB1-CBB20 are drawn as Markush cells, which stage07_qc.py P10 checks instead. Read arm-first from the drawing: the methyl sits on the ring carbon adjacent to the central methine and three bonds from the N(ethyl)(benzyl), and the sulfonamide is meta to the benzylic CH2.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "palczewski_41654520",
+   "lipid_name": "CBBZ0",
+   "source_figure": "Supplementary Figure 3, SI p4 (the product structure, drawn in full)",
+   "read_on": "2026-11-10",
+   "note": "SI Fig 3 draws this as the N-protonated cation with both sulfonic acids as HO-SO2-. The anchor is the NEUTRAL free acid -- the same connectivity, deprotonated at the imine -- because that is what the CBBZ IUPAC names state and what the [M+H]+ HRMS of CBBZ1-CBBZ10 confirms. Connectivity is unaffected, so the skeleton must match exactly; only the protonation differs from the drawing.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 14",
+   "source_figure": "SI p.17 Supp Fig 15",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: NO IUPAC NAME IN THIS SI. Read from the drawn product in Supplementary Figure 15, row 1 column 1, and from its drawn reagent 4-(dimethylamino)butyric acid. No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C56H110N2O6.",
+   "reference_inchikey": "NGUVKPMCPAGUDU-UHFFFAOYSA-N",
+   "enumerated_inchikey": "NGUVKPMCPAGUDU-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 32",
+   "source_figure": "SI p.21",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((3-(3-(Dimethylamino)propoxy)-3-oxopropyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C56H110N2O6.",
+   "reference_inchikey": "ULKFUNOAYNKZLN-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ULKFUNOAYNKZLN-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 33",
+   "source_figure": "SI p.23",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: 11-(8-((2-hexyldecanoyl)oxy)octyl)-2-methyl-7-oxo-6,8-dioxa-2,11-diazanonadecan-19-yl 2-hexyldecanoate (walked N11->C10,C9,O8,C7(=O),O6,C5,C4,C3,N2+2-methyl) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C56H110N2O7.",
+   "reference_inchikey": "PMULVGNURIBRIX-UHFFFAOYSA-N",
+   "enumerated_inchikey": "PMULVGNURIBRIX-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 34",
+   "source_figure": "SI p.25",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((2-(4-(dimethylamino)butanamido)ethyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C56H111N3O5.",
+   "reference_inchikey": "HAFKSAKVBJJESI-UHFFFAOYSA-N",
+   "enumerated_inchikey": "HAFKSAKVBJJESI-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 35",
+   "source_figure": "SI p.27",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: 11-(8-((2-hexyldecanoyl)oxy)octyl)-2-methyl-7-oxo-2,6,8,11-tetraazanonadecan-19-yl 2-hexyldecanoate (walked N11->C10,C9,N8,C7(=O),N6,C5,C4,C3,N2+2-methyl) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C56H112N4O5.",
+   "reference_inchikey": "ROZXFZTXELGMIU-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ROZXFZTXELGMIU-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 36",
+   "source_figure": "SI p.29",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((3-((3-(Dimethylamino)propyl)amino)-3-oxopropyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C56H111N3O5.",
+   "reference_inchikey": "QBUSOABUXUOBHH-UHFFFAOYSA-N",
+   "enumerated_inchikey": "QBUSOABUXUOBHH-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 37",
+   "source_figure": "SI p.31",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((2-((3-(4-Methylpiperazin-1-yl)propanoyl)oxy)ethyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C58H113N3O6.",
+   "reference_inchikey": "RXEXYHGDQQZUCV-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RXEXYHGDQQZUCV-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 38",
+   "source_figure": "SI p.33",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((3-(2-(4-Methylpiperazin-1-yl)ethoxy)-3-oxopropyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C58H113N3O6.",
+   "reference_inchikey": "BGOSJQPLGAPLPI-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BGOSJQPLGAPLPI-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 39",
+   "source_figure": "SI p.35",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((2-(((2-(4-methylpiperazin-1-yl)ethoxy)carbonyl)oxy)ethyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C58H113N3O7.",
+   "reference_inchikey": "ABHOLZINEYYOBY-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ABHOLZINEYYOBY-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 40",
+   "source_figure": "SI p.37",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((2-(3-(4-methylpiperazin-1-yl)propanamido)ethyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C58H114N4O5.",
+   "reference_inchikey": "GAJJHWIJGQGRJH-UHFFFAOYSA-N",
+   "enumerated_inchikey": "GAJJHWIJGQGRJH-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 41",
+   "source_figure": "SI p.39",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((2-(3-(2-(4-methylpiperazin-1-yl)ethyl)ureido)ethyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C58H115N5O5.",
+   "reference_inchikey": "BYAWBVQVCGVHDG-UHFFFAOYSA-N",
+   "enumerated_inchikey": "BYAWBVQVCGVHDG-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 42",
+   "source_figure": "SI p.41",
+   "read_on": "2026-11-10",
+   "note": "Anchor composed character-by-character from: ((3-((2-(4-Methylpiperazin-1-yl)ethyl)amino)-3-oxopropyl)azanediyl)bis(octane-8,1-diyl) bis(2-hexyldecanoate) No curation/lib import, no RWMol, no esterify/attach, no rewriting of a canonical SMILES. Stereochemistry is deliberately ABSENT: the two 2-hexyldecanoate C2 centres are drawn flat everywhere in the paper and the reagent is a racemate, so an anchor carrying a configuration would assert something the source does not. formula C58H114N4O5.",
+   "reference_inchikey": "ITEBURWPEMEYOC-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ITEBURWPEMEYOC-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peer_39912611",
+   "lipid_name": "Lipid 14 (as published in ref 41)",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR FROM THIS PAPER'S OWN CHARACTERISATION. Lipid 14 has no synthesis write-up, no IUPAC name, no NMR and no ESI-MS in this SI; it is cited to the authors' earlier work. The Lipid 14 row above is anchored on the SCHEME DRAWING only. An independent corroboration exists outside this paper and is recorded in 08_contradictions.csv row 1: ZT_2026's Lipid 14-CB1/2/3 in data/data_vivo.csv carry this exact scaffold with the same C4 acid.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 1",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. The SI draws the scheme but never writes a full IUPAC name for Lipid 1; its structure is stated only as 'N,N-dilinoleyl hydrazide' acylated with dimethylaminobutyric acid.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 2",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Same as Lipid 1: named only through its two reagents.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 3",
+   "source_figure": "SI p.7, scheme 'Synthesis of Lipid 11 & 3' + full IUPAC name in the paragraph heading",
+   "read_on": "2026-11-10",
+   "note": "Head first: dimethylamino N, then the hydrazine N-N, then each heptane-7,1-diyl out to its decanoate. The enumerator builds the opposite way, decanoate inward.",
+   "reference_inchikey": "FHLGXYGRJTUYSF-UHFFFAOYSA-N",
+   "enumerated_inchikey": "FHLGXYGRJTUYSF-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 4",
+   "source_figure": "SI p.12, drawn structure + full IUPAC name in the paragraph heading",
+   "read_on": "2026-11-10",
+   "note": "Chosen deliberately as one of the two anchors carrying C=C geometry. Contradiction C-05 is about this compound: its printed olefinic integral says four C=C, its two precursors and its mass say two, and this anchor encodes two.",
+   "reference_inchikey": "PNSOECQTDFXNJH-MPKYGIEOSA-N",
+   "enumerated_inchikey": "PNSOECQTDFXNJH-MPKYGIEOSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 5",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named in full, but it shares the 2-hexyldecanoate branch with Lipid 14 and the hydrazine core with Lipid 3, both anchored; no feature of Lipid 5 is unanchored.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 6",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named only as HyAM-1 O-acylated; the N-O motif is anchored by Lipid 7.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 7",
+   "source_figure": "SI p.23, drawn structure + full IUPAC name in the paragraph heading",
+   "read_on": "2026-11-10",
+   "note": "The N-O bond is the feature worth anchoring: Lipid 7 and Lipid 13 differ ONLY in whether the head ester hangs off the nitrogen's own oxygen (7) or off an N-CH2CH2-O arm (13), which no mass check can distinguish -- both are C52/C54 homologues with different formulae but identical topology elsewhere.",
+   "reference_inchikey": "RVAWZYFGAJYABG-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RVAWZYFGAJYABG-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 8",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named only as EA-1 O-acylated; the N-CH2CH2-O motif is anchored by Lipid 14.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 9",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named only through its route (EA-OMs + the alkoxide). The ETHER linkage is unique to Lipid 9 and is therefore the one connectivity in this paper with NO anchor -- see DECISIONS.md D-3.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 10",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named only as EA-1 O-acylated with the piperazine acid.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 11",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named in full; the motif is anchored by Lipid 3 (heptyl decanoate arms) and Lipid 14 (the N-CH2CH2-O head ester).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 12",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named in full; differs from the Lipid 4 anchor only in double-bond POSITION (non-3-enyl vs non-2-enyl), which no anchor can test independently -- DECISIONS.md D-2.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 13",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR. Named in full and labelled EA-402; anchored in motif by Lipid 7 (tridecan-7-yl decanoate) and Lipid 14 (the N-CH2CH2-O head ester).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "peerd_31999380",
+   "lipid_name": "Lipid 14",
+   "source_figure": "SI p.36, drawn structure + full IUPAC name in the paragraph heading",
+   "read_on": "2026-11-10",
+   "note": "Anchors the branch point: 2-hexyldecanoate puts a hexyl on C2 of a decanoate. A straight C16 acid has the same formula and the same exact mass, so ONLY a topology comparison can tell them apart.",
+   "reference_inchikey": "NGUVKPMCPAGUDU-UHFFFAOYSA-N",
+   "enumerated_inchikey": "NGUVKPMCPAGUDU-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
    "paper": "ql_2026",
    "lipid_name": "T3A-L5-C10",
    "source_figure": "Fig 2a blocks + Methods",
@@ -214,6 +1947,86 @@
    "skeleton_match": true,
    "stereo_match": true,
    "status": "exact_match"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "LC-1",
+   "source_figure": "Fig. 1l (leftmost structure) + Supplementary Table 5 (five-step synthesis with CAS numbers)",
+   "read_on": "2026-11-10",
+   "note": "Assembled from the SYNTHESIS, not from the block figure: 2-hexylundecanoic acid esterified onto N-(6-hydroxyhexyl)-3,3-dimethylbutanamide (assemble.esterify), then bonded to N-[3-(pyrrolidin-1-yl)propyl]tetradecanamide at its amide nitrogen (assemble.attach, by atom map). No reaction SMARTS and no block from 01_blocks.csv is used here, which is what makes this independent of stage03_enumerate.py. The Ugi stereocentre is left unassigned in both routes: the reaction is not stereoselective and the paper reports no resolution.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "SC-1",
+   "source_figure": "Fig. 1g",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "SC-2",
+   "source_figure": "Fig. 1g",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "SC-3",
+   "source_figure": "Fig. 1g",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "SC-4",
+   "source_figure": "Fig. 1g",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "SC-5",
+   "source_figure": "Fig. 1g",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "LC-2",
+   "source_figure": "Fig. 1l",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "LC-3",
+   "source_figure": "Fig. 1l",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "LC-4",
+   "source_figure": "Fig. 1l",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "sd_2026",
+   "lipid_name": "LC-5",
+   "source_figure": "Fig. 1l",
+   "read_on": "2026-11-10",
+   "note": "The paper DOES draw this structure, but this curation has not determined which of the 384 enumerated members it is -- the SI's printed formula matches between 2 and 12 members in every case, and mass cannot choose among them. The anchor is therefore left EMPTY on purpose so the gap is visible; see DECISIONS.md D-2. Only LC-1 is pinned, by Supplementary Table 5's CAS numbers.",
+   "status": "NO_DRAWN_STRUCTURE"
   },
   {
    "paper": "siegwart_40644303",
@@ -248,6 +2061,46 @@
    "stereo_match": true,
    "status": "exact_match",
    "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "siegwartdj_42150080",
+   "lipid_name": "6A1-SC8",
+   "source_figure": "none - SI Fig S1 is 1H-NMR (A) and an LC/MS isotope cluster (B); the SI contains no drawn structure, no scheme and no synthesis figure",
+   "read_on": "2026-11-10",
+   "note": "ANCHOR ABSENT ON PURPOSE. The paper draws no structure, so there is nothing to compare topology against; all 11 figure captions were scanned and none announces drawn chemistry. What the SI does supply is a COMPOSITION anchor, recorded in 07_qc.json: the caption's formula C110H203N5O24S6 matches the corpus structure for 6A1-SC8 element-for-element (5/5, q1), and that structure's predicted [M+2H]2+ ladder matches 5/5 m/z labels drawn inside Fig S1B to within 3.23 ppm (q4, charge state z=2 derived from the 0.5006 Da isotope spacing, which the caption never states). NMR integral ratios match the structure's own H counts 2/2 within 5% (q6). Mass and integrals cannot see connectivity: nothing here constrains which core nitrogen bears which arm. Do NOT fill this cell with the corpus SMILES - C10 would then be comparing the corpus to itself, which is F-013 exactly.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "songx_39664425",
+   "lipid_name": "(none)",
+   "source_figure": "Fig. 1 (reprint of PMID 38740955)",
+   "read_on": "2026-11-10",
+   "note": "This article draws no structure of its own. Every structure in Fig. 1 is part of a raster reprinted from PMID 38740955 under licence (caption xref -> bib1). A C10 anchor built from this figure would anchor BL_2024, not this paper. Empty reference_SMILES recorded so the ABSENCE of an anchor is visible rather than silent, per CLAUDE.md section 6.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "whiteheadka_30637934",
+   "lipid_name": "306O10",
+   "source_figure": "SI p.2 Methods, reagent names: 3,3-Diamino-N-methyldipropylamine (306) + decyl acrylate; tetra-substituted at 1:4 amine:acrylate",
+   "read_on": "2026-11-10",
+   "note": "Anchor typed as a source string literal, head-first traversal, no assembler imported (verified at run time by assert_no_assembler). full InChIKey MATCH; skeleton match. Byte-identity to the enumeration is NOT the independence signal (F-037); provenance is.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "whiteheadka_30637934",
+   "lipid_name": "306Oi10",
+   "source_figure": "SI p.2 Methods, reagent names: 306 + ISODECYL acrylate, written as 8-methylnonyl; the specific branch is a convention, see D-4",
+   "read_on": "2026-11-10",
+   "note": "Anchor typed as a source string literal, head-first traversal, no assembler imported (verified at run time by assert_no_assembler). full InChIKey MATCH; skeleton match. Byte-identity to the enumeration is NOT the independence signal (F-037); provenance is.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "whiteheadka_30637934",
+   "lipid_name": "306O18",
+   "source_figure": "SI p.2 Methods, reagent names: 306 + octadecyl acrylate",
+   "read_on": "2026-11-10",
+   "note": "Anchor typed as a source string literal, head-first traversal, no assembler imported (verified at run time by assert_no_assembler). full InChIKey MATCH; skeleton match. Byte-identity to the enumeration is NOT the independence signal (F-037); provenance is.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
   },
   {
    "paper": "whiteheadka_38888972",
@@ -393,6 +2246,377 @@
    "source_figure": "Fig 5A",
    "read_on": "2026-10-29",
    "note": "No external anchor - see E1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xuq_23651337",
+   "lipid_name": "oleyl acrylamide",
+   "source_figure": "NOT DRAWN -- chemical name only, in the published abstract ('the Michael addition of amines to oleyl acrylamide')",
+   "read_on": "2026-11-10",
+   "note": "Built from the chemical name by pure string construction, methyl-end-first, with no assembler import and no RWMol/AddBond/RemoveAtom/CombineMols call -- verified by an AST walk of make_reference.py at run time. Anchors the TAIL REAGENT, not a library member.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "xuq_23651337",
+   "lipid_name": "n-octadecyl acrylamide",
+   "source_figure": "NOT DRAWN -- the abstract names only 'n-octadecyl tails'; the acrylamide linkage is parallel construction, corroborated by AA_2008's N18 series (02_corpus_overlap.json d1: 43/43)",
+   "read_on": "2026-11-10",
+   "note": "Same route as the oleyl anchor. The LINKAGE is an assumed feature of this paper; the STRUCTURE for the name is externally attested by 43 independently curated AA_2008 N18 lipids.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "xuq_23651337",
+   "lipid_name": "lipidoid 1-16 (the library itself)",
+   "source_figure": "NONE. The SI draws no structure; the main article is unobtainable (ACS subscription, no PMC deposit).",
+   "read_on": "2026-11-10",
+   "note": "EMPTY ON PURPOSE so the absence is visible. The 16 amine heads are not named, drawn or formulated anywhere in the SI, so no lipidoid is enumerable and there is nothing for an anchor to test.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xuq_24574196",
+   "lipid_name": "1-O16",
+   "source_figure": "SI p.3, 1H NMR assignment list (this SI draws no structure anywhere; see note)",
+   "read_on": "2026-11-10",
+   "note": "Head-first (reversed) traversal from source string literals; this module imports no assembler and no stage module. Byte-identity to the enumeration after canonicalisation is EXPECTED and is not evidence of copying (F-037). Anchored to the printed NMR assignment list, not to a drawn structure -- this SI contains no structural drawing at all, which is weaker ground truth than C10 normally rests on.",
+   "reference_inchikey": "ULZCWFRFMLJWOX-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ULZCWFRFMLJWOX-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_24574196",
+   "lipid_name": "1-O16B",
+   "source_figure": "SI p.3, 1H NMR assignment list (this SI draws no structure anywhere; see note)",
+   "read_on": "2026-11-10",
+   "note": "Head-first (reversed) traversal from source string literals; this module imports no assembler and no stage module. Byte-identity to the enumeration after canonicalisation is EXPECTED and is not evidence of copying (F-037). Anchored to the printed NMR assignment list, not to a drawn structure -- this SI contains no structural drawing at all, which is weaker ground truth than C10 normally rests on.",
+   "reference_inchikey": "KEEDANUIQHUIOP-UHFFFAOYSA-N",
+   "enumerated_inchikey": "KEEDANUIQHUIOP-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_24574196",
+   "lipid_name": "1-O14B",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named in SI p.2 but no structure, formula, NMR or drawing exists for it anywhere in this SI. Stored empty so the ABSENCE is visible rather than silent. These two structures are extrapolations and carry confidence = medium, structure_assumed = 1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xuq_24574196",
+   "lipid_name": "1-O18B",
+   "source_figure": "",
+   "read_on": "2026-11-10",
+   "note": "NO ANCHOR: named in SI p.2 but no structure, formula, NMR or drawing exists for it anywhere in this SI. Stored empty so the ABSENCE is visible rather than silent. These two structures are extrapolations and carry confidence = medium, structure_assumed = 1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "xuq_32438474",
+   "lipid_name": "75-OCholB",
+   "source_figure": "Fig 1A",
+   "read_on": "2026-11-10",
+   "note": "head 75 and the full OCholB tail are both DRAWN in Figure 1A of the paper (PMC raster nihms-1624779-f0002.jpg). Built here rooted at the sterol by string substitution on provenance/reagent_registry.py's cholesterol; no RWMol, no AddBond, no RemoveAtom, no atom maps.",
+   "reference_inchikey": "DJTQBUZZHGVRLY-VPFIMMEOSA-N",
+   "enumerated_inchikey": "DJTQBUZZHGVRLY-VPFIMMEOSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32438474",
+   "lipid_name": "304-OCholB",
+   "source_figure": "Fig 2A + Fig 1A",
+   "read_on": "2026-11-10",
+   "note": "head 304 is DRAWN in Figure 2A (nihms-1624779-f0003.jpg); the OCholB tail is DRAWN in Figure 1A. 304 is anchored because it is the one head whose drawing is genuinely ambiguous -- its two upper arms close visually into what reads as a piperazine. Three arms, from three N-methyl secondary amines; the S6 in the SI's own [M+H]+ formula is the independent witness that there are three.",
+   "reference_inchikey": "JCMMWCCNWNGDDV-NXFCNUGQSA-N",
+   "enumerated_inchikey": "JCMMWCCNWNGDDV-NXFCNUGQSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "75-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "WSZOYDRWFJGICF-UHFFFAOYSA-N",
+   "enumerated_inchikey": "WSZOYDRWFJGICF-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "76-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "RMZSGCUXIYLCOE-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RMZSGCUXIYLCOE-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "77-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "As the other ten, and additionally: amine 77's pyrrolidine C2 is a genuine stereocentre drawn flat in Figure 1C; the anchor is flat too, so it cannot test a configuration the paper never states.",
+   "reference_inchikey": "MKODPXIYOAPYKM-UHFFFAOYSA-N",
+   "enumerated_inchikey": "MKODPXIYOAPYKM-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "78-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "AAYDXUIQYPVVHK-UHFFFAOYSA-N",
+   "enumerated_inchikey": "AAYDXUIQYPVVHK-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "80-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "DCHGAHGDUATDEI-UHFFFAOYSA-N",
+   "enumerated_inchikey": "DCHGAHGDUATDEI-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "81-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "JRDBWEJYUYRTDZ-UHFFFAOYSA-N",
+   "enumerated_inchikey": "JRDBWEJYUYRTDZ-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "82-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "ZKXMQFVWURUAFG-UHFFFAOYSA-N",
+   "enumerated_inchikey": "ZKXMQFVWURUAFG-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "93-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "RCBQJDQSGGDAOA-UHFFFAOYSA-N",
+   "enumerated_inchikey": "RCBQJDQSGGDAOA-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "113-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "UADGBEBTTDIGDS-UHFFFAOYSA-N",
+   "enumerated_inchikey": "UADGBEBTTDIGDS-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "306-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "LNEWDYQYDLBMAL-UHFFFAOYSA-N",
+   "enumerated_inchikey": "LNEWDYQYDLBMAL-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32520527",
+   "lipid_name": "400-O16CBA",
+   "source_figure": "Figure 1B (O16CBA tail, drawn in full) + Figure 1C (amine head, drawn in full); arm count from Figure 2F's printed molecular formula",
+   "read_on": "2026-11-10",
+   "note": "COMPOSED ANCHOR, not a drawn whole: the paper draws the amine head in full (Figure 1C) and the O16CBA tail in full (Figure 1B) but draws the lipidoid only as R-N[tail]2, so no complete structure is drawn anywhere. Built here by plain string substitution of a hand-written arm into a hand-written head template, in a different traversal from stage03_enumerate.py and with no RDKit assembly call; the arm count is the one Figure 2F's printed molecular formula forces. Stereochemistry is absent on purpose: the 1,3-dioxane's C2/C5 cis-trans relationship is never drawn (DECISIONS.md D-2).",
+   "reference_inchikey": "HKARBGOUBZLDKK-UHFFFAOYSA-N",
+   "enumerated_inchikey": "HKARBGOUBZLDKK-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match",
+   "anchor_derivation": "make_reference.py"
+  },
+  {
+   "paper": "xuq_32662132",
+   "lipid_name": "93-O17S",
+   "source_figure": "NO FIGURE. Written from chemical names: SI section 1.2 (tail) + SI section 1.5 (1 amine : 2.4 acrylate, 70 C, 48 h) + the head identity established outside this paper.",
+   "read_on": "2026-11-10",
+   "note": "The two arms are typed with DIFFERENT bracketings on purpose so the string is not a copy of either half of the enumeration. Independence is by provenance (see this file's docstring and --provenance), not by byte difference: F-037 showed byte-identity is not the signal.",
+   "reference_inchikey": "OLOIOPYNTGMAAP-UHFFFAOYSA-N",
+   "enumerated_inchikey": "OLOIOPYNTGMAAP-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "xuq_32662132",
+   "lipid_name": "9322-O17S",
+   "source_figure": "NO FIGURE IN THIS PAPER. Head from corpus attestation (IL_head_name 'A9322', 22 YR_2024 rows, one structure under the guarded lookup); tail from SI section 1.2; stoichiometry from SI 1.5. CONFIRMED against this paper's own Figure S1 by axis geometry (09_figS1_mass_test.json).",
+   "read_on": "2026-11-10",
+   "note": "RECOVERED 2026-11-10. The first pass recorded this head as unobtainable and that was wrong - see 08_retracted_suspicions.csv R-06. The ring is typed from the 2-methyl carbon inward; independence is by provenance, not by byte difference (F-037).",
+   "reference_inchikey": "SHBIMSDERKUSIM-UHFFFAOYSA-N",
+   "enumerated_inchikey": "SHBIMSDERKUSIM-UHFFFAOYSA-N",
+   "skeleton_match": true,
+   "stereo_match": true,
+   "status": "exact_match"
+  },
+  {
+   "paper": "xuq_32662132",
+   "lipid_name": "93xx analogue series (17 heads)",
+   "source_figure": "NONE AVAILABLE",
+   "read_on": "2026-11-10",
+   "note": "ANCHOR ABSENT, DELIBERATELY VISIBLE. 9310-9316, 9321-9324, 9331-9334, 9341, 9351, 9352 are named on the Figure S4 and S5 axes and drawn nowhere we can reach. None is enumerated.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangn_42569578",
+   "lipid_name": "ALC-0315",
+   "source_figure": "none - no structure is drawn in this paper",
+   "read_on": "2026-11-10",
+   "note": "The paper draws no chemical structure: Fig 1 and the graphical abstract show cartoon lipid blobs, Figs 2-7 are DLS/SHAP/bar/IVIS panels. Catalogue reagent, no anchor available. Structure taken from provenance/reagent_registry.py (written from the IUPAC name).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangn_42569578",
+   "lipid_name": "SM-102",
+   "source_figure": "none - no structure is drawn in this paper",
+   "read_on": "2026-11-10",
+   "note": "The paper draws no chemical structure: Fig 1 and the graphical abstract show cartoon lipid blobs, Figs 2-7 are DLS/SHAP/bar/IVIS panels. Catalogue reagent, no anchor available. Structure taken from provenance/reagent_registry.py (written from the IUPAC name).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangn_42569578",
+   "lipid_name": "MC-3 (DLin-MC3-DMA)",
+   "source_figure": "none - no structure is drawn in this paper",
+   "read_on": "2026-11-10",
+   "note": "The paper draws no chemical structure: Fig 1 and the graphical abstract show cartoon lipid blobs, Figs 2-7 are DLS/SHAP/bar/IVIS panels. Catalogue reagent, no anchor available. Structure taken from provenance/reagent_registry.py (written from the IUPAC name).",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangn_42569578",
+   "lipid_name": "CKK-E12",
+   "source_figure": "none - no structure is drawn in this paper",
+   "read_on": "2026-11-10",
+   "note": "The paper draws no chemical structure: Fig 1 and the graphical abstract show cartoon lipid blobs, Figs 2-7 are DLS/SHAP/bar/IVIS panels. Catalogue reagent, no anchor available. Structure taken from the live corpus via curation/corpus_components.smi -- NOT INDEPENDENT, so its corpus InChIKey agreement is circular and is not counted.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VE-AC",
+   "source_figure": "Figure S1b (SI page 4), structure of the acrylate intermediate; exact mass in Figure S2(a) caption",
+   "read_on": "2026-11-10",
+   "note": "The only structure this paper draws in full. Built in this file as a source string literal typed tail-end first, the reverse of stage03b_structures.py's traversal; this module imports no assembler. The two 4'/8' side-chain centres are left UNASSIGNED on both sides because the paper names no isomer, so C10 must compare on a stereo-tolerant basis for those two centres while C2 (2R) is asserted.",
+   "status": "ENUMERATED_STRUCTURE_NOT_FOUND"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN2C1",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (h); the paper's LEAD compound)",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN2C2",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (d))",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN2C3",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (named only in the Figure S5 legend; no HRMS panel at all)",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN2C4",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (c))",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN3C1",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (f))",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN3C2",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (e))",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "VN3C2O",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (b))",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
+   "status": "NO_DRAWN_STRUCTURE"
+  },
+  {
+   "paper": "zhangz_40433897",
+   "lipid_name": "PANEL-G (label disputed)",
+   "source_figure": "NONE - no structure of this compound is drawn anywhere in the SI (panel (g); duplicate label, see 08_contradictions.csv X-1)",
+   "read_on": "2026-11-10",
+   "note": "Figure S1b draws the product with a generic R group and Figure S2 shows only NMR/HRMS traces. The structure in 03_enumerated.csv, where present, is PROPOSED from the HRMS formula plus the Figure S1a CAS list - it is not a reading of a drawing, so there is nothing independent for C10 to compare it against. See DECISIONS.md D-1.",
    "status": "NO_DRAWN_STRUCTURE"
   }
  ]

@@ -205,8 +205,36 @@ def c4_replicates(rows):
     formulation fields and reported 1001 'contradictions', of which 746 simply
     differed in IL_to_nucleicacid_massratio, a real condition the key omitted.
     """
-    cols = [c for c in rows[0] if c not in
-            ("Index", "LNP_ID", "Formulation_ID", "Experiment_value")]
+    # A DERIVED COLUMN MUST NOT BE IN THE KEY. Until 2026-11-10 the only
+    # exclusions were Index/LNP_ID/Formulation_ID/Experiment_value, which left
+    # `Experiment_value_within_model` in -- a column computed FROM
+    # Experiment_value and distinct on 61% of vitro rows. Any two rows with
+    # different values therefore differed in the key, so C4 could not form a
+    # replicate group at all where that column was populated. It reported
+    # **1 replicate group and 0 conflicting ones across 29,195 vitro rows**;
+    # with the derived columns out of the key there are **341 groups, 340
+    # conflicting** (AC_2025 266, JW_2024 58, KW_2014 7, WT_2026 7, SP_2020 2).
+    #
+    # Found 2026-11-10, when blanking that column on 401 rows (F-080) made 10
+    # vivo groups appear and the baseline went red. The departure was not a new
+    # defect; it was the check starting to work. Same shape as F-080 itself: a
+    # check blinded by its own key, reporting clean. Error class 51.
+    #
+    # The descriptor columns are functions of IL_SMILES rather than of the
+    # value, so they are less harmful, but they are still derived and a stale
+    # one would split a genuine replicate pair. They go too.
+    DERIVED = {
+        "Index", "LNP_ID", "Formulation_ID", "Experiment_value",
+        "Experiment_value_within_model",
+        "Heavy.Atoms", "Rings", "Aromatic.Rings", "Rotatable.Bonds",
+        "ExactMolWt", "Topological.Polar.Surface.Area",
+        "Hydrogen.Bond.Donors", "Hydrogen.Bond.Acceptors", "LogP",
+        "Molar.Refractivity", "Fraction.sp3.Carbons", "sp3.Carbons",
+        "Nitrogen.Count", "Molecular.Weight", "Num_carbon_in_tail",
+        "num_protonatable_nitrogens", "num_permanent_cationic_N",
+        "formal_net_charge", "num_unsaturated_cc_bonds",
+    }
+    cols = [c for c in rows[0] if c not in DERIVED]
     by = defaultdict(list)
     for r in rows:
         by[tuple(r[c] for c in cols)].append(round(float(r["Experiment_value"]), 9))
@@ -397,61 +425,130 @@ def c9_stereo(rows):
 
 
 def c12_zscore_unit(rows):
-    """ERROR CLASS 22: the z-score was taken per (experiment x cell type).
+    """ERROR CLASS 22: the z-score was taken per BLOCK, not per experiment.
 
-    The corpus convention is ONE z-score per experiment. When a curation
-    standardizes each cell-type block separately instead, every block lands at
-    mean 0 and population sd 1, which forces the between-assay offset to
-    identically zero -- the quantity a reader would use to ask whether the same
-    lipid is more potent in HepG2 than in Ramos. It is not shrunk, it is
-    deleted, and the deletion is invisible to every other check because the
-    pooled block still sits at mean 0 / sd 1 (that is arithmetic, not evidence:
-    pooling blocks each at mean 0 / sd 1 gives mean 0 / sd 1).
+    The corpus convention is ONE z-score per experiment. When a curation (or an
+    upstream source) standardizes each block separately instead, every block
+    lands at mean 0 and population sd 1, which forces the between-block offset
+    to identically zero -- the quantity a reader would use to ask whether the
+    same lipid is more potent in HepG2 than in Ramos, or in liver than in
+    spleen. It is not shrunk, it is deleted, and the deletion is invisible to
+    every other check because the pooled block still sits at mean 0 / sd 1
+    (that is arithmetic, not evidence: pooling blocks each at mean 0 / sd 1
+    gives mean 0 / sd 1).
 
     Found four times by hand before this check existed -- ql_2026, WT_2026
-    (F-003), YX_2024 and LZ_2025 (F-016) -- and never once by a check, which is
-    why it is here. The signature is unmistakable and has no false positives on
-    the corpus: a correctly pooled experiment's cell-type blocks have no reason
-    to sit at mean 0 / sd 1 individually, and will not.
+    (F-003), YX_2024 and LZ_2025 (F-016) -- and never once by a check.
 
-    Reported against `value_normalization_unit`, so an experiment that DECLARES
-    itself per-cell-type is accounted for rather than re-reported forever: the
-    violation is a mismatch between what a row claims its normalization unit is
-    and what its numbers say it is.
+    IT THEN FAILED TO FIND A FIFTH, AND THAT IS WHY IT NOW LOOKS LIKE THIS.
+    Until 2026-11-10 this function partitioned on `Model_type` alone. **No
+    in-vivo experiment has more than one `Model_type`**, so it examined 0 of 20
+    in-vivo experiments and 3 of 43 in-vitro ones while reporting clean, and
+    `ZH_2023` (325 rows) and `BL_2023` (53) sat per-ORGAN standardised and
+    declaring `experiment` for the corpus's whole life (F-080). Worse,
+    `audit_baseline.json`'s vivo entry recorded the blind spot AS ITS OWN
+    JUSTIFICATION -- "no vivo experiment has more than one Model_type" -- which
+    is the F-027 pattern: a `why` field licensing a vacuous zero.
+
+    So: EVERY candidate partition column is tested, not one; `experiments_
+    checked` and per-key coverage are reported so the baseline can gate
+    coverage and not just violations; and the declaration test accepts a token
+    that names ANY ONE of the detected partitions, because a block key can be
+    several co-varying columns at once (`BL_2023`'s partition is reproduced
+    exactly by five of them, and a row can only name one).
+
+    TOLERANCE, measured rather than chosen. Under 1500 within-experiment
+    permutations of `Experiment_value` (pooled moments preserved, block labels
+    shuffled) the old 1e-3/5e-3 window fired on 12/1500 reps for
+    `YX_2024`/`Model_type` and 3/1500 for `ZH_2023`/`Model_target`: in a
+    two-block partition the block means must sum to zero, so they are perfectly
+    anti-correlated and it is ONE coincidence, not two, and at n=1200 a permuted
+    block mean has sd 0.029. At 1e-6/5e-6 the false-positive rate is 0/1500 in
+    both pools with all true positives still caught. The real hits sit at
+    8.3e-12 to 1.8e-7 and the nearest true negative at 0.345, so there are six
+    or more orders of headroom.
+
+    `nmin` is 2, NOT 3 or 5, with the partition required to contain at least one
+    block of n >= 3. Raising the floor "for safety" would have lost `BL_2023`
+    entirely -- its muscle block is n=4 and under a floor of 5 the partition
+    collapses to one usable block and is skipped. The experiment this check
+    exists to catch would have been the casualty of its own safety margin.
     """
+    # Every column that could carry the block key. Model_type first because it
+    # is the historical one, but it has no privileged status any more.
+    KEYS = ["Model_type", "Model_target", "Route_of_administration",
+            "Dose_ug_nucleicacid", "Dialysis_buffer", "Mixing_method",
+            "Aqueous_buffer", "Experiment_batching", "Cargo", "Cargo_type",
+            "Experiment_method", "Model"]
+    TOL_MEAN, TOL_SD = 1e-6, 5e-6
+
     by_exp = defaultdict(list)
     for r in rows:
         by_exp[r["Experiment_ID"]].append(r)
 
     flagged, declared, checked = {}, {}, 0
+    coverage = {k: 0 for k in KEYS}
     for eid, block in sorted(by_exp.items()):
-        cells = defaultdict(list)
+        pooled = []
         for r in block:
             try:
-                cells[r["Model_type"]].append(float(r["Experiment_value"]))
-            except ValueError:
+                pooled.append(float(r["Experiment_value"]))
+            except (ValueError, TypeError):
                 pass
-        usable = {c: v for c, v in cells.items() if len(v) >= 3}
-        if len(usable) < 2:
-            continue                      # one cell type: nothing to tell apart
-        pooled = [v for vs in cells.values() for v in vs]
+        if len(pooled) < 4:
+            continue
         if abs(st.mean(pooled)) > 5e-3 or abs(st.pstdev(pooled) - 1) > 0.05:
             continue                      # not on the z-score scale at all
-        checked += 1
-        # 1e-3 / 5e-3: the corpus stores values rounded, so an exactly
-        # standardized block reads as mean ~1e-6 and sd ~1-1e-7, while a pooled
-        # experiment's per-cell means are O(0.1-1). Three orders of margin.
-        if all(abs(st.mean(v)) < 1e-3 and abs(st.pstdev(v) - 1) < 5e-3
-               for v in usable.values()):
-            unit = {r.get("value_normalization_unit", "") for r in block}
-            flagged[eid] = {"rows": len(block),
-                            "blocks": {c: len(v) for c, v in sorted(usable.items())},
-                            "declared_unit": sorted(unit)}
-            if unit == {"experiment_x_model_type"}:
-                declared[eid] = len(block)
+        examined_this_exp = False
+        hits = {}
+        for key in KEYS:
+            cells = defaultdict(list)
+            for r in block:
+                try:
+                    cells[str(r.get(key, ""))].append(float(r["Experiment_value"]))
+                except (ValueError, TypeError):
+                    pass
+            usable = {c: v for c, v in cells.items() if len(v) >= 2}
+            if len(usable) < 2 or max(len(v) for v in usable.values()) < 3:
+                continue                  # nothing to tell apart on this key
+            coverage[key] += 1
+            examined_this_exp = True
+            if all(abs(st.mean(v)) < TOL_MEAN
+                   and abs(st.pstdev(v) - 1) < TOL_SD
+                   for v in usable.values()):
+                hits[key] = {c: len(v) for c, v in sorted(usable.items())}
+        if examined_this_exp:
+            checked += 1
+        if not hits:
+            continue
+        unit = {str(r.get("value_normalization_unit", "")) for r in block}
+        flagged[eid] = {"rows": len(block), "partitions": hits,
+                        "declared_unit": sorted(unit)}
+        # A declaration passes if it names ANY ONE of the detected partitions.
+        # Exact set equality against a single literal is what let NG_2025_2
+        # keep `experiment_x_model_type` while its block key was Model_target:
+        # the token was false and the test read it as a pass. Requiring the
+        # token to name EVERY detected partition is the opposite error -- it
+        # would make BL_2023, whose partition is five columns at once,
+        # permanently red.
+        # EVERY row must carry the per-block token, not just one of them. My
+        # first version of this test asked only whether SOME row named a
+        # detected partition, which would have let a single correct row excuse
+        # 324 wrong ones -- and would have made the seeded mutation below
+        # (flip ONE row's token back to `experiment`) pass. The original exact
+        # set equality had this right and was wrong only in comparing against
+        # one hard-coded literal. So: one token across the whole experiment,
+        # and that token must name one of the detected partitions.
+        if len(unit) == 1:
+            only = next(iter(unit))
+            if only.startswith("experiment_x_"):
+                named = only[len("experiment_x_"):].lower()
+                if any(k.lower() == named for k in hits):
+                    declared[eid] = len(block)
     undeclared = {k: v for k, v in flagged.items() if k not in declared}
     return {"experiments_checked": checked,
-            "experiments_standardized_per_cell_type": len(flagged),
+            "coverage_by_key": {k: v for k, v in coverage.items() if v},
+            "experiments_standardized_per_block": len(flagged),
             "rows_affected": sum(v["rows"] for v in flagged.values()),
             "undeclared_violations": len(undeclared),
             "undeclared_rows": sum(flagged[k]["rows"] for k in undeclared),
@@ -738,11 +835,12 @@ def main():
               f"{c9['rows_mixing_assigned_and_unassigned_CC']}")
         c12 = f["C12_zscore_unit"]
         print(f"C12 z-unit     {c12['undeclared_violations']} of "
-              f"{c12['experiments_checked']} multi-cell experiments standardized "
-              f"per cell type WITHOUT declaring it "
+              f"{c12['experiments_checked']} experiments with a per-BLOCK "
+              f"z-score that do NOT declare the block key "
               f"({c12['undeclared_rows']} rows)")
         for eid, d in c12["detail"].items():
-            print(f"               {eid}: {d['rows']} rows, blocks {d['blocks']}, "
+            print(f"               {eid}: {d['rows']} rows, "
+                  f"partitions {d['partitions']}, "
                   f"declared {d['declared_unit']}")
         c13 = f["C13_quality_vocabulary"]
         print(f"C13 quality    {c13['rows_carrying_a_flag']} rows carry a flag, "

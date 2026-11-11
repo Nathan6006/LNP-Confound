@@ -106,12 +106,16 @@
    }
   },
   "C4_contradictory_replicates": {
-   "columns_in_key": 75,
-   "replicate_groups": 1,
-   "groups_that_are_true_replicates": 0,
+   "columns_in_key": 55,
+   "replicate_groups": 341,
+   "groups_that_are_true_replicates": 340,
    "exact_duplicate_rows": 1,
    "by_experiment": {
-    "WT_2026": 1
+    "AC_2025": 266,
+    "JW_2024": 58,
+    "WT_2026": 8,
+    "KW_2014": 7,
+    "SP_2020": 2
    }
   },
   "C5_formulation_ratios": {
@@ -161,17 +165,23 @@
    }
   },
   "C12_zscore_unit": {
-   "experiments_checked": 3,
-   "experiments_standardized_per_cell_type": 2,
+   "experiments_checked": 4,
+   "coverage_by_key": {
+    "Model_type": 3,
+    "Dose_ug_nucleicacid": 2
+   },
+   "experiments_standardized_per_block": 2,
    "rows_affected": 2496,
    "undeclared_violations": 0,
    "undeclared_rows": 0,
    "detail": {
     "LZ_2025": {
      "rows": 96,
-     "blocks": {
-      "A549": 48,
-      "HepG2": 48
+     "partitions": {
+      "Model_type": {
+       "A549": 48,
+       "HepG2": 48
+      }
      },
      "declared_unit": [
       "experiment_x_model_type"
@@ -179,9 +189,11 @@
     },
     "YX_2024": {
      "rows": 2400,
-     "blocks": {
-      "HeLa": 1200,
-      "RAW264.7": 1200
+     "partitions": {
+      "Model_type": {
+       "HeLa": 1200,
+       "RAW264.7": 1200
+      }
      },
      "declared_unit": [
       "experiment_x_model_type"
@@ -313,11 +325,16 @@
    }
   },
   "C4_contradictory_replicates": {
-   "columns_in_key": 75,
-   "replicate_groups": 0,
-   "groups_that_are_true_replicates": 0,
+   "columns_in_key": 55,
+   "replicate_groups": 14,
+   "groups_that_are_true_replicates": 14,
    "exact_duplicate_rows": 0,
-   "by_experiment": {}
+   "by_experiment": {
+    "BL_2023": 8,
+    "JW_2024": 2,
+    "KZ_2016": 2,
+    "ZH_2023": 2
+   }
   },
   "C5_formulation_ratios": {
    "rows_with_negative_ratio": 0,
@@ -363,20 +380,84 @@
    "CN_by_experiment": {}
   },
   "C12_zscore_unit": {
-   "experiments_checked": 0,
-   "experiments_standardized_per_cell_type": 0,
-   "rows_affected": 0,
+   "experiments_checked": 4,
+   "coverage_by_key": {
+    "Model_target": 3,
+    "Route_of_administration": 2,
+    "Dose_ug_nucleicacid": 1,
+    "Dialysis_buffer": 2,
+    "Mixing_method": 2
+   },
+   "experiments_standardized_per_block": 3,
+   "rows_affected": 401,
    "undeclared_violations": 0,
    "undeclared_rows": 0,
-   "detail": {}
+   "detail": {
+    "BL_2023": {
+     "rows": 53,
+     "partitions": {
+      "Model_target": {
+       "lung_epithelium": 49,
+       "muscle": 4
+      },
+      "Route_of_administration": {
+       "intramuscular": 4,
+       "intratracheal": 49
+      },
+      "Dose_ug_nucleicacid": {
+       "10.0": 4,
+       "5.0": 49
+      },
+      "Dialysis_buffer": {
+       "": 4,
+       "PBS": 49
+      },
+      "Mixing_method": {
+       "handmixed": 4,
+       "microfluidics": 49
+      }
+     },
+     "declared_unit": [
+      "experiment_x_model_target"
+     ]
+    },
+    "NG_2025_2": {
+     "rows": 23,
+     "partitions": {
+      "Model_target": {
+       "liver": 12,
+       "muscle": 11
+      },
+      "Route_of_administration": {
+       "intramuscular": 11,
+       "intravenous": 12
+      }
+     },
+     "declared_unit": [
+      "experiment_x_model_target"
+     ]
+    },
+    "ZH_2023": {
+     "rows": 325,
+     "partitions": {
+      "Model_target": {
+       "liver": 163,
+       "spleen": 162
+      }
+     },
+     "declared_unit": [
+      "experiment_x_model_target"
+     ]
+    }
+   }
   },
   "C13_quality_vocabulary": {
    "bad_values": 0,
    "examples": [],
    "rows_carrying_a_flag": 86,
    "rows_with_a_caveat": 76,
-   "rows_with_a_note": 84,
-   "rows_with_only_a_note": 7,
+   "rows_with_a_note": 462,
+   "rows_with_only_a_note": 386,
    "flagged_without_a_note": 0,
    "confidence_without_a_note": 0
   },
