@@ -1,0 +1,133 @@
+{
+ "_what": "Every check in curation/liu_42585110, made to fail on purpose. Section 6: a new check is not done until it has.",
+ "n_seeds": 8,
+ "n_credited": 8,
+ "all_credited": true,
+ "folder_untouched_by_the_suite": {
+  "what": "F-069. Every mutated copy ran in a temp directory. These sha256s are of the REAL folder's tracked artifacts, before and after the suite.",
+  "files_checked": 10,
+  "files_changed": [],
+  "clean": true
+ },
+ "seeds": [
+  {
+   "id": "S0_clean_control",
+   "route": "control",
+   "credited": true,
+   "detail": {
+    "make_reference.py": 0,
+    "stage02_blocks.py": 0,
+    "stage03_enumerate.py": 0,
+    "stage04_values.py": 0
+   },
+   "why": "A seed suite with no clean control credits every seed, including the ones that fire for the wrong reason."
+  },
+  {
+   "id": "S1_ast_guard",
+   "route": "refusal",
+   "file": "make_reference.py",
+   "script": "make_reference.py",
+   "returncode": 1,
+   "why": "If the anchor generator may import the enumerator's assembly library, the anchor can be built by the code it checks -- F-013 and F-037 in one line.",
+   "credited": true,
+   "expected_message": "NOT INDEPENDENT OF THE ENUMERATOR",
+   "message_seen": true,
+   "note": "Credited by REFUSAL, recorded as a distinct route: this check's whole job is to refuse, and its metric line is printed only on success. The message is asserted so the seed cannot be credited by an unrelated crash."
+  },
+  {
+   "id": "S2_template_guard",
+   "route": "refusal",
+   "file": "make_reference.py",
+   "script": "make_reference.py",
+   "returncode": 1,
+   "why": "F-037's AMINE_HALF was the enumeration's canonical SMILES with one token swapped, byte-identical over 141 characters. A long literal lifted out of the enumerator's output is the signal; byte-identity of the EMITTED anchor is not.",
+   "credited": true,
+   "expected_message": "is a SUBSTRING of an enumerated SMILES",
+   "message_seen": true,
+   "note": "Credited by REFUSAL, recorded as a distinct route: this check's whole job is to refuse, and its metric line is printed only on success. The message is asserted so the seed cannot be credited by an unrelated crash."
+  },
+  {
+   "id": "S3_anchor_regioisomer",
+   "route": "metric",
+   "file": "make_reference.py",
+   "script": "make_reference.py",
+   "returncode": 1,
+   "why": "The seeded head arm is 1-methyl-3-hydroxypropyl instead of 4-hydroxybutyl: SAME molecular formula, SAME exact mass to 0.000000 Da, different connectivity. Formula and mass checks are blind to it; only the full InChIKey sees it. That is what C10 exists for.",
+   "clean_metric": 2,
+   "seeded_metric": 1,
+   "credited": true,
+   "metric_moved": true,
+   "note": "Credited only because the AGREEMENT COUNT MOVED, 2 -> 1. A non-zero exit that moves nothing is not credited.",
+   "isomass_check": {
+    "formula_seeded": "C56H91NO5",
+    "formula_real": "C56H91NO5",
+    "exact_mass_delta_Da": 0.0,
+    "inchikey_seeded": "BTIXDRDDYIAHRK-UHFFFAOYSA-N",
+    "inchikey_real": "CZMRBDVYRKKGAS-UHFFFAOYSA-N",
+    "note": "The seeded defect is INVISIBLE to formula and to exact mass and visible only to the InChIKey. That is what proves the gate tests connectivity."
+   }
+  },
+  {
+   "id": "S4_retinoid_geometry",
+   "route": "refusal",
+   "file": "stage02_blocks.py",
+   "script": "stage02_blocks.py",
+   "returncode": 1,
+   "why": "13-cis and all-trans retinoic acid are isobaric to 0.000000 Da and share an InChIKey skeleton block. Nothing else in this pipeline can tell them apart, so the E/Z assertion is the only thing standing between the corpus and three identical lipids under three different names.",
+   "credited": true,
+   "expected_message": "double bonds, expected 3E/1Z",
+   "message_seen": true,
+   "note": "Credited by REFUSAL, recorded as a distinct route: this check's whole job is to refuse, and its metric line is printed only on success. The message is asserted so the seed cannot be credited by an unrelated crash."
+  },
+  {
+   "id": "S5_z_bond_position",
+   "route": "refusal",
+   "file": "stage02_blocks.py",
+   "script": "stage02_blocks.py",
+   "returncode": 1,
+   "why": "13CRA and 9CRA BOTH have 3E/1Z, so a count alone passes with the two isomers swapped. This seed swaps exactly that.",
+   "credited": true,
+   "expected_message": "bonds from the carboxyl carbon, expected",
+   "message_seen": true,
+   "note": "Credited by REFUSAL, recorded as a distinct route: this check's whole job is to refuse, and its metric line is printed only on success. The message is asserted so the seed cannot be credited by an unrelated crash."
+  },
+  {
+   "id": "S6_hrms_extra_CH2",
+   "route": "metric",
+   "file": "stage02_blocks.py",
+   "script": "stage03_enumerate.py",
+   "returncode": 1,
+   "why": "One extra CH2 in the AT1 tail. The 10 AT1 lipids must stop matching their printed exact masses; the other 29 must not move, which is what makes this a test of the gate and not of the parser.",
+   "clean_metric": 39,
+   "seeded_metric": 29,
+   "credited": true,
+   "metric_moved": true,
+   "note": "Credited only because the AGREEMENT COUNT MOVED, 39 -> 29. A non-zero exit that moves nothing is not credited."
+  },
+  {
+   "id": "S7_heatmap_grid_shift",
+   "route": "refusal",
+   "file": "stage04_values.py",
+   "script": "stage04_values.py",
+   "returncode": 1,
+   "why": "A half-cell horizontal shift puts every sample on a cell boundary. heatmap.match's distance diagnostic is what catches an off-by-one grid, and it has caught a wrong header row twice elsewhere in this project. Credit is by refusal because the metric line is only printed on success -- which is itself the right design.",
+   "credited": true,
+   "expected_message": "max nearest-swatch distance",
+   "message_seen": true,
+   "note": "Credited by REFUSAL, recorded as a distinct route: this check's whole job is to refuse, and its metric line is printed only on success. The message is asserted so the seed cannot be credited by an unrelated crash."
+  },
+  {
+   "id": "S8_bar_flank_tolerance",
+   "route": "metric",
+   "file": "stage04_values.py",
+   "script": "stage04_values.py",
+   "returncode": 0,
+   "why": "Widening every bar window 6 px to the left makes the left flank straddle white page. bars.bar_top's flank test is the part no single threshold can replace (error class 32, F-018 and F-020), and this seed is what shows it is live.",
+   "clean_metric": 77,
+   "seeded_metric": 0,
+   "credited": true,
+   "metric_moved": true,
+   "note": "Credited only because the AGREEMENT COUNT MOVED, 77 -> 0. A non-zero exit that moves nothing is not credited."
+  }
+ ]
+}

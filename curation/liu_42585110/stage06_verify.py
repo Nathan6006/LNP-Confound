@@ -64,10 +64,18 @@ def main():
     # ---------------------------------------------------------------
     # V1. Figure 1d read independently, then compared with 1c.
     # ---------------------------------------------------------------
+    # Panel d's windows come from its X-AXIS TICK LATTICE, not from its
+    # coloured runs. On the short bars the replicate dots are drawn WIDER
+    # than the bar, so a run-derived window is the dots' extent -- the exact
+    # shape EXTRACTION_BRIEF 7 records as making one bar read 97.73 instead
+    # of 77.84. The ticks are furniture; no datum can move them. Panel c does
+    # NOT need this (its dots are narrower than its bars) and is left on its
+    # validated run-derived windows.
     d_rows, d_diag = S4.read_bar_panel(
         img, series=[("ratio", m["red"])],
         tick_lo=1700, tick_hi=2080, tick_values=D_TICK_VALUES,
-        y_top=1700, base_lo=2080, base_hi=2140)
+        y_top=1700, base_lo=2080, base_hi=2140,
+        x_tick_scan=(2115, 2135), bar_half_width=16.0)
     d = {r["IL_name"]: r["value"] for r in d_rows if r["value"] != ""}
 
     c = load("04_fig1c_bars.csv")
@@ -346,21 +354,156 @@ def main():
     # ---------------------------------------------------------------
     # V8. Formulation arithmetic -- is it a real check or a tautology?
     # ---------------------------------------------------------------
+    # ---------------------------------------------------------------
+    # V8. The formulation, DERIVED from the SI's own rule, plus a round
+    #     number the authors did not print.
+    # ---------------------------------------------------------------
+    CTRL = {"IL": 50.0, "HL": 10.0, "CHL": 38.5, "PEG": 1.5}
+    IL_RAIL = 33.3
+    rest = 100.0 - IL_RAIL
+    denom = CTRL["HL"] + CTRL["CHL"] + CTRL["PEG"]
+    rail = {"IL": IL_RAIL}
+    for k in ("HL", "CHL", "PEG"):
+        rail[k] = rest * CTRL[k] / denom
+    # Onpattro's published composition is 50 : 10 : 38.5 : 1.5
+    # (ionizable : DSPC : cholesterol : PEG-lipid). The SI never says the
+    # control IS Onpattro's ratio; it just lists four numbers. They match it
+    # exactly, which is a round number the authors used and did not print.
+    ONPATTRO = {"IL": 50.0, "HL": 10.0, "CHL": 38.5, "PEG": 1.5}
     qc["V8_formulation"] = {
-        "what": "The paper states 33.3 mol% RAIL (Results 2.1, chosen from "
-                "Figure S30) and names DSPC, cholesterol and PEG-lipid as the "
-                "other three components, but prints NO molar percentages for "
-                "them anywhere in the article or the SI.",
-        "mol_percent_sums_to_100_check": "NOT RUN -- it would be a TAUTOLOGY "
-                                         "here. Only one of the four "
-                                         "percentages is stated; the other "
-                                         "three are unknown, so any sum is "
-                                         "something we wrote, not something "
-                                         "the paper did.",
-        "consequence": "IL_molratio is emitted as 33.3; HL_molratio, "
-                       "CHL_molratio and PEG_molratio are left BLANK. See "
-                       "DECISIONS.md D-3.",
+        "what": "The SI states the control composition explicitly and gives a "
+                "RULE for the RAIL formulations, so the molar percentages are "
+                "DERIVED, not assumed.",
+        "si_verbatim": "The commercial control formulation comprised Dlin-MC3 "
+                       "(50 mol%), DSPC (10 mol%), cholesterol (38.5 mol%), "
+                       "and PEG2k-C-DMG (1.5 mol%). For experimental "
+                       "formulations, Dlin-MC3 was replaced with the ionizable "
+                       "lipids developed in this study, while its molar "
+                       "fraction was fixed at 33.3 mol%. The relative molar "
+                       "ratio of DSPC, cholesterol, and PEG2k-C-DMG was "
+                       "maintained identical to that in the commercial "
+                       "formulation, and their contents were proportionally "
+                       "adjusted to account for the remaining lipid fraction, "
+                       "yielding a total lipid composition of 100 mol%.",
+        "control_Dlin_MC3": CTRL,
+        "rail_derived": {k: round(v, 4) for k, v in rail.items()},
+        "rail_sum": round(sum(rail.values()), 10),
+        "sum_is_a_tautology_here": True,
+        "sum_note": "The SI says the composition totals 100 mol% and the "
+                    "derivation imposes it, so 'sums to 100' tests our "
+                    "arithmetic and nothing of the paper's. It is reported "
+                    "for transparency and is NOT counted as a check.",
+        "ratio_preserved_check": {
+            "what": "What IS checkable: the derived DSPC:chol:PEG ratio must "
+                    "equal the control's. This tests the derivation against "
+                    "the SI's own words rather than against itself.",
+            "control_ratio": [round(CTRL[k] / CTRL["PEG"], 6)
+                              for k in ("HL", "CHL", "PEG")],
+            "rail_ratio": [round(rail[k] / rail["PEG"], 6)
+                           for k in ("HL", "CHL", "PEG")],
+            "max_abs_difference": round(max(
+                abs(CTRL[k] / CTRL["PEG"] - rail[k] / rail["PEG"])
+                for k in ("HL", "CHL", "PEG")), 12)},
+        "onpattro_check": {
+            "what": "A ROUND NUMBER THE AUTHORS USED AND NEVER PRINTED. The "
+                    "SI lists four control percentages and never says what "
+                    "they are. They are Onpattro's published composition, "
+                    "ionizable : DSPC : cholesterol : PEG-lipid = "
+                    "50 : 10 : 38.5 : 1.5, which is external to anything this "
+                    "pipeline computes.",
+            "max_abs_difference_mol_percent": round(max(
+                abs(CTRL[k] - ONPATTRO[k]) for k in CTRL), 10),
+            "matches": all(abs(CTRL[k] - ONPATTRO[k]) < 1e-9 for k in CTRL)},
+        "N_to_P_and_mass_ratio": {
+            "result": "NOT STATED ANYWHERE. Measured, not assumed: a regex "
+                      "sweep for N/P, N:P, 'nitrogen...phosph', 'weight "
+                      "ratio', 'mass ratio', 'w/w', 'wt/wt' and "
+                      "'encapsulation' over the SI's 00_pages/si_text.txt and "
+                      "the full main-PDF text layer returns ZERO hits in the "
+                      "SI and one hit for 'encapsulation' in the main text, "
+                      "which is a sentence of the Introduction about what "
+                      "ionizable lipids do. Emitted BLANK, following F-004's "
+                      "posture: a value with no support is blank, not a "
+                      "plausible number."},
+        "in_vitro_dose": {
+            "si_verbatim": "incubated with different FLuc mRNA-loaded LNP "
+                           "formulations at an mRNA concentration of 0.5 "
+                           "ug mL-1 for 6 h",
+            "result": "A CONCENTRATION, not a dose. The well volume is never "
+                      "stated (96-well plate, 1e5 cells per well), so the "
+                      "absolute microgram figure the corpus column "
+                      "Dose_ug_nucleicacid wants is NOT recoverable. Emitted "
+                      "BLANK, with the concentration in curation_note."},
+        "in_vivo_dose": {
+            "figure_1_caption": "0.1 mg kg-1 mRNA, intravenous, BALB/c, 6 h",
+            "result": "Stated. Emitted as 0.1 in Dose_ug_nucleicacid, in "
+                      "mg/kg as the corpus's in-vivo rows carry it."},
     }
+
+    # ---------------------------------------------------------------
+    # V9. Figure 2c's PRINTED NUMERALS -- the best check in the paper.
+    # ---------------------------------------------------------------
+    # Figure 2c draws five pie charts of organ distribution and PRINTS the
+    # spleen and liver percentages on them. Printed numerals beat every
+    # digitised quantity (CLAUDE.md section 5's precedence), and these were
+    # produced from the same animals as Figure 1c but through a completely
+    # different rendering: a pie, by a different author of the figure, with
+    # the numbers typeset rather than drawn. Renormalising them to
+    # spleen+liver makes them directly comparable with our Figure 1c reads.
+    FIG2C = {"Dlin-MC3": (10.2, 88.8), "AT2-Bex": (52.3, 46.1),
+             "AT4-13CRA": (78.9, 19.2), "AT4-AVA": (67.1, 31.3),
+             "AT4-Bex": (53.2, 45.7)}
+    v9 = {"what": "Figure 2c prints spleen and liver percentages for five "
+                  "formulations. Renormalised to spleen+liver they are "
+                  "directly comparable with the Figure 1c bars.",
+          "note": "The pies also carry heart, lung and kidney slices, which "
+                  "is why the printed pair does not sum to 100 and why the "
+                  "comparison is made on the renormalised ratio rather than "
+                  "on the raw percentage.",
+          "rows": {}}
+    diffs = []
+    for k, (sp, lv) in FIG2C.items():
+        ours = spleen[k] / (spleen[k] + liver[k]) * 100.0
+        theirs = sp / (sp + lv) * 100.0
+        diffs.append(ours - theirs)
+        v9["rows"][k] = {"ours_percent": round(ours, 2),
+                         "fig2c_renormalised_percent": round(theirs, 2),
+                         "difference_pp": round(ours - theirs, 2)}
+    v9["mean_difference_pp"] = round(float(np.mean(diffs)), 3)
+    v9["max_abs_difference_pp"] = round(float(np.max(np.abs(diffs))), 3)
+    v9["ordering_preserved"] = (
+        [k for k in sorted(FIG2C, key=lambda z: spleen[z] / (spleen[z]
+                                                             + liver[z]))]
+        == [k for k in sorted(FIG2C,
+                              key=lambda z: FIG2C[z][0] / sum(FIG2C[z]))])
+    v9["MEASURED_SENSITIVITY_LIMIT"] = (
+        "This is the honest figure for this curation's in-vivo reads: our "
+        f"Figure 1c shares sit {np.mean(diffs):+.2f} pp from Figure 2c's "
+        f"printed numerals on average and {np.max(np.abs(diffs)):.2f} pp at "
+        "worst (AT4-Bex). The bars are read to ~1 px on a 110.18 px-per-unit "
+        "axis, i.e. 0.009e8, so the residual is NOT read precision on the "
+        "tall bars -- it is the short-bar reads, where a 1 px error is a "
+        "large fraction of the value and both organs enter a ratio.")
+    v9["fig1d_vs_fig1c_direction"] = {
+        "what": "Figure 1d could be the mean of per-animal ratios while "
+                "Figure 1c gives per-organ means; those are not algebraically "
+                "equal and the first is the larger under Jensen. Tested "
+                "rather than assumed.",
+        "fig1d_greater_in": int(sum(1 for k, rc, rd in pairs if rd > rc)),
+        "of": len(pairs),
+        "sign_test_p": round(float(stats.binomtest(
+            int(sum(1 for k, rc, rd in pairs if rd > rc)),
+            len(pairs), 0.5).pvalue), 5),
+        "median_ratio_d_over_c": round(float(np.median(
+            [rd / rc for k, rc, rd in pairs])), 4),
+        "verdict": "NOT ESTABLISHED. 18 of 26 lean one way at p = 0.12, which "
+                   "is not a one-sided effect. The median discrepancy of 1.5% "
+                   "is consistent with digitisation noise on the short bars "
+                   "rather than with the two panels reporting different "
+                   "statistics. Reported as not established rather than "
+                   "asserted either way.",
+    }
+    qc["V9_fig2c_printed_numerals"] = v9
 
     with open(OUT, "w") as fh:
         json.dump(qc, fh, indent=1)
@@ -395,6 +538,9 @@ def main():
           f"{qc['V6_hrms']['worst_absolute_difference_mDa']} mDa")
     print(f"V7 head arm: 4C worst {f4:.2f} mDa vs 3C best {f3:.2f} mDa "
           f"-> {qc['V7_head_arm_carbon_count']['verdict'][:20]}...")
+    print(f"V9 Fig2c printed numerals: mean {v9['mean_difference_pp']:+} pp, "
+          f"worst {v9['max_abs_difference_pp']} pp, ordering preserved "
+          f"{v9['ordering_preserved']}")
     print(f"\nwrote {OUT}")
 
 

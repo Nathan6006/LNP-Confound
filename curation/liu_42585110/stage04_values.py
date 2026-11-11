@@ -62,6 +62,12 @@ A_BAND_MIN_COLOURED = 190   # rows of a column that must be non-white
 # ---- Figure 1c -----------------------------------------------------------
 C_TICK_VALUES = [3.0, 2.0, 1.0]      # the 0 tick is fused with the baseline
 C_Y_TOP = 1205      # below the legend dots, which end by y=1200
+# NOTE: C_Y_TOP and C_TICK_VALUES are Figure 1c's constants and are passed IN
+# to read_bar_panel. They were briefly read as globals inside its bar loop,
+# which made Figure 1d scan Figure 1c's rows and produced flank disagreements
+# of 594-683 px -- a hard-coded literal surviving a generalisation, which is
+# error class 28's shape. They are referenced in exactly one place now: the
+# read_fig1c wrapper at the bottom of this file.
 C_SPINE_X = (172, 178)
 # A bar whose whole body lies within this many pixels of the drawn baseline is
 # not separable from the axis rule. 4 px / 110.18 px-per-unit = 0.036e8.
@@ -610,7 +616,7 @@ def read_bar_panel(img, series, tick_lo, tick_hi, tick_values, y_top,
                 x1 = int(round(x0 + width))
                 window_from = "fitted_grid"
             try:
-                t = bars.bar_top(mask, x0, x1, C_Y_TOP, int(base) + 1,
+                t = bars.bar_top(mask, x0, x1, y_top, int(base) + 1,
                                  baseline_row=int(round(base)))
                 val = float(cal.to_value(t["row"]))
                 rec = {"IL_name": labels[i], "panel_column": i,
@@ -638,10 +644,10 @@ def read_bar_panel(img, series, tick_lo, tick_hi, tick_values, y_top,
                 # nothing. "Topmost coloured row" was my first probe and it is
                 # wrong: replicate dots float above even a zero-height bar, so
                 # it classified 4 of these 5 as readable.
-                sub = mask[C_Y_TOP:int(round(base)) + 1, x0:x1]
+                sub = mask[y_top:int(round(base)) + 1, x0:x1]
                 cov = sub.mean(axis=1)
                 wide = np.flatnonzero(cov >= 0.90)
-                topmost = (C_Y_TOP + int(wide.min())) if wide.size else None
+                topmost = (y_top + int(wide.min())) if wide.size else None
                 if topmost is not None and base - topmost <= FLOOR_PX:
                     bound_v = FLOOR_PX / abs(float(cal.to_pixel(0.0)
                                                    - cal.to_pixel(1.0)))
@@ -670,7 +676,7 @@ def read_bar_panel(img, series, tick_lo, tick_hi, tick_values, y_top,
         "tick_fit_residual_px": round(float(np.max(np.abs(
             np.asarray(sorted(ticks))
             - np.asarray(sorted([float(cal.to_pixel(v))
-                                 for v in C_TICK_VALUES]))))), 4),
+                                 for v in tick_values]))))), 4),
         "px_per_unit": round(abs(float(cal.to_pixel(0.0) - cal.to_pixel(1.0))),
                              4),
         "drawn_baseline_row_px": round(base, 3),

@@ -39,6 +39,8 @@ import os
 import re
 import sys
 
+import numpy as np
+
 LIB = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "lib")
 sys.path.insert(0, LIB)
 import assemble                                                  # noqa: E402
@@ -178,33 +180,58 @@ def main():
             "si_adduct": ad,
             "si_calcd_mz": "" if calcd is None else f"{calcd:.3f}",
             "si_found_mz": "" if found is None else f"{found:.3f}",
-            "our_mz_minus_si_calcd_mDa": "" if d_proton is None
-                                         else f"{d_proton*1000:.2f}",
-            "confidence": "high",
+            # The DETERMINED convention (see the printout below): the SI's
+            # "Calcd. for [M+H]+" is the neutral mass plus a neutral H ATOM,
+            # not the protonated-ion mass. The two differ by one electron,
+            # 0.55 mDa, and reporting the wrong one inflates the worst
+            # residual from 0.50 to 1.05 mDa -- which is still inside any
+            # sane tolerance, and is exactly how a convention error hides.
+            "our_mz_minus_si_calcd_mDa": "" if d_hatom is None
+                                         else f"{d_hatom*1000:.2f}",
+            "alt_convention_delta_mDa": "" if d_proton is None
+                                        else f"{d_proton*1000:.2f}",
+            "confidence": "high" if calcd is not None else "medium",
             "confidence_reason":
                 ("structure built from the synthesis the SI describes in prose "
                  "AND draws as a product in Schemes S5-S12; molecular formula "
                  "confirmed by the SI's own printed ESI-MS")
                 if calcd is not None else
                 ("structure built from the synthesis the SI describes in prose "
-                 "AND draws as a product in Scheme S8; the SI prints 1H NMR "
-                 "for this compound but NO ESI-MS, so the formula has no mass "
-                 "confirmation -- it is the only one of the 40 without one"),
+                 "AND draws as a product in Scheme S8, and its 1H NMR is "
+                 "printed; but the SI prints NO ESI-MS for it, so its "
+                 "molecular formula is the only one of the 40 with no "
+                 "independent mass confirmation"),
         })
 
     # --- which mass convention? -------------------------------------------
+    # THE CONVENTION IS CHOSEN ON THE MEDIAN, NOT THE WORST CASE, and this
+    # is not a loosening -- it is the difference between two questions. "Which
+    # convention does the SI use?" is a property of the whole column; "is any
+    # structure wrong?" is the HRMS gate below. Choosing on the worst case
+    # conflates them: a single wrong structure makes BOTH conventions fit
+    # badly, the choice is then decided by whichever is marginally less bad,
+    # and this check fires instead of the gate that should. That is exactly
+    # what a seeded extra CH2 in the AT1 tail did (seed S6) -- it tripped the
+    # convention guard with a 14,015 mDa residual before the HRMS line was
+    # ever printed, so the real defect was reported as the wrong finding.
     n = len(resid["proton"])
+    med = {k: float(np.median(v)) for k, v in resid.items()}
     worst = {k: max(v) for k, v in resid.items()}
-    best = min(worst, key=worst.get)
+    best = min(med, key=med.get)
     other = "h_atom" if best == "proton" else "proton"
     print(f"ESI-MS convention over {n} printed [M+H]+ values:")
-    print(f"   as a PROTONATED ion (M + 1.00728): worst |delta| "
-          f"{worst['proton']*1000:.2f} mDa")
-    print(f"   as M + a neutral H atom (1.00783): worst |delta| "
-          f"{worst['h_atom']*1000:.2f} mDa")
+    print(f"   as a PROTONATED ion (M + 1.00728): median |delta| "
+          f"{med['proton']*1000:.2f} mDa (worst {worst['proton']*1000:.2f})")
+    print(f"   as M + a neutral H atom (1.00783): median |delta| "
+          f"{med['h_atom']*1000:.2f} mDa (worst {worst['h_atom']*1000:.2f})")
     print(f"   -> the SI reports {best}; margin over the next-best reading "
-          f"{(worst[other]-worst[best])*1000:.2f} mDa")
+          f"{(med[other]-med[best])*1000:.2f} mDa on the median")
 
+    if best != "h_atom":
+        raise SystemExit(
+            "stage03: the ESI-MS convention came out as " + best + ", but "
+            "the CSV column is written under the h_atom convention. Change "
+            "both together or the column means something other than it says.")
     tol = 0.0015   # 1.5 mDa; the SI prints 3 decimals, so +-0.5 mDa is rounding
     bad = [r for r in rows if r["our_mz_minus_si_calcd_mDa"] not in ("",)
            and abs(float(r["our_mz_minus_si_calcd_mDa"])) > tol * 1000]

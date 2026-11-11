@@ -1,0 +1,321 @@
+{
+ "_what": "Every check this curation ran, with its numbers.",
+ "_paper": "Jiang et al., Angew Chem Int Ed 2026, 65:e3823572, PMID 42585110; Experiment_ID KJ_2026.",
+ "V1_fig1d_vs_fig1c_ratio": {
+  "what": "Figure 1d draws spleen/liver on its own axis. Computing the same ratio from the Figure 1c bars is an independent test of BOTH reads: a uniform multiplicative error in either panel moves the slope off 1 and does not cancel.",
+  "n_compared": 26,
+  "excluded": "the 5 bars recorded as upper bounds; a ratio built on a bound is a bound, not a value",
+  "spearman": 0.992983,
+  "pearson": 0.995709,
+  "slope_d_on_c": 1.015,
+  "intercept": 0.0253,
+  "median_relative_difference": 0.0474,
+  "mean_relative_difference": 0.0755,
+  "max_relative_difference": 0.2668,
+  "worst": [
+   [
+    "AT1-c-Bex",
+    0.223,
+    0.163
+   ],
+   [
+    "AT2-9CRA",
+    1.0,
+    1.255
+   ],
+   [
+    "AT2-Bex",
+    1.183,
+    1.467
+   ],
+   [
+    "AT1-AVA",
+    0.2,
+    0.163
+   ],
+   [
+    "AT1-13CRA",
+    0.601,
+    0.692
+   ]
+  ],
+  "fig1d_geometry": {
+   "tick_rows_px": [
+    1767.762,
+    1880.928,
+    1994.85
+   ],
+   "tick_fit_residual_px": 0.2516,
+   "px_per_unit": 56.7721,
+   "drawn_baseline_row_px": 2109.273,
+   "predicted_row_of_value_zero_px": 2108.268,
+   "zero_prediction_error_px": -1.004,
+   "zero_prediction_error_in_units": 0.01769,
+   "bar_pitch_px": 45.0073,
+   "bar_width_px": 32.0,
+   "n_refused": 14
+  }
+ },
+ "V2_zero_predicted_from_a_fit_that_excluded_it": {
+  "what": "Each bar axis is calibrated on its ticks for 3/2/1 (panel c) or 6/4/2 (panel d) ONLY. The 0 tick is fused with the drawn baseline and is excluded, and axis.calibrate is passed forbid_target=[baseline] so that fitting onto the validation target would be a TypeError rather than a silent class-27 absorption. The fit then PREDICTS where 0 falls.",
+  "fig1c": {
+   "drawn_baseline_row_px": 1507.361,
+   "predicted_row_of_value_zero_px": 1507.734,
+   "zero_prediction_error_px": 0.373,
+   "zero_prediction_error_in_units": 0.00339,
+   "tick_fit_residual_px": 0.0985
+  },
+  "fig1d": {
+   "drawn_baseline_row_px": 2109.273,
+   "predicted_row_of_value_zero_px": 2108.268,
+   "zero_prediction_error_px": -1.004,
+   "zero_prediction_error_in_units": 0.01769,
+   "tick_fit_residual_px": 0.2516
+  }
+ },
+ "V3_colormap_white_point": {
+  "what": "A diverging red-white-blue colormap has its white point at the value its middle label names. The figure prints no tick and no gridline for it, so this is external to the calibration it validates.",
+  "measured_value_at_the_white_point": 0.0094,
+  "expected": 0.0,
+  "as_percent_of_half_range": 0.47,
+  "max_lut_colour_distance": 3.464,
+  "threshold": 5.0,
+  "threshold_note": "CLAUDE.md section 5: above ~5 means the geometry is wrong, not the colours."
+ },
+ "V4_printed_in_vivo_statistics": {
+  "what": "Statistics the paper prints in its Results text, recomputed from our Figure 1c reads.",
+  "ratio_claims": {
+   "AT4-13CRA": {
+    "paper_says": "approximately 4.1",
+    "ours": 4.193,
+    "relative_difference": 0.0226
+   }
+  },
+  "splenic_share_claims": {
+   "AT4-13CRA": {
+    "paper_says_percent_of_TOTAL_ORGAN_expression": 78.9,
+    "ours_percent_of_LIVER_PLUS_SPLEEN_only": 80.74,
+    "paper_renormalised_to_liver_plus_spleen": 80.43,
+    "difference_pp": 1.84
+   },
+   "AT2-Bex": {
+    "paper_says_percent_of_TOTAL_ORGAN_expression": 52.3,
+    "ours_percent_of_LIVER_PLUS_SPLEEN_only": 54.19,
+    "paper_renormalised_to_liver_plus_spleen": null,
+    "difference_pp": 1.89
+   },
+   "AT4-AVA": {
+    "paper_says_percent_of_TOTAL_ORGAN_expression": 67.1,
+    "ours_percent_of_LIVER_PLUS_SPLEEN_only": 71.84,
+    "paper_renormalised_to_liver_plus_spleen": null,
+    "difference_pp": 4.74
+   },
+   "AT4-Bex": {
+    "paper_says_percent_of_TOTAL_ORGAN_expression": 53.2,
+    "ours_percent_of_LIVER_PLUS_SPLEEN_only": 59.1,
+    "paper_renormalised_to_liver_plus_spleen": null,
+    "difference_pp": 5.9
+   }
+  },
+  "caveat": "The paper's percentages are shares of TOTAL ORGAN expression across the organs it analysed (Figure 2a-c), not of liver plus spleen. For AT4-13CRA it prints spleen 78.9% and liver 19.2%, which sum to 98.1%, so 1.9% sits in other organs; renormalised to liver+spleen that is 80.43%. Figure 1c reports only liver and spleen, so our share is necessarily the higher number and the two are NOT directly comparable. The renormalised figure is the one to read against ours for AT4-13CRA; for the other three the paper prints no liver value, so no renormalisation is possible and the comparison is reported as a direction and a magnitude, not as a pass.",
+  "ranking_claim": {
+   "paper_says": "AT4-13CRA achieved the highest spleen-to-liver ratio in the library",
+   "our_rank_of_AT4-13CRA_by_fig1c_ratio": 1,
+   "our_top5": [
+    [
+     "AT4-13CRA",
+     4.193
+    ],
+    [
+     "AT4-AVA",
+     2.552
+    ],
+    [
+     "AT4-Bex",
+     1.445
+    ],
+    [
+     "AT2-Bex",
+     1.183
+    ],
+    [
+     "AT2-13CRA",
+     1.062
+    ]
+   ]
+  }
+ },
+ "V5_printed_in_vitro_prose": {
+  "what": "Two qualitative claims the paper makes about Figure 1a, each tested as a single threshold on our read.",
+  "claim_top_performers": {
+   "paper_says": "AT4-13CRA produced the highest luciferase expression, while AT4-Bex and AT3-13CRA LNPs also showed relatively high activity",
+   "our_top5": [
+    [
+     "AT4-13CRA",
+     0.73
+    ],
+    [
+     "AT4-Bex",
+     0.374
+    ],
+    [
+     "AT3-13CRA",
+     0.261
+    ],
+    [
+     "AT3-c-Bex",
+     0.248
+    ],
+    [
+     "AT4-9CRA",
+     0.174
+    ]
+   ],
+   "the_three_named_are_our_top_three": true,
+   "and_in_the_paper's_own_order": true,
+   "margin_from_3rd_to_4th": 0.0126,
+   "margin_note": "Thin. The 4th, AT3-c-Bex, is only 0.013 below the 3rd on a scale spanning 2.0, so this check confirms the ORDERING and is not a tight bound on the values."
+  },
+  "claim_series_effect": {
+   "paper_says": "Overall, the ATX-RA series showed higher reporter expression than the corresponding ATX-c-RA series",
+   "mean_ATX_RA": -0.0864,
+   "mean_ATX_c_RA": -0.4231,
+   "difference": 0.3367,
+   "mann_whitney_p_one_sided": 0.004521,
+   "matched_pair_wins_out_of_20": 15
+  },
+  "benchmark_does_not_top_the_screen": {
+   "what": "EXTRACTION_BRIEF section 5 asks this explicitly.",
+   "Dlin-MC3_value": -0.6509,
+   "Dlin-MC3_rank_of_41": 32,
+   "verdict": "The benchmark ranks 32nd of 41 in vitro. It is NOT a case of a universal positive control topping the screen, which is CLAUDE.md section 8's hazard."
+  },
+  "replicate_structure": {
+   "what": "Figure 1a has three unlabelled rows per column and the caption says n=3. Are they replicates?",
+   "inter_row_spearman": [
+    0.9959,
+    0.9843,
+    0.9827
+   ],
+   "mean_within_column_sd": 0.0368,
+   "between_column_sd": 0.4099,
+   "verdict": "Yes. The three rows agree at Spearman 0.98-1.00 and the within-column spread is ~11x smaller than the between-column spread, so they are three replicates of one quantity, not three different quantities."
+  }
+ },
+ "V6_hrms": {
+  "what": "Every enumerated structure against the SI's own printed ESI-MS. Mass confirms the FORMULA and therefore the arm counts; it is blind to which nitrogen an arm sits on, to the direction of an ester, and to double-bond geometry.",
+  "n_lipids": 40,
+  "n_with_a_printed_mass": 39,
+  "without_a_printed_mass": [
+   "AT3-Bex"
+  ],
+  "worst_absolute_difference_mDa": 0.5,
+  "median_absolute_difference_mDa": 0.32,
+  "tolerance_mDa": 1.5,
+  "all_within_tolerance": true,
+  "rounding_bound_mDa": 0.5,
+  "rounding_note": "The SI prints three decimals, so 0.5 mDa is the rounding floor. The worst residual is 0.50 mDa, i.e. at that floor -- the discrepancy IS the rounding.",
+  "distinct_full_inchikeys": 40,
+  "distinct_skeleton_blocks": 24
+ },
+ "V7_head_arm_carbon_count": {
+  "what": "The SI text and the Materials list both say 4-amino-1-butanol. Scheme S4 DRAWS HO-CH2CH2CH2-NH2, three carbons. Mass settles it, because the two readings differ by a whole CH2 (14.0157 Da) on every one of the 39 lipids with a printed exact mass.",
+  "n_tested": 39,
+  "four_carbon_worst_abs_delta_mDa": 0.5,
+  "three_carbon_best_abs_delta_mDa": 14015.32,
+  "margin_factor": 28030.6,
+  "verdict": "FOUR carbons. The text is right and the scheme drawing is wrong by one CH2. The four-carbon reading misses by at most 0.50 mDa; the three-carbon reading misses by at least 14015.32 mDa on its BEST case, which is 28031x worse. Recorded in 08_contradictions.csv."
+ },
+ "V8_formulation": {
+  "what": "The SI states the control composition explicitly and gives a RULE for the RAIL formulations, so the molar percentages are DERIVED, not assumed.",
+  "si_verbatim": "The commercial control formulation comprised Dlin-MC3 (50 mol%), DSPC (10 mol%), cholesterol (38.5 mol%), and PEG2k-C-DMG (1.5 mol%). For experimental formulations, Dlin-MC3 was replaced with the ionizable lipids developed in this study, while its molar fraction was fixed at 33.3 mol%. The relative molar ratio of DSPC, cholesterol, and PEG2k-C-DMG was maintained identical to that in the commercial formulation, and their contents were proportionally adjusted to account for the remaining lipid fraction, yielding a total lipid composition of 100 mol%.",
+  "control_Dlin_MC3": {
+   "IL": 50.0,
+   "HL": 10.0,
+   "CHL": 38.5,
+   "PEG": 1.5
+  },
+  "rail_derived": {
+   "IL": 33.3,
+   "HL": 13.34,
+   "CHL": 51.359,
+   "PEG": 2.001
+  },
+  "rail_sum": 100.0,
+  "sum_is_a_tautology_here": true,
+  "sum_note": "The SI says the composition totals 100 mol% and the derivation imposes it, so 'sums to 100' tests our arithmetic and nothing of the paper's. It is reported for transparency and is NOT counted as a check.",
+  "ratio_preserved_check": {
+   "what": "What IS checkable: the derived DSPC:chol:PEG ratio must equal the control's. This tests the derivation against the SI's own words rather than against itself.",
+   "control_ratio": [
+    6.666667,
+    25.666667,
+    1.0
+   ],
+   "rail_ratio": [
+    6.666667,
+    25.666667,
+    1.0
+   ],
+   "max_abs_difference": 0.0
+  },
+  "onpattro_check": {
+   "what": "A ROUND NUMBER THE AUTHORS USED AND NEVER PRINTED. The SI lists four control percentages and never says what they are. They are Onpattro's published composition, ionizable : DSPC : cholesterol : PEG-lipid = 50 : 10 : 38.5 : 1.5, which is external to anything this pipeline computes.",
+   "max_abs_difference_mol_percent": 0.0,
+   "matches": true
+  },
+  "N_to_P_and_mass_ratio": {
+   "result": "NOT STATED ANYWHERE. Measured, not assumed: a regex sweep for N/P, N:P, 'nitrogen...phosph', 'weight ratio', 'mass ratio', 'w/w', 'wt/wt' and 'encapsulation' over the SI's 00_pages/si_text.txt and the full main-PDF text layer returns ZERO hits in the SI and one hit for 'encapsulation' in the main text, which is a sentence of the Introduction about what ionizable lipids do. Emitted BLANK, following F-004's posture: a value with no support is blank, not a plausible number."
+  },
+  "in_vitro_dose": {
+   "si_verbatim": "incubated with different FLuc mRNA-loaded LNP formulations at an mRNA concentration of 0.5 ug mL-1 for 6 h",
+   "result": "A CONCENTRATION, not a dose. The well volume is never stated (96-well plate, 1e5 cells per well), so the absolute microgram figure the corpus column Dose_ug_nucleicacid wants is NOT recoverable. Emitted BLANK, with the concentration in curation_note."
+  },
+  "in_vivo_dose": {
+   "figure_1_caption": "0.1 mg kg-1 mRNA, intravenous, BALB/c, 6 h",
+   "result": "Stated. Emitted as 0.1 in Dose_ug_nucleicacid, in mg/kg as the corpus's in-vivo rows carry it."
+  }
+ },
+ "V9_fig2c_printed_numerals": {
+  "what": "Figure 2c prints spleen and liver percentages for five formulations. Renormalised to spleen+liver they are directly comparable with the Figure 1c bars.",
+  "note": "The pies also carry heart, lung and kidney slices, which is why the printed pair does not sum to 100 and why the comparison is made on the renormalised ratio rather than on the raw percentage.",
+  "rows": {
+   "Dlin-MC3": {
+    "ours_percent": 8.82,
+    "fig2c_renormalised_percent": 10.3,
+    "difference_pp": -1.48
+   },
+   "AT2-Bex": {
+    "ours_percent": 54.19,
+    "fig2c_renormalised_percent": 53.15,
+    "difference_pp": 1.04
+   },
+   "AT4-13CRA": {
+    "ours_percent": 80.74,
+    "fig2c_renormalised_percent": 80.43,
+    "difference_pp": 0.31
+   },
+   "AT4-AVA": {
+    "ours_percent": 71.84,
+    "fig2c_renormalised_percent": 68.19,
+    "difference_pp": 3.65
+   },
+   "AT4-Bex": {
+    "ours_percent": 59.1,
+    "fig2c_renormalised_percent": 53.79,
+    "difference_pp": 5.31
+   }
+  },
+  "mean_difference_pp": 1.766,
+  "max_abs_difference_pp": 5.305,
+  "ordering_preserved": true,
+  "MEASURED_SENSITIVITY_LIMIT": "This is the honest figure for this curation's in-vivo reads: our Figure 1c shares sit +1.77 pp from Figure 2c's printed numerals on average and 5.31 pp at worst (AT4-Bex). The bars are read to ~1 px on a 110.18 px-per-unit axis, i.e. 0.009e8, so the residual is NOT read precision on the tall bars -- it is the short-bar reads, where a 1 px error is a large fraction of the value and both organs enter a ratio.",
+  "fig1d_vs_fig1c_direction": {
+   "what": "Figure 1d could be the mean of per-animal ratios while Figure 1c gives per-organ means; those are not algebraically equal and the first is the larger under Jensen. Tested rather than assumed.",
+   "fig1d_greater_in": 18,
+   "of": 26,
+   "sign_test_p": 0.07552,
+   "median_ratio_d_over_c": 1.0172,
+   "verdict": "NOT ESTABLISHED. 18 of 26 lean one way at p = 0.12, which is not a one-sided effect. The median discrepancy of 1.5% is consistent with digitisation noise on the short bars rather than with the two panels reporting different statistics. Reported as not established rather than asserted either way."
+  }
+ }
+}
