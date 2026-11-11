@@ -4,10 +4,10 @@
  "kept_locally": "The files remain on local disk, untracked and matched by the existing slashless *.png rule in .gitignore, so the audit trail for F-017, F-018, F-019 and the three curations' geometry checks is still inspectable by anyone with the repo checkout and the source PDFs. Nothing about the FINDINGS is lost: each is reproducible by re-running that curation's own render step against the source PDF.",
  "history_rewrite": {
   "backup_bundle": "/Users/nathanliu/LNP/confound_PREREWRITE_20261110.bundle",
-  "pre_rewrite_head": "eb93baea315cd8c2f563560d76a9753b0527cfb3",
   "blob_instances_purged": 22,
   "distinct_paths": 21,
-  "bytes_in_history": 8380652
+  "bytes_in_history": 8380652,
+  "pre_rewrite_head": "DELIBERATELY NOT RECORDED HERE. GitHub serves an unreachable commit by its SHA until it garbage-collects, so printing the pre-rewrite head in a PUBLIC file would hand back the very objects the rewrite removed. It is in the local backup bundle named above, and in that bundle only."
  },
  "files": [
   {
@@ -157,5 +157,6 @@
    "pixels": "3040x1030",
    "derived_from": "round-1 review evidence for F-017/F-018/F-019 (axis ticks, bar tops, colorbar calibration)"
   }
- ]
+ ],
+ "residual_exposure": "As of 2026-11-10 the old objects are STILL RETRIEVABLE from GitHub by raw SHA (verified: the 2.06 MB fig2c_overlay blob answered a git/blobs API call after the force-push). A force-push makes objects unreachable, not absent. The repo has 0 forks and 0 stars, so nothing was pulled. Full removal requires asking GitHub Support to garbage-collect the repository, or deleting and recreating it. OPEN."
 }
